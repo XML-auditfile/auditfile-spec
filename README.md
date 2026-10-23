@@ -39,6 +39,8 @@ The workflow creates the tag, builds, checks that `generated/` is up to date, an
 `auditfile-spec-<version>.zip` to the GitHub release. The version rules are in `tools/semver.ps1`, shared with
 the other projects.
 
+Dependabot (`.github/dependabot.yml`) checks NuGet packages and GitHub Actions weekly.
+
 ## License
 
 Apache License 2.0. The XSD files are published by the Belastingdienst under their own terms.
