@@ -1,0 +1,159 @@
+{
+  "formatVersion": 1,
+  "type": "xaf",
+  "views": [
+    {
+      "name": "trial_balance",
+      "label": { "nl": "Proefbalans", "en": "Trial balance" },
+      "description": {
+        "nl": "Debet, credit en saldo per grootboekrekening over de boekingen in een periode.",
+        "en": "Debit, credit and balance per general ledger account over the entries in a period."
+      },
+      "source": "tr_line",
+      "joins": [
+        { "table": "transaction" },
+        { "table": "ledger_account", "on": [ [ "tr_line.acc_id", "ledger_account.acc_id" ] ] }
+      ],
+      "parameters": [
+        { "name": "period_from", "label": { "nl": "Periode van", "en": "Period from" }, "column": "transaction.period_number", "operator": ">=" },
+        { "name": "period_to", "label": { "nl": "Periode tot en met", "en": "Period to" }, "column": "transaction.period_number", "operator": "<=" },
+        { "name": "date_from", "label": { "nl": "Datum van", "en": "Date from" }, "column": "transaction.tr_dt", "operator": ">=" },
+        { "name": "date_to", "label": { "nl": "Datum tot en met", "en": "Date to" }, "column": "transaction.tr_dt", "operator": "<=" }
+      ],
+      "columns": [
+        { "name": "account", "label": { "nl": "Rekening", "en": "Account" }, "value": "tr_line.acc_id" },
+        { "name": "description", "label": { "nl": "Omschrijving", "en": "Description" }, "value": "ledger_account.acc_desc" },
+        { "name": "account_type", "label": { "nl": "Soort rekening", "en": "Account type" }, "value": "ledger_account.acc_tp" },
+        {
+          "name": "debit", "label": { "nl": "Debet", "en": "Debit" }, "aggregate": "sum",
+          "value": { "op": "only", "value": "tr_line.amnt", "by": "tr_line.amnt_tp", "in": [ "D" ] }
+        },
+        {
+          "name": "credit", "label": { "nl": "Credit", "en": "Credit" }, "aggregate": "sum",
+          "value": { "op": "only", "value": "tr_line.amnt", "by": "tr_line.amnt_tp", "in": [ "C" ] }
+        },
+        {
+          "name": "balance", "label": { "nl": "Saldo", "en": "Balance" }, "aggregate": "sum",
+          "value": { "op": "signed", "value": "tr_line.amnt", "by": "tr_line.amnt_tp", "negative": [ "C" ] }
+        }
+      ],
+      "orderBy": [ "account" ]
+    },
+    {
+      "name": "ledger_entries",
+      "label": { "nl": "Grootboekkaart", "en": "General ledger entries" },
+      "description": {
+        "nl": "Alle boekingsregels met dagboek, boeking en grootboekrekening.",
+        "en": "All transaction lines with journal, transaction and general ledger account."
+      },
+      "source": "tr_line",
+      "joins": [
+        { "table": "transaction" },
+        { "table": "journal" },
+        { "table": "ledger_account", "on": [ [ "tr_line.acc_id", "ledger_account.acc_id" ] ] }
+      ],
+      "parameters": [
+        { "name": "period_from", "label": { "nl": "Periode van", "en": "Period from" }, "column": "transaction.period_number", "operator": ">=" },
+        { "name": "period_to", "label": { "nl": "Periode tot en met", "en": "Period to" }, "column": "transaction.period_number", "operator": "<=" },
+        { "name": "date_from", "label": { "nl": "Datum van", "en": "Date from" }, "column": "transaction.tr_dt", "operator": ">=" },
+        { "name": "date_to", "label": { "nl": "Datum tot en met", "en": "Date to" }, "column": "transaction.tr_dt", "operator": "<=" },
+        { "name": "account", "label": { "nl": "Rekening", "en": "Account" }, "column": "tr_line.acc_id", "operator": "=" },
+        { "name": "journal", "label": { "nl": "Dagboek", "en": "Journal" }, "column": "journal.jrn_id", "operator": "=" }
+      ],
+      "columns": [
+        { "name": "account", "label": { "nl": "Rekening", "en": "Account" }, "value": "tr_line.acc_id" },
+        { "name": "account_description", "label": { "nl": "Omschrijving rekening", "en": "Account description" }, "value": "ledger_account.acc_desc" },
+        { "name": "date", "label": { "nl": "Boekdatum", "en": "Transaction date" }, "value": "transaction.tr_dt" },
+        { "name": "period", "label": { "nl": "Periode", "en": "Period" }, "value": "transaction.period_number" },
+        { "name": "journal", "label": { "nl": "Dagboek", "en": "Journal" }, "value": "journal.jrn_id" },
+        { "name": "transaction", "label": { "nl": "Boekstuk", "en": "Transaction" }, "value": "transaction.nr" },
+        { "name": "line", "label": { "nl": "Regel", "en": "Line" }, "value": "tr_line.nr" },
+        { "name": "description", "label": { "nl": "Omschrijving", "en": "Description" }, "value": "tr_line.desc" },
+        { "name": "document", "label": { "nl": "Documentreferentie", "en": "Document reference" }, "value": "tr_line.doc_ref" },
+        {
+          "name": "debit", "label": { "nl": "Debet", "en": "Debit" },
+          "value": { "op": "only", "value": "tr_line.amnt", "by": "tr_line.amnt_tp", "in": [ "D" ] }
+        },
+        {
+          "name": "credit", "label": { "nl": "Credit", "en": "Credit" },
+          "value": { "op": "only", "value": "tr_line.amnt", "by": "tr_line.amnt_tp", "in": [ "C" ] }
+        }
+      ],
+      "orderBy": [ "account", "date", "journal", "transaction", "line" ]
+    },
+    {
+      "name": "journal_totals",
+      "label": { "nl": "Dagboektotalen", "en": "Journal totals" },
+      "description": {
+        "nl": "Aantal regels, debet, credit en saldo per dagboek. Het saldo van elk dagboek hoort 0 te zijn.",
+        "en": "Number of lines, debit, credit and balance per journal. Every journal should balance to 0."
+      },
+      "source": "tr_line",
+      "joins": [
+        { "table": "transaction" },
+        { "table": "journal" }
+      ],
+      "parameters": [
+        { "name": "period_from", "label": { "nl": "Periode van", "en": "Period from" }, "column": "transaction.period_number", "operator": ">=" },
+        { "name": "period_to", "label": { "nl": "Periode tot en met", "en": "Period to" }, "column": "transaction.period_number", "operator": "<=" },
+        { "name": "date_from", "label": { "nl": "Datum van", "en": "Date from" }, "column": "transaction.tr_dt", "operator": ">=" },
+        { "name": "date_to", "label": { "nl": "Datum tot en met", "en": "Date to" }, "column": "transaction.tr_dt", "operator": "<=" }
+      ],
+      "columns": [
+        { "name": "journal", "label": { "nl": "Dagboek", "en": "Journal" }, "value": "journal.jrn_id" },
+        { "name": "description", "label": { "nl": "Omschrijving", "en": "Description" }, "value": "journal.desc" },
+        { "name": "journal_type", "label": { "nl": "Soort dagboek", "en": "Journal type" }, "value": "journal.jrn_tp" },
+        { "name": "lines", "label": { "nl": "Aantal regels", "en": "Number of lines" }, "aggregate": "count" },
+        {
+          "name": "debit", "label": { "nl": "Debet", "en": "Debit" }, "aggregate": "sum",
+          "value": { "op": "only", "value": "tr_line.amnt", "by": "tr_line.amnt_tp", "in": [ "D" ] }
+        },
+        {
+          "name": "credit", "label": { "nl": "Credit", "en": "Credit" }, "aggregate": "sum",
+          "value": { "op": "only", "value": "tr_line.amnt", "by": "tr_line.amnt_tp", "in": [ "C" ] }
+        },
+        {
+          "name": "balance", "label": { "nl": "Saldo", "en": "Balance" }, "aggregate": "sum",
+          "value": { "op": "signed", "value": "tr_line.amnt", "by": "tr_line.amnt_tp", "negative": [ "C" ] }
+        }
+      ],
+      "orderBy": [ "journal" ]
+    },
+    {
+      "name": "vat_summary",
+      "label": { "nl": "Btw-overzicht", "en": "VAT summary" },
+      "description": {
+        "nl": "Btw-bedragen per btw-code over de boekingen in een periode.",
+        "en": "VAT amounts per VAT code over the entries in a period."
+      },
+      "source": "tr_line_vat",
+      "joins": [
+        { "table": "transaction" },
+        { "table": "vat_code", "on": [ [ "tr_line_vat.vat_id", "vat_code.vat_id" ] ] }
+      ],
+      "parameters": [
+        { "name": "period_from", "label": { "nl": "Periode van", "en": "Period from" }, "column": "transaction.period_number", "operator": ">=" },
+        { "name": "period_to", "label": { "nl": "Periode tot en met", "en": "Period to" }, "column": "transaction.period_number", "operator": "<=" },
+        { "name": "date_from", "label": { "nl": "Datum van", "en": "Date from" }, "column": "transaction.tr_dt", "operator": ">=" },
+        { "name": "date_to", "label": { "nl": "Datum tot en met", "en": "Date to" }, "column": "transaction.tr_dt", "operator": "<=" }
+      ],
+      "columns": [
+        { "name": "vat_code", "label": { "nl": "Btw-code", "en": "VAT code" }, "value": "tr_line_vat.vat_id" },
+        { "name": "description", "label": { "nl": "Omschrijving", "en": "Description" }, "value": "vat_code.vat_desc" },
+        {
+          "name": "debit", "label": { "nl": "Debet", "en": "Debit" }, "aggregate": "sum",
+          "value": { "op": "only", "value": "tr_line_vat.vat_amnt", "by": "tr_line_vat.vat_amnt_tp", "in": [ "D" ] }
+        },
+        {
+          "name": "credit", "label": { "nl": "Credit", "en": "Credit" }, "aggregate": "sum",
+          "value": { "op": "only", "value": "tr_line_vat.vat_amnt", "by": "tr_line_vat.vat_amnt_tp", "in": [ "C" ] }
+        },
+        {
+          "name": "balance", "label": { "nl": "Saldo", "en": "Balance" }, "aggregate": "sum",
+          "value": { "op": "signed", "value": "tr_line_vat.vat_amnt", "by": "tr_line_vat.vat_amnt_tp", "negative": [ "C" ] }
+        }
+      ],
+      "orderBy": [ "vat_code" ]
+    }
+  ]
+}
