@@ -1,0 +1,407 @@
+{
+  "formatVersion": 1,
+  "type": "xas",
+  "views": [
+    {
+      "name": "employees",
+      "label": {
+        "nl": "Werknemers",
+        "en": "Employees"
+      },
+      "description": {
+        "nl": "Inkomstenverhoudingen per werknemer, met begin- en einddatum.",
+        "en": "Income relationships per employee, with start and end date."
+      },
+      "source": "ink_vrh_vst",
+      "joins": [
+        {
+          "table": "wrknmr"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "employee",
+          "label": {
+            "nl": "Personeelsnummer",
+            "en": "Personnel number"
+          },
+          "column": "wrknmr.persnr",
+          "operator": "="
+        }
+      ],
+      "columns": [
+        {
+          "name": "employee",
+          "label": {
+            "nl": "Personeelsnummer",
+            "en": "Personnel number"
+          },
+          "value": "wrknmr.persnr"
+        },
+        {
+          "name": "surname",
+          "label": {
+            "nl": "Achternaam",
+            "en": "Surname"
+          },
+          "value": "wrknmr.sign_nm"
+        },
+        {
+          "name": "prefix",
+          "label": {
+            "nl": "Voorvoegsel",
+            "en": "Prefix"
+          },
+          "value": "wrknmr.voorv"
+        },
+        {
+          "name": "initials",
+          "label": {
+            "nl": "Voorletters",
+            "en": "Initials"
+          },
+          "value": "wrknmr.voorl"
+        },
+        {
+          "name": "income_relationship",
+          "label": {
+            "nl": "Inkomstenverhouding",
+            "en": "Income relationship"
+          },
+          "value": "ink_vrh_vst.num_iv"
+        },
+        {
+          "name": "start_date",
+          "label": {
+            "nl": "Ingangsdatum",
+            "en": "Start date"
+          },
+          "value": "ink_vrh_vst.ingdat"
+        },
+        {
+          "name": "end_date",
+          "label": {
+            "nl": "Einddatum",
+            "en": "End date"
+          },
+          "value": "ink_vrh_vst.enddat"
+        },
+        {
+          "name": "income_type",
+          "label": {
+            "nl": "Soort inkomen",
+            "en": "Type of income"
+          },
+          "value": "ink_vrh_vst.srt_ink_cd"
+        },
+        {
+          "name": "occupation",
+          "label": {
+            "nl": "Beroep",
+            "en": "Occupation"
+          },
+          "value": "ink_vrh_vst.brp_oms"
+        }
+      ],
+      "orderBy": [
+        "employee",
+        "income_relationship"
+      ]
+    },
+    {
+      "name": "payroll_summary",
+      "label": {
+        "nl": "Loonstaat",
+        "en": "Payroll summary"
+      },
+      "description": {
+        "nl": "Loon en ingehouden loonheffing per werknemer over de tijdvakken in een periode.",
+        "en": "Wages and withheld payroll tax per employee over the pay periods in a period."
+      },
+      "source": "lntdvk",
+      "joins": [
+        {
+          "table": "wrknmr"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "period_from",
+          "label": {
+            "nl": "Periode van",
+            "en": "Period from"
+          },
+          "column": "lntdvk.prdnr",
+          "operator": ">="
+        },
+        {
+          "name": "period_to",
+          "label": {
+            "nl": "Periode tot en met",
+            "en": "Period to"
+          },
+          "column": "lntdvk.prdnr",
+          "operator": "<="
+        },
+        {
+          "name": "employee",
+          "label": {
+            "nl": "Personeelsnummer",
+            "en": "Personnel number"
+          },
+          "column": "wrknmr.persnr",
+          "operator": "="
+        }
+      ],
+      "columns": [
+        {
+          "name": "employee",
+          "label": {
+            "nl": "Personeelsnummer",
+            "en": "Personnel number"
+          },
+          "value": "wrknmr.persnr"
+        },
+        {
+          "name": "surname",
+          "label": {
+            "nl": "Achternaam",
+            "en": "Surname"
+          },
+          "value": "wrknmr.sign_nm"
+        },
+        {
+          "name": "initials",
+          "label": {
+            "nl": "Voorletters",
+            "en": "Initials"
+          },
+          "value": "wrknmr.voorl"
+        },
+        {
+          "name": "pay_periods",
+          "label": {
+            "nl": "Aantal tijdvakken",
+            "en": "Number of pay periods"
+          },
+          "aggregate": "count"
+        },
+        {
+          "name": "wages_lb_ph",
+          "label": {
+            "nl": "Loon LB/PH",
+            "en": "Wages for wage tax/national insurance"
+          },
+          "aggregate": "sum",
+          "value": "lntdvk.ink_vrh_var_ln_lb_ph"
+        },
+        {
+          "name": "wages_special_table",
+          "label": {
+            "nl": "Loon tabel bijzondere beloningen",
+            "en": "Wages taxed using the special remuneration table"
+          },
+          "aggregate": "sum",
+          "value": "lntdvk.ink_vrh_var_ln_tab_bb"
+        },
+        {
+          "name": "wages_sv",
+          "label": {
+            "nl": "Loon SV",
+            "en": "Wages for social insurance"
+          },
+          "aggregate": "sum",
+          "value": "lntdvk.ink_vrh_var_ln_sv"
+        },
+        {
+          "name": "withheld_lb_ph",
+          "label": {
+            "nl": "Ingehouden LB/PH",
+            "en": "Withheld wage tax/national insurance"
+          },
+          "aggregate": "sum",
+          "value": "lntdvk.ink_vrh_var_ing_lb_ph"
+        },
+        {
+          "name": "employer_levy_zvw",
+          "label": {
+            "nl": "Werkgeversheffing Zvw",
+            "en": "Employer levy Zvw"
+          },
+          "aggregate": "sum",
+          "value": "lntdvk.ink_vrh_var_wgh_zvw"
+        }
+      ],
+      "orderBy": [
+        "employee"
+      ]
+    },
+    {
+      "name": "wage_components",
+      "label": {
+        "nl": "Looncomponenten",
+        "en": "Wage components"
+      },
+      "description": {
+        "nl": "Totaalbedrag per looncomponent over de tijdvakken in een periode.",
+        "en": "Total amount per wage component over the pay periods in a period."
+      },
+      "source": "ln_pr_lncmp",
+      "joins": [
+        {
+          "table": "lntdvk"
+        },
+        {
+          "table": "lncmp",
+          "on": [
+            [
+              "ln_pr_lncmp.id_lncmp",
+              "lncmp.id_lncmp"
+            ]
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "name": "period_from",
+          "label": {
+            "nl": "Periode van",
+            "en": "Period from"
+          },
+          "column": "lntdvk.prdnr",
+          "operator": ">="
+        },
+        {
+          "name": "period_to",
+          "label": {
+            "nl": "Periode tot en met",
+            "en": "Period to"
+          },
+          "column": "lntdvk.prdnr",
+          "operator": "<="
+        }
+      ],
+      "columns": [
+        {
+          "name": "component",
+          "label": {
+            "nl": "Looncomponent",
+            "en": "Wage component"
+          },
+          "value": "ln_pr_lncmp.id_lncmp"
+        },
+        {
+          "name": "description",
+          "label": {
+            "nl": "Omschrijving",
+            "en": "Description"
+          },
+          "value": "lncmp.oms_lncmp"
+        },
+        {
+          "name": "tax_code",
+          "label": {
+            "nl": "Code Belastingdienst",
+            "en": "Tax Administration code"
+          },
+          "value": "lncmp.lncmp_cd"
+        },
+        {
+          "name": "gross_net",
+          "label": {
+            "nl": "Bruto/netto",
+            "en": "Gross/net"
+          },
+          "value": "lncmp.bruto_netto"
+        },
+        {
+          "name": "lines",
+          "label": {
+            "nl": "Aantal regels",
+            "en": "Number of lines"
+          },
+          "aggregate": "count"
+        },
+        {
+          "name": "amount",
+          "label": {
+            "nl": "Bedrag",
+            "en": "Amount"
+          },
+          "aggregate": "sum",
+          "value": "ln_pr_lncmp.bdr"
+        }
+      ],
+      "orderBy": [
+        "component"
+      ]
+    },
+    {
+      "name": "hours",
+      "label": {
+        "nl": "Uren per soort",
+        "en": "Hours per type"
+      },
+      "description": {
+        "nl": "Aantal uren per soort uren over de tijdvakken in een periode.",
+        "en": "Number of hours per type of hours over the pay periods in a period."
+      },
+      "source": "urnreg",
+      "joins": [
+        {
+          "table": "lntdvk"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "period_from",
+          "label": {
+            "nl": "Periode van",
+            "en": "Period from"
+          },
+          "column": "lntdvk.prdnr",
+          "operator": ">="
+        },
+        {
+          "name": "period_to",
+          "label": {
+            "nl": "Periode tot en met",
+            "en": "Period to"
+          },
+          "column": "lntdvk.prdnr",
+          "operator": "<="
+        }
+      ],
+      "columns": [
+        {
+          "name": "hour_type",
+          "label": {
+            "nl": "Soort uren",
+            "en": "Type of hours"
+          },
+          "value": "urnreg.srt_urn_cd"
+        },
+        {
+          "name": "lines",
+          "label": {
+            "nl": "Aantal regels",
+            "en": "Number of lines"
+          },
+          "aggregate": "count"
+        },
+        {
+          "name": "hours",
+          "label": {
+            "nl": "Aantal uren",
+            "en": "Number of hours"
+          },
+          "aggregate": "sum",
+          "value": "urnreg.aant_urn"
+        }
+      ],
+      "orderBy": [
+        "hour_type"
+      ]
+    }
+  ]
+}

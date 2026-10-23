@@ -703,6 +703,24 @@
         "nl": "Tijd verwijderd uit datum in {path}.",
         "en": "Time removed from date in {path}."
       }
+    },
+    {
+      "code": "XAF-Q001",
+      "layer": "view",
+      "severity": "error",
+      "message": {
+        "nl": "View {view} is niet beschikbaar voor {standard}: {missing} ontbreekt.",
+        "en": "View {view} is not available for {standard}: {missing} is missing."
+      }
+    },
+    {
+      "code": "XAF-Q002",
+      "layer": "view",
+      "severity": "warning",
+      "message": {
+        "nl": "View {view}: {table} heeft meer dan één rij voor {key}; de eerste rij is gebruikt.",
+        "en": "View {view}: {table} has more than one row for {key}; the first row was used."
+      }
     }
   ]
 }
