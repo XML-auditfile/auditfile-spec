@@ -1,0 +1,65 @@
+name: Release
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Versie volgens SemVer, bijv. 1.0.0 of 1.0.1'
+        required: true
+        type: string
+permissions:
+  contents: write
+concurrency:
+  group: release
+  cancel-in-progress: false
+jobs:
+  release:
+    name: Create release
+    runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ inputs.version }}
+      TAG: v${{ inputs.version }}
+    steps:
+      - name: Validate version
+        run: |
+          # Officiële SemVer 2.0.0 regex (https://semver.org), zonder 'v'-prefix
+          regex='^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(-((0|[1-9][0-9]*|[0-9]*[a-zA-Z-][0-9a-zA-Z-]*)(\.(0|[1-9][0-9]*|[0-9]*[a-zA-Z-][0-9a-zA-Z-]*))*))?(\+([0-9a-zA-Z-]+(\.[0-9a-zA-Z-]+)*))?$'
+          if [[ ! "$VERSION" =~ $regex ]]; then
+            echo "::error::'$VERSION' is geen geldige SemVer-versie (verwacht bijv. 1.0.0)"
+            exit 1
+          fi
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          fetch-depth: 0
+      - name: Create tag
+        run: |
+          if git rev-parse -q --verify "refs/tags/$TAG" >/dev/null; then
+            echo "::error::Tag $TAG bestaat al"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a "$TAG" -m "Release $TAG" "$GITHUB_SHA"
+      - uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5.4.0
+        with:
+          global-json-file: global.json
+      - name: Build
+        run: dotnet build auditfile-spec.slnx --configuration Release -p:Version="$VERSION"
+      - name: Check generated
+        run: dotnet run --project tools/Generator --configuration Release --no-build -- --check
+      - name: Zip generated
+        run: zip -r "auditfile-spec-$VERSION.zip" generated
+      - name: Push tag
+        run: git push origin "refs/tags/$TAG"
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          prerelease=""
+          if [[ "$VERSION" == *-* ]]; then
+            prerelease="--prerelease"
+          fi
+          gh release create "$TAG" "auditfile-spec-$VERSION.zip" \
+            --verify-tag \
+            --title "$TAG" \
+            --generate-notes \
+            $prerelease
