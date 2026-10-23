@@ -29,6 +29,16 @@ Requires the .NET 10 SDK.
 dotnet build auditfile-spec.slnx
 ```
 
+## Release
+
+`.github/workflows/release.yml` runs only manually, with a version such as `1.0.1` (semver, no prefix; the tag
+has the same name). From `main` the version must be higher than every release; from `release/X.Y` (maintenance
+of an older line, e.g. a fix `0.1.1` after `1.0.0`, branched off tag `0.1.0`) it must be in line X.Y and higher
+than the latest release in that line. Only the highest stable version becomes GitHub's latest release.
+The workflow creates the tag, builds, checks that `generated/` is up to date, and attaches `generated/` as
+`auditfile-spec-<version>.zip` to the GitHub release. The version rules are in `tools/semver.ps1`, shared with
+the other projects.
+
 ## License
 
 Apache License 2.0. The XSD files are published by the Belastingdienst under their own terms.
