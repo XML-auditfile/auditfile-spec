@@ -1,0 +1,147 @@
+{
+  "formatVersion": 1,
+  "type": "xaf",
+  "views": [
+    {
+      "name": "trial_balance",
+      "label": {
+        "nl": "Proefbalans",
+        "en": "Trial balance"
+      },
+      "description": {
+        "nl": "Debet, credit en saldo per grootboekrekening over de boekingen in een periode.",
+        "en": "Debit, credit and balance per general ledger account over the entries in a period."
+      },
+      "source": "tr_line",
+      "joins": [
+        {
+          "table": "transaction"
+        },
+        {
+          "table": "ledger_account",
+          "on": [
+            [
+              "tr_line.acc_id",
+              "ledger_account.acc_id"
+            ]
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "name": "period_from",
+          "label": {
+            "nl": "Periode van",
+            "en": "Period from"
+          },
+          "column": "transaction.period_number",
+          "operator": ">="
+        },
+        {
+          "name": "period_to",
+          "label": {
+            "nl": "Periode tot en met",
+            "en": "Period to"
+          },
+          "column": "transaction.period_number",
+          "operator": "<="
+        },
+        {
+          "name": "date_from",
+          "label": {
+            "nl": "Datum van",
+            "en": "Date from"
+          },
+          "column": "transaction.tr_dt",
+          "operator": ">="
+        },
+        {
+          "name": "date_to",
+          "label": {
+            "nl": "Datum tot en met",
+            "en": "Date to"
+          },
+          "column": "transaction.tr_dt",
+          "operator": "<="
+        }
+      ],
+      "columns": [
+        {
+          "name": "account",
+          "label": {
+            "nl": "Rekening",
+            "en": "Account"
+          },
+          "value": "tr_line.acc_id"
+        },
+        {
+          "name": "description",
+          "label": {
+            "nl": "Omschrijving",
+            "en": "Description"
+          },
+          "value": "ledger_account.acc_desc"
+        },
+        {
+          "name": "account_type",
+          "label": {
+            "nl": "Soort rekening",
+            "en": "Account type"
+          },
+          "value": "ledger_account.acc_tp"
+        },
+        {
+          "name": "debit",
+          "label": {
+            "nl": "Debet",
+            "en": "Debit"
+          },
+          "aggregate": "sum",
+          "value": {
+            "op": "only",
+            "value": "tr_line.amnt",
+            "by": "tr_line.amnt_tp",
+            "in": [
+              "D"
+            ]
+          }
+        },
+        {
+          "name": "credit",
+          "label": {
+            "nl": "Credit",
+            "en": "Credit"
+          },
+          "aggregate": "sum",
+          "value": {
+            "op": "only",
+            "value": "tr_line.amnt",
+            "by": "tr_line.amnt_tp",
+            "in": [
+              "C"
+            ]
+          }
+        },
+        {
+          "name": "balance",
+          "label": {
+            "nl": "Saldo",
+            "en": "Balance"
+          },
+          "aggregate": "sum",
+          "value": {
+            "op": "signed",
+            "value": "tr_line.amnt",
+            "by": "tr_line.amnt_tp",
+            "negative": [
+              "C"
+            ]
+          }
+        }
+      ],
+      "orderBy": [
+        "account"
+      ]
+    }
+  ]
+}
