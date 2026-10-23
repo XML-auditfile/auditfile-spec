@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:env="https://odb.belastingdienst.nl/XmlAuditfileEnvelope/XAR/2.3.6" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sig="http://www.w3.org/2000/09/xmldsig#" xmlns="https://odb.belastingdienst.nl/XAR/2.3.6" targetNamespace="https://odb.belastingdienst.nl/XmlAuditfileEnvelope/XAR/2.3.6" elementFormDefault="unqualified" version="1.0">
+	<xsd:import namespace="https://odb.belastingdienst.nl/XAR/2.3.6" schemaLocation="XmlAuditfileXAR_2.3.6.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="XmlAuditfileSignatureXAR_2.3.6.xsd"/>
+	<xsd:element name="auditfileEnvelope">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="auditfile"/>
+				<xsd:element ref="sig:Signature"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,1486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.auditfiles.nl/XAS/2023.1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.auditfiles.nl/XAS/2023.1.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:element name="auditfile">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="BrAlg">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="BrCd">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:enumeration value="00001">
+											<xsd:annotation>
+												<xsd:documentation>Auditfile Salaris</xsd:documentation>
+											</xsd:annotation>
+										</xsd:enumeration>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="AandatAud" type="xsd:date"/>
+							<xsd:element name="Bljr" type="DatumAlleenJaar"/>
+							<xsd:element name="TotLnLbPh" type="Totaalbedrag"/>
+							<xsd:element name="TotAantInkVrhVast" type="Aantal7"/>
+							<xsd:element name="AudfileBstmdVCd" type="CoderingDoelgroepAuditfile"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Inhpl">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Nm" type="Naam"/>
+							<xsd:element name="TwDlNm" type="Naam" minOccurs="0"/>
+							<xsd:element name="EHPubUitk" type="Bedrag132" minOccurs="0"/>
+							<xsd:element name="EHGebrAuto" type="Bedrag132" minOccurs="0"/>
+							<xsd:element name="EHVUT" type="Bedrag132" minOccurs="0"/>
+							<xsd:element name="EhOvsFrfWrkkstrg" type="Bedrag132" minOccurs="0"/>
+							<xsd:element name="AVZeev" type="Bedrag132" minOccurs="0"/>
+							<xsd:element name="BdrVrlpgVrmSpOntw" type="Bedrag132" minOccurs="0"/>
+							<xsd:element name="IndERDWGA" type="JaNee"/>
+							<xsd:element name="IngdatERDWGA" type="xsd:date" minOccurs="0"/>
+							<xsd:element name="EnddatERDWGA" type="xsd:date" minOccurs="0"/>
+							<xsd:element name="IndERDZW" type="JaNee"/>
+							<xsd:element name="IngdatERDZW" type="xsd:date" minOccurs="0"/>
+							<xsd:element name="EnddatERDZW" type="xsd:date" minOccurs="0"/>
+							<xsd:element name="StrAdrNl">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="Pc" type="PostcodeNederland"/>
+										<xsd:element name="Huisnr" type="Huisnummer"/>
+										<xsd:element name="HuisToev" type="HuisnummerToevoeging" minOccurs="0"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="Lnadm">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="Lhnr" type="Loonheffingnummer"/>
+										<xsd:element name="KlntnrLsb" type="Sleutelwaarde12" minOccurs="0"/>
+										<xsd:element name="RelNr" type="Relatienummer"/>
+										<xsd:element name="ValCd" type="IsoValutacode"/>
+										<xsd:element name="NmAppl" type="Tekst35"/>
+										<xsd:element name="VerAppl" type="Tekst70"/>
+										<xsd:element name="Lncmp" maxOccurs="9999">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="IdLncmp" type="IdentificatieLooncomponent"/>
+													<xsd:element name="OmsLncmp" type="Tekst35"/>
+													<xsd:element name="LncmpCd">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:enumeration value="03">
+																	<xsd:annotation>
+																		<xsd:documentation>Loon in geld</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="04">
+																	<xsd:annotation>
+																		<xsd:documentation>Loon anders dan in geld</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="05">
+																	<xsd:annotation>
+																		<xsd:documentation>Fooien en uitkeringen uit fondsen</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="07">
+																	<xsd:annotation>
+																		<xsd:documentation>Aftrekposten voor alle heffingen</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="08">
+																	<xsd:annotation>
+																		<xsd:documentation>Loon voor werknemersverzekeringen</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="09">
+																	<xsd:annotation>
+																		<xsd:documentation>Loon in geld voor loonheffing</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="10">
+																	<xsd:annotation>
+																		<xsd:documentation>Loon anders dan in geld voor loonheffing</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="11">
+																	<xsd:annotation>
+																		<xsd:documentation>Ingehouden premie WW alsmede vereveningsbijdrage</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="12">
+																	<xsd:annotation>
+																		<xsd:documentation>Loon voor de zorgverzekeringen</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="13">
+																	<xsd:annotation>
+																		<xsd:documentation>Loon uitsluitend voor loonbelasting/volksverzekeringen</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="14">
+																	<xsd:annotation>
+																		<xsd:documentation>Loon voor de loonbelasting volksverzekeringen</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="15">
+																	<xsd:annotation>
+																		<xsd:documentation>Ingehouden loonbelasting/premie volksverzekeringen</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="16">
+																	<xsd:annotation>
+																		<xsd:documentation>Ingehouden bijdrage Zvw</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="18">
+																	<xsd:annotation>
+																		<xsd:documentation>Verrekende arbeidskorting</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="50">
+																	<xsd:annotation>
+																		<xsd:documentation>Netto uitkeringen</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="51">
+																	<xsd:annotation>
+																		<xsd:documentation>Netto inhoudingen</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="52">
+																	<xsd:annotation>
+																		<xsd:documentation>Loonbetalingen</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="99">
+																	<xsd:annotation>
+																		<xsd:documentation>Overige componenten</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+													<xsd:element name="WzBlCd">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:enumeration value="B">
+																	<xsd:annotation>
+																		<xsd:documentation>Bijzondere beloningen</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="E">
+																	<xsd:annotation>
+																		<xsd:documentation>Eindloonheffing</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="O">
+																	<xsd:annotation>
+																		<xsd:documentation>Onbelast</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="T">
+																	<xsd:annotation>
+																		<xsd:documentation>Tijdvakloon</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+													<xsd:element name="BrutoNetto" type="JaNee"/>
+													<xsd:element name="LncmpTypeCd" minOccurs="0">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:enumeration value="01">
+																	<xsd:annotation>
+																		<xsd:documentation>Bijtelling privé gebruik auto</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="02">
+																	<xsd:annotation>
+																		<xsd:documentation>Werknemersbijdrage privé gebruik auto</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="03">
+																	<xsd:annotation>
+																		<xsd:documentation>Vergoeding reiskosten</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="04">
+																	<xsd:annotation>
+																		<xsd:documentation>Vergoeding van plaatsbewijzen</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="05">
+																	<xsd:annotation>
+																		<xsd:documentation>Overige onbelaste vergoedingen op declaratie</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="06">
+																	<xsd:annotation>
+																		<xsd:documentation>Vaste onbelaste vergoedingen</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="21">
+																	<xsd:annotation>
+																		<xsd:documentation>Verrekende arbeidskorting</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="22">
+																	<xsd:annotation>
+																		<xsd:documentation>Jong gehandicapten korting</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="44">
+																	<xsd:annotation>
+																		<xsd:documentation>Afdrachtvermindering zeevaart</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="51">
+																	<xsd:annotation>
+																		<xsd:documentation>Ingehouden bijdrage Zorgverzekeringswet</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="52">
+																	<xsd:annotation>
+																		<xsd:documentation>Wettelijke bijdrage werkgever Zorgverzekeringswet</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="53">
+																	<xsd:annotation>
+																		<xsd:documentation>Aanvullende bijdrage werkgever Zorgverzekeringswet</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="61">
+																	<xsd:annotation>
+																		<xsd:documentation>Eindheffing publiekrechtelijke uitkeringen</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="66">
+																	<xsd:annotation>
+																		<xsd:documentation>Eindheffing doorlopend afwisselend gebruik bestelauto</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="67">
+																	<xsd:annotation>
+																		<xsd:documentation>Eindheffing VUT-regeling</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="68">
+																	<xsd:annotation>
+																		<xsd:documentation>Eindheffing overschrijding forfaitaire werkkstnrgling</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="71">
+																	<xsd:annotation>
+																		<xsd:documentation>Basispremie WAO/IVA/WGA</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="74">
+																	<xsd:annotation>
+																		<xsd:documentation>Premie sectorfonds</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="75">
+																	<xsd:annotation>
+																		<xsd:documentation>Premie Uitkeringsfonds Overheid</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="81">
+																	<xsd:annotation>
+																		<xsd:documentation>Voorschotten (verstrekte en terugbetaalde)</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="82">
+																	<xsd:annotation>
+																		<xsd:documentation>Leningen (verstrekte en terugbetaalde)</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="83">
+																	<xsd:annotation>
+																		<xsd:documentation>Gedifferentieerde premie Whk</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="84">
+																	<xsd:annotation>
+																		<xsd:documentation>Premie Awf laag</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="85">
+																	<xsd:annotation>
+																		<xsd:documentation>Premie Awf hoog</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="86">
+																	<xsd:annotation>
+																		<xsd:documentation>Premie Awf herzien</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+																<xsd:enumeration value="99">
+																	<xsd:annotation>
+																		<xsd:documentation>Niet geclassificeerd</xsd:documentation>
+																	</xsd:annotation>
+																</xsd:enumeration>
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Wrknmr" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="SofiNr" type="Sofinummer" minOccurs="0"/>
+							<xsd:element name="Persnr" type="Sleutelwaarde35" minOccurs="0"/>
+							<xsd:element name="Gebdat" type="xsd:date"/>
+							<xsd:element name="SignNm" type="SignificantDeelVanDeAchternaam" minOccurs="0"/>
+							<xsd:element name="Voorl" type="Voorletters" minOccurs="0"/>
+							<xsd:element name="Voorv" type="Voorvoegsels" minOccurs="0"/>
+							<xsd:element name="Gesl" type="Geslachtcode" minOccurs="0"/>
+							<xsd:element name="Nat" type="Nationaliteit" minOccurs="0"/>
+							<xsd:element name="Legbew" minOccurs="0" maxOccurs="9">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="SrtLegbCd" minOccurs="0">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:enumeration value="01">
+														<xsd:annotation>
+															<xsd:documentation>Nationaal paspoort</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="02">
+														<xsd:annotation>
+															<xsd:documentation>Diplomatiek paspoort</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="03">
+														<xsd:annotation>
+															<xsd:documentation>Dienstpaspoort</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="04">
+														<xsd:annotation>
+															<xsd:documentation>Reisdocument voor vluchtelingen</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="05">
+														<xsd:annotation>
+															<xsd:documentation>Reisdocument voor vreemdelingen</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="06">
+														<xsd:annotation>
+															<xsd:documentation>Nooddocument</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="07">
+														<xsd:annotation>
+															<xsd:documentation>Ander door min v Justitie vastgesteld reisdocument</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="08">
+														<xsd:annotation>
+															<xsd:documentation>Europese identiteitskaart</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="09">
+														<xsd:annotation>
+															<xsd:documentation>Vreemdelingendocument</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="10">
+														<xsd:annotation>
+															<xsd:documentation>Nederlandse Identiteitskaart</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="NrLegb" type="NummerLegitimatiebewijs" minOccurs="0"/>
+										<xsd:element name="DatAfg" type="xsd:date" minOccurs="0"/>
+										<xsd:element name="DatGtm" type="xsd:date" minOccurs="0"/>
+										<xsd:element name="PltsAfg" type="Plaatsnaam" minOccurs="0"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="StrAdrNl" minOccurs="0" maxOccurs="9">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="Ingdat" type="xsd:date" minOccurs="0"/>
+										<xsd:element name="Enddat" type="xsd:date" minOccurs="0"/>
+										<xsd:element name="Locoms" type="Locatieomschrijving" minOccurs="0"/>
+										<xsd:element name="Pc" type="PostcodeNederland" minOccurs="0"/>
+										<xsd:element name="Wnpl" type="Plaatsnaam" minOccurs="0"/>
+										<xsd:element name="Straat" type="Straatnaam" minOccurs="0"/>
+										<xsd:element name="Huisnr" type="Huisnummer" minOccurs="0"/>
+										<xsd:element name="HuisToev" type="HuisnummerToevoeging" minOccurs="0"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="StrAdrBl" minOccurs="0" maxOccurs="9">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="Ingdat" type="xsd:date" minOccurs="0"/>
+										<xsd:element name="Enddat" type="xsd:date" minOccurs="0"/>
+										<xsd:element name="LocomsBtl" type="Locatieomschrijving" minOccurs="0"/>
+										<xsd:element name="PcBtl" type="PostcodeBuitenland" minOccurs="0"/>
+										<xsd:element name="WnplBtl" type="Plaatsnaam" minOccurs="0"/>
+										<xsd:element name="RegBtl" type="RegionaamBuitenland" minOccurs="0"/>
+										<xsd:element name="LandCd" type="IsoLandcode" minOccurs="0"/>
+										<xsd:element name="Landnm" type="Landnaam" minOccurs="0"/>
+										<xsd:element name="Straat" type="Straatnaam" minOccurs="0"/>
+										<xsd:element name="HuisnrBtl" type="HuisnummerBuitenland" minOccurs="0"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="InkVrhVst" maxOccurs="99">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="NumIV" type="NummerInkomstenverhouding"/>
+										<xsd:element name="Ingdat" type="xsd:date"/>
+										<xsd:element name="Enddat" type="xsd:date" minOccurs="0"/>
+										<xsd:element name="RdEndDnstvbndOm" type="Tekst70" minOccurs="0"/>
+										<xsd:element name="CdRdnEindArbov" type="CodeRedenEindeArbeidsverhouding" minOccurs="0"/>
+										<xsd:element name="SrtInkCd">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:enumeration value="11">
+														<xsd:annotation>
+															<xsd:documentation>Loon of salaris ambtenaren in de zin van de Ambtenarenwet</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="13">
+														<xsd:annotation>
+															<xsd:documentation>Loon/salaris directeur NV/BV verz. voor werknem.verz.</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="15">
+														<xsd:annotation>
+															<xsd:documentation>Loon/salaris niet onder te brengen onder 11,13, of 17</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="17">
+														<xsd:annotation>
+															<xsd:documentation>Loon of salaris directeur - grootaandeelhouder van een nv/bv, niet verzekerd voor de werknemersverzekeringen</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="18">
+														<xsd:annotation>
+															<xsd:documentation>Wachtgeld van een overheidsinstelling</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="22">
+														<xsd:annotation>
+															<xsd:documentation>Uitkering in het kader van de Algemene Ouderdomswet (AOW)</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="23">
+														<xsd:annotation>
+															<xsd:documentation>Oorlogs- en verzetspensioenen</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="24">
+														<xsd:annotation>
+															<xsd:documentation>Uitkeringen i.h.k.v. ANW</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="31">
+														<xsd:annotation>
+															<xsd:documentation>Uitkering in het kader van de Ziektewet (ZW), vrijwillige verzekering Ziektewet en de Wet arbeid en zorg (WAZO)</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="32">
+														<xsd:annotation>
+															<xsd:documentation>Uitkering in het kader van de Wet op de ongeschiktheidsverzekering (WAO) en particuliere verzekering ziekte, invaliditeit en ongeval</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="33">
+														<xsd:annotation>
+															<xsd:documentation>Uitkeringen i.h.k.v. nWW</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="34">
+														<xsd:annotation>
+															<xsd:documentation>Uitkeringen i.h.k.v. Wet inkomensvoorziening etc.</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="36">
+														<xsd:annotation>
+															<xsd:documentation>Uitkeringen i.h.k.v. Waz</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="37">
+														<xsd:annotation>
+															<xsd:documentation>Uitkeringen i.h.k.v. Wajong</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="38">
+														<xsd:annotation>
+															<xsd:documentation>Samenloop Wajong met Waz WAO/IVA of WGA</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="39">
+														<xsd:annotation>
+															<xsd:documentation>Uitkering in het kader van de Regeling IVA</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="40">
+														<xsd:annotation>
+															<xsd:documentation>Uitkering in het kader van de Regeling WGA</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="42">
+														<xsd:annotation>
+															<xsd:documentation>Uitkeringen i.h.k.v. Bijstandsbesluit zelfstandigen</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="43">
+														<xsd:annotation>
+															<xsd:documentation>Uitkering i.h.k.v. WWB</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="45">
+														<xsd:annotation>
+															<xsd:documentation>Uitkeringen i.h.k.v. IOAZ</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="46">
+														<xsd:annotation>
+															<xsd:documentation>Uitkering uit hoofde van de Toeslagenwet</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="50">
+														<xsd:annotation>
+															<xsd:documentation>Uitkeringen i.h.k.v. overige sociale verz.wetten</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="52">
+														<xsd:annotation>
+															<xsd:documentation>Uitkering i.h.k.v. de Wet IOW</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="53">
+														<xsd:annotation>
+															<xsd:documentation>Uitkering i.h.k.v. vervroegde uittreding</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="55">
+														<xsd:annotation>
+															<xsd:documentation>Uitkering i.h.k.v. APPA</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="56">
+														<xsd:annotation>
+															<xsd:documentation>Ouderdomspensioen dat via de werkgever is opgebouwd</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="57">
+														<xsd:annotation>
+															<xsd:documentation>Nabestaandenpensioen dat via de werkgever is opgebouwd</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="58">
+														<xsd:annotation>
+															<xsd:documentation>AO-pensioen dat via de werkgever is opgebouwd</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="59">
+														<xsd:annotation>
+															<xsd:documentation>Lijfrenten i.h.k.v. arbeidsverhouding</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="60">
+														<xsd:annotation>
+															<xsd:documentation>Lijfrenten niet i.h.k.v. arbeidsovereenkomst</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="61">
+														<xsd:annotation>
+															<xsd:documentation>Aanvulling wrkgvr op uitk.wnmrsvrzk. na einde dvrbnd</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="62">
+														<xsd:annotation>
+															<xsd:documentation>Ontslagvergoeding/transitievergoeding</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+													<xsd:enumeration value="63">
+														<xsd:annotation>
+															<xsd:documentation>Overige niet hiervoor aangegeven pensioenen etc.</xsd:documentation>
+														</xsd:annotation>
+													</xsd:enumeration>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="BrpOms" type="Tekst35" minOccurs="0"/>
+										<xsd:element name="CAOCd" type="Cao" minOccurs="0"/>
+										<xsd:element name="CdCaoInl" type="Cao" minOccurs="0"/>
+										<xsd:element name="JrlnTbBzBel" type="BedragZonderDecimalen"/>
+										<xsd:element name="Sector" minOccurs="0" maxOccurs="99">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="DatAanvSect" type="xsd:date" minOccurs="0"/>
+													<xsd:element name="DatEindSect" type="xsd:date" minOccurs="0"/>
+													<xsd:element name="Sect" type="Sectorcode" minOccurs="0"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="Auto" minOccurs="0" maxOccurs="99">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="Ingdat" type="xsd:date" minOccurs="0"/>
+													<xsd:element name="Enddat" type="xsd:date" minOccurs="0"/>
+													<xsd:element name="Kenteken" type="Kenteken" minOccurs="0"/>
+													<xsd:element name="LandCd" type="IsoLandcode" minOccurs="0"/>
+													<xsd:element name="GebrAuto" type="CodeGebruikPersonenOfBestelauto" minOccurs="0"/>
+													<xsd:element name="CdRdnGnBijt" type="RedenGeenOfAfwijkendeBijtellingAuto" minOccurs="0"/>
+													<xsd:element name="CatprijsAuto" type="Bedrag92" minOccurs="0"/>
+													<xsd:element name="Bijtelperc" type="Percentage" minOccurs="0"/>
+													<xsd:element name="WrdPrGebrAut" type="Bedrag92" minOccurs="0"/>
+													<xsd:element name="WrknBijdrAut" type="Bedrag92" minOccurs="0"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="Lntdvk" minOccurs="0" maxOccurs="265">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="Prdnr" type="Periodenummer"/>
+													<xsd:element name="Ingdat" type="xsd:date"/>
+													<xsd:element name="Enddat" type="xsd:date"/>
+													<xsd:element name="Urnreg" minOccurs="0" maxOccurs="99">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="SrtUrnCd" type="Urensoort"/>
+																<xsd:element name="AantUrn" type="Aantal62"/>
+																<xsd:element name="BdrTar" type="Bedrag92" minOccurs="0"/>
+																<xsd:element name="projID" type="Projectnummer" minOccurs="0"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element name="InkVrhVar">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="IndZW" type="JaNee"/>
+																<xsd:element name="IndWW" type="JaNee"/>
+																<xsd:element name="IndZvw" type="JaNee"/>
+																<xsd:element name="IndWAO" type="JaNee"/>
+																<xsd:element name="CdZvw">
+																	<xsd:simpleType>
+																		<xsd:restriction base="xsd:string">
+																			<xsd:enumeration value="A">
+																				<xsd:annotation>
+																					<xsd:documentation>Niet verzekeringspl/persoon niet verzekerd voor AWBZ</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="B">
+																				<xsd:annotation>
+																					<xsd:documentation>Niet verzkeringspl/persoon is militair</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="G">
+																				<xsd:annotation>
+																					<xsd:documentation>Niet verzekeringspl/persoon artiest of buitenl. ber.sp.</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="H">
+																				<xsd:annotation>
+																					<xsd:documentation>Wel verzekeringsplichtig / geen tarief, binnenl artiest</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="I">
+																				<xsd:annotation>
+																					<xsd:documentation>Niet verzekeringsplichtig /niet verz. AWBZ pseudobijdr.</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="K">
+																				<xsd:annotation>
+																					<xsd:documentation>Wel verzekeringsplichtig/normaal tarief werkgevershef.</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="L">
+																				<xsd:annotation>
+																					<xsd:documentation>Wel verzekeringsplichtig/0%-tarief zeelieden</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="M">
+																				<xsd:annotation>
+																					<xsd:documentation>Wel verzekeringsplichtig, ingehouden bijdrage</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="N">
+																				<xsd:annotation>
+																					<xsd:documentation>Wel verzekeringsplichtig/meer tar. werkg.heff (K en L)</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element name="CdAard" minOccurs="0">
+																	<xsd:simpleType>
+																		<xsd:restriction base="xsd:string">
+																			<xsd:enumeration value="1">
+																				<xsd:annotation>
+																					<xsd:documentation>Arbeidsovereenkomst</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="4">
+																				<xsd:annotation>
+																					<xsd:documentation>Deelvisser</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="6">
+																				<xsd:annotation>
+																					<xsd:documentation>Musicus / artiest</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="7">
+																				<xsd:annotation>
+																					<xsd:documentation>Stagiair</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="11">
+																				<xsd:annotation>
+																					<xsd:documentation>Uitzendkracht</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="18">
+																				<xsd:annotation>
+																					<xsd:documentation>Publiekrechtelijke aanstelling</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="21">
+																				<xsd:annotation>
+																					<xsd:documentation>WSW beschut werk</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="22">
+																				<xsd:annotation>
+																					<xsd:documentation>WSW detachering bij reguliere werkgever</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="23">
+																				<xsd:annotation>
+																					<xsd:documentation>WSW begeleid werk</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="24">
+																				<xsd:annotation>
+																					<xsd:documentation>Participatiewet beschut werk</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="79">
+																				<xsd:annotation>
+																					<xsd:documentation>Opting-in regeling</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="81">
+																				<xsd:annotation>
+																					<xsd:documentation>Overige fictieve dienstbetrekkingen</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="82">
+																				<xsd:annotation>
+																					<xsd:documentation>Payrolling</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="83">
+																				<xsd:annotation>
+																					<xsd:documentation>Beroepspraktijkopleiding van de beroepsbegeleidende leerweg (BBL)</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element name="CdInvlVpl" type="CodeInvloedVerzekeringsplicht" minOccurs="0"/>
+																<xsd:element name="FsIndFZ" minOccurs="0">
+																	<xsd:simpleType>
+																		<xsd:restriction base="xsd:string">
+																			<xsd:enumeration value="1">
+																				<xsd:annotation>
+																					<xsd:documentation>Fase 1-2 met uitzendbeding</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="3">
+																				<xsd:annotation>
+																					<xsd:documentation>Fase 3</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="4">
+																				<xsd:annotation>
+																					<xsd:documentation>Fase 4</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="5">
+																				<xsd:annotation>
+																					<xsd:documentation>Wettelijk regime</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="6">
+																				<xsd:annotation>
+																					<xsd:documentation>Ketensysteem</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="17">
+																				<xsd:annotation>
+																					<xsd:documentation>Fase A met uitzendbeding</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="18">
+																				<xsd:annotation>
+																					<xsd:documentation>Fase B</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="19">
+																				<xsd:annotation>
+																					<xsd:documentation>Fase C</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="38">
+																				<xsd:annotation>
+																					<xsd:documentation>Fase A zonder uitzendbeding, met loonuitsluiting</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="40">
+																				<xsd:annotation>
+																					<xsd:documentation>Fase A zonder uitzendbeding</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="41">
+																				<xsd:annotation>
+																					<xsd:documentation>Fase 1-2 zonder uitzendbeding</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="43">
+																				<xsd:annotation>
+																					<xsd:documentation>Fase 1-2 zndr uitzendbedi met uitsl. loondrbet.vrplicht.</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element name="PrVerhaal" type="Bedrag92" minOccurs="0"/>
+																<xsd:element name="PrGediffWhk" type="Bedrag92" minOccurs="0"/>
+																<xsd:element name="PrGediffWhkWGA" type="Bedrag92" minOccurs="0"/>
+																<xsd:element name="PrGediffWhkZW" type="Bedrag92" minOccurs="0"/>
+																<xsd:element name="IndAvrLkvOudrWn" type="LogischeEenheid" minOccurs="0"/>
+																<xsd:element name="IndAvrLkvAgWn" type="LogischeEenheid" minOccurs="0"/>
+																<xsd:element name="IndAvrLkvDgBafSb" type="LogischeEenheid" minOccurs="0"/>
+																<xsd:element name="IndAvrLkvHpAgWn" type="LogischeEenheid" minOccurs="0"/>
+																<xsd:element name="IndVakBn" type="JaNee"/>
+																<xsd:element name="IndVrvr" type="JaNee"/>
+																<xsd:element name="IndArbovOnbepTd" type="JaNee" minOccurs="0"/>
+																<xsd:element name="IndSchriftArbov" type="JaNee" minOccurs="0"/>
+																<xsd:element name="IndOprov" type="JaNee" minOccurs="0"/>
+																<xsd:element name="IndJrurennrm" type="JaNee" minOccurs="0"/>
+																<xsd:element name="IndPubAanOnbepT" type="JaNee" minOccurs="0"/>
+																<xsd:element name="IndLhKort" type="JaNee"/>
+																<xsd:element name="LbTab" type="CodeLoonbelastingtabel"/>
+																<xsd:element name="IndGembez" type="JaNee"/>
+																<xsd:element name="Ind30Rgl" type="JaNee"/>
+																<xsd:element name="IndStudSch" type="JaNee"/>
+																<xsd:element name="IndWgldOudRegl" type="JaNee" minOccurs="0"/>
+																<xsd:element name="BdrGrndslgAfdrchtvrmWVA" type="Bedrag92" minOccurs="0"/>
+																<xsd:element name="IndSA71" type="JaNee" minOccurs="0"/>
+																<xsd:element name="IndSA72" type="JaNee" minOccurs="0"/>
+																<xsd:element name="CdIncInkVerm" minOccurs="0">
+																	<xsd:simpleType>
+																		<xsd:restriction base="xsd:string">
+																			<xsd:enumeration value="K">
+																				<xsd:annotation>
+																					<xsd:documentation>Kindverlof</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="O">
+																				<xsd:annotation>
+																					<xsd:documentation>Onbetaald verlof</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="S">
+																				<xsd:annotation>
+																					<xsd:documentation>Stakingsdagen</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																			<xsd:enumeration value="Z">
+																				<xsd:annotation>
+																					<xsd:documentation>Ziekte</xsd:documentation>
+																				</xsd:annotation>
+																			</xsd:enumeration>
+																		</xsd:restriction>
+																	</xsd:simpleType>
+																</xsd:element>
+																<xsd:element name="PrAofLg" type="Bedrag92"/>
+																<xsd:element name="PrAofHg" type="Bedrag92"/>
+																<xsd:element name="PrAofUit" type="Bedrag92"/>
+																<xsd:element name="OpslWko" type="Bedrag92"/>
+																<xsd:element name="PrAwfLg" type="Bedrag92"/>
+																<xsd:element name="PrAwfHg" type="Bedrag92"/>
+																<xsd:element name="PrAwfHz" type="Bedrag92"/>
+																<xsd:element name="PrAwfUit" type="Bedrag92"/>
+																<xsd:element name="PrUFO" type="Bedrag92"/>
+																<xsd:element name="LnLbPh" type="Bedrag92"/>
+																<xsd:element name="LnSV" type="Bedrag92"/>
+																<xsd:element name="PrlnAofAnwLg" type="Bedrag92"/>
+																<xsd:element name="PrlnAofAnwHg" type="Bedrag92"/>
+																<xsd:element name="PrlnAofAnwUit" type="Bedrag92"/>
+																<xsd:element name="PrlnWhkAnw" type="Bedrag92"/>
+																<xsd:element name="PrlnAwfAnwLg" type="Bedrag92"/>
+																<xsd:element name="PrlnAwfAnwHg" type="Bedrag92"/>
+																<xsd:element name="PrlnAwfAnwHz" type="Bedrag92"/>
+																<xsd:element name="PrlnAwfAnwUit" type="Bedrag92"/>
+																<xsd:element name="LnTabBB" type="Bedrag92" minOccurs="0"/>
+																<xsd:element name="VakBsl" type="Bedrag92" minOccurs="0"/>
+																<xsd:element name="OpgRchtVakBsl" type="Bedrag92" minOccurs="0"/>
+																<xsd:element name="OpnAvwb" type="Bedrag92"/>
+																<xsd:element name="OpbAvwb" type="Bedrag92"/>
+																<xsd:element name="LnInGld" type="Bedrag92"/>
+																<xsd:element name="WrdLn" type="Bedrag92" minOccurs="0"/>
+																<xsd:element name="LnOwrk" type="Bedrag92" minOccurs="0"/>
+																<xsd:element name="VerstrAanv" type="Bedrag92" minOccurs="0"/>
+																<xsd:element name="IngLbPh" type="Bedrag92" minOccurs="0"/>
+																<xsd:element name="WghZvw" type="Bedrag92" minOccurs="0"/>
+																<xsd:element name="AantVerlU" type="AantalVerloondeUren"/>
+																<xsd:element name="Ctrctln" type="Bedrag92" minOccurs="0"/>
+																<xsd:element name="AantCtrcturenPWk" type="Aantal52" minOccurs="0"/>
+																<xsd:element name="BedrRntKstvPersl" type="Bedrag92"/>
+																<xsd:element name="BedrAlInWWB" type="Bedrag92" minOccurs="0"/>
+																<xsd:element name="BedrRchtAl" type="Bedrag92" minOccurs="0"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element name="LnPrLncmp" minOccurs="0" maxOccurs="9999">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="IdLncmp" type="IdentificatieLooncomponent"/>
+																<xsd:element name="LnOverPrdnr" type="Periodenummer" minOccurs="0"/>
+																<xsd:element name="IbanRknr" type="IbanRekeningnummer" minOccurs="0"/>
+																<xsd:element name="Bdr" type="Bedrag92"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:simpleType name="Aantal52">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="5"/>
+			<xsd:fractionDigits value="2"/>
+			<xsd:minInclusive value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Aantal62">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="6"/>
+			<xsd:fractionDigits value="2"/>
+			<xsd:minInclusive value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Aantal7">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="7"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="AantalVerloondeUren">
+		<xsd:restriction base="xsd:integer">
+			<xsd:totalDigits value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Bedrag132">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="13"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Bedrag92">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="9"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="BedragZonderDecimalen">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Cao">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CodeGebruikPersonenOfBestelauto">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="1"/>
+			<xsd:enumeration value="1">
+				<xsd:annotation>
+					<xsd:documentation>Geen auto ter beschikking gesteld</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="2">
+				<xsd:annotation>
+					<xsd:documentation>Auto ter beschikking gesteld, zonder prive-gebruik</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="3">
+				<xsd:annotation>
+					<xsd:documentation>Auto ter beschikking gesteld, met prive-gebruik</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CodeInvloedVerzekeringsplicht">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A">
+				<xsd:annotation>
+					<xsd:documentation>Echtgenoot of familie van de eigenaar of van de DGA</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="B">
+				<xsd:annotation>
+					<xsd:documentation>Vorige eigenaar</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="D">
+				<xsd:annotation>
+					<xsd:documentation>Oproep/invalkracht zonder verplichting om te komen</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="E">
+				<xsd:annotation>
+					<xsd:documentation>Oproep/invalkracht met verplichting om te komen</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CodeLoonbelastingtabel">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CodeRedenEindeArbeidsverhouding">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="01">
+				<xsd:annotation>
+					<xsd:documentation>Opzegging/ontslag door de werkgever binnen de proeftijd</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="03">
+				<xsd:annotation>
+					<xsd:documentation>Ontbinding door rechter op verzoek van de werkgever</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="04">
+				<xsd:annotation>
+					<xsd:documentation>Beëindiging arbeidsverhouding met wederzijds goedvinden op initiatief van de werkgever</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="05">
+				<xsd:annotation>
+					<xsd:documentation>Opzegging/ontslag door de werkgever vanwege langdurige arbeidsongeschiktheid</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="06">
+				<xsd:annotation>
+					<xsd:documentation>Opzegging/ontslag door de werkgever vanwege bedrijfseconomische redenen</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="20">
+				<xsd:annotation>
+					<xsd:documentation>Einde arbeidsverhouding door opzegging werknemer, door toedoen werknemer of op initiatief van de werknemer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="21">
+				<xsd:annotation>
+					<xsd:documentation>Opzegging/ontslag door werkgever om dringende reden (ontslag op staande voet)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="30">
+				<xsd:annotation>
+					<xsd:documentation>Einde van rechtswege vanwege verstrijken duur arbeidsverhouding voor bepaalde tijd</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="31">
+				<xsd:annotation>
+					<xsd:documentation>Einde wegensvan rechtswege, om een andere reden (intreden ontbindende voorwaarde, pensionering, overlijden, e.d.)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="40">
+				<xsd:annotation>
+					<xsd:documentation>Einde uitzendovereenkomst, inroepen uitzendbeding door inlener vanwege ziekte uitzendkracht</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="41">
+				<xsd:annotation>
+					<xsd:documentation>Einde uitzendovereenkomst, inroepen uitzendbeding door inlener om een andere reden</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="50">
+				<xsd:annotation>
+					<xsd:documentation>Ontslag publiekrechtelijke aanstelling vanwege onbekwaamheid of ongeschiktheid</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="51">
+				<xsd:annotation>
+					<xsd:documentation>Ontslag publiekrechtelijke aanstelling vanwege leeftijd/pensionering</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="90">
+				<xsd:annotation>
+					<xsd:documentation>De arbeidsverhouding loopt door, maar de inkomstenverhouding is administratief beëindigd</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="91">
+				<xsd:annotation>
+					<xsd:documentation>De arbeidsverhouding loopt door bij een nieuwe werkgever</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="92">
+				<xsd:annotation>
+					<xsd:documentation>De arbeidsverhouding wordt zonder onderbreking opgevolgd door een nieuwe arbeidsverhouding bij dezelfde werkgever</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="99">
+				<xsd:annotation>
+					<xsd:documentation>Een andere, hiervoor niet genoemde reden</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CoderingDoelgroepAuditfile">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="2"/>
+			<xsd:enumeration value="01">
+				<xsd:annotation>
+					<xsd:documentation>Belastingdienst</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="02">
+				<xsd:annotation>
+					<xsd:documentation>Controle- en/of Adviespraktijk</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="DatumAlleenJaar">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Geslachtcode">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="0">
+				<xsd:annotation>
+					<xsd:documentation>Onbekend</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="1">
+				<xsd:annotation>
+					<xsd:documentation>Mannelijk</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="2">
+				<xsd:annotation>
+					<xsd:documentation>Vrouwelijk</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="9">
+				<xsd:annotation>
+					<xsd:documentation>Niet gespecificeerd</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Huisnummer">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="HuisnummerBuitenland">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="HuisnummerToevoeging">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="IbanRekeningnummer">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="34"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="IdentificatieLooncomponent">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="20"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="IsoLandcode">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="2"/>
+			<xsd:pattern value="\D*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="IsoValutacode">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="JaNee">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="J">
+				<xsd:annotation>
+					<xsd:documentation>Ja</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="N">
+				<xsd:annotation>
+					<xsd:documentation>Nee</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Kenteken">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="15"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Landnaam">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="40"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Locatieomschrijving">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="LogischeEenheid">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="J">
+				<xsd:annotation>
+					<xsd:documentation>Ja</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="N">
+				<xsd:annotation>
+					<xsd:documentation>Nee</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="O">
+				<xsd:annotation>
+					<xsd:documentation>Onbekend</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Loonheffingnummer">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="12"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Naam">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Nationaliteit">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="NummerInkomstenverhouding">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="NummerLegitimatiebewijs">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="30"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Percentage">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="6"/>
+			<xsd:fractionDigits value="2"/>
+			<xsd:minInclusive value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Periodenummer">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Plaatsnaam">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="24"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PostcodeBuitenland">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PostcodeNederland">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Projectnummer">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="RedenGeenOfAfwijkendeBijtellingAuto">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="1">
+				<xsd:annotation>
+					<xsd:documentation>Afspraak via werkgever met Belastingdienst</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="2">
+				<xsd:annotation>
+					<xsd:documentation>Wrknmr heeft verklaring geen prive gebruik auto Beldnst</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="3">
+				<xsd:annotation>
+					<xsd:documentation>Ander bewijs personen- en bestelauto</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="5">
+				<xsd:annotation>
+					<xsd:documentation>Doorlopend afwisselend gebruik bestelauto</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="7">
+				<xsd:annotation>
+					<xsd:documentation>Wrknmr heeft vrklring uitsl. zak.gebruik bestelauto BD</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="RegionaamBuitenland">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="24"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Relatienummer">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="8"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Sectorcode">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SignificantDeelVanDeAchternaam">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="200"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Sleutelwaarde12">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="12"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Sleutelwaarde35">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Sofinummer">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Straatnaam">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="24"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Tekst35">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Tekst70">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="70"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Totaalbedrag">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="13"/>
+			<xsd:fractionDigits value="2"/>
+			<xsd:minInclusive value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Urensoort">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+			<xsd:enumeration value="A">
+				<xsd:annotation>
+					<xsd:documentation>ATV</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="K">
+				<xsd:annotation>
+					<xsd:documentation>Afdrachtkorting</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="O">
+				<xsd:annotation>
+					<xsd:documentation>Overuren</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="V">
+				<xsd:annotation>
+					<xsd:documentation>Verlof</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="W">
+				<xsd:annotation>
+					<xsd:documentation>Gewerkt</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Y">
+				<xsd:annotation>
+					<xsd:documentation>Vorstverlet</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Z">
+				<xsd:annotation>
+					<xsd:documentation>Ziekte</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Voorletters">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="6"/>
+			<xsd:pattern value="\D*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Voorvoegsels">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+			<xsd:pattern value="\D*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

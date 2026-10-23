@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2025 (x64) (https://www.altova.com) by  (IUC Belastingdienst) -->
+<xsd:schema xmlns:str="http://www.odb.belastingdienstnl/Belastingdienst/CDB/0.2/structures/XAKSpeltransacties2026" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.odb.belastingdienst.nl/Belastingdienst/CDB/0.2/structures/XAKSpeltransacties2026" targetNamespace="http://www.odb.belastingdienst.nl/Belastingdienst/CDB/0.2/structures/XAKSpeltransacties2026" elementFormDefault="qualified" attributeFormDefault="unqualified" version=".">
+	<xsd:element name="Auditfile">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="MessHeader">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Type_XML">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:length value="1"/>
+										<xsd:pattern value="\D*"/>
+										<xsd:enumeration value="G"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="Record_ID" type="ns1:Text25"/>
+							<xsd:element name="Creation_XML" type="xsd:dateTime"/>
+							<xsd:element name="Taxreturn" type="ns1:Numbermin1"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Game" maxOccurs="10000">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Game_ID" type="ns1:Text50"/>
+							<xsd:element name="Game_category" type="ns1:Gamecategory"/>
+							<xsd:element name="Game_Type" type="ns1:Gametype"/>
+							<xsd:element name="Explan_Other" type="ns1:Text50" minOccurs="0"/>
+							<xsd:element name="Game_name" type="ns1:Text50"/>
+							<xsd:element name="Open" type="xsd:boolean"/>
+							<xsd:element name="Platform" type="ns1:Text50"/>
+							<xsd:element name="Provider" type="ns1:Text25" minOccurs="0"/>
+							<xsd:element name="Entry_fee" type="ns1:Amount12digits2decimals" minOccurs="0"/>
+							<xsd:element name="Gamesession" maxOccurs="10000">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="Processing_code">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="2"/>
+													<xsd:enumeration value="01"/>
+													<xsd:enumeration value="03"/>
+													<xsd:enumeration value="05"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="Player_ID" type="ns1:Text50"/>
+										<xsd:element name="GameSession_ID" type="ns1:Text50"/>
+										<xsd:element name="Start" type="xsd:dateTime"/>
+										<xsd:element name="End" type="xsd:dateTime" minOccurs="0"/>
+										<xsd:element name="Game_rounds" type="ns1:Numbermin1"/>
+										<xsd:element name="Stake_total" type="ns1:Amount12digits2decimals"/>
+										<xsd:element name="Stake_JP_total" type="ns1:Amount12digits2decimals" minOccurs="0"/>
+										<xsd:element name="Prize_total" type="ns1:Amount12digits2decimals"/>
+										<xsd:element name="Jackpot_total" type="ns1:Amount12digits2decimals" minOccurs="0"/>
+										<xsd:element name="Result_total" type="ns1:Amount12digits2decimals" minOccurs="0"/>
+										<xsd:element name="Commiss_total" type="ns1:Amount12digits2decimals" minOccurs="0"/>
+										<xsd:element name="Entry_fee_total" type="ns1:Amount12digits2decimals" minOccurs="0"/>
+										<xsd:element name="Other_total" type="ns1:Amount12digits2decimals" minOccurs="0"/>
+										<xsd:element name="Exp_Other_total" type="ns1:Text50" minOccurs="0"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:simpleType name="Amount12digits2decimals">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="12"/>
+			<xsd:fractionDigits value="2"/>
+			<xsd:pattern value="[\-+]?[0-9]{1,10}[.][0-9]{2}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Gamecategory">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+			<xsd:pattern value="\D*"/>
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="E"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Gametype">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="2"/>
+			<xsd:pattern value="\D*"/>
+			<xsd:enumeration value="BI"/>
+			<xsd:enumeration value="BJ"/>
+			<xsd:enumeration value="CG"/>
+			<xsd:enumeration value="FA"/>
+			<xsd:enumeration value="LG"/>
+			<xsd:enumeration value="MO"/>
+			<xsd:enumeration value="MS"/>
+			<xsd:enumeration value="OV"/>
+			<xsd:enumeration value="PC"/>
+			<xsd:enumeration value="PO"/>
+			<xsd:enumeration value="PS"/>
+			<xsd:enumeration value="PT"/>
+			<xsd:enumeration value="RO"/>
+			<xsd:enumeration value="WO"/>
+			<xsd:enumeration value="WS"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Numbermin1">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="6"/>
+			<xsd:minInclusive value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Text25">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="25"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Text50">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

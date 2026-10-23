@@ -1,0 +1,12 @@
+<xsd:schema targetNamespace="http://www.auditfiles.nl/XmlAuditfileEnvelope/Afr/3.2" elementFormDefault="unqualified" version="1.0" xmlns:env="http://www.auditfiles.nl/XmlAuditfileEnvelope/Afr/3.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sig="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.auditfiles.nl/XAA/3.2">
+	<xsd:import  namespace="http://www.auditfiles.nl/XAA/3.2" schemaLocation="XmlAuditfileAfrekensystemen3.2.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="XmlAuditfileSignature.xsd"/>
+	<xsd:element name="auditfileEnvelope">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="auditfile"/>
+				<xsd:element ref="sig:Signature"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

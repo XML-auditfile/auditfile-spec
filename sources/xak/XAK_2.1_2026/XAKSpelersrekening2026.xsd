@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2025 (x64) (https://www.altova.com) by  (IUC Belastingdienst) -->
+<xsd:schema xmlns:str="http://www.odb.belastingdienstnl/Belastingdienst/CDB/0.2/structures/XAKSpelersrekening2026" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.odb.belastingdienst.nl/Belastingdienst/CDB/0.2/structures/XAKSpelersrekening2026" targetNamespace="http://www.odb.belastingdienst.nl/Belastingdienst/CDB/0.2/structures/XAKSpelersrekening2026" elementFormDefault="qualified" attributeFormDefault="unqualified" version=".">
+	<xsd:element name="Auditfile">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="MessHeader">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Type_XML">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:length value="1"/>
+										<xsd:pattern value="\D*"/>
+										<xsd:enumeration value="A"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="Record_ID" type="ns1:Text25"/>
+							<xsd:element name="Creation_XML" type="xsd:dateTime"/>
+							<xsd:element name="Taxreturn" type="ns1:Numbermin1"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Player" maxOccurs="10000">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Player_ID" type="ns1:Text50"/>
+							<xsd:element name="Balance_eod" type="ns1:Amount12digits2decimals"/>
+							<xsd:element name="Bal_eod_bonus" type="ns1:Amount12digits2decimals" minOccurs="0"/>
+							<xsd:element name="Bal_eod_pending" type="ns1:Amount12digits2decimals" minOccurs="0"/>
+							<xsd:element name="Transaction" minOccurs="0" maxOccurs="10000">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="Processing_code">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="2"/>
+													<xsd:enumeration value="01"/>
+													<xsd:enumeration value="03"/>
+													<xsd:enumeration value="05"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="Transaction_Typ" type="ns1:Mutationtype"/>
+										<xsd:element name="Explan_Other" type="ns1:Text50" minOccurs="0"/>
+										<xsd:element name="Game_ID" type="ns1:Text50" minOccurs="0"/>
+										<xsd:element name="GameSession_ID" type="ns1:Text50" minOccurs="0"/>
+										<xsd:element name="Trx_Datetime" type="xsd:dateTime"/>
+										<xsd:element name="Total_amount" type="ns1:Amount12digits2decimals"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:simpleType name="Amount12digits2decimals">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="12"/>
+			<xsd:fractionDigits value="2"/>
+			<xsd:pattern value="[\-+]?[0-9]{1,10}[.][0-9]{2}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Mutationtype">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+			<xsd:pattern value="\D*"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="F"/>
+			<xsd:enumeration value="J"/>
+			<xsd:enumeration value="K"/>
+			<xsd:enumeration value="N"/>
+			<xsd:enumeration value="O"/>
+			<xsd:enumeration value="P"/>
+			<xsd:enumeration value="R"/>
+			<xsd:enumeration value="S"/>
+			<xsd:enumeration value="U"/>
+			<xsd:enumeration value="W"/>
+			<xsd:enumeration value="X"/>
+			<xsd:enumeration value="Y"/>
+			<xsd:enumeration value="Z"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Numbermin1">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="6"/>
+			<xsd:minInclusive value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Text25">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="25"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Text50">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

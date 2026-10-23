@@ -1,0 +1,1147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.auditfiles.nl/XAA/3.2" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xaa="http://www.auditfiles.nl/XAA/3.2" xmlns="http://www.auditfiles.nl/XAA/3.2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:iso4217="urn:iso:4217:v20170327" xmlns:iso3166="urn:iso:3166:v20170327">
+	<xsd:import namespace="urn:iso:4217:v20170327" schemaLocation="iso4217_20170327.xsd"/>
+	<xsd:import namespace="urn:iso:3166:v20170327" schemaLocation="iso3166_20170327.xsd"/>
+	<xsd:element name="auditfile">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="header">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="fiscalYear" type="String9"/>
+							<xsd:element name="startDate" type="xsd:date"/>
+							<xsd:element name="endDate" type="xsd:date"/>
+							<xsd:element name="curCode" type="iso4217:Currencycode"/>
+							<xsd:element name="dateCreated" type="xsd:date"/>
+							<xsd:element name="compID" type="IdentificationString35" minOccurs="0"/>
+							<xsd:element name="softwareDesc" type="String50" minOccurs="0"/>
+							<xsd:element name="softwareVersion" type="String20" minOccurs="0"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="company">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="companyIdent" type="IdentificationString35" minOccurs="0"/>
+							<xsd:element name="companyName" type="String999"/>
+							<xsd:element name="taxRegistrationCountry" type="iso3166:Countrycode"/>
+							<xsd:element name="taxRegIdent" type="String30"/>
+							<xsd:element name="streetAddress" minOccurs="0" maxOccurs="unbounded">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="streetname" type="String999" minOccurs="0"/>
+										<xsd:element name="number" type="String15" minOccurs="0"/>
+										<xsd:element name="numberExtension" type="String999" minOccurs="0"/>
+										<xsd:element name="property" type="String50" minOccurs="0"/>
+										<xsd:element name="city" type="String50" minOccurs="0"/>
+										<xsd:element name="postalCode" type="String10" minOccurs="0"/>
+										<xsd:element name="region" type="String50" minOccurs="0"/>
+										<xsd:element name="country" type="iso3166:Countrycode" minOccurs="0"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="postalAddress" minOccurs="0" maxOccurs="unbounded">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="streetname" type="String999" minOccurs="0"/>
+										<xsd:element name="number" type="String15" minOccurs="0"/>
+										<xsd:element name="numberExtension" type="String999" minOccurs="0"/>
+										<xsd:element name="property" type="String50" minOccurs="0"/>
+										<xsd:element name="city" type="String50"/>
+										<xsd:element name="postalCode" type="String10"/>
+										<xsd:element name="region" type="String50" minOccurs="0"/>
+										<xsd:element name="country" type="iso3166:Countrycode" minOccurs="0"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="customersSuppliers" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="customerSupplier" minOccurs="0" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="custSupID" type="IdentificationString35"/>
+													<xsd:element name="contact" type="String50" minOccurs="0"/>
+													<xsd:element name="telephone" type="String30" minOccurs="0"/>
+													<xsd:element name="fax" type="String30" minOccurs="0"/>
+													<xsd:element name="eMail" type="xsd:token" minOccurs="0"/>
+													<xsd:element name="website" type="xsd:token" minOccurs="0"/>
+													<xsd:element name="taxRegistrationCountry" type="iso3166:Countrycode" minOccurs="0"/>
+													<xsd:element name="taxRegIdent" type="String30" minOccurs="0"/>
+													<xsd:element name="streetAddress" minOccurs="0" maxOccurs="unbounded">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="streetname" type="String999" minOccurs="0"/>
+																<xsd:element name="number" type="String15" minOccurs="0"/>
+																<xsd:element name="numberExtension" type="String999" minOccurs="0"/>
+																<xsd:element name="property" type="String50" minOccurs="0"/>
+																<xsd:element name="city" type="String50" minOccurs="0"/>
+																<xsd:element name="postalCode" type="String10" minOccurs="0"/>
+																<xsd:element name="region" type="String50" minOccurs="0"/>
+																<xsd:element name="country" type="iso3166:Countrycode" minOccurs="0"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element name="postalAddress" minOccurs="0" maxOccurs="unbounded">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="streetname" type="String999" minOccurs="0"/>
+																<xsd:element name="number" type="String15" minOccurs="0"/>
+																<xsd:element name="numberExtension" type="String999" minOccurs="0"/>
+																<xsd:element name="property" type="String50" minOccurs="0"/>
+																<xsd:element name="city" type="String50"/>
+																<xsd:element name="postalCode" type="String10"/>
+																<xsd:element name="region" type="String50" minOccurs="0"/>
+																<xsd:element name="country" type="iso3166:Countrycode" minOccurs="0"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="generalLedger" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="ledgerAccount" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="accID" type="IdentificationString35"/>
+													<xsd:element name="accDesc" type="String999"/>
+													<xsd:element name="accTp" type="Accounttype"/>
+													<xsd:element name="taxonomy" minOccurs="0" maxOccurs="unbounded">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="taxoRef" type="String9999"/>
+																<xsd:element name="entryPoint" minOccurs="0" maxOccurs="unbounded">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="entryPointRef" type="String9999" minOccurs="0"/>
+																			<xsd:element name="conceptRef" type="String9999"/>
+																			<xsd:element name="domainMember" minOccurs="0" maxOccurs="unbounded">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="dimensionRef" type="String9999"/>
+																						<xsd:element name="domainMemberRef" type="String9999"/>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="basics" minOccurs="0">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="basic" minOccurs="0" maxOccurs="unbounded">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="basicType" type="Basictype"/>
+																<xsd:element name="basicID" type="IdentificationString35"/>
+																<xsd:element name="predefinedBasicID" type="Predefinedbasicidtype" minOccurs="0"/>
+																<xsd:element name="basicDesc" type="String9999"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="vatCodes" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="vatCode" minOccurs="0" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="vatID" type="IdentificationString35"/>
+													<xsd:element name="vatDesc" type="String999" minOccurs="0"/>
+													<xsd:element name="vatToPayAccID" type="IdentificationString35" minOccurs="0"/>
+													<xsd:element name="vatToClaimAccID" type="IdentificationString35" minOccurs="0"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="periods" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="period" minOccurs="0" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="periodNumber" type="Nonnegativeinteger3" minOccurs="0"/>
+													<xsd:element name="periodDesc" type="String50" minOccurs="0"/>
+													<xsd:element name="startDatePeriod" type="xsd:date" minOccurs="0"/>
+													<xsd:element name="startTimePeriod" type="xsd:time" minOccurs="0"/>
+													<xsd:element name="endDatePeriod" type="xsd:date" minOccurs="0"/>
+													<xsd:element name="endTimePeriod" type="xsd:time" minOccurs="0"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="employees" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="employee" minOccurs="0" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="empID" type="IdentificationString35"/>
+													<xsd:element name="dateOfEntry" type="xsd:date"/>
+													<xsd:element name="timeOfEntry" type="xsd:time"/>
+													<xsd:element name="firstName" type="String30" minOccurs="0"/>
+													<xsd:element name="surname" type="String999"/>
+													<xsd:element name="employeeRole" minOccurs="0" maxOccurs="unbounded">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="roleType" type="String15"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="articles" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="article" minOccurs="0" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="artID" type="IdentificationString35"/>
+													<xsd:element name="dateOfEntry" type="xsd:date"/>
+													<xsd:element name="artGroupID" type="IdentificationString35" minOccurs="0"/>
+													<xsd:element name="artDesc" type="String999"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="location" minOccurs="0" maxOccurs="unbounded">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="name" type="String100" minOccurs="0"/>
+										<xsd:element name="streetAddress" minOccurs="0">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="streetname" type="String999" minOccurs="0"/>
+													<xsd:element name="number" type="String15" minOccurs="0"/>
+													<xsd:element name="numberExtension" type="String999" minOccurs="0"/>
+													<xsd:element name="property" type="String50" minOccurs="0"/>
+													<xsd:element name="city" type="String50" minOccurs="0"/>
+													<xsd:element name="postalCode" type="String10" minOccurs="0"/>
+													<xsd:element name="region" type="String50" minOccurs="0"/>
+													<xsd:element name="country" type="iso3166:Countrycode" minOccurs="0"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="basics" minOccurs="0">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="basic" minOccurs="0" maxOccurs="unbounded">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="basicType" type="Basictype"/>
+																<xsd:element name="basicID" type="IdentificationString35"/>
+																<xsd:element name="predefinedBasicID" type="Predefinedbasicidtype" minOccurs="0"/>
+																<xsd:element name="basicDesc" type="String9999"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="cashregister" minOccurs="0" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="registerID" type="IdentificationString35"/>
+													<xsd:element name="regDesc" type="String999" minOccurs="0"/>
+													<xsd:element name="totTransAmntIn" type="Amount2decimals" minOccurs="0"/>
+													<xsd:element name="totTransAmntEx" type="Amount2decimals" minOccurs="0"/>
+													<xsd:element name="event" minOccurs="0" maxOccurs="unbounded">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="eventID" type="IdentificationString35"/>
+																<xsd:element name="eventType" type="IdentificationString35"/>
+																<xsd:element name="transID" type="IdentificationString35" minOccurs="0"/>
+																<xsd:element name="empID" type="IdentificationString35"/>
+																<xsd:element name="eventDate" type="xsd:date"/>
+																<xsd:element name="eventTime" type="xsd:time"/>
+																<xsd:element name="eventText" type="String9999" minOccurs="0"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element name="cashtransaction" minOccurs="0" maxOccurs="unbounded">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="nr" type="IdentificationString35"/>
+																<xsd:element name="transID" type="IdentificationString35"/>
+																<xsd:element name="transType" type="IdentificationString35" minOccurs="0"/>
+																<xsd:element name="transAmntIn" type="Amount2decimals"/>
+																<xsd:element name="transAmntEx" type="Amount2decimals"/>
+																<xsd:element name="totVatAmnt" type="Amount2decimals" minOccurs="0"/>
+																<xsd:element name="totDscAmnt" type="Amount2decimals" minOccurs="0"/>
+																<xsd:element name="totRaiseAmnt" type="Amount2decimals" minOccurs="0"/>
+																<xsd:element name="totPaidAmnt" type="Amount2decimals" minOccurs="0"/>
+																<xsd:element name="amntTp" type="Debitcredittype"/>
+																<xsd:element name="jrnID" type="IdentificationString35" minOccurs="0"/>
+																<xsd:element name="empID" type="IdentificationString35" minOccurs="0"/>
+																<xsd:element name="custSupID" type="IdentificationString35" minOccurs="0"/>
+																<xsd:element name="periodNumber" type="Nonnegativeinteger3" minOccurs="0"/>
+																<xsd:element name="transDate" type="xsd:date"/>
+																<xsd:element name="transTime" type="xsd:time"/>
+																<xsd:element name="bookDate" type="xsd:date" minOccurs="0"/>
+																<xsd:element name="bookTime" type="xsd:time" minOccurs="0"/>
+																<xsd:element name="invoiceID" type="IdentificationString35" minOccurs="0"/>
+																<xsd:element name="refID" type="String9999" minOccurs="0"/>
+																<xsd:element name="desc" type="String9999" minOccurs="0"/>
+																<xsd:element name="ctLine" minOccurs="0" maxOccurs="unbounded">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="nr" type="IdentificationString35"/>
+																			<xsd:element name="lineID" type="IdentificationString35"/>
+																			<xsd:element name="lineType" type="IdentificationString35"/>
+																			<xsd:element name="artGroupID" type="IdentificationString35" minOccurs="0"/>
+																			<xsd:element name="artID" type="IdentificationString35" minOccurs="0"/>
+																			<xsd:element name="qnt" type="Amount6decimals" minOccurs="0"/>
+																			<xsd:element name="lineAmntIn" type="Amount2decimals"/>
+																			<xsd:element name="lineAmntEx" type="Amount2decimals"/>
+																			<xsd:element name="totLineDscAmnt" type="Amount2decimals" minOccurs="0"/>
+																			<xsd:element name="totLineRaiseAmnt" type="Amount2decimals" minOccurs="0"/>
+																			<xsd:element name="amntTp" type="Debitcredittype"/>
+																			<xsd:element name="ppu" type="Amount6decimals" minOccurs="0"/>
+																			<xsd:element name="costPrice" type="Amount2decimals" minOccurs="0"/>
+																			<xsd:element name="costID" type="IdentificationString35" minOccurs="0"/>
+																			<xsd:element name="costObjID" type="IdentificationString35" minOccurs="0"/>
+																			<xsd:element name="projID" type="IdentificationString35" minOccurs="0"/>
+																			<xsd:element name="empID" type="IdentificationString35" minOccurs="0"/>
+																			<xsd:element name="lineAmntInAccID" type="IdentificationString35" minOccurs="0"/>
+																			<xsd:element name="stockAccID" type="IdentificationString35" minOccurs="0"/>
+																			<xsd:element name="costPriceAccID" type="IdentificationString35" minOccurs="0"/>
+																			<xsd:element name="cashTransLineDescr" type="String9999" minOccurs="0"/>
+																			<xsd:element name="lineDate" type="xsd:date" minOccurs="0"/>
+																			<xsd:element name="lineTime" type="xsd:time" minOccurs="0"/>
+																			<xsd:element name="jrnID" type="IdentificationString35" minOccurs="0"/>
+																			<xsd:element name="RGSRefExt" type="String999" minOccurs="0"/>
+																			<xsd:element name="vat" minOccurs="0">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="vatID" type="IdentificationString35" minOccurs="0"/>
+																						<xsd:element name="vatCode" type="String15" minOccurs="0"/>
+																						<xsd:element name="vatPerc" type="Decimal8" minOccurs="0"/>
+																						<xsd:element name="vatAmnt" type="Amount2decimals"/>
+																						<xsd:element name="vatAmntTp" type="Debitcredittype" minOccurs="0"/>
+																						<xsd:element name="vatBasAmnt" type="Amount2decimals" minOccurs="0"/>
+																						<xsd:element name="accID" type="IdentificationString35" minOccurs="0"/>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																			<xsd:element name="savings" minOccurs="0" maxOccurs="unbounded">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="savingsType" type="IdentificationString35"/>
+																						<xsd:element name="savingsUnits" type="Integer10"/>
+																						<xsd:element name="empID" type="IdentificationString35" minOccurs="0"/>
+																						<xsd:element name="accID" type="IdentificationString35" minOccurs="0"/>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																			<xsd:element name="discount" minOccurs="0" maxOccurs="unbounded">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="dscTp" type="IdentificationString35"/>
+																						<xsd:element name="dscAmnt" type="Amount2decimals"/>
+																						<xsd:element name="empID" type="IdentificationString35" minOccurs="0"/>
+																						<xsd:element name="accID" type="IdentificationString35" minOccurs="0"/>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																			<xsd:element name="raise" minOccurs="0" maxOccurs="unbounded">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="raiseType" type="IdentificationString35"/>
+																						<xsd:element name="raiseAmnt" type="Amount2decimals"/>
+																						<xsd:element name="empID" type="IdentificationString35" minOccurs="0"/>
+																						<xsd:element name="accID" type="IdentificationString35" minOccurs="0"/>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="vat" minOccurs="0" maxOccurs="unbounded">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="vatID" type="IdentificationString35" minOccurs="0"/>
+																			<xsd:element name="vatCode" type="String15" minOccurs="0"/>
+																			<xsd:element name="vatPerc" type="Decimal8" minOccurs="0"/>
+																			<xsd:element name="vatAmnt" type="Amount2decimals"/>
+																			<xsd:element name="vatAmntTp" type="Debitcredittype" minOccurs="0"/>
+																			<xsd:element name="vatBasAmnt" type="Amount2decimals" minOccurs="0"/>
+																			<xsd:element name="accID" type="IdentificationString35" minOccurs="0"/>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="savings" minOccurs="0" maxOccurs="unbounded">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="savingsType" type="IdentificationString35"/>
+																			<xsd:element name="savingsUnits" type="Integer10"/>
+																			<xsd:element name="empID" type="IdentificationString35" minOccurs="0"/>
+																			<xsd:element name="accID" type="IdentificationString35" minOccurs="0"/>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="discount" minOccurs="0" maxOccurs="unbounded">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="dscTp" type="IdentificationString35"/>
+																			<xsd:element name="dscAmnt" type="Amount2decimals"/>
+																			<xsd:element name="empID" type="IdentificationString35" minOccurs="0"/>
+																			<xsd:element name="accID" type="IdentificationString35" minOccurs="0"/>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="raise" minOccurs="0" maxOccurs="unbounded">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="raiseType" type="IdentificationString35"/>
+																			<xsd:element name="raiseAmnt" type="Amount2decimals"/>
+																			<xsd:element name="empID" type="IdentificationString35" minOccurs="0"/>
+																			<xsd:element name="accID" type="IdentificationString35" minOccurs="0"/>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="rounding" minOccurs="0">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="roundingAmnt" type="Amount2decimals" minOccurs="0"/>
+																			<xsd:element name="accID" type="IdentificationString35" minOccurs="0"/>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="payment" minOccurs="0" maxOccurs="unbounded">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="paymentType" type="IdentificationString35"/>
+																			<xsd:element name="paidAmnt" type="Amount2decimals"/>
+																			<xsd:element name="empID" type="IdentificationString35" minOccurs="0"/>
+																			<xsd:element name="curCode" type="iso4217:Currencycode" minOccurs="0"/>
+																			<xsd:element name="exchRt" type="Amount6decimals" minOccurs="0"/>
+																			<xsd:element name="accID" type="IdentificationString35" minOccurs="0"/>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="logistics" minOccurs="0" maxOccurs="unbounded">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="movID" type="IdentificationString35"/>
+																			<xsd:element name="artStTpCd" type="IdentificationString35" minOccurs="0"/>
+																			<xsd:element name="artCd" type="String999"/>
+																			<xsd:element name="qntID" type="IdentificationString35" minOccurs="0"/>
+																			<xsd:element name="qnt" type="Amount6decimals"/>
+																			<xsd:element name="loc" type="String999" minOccurs="0"/>
+																			<xsd:element name="wrHs" type="String999" minOccurs="0"/>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+			<xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+		</xsd:complexType>
+		<xsd:key name="accountIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:generalLedger/xaa:ledgerAccount"/>
+			<xsd:field xpath="xaa:accID"/>
+		</xsd:key>
+		<xsd:keyref name="ctVatAccountIDRef" refer="accountIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:cashtransaction/xaa:vat"/>
+			<xsd:field xpath="xaa:accID"/>
+		</xsd:keyref>
+		<xsd:keyref name="ctSavingsAccountIDRef" refer="accountIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:cashtransaction/xaa:savings"/>
+			<xsd:field xpath="xaa:accID"/>
+		</xsd:keyref>
+		<xsd:keyref name="ctDiscountAccountIDRef" refer="accountIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:cashtransaction/xaa:discount"/>
+			<xsd:field xpath="xaa:accID"/>
+		</xsd:keyref>
+		<xsd:keyref name="ctRaiseAccountIDRef" refer="accountIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:cashtransaction/xaa:raise"/>
+			<xsd:field xpath="xaa:accID"/>
+		</xsd:keyref>
+		<xsd:keyref name="ctRoundingAccountIDRef" refer="accountIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:cashtransaction/xaa:rounding"/>
+			<xsd:field xpath="xaa:accID"/>
+		</xsd:keyref>
+		<xsd:keyref name="ctPaymentAccountIDRef" refer="accountIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:cashtransaction/xaa:payment"/>
+			<xsd:field xpath="xaa:accID"/>
+		</xsd:keyref>
+		<xsd:keyref name="ctlVatAccountIDRef" refer="accountIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:cashtransaction/xaa:ctLine/xaa:vat"/>
+			<xsd:field xpath="xaa:accID"/>
+		</xsd:keyref>
+		<xsd:keyref name="ctlSavingsAccountIDRef" refer="accountIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:cashtransaction/xaa:ctLine/xaa:savings"/>
+			<xsd:field xpath="xaa:accID"/>
+		</xsd:keyref>
+		<xsd:keyref name="ctlDiscountAccountIDRef" refer="accountIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:cashtransaction/xaa:ctLine/xaa:discount"/>
+			<xsd:field xpath="xaa:accID"/>
+		</xsd:keyref>
+		<xsd:keyref name="ctlRaiseAccountIDRef" refer="accountIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:cashtransaction/xaa:ctLine/xaa:raise"/>
+			<xsd:field xpath="xaa:accID"/>
+		</xsd:keyref>
+		<xsd:keyref name="ctlAmntInAccountIDRef" refer="accountIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:cashtransaction/xaa:ctLine"/>
+			<xsd:field xpath="xaa:lineAmntInAccID"/>
+		</xsd:keyref>
+		<xsd:keyref name="ctlStockAccountIDRef" refer="accountIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:cashtransaction/xaa:ctLine"/>
+			<xsd:field xpath="xaa:stockAccID"/>
+		</xsd:keyref>
+		<xsd:keyref name="ctlCostPriceAccountIDRef" refer="accountIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:cashtransaction/xaa:ctLine"/>
+			<xsd:field xpath="xaa:costPriceAccID"/>
+		</xsd:keyref>
+		<xsd:key name="companyBasicIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:generalLedger/xaa:basics/xaa:basic"/>
+			<xsd:field xpath="xaa:basicID"/>
+		</xsd:key>
+		<xsd:key name="locBasicIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:basics/xaa:basic"/>
+			<xsd:field xpath="xaa:basicID"/>
+		</xsd:key>
+		<xsd:keyref name="eventBasicIDRef" refer="locBasicIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:event"/>
+			<xsd:field xpath="xaa:eventType"/>
+		</xsd:keyref>
+		<xsd:keyref name="transBasicIDRef" refer="locBasicIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:cashtransaction/xaa:ctLine"/>
+			<xsd:field xpath="xaa:lineType"/>
+		</xsd:keyref>
+		<xsd:key name="empIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:employees/xaa:employee"/>
+			<xsd:field xpath="xaa:empID"/>
+		</xsd:key>
+		<xsd:keyref name="eventEmpIDRef" refer="empIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:event"/>
+			<xsd:field xpath="xaa:empID"/>
+		</xsd:keyref>
+		<xsd:keyref name="ctEmpIDRef" refer="empIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:cashtransaction"/>
+			<xsd:field xpath="xaa:empID"/>
+		</xsd:keyref>
+		<xsd:keyref name="ctlEmpIDRef" refer="empIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:cashtransaction/xaa:ctLine"/>
+			<xsd:field xpath="xaa:empID"/>
+		</xsd:keyref>
+		<xsd:key name="artIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:articles/xaa:article"/>
+			<xsd:field xpath="xaa:artID"/>
+		</xsd:key>
+		<xsd:keyref name="ctlArtIDRef" refer="artIDKey">
+			<xsd:selector xpath="./xaa:company/xaa:location/xaa:cashregister/xaa:cashtransaction/xaa:ctLine"/>
+			<xsd:field xpath="xaa:artID"/>
+		</xsd:keyref>
+	</xsd:element>
+	<xsd:simpleType name="Accounttype">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+			<xsd:enumeration value="B">
+				<xsd:annotation>
+					<xsd:documentation>Balance</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="M">
+				<xsd:annotation>
+					<xsd:documentation>Mixed</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="P">
+				<xsd:annotation>
+					<xsd:documentation>Profit and Loss</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Amount2decimals">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="20"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Amount6decimals">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="20"/>
+			<xsd:fractionDigits value="6"/>
+			<xsd:minInclusive value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Basictype">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="2"/>
+			<xsd:enumeration value="02">
+				<xsd:annotation>
+					<xsd:documentation>Cost codes / Cost ID</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="03">
+				<xsd:annotation>
+					<xsd:documentation>Product codes / Product ID</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="04">
+				<xsd:annotation>
+					<xsd:documentation>Project codes / Project ID</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="05">
+				<xsd:annotation>
+					<xsd:documentation>Article Group codes / Article Group ID</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="06">
+				<xsd:annotation>
+					<xsd:documentation>Ticketline codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="07">
+				<xsd:annotation>
+					<xsd:documentation>Logging codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="08">
+				<xsd:annotation>
+					<xsd:documentation>Payable codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="09">
+				<xsd:annotation>
+					<xsd:documentation>Savings codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="10">
+				<xsd:annotation>
+					<xsd:documentation>Discount codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="11">
+				<xsd:annotation>
+					<xsd:documentation>Employee Role codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="12">
+				<xsd:annotation>
+					<xsd:documentation>Journal codes / Journal ID</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="13">
+				<xsd:annotation>
+					<xsd:documentation>General Ledger codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="14">
+				<xsd:annotation>
+					<xsd:documentation>Quantity codes / Quantity ID</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="15">
+				<xsd:annotation>
+					<xsd:documentation>Raise codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="16">
+				<xsd:annotation>
+					<xsd:documentation>Transaction codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="17">
+				<xsd:annotation>
+					<xsd:documentation>Payment codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="18">
+				<xsd:annotation>
+					<xsd:documentation>Event codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="19">
+				<xsd:annotation>
+					<xsd:documentation>Service code</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="20">
+				<xsd:annotation>
+					<xsd:documentation>Charge codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="21">
+				<xsd:annotation>
+					<xsd:documentation>Buffer codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="22">
+				<xsd:annotation>
+					<xsd:documentation>Corporation Model codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="23">
+				<xsd:annotation>
+					<xsd:documentation>Relationship codes / Relationship ID</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="24">
+				<xsd:annotation>
+					<xsd:documentation>Object codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="25">
+				<xsd:annotation>
+					<xsd:documentation>Usage codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="26">
+				<xsd:annotation>
+					<xsd:documentation>Measure codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="27">
+				<xsd:annotation>
+					<xsd:documentation>Value Type codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="28">
+				<xsd:annotation>
+					<xsd:documentation>Fiscal status codes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="29">
+				<xsd:annotation>
+					<xsd:documentation>Source codes / Source ID</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="30">
+				<xsd:annotation>
+					<xsd:documentation>User codes / User ID</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="31">
+				<xsd:annotation>
+					<xsd:documentation>Movement type codes / Movement ID</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="32">
+				<xsd:annotation>
+					<xsd:documentation>Compacting codes / Compacting ID</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Debitcredittype">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+			<xsd:pattern value="\D*"/>
+			<xsd:enumeration value="C">
+				<xsd:annotation>
+					<xsd:documentation>Credit</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="D">
+				<xsd:annotation>
+					<xsd:documentation>Debit</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Decimal8">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="8"/>
+			<xsd:fractionDigits value="3"/>
+			<xsd:minInclusive value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="IdentificationString35">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Integer10">
+		<xsd:restriction base="xsd:integer">
+			<xsd:totalDigits value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Nonnegativeinteger10">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Nonnegativeinteger3">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Predefinedbasicidtype">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="5"/>
+			<xsd:enumeration value="16001">
+				<xsd:annotation>
+					<xsd:documentation>Sales</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="16002">
+				<xsd:annotation>
+					<xsd:documentation>Purchase</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="16003">
+				<xsd:annotation>
+					<xsd:documentation>Payment</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="16004">
+				<xsd:annotation>
+					<xsd:documentation>Receiving Payment</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="16005">
+				<xsd:annotation>
+					<xsd:documentation>Cash</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="16006">
+				<xsd:annotation>
+					<xsd:documentation>Return payment</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="16007">
+				<xsd:annotation>
+					<xsd:documentation>Inventory, stock</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="16008">
+				<xsd:annotation>
+					<xsd:documentation>Packing</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="16009">
+				<xsd:annotation>
+					<xsd:documentation>Cash difference</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="16010">
+				<xsd:annotation>
+					<xsd:documentation>Price changement</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="16011">
+				<xsd:annotation>
+					<xsd:documentation>Correction</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="16012">
+				<xsd:annotation>
+					<xsd:documentation>Out Payment</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="16013">
+				<xsd:annotation>
+					<xsd:documentation>Trade-in, exchange</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="16014">
+				<xsd:annotation>
+					<xsd:documentation>Return products</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="16999">
+				<xsd:annotation>
+					<xsd:documentation>Other</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="17001">
+				<xsd:annotation>
+					<xsd:documentation>Means of payment cash</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="17002">
+				<xsd:annotation>
+					<xsd:documentation>Means of payment electronic PIN</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="17003">
+				<xsd:annotation>
+					<xsd:documentation>Means of payment Chipknip</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="17004">
+				<xsd:annotation>
+					<xsd:documentation>Means of payment creditcard</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="17005">
+				<xsd:annotation>
+					<xsd:documentation>Cross entry</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="17006">
+				<xsd:annotation>
+					<xsd:documentation>Means of payment by bankaccount</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="17007">
+				<xsd:annotation>
+					<xsd:documentation>Means of payment gift token</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="17008">
+				<xsd:annotation>
+					<xsd:documentation>Customer card</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="17009">
+				<xsd:annotation>
+					<xsd:documentation>Loyalty, stamps</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="17999">
+				<xsd:annotation>
+					<xsd:documentation>Other</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="18001">
+				<xsd:annotation>
+					<xsd:documentation>Starting the POS application (to log in)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="18002">
+				<xsd:annotation>
+					<xsd:documentation>Finishing working on the POS (to log off)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="18003">
+				<xsd:annotation>
+					<xsd:documentation>Opening cashdrawer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="18004">
+				<xsd:annotation>
+					<xsd:documentation>Closing cashdrawer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="18005">
+				<xsd:annotation>
+					<xsd:documentation>Change employee</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="18006">
+				<xsd:annotation>
+					<xsd:documentation>Change of installation  (eventText mandatory)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="18007">
+				<xsd:annotation>
+					<xsd:documentation>X-report or counting</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="18008">
+				<xsd:annotation>
+					<xsd:documentation>Z-report or counting</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="18009">
+				<xsd:annotation>
+					<xsd:documentation>Pause on</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="18010">
+				<xsd:annotation>
+					<xsd:documentation>Pause off</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="18999">
+				<xsd:annotation>
+					<xsd:documentation>Other</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="22001">
+				<xsd:annotation>
+					<xsd:documentation>Model 1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="22002">
+				<xsd:annotation>
+					<xsd:documentation>Model 2</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="23001">
+				<xsd:annotation>
+					<xsd:documentation>Renter</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="23999">
+				<xsd:annotation>
+					<xsd:documentation>Other</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="26001">
+				<xsd:annotation>
+					<xsd:documentation>Square meter</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="27001">
+				<xsd:annotation>
+					<xsd:documentation>Real-estate (NL: WOZ) value</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="27002">
+				<xsd:annotation>
+					<xsd:documentation>Sales value</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="27003">
+				<xsd:annotation>
+					<xsd:documentation>Gross value</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="27004">
+				<xsd:annotation>
+					<xsd:documentation>Nett value</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="28001">
+				<xsd:annotation>
+					<xsd:documentation>Taxed</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="28002">
+				<xsd:annotation>
+					<xsd:documentation>Tax-free</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="31001">
+				<xsd:annotation>
+					<xsd:documentation>Stock increase</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="31002">
+				<xsd:annotation>
+					<xsd:documentation>Stock decrease</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="31003">
+				<xsd:annotation>
+					<xsd:documentation>Absolute stock in trade for export for inventory level exchange</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="31004">
+				<xsd:annotation>
+					<xsd:documentation>Receipt of goods</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="31005">
+				<xsd:annotation>
+					<xsd:documentation>Storage of goods</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="31006">
+				<xsd:annotation>
+					<xsd:documentation>Removal of goods</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="31007">
+				<xsd:annotation>
+					<xsd:documentation>Transferral of goods</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="31008">
+				<xsd:annotation>
+					<xsd:documentation>Change increase</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="31009">
+				<xsd:annotation>
+					<xsd:documentation>Change decrease</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="32001">
+				<xsd:annotation>
+					<xsd:documentation>Not condensed</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="32002">
+				<xsd:annotation>
+					<xsd:documentation>Condensed</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String10">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String100">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String15">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="15"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String20">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="20"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String30">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="30"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String50">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String9">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String999">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String9999">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+</xsd:schema>
