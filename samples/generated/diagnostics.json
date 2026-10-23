@@ -1,0 +1,68 @@
+{
+  "formatVersion": 1,
+  "codes": [
+    {
+      "code": "XAF-X001",
+      "layer": "xml",
+      "severity": "fatal",
+      "message": {
+        "nl": "Het bestand is geen geldige XML: {detail}",
+        "en": "The file is not well-formed XML: {detail}"
+      }
+    },
+    {
+      "code": "XAF-V001",
+      "layer": "version",
+      "severity": "fatal",
+      "message": {
+        "nl": "Onbekende namespace '{namespace}'. Forceer een versie met ReadOptions.Version.",
+        "en": "Unknown namespace '{namespace}'. Force a version with ReadOptions.Version."
+      }
+    },
+    {
+      "code": "XAF-S001",
+      "layer": "structure",
+      "severity": "error",
+      "message": {
+        "nl": "Verplichte tabel {table} ontbreekt.",
+        "en": "Required table {table} is missing."
+      }
+    },
+    {
+      "code": "XAF-S002",
+      "layer": "structure",
+      "severity": "warning",
+      "message": {
+        "nl": "Tabel {table} ontbreekt; die wordt in de praktijk verwacht.",
+        "en": "Table {table} is missing; it is expected in practice."
+      }
+    },
+    {
+      "code": "XAF-D001",
+      "layer": "xsd",
+      "severity": "error",
+      "message": {
+        "nl": "Voldoet niet aan de XSD: {detail}",
+        "en": "Does not conform to the XSD: {detail}"
+      }
+    },
+    {
+      "code": "XAF-R001",
+      "layer": "rules",
+      "severity": "error",
+      "message": {
+        "nl": "Boekstuk {transaction} is niet in balans: debet {debit}, credit {credit}.",
+        "en": "Transaction {transaction} does not balance: debit {debit}, credit {credit}."
+      }
+    },
+    {
+      "code": "XAF-C002",
+      "layer": "dialect",
+      "severity": "info",
+      "message": {
+        "nl": "Decimale komma vervangen door punt in {path}.",
+        "en": "Decimal comma replaced by a point in {path}."
+      }
+    }
+  ]
+}

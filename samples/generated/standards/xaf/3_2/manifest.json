@@ -1,0 +1,390 @@
+{
+  "formatVersion": 1,
+  "standard": "xaf",
+  "typeName": "financial",
+  "version": "3.2",
+  "namespace": "http://www.auditfiles.nl/XAF/3.2",
+  "rootElement": "auditfile",
+  "provenance": "official",
+  "xsd": {
+    "file": "auditfile.xsd",
+    "sha256": "6127b3f19db2c5bcff89385b5e35e5095e984d4ddaa1e5000f4e99494a8d0fff"
+  },
+  "generatorVersion": "0.1.0",
+  "requiredTables": [
+    "auditfile",
+    "header",
+    "company"
+  ],
+  "expectedTables": [
+    "ledger_account",
+    "period",
+    "journal",
+    "transaction",
+    "tr_line"
+  ],
+  "tables": [
+    {
+      "name": "auditfile",
+      "xmlName": "auditfile",
+      "path": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": []
+    },
+    {
+      "name": "header",
+      "xmlName": "header",
+      "path": "auditfile/header",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": [
+        {
+          "name": "fiscal_year",
+          "xmlName": "fiscalYear",
+          "path": "fiscalYear",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String9",
+          "minOccurs": 1
+        },
+        {
+          "name": "start_date",
+          "xmlName": "startDate",
+          "path": "startDate",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "end_date",
+          "xmlName": "endDate",
+          "path": "endDate",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "cur_code",
+          "xmlName": "curCode",
+          "path": "curCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CurrencycodeIso4217",
+          "minOccurs": 1
+        },
+        {
+          "name": "date_created",
+          "xmlName": "dateCreated",
+          "path": "dateCreated",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "software_desc",
+          "xmlName": "softwareDesc",
+          "path": "softwareDesc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "software_version",
+          "xmlName": "softwareVersion",
+          "path": "softwareVersion",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String20",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "ledger_account",
+      "xmlName": "ledgerAccount",
+      "path": "auditfile/company/generalLedger/ledgerAccount",
+      "parent": "company",
+      "minOccurs": 1,
+      "keys": [
+        {
+          "name": "accountIDKey",
+          "columns": [
+            "acc_id"
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "name": "acc_id",
+          "xmlName": "accID",
+          "path": "accID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "acc_desc",
+          "xmlName": "accDesc",
+          "path": "accDesc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 1
+        },
+        {
+          "name": "acc_tp",
+          "xmlName": "accTp",
+          "path": "accTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Accounttype",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "transaction",
+      "xmlName": "transaction",
+      "path": "auditfile/company/transactions/journal/transaction",
+      "parent": "journal",
+      "minOccurs": 0,
+      "references": [
+        {
+          "name": "ctTransactionPeriodNumberRef",
+          "columns": [
+            "period_number"
+          ],
+          "table": "period",
+          "key": "periodNumberKey"
+        }
+      ],
+      "columns": [
+        {
+          "name": "nr",
+          "xmlName": "nr",
+          "path": "nr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "desc",
+          "xmlName": "desc",
+          "path": "desc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String9999",
+          "minOccurs": 0
+        },
+        {
+          "name": "period_number",
+          "xmlName": "periodNumber",
+          "path": "periodNumber",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Nonnegativeinteger3",
+          "minOccurs": 1
+        },
+        {
+          "name": "tr_dt",
+          "xmlName": "trDt",
+          "path": "trDt",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "amnt",
+          "xmlName": "amnt",
+          "path": "amnt",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 0
+        },
+        {
+          "name": "amnt_tp",
+          "xmlName": "amntTp",
+          "path": "amntTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Debitcredittype",
+          "minOccurs": 0
+        },
+        {
+          "name": "source_id",
+          "xmlName": "sourceID",
+          "path": "sourceID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "user_id",
+          "xmlName": "userID",
+          "path": "userID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "tr_line",
+      "xmlName": "trLine",
+      "path": "auditfile/company/transactions/journal/transaction/trLine",
+      "parent": "transaction",
+      "minOccurs": 0,
+      "references": [
+        {
+          "name": "ctTrLineAccIDRef",
+          "columns": [
+            "acc_id"
+          ],
+          "table": "ledger_account",
+          "key": "accountIDKey"
+        },
+        {
+          "name": "ctTrLineCustSupIDRef",
+          "columns": [
+            "cust_sup_id"
+          ],
+          "table": "customer_supplier",
+          "key": "customerSupplierIDKey"
+        }
+      ],
+      "columns": [
+        {
+          "name": "nr",
+          "xmlName": "nr",
+          "path": "nr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "acc_id",
+          "xmlName": "accID",
+          "path": "accID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "eff_date",
+          "xmlName": "effDate",
+          "path": "effDate",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "amnt",
+          "xmlName": "amnt",
+          "path": "amnt",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        },
+        {
+          "name": "amnt_tp",
+          "xmlName": "amntTp",
+          "path": "amntTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Debitcredittype",
+          "minOccurs": 1
+        },
+        {
+          "name": "currency_cur_code",
+          "xmlName": "curCode",
+          "path": "currency/curCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CurrencycodeIso4217",
+          "minOccurs": 1
+        },
+        {
+          "name": "currency_cur_amnt",
+          "xmlName": "curAmnt",
+          "path": "currency/curAmnt",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "tr_line_vat",
+      "xmlName": "vat",
+      "path": "auditfile/company/transactions/journal/transaction/trLine/vat",
+      "parent": "tr_line",
+      "minOccurs": 0,
+      "maxOccurs": 99,
+      "references": [
+        {
+          "name": "ctTrLineVatIDRef",
+          "columns": [
+            "vat_id"
+          ],
+          "table": "vat_code",
+          "key": "vatIDKey"
+        }
+      ],
+      "columns": [
+        {
+          "name": "vat_id",
+          "xmlName": "vatID",
+          "path": "vatID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "vat_perc",
+          "xmlName": "vatPerc",
+          "path": "vatPerc",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Decimal8",
+          "minOccurs": 1
+        },
+        {
+          "name": "vat_amnt",
+          "xmlName": "vatAmnt",
+          "path": "vatAmnt",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        },
+        {
+          "name": "vat_amnt_tp",
+          "xmlName": "vatAmntTp",
+          "path": "vatAmntTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Debitcredittype",
+          "minOccurs": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "formatVersion": 1,
+  "dialects": [
+    {
+      "name": "example-package",
+      "description": {
+        "nl": "Voorbeeld van een pakket met afwijkende namespace en decimale komma.",
+        "en": "Example of a package with a deviating namespace and decimal comma."
+      },
+      "match": {
+        "namespaces": [
+          "http://www.auditfiles.nl/XAF/3.2/"
+        ],
+        "softwareDesc": "Voorbeeldpakket"
+      },
+      "corrections": [
+        {
+          "code": "XAF-C001",
+          "action": "replaceNamespace",
+          "from": "http://www.auditfiles.nl/XAF/3.2/",
+          "to": "http://www.auditfiles.nl/XAF/3.2"
+        },
+        {
+          "code": "XAF-C002",
+          "action": "decimalComma",
+          "paths": [
+            "auditfile/company/transactions/journal/transaction/trLine/amnt"
+          ]
+        },
+        {
+          "code": "XAF-C003",
+          "action": "dateFromDateTime",
+          "paths": [
+            "auditfile/company/transactions/journal/transaction/trDt"
+          ]
+        }
+      ],
+      "testCase": "conformance/cases/xaf-3.2-dialect-example-package.xaf"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "formatVersion": 1,
+  "standard": "xaf",
+  "version": "3.2",
+  "entries": [
+    {
+      "key": "transaction",
+      "kind": "table",
+      "label": {
+        "en": "Transaction"
+      }
+    },
+    {
+      "key": "tr_line",
+      "kind": "table",
+      "label": {
+        "en": "Transaction Line"
+      },
+      "definition": {
+        "nl": "Journaalposten"
+      }
+    },
+    {
+      "key": "tr_line.amnt",
+      "kind": "column",
+      "label": {
+        "en": "Amount"
+      },
+      "definition": {
+        "nl": "Bedrag in locale valuta.",
+        "en": "Amount in local currency."
+      },
+      "description": {
+        "nl": "Altijd positief; de richting staat in amnt_tp.",
+        "en": "Always positive; the direction is in amnt_tp."
+      }
+    },
+    {
+      "key": "tr_line.amnt_tp",
+      "kind": "column",
+      "label": {
+        "en": "Amount Type"
+      },
+      "definition": {
+        "nl": "Geeft aan of het bedrag debet of credit is."
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "key": "tr_line.currency",
+      "kind": "group",
+      "label": {
+        "en": "Currency"
+      },
+      "definition": {
+        "nl": "Geeft de mogelijkheid om de vreemde valutawaarde te specificeren."
+      }
+    }
+  ]
+}
