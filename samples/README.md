@@ -78,11 +78,13 @@ All diagnostic codes, shared by every reader.
 
 | Code family | Layer |
 | ----------- | ----- |
-| `XAF-X` | XML: well-formed, encoding |
+| `XAF-X` | XML: well-formed, encoding, characters |
+| `XAF-E` | Envelope and digital signature (XAA, XAB, XAR) |
 | `XAF-V` | Version resolution: namespace, alias, forced version |
-| `XAF-S` | Structure: required and expected tables, unknown elements, invalid values |
+| `XAF-S` | Structure: required tables and fields, occurrences, unknown elements, invalid values, code lists |
 | `XAF-D` | XSD validation |
 | `XAF-R` | Business rules |
 | `XAF-C` | Corrections from a dialect |
 
 Messages contain placeholders such as `{table}`, filled in by the reader, in Dutch and English.
+`officialRules` (optional) maps a code to rule numbers in the official specification, per standard key.
