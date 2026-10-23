@@ -1,5 +1,9 @@
 {
   "diagnostics": "sources/diagnostics.json",
+  "views": [
+    "sources/xaf/views.json",
+    "sources/xas/views.json"
+  ],
   "standards": [
     {
       "type": "xaf",
