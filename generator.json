@@ -1,0 +1,298 @@
+{
+  "diagnostics": "sources/diagnostics.json",
+  "standards": [
+    {
+      "type": "xaf",
+      "typeName": "financial",
+      "version": "3.2",
+      "provenance": "official",
+      "rootElement": "auditfile",
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/",
+        "published": "2017-09-01"
+      },
+      "sources": {
+        "xsd": {
+          "main": "sources/xaf/XAF_3.2_20170904/XmlAuditfileFinancieel3.2.xsd",
+          "includes": []
+        }
+      },
+      "checksums": {
+        "sources/xaf/XAF_3.2_20170904/XmlAuditfileFinancieel3.2.xsd": "6127b3f19db2c5bcff89385b5e35e5095e984d4ddaa1e5000f4e99494a8d0fff"
+      }
+    },
+    {
+      "type": "xaf",
+      "typeName": "financial",
+      "version": "4.0.3",
+      "provenance": "official",
+      "rootElement": "auditfile",
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      },
+      "sources": {
+        "xsd": {
+          "main": "sources/xaf/XAF_4.0.3/XmlAuditfileFinancieel4.0.xsd",
+          "includes": []
+        }
+      },
+      "checksums": {
+        "sources/xaf/XAF_4.0.3/XmlAuditfileFinancieel4.0.xsd": "a6f35d4639deb3c4a4dc1b060cbf946558c8d3291a84ff6a75de2a0f6590dd82"
+      }
+    },
+    {
+      "type": "xab",
+      "typeName": "taxiOnboardComputer",
+      "version": "1.0",
+      "provenance": "official",
+      "rootElement": "auditfile",
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      },
+      "sources": {
+        "xsd": {
+          "main": "sources/xab/XAB_1.0/XmlAuditfileBct1.0.xsd",
+          "includes": []
+        },
+        "documents": [
+          "sources/xab/XAB_1.0/XmlAuditfileSignature.xsd"
+        ]
+      },
+      "checksums": {
+        "sources/xab/XAB_1.0/XmlAuditfileBct1.0.xsd": "5410942e48bf2a8b807ff719ba7025747480fc5b51fe30718d843730d17b52b3",
+        "sources/xab/XAB_1.0/XmlAuditfileSignature.xsd": "51bdc690b639611d917be45149ad2f3fd7e2f5bcd71206862c2c73fcddb8d17b"
+      }
+    },
+    {
+      "type": "xar",
+      "typeName": "tripRegistration",
+      "version": "1.2",
+      "provenance": "official",
+      "rootElement": "auditfile",
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      },
+      "sources": {
+        "xsd": {
+          "main": "sources/xar/XAR_1.2/XmlAuditfileRrs1.2.xsd",
+          "includes": []
+        },
+        "documents": [
+          "sources/xar/XAR_1.2/XmlAuditfileSignature.xsd"
+        ]
+      },
+      "checksums": {
+        "sources/xar/XAR_1.2/XmlAuditfileRrs1.2.xsd": "6aa0a060ac8cf075a3cfc7a00ccd34d838a1ed7abc5f696dd528dbfafd1ccdfc",
+        "sources/xar/XAR_1.2/XmlAuditfileSignature.xsd": "51bdc690b639611d917be45149ad2f3fd7e2f5bcd71206862c2c73fcddb8d17b"
+      }
+    },
+    {
+      "type": "xar",
+      "typeName": "tripRegistration",
+      "version": "2.3.6.1",
+      "provenance": "official",
+      "rootElement": "auditfile",
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      },
+      "sources": {
+        "xsd": {
+          "main": "sources/xar/XAR_2.3.6.1/XmlAuditfileXAR_2.3.6.xsd",
+          "includes": []
+        },
+        "documents": [
+          "sources/xar/XAR_2.3.6.1/XmlAuditfileSignatureXAR_2.3.6.xsd"
+        ]
+      },
+      "checksums": {
+        "sources/xar/XAR_2.3.6.1/XmlAuditfileXAR_2.3.6.xsd": "ec4d23fa22ba16d1bbd1bfe80c85e539eade679b3b080faf95fc1862930eca40",
+        "sources/xar/XAR_2.3.6.1/XmlAuditfileSignatureXAR_2.3.6.xsd": "51bdc690b639611d917be45149ad2f3fd7e2f5bcd71206862c2c73fcddb8d17b"
+      }
+    },
+    {
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2018.1.0",
+      "provenance": "official",
+      "rootElement": "auditfile",
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      },
+      "sources": {
+        "xsd": {
+          "main": "sources/xas/XAS_2018_1.0/AuditfileSalaris-Versie2018.xsd",
+          "includes": []
+        }
+      },
+      "checksums": {
+        "sources/xas/XAS_2018_1.0/AuditfileSalaris-Versie2018.xsd": "e6b5bfae1d3962fbd0d931a40713e1a132a35b61597dd217024d1ff27aac4309"
+      }
+    },
+    {
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2019.1.0",
+      "provenance": "official",
+      "rootElement": "auditfile",
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      },
+      "sources": {
+        "xsd": {
+          "main": "sources/xas/XAS_2019_1.0/AuditfileSalaris-Versie2019.xsd",
+          "includes": []
+        }
+      },
+      "checksums": {
+        "sources/xas/XAS_2019_1.0/AuditfileSalaris-Versie2019.xsd": "8391f035ea2d4b8a113755d61ce69b886b034f73c62539500b4ce83fabbaea90"
+      }
+    },
+    {
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2020.1.0",
+      "provenance": "official",
+      "rootElement": "auditfile",
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      },
+      "sources": {
+        "xsd": {
+          "main": "sources/xas/XAS_2020_1.0/AuditfileSalaris-Versie2020.xsd",
+          "includes": []
+        }
+      },
+      "checksums": {
+        "sources/xas/XAS_2020_1.0/AuditfileSalaris-Versie2020.xsd": "e1282f3e4d254029daf990ad19289b879c710bc3d49e813b7d14d88dad141ab8"
+      }
+    },
+    {
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2022.1.1",
+      "provenance": "official",
+      "rootElement": "auditfile",
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      },
+      "sources": {
+        "xsd": {
+          "main": "sources/xas/XAS_2022_1.1/AuditfileSalaris-Versie2022.xsd",
+          "includes": []
+        }
+      },
+      "checksums": {
+        "sources/xas/XAS_2022_1.1/AuditfileSalaris-Versie2022.xsd": "107cb9e6e7c8d57f64f5803ad09e177c1e043f59cd897d326f87e46bf46b61d8"
+      }
+    },
+    {
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2023.1.0",
+      "provenance": "official",
+      "rootElement": "auditfile",
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      },
+      "sources": {
+        "xsd": {
+          "main": "sources/xas/XAS_2023_1.0/AuditfileSalaris-Versie2023 1.0.xsd",
+          "includes": []
+        }
+      },
+      "checksums": {
+        "sources/xas/XAS_2023_1.0/AuditfileSalaris-Versie2023 1.0.xsd": "197cb1161ebb07bddcfacdd50a4946160fa3951e35387d2e0bbc550d3ef67cd3"
+      }
+    },
+    {
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2024.1.0",
+      "provenance": "official",
+      "rootElement": "auditfile",
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      },
+      "sources": {
+        "xsd": {
+          "main": "sources/xas/XAS_2024_1.0/AuditfileSalaris-Versie2024_1.0_def.xsd",
+          "includes": []
+        }
+      },
+      "checksums": {
+        "sources/xas/XAS_2024_1.0/AuditfileSalaris-Versie2024_1.0_def.xsd": "fed62b620c8a3735e9270b2e5b1252cdcaf38bf5378fe030f8a8351a5c53012b"
+      }
+    },
+    {
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2025.1.0",
+      "provenance": "official",
+      "rootElement": "auditfile",
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      },
+      "sources": {
+        "xsd": {
+          "main": "sources/xas/XAS_2025_1.0/AuditfileSalaris-Versie2025_1.0.xsd",
+          "includes": []
+        }
+      },
+      "checksums": {
+        "sources/xas/XAS_2025_1.0/AuditfileSalaris-Versie2025_1.0.xsd": "bd4427bf8f44af077d057928dace0b81dbd7c6f19c31e78988c4b9ee1221607e"
+      }
+    },
+    {
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2026.1.0",
+      "provenance": "official",
+      "rootElement": "auditfile",
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      },
+      "sources": {
+        "xsd": {
+          "main": "sources/xas/XAS_2026_1.0/AuditfileSalaris-Versie2026_1.0.xsd",
+          "includes": []
+        }
+      },
+      "checksums": {
+        "sources/xas/XAS_2026_1.0/AuditfileSalaris-Versie2026_1.0.xsd": "0834a6f8b74f802803debf8be93e915ee1a293c2c13e0a6c7c93245da8f49e24"
+      }
+    },
+    {
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2027.1.0",
+      "provenance": "official",
+      "rootElement": "auditfile",
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      },
+      "sources": {
+        "xsd": {
+          "main": "sources/xas/XAS_2027_1.0/AuditfileSalaris-Versie2027._1.0_def.xsd",
+          "includes": []
+        }
+      },
+      "checksums": {
+        "sources/xas/XAS_2027_1.0/AuditfileSalaris-Versie2027._1.0_def.xsd": "4cc886e36e0cb16b750aac913689562590316b1d5026936260682ca04161a609"
+      }
+    }
+  ]
+}
