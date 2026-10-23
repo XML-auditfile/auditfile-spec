@@ -1,0 +1,2570 @@
+{
+  "source": "XmlAuditfileAfrekensystemen3.21_spec.pdf",
+  "entries": [
+    {
+      "path": "auditfile",
+      "label": {
+        "en": "Auditfile"
+      }
+    },
+    {
+      "path": "auditfile/header",
+      "label": {
+        "en": "Header"
+      },
+      "definition": {
+        "nl": "Berichtheader.",
+        "en": "Message header."
+      }
+    },
+    {
+      "path": "auditfile/header/fiscalYear",
+      "label": {
+        "en": "Fiscal Year"
+      },
+      "definition": {
+        "nl": "Aanduiding van het boekjaar (EEJJ). Bijvoorbeeld 2013. Bij een gebroken boekjaar wordt dat als volgt gevuld: EEJJ-EEJJ. Bijvoorbeeld 2008-2009.",
+        "en": "Indication of the financial year (YYYY). For example 2013. For a non-calendar financial year it is filled as follows: YYYY-YYYY. For example 2008-2009."
+      }
+    },
+    {
+      "path": "auditfile/header/startDate",
+      "label": {
+        "en": "Start Date Bookingperiod"
+      },
+      "definition": {
+        "nl": "Startdatum boekjaar. W3C date datatype. Bijv. 2013-01-01.",
+        "en": "Start date of the financial year. W3C date datatype. E.g. 2013-01-01."
+      }
+    },
+    {
+      "path": "auditfile/header/endDate",
+      "label": {
+        "en": "End Date Bookingperiod"
+      },
+      "definition": {
+        "nl": "Einddatum boekjaar. W3C date datatype. Bijv. 2013-12-31.",
+        "en": "End date of the financial year. W3C date datatype. E.g. 2013-12-31."
+      }
+    },
+    {
+      "path": "auditfile/header/curCode",
+      "label": {
+        "en": "Currency Code"
+      },
+      "definition": {
+        "nl": "ISO Valutacode (ISO 4217). De locale valuta van de administratie, bijv. EUR.",
+        "en": "ISO currency code (ISO 4217). The local currency of the administration, e.g. EUR."
+      }
+    },
+    {
+      "path": "auditfile/header/dateCreated",
+      "label": {
+        "en": "Date Created"
+      },
+      "definition": {
+        "nl": "De datum waarop de auditfile is aangemaakt. W3C date datatype. Bijv. 2009-01-27.",
+        "en": "The date on which the audit file was created. W3C date datatype. E.g. 2009-01-27."
+      }
+    },
+    {
+      "path": "auditfile/header/compID",
+      "label": {
+        "en": "Compacting ID"
+      },
+      "definition": {
+        "nl": "Compacting ID. Verwijzing naar de manier van verdichten. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden. Bijvoorbeeld de totale omzet van 1 kassa van 1 dag in 1 kastransactie.",
+        "en": "Compacting ID. Reference to the method of condensing. The description of the code must be explained in the 'Basics' table. For example the total turnover of 1 cash register for 1 day in 1 cash transaction."
+      }
+    },
+    {
+      "path": "auditfile/header/softwareDesc",
+      "label": {
+        "en": "Software Description"
+      },
+      "definition": {
+        "nl": "De naam van het softwarepakket waarmee de Auditfile is gegenereerd.",
+        "en": "The name of the software package with which the audit file was generated."
+      }
+    },
+    {
+      "path": "auditfile/header/softwareVersion",
+      "label": {
+        "en": "Software Version"
+      },
+      "definition": {
+        "nl": "De versie van het softwarepakket waarmee de Auditfile is gegenereerd.",
+        "en": "The version of the software package with which the audit file was generated."
+      }
+    },
+    {
+      "path": "auditfile/company",
+      "label": {
+        "en": "Company"
+      },
+      "definition": {
+        "nl": "Rechtspersoon.",
+        "en": "Legal entity."
+      }
+    },
+    {
+      "path": "auditfile/company/companyIdent",
+      "label": {
+        "en": "Company Identification"
+      },
+      "definition": {
+        "nl": "Het administratienummer van de onderneming. Het is bedoeld om uitwisseling naar derden (anders dan belastingdienst) mogelijk te maken. Er kan met onderlinge identificatie nummers gewerkt worden.",
+        "en": "The administration number of the company. It is intended to enable exchange with third parties (other than the Tax Administration). Mutual identification numbers can be used."
+      }
+    },
+    {
+      "path": "auditfile/company/companyName",
+      "label": {
+        "en": "Company Name"
+      },
+      "definition": {
+        "nl": "Naam van de onderneming.",
+        "en": "Name of the company."
+      }
+    },
+    {
+      "path": "auditfile/company/taxRegistrationCountry",
+      "label": {
+        "en": "Tax Registration Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166)",
+        "en": "ISO country code (ISO 3166)"
+      }
+    },
+    {
+      "path": "auditfile/company/taxRegIdent",
+      "label": {
+        "en": "Tax Registration Identification"
+      }
+    },
+    {
+      "path": "auditfile/company/streetAddress",
+      "label": {
+        "en": "Street address"
+      },
+      "definition": {
+        "nl": "Leverings-danwel vestigingsadres.",
+        "en": "Delivery or business address."
+      }
+    },
+    {
+      "path": "auditfile/company/streetAddress/streetname",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are left empty."
+      }
+    },
+    {
+      "path": "auditfile/company/streetAddress/number",
+      "label": {
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Huisnummer.",
+        "en": "House number."
+      }
+    },
+    {
+      "path": "auditfile/company/streetAddress/numberExtension",
+      "label": {
+        "en": "Number Extension"
+      },
+      "definition": {
+        "nl": "Huisnummertoevoegsels.",
+        "en": "House number suffixes."
+      }
+    },
+    {
+      "path": "auditfile/company/streetAddress/property",
+      "label": {
+        "en": "Property"
+      },
+      "definition": {
+        "nl": "Eventueel aanvullend gebouw-of bedrijfsnaam.",
+        "en": "Optional additional building or company name."
+      }
+    },
+    {
+      "path": "auditfile/company/streetAddress/city",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Plaats.",
+        "en": "Place."
+      }
+    },
+    {
+      "path": "auditfile/company/streetAddress/postalCode",
+      "label": {
+        "en": "Postal Code"
+      },
+      "definition": {
+        "nl": "Postcode.",
+        "en": "Postcode."
+      }
+    },
+    {
+      "path": "auditfile/company/streetAddress/region",
+      "label": {
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Provincie.",
+        "en": "Province."
+      }
+    },
+    {
+      "path": "auditfile/company/streetAddress/country",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166).",
+        "en": "ISO country code (ISO 3166)."
+      }
+    },
+    {
+      "path": "auditfile/company/postalAddress",
+      "label": {
+        "en": "dan"
+      },
+      "definition": {
+        "nl": "Postadres.",
+        "en": "Postal address."
+      }
+    },
+    {
+      "path": "auditfile/company/postalAddress/streetname",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are left empty."
+      }
+    },
+    {
+      "path": "auditfile/company/postalAddress/number",
+      "label": {
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Huisnummer.",
+        "en": "House number."
+      }
+    },
+    {
+      "path": "auditfile/company/postalAddress/numberExtension",
+      "label": {
+        "en": "Number Extension"
+      },
+      "definition": {
+        "nl": "Huisnummertoevoegsels",
+        "en": "House number suffixes"
+      }
+    },
+    {
+      "path": "auditfile/company/postalAddress/property",
+      "label": {
+        "en": "Property"
+      },
+      "definition": {
+        "nl": "Eventueel aanvullend gebouw-of bedrijfsnaam.",
+        "en": "Optional additional building or company name."
+      }
+    },
+    {
+      "path": "auditfile/company/postalAddress/city",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Debiteur, crediteurplaats.",
+        "en": "Debtor, creditor place."
+      }
+    },
+    {
+      "path": "auditfile/company/postalAddress/postalCode",
+      "label": {
+        "en": "Postal Code"
+      },
+      "definition": {
+        "nl": "Postcode.",
+        "en": "Postcode."
+      }
+    },
+    {
+      "path": "auditfile/company/postalAddress/region",
+      "label": {
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Provincie.",
+        "en": "Province."
+      }
+    },
+    {
+      "path": "auditfile/company/postalAddress/country",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166)",
+        "en": "ISO country code (ISO 3166)"
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers",
+      "label": {
+        "en": "Customers suppliers"
+      },
+      "definition": {
+        "nl": "Debiteuren, Crediteuren stamgegevens.",
+        "en": "Debtors, creditors master data."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier",
+      "label": {
+        "en": "Customer supplier"
+      },
+      "definition": {
+        "nl": "Algemene gegevens van klanten en leveranciers.",
+        "en": "General data of customers and suppliers."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/custSupID",
+      "label": {
+        "en": "Customer Supplier ID"
+      },
+      "definition": {
+        "nl": "Unieke debiteuren-of crediteurennummer.",
+        "en": "Unique debtor or creditor number."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/contact",
+      "label": {
+        "en": "Contact"
+      },
+      "definition": {
+        "nl": "Contactpersoon.",
+        "en": "Contact person."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/telephone",
+      "label": {
+        "en": "Telephone"
+      },
+      "definition": {
+        "nl": "Telefoonnummer.",
+        "en": "Telephone number."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/fax",
+      "label": {
+        "en": "Fax"
+      },
+      "definition": {
+        "nl": "Faxnummer.",
+        "en": "Fax number."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/eMail",
+      "label": {
+        "en": "E-mail"
+      },
+      "definition": {
+        "nl": "Email adres.",
+        "en": "Email address."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/website",
+      "label": {
+        "en": "Website"
+      },
+      "definition": {
+        "nl": "URL website.",
+        "en": "Website URL."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/taxRegistrationCountry",
+      "label": {
+        "en": "Tax Registration Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166)",
+        "en": "ISO country code (ISO 3166)"
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/taxRegIdent",
+      "label": {
+        "en": "Tax Registration Identifier"
+      },
+      "definition": {
+        "nl": "XML Auditfile Afrekensystemen versie 3.2",
+        "en": "XML Auditfile Cash Register Systems version 3.2"
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/streetAddress",
+      "label": {
+        "en": "Street address"
+      },
+      "definition": {
+        "nl": "Leverings-danwel vestigingsadres.",
+        "en": "Delivery or business address."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/streetAddress/streetname",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are left empty."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/streetAddress/number",
+      "label": {
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Huisnummer.",
+        "en": "House number."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/streetAddress/numberExtension",
+      "label": {
+        "en": "Number Extension"
+      },
+      "definition": {
+        "nl": "Huisnummertoevoegsels.",
+        "en": "House number suffixes."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/streetAddress/property",
+      "label": {
+        "en": "Property"
+      },
+      "definition": {
+        "nl": "Eventueel aanvullend gebouw-of bedrijfsnaam.",
+        "en": "Optional additional building or company name."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/streetAddress/city",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Plaats.",
+        "en": "Place."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/streetAddress/postalCode",
+      "label": {
+        "en": "Postal Code"
+      },
+      "definition": {
+        "nl": "Postcode.",
+        "en": "Postcode."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/streetAddress/region",
+      "label": {
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Provincie.",
+        "en": "Province."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/streetAddress/country",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166).",
+        "en": "ISO country code (ISO 3166)."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/postalAddress",
+      "label": {
+        "en": "Postal address"
+      },
+      "definition": {
+        "nl": "Postadres.",
+        "en": "Postal address."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/postalAddress/streetname",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are left empty."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/postalAddress/number",
+      "label": {
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Huisnummer.",
+        "en": "House number."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/postalAddress/numberExtension",
+      "label": {
+        "en": "Number Extension"
+      },
+      "definition": {
+        "nl": "Huisnummertoevoegsels",
+        "en": "House number suffixes"
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/postalAddress/property",
+      "label": {
+        "en": "Property"
+      },
+      "definition": {
+        "nl": "Eventueel aanvullend gebouw-of bedrijfsnaam.",
+        "en": "Optional additional building or company name."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/postalAddress/city",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Debiteur, crediteurplaats.",
+        "en": "Debtor, creditor place."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/postalAddress/postalCode",
+      "label": {
+        "en": "Postal Code"
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/postalAddress/region",
+      "label": {
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Provincie.",
+        "en": "Province."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/postalAddress/country",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166)",
+        "en": "ISO country code (ISO 3166)"
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger",
+      "label": {
+        "en": "General ledger"
+      },
+      "definition": {
+        "nl": "Grootboek stamgegevens.",
+        "en": "General ledger master data."
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/ledgerAccount",
+      "label": {
+        "en": "Ledger account"
+      },
+      "definition": {
+        "nl": "Rekeningschema.",
+        "en": "Chart of accounts."
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/ledgerAccount/accID",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Unieke grootboekrekeningcode.",
+        "en": "Unique general ledger account code."
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/ledgerAccount/accDesc",
+      "label": {
+        "en": "Account Description"
+      },
+      "definition": {
+        "nl": "Grootboekrekeningnaam.",
+        "en": "General ledger account name."
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/ledgerAccount/accTp",
+      "label": {
+        "en": "Account Type"
+      },
+      "definition": {
+        "nl": "Soort grootboekrekening bijvoorbeeld Balansrekening/Resultaatrekening etc.",
+        "en": "Type of general ledger account, for example balance sheet account/profit and loss account etc."
+      },
+      "codes": {
+        "B": {
+          "en": "Balance"
+        },
+        "M": {
+          "en": "Mixed"
+        },
+        "P": {
+          "en": "Profit and Loss"
+        }
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/ledgerAccount/taxonomy",
+      "label": {
+        "en": "Taxonomy"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een bestaande taxonomie (gegevenscatalogus).",
+        "en": "Reference to an existing taxonomy (data catalogue)."
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/ledgerAccount/taxonomy/taxoRef",
+      "label": {
+        "en": "Taxonomy Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een bestaande taxonomie (gegevenscatalogus).",
+        "en": "Reference to an existing taxonomy (data catalogue)."
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/ledgerAccount/taxonomy/entryPoint",
+      "label": {
+        "en": "Entry point"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een entry point (rapportsoort) binnen een taxonomie (gegevenscatalogus).",
+        "en": "Reference to an entry point (report type) within a taxonomy (data catalogue)."
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/ledgerAccount/taxonomy/entryPoint/entryPointRef",
+      "label": {
+        "en": "Entry Point Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een entry point (rapportsoort) binnen een taxonomie (gegevenscatalogus).",
+        "en": "Reference to an entry point (report type) within a taxonomy (data catalogue)."
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/ledgerAccount/taxonomy/entryPoint/conceptRef",
+      "label": {
+        "en": "Concept Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een concept (rapportage element definitie) binnen de entry point (rapportsoort) binnen een taxonomie (gegevenscatalogus).",
+        "en": "Reference to a concept (reporting element definition) within the entry point (report type) within a taxonomy (data catalogue)."
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/ledgerAccount/taxonomy/entryPoint/domainMember",
+      "label": {
+        "en": "Domain member"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een domain member (variabele op de as van een rapportage dimensie), binnen een domain, binnen een entry point (rapportsoort) .",
+        "en": "Reference to a domain member (variable on the axis of a reporting dimension), within a domain, within an entry point (report type)."
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/ledgerAccount/taxonomy/entryPoint/domainMember/dimensionRef",
+      "label": {
+        "en": "Dimension Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een dimensie (als onderdeel binnen een rapportage dimensie) , binnen een entry point (rapportsoort).",
+        "en": "Reference to a dimension (as part of a reporting dimension), within an entry point (report type)."
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/ledgerAccount/taxonomy/entryPoint/domainMember/domainMemberRef",
+      "label": {
+        "en": "Domain Member Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een domain member (onderdeel binnen een rapportage member) , binnen een entry point (rapportsoort).",
+        "en": "Reference to a domain member (part of a reporting member), within an entry point (report type)."
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/basics",
+      "label": {
+        "en": "Basics"
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/basics/basic",
+      "label": {
+        "en": "Basic"
+      },
+      "definition": {
+        "nl": "Code en omschrijving van diverse stamgegevens.",
+        "en": "Code and description of various master data."
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/basics/basic/basicType",
+      "label": {
+        "en": "Basic Type"
+      },
+      "definition": {
+        "nl": "Soort stamgegeven.",
+        "en": "Type of master data item."
+      },
+      "codes": {
+        "02": {
+          "en": "Cost codes / Cost ID"
+        },
+        "03": {
+          "en": "Product codes / Product ID"
+        },
+        "04": {
+          "en": "Project codes / Project ID"
+        },
+        "05": {
+          "en": "Article Group codes / Article Group ID"
+        },
+        "06": {
+          "en": "Ticketline codes"
+        },
+        "07": {
+          "en": "Logging codes"
+        },
+        "08": {
+          "en": "Payable codes"
+        },
+        "09": {
+          "en": "Savings codes"
+        },
+        "10": {
+          "en": "Discount codes"
+        },
+        "11": {
+          "en": "Employee Role codes"
+        },
+        "12": {
+          "en": "Journal codes / Journal ID"
+        },
+        "13": {
+          "en": "General Ledger codes"
+        },
+        "14": {
+          "en": "Quantity codes / Quantity ID"
+        },
+        "15": {
+          "en": "Raise codes"
+        },
+        "16": {
+          "en": "Transaction codes"
+        },
+        "17": {
+          "en": "Payment codes"
+        },
+        "18": {
+          "en": "Event codes"
+        },
+        "19": {
+          "en": "Service code"
+        },
+        "20": {
+          "en": "Charge codes"
+        },
+        "21": {
+          "en": "Buffer codes"
+        },
+        "22": {
+          "en": "Corporation Model codes"
+        },
+        "23": {
+          "en": "Relationship codes / Relationship ID"
+        },
+        "24": {
+          "en": "Object codes"
+        },
+        "25": {
+          "en": "Usage codes"
+        },
+        "26": {
+          "en": "Measure codes"
+        },
+        "27": {
+          "en": "Value Type codes"
+        },
+        "28": {
+          "en": "Fiscal status codes"
+        },
+        "29": {
+          "en": "Source codes / Source ID"
+        },
+        "30": {
+          "en": "User codes / User ID"
+        },
+        "31": {
+          "en": "Movement type codes / Movement ID"
+        },
+        "32": {
+          "en": "Compacting codes / Compacting ID"
+        }
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/basics/basic/basicID",
+      "label": {
+        "en": "Basic ID"
+      },
+      "definition": {
+        "nl": "Sleutel van het stamgegeven.",
+        "en": "Key of the master data item."
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/basics/basic/predefinedBasicID",
+      "label": {
+        "en": "Predefined basic ID"
+      },
+      "definition": {
+        "nl": "Voorgedefinieerde code die naast de eigen (leveranciersafhankelijke) Basic ID wordt opgenomen. Hiermee kan een mapping gemaakt worden naar voorgedefinieerde codes in bv de controletools van de Belastingdienst. De eerste twee posities van deze code corresponderen met de code uit Basic Type. exchange 31004 Receipt of goods 31005 Storage of goods 31006 Removal of goods 31007 Transferral of goods 31008 Change increase 31009 Change decrease 32001 Not condensed 32002 Condensed",
+        "en": "Predefined code included alongside the own (supplier-dependent) Basic ID. This allows mapping to predefined codes in, for example, the Tax Administration's audit tools. The first two positions of this code correspond to the code from Basic Type. 31004 Receipt of goods 31005 Storage of goods 31006 Removal of goods 31007 Transferral of goods 31008 Change increase 31009 Change decrease 32001 Not condensed 32002 Condensed"
+      },
+      "codes": {
+        "16001": {
+          "en": "Sales"
+        },
+        "16002": {
+          "en": "Purchase"
+        },
+        "16003": {
+          "en": "Payment"
+        },
+        "16004": {
+          "en": "Receiving Payment"
+        },
+        "16005": {
+          "en": "Cash"
+        },
+        "16006": {
+          "en": "Return payment"
+        },
+        "16007": {
+          "en": "Inventory, stock"
+        },
+        "16008": {
+          "en": "Packing"
+        },
+        "16009": {
+          "en": "Cash difference"
+        },
+        "16010": {
+          "en": "Price changement"
+        },
+        "16011": {
+          "en": "Correction"
+        },
+        "16012": {
+          "en": "Out Payment"
+        },
+        "16013": {
+          "en": "Trade-in, exchange"
+        },
+        "16014": {
+          "en": "Return products"
+        },
+        "16999": {
+          "en": "Other"
+        },
+        "17001": {
+          "en": "Means of payment cash"
+        },
+        "17002": {
+          "en": "Means of payment electronic PIN"
+        },
+        "17003": {
+          "en": "Means of payment Chipknip"
+        },
+        "17004": {
+          "en": "Means of payment creditcard"
+        },
+        "17005": {
+          "en": "Cross entry"
+        },
+        "17006": {
+          "en": "Means of payment by bankaccount"
+        },
+        "17007": {
+          "en": "Means of payment gift token"
+        },
+        "17008": {
+          "en": "Customer card"
+        },
+        "17009": {
+          "en": "Loyalty, stamps"
+        },
+        "17999": {
+          "en": "Other"
+        },
+        "18001": {
+          "en": "Starting the POS application (to log in)"
+        },
+        "18002": {
+          "en": "Finishing working on the POS (to log off)"
+        },
+        "18003": {
+          "en": "Opening cashdrawer"
+        },
+        "18004": {
+          "en": "Closing cashdrawer"
+        },
+        "18005": {
+          "en": "Change employee"
+        },
+        "18006": {
+          "en": "Change of installation (eventText mandatory)"
+        },
+        "18007": {
+          "en": "X-report or counting"
+        },
+        "18008": {
+          "en": "Z-report or counting"
+        },
+        "18009": {
+          "en": "Pause on"
+        },
+        "18010": {
+          "en": "Pause off"
+        },
+        "18999": {
+          "en": "Other"
+        },
+        "22001": {
+          "en": "Model 1"
+        },
+        "22002": {
+          "en": "Model 2"
+        },
+        "23001": {
+          "en": "Renter"
+        },
+        "23999": {
+          "en": "Other"
+        },
+        "26001": {
+          "en": "Square meter"
+        },
+        "27001": {
+          "en": "Real-estate (NL: WOZ) value"
+        },
+        "27002": {
+          "en": "Sales value"
+        },
+        "27003": {
+          "en": "Gross value"
+        },
+        "27004": {
+          "en": "Nett value"
+        },
+        "28001": {
+          "en": "Taxed"
+        },
+        "28002": {
+          "en": "Tax-free"
+        },
+        "31001": {
+          "en": "Stock increase"
+        },
+        "31002": {
+          "en": "Stock decrease"
+        },
+        "31003": {
+          "en": "Absolute stock in trade for export for inventory level"
+        }
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/basics/basic/basicDesc",
+      "label": {
+        "en": "Basic Description"
+      },
+      "definition": {
+        "nl": "Omschrijving stamgegeven.",
+        "en": "Master data description."
+      }
+    },
+    {
+      "path": "auditfile/company/vatCodes",
+      "label": {
+        "en": "Vat codes"
+      }
+    },
+    {
+      "path": "auditfile/company/vatCodes/vatCode",
+      "label": {
+        "en": "Vat code"
+      }
+    },
+    {
+      "path": "auditfile/company/vatCodes/vatCode/vatID",
+      "label": {
+        "en": "Vat id"
+      }
+    },
+    {
+      "path": "auditfile/company/vatCodes/vatCode/vatDesc",
+      "label": {
+        "en": "VAT Description"
+      }
+    },
+    {
+      "path": "auditfile/company/vatCodes/vatCode/vatToPayAccID",
+      "label": {
+        "en": "VAT To Pay Account ID"
+      },
+      "definition": {
+        "nl": "Grootboekrekening waarop de af te dragen btw wordt geboekt.",
+        "en": "General ledger account on which the VAT payable is posted."
+      }
+    },
+    {
+      "path": "auditfile/company/vatCodes/vatCode/vatToClaimAccID",
+      "label": {
+        "en": "VAT To Claim Account ID"
+      },
+      "definition": {
+        "nl": "Grootboekrekening waarop de te vorderen btw wordt geboekt.",
+        "en": "General ledger account on which the VAT receivable is posted."
+      }
+    },
+    {
+      "path": "auditfile/company/periods",
+      "label": {
+        "en": "Periods"
+      }
+    },
+    {
+      "path": "auditfile/company/periods/period",
+      "label": {
+        "en": "Period"
+      }
+    },
+    {
+      "path": "auditfile/company/periods/period/periodNumber",
+      "label": {
+        "en": "Period number"
+      },
+      "definition": {
+        "nl": "Periodenummer van de hier gedefinieerde periode.",
+        "en": "Period number of the period defined here."
+      }
+    },
+    {
+      "path": "auditfile/company/periods/period/periodDesc",
+      "label": {
+        "en": "Period description"
+      },
+      "definition": {
+        "nl": "Omschrijving van de hier gedefinieerde periode.",
+        "en": "Description of the period defined here."
+      }
+    },
+    {
+      "path": "auditfile/company/periods/period/startDatePeriod",
+      "label": {
+        "en": "Start Date period"
+      },
+      "definition": {
+        "nl": "Startdatum van de gedefinieerde periode. W3C date datatype. Bijv. 2008-01-01.",
+        "en": "Start date of the defined period. W3C date datatype. E.g. 2008-01-01."
+      }
+    },
+    {
+      "path": "auditfile/company/periods/period/startTimePeriod",
+      "label": {
+        "en": "Start Time period"
+      },
+      "definition": {
+        "nl": "Start tijd van de gedefinieerde periode. W3C time datatype. Bijv. 08:00:00.",
+        "en": "Start time of the defined period. W3C time datatype. E.g. 08:00:00."
+      }
+    },
+    {
+      "path": "auditfile/company/periods/period/endDatePeriod",
+      "label": {
+        "en": "End Date period"
+      },
+      "definition": {
+        "nl": "Einddatum van de gedefinieerde periode. W3C date datatype. Bijv. 2008-01-31.",
+        "en": "End date of the defined period. W3C date datatype. E.g. 2008-01-31."
+      }
+    },
+    {
+      "path": "auditfile/company/periods/period/endTimePeriod",
+      "label": {
+        "en": "End Time period"
+      },
+      "definition": {
+        "nl": "Eindtijd van de gedefinieerde periode. W3C time datatype. Bijv. 23:59:59",
+        "en": "End time of the defined period. W3C time datatype. E.g. 23:59:59"
+      }
+    },
+    {
+      "path": "auditfile/company/employees",
+      "label": {
+        "en": "Employees"
+      }
+    },
+    {
+      "path": "auditfile/company/employees/employee",
+      "label": {
+        "en": "Employee"
+      },
+      "definition": {
+        "nl": "Werknemer.",
+        "en": "Employee."
+      }
+    },
+    {
+      "path": "auditfile/company/employees/employee/empID",
+      "label": {
+        "en": "Employee ID"
+      }
+    },
+    {
+      "path": "auditfile/company/employees/employee/dateOfEntry",
+      "label": {
+        "en": "Date of Entry"
+      }
+    },
+    {
+      "path": "auditfile/company/employees/employee/timeOfEntry",
+      "label": {
+        "en": "Time of Entry"
+      },
+      "definition": {
+        "nl": "W3C time datatype. E.g. 08:00:00.",
+        "en": "W3C time datatype. E.g. 08:00:00."
+      }
+    },
+    {
+      "path": "auditfile/company/employees/employee/firstName",
+      "label": {
+        "en": "First name"
+      }
+    },
+    {
+      "path": "auditfile/company/employees/employee/surname",
+      "label": {
+        "en": "Surname"
+      }
+    },
+    {
+      "path": "auditfile/company/employees/employee/employeeRole",
+      "label": {
+        "en": "Employee role"
+      },
+      "definition": {
+        "nl": "Rol van de werknemer.",
+        "en": "Role of the employee."
+      }
+    },
+    {
+      "path": "auditfile/company/employees/employee/employeeRole/roleType",
+      "label": {
+        "en": "Role Type"
+      }
+    },
+    {
+      "path": "auditfile/company/articles",
+      "label": {
+        "en": "Articles"
+      },
+      "definition": {
+        "nl": "Subadministratie Artikelen",
+        "en": "Articles subledger"
+      }
+    },
+    {
+      "path": "auditfile/company/articles/article",
+      "label": {
+        "en": "Article"
+      }
+    },
+    {
+      "path": "auditfile/company/articles/article/artID",
+      "label": {
+        "en": "Article ID"
+      }
+    },
+    {
+      "path": "auditfile/company/articles/article/dateOfEntry",
+      "label": {
+        "en": "Date of Entry"
+      },
+      "definition": {
+        "nl": "W3C date datatype. E.g. 2007-01-27.",
+        "en": "W3C date datatype. E.g. 2007-01-27."
+      }
+    },
+    {
+      "path": "auditfile/company/articles/article/artGroupID",
+      "label": {
+        "en": "Article Group ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar artikelgroep. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to article group. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "path": "auditfile/company/articles/article/artDesc",
+      "label": {
+        "en": "Article Description"
+      }
+    },
+    {
+      "path": "auditfile/company/location",
+      "label": {
+        "en": "Location"
+      }
+    },
+    {
+      "path": "auditfile/company/location/name",
+      "label": {
+        "en": "Name"
+      }
+    },
+    {
+      "path": "auditfile/company/location/streetAddress",
+      "label": {
+        "en": "Street address"
+      },
+      "definition": {
+        "nl": "dan Leverings-danwel vestigingsadres.",
+        "en": "Delivery or business address."
+      }
+    },
+    {
+      "path": "auditfile/company/location/streetAddress/streetname",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are left empty."
+      }
+    },
+    {
+      "path": "auditfile/company/location/streetAddress/number",
+      "label": {
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Huisnummer.",
+        "en": "House number."
+      }
+    },
+    {
+      "path": "auditfile/company/location/streetAddress/numberExtension",
+      "label": {
+        "en": "Number Extension"
+      },
+      "definition": {
+        "nl": "Huisnummertoevoegsels.",
+        "en": "House number suffixes."
+      }
+    },
+    {
+      "path": "auditfile/company/location/streetAddress/property",
+      "label": {
+        "en": "Property"
+      },
+      "definition": {
+        "nl": "Eventueel aanvullend gebouw-of bedrijfsnaam.",
+        "en": "Optional additional building or company name."
+      }
+    },
+    {
+      "path": "auditfile/company/location/streetAddress/city",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Plaats.",
+        "en": "Place."
+      }
+    },
+    {
+      "path": "auditfile/company/location/streetAddress/postalCode",
+      "label": {
+        "en": "Postal Code"
+      },
+      "definition": {
+        "nl": "Postcode.",
+        "en": "Postcode."
+      }
+    },
+    {
+      "path": "auditfile/company/location/streetAddress/region",
+      "label": {
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Provincie.",
+        "en": "Province."
+      }
+    },
+    {
+      "path": "auditfile/company/location/streetAddress/country",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166).",
+        "en": "ISO country code (ISO 3166)."
+      }
+    },
+    {
+      "path": "auditfile/company/location/basics",
+      "label": {
+        "en": "Basics"
+      }
+    },
+    {
+      "path": "auditfile/company/location/basics/basic",
+      "label": {
+        "en": "Basic"
+      },
+      "definition": {
+        "nl": "Code en omschrijving van diverse stamgegevens.",
+        "en": "Code and description of various master data."
+      }
+    },
+    {
+      "path": "auditfile/company/location/basics/basic/basicType",
+      "label": {
+        "en": "Basic Type"
+      },
+      "definition": {
+        "nl": "Soort stamgegeven.",
+        "en": "Type of master data item."
+      },
+      "codes": {
+        "02": {
+          "en": "Cost codes / Cost ID"
+        },
+        "03": {
+          "en": "Product codes / Product ID"
+        },
+        "04": {
+          "en": "Project codes / Project ID"
+        },
+        "05": {
+          "en": "Article Group codes / Article Group ID"
+        },
+        "06": {
+          "en": "Ticketline codes"
+        },
+        "07": {
+          "en": "Logging codes"
+        },
+        "08": {
+          "en": "Payable codes"
+        },
+        "09": {
+          "en": "Savings codes"
+        },
+        "10": {
+          "en": "Discount codes"
+        },
+        "11": {
+          "en": "Employee Role codes"
+        },
+        "12": {
+          "en": "Journal codes / Journal ID"
+        },
+        "13": {
+          "en": "General Ledger codes"
+        },
+        "14": {
+          "en": "Quantity codes / Quantity ID"
+        },
+        "15": {
+          "en": "Raise codes"
+        },
+        "16": {
+          "en": "Transaction codes"
+        },
+        "17": {
+          "en": "Payment codes"
+        },
+        "18": {
+          "en": "Event codes"
+        },
+        "19": {
+          "en": "Service code"
+        },
+        "20": {
+          "en": "Charge codes"
+        },
+        "21": {
+          "en": "Buffer codes"
+        },
+        "22": {
+          "en": "Corporation Model codes"
+        },
+        "23": {
+          "en": "Relationship codes / Relationship ID"
+        },
+        "24": {
+          "en": "Object codes"
+        },
+        "25": {
+          "en": "Usage codes"
+        },
+        "26": {
+          "en": "Measure codes"
+        },
+        "27": {
+          "en": "Value Type codes"
+        },
+        "28": {
+          "en": "Fiscal status codes"
+        },
+        "29": {
+          "en": "Source codes / Source ID"
+        },
+        "30": {
+          "en": "User codes / User ID"
+        },
+        "31": {
+          "en": "Movement type codes / Movement ID"
+        },
+        "32": {
+          "en": "Compacting codes / Compacting ID"
+        }
+      }
+    },
+    {
+      "path": "auditfile/company/location/basics/basic/basicID",
+      "label": {
+        "en": "Basic ID"
+      },
+      "definition": {
+        "nl": "Sleutel van het stamgegeven.",
+        "en": "Key of the master data item."
+      }
+    },
+    {
+      "path": "auditfile/company/location/basics/basic/predefinedBasicID",
+      "label": {
+        "en": "Predefined basic ID"
+      },
+      "definition": {
+        "nl": "Voorgedefinieerde code die naast de eigen (leveranciersafhankelijke) Basic ID wordt opgenomen. Hiermee kan een mapping gemaakt worden naar voorgedefinieerde codes in bv de controletools van de Belastingdienst. De eerste twee posities van deze code corresponderen met de code uit Basic Type. exchange 31004 Receipt of goods 31005 Storage of goods 31006 Removal of goods 31007 Transferral of goods 31008 Change increase 31009 Change decrease 32001 Not condensed 32002 Condensed",
+        "en": "Predefined code included alongside the own (supplier-dependent) Basic ID. This allows mapping to predefined codes in, for example, the Tax Administration's audit tools. The first two positions of this code correspond to the code from Basic Type. 31004 Receipt of goods 31005 Storage of goods 31006 Removal of goods 31007 Transferral of goods 31008 Change increase 31009 Change decrease 32001 Not condensed 32002 Condensed"
+      },
+      "codes": {
+        "16001": {
+          "en": "Sales"
+        },
+        "16002": {
+          "en": "Purchase"
+        },
+        "16003": {
+          "en": "Payment"
+        },
+        "16004": {
+          "en": "Receiving Payment"
+        },
+        "16005": {
+          "en": "Cash"
+        },
+        "16006": {
+          "en": "Return payment"
+        },
+        "16007": {
+          "en": "Inventory, stock"
+        },
+        "16008": {
+          "en": "Packing"
+        },
+        "16009": {
+          "en": "Cash difference"
+        },
+        "16010": {
+          "en": "Price changement"
+        },
+        "16011": {
+          "en": "Correction"
+        },
+        "16012": {
+          "en": "Out Payment"
+        },
+        "16013": {
+          "en": "Trade-in, exchange"
+        },
+        "16014": {
+          "en": "Return products"
+        },
+        "16999": {
+          "en": "Other"
+        },
+        "17001": {
+          "en": "Means of payment cash"
+        },
+        "17002": {
+          "en": "Means of payment electronic PIN"
+        },
+        "17003": {
+          "en": "Means of payment Chipknip"
+        },
+        "17004": {
+          "en": "Means of payment creditcard"
+        },
+        "17005": {
+          "en": "Cross entry"
+        },
+        "17006": {
+          "en": "Means of payment by bankaccount"
+        },
+        "17007": {
+          "en": "Means of payment gift token"
+        },
+        "17008": {
+          "en": "Customer card"
+        },
+        "17009": {
+          "en": "Loyalty, stamps"
+        },
+        "17999": {
+          "en": "Other"
+        },
+        "18001": {
+          "en": "Starting the POS application (to log in)"
+        },
+        "18002": {
+          "en": "Finishing working on the POS (to log off)"
+        },
+        "18003": {
+          "en": "Opening cashdrawer"
+        },
+        "18004": {
+          "en": "Closing cashdrawer"
+        },
+        "18005": {
+          "en": "Change employee"
+        },
+        "18006": {
+          "en": "Change of installation (eventText mandatory)"
+        },
+        "18007": {
+          "en": "X-report or counting"
+        },
+        "18008": {
+          "en": "Z-report or counting"
+        },
+        "18009": {
+          "en": "Pause on"
+        },
+        "18010": {
+          "en": "Pause off"
+        },
+        "18999": {
+          "en": "Other"
+        },
+        "22001": {
+          "en": "Model 1"
+        },
+        "22002": {
+          "en": "Model 2"
+        },
+        "23001": {
+          "en": "Renter"
+        },
+        "23999": {
+          "en": "Other"
+        },
+        "26001": {
+          "en": "Square meter"
+        },
+        "27001": {
+          "en": "Real-estate (NL: WOZ) value"
+        },
+        "27002": {
+          "en": "Sales value"
+        },
+        "27003": {
+          "en": "Gross value"
+        },
+        "27004": {
+          "en": "Nett value"
+        },
+        "28001": {
+          "en": "Taxed"
+        },
+        "28002": {
+          "en": "Tax-free"
+        },
+        "31001": {
+          "en": "Stock increase"
+        },
+        "31002": {
+          "en": "Stock decrease"
+        },
+        "31003": {
+          "en": "Absolute stock in trade for export for inventory level"
+        }
+      }
+    },
+    {
+      "path": "auditfile/company/location/basics/basic/basicDesc",
+      "label": {
+        "en": "Basic Description"
+      },
+      "definition": {
+        "nl": "Omschrijving stamgegeven.",
+        "en": "Master data description."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister",
+      "label": {
+        "en": "Cashregister"
+      },
+      "definition": {
+        "nl": "Verkooppunt, kassa.",
+        "en": "Point of sale, cash register."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/registerID",
+      "label": {
+        "en": "Register ID"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/regDesc",
+      "label": {
+        "en": "Register Description"
+      },
+      "definition": {
+        "nl": "Omschrijving van het kasregister of verkooppunt. Bijvoorbeeld benzinepomp etc.",
+        "en": "Description of the cash register or point of sale. For example petrol pump etc."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/totTransAmntIn",
+      "label": {
+        "en": "Total amount, VAT included"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/totTransAmntEx",
+      "label": {
+        "en": "Total amount, VAT excluded"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/event",
+      "label": {
+        "en": "Event"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/event/eventID",
+      "label": {
+        "en": "Event ID"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/event/eventType",
+      "label": {
+        "en": "Event Type"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de event soort. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the event type. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/event/transID",
+      "label": {
+        "en": "Transaction ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de transactie soort. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the transaction type. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/event/empID",
+      "label": {
+        "en": "Employee ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de werknemer. Werknemer dient in de tabel \"Employees\" opgenomen te worden.",
+        "en": "Reference to the employee. The employee must be included in the table \"Employees\"."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/event/eventDate",
+      "label": {
+        "en": "Event Date"
+      },
+      "definition": {
+        "nl": "W3C date datatype. E.g. 2007-01-27.",
+        "en": "W3C date datatype. E.g. 2007-01-27."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/event/eventTime",
+      "label": {
+        "en": "Event Time"
+      },
+      "definition": {
+        "nl": "W3C time datatype. E.g. 08:00:00.",
+        "en": "W3C time datatype. E.g. 08:00:00."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/event/eventText",
+      "label": {
+        "en": "Event Text"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction",
+      "label": {
+        "en": "Cashtransaction"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/nr",
+      "label": {
+        "en": "Transaction Number"
+      },
+      "definition": {
+        "nl": "Transactienummer. Moet uniek zijn binnen een dagboek.",
+        "en": "Transaction number. Must be unique within a journal."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/transID",
+      "label": {
+        "en": "Transaction ID"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/transType",
+      "label": {
+        "en": "Transaction Type"
+      },
+      "definition": {
+        "nl": "Transactie type. Omschrijving van de code dient in de tabel 'Basics' verklaart te worden.",
+        "en": "Transaction type. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/transAmntIn",
+      "label": {
+        "en": "Amount, VAT included"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/transAmntEx",
+      "label": {
+        "en": "Amount, VAT excluded"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/totVatAmnt",
+      "label": {
+        "en": "Total VAT Amount"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/totDscAmnt",
+      "label": {
+        "en": "Total discount Amount"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/totRaiseAmnt",
+      "label": {
+        "en": "Total raise Amount"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/totPaidAmnt",
+      "label": {
+        "en": "Total paid amount"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/amntTp",
+      "label": {
+        "en": "Amount Type"
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/jrnID",
+      "label": {
+        "en": "Journal ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de dagboekcode van het toegepaste dagboek. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the journal code of the journal used. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/empID",
+      "label": {
+        "en": "Employee ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de werknemer. Zie tabel \"Employees\".",
+        "en": "Reference to the employee. See table \"Employees\"."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/custSupID",
+      "label": {
+        "en": "Customer Supplier ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de debiteur of crediteur. Zie de tabel \"Customers Suppliers\".",
+        "en": "Reference to the debtor or creditor. See the table \"Customers Suppliers\"."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/periodNumber",
+      "label": {
+        "en": "Period number"
+      },
+      "definition": {
+        "nl": "Periode nummer. Zie tabel \"Periods\".",
+        "en": "Period number. See table \"Periods\"."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/transDate",
+      "label": {
+        "en": "Transaction Date"
+      },
+      "definition": {
+        "nl": "Transactie datum. W3C date datatype. E.g. 2007:01:27.",
+        "en": "Transaction date. W3C date datatype. E.g. 2007:01:27."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/transTime",
+      "label": {
+        "en": "Transaction Time"
+      },
+      "definition": {
+        "nl": "Transactietijd op transactiedatum. W3C time datatype. E.g. 08:00:00.",
+        "en": "Transaction time on transaction date. W3C time datatype. E.g. 08:00:00."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/bookDate",
+      "label": {
+        "en": "Book date"
+      },
+      "definition": {
+        "nl": "Boekingsdatum. W3C date datatype. E.g. 2007:01:27.",
+        "en": "Booking date. W3C date datatype. E.g. 2007:01:27."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/bookTime",
+      "label": {
+        "en": "Book time"
+      },
+      "definition": {
+        "nl": "Boekings tijd op boekingsdatum. W3C time datatype. E.g. 08:00:00.",
+        "en": "Booking time on booking date. W3C time datatype. E.g. 08:00:00."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/invoiceID",
+      "label": {
+        "en": "Invoice ID"
+      },
+      "definition": {
+        "nl": "Factuurnummer.",
+        "en": "Invoice number."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/refID",
+      "label": {
+        "en": "Reference"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/desc",
+      "label": {
+        "en": "Description"
+      },
+      "definition": {
+        "nl": "Omschrijving.",
+        "en": "Description."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/rounding",
+      "label": {
+        "en": "Rounding"
+      },
+      "definition": {
+        "nl": "Afronding.",
+        "en": "Rounding."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/rounding/roundingAmnt",
+      "label": {
+        "en": "Rounding amount"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/rounding/accID",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Unieke grootboekrekeningcode.",
+        "en": "Unique general ledger account code."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine",
+      "label": {
+        "en": "Cashtransaction line"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/nr",
+      "label": {
+        "en": "Transactionline Number"
+      },
+      "definition": {
+        "nl": "Transactie regel nummer. Moet uniek zijn binnen de transactie.",
+        "en": "Transaction line number. Must be unique within the transaction."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/lineID",
+      "label": {
+        "en": "Transactionline ID"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/lineType",
+      "label": {
+        "en": "Transactionline Type"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de regel transactie soort. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden. Bijvoorbeeld correctie, retouren, boeking, statiegeld, kadobon etc.",
+        "en": "Reference to the line transaction type. The description of the code must be explained in the 'Basics' table. For example correction, returns, posting, deposit, gift voucher etc."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/artGroupID",
+      "label": {
+        "en": "Article Group ID"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/artID",
+      "label": {
+        "en": "Article ID"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/qnt",
+      "label": {
+        "en": "Quantity"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/lineAmntIn",
+      "label": {
+        "en": "Amount, VAT included"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/lineAmntEx",
+      "label": {
+        "en": "Amount, VAT excluded"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/totLineDscAmnt",
+      "label": {
+        "en": "Line Total Discount Amount"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/totLineRaiseAmnt",
+      "label": {
+        "en": "Line Total Raise Amount"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/amntTp",
+      "label": {
+        "en": "Amount Type"
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/ppu",
+      "label": {
+        "en": "Price per Unit"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/costPrice",
+      "label": {
+        "en": "Cost Price"
+      },
+      "definition": {
+        "nl": "Kostprijs.",
+        "en": "Cost price."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/costID",
+      "label": {
+        "en": "Cost ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de kostenplaats. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the cost centre. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/costObjID",
+      "label": {
+        "en": "Cost Object ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de kosten drager. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the cost unit. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/projID",
+      "label": {
+        "en": "Project ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het project (i.p.v. kostensoort en kostendrager). Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the project (instead of cost type and cost unit). The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/empID",
+      "label": {
+        "en": "Employee ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar werknemer. Zie tabel \"Employees\".",
+        "en": "Reference to the employee. See table \"Employees\"."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/lineAmntInAccID",
+      "label": {
+        "en": "Amount (VAT included) Account ID"
+      },
+      "definition": {
+        "nl": "Unieke grootboekrekeningcode.",
+        "en": "Unique general ledger account code."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/stockAccID",
+      "label": {
+        "en": "Stock Account ID"
+      },
+      "definition": {
+        "nl": "Voorraad grootboekrekening.",
+        "en": "Inventory general ledger account."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/costPriceAccID",
+      "label": {
+        "en": "Cost Price Account ID"
+      },
+      "definition": {
+        "nl": "Kostprijs grootboekrekening.",
+        "en": "Cost price general ledger account."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/cashTransLineDescr",
+      "label": {
+        "en": "Cashtransaction line description"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/lineDate",
+      "label": {
+        "en": "Line Date"
+      },
+      "definition": {
+        "nl": "W3C date datatype. E.g. 2007-01-27.",
+        "en": "W3C date datatype. E.g. 2007-01-27."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/lineTime",
+      "label": {
+        "en": "Line Time"
+      },
+      "definition": {
+        "nl": "W3C time datatype. E.g. 08:00:00.",
+        "en": "W3C time datatype. E.g. 08:00:00."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/jrnID",
+      "label": {
+        "en": "Journal ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het dagboek wat hier gebruikt wordt. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the journal used here. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/RGSRefExt",
+      "label": {
+        "en": "RGS Reference Extension"
+      },
+      "definition": {
+        "nl": "RGS (Referentie Grootboek Schema) Referentie Extensie. Dit is wat achter de punt geplaatst kan worden in de RGS code om differentiatie binnen een RGS code mogelijk te maken.",
+        "en": "RGS (Reference Chart of Accounts) reference extension. This is what can be placed after the dot in the RGS code to allow differentiation within an RGS code."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/vat",
+      "label": {
+        "en": "VAT"
+      },
+      "definition": {
+        "nl": "Geeft de mogelijkheid om de BTW te specificeren van een journaalpost.",
+        "en": "Allows the VAT of a journal entry to be specified."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/vat/vatID",
+      "label": {
+        "en": "Vat id"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de gedefinieerde VAT code. Zie tabel \"VAT codes\".",
+        "en": "Reference to the defined VAT code. See table \"VAT codes\"."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/vat/vatCode",
+      "label": {
+        "en": "VAT Code"
+      },
+      "definition": {
+        "nl": "BTW code.",
+        "en": "VAT code."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/vat/vatPerc",
+      "label": {
+        "en": "VAT Percentage"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/vat/vatAmnt",
+      "label": {
+        "en": "VAT Amount"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/vat/vatAmntTp",
+      "label": {
+        "en": "VAT Amount Type"
+      },
+      "definition": {
+        "nl": "Indicatie of het btw bedrag Debet of Credit is.",
+        "en": "Indicator whether the VAT amount is debit or credit."
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/vat/vatBasAmnt",
+      "label": {
+        "en": "VAT Basis Amount"
+      },
+      "definition": {
+        "nl": "Grondslag bedrag voor BTW berekening.",
+        "en": "Base amount for VAT calculation."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/vat/accID",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Grootboekrekening waarop de btw wordt geboekt.",
+        "en": "General ledger account on which the VAT is posted."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/savings",
+      "label": {
+        "en": "Savings"
+      },
+      "definition": {
+        "nl": "Spaarsystemen.",
+        "en": "Savings systems."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/savings/savingsType",
+      "label": {
+        "en": "Savings Type"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het soort spaarsysteem. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the type of savings system. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/savings/savingsUnits",
+      "label": {
+        "en": "Savings Units"
+      },
+      "definition": {
+        "nl": "Aantal eenheden.",
+        "en": "Number of units."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/savings/empID",
+      "label": {
+        "en": "Employee ID"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/savings/accID",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Unieke grootboekrekeningcode.",
+        "en": "Unique general ledger account code."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/discount",
+      "label": {
+        "en": "Discount"
+      },
+      "definition": {
+        "nl": "Korting.",
+        "en": "Discount."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/discount/dscTp",
+      "label": {
+        "en": "Discount Type"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de soort korting. Omschrijving van de code dient tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the discount type. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/discount/dscAmnt",
+      "label": {
+        "en": "Discount Amount"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/discount/empID",
+      "label": {
+        "en": "Employee ID"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/discount/accID",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Unieke grootboekrekeningcode.",
+        "en": "Unique general ledger account code."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/raise",
+      "label": {
+        "en": "Raise"
+      },
+      "definition": {
+        "nl": "Toeslag.",
+        "en": "Surcharge."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/raise/raiseType",
+      "label": {
+        "en": "Raise Type"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de soort toeslag. Omschrijving van de code dient tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the surcharge type. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/raise/raiseAmnt",
+      "label": {
+        "en": "Raise Amount"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/raise/empID",
+      "label": {
+        "en": "Employee ID"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/ctLine/raise/accID",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Unieke grootboekrekeningcode.",
+        "en": "Unique general ledger account code."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/payment",
+      "label": {
+        "en": "Payment"
+      },
+      "definition": {
+        "nl": "Betaling.",
+        "en": "Payment."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/payment/paymentType",
+      "label": {
+        "en": "PaymentType"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het soort betaling. Omschrijving van de code dient de tabel 'Basics' verklaard te worden. Contant, contant vreemde valuta, pin, RC, creditcard etc.",
+        "en": "Reference to the payment type. The description of the code must be explained in the 'Basics' table. Cash, cash foreign currency, debit card, current account, credit card etc."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/payment/paidAmnt",
+      "label": {
+        "en": "Paid amount"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/payment/empID",
+      "label": {
+        "en": "Employee ID"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/payment/curCode",
+      "label": {
+        "en": "Currency Code"
+      },
+      "definition": {
+        "nl": "ISO Valutacode (ISO 4217). Valutacode (leeg betekent locale valuta).",
+        "en": "ISO currency code (ISO 4217). Currency code (empty means local currency)."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/payment/exchRt",
+      "label": {
+        "en": "Exchange rate"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/payment/accID",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Unieke grootboekrekeningcode.",
+        "en": "Unique general ledger account code."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/logistics",
+      "label": {
+        "en": "Logistics"
+      },
+      "definition": {
+        "nl": "Logistieke gegevens.",
+        "en": "Logistics data."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/logistics/movID",
+      "label": {
+        "en": "Movement ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de soort beweging. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the movement type. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/logistics/artStTpCd",
+      "label": {
+        "en": "Article standardisation organisation code"
+      },
+      "definition": {
+        "nl": "Uitgevende standaardisatie organisatie van het artikelnummer, bijvoorbeeld EAN, US.",
+        "en": "Standardisation organisation issuing the article number, for example EAN, US."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/logistics/artCd",
+      "label": {
+        "en": "Article code"
+      },
+      "definition": {
+        "nl": "Gestandaardiseerde artikelcode of artikelnummer volgens de uitgevende organisatie.",
+        "en": "Standardised article code or article number according to the issuing organisation."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/logistics/qntID",
+      "label": {
+        "en": "Quantity ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de eenheid. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the unit. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/logistics/qnt",
+      "label": {
+        "en": "Quantity"
+      },
+      "definition": {
+        "nl": "Aantal (af is negatief, bij is positief).",
+        "en": "Quantity (decrease is negative, increase is positive)."
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/logistics/loc",
+      "label": {
+        "en": "Location"
+      },
+      "definition": {
+        "nl": "Locatie van de goederen, omschrijving",
+        "en": "Location of the goods, description"
+      }
+    },
+    {
+      "path": "auditfile/company/location/cashregister/cashtransaction/logistics/wrHs",
+      "label": {
+        "en": "Warehouse"
+      },
+      "definition": {
+        "nl": "Magazijn binnen de organisatie, omschrijving",
+        "en": "Warehouse within the organisation, description"
+      }
+    }
+  ]
+}

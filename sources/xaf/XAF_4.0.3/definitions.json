@@ -1,0 +1,1229 @@
+{
+  "source": "XMLAuditfileFinancieel_4.0_FunHie.pdf",
+  "entries": [
+    {
+      "path": "auditfile",
+      "label": {
+        "en": "Auditfile"
+      }
+    },
+    {
+      "path": "auditfile/header",
+      "label": {
+        "en": "Header"
+      },
+      "definition": {
+        "nl": "Berichtheader.",
+        "en": "Message header."
+      }
+    },
+    {
+      "path": "auditfile/header/fiscalYear",
+      "label": {
+        "en": "Fiscal Year"
+      },
+      "definition": {
+        "nl": "Aanduiding van het boekjaar (EEJJ). Bijvoorbeeld 2024. Bij een gebroken boekjaar wordt dat als volgt gevuld: EEJJ-EEJJ. Bijvoorbeeld 2023-2024.",
+        "en": "Indication of the financial year (YYYY). For example 2024. For a non-calendar financial year it is filled as follows: YYYY-YYYY. For example 2023-2024."
+      }
+    },
+    {
+      "path": "auditfile/header/startDate",
+      "label": {
+        "en": "Start Date Bookingperiod"
+      },
+      "definition": {
+        "nl": "Startdatum boekjaar. W3C date datatype. Bijv. 2024-01-01 of ingeval van een gebroken boekjaar 2024-04-01.",
+        "en": "Start date of the financial year. W3C date datatype. E.g. 2024-01-01 or, for a non-calendar financial year, 2024-04-01."
+      }
+    },
+    {
+      "path": "auditfile/header/endDate",
+      "label": {
+        "en": "End Date Bookingperiod"
+      },
+      "definition": {
+        "nl": "Einddatum boekjaar. W3C date datatype. Bijv. 2024-12-31 of ingeval van een gebroken boekjaar 2025-03-31.",
+        "en": "End date of the financial year. W3C date datatype. E.g. 2024-12-31 or, for a non-calendar financial year, 2025-03-31."
+      }
+    },
+    {
+      "path": "auditfile/header/curCode",
+      "label": {
+        "en": "Currency Code"
+      },
+      "definition": {
+        "nl": "ISO Valutacode (ISO 4217). De locale valuta van de administratie, bijv. EUR. The codes of this codelist are documented in a separate document",
+        "en": "ISO currency code (ISO 4217). The local currency of the administration, e.g. EUR. The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/header/dateCreated",
+      "label": {
+        "en": "Date Created"
+      },
+      "definition": {
+        "nl": "De datum waarop de auditfile is aangemaakt. W3C date datatype. Bijv. 2024-01-27.",
+        "en": "The date on which the audit file was created. W3C date datatype. E.g. 2024-01-27."
+      }
+    },
+    {
+      "path": "auditfile/header/softwareDesc",
+      "label": {
+        "en": "Software Description"
+      },
+      "definition": {
+        "nl": "De naam van het softwarepakket waarmee de Auditfile is gegenereerd.",
+        "en": "The name of the software package with which the audit file was generated."
+      }
+    },
+    {
+      "path": "auditfile/header/softwareVersion",
+      "label": {
+        "en": "Software Version"
+      },
+      "definition": {
+        "nl": "De versie van het softwarepakket waarmee de Auditfile is gegenereerd.",
+        "en": "The version of the software package with which the audit file was generated."
+      }
+    },
+    {
+      "path": "auditfile/header/RGSVersion",
+      "label": {
+        "en": "RGS version"
+      },
+      "definition": {
+        "nl": "Gebruikte RGS versie in de administratie.",
+        "en": "RGS version used in the administration."
+      }
+    },
+    {
+      "path": "auditfile/company",
+      "label": {
+        "en": "Company"
+      }
+    },
+    {
+      "path": "auditfile/company/Commercenr",
+      "label": {
+        "en": "CommerceNr"
+      },
+      "definition": {
+        "nl": "Het KvK nummer van de onderneming.",
+        "en": "The Chamber of Commerce (KvK) number of the company."
+      }
+    },
+    {
+      "path": "auditfile/company/companyName",
+      "label": {
+        "en": "Company Name"
+      },
+      "definition": {
+        "nl": "De juridische naam van de onderneming.",
+        "en": "The legal name of the company."
+      }
+    },
+    {
+      "path": "auditfile/company/taxRegistrationCountry",
+      "label": {
+        "en": "Tax Registration Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166) land waarin de onderneming is gevestigd. The codes of this codelist are documented in a separate document",
+        "en": "ISO country code (ISO 3166) of the country in which the company is established. The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/company/taxRegIdent",
+      "label": {
+        "en": "Tax Registration Identification"
+      },
+      "definition": {
+        "nl": "BTW identificatienummer van de onderneming (factuurvereiste).",
+        "en": "VAT identification number of the company (invoice requirement)."
+      }
+    },
+    {
+      "path": "auditfile/company/openingBalance",
+      "label": {
+        "en": "Opening balance"
+      },
+      "definition": {
+        "nl": "Openingsbalans of beginbalans. De openingsbalans/beginbalans mag uitsluitend onder het element openingBalance worden opgenomen en NIET onder transactions. De bedragen in de openingsbalans worden vermeld in de locale valuta. Dit is de valutasoort die in de header van het bericht wordt gevuld.",
+        "en": "Opening balance or starting balance. The opening balance/starting balance may only be included under the element openingBalance and NOT under transactions. The amounts in the opening balance are stated in the local currency. This is the currency filled in the header of the message."
+      }
+    },
+    {
+      "path": "auditfile/company/openingBalance/linesCount",
+      "label": {
+        "en": "Lines Count"
+      },
+      "definition": {
+        "nl": "Het aantal aanwezige opening balans regels.",
+        "en": "The number of opening balance lines present."
+      }
+    },
+    {
+      "path": "auditfile/company/openingBalance/totalDebit",
+      "label": {
+        "en": "Total Debit"
+      },
+      "definition": {
+        "nl": "Totaalsom debetboekingen openingsbalans",
+        "en": "Total of debit postings in the opening balance"
+      },
+      "description": {
+        "nl": "[0004] Total Debit <TotalDebit> = Som(Amount <obLine/amnt>) waarvoor geldt dat Amount Type <obLine/amntTp> = “D”",
+        "en": "[0004] Total Debit <TotalDebit> = Sum(Amount <obLine/amnt>) where Amount Type <obLine/amntTp> = \"D\""
+      }
+    },
+    {
+      "path": "auditfile/company/openingBalance/totalCredit",
+      "label": {
+        "en": "Total Credit"
+      },
+      "definition": {
+        "nl": "Totaalsom creditboekingen openingsbalans",
+        "en": "Total of credit postings in the opening balance"
+      },
+      "description": {
+        "nl": "[0005] Total Credit <totalCredit> = Som(Amount <obLine/Amount>) waarvoor geldt dat Amount Type <obLine/Amounttype> = “C”\n[0006] Total Debit <totalDebit> = Total Credit <totalCredit>",
+        "en": "[0005] Total Credit <totalCredit> = Sum(Amount <obLine/Amount>) where Amount Type <obLine/Amounttype> = \"C\"\n[0006] Total Debit <totalDebit> = Total Credit <totalCredit>"
+      }
+    },
+    {
+      "path": "auditfile/company/transactions",
+      "label": {
+        "en": "Transactions"
+      },
+      "definition": {
+        "nl": "Grootboektransacties.",
+        "en": "General ledger transactions."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/linesCount",
+      "label": {
+        "en": "Lines Count"
+      },
+      "definition": {
+        "nl": "Totaal aantal transactie regels.",
+        "en": "Total number of transaction lines."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/totalDebit",
+      "label": {
+        "en": "Total Debit"
+      },
+      "definition": {
+        "nl": "Totaalsom bedrag van de debet bedragen in transactie regels.",
+        "en": "Total sum of the debit amounts in transaction lines."
+      },
+      "description": {
+        "nl": "[0007] Total Debit <TotalDebit> = Som(Amount <journal/transaction/trline/Amount>) waarvoor geldt dat Amount Type <journal/transaction/trline/AmountType> = “D”",
+        "en": "[0007] Total Debit <TotalDebit> = Sum(Amount <journal/transaction/trline/Amount>) where Amount Type <journal/transaction/trline/AmountType> = \"D\""
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/totalCredit",
+      "label": {
+        "en": "Total Credit"
+      },
+      "definition": {
+        "nl": "Totaalsom bedrag van de credit bedragen in transactie regels.",
+        "en": "Total sum of the credit amounts in transaction lines."
+      },
+      "description": {
+        "nl": "[0008] Total Credit <totalCredit> = Som(Amount <journal/transaction/trline/Amount>) waarvoor geldt dat Amount Type <journal/transaction/trline/AmountType> = “C”\n[0009] Total Debit <totalDebit> = Total Credit <totalCredit>",
+        "en": "[0008] Total Credit <totalCredit> = Sum(Amount <journal/transaction/trline/Amount>) where Amount Type <journal/transaction/trline/AmountType> = \"C\"\n[0009] Total Debit <totalDebit> = Total Credit <totalCredit>"
+      }
+    },
+    {
+      "path": "auditfile/company/streetAddress",
+      "label": {
+        "en": "Street address"
+      },
+      "definition": {
+        "nl": "Vestigingsadres onderneming",
+        "en": "Business address of the company"
+      }
+    },
+    {
+      "path": "auditfile/company/streetAddress/streetname",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden dan leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are then left empty."
+      }
+    },
+    {
+      "path": "auditfile/company/streetAddress/number",
+      "label": {
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Huisnummer.",
+        "en": "House number."
+      }
+    },
+    {
+      "path": "auditfile/company/streetAddress/numberExtension",
+      "label": {
+        "en": "NumberExtension"
+      },
+      "definition": {
+        "nl": "Huisnummer toevoeging.",
+        "en": "House number suffix."
+      }
+    },
+    {
+      "path": "auditfile/company/streetAddress/city",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Plaats.",
+        "en": "Place."
+      }
+    },
+    {
+      "path": "auditfile/company/streetAddress/postalCode",
+      "label": {
+        "en": "Postal Code"
+      },
+      "definition": {
+        "nl": "Postcode.",
+        "en": "Postcode."
+      }
+    },
+    {
+      "path": "auditfile/company/streetAddress/country",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "Landcode. The codes of this codelist are documented in a separate document",
+        "en": "Country code. The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers",
+      "label": {
+        "en": "Customers suppliers"
+      },
+      "definition": {
+        "nl": "Debiteuren, Crediteuren stamgegevens.",
+        "en": "Debtors, creditors master data."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier",
+      "label": {
+        "en": "Customer supplier"
+      },
+      "definition": {
+        "nl": "Algemene gegevens van debiteuren en crediteuren.",
+        "en": "General data of debtors and creditors."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/custSupID",
+      "label": {
+        "en": "Customer Supplier ID"
+      },
+      "definition": {
+        "nl": "Unieke debiteuren-of crediteurennummer.",
+        "en": "Unique debtor or creditor number."
+      },
+      "description": {
+        "nl": "[0001] IsUniek( Customer Supplier ID < CustomerSupplierId > )",
+        "en": "[0001] IsUnique( Customer Supplier ID < CustomerSupplierId > )"
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/custSupName",
+      "label": {
+        "en": "Customer Supplier Name"
+      },
+      "definition": {
+        "nl": "Juridische naam van de debiteur/crediteur.",
+        "en": "Legal name of the debtor/creditor."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/eMail",
+      "label": {
+        "en": "E-mail"
+      },
+      "definition": {
+        "nl": "Email adres.",
+        "en": "Email address."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/commerceNr",
+      "label": {
+        "en": "CommerceNr"
+      },
+      "definition": {
+        "nl": "KvK nummer",
+        "en": "KvK number"
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/taxRegistrationCountry",
+      "label": {
+        "en": "Tax Registration Country"
+      },
+      "definition": {
+        "nl": "Land BTW identificatienummer, ISO Landencode (ISO 3166) The codes of this codelist are documented in a separate document",
+        "en": "Country of VAT identification number, ISO country code (ISO 3166). The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/taxRegIdent",
+      "label": {
+        "en": "Tax Registration Identification"
+      },
+      "definition": {
+        "nl": "BTW identificatienummer van de onderneming (factuurvereiste)",
+        "en": "VAT identification number of the company (invoice requirement)"
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/custSupTp",
+      "label": {
+        "en": "Customer Supplier Type"
+      },
+      "definition": {
+        "nl": "Code die aangeeft of het om een debiteur of crediteur gaat.",
+        "en": "Code indicating whether it concerns a debtor or creditor."
+      },
+      "codes": {
+        "B": {
+          "en": "Both Customer and Supplier"
+        },
+        "C": {
+          "en": "Customer"
+        },
+        "S": {
+          "en": "Supplier"
+        }
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/opBalDesc",
+      "label": {
+        "en": "Openingbalance"
+      },
+      "definition": {
+        "nl": "Openstaand bedrag in lokale valuta bij StartDateBookingperiod",
+        "en": "Outstanding amount in local currency at StartDateBookingperiod"
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/opBalTp",
+      "label": {
+        "en": "OpeningbalanceType"
+      },
+      "definition": {
+        "nl": "Indicatie of bedrag Debet of Credit is.",
+        "en": "Indicator whether the amount is debit or credit."
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/clBalDesc",
+      "label": {
+        "en": "Closingbalance"
+      },
+      "definition": {
+        "nl": "Openstaand bedrag in lokale valuta bij EndDateBookingperiod",
+        "en": "Outstanding amount in local currency at EndDateBookingperiod"
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/clBalTp",
+      "label": {
+        "en": "ClosingbalanceType"
+      },
+      "definition": {
+        "nl": "Indicatie of bedrag Debet of Credit is.",
+        "en": "Indicator whether the amount is debit or credit."
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/streetAddress",
+      "label": {
+        "en": "Street address"
+      },
+      "definition": {
+        "nl": "Vestigingsadres debiteur/crediteur",
+        "en": "Business address of debtor/creditor"
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/streetAddress/streetname",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden dan leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are then left empty."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/streetAddress/number",
+      "label": {
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Huisnummer.",
+        "en": "House number."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/streetAddress/numberExtension",
+      "label": {
+        "en": "NumberExtension"
+      },
+      "definition": {
+        "nl": "Huisnummer toevoeging.",
+        "en": "House number suffix."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/streetAddress/city",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Plaats.",
+        "en": "Place."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/streetAddress/postalCode",
+      "label": {
+        "en": "Postal Code"
+      },
+      "definition": {
+        "nl": "Postcode.",
+        "en": "Postcode."
+      }
+    },
+    {
+      "path": "auditfile/company/customersSuppliers/customerSupplier/streetAddress/country",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "Landcode. The codes of this codelist are documented in a separate document",
+        "en": "Country code. The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger",
+      "label": {
+        "en": "General ledger"
+      },
+      "definition": {
+        "nl": "Grootboek stamgegevens.",
+        "en": "General ledger master data."
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/ledgerAccount",
+      "label": {
+        "en": "Ledger account"
+      },
+      "definition": {
+        "nl": "Grootboekrekeningschema.",
+        "en": "Chart of accounts."
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/ledgerAccount/accID",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Unieke grootboekrekeningcode.",
+        "en": "Unique general ledger account code."
+      },
+      "description": {
+        "nl": "[0002] IsUniek( Account ID < AccountId > )",
+        "en": "[0002] IsUnique( Account ID < AccountId > )"
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/ledgerAccount/accDesc",
+      "label": {
+        "en": "Account Description"
+      },
+      "definition": {
+        "nl": "Grootboekrekeningnaam.",
+        "en": "General ledger account name."
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/ledgerAccount/accTp",
+      "label": {
+        "en": "Account Type"
+      },
+      "definition": {
+        "nl": "Soort grootboekrekening: Balansrekening of resultaatrekening B Balance P Profit and Loss",
+        "en": "Type of general ledger account: balance sheet account or profit and loss account B Balance P Profit and Loss"
+      }
+    },
+    {
+      "path": "auditfile/company/generalLedger/ledgerAccount/RGScode",
+      "label": {
+        "en": "RGScode"
+      },
+      "definition": {
+        "nl": "Gebruikte RGScode die gekoppeld is aan de grootboekrekening",
+        "en": "RGS code used that is linked to the general ledger account"
+      },
+      "description": {
+        "nl": "[0003] IsUniek( RGScode <Rgscode> )",
+        "en": "[0003] IsUnique( RGScode <Rgscode> )"
+      }
+    },
+    {
+      "path": "auditfile/company/vatCodes",
+      "label": {
+        "en": "Vat codes"
+      },
+      "definition": {
+        "nl": "Gebruikte BTW codes in de administratie",
+        "en": "VAT codes used in the administration"
+      }
+    },
+    {
+      "path": "auditfile/company/vatCodes/vatCode",
+      "label": {
+        "en": "Vat code"
+      },
+      "definition": {
+        "nl": "BTW codes.",
+        "en": "VAT codes."
+      }
+    },
+    {
+      "path": "auditfile/company/vatCodes/vatCode/vatID",
+      "label": {
+        "en": "VAT ID"
+      },
+      "definition": {
+        "nl": "BTW code.",
+        "en": "VAT code."
+      }
+    },
+    {
+      "path": "auditfile/company/vatCodes/vatCode/vatDesc",
+      "label": {
+        "en": "VAT Description"
+      },
+      "definition": {
+        "nl": "BTW code omschrijving.",
+        "en": "VAT code description."
+      }
+    },
+    {
+      "path": "auditfile/company/vatCodes/vatCode/vatToPayAccID",
+      "label": {
+        "en": "VAT To Pay Account ID"
+      },
+      "definition": {
+        "nl": "Grootboekrekeningcode balansrekening waarop de af te dragen btw wordt geboekt.",
+        "en": "General ledger code of the balance sheet account on which the VAT payable is posted."
+      }
+    },
+    {
+      "path": "auditfile/company/vatCodes/vatCode/vatToClaimAccID",
+      "label": {
+        "en": "VAT To Claim Account ID"
+      },
+      "definition": {
+        "nl": "Grootboekrekeningcode balansrekening waarop de te vorderen btw wordt geboekt.",
+        "en": "General ledger code of the balance sheet account on which the VAT receivable is posted."
+      }
+    },
+    {
+      "path": "auditfile/company/periods",
+      "label": {
+        "en": "Periods"
+      },
+      "definition": {
+        "nl": "Gehanteerde perioden in de administratie.",
+        "en": "Periods used in the administration."
+      }
+    },
+    {
+      "path": "auditfile/company/periods/period",
+      "label": {
+        "en": "Period"
+      },
+      "definition": {
+        "nl": "Perioden.",
+        "en": "Periods."
+      }
+    },
+    {
+      "path": "auditfile/company/periods/period/periodNumber",
+      "label": {
+        "en": "Period number"
+      },
+      "definition": {
+        "nl": "Periodenummer van de hier gedefinieerde periode.",
+        "en": "Period number of the period defined here."
+      }
+    },
+    {
+      "path": "auditfile/company/periods/period/startDatePeriod",
+      "label": {
+        "en": "Start Date period"
+      },
+      "definition": {
+        "nl": "Startdatum van de gedefinieerde periode. W3C date datatype. Bijv. 2024-01-01.",
+        "en": "Start date of the defined period. W3C date datatype. E.g. 2024-01-01."
+      }
+    },
+    {
+      "path": "auditfile/company/periods/period/endDatePeriod",
+      "label": {
+        "en": "End Date period"
+      },
+      "definition": {
+        "nl": "Einddatum van de gedefinieerde periode. W3C date datatype. Bijv. 2024-01-31.",
+        "en": "End date of the defined period. W3C date datatype. E.g. 2024-01-31."
+      }
+    },
+    {
+      "path": "auditfile/company/openingBalance/obLine",
+      "label": {
+        "en": "Opening balance line"
+      },
+      "definition": {
+        "nl": "Openingsbalansregels.",
+        "en": "Opening balance lines."
+      }
+    },
+    {
+      "path": "auditfile/company/openingBalance/obLine/nr",
+      "label": {
+        "en": "Opening Balance Line Number"
+      },
+      "definition": {
+        "nl": "Uniek openingsbalans regelnummer.",
+        "en": "Unique opening balance line number."
+      }
+    },
+    {
+      "path": "auditfile/company/openingBalance/obLine/accID",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Grootboekrekeningcode zoals gedefinieerd onder element Ledgeraccount.",
+        "en": "General ledger account code as defined under the element Ledgeraccount."
+      }
+    },
+    {
+      "path": "auditfile/company/openingBalance/obLine/amnt",
+      "label": {
+        "en": "Amount"
+      },
+      "definition": {
+        "nl": "Bedrag in locale valuta",
+        "en": "Amount in local currency"
+      }
+    },
+    {
+      "path": "auditfile/company/openingBalance/obLine/amntTp",
+      "label": {
+        "en": "Amount Type"
+      },
+      "definition": {
+        "nl": "Indicatie of bedrag Debet of Credit is.",
+        "en": "Indicator whether the amount is debit or credit."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal",
+      "label": {
+        "en": "Journal"
+      },
+      "definition": {
+        "nl": "Dagboeken.",
+        "en": "Journals."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/jrnID",
+      "label": {
+        "en": "Journal ID"
+      },
+      "definition": {
+        "nl": "Unieke dagboekcode.",
+        "en": "Unique journal code."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/desc",
+      "label": {
+        "en": "Description"
+      },
+      "definition": {
+        "nl": "Dagboekomschrijving.",
+        "en": "Journal description."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/jrnTp",
+      "label": {
+        "en": "Journal Type"
+      },
+      "definition": {
+        "nl": "Dagboeksoort. selected)",
+        "en": "Journal type."
+      },
+      "codes": {
+        "B": {
+          "en": "Bank"
+        },
+        "C": {
+          "en": "Cash"
+        },
+        "G": {
+          "en": "Goods (received/sent)"
+        },
+        "M": {
+          "en": "Memo / Daybook"
+        },
+        "P": {
+          "en": "Purchases"
+        },
+        "S": {
+          "en": "Sales"
+        },
+        "T": {
+          "en": "Production"
+        },
+        "Y": {
+          "en": "Payroll"
+        },
+        "Z": {
+          "en": "Other"
+        }
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/offsetAccID",
+      "label": {
+        "en": "Offset Account ID"
+      },
+      "definition": {
+        "nl": "Vaste tegenrekening van het dagboek",
+        "en": "Fixed contra account of the journal"
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction",
+      "label": {
+        "en": "an..*"
+      },
+      "definition": {
+        "nl": "Transactiedetails",
+        "en": "Transaction details"
+      },
+      "description": {
+        "nl": "[0010] Som(Amount <trline/Amount>) waarvoor geldt dat Amount Type <trline/AmountType> = “D” = Som(Amount <trline/Amount>) waarvoor geldt dat Amount Type <trline/AmountType> = “C”",
+        "en": "[0010] Sum(Amount <trline/Amount>) where Amount Type <trline/AmountType> = \"D\" = Sum(Amount <trline/Amount>) where Amount Type <trline/AmountType> = \"C\""
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/nr",
+      "label": {
+        "en": "Transaction Number"
+      },
+      "definition": {
+        "nl": "Transactienummer. Moet uniek zijn binnen het dagboek.",
+        "en": "Transaction number. Must be unique within the journal."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/desc",
+      "label": {
+        "en": "Transaction Description"
+      },
+      "definition": {
+        "nl": "Transactie omschrijving.",
+        "en": "Transaction description."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/periodNumber",
+      "label": {
+        "en": "Period number"
+      },
+      "definition": {
+        "nl": "Periode nummer zoals gedefinieerd onder element Period.",
+        "en": "Period number as defined under the element Period."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trDt",
+      "label": {
+        "en": "Transaction Date"
+      },
+      "definition": {
+        "nl": "Boekingsdatum. Datum waarop de transactie in het systeem verwerkt is, of anders de datum waarop de transactie in het systeem geboekt is.",
+        "en": "Booking date. Date on which the transaction was processed in the system, or otherwise the date on which the transaction was posted in the system."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/Source",
+      "label": {
+        "en": "Source"
+      },
+      "definition": {
+        "nl": "Identificatie van de bron (applicatie) die de transactie gecreeerd heeft.",
+        "en": "Identification of the source (application) that created the transaction."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/User",
+      "label": {
+        "en": "User"
+      },
+      "definition": {
+        "nl": "Identificatie van de gebruiker die de transactie heeft ingevoerd.",
+        "en": "Identification of the user who entered the transaction."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine",
+      "label": {
+        "en": "Transaction line"
+      },
+      "definition": {
+        "nl": "Journaalposten",
+        "en": "Journal entries"
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/nr",
+      "label": {
+        "en": "Transaction Line Number"
+      },
+      "definition": {
+        "nl": "Transactie regel nummer. Moet uniek zijn binnen de journaalpost.",
+        "en": "Transaction line number. Must be unique within the journal entry."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/accID",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Grootboekrekeningcode zoals gedefinieerd onder element Ledgeraccount. an..*",
+        "en": "General ledger account code as defined under the element Ledgeraccount."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/docRef",
+      "label": {
+        "en": "Document Reference"
+      },
+      "definition": {
+        "nl": "Document referentie (verwijzing naar boekstuknummer of brondocument).",
+        "en": "Document reference (reference to document number or source document)."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/effDate",
+      "label": {
+        "en": "Effective Date"
+      },
+      "definition": {
+        "nl": "De datum waarop de factuur is uitgereikt (factuurvereiste)",
+        "en": "The date on which the invoice was issued (invoice requirement)"
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/settDate",
+      "label": {
+        "en": "Settdate"
+      },
+      "definition": {
+        "nl": "De datum waarop de goederen of diensten zijn geleverd, of de datum van een vooruitbetaling (factuurvereiste)",
+        "en": "The date on which the goods or services were delivered, or the date of an advance payment (invoice requirement)"
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/desc",
+      "label": {
+        "en": "Transaction Description"
+      },
+      "definition": {
+        "nl": "Omschrijving behorende bij de transactie regel. In geval factuur: als u goederen levert: wat voor goederen u hebt geleverd en hoeveel Bijvoorbeeld 100 kilo suiker of 25 spijkerbroeken. Als u diensten levert: wat voor diensten u hebt geleverd en de omvang ervan. Bijvoorbeeld 1 massage van 1 uur of het ophogen van een tuin van 50 m2 met 30 cm grond (factuurvereiste).",
+        "en": "Description belonging to the transaction line. In case of an invoice: if you supply goods, what goods you supplied and how many, for example 100 kilos of sugar or 25 pairs of jeans. If you supply services, what services you supplied and their extent, for example 1 massage of 1 hour or raising a garden of 50 m2 with 30 cm of soil (invoice requirement)."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/amnt",
+      "label": {
+        "en": "Amount"
+      },
+      "definition": {
+        "nl": "Bedrag in locale valuta.",
+        "en": "Amount in local currency."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/amntTp",
+      "label": {
+        "en": "Amount Type"
+      },
+      "definition": {
+        "nl": "Geeft aan of het bedrag debet of credit is. C Credit D Debit",
+        "en": "Indicates whether the amount is debit or credit. C Credit D Debit"
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/custSupID",
+      "label": {
+        "en": "Customer Supplier ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de klant of leverancier.",
+        "en": "Reference to the customer or supplier."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/invRef",
+      "label": {
+        "en": "Invoice Reference"
+      },
+      "definition": {
+        "nl": "Unieke factuurnummer (factuurvereiste)",
+        "en": "Unique invoice number (invoice requirement)"
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/receivingDocRef",
+      "label": {
+        "en": "Receiving Document Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar uniek nummer/code ontvangstbon.",
+        "en": "Reference to the unique number/code of the goods receipt."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/shipDocRef",
+      "label": {
+        "en": "Shipment Document Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar uniek nummer/code verzenddocument.",
+        "en": "Reference to the unique number/code of the shipping document."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/cost",
+      "label": {
+        "en": "Cost Center"
+      },
+      "definition": {
+        "nl": "Verwijzing naar uniek nummer/code kostenplaats.",
+        "en": "Reference to the unique number/code of the cost centre."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/product",
+      "label": {
+        "en": "Product"
+      },
+      "definition": {
+        "nl": "Verwijzing naar uniek nummer/code van product/artikel.",
+        "en": "Reference to the unique number/code of the product/article."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/project",
+      "label": {
+        "en": "Project"
+      },
+      "definition": {
+        "nl": "Verwijzing naar uniek nummer/code project.",
+        "en": "Reference to the unique number/code of the project."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/workCostArrRef",
+      "label": {
+        "en": "Work Cost Arrangement Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar wijze behandeling voor de Werkkosten Regeling (WKR)",
+        "en": "Reference to the treatment method for the Work-related Costs Scheme (WKR)"
+      },
+      "codes": {
+        "V": {
+          "nl": "Vrijgesteld loon",
+          "en": "Exempt wages"
+        },
+        "NW": {
+          "nl": "Nihilwaardering",
+          "en": "Nil valuation"
+        },
+        "G": {
+          "nl": "Gerichte vrijstelling",
+          "en": "Targeted exemption"
+        },
+        "NC": {
+          "nl": "Noodzakelijkheidscriterium",
+          "en": "Necessity criterion"
+        },
+        "I": {
+          "nl": "Intermediair",
+          "en": "Intermediary"
+        },
+        "B": {
+          "nl": "Belast loon",
+          "en": "Taxed wages"
+        },
+        "O": {
+          "nl": "Overige",
+          "en": "Other"
+        }
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/bankAccNr",
+      "label": {
+        "en": "Bank Account Number"
+      },
+      "definition": {
+        "nl": "Eigen bankrekening nummer tbv ontvangsten en betalingen per bank.",
+        "en": "Own bank account number for receipts and payments per bank."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/offsetBankAccNr",
+      "label": {
+        "en": "Offset Bank Account Number"
+      },
+      "definition": {
+        "nl": "Bankrekening waar naar toe een betaling wordt gedaan of waar vandaan een betaling wordt ontvangen (tegenrekening).",
+        "en": "Bank account to which a payment is made or from which a payment is received (contra account)."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/currency",
+      "label": {
+        "en": "Currency"
+      },
+      "definition": {
+        "nl": "Geeft de mogelijkheid om de vreemde valutawaarde te specificeren.",
+        "en": "Allows the foreign currency value to be specified."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/currency/curCode",
+      "label": {
+        "en": "Currency Code"
+      },
+      "definition": {
+        "nl": "ISO Valutacode (ISO 4217) The codes of this codelist are documented in a separate document",
+        "en": "ISO currency code (ISO 4217). The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/currency/curAmnt",
+      "label": {
+        "en": "Currency Amount"
+      },
+      "definition": {
+        "nl": "Bedrag in vreemde valuta (i.p.v. koers).",
+        "en": "Amount in foreign currency (instead of exchange rate)."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/vat",
+      "label": {
+        "en": "VAT"
+      },
+      "definition": {
+        "nl": "Geeft de mogelijkheid om de BTW te specificeren van een journaalpost.",
+        "en": "Allows the VAT of a journal entry to be specified."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/vat/vatID",
+      "label": {
+        "en": "Vat id"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de gedefinieerde VAT code.",
+        "en": "Reference to the defined VAT code."
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/vat/vatPerc",
+      "label": {
+        "en": "VAT Percentage"
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/vat/vatAmnt",
+      "label": {
+        "en": "VAT Amount"
+      },
+      "definition": {
+        "nl": "BTW bedrag",
+        "en": "VAT amount"
+      }
+    },
+    {
+      "path": "auditfile/company/transactions/journal/transaction/trLine/vat/vatAmntTp",
+      "label": {
+        "en": "VAT Amount Type"
+      },
+      "definition": {
+        "nl": "Indicatie of het btw bedrag Debet of Credit is.",
+        "en": "Indicator whether the VAT amount is debit or credit."
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    }
+  ]
+}

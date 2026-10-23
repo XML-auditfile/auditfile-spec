@@ -1,0 +1,3296 @@
+{
+  "source": "XmlAuditfileBct1.0_spec.pdf",
+  "entries": [
+    {
+      "path": "auditfile",
+      "label": {
+        "nl": "Auditfile",
+        "en": "Audit file"
+      }
+    },
+    {
+      "path": "auditfile/header",
+      "label": {
+        "nl": "Bestandsinformatie",
+        "en": "File information"
+      }
+    },
+    {
+      "path": "auditfile/header/fileFormat",
+      "label": {
+        "nl": "Bestandsformaat",
+        "en": "File format"
+      },
+      "definition": {
+        "nl": "Waarde \"XML Auditfile XAB\"",
+        "en": "Value \"XML Auditfile XAB\""
+      }
+    },
+    {
+      "path": "auditfile/header/fileFormatVersion",
+      "label": {
+        "nl": "Bestandsformaat versie",
+        "en": "File format version"
+      },
+      "codes": {
+        "1.0": {
+          "en": "File Format Version 1.0"
+        }
+      }
+    },
+    {
+      "path": "auditfile/header/dateTimeCreated",
+      "label": {
+        "nl": "Bestand aanmaak datum en tijd",
+        "en": "File creation date and time"
+      }
+    },
+    {
+      "path": "auditfile/header/reportingStartDateTime",
+      "label": {
+        "nl": "Rapportage periode vanaf datum en tijd",
+        "en": "Reporting period from date and time"
+      }
+    },
+    {
+      "path": "auditfile/header/reportingEndDateTime",
+      "label": {
+        "nl": "Rapportage periode tot en met datum en tijd",
+        "en": "Reporting period up to and including date and time"
+      }
+    },
+    {
+      "path": "auditfile/KortIdBCT",
+      "label": {
+        "nl": "Korte identiteit boordcomputer",
+        "en": "Short identity of on-board computer"
+      }
+    },
+    {
+      "path": "auditfile/KortIdBCT/GdKrgsNr",
+      "label": {
+        "nl": "Goedkeuringsnummer",
+        "en": "Approval number"
+      },
+      "definition": {
+        "nl": "Hier wordt het nummer van het RDW certificaat, aangevuld met voorloopnullen, vermeld.",
+        "en": "The number of the RDW certificate, padded with leading zeros, is stated here."
+      }
+    },
+    {
+      "path": "auditfile/KortIdBCT/ProgVrNr",
+      "label": {
+        "nl": "Programmatuur versienummer",
+        "en": "Software version number"
+      }
+    },
+    {
+      "path": "auditfile/KortIdBCT/changeInfo",
+      "label": {
+        "nl": "Aanpassing informatie",
+        "en": "Change information"
+      }
+    },
+    {
+      "path": "auditfile/KortIdBCT/changeInfo/changeByUserName",
+      "label": {
+        "nl": "Gebruiker naam",
+        "en": "User name"
+      }
+    },
+    {
+      "path": "auditfile/KortIdBCT/changeInfo/changeDateTime",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      }
+    },
+    {
+      "path": "auditfile/KortIdBCT/changeInfo/changeDescription",
+      "label": {
+        "nl": "Soort aanpassing omschrijving",
+        "en": "Type of change description"
+      }
+    },
+    {
+      "path": "auditfile/KortIdBCT/history",
+      "label": {
+        "nl": "Historie",
+        "en": "History"
+      }
+    },
+    {
+      "path": "auditfile/KortIdBCT/history/KortIdBCT",
+      "label": {
+        "nl": "Korte identiteit boordcomputer",
+        "en": "Short identity of on-board computer"
+      }
+    },
+    {
+      "path": "auditfile/KortIdBCT/history/KortIdBCT/GdKrgsNr",
+      "label": {
+        "nl": "Goedkeuringsnummer",
+        "en": "Approval number"
+      },
+      "definition": {
+        "nl": "Hier wordt het nummer van het RDW certificaat, aangevuld met voorloopnullen, vermeld.",
+        "en": "The number of the RDW certificate, padded with leading zeros, is stated here."
+      }
+    },
+    {
+      "path": "auditfile/KortIdBCT/history/KortIdBCT/ProgVrNr",
+      "label": {
+        "nl": "Programmatuur versienummer",
+        "en": "Software version number"
+      }
+    },
+    {
+      "path": "auditfile/KortIdBCT/history/KortIdBCT/changeInfo",
+      "label": {
+        "nl": "Aanpassing informatie",
+        "en": "Change information"
+      }
+    },
+    {
+      "path": "auditfile/KortIdBCT/history/KortIdBCT/changeInfo/changeByUserName",
+      "label": {
+        "nl": "Gebruiker naam",
+        "en": "User name"
+      }
+    },
+    {
+      "path": "auditfile/KortIdBCT/history/KortIdBCT/changeInfo/changeDateTime",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      }
+    },
+    {
+      "path": "auditfile/KortIdBCT/history/KortIdBCT/changeInfo/changeDescription",
+      "label": {
+        "nl": "Soort aanpassing omschrijving",
+        "en": "Type of change description"
+      }
+    },
+    {
+      "path": "auditfile/ITServiceProvider",
+      "label": {
+        "nl": "It dienstverlener",
+        "en": "IT service provider"
+      }
+    },
+    {
+      "path": "auditfile/ITServiceProvider/name",
+      "label": {
+        "nl": "IT dienstverlener naam",
+        "en": "IT service provider name"
+      }
+    },
+    {
+      "path": "auditfile/ITServiceProvider/identificationNr",
+      "label": {
+        "nl": "IT dienstverlener identifcatienummer",
+        "en": "IT service provider identification number"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders",
+      "label": {
+        "nl": "Bestuurders",
+        "en": "Drivers"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      },
+      "definition": {
+        "nl": "Voor alle zakelijke ritten geldt dat ten minste een deel van de facultatieve gegevens geregistreerd moet worden, zodat daaruit duidelijk wordt wie de bestuurder was.",
+        "en": "For all business trips, at least part of the optional data must be registered, so that it is clear who the driver was."
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/bsn",
+      "label": {
+        "nl": "Burger Service Nummer (BSN)",
+        "en": "Citizen service number (BSN)"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/ChIdNr",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/CkVgNr",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/initials",
+      "label": {
+        "nl": "Voorletters",
+        "en": "Initials"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/prefix",
+      "label": {
+        "nl": "Voorvoegsels",
+        "en": "Prefixes"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/familyName",
+      "label": {
+        "nl": "Achternaam",
+        "en": "Surname"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/Naam",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/Personeelsnummer",
+      "label": {
+        "nl": "Personeelsnummer",
+        "en": "Personnel number"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/addressNL",
+      "label": {
+        "nl": "Adres nederland",
+        "en": "Dutch address"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/addressNL/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/addressNL/number",
+      "label": {
+        "nl": "Huisnummer",
+        "en": "House number"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/addressNL/numberExtension",
+      "label": {
+        "nl": "Huisnummer toevoeging",
+        "en": "House number suffix"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/addressNL/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/addressNL/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/addressNL/city",
+      "label": {
+        "nl": "Plaats",
+        "en": "Place"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/addressForeign",
+      "label": {
+        "nl": "Adres buitenland",
+        "en": "Foreign address"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/addressForeign/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/addressForeign/number",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/addressForeign/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/addressForeign/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/addressForeign/city",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/addressForeign/region",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      }
+    },
+    {
+      "path": "auditfile/Bestuurders/Bestuurder/addressForeign/country",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    },
+    {
+      "path": "auditfile/Auto",
+      "label": {
+        "nl": "Auto",
+        "en": "Car"
+      }
+    },
+    {
+      "path": "auditfile/Auto/Kntkn",
+      "label": {
+        "nl": "Kenteken",
+        "en": "Licence plate"
+      }
+    },
+    {
+      "path": "auditfile/Auto/VIN",
+      "label": {
+        "nl": "Vehicle Identification Number (VIN)",
+        "en": "Vehicle Identification Number (VIN)"
+      }
+    },
+    {
+      "path": "auditfile/Auto/vehicleRegistrationType",
+      "label": {
+        "nl": "Kenteken type",
+        "en": "Licence plate type"
+      },
+      "definition": {
+        "nl": "XML Auditfile Boordcomputer Taxi versie 1.0",
+        "en": "XML Auditfile Taxi On-board Computer version 1.0"
+      },
+      "codes": {
+        "1": {
+          "en": "Private (Yellow)"
+        },
+        "2": {
+          "en": "Business (Grey)"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Auto/vehicleName",
+      "label": {
+        "nl": "Voertuig naam",
+        "en": "Vehicle name"
+      }
+    },
+    {
+      "path": "auditfile/Auto/vehicleMake",
+      "label": {
+        "nl": "Voertuig merk",
+        "en": "Vehicle make"
+      }
+    },
+    {
+      "path": "auditfile/Auto/vehicleModel",
+      "label": {
+        "nl": "Voertuig model",
+        "en": "Vehicle model"
+      }
+    },
+    {
+      "path": "auditfile/Auto/country",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder",
+      "label": {
+        "nl": "Vervoerder",
+        "en": "Carrier"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/KvKnr",
+      "label": {
+        "nl": "Kamer van Koophandel (KvK) nummer",
+        "en": "Chamber of Commerce (KvK) number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Pnr",
+      "label": {
+        "nl": "P-nummer",
+        "en": "P number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart",
+      "label": {
+        "nl": "Ondernemerskaart",
+        "en": "Entrepreneur card"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/OkVgNr",
+      "label": {
+        "nl": "Ondernemerskaart volgnummer",
+        "en": "Entrepreneur card sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/OndernemersNaam",
+      "label": {
+        "nl": "Ondernemers naam",
+        "en": "Entrepreneur name"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit",
+      "label": {
+        "nl": "RIT",
+        "en": "Trip"
+      },
+      "definition": {
+        "nl": "Rit wordt per bestuurder uniek geidentificeerd door een volgnummer.",
+        "en": "A trip is uniquely identified per driver by a sequence number."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data",
+      "label": {
+        "nl": "Rit data",
+        "en": "Trip data"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/RtVgNr",
+      "label": {
+        "nl": "Rit volgnummer",
+        "en": "Trip sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/Label",
+      "label": {
+        "nl": "Fiscale label (activiteit)",
+        "en": "Tax label (activity)"
+      },
+      "codes": {
+        "A100": {
+          "nl": "Goederenvervoer",
+          "en": "Goods transport"
+        },
+        "A110": {
+          "nl": "Rouw-, trouwvervoer",
+          "en": "Funeral and wedding transport"
+        },
+        "A130": {
+          "nl": "Overig zakelijk",
+          "en": "Other business"
+        },
+        "A140": {
+          "nl": "Rijden tijdens pauze",
+          "en": "Driving during break"
+        },
+        "A150": {
+          "nl": "Prive",
+          "en": "Private"
+        },
+        "A160": {
+          "nl": "OV met taxi",
+          "en": "Public transport by taxi"
+        },
+        "B100": {
+          "nl": "Taxi gerelateerd",
+          "en": "Taxi-related"
+        },
+        "B101": {
+          "nl": "Taxi gerelateerd Tanken",
+          "en": "Taxi-related: refuelling"
+        },
+        "B102": {
+          "nl": "Taxi gerelateerd Wassen",
+          "en": "Taxi-related: car wash"
+        },
+        "B103": {
+          "nl": "Taxi gerelateerd Garage/keuring",
+          "en": "Taxi-related: garage/inspection"
+        },
+        "B104": {
+          "nl": "OV met taxi",
+          "en": "Public transport by taxi"
+        },
+        "B110": {
+          "nl": "Niet taxi gerelateerd",
+          "en": "Not taxi-related"
+        },
+        "B111": {
+          "nl": "Niet taxi gerelateerd Verhuur - niet taxi",
+          "en": "Not taxi-related: rental, non-taxi"
+        },
+        "B112": {
+          "nl": "Zakelijk gebruik, niet taxi gerelateerd",
+          "en": "Business use, not taxi-related"
+        },
+        "B120": {
+          "nl": "Prive",
+          "en": "Private"
+        },
+        "B130": {
+          "nl": "Woon / werk",
+          "en": "Commuting"
+        },
+        "T100": {
+          "nl": "Beladen",
+          "en": "Occupied"
+        },
+        "T110": {
+          "nl": "Onbeladen",
+          "en": "Unoccupied"
+        },
+        "T111": {
+          "nl": "Onbeladen Tanken",
+          "en": "Unoccupied: refuelling"
+        },
+        "T112": {
+          "nl": "Onbeladen Wassen",
+          "en": "Unoccupied: car wash"
+        },
+        "T113": {
+          "nl": "Onbeladen Garage/keuring",
+          "en": "Unoccupied: garage/inspection"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/MtCd",
+      "label": {
+        "nl": "Mutatie code (D, I, M)",
+        "en": "Mutation code (D, I, M)"
+      },
+      "codes": {
+        "D": {
+          "en": "Delete"
+        },
+        "I": {
+          "en": "Insert"
+        },
+        "M": {
+          "nl": "Mutatie",
+          "en": "Modification"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/DispatcherRitNr",
+      "label": {
+        "nl": "Distpatcher ritnummer",
+        "en": "Dispatcher trip number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/Type",
+      "label": {
+        "nl": "Type rit (O, B)",
+        "en": "Trip type (O, B)"
+      },
+      "codes": {
+        "B": {
+          "nl": "Beladen Rit",
+          "en": "Occupied trip"
+        },
+        "O": {
+          "nl": "Onbeladen Rit",
+          "en": "Unoccupied trip"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/DatTdReg",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/tripRegType",
+      "label": {
+        "nl": "Rit registratiesoort (door bct of handmatig)",
+        "en": "Trip registration type (by BCT or manual)"
+      },
+      "codes": {
+        "0": {
+          "en": "Trip registration by vehicle system"
+        },
+        "1": {
+          "en": "Trip registration by manual input"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/tripMixedIndicator",
+      "label": {
+        "nl": "Rit is gemengd prive/zakelijk indicatie ja / nee",
+        "en": "Trip is mixed private/business indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/tripDescription",
+      "label": {
+        "nl": "Rit omschrijving van chauffeur",
+        "en": "Trip description by driver"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/tripAgendaDescription",
+      "label": {
+        "nl": "Rit omschrijving uit agendasysteem",
+        "en": "Trip description from calendar system"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/tripDistance",
+      "label": {
+        "nl": "Rit kilometers",
+        "en": "Trip kilometres"
+      },
+      "definition": {
+        "nl": "Het aantal rit kilometers wordt bepaald door de begin kilometerstand van de BCT odometer af te trekken van de eind kilometerstand van de BCT odometer binnen een rit. Wanneer de eindkilometerstand niet bepaald is, wordt het aantal rit kilometers niet weggeschreven in de auditfile.",
+        "en": "The number of trip kilometres is determined by subtracting the start reading of the BCT odometer from the end reading of the BCT odometer within a trip. If the end reading has not been determined, the number of trip kilometres is not written to the audit file."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/privateDistance",
+      "label": {
+        "nl": "Rit prive kilometers",
+        "en": "Trip private kilometres"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/businessDistance",
+      "label": {
+        "nl": "Rit zakelijke kilometers",
+        "en": "Trip business kilometres"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/deviantIndicator",
+      "label": {
+        "nl": "Afwijkende route gereden indicatie ja / nee",
+        "en": "Deviating route driven indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/deviantDistance",
+      "label": {
+        "nl": "Afwijkende route omrij kilometers",
+        "en": "Deviating route detour kilometres"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/deviantDescription",
+      "label": {
+        "nl": "Afwijkende route toelichting",
+        "en": "Deviating route explanation"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/Prijs",
+      "label": {
+        "nl": "Ritprijs",
+        "en": "Trip fare"
+      },
+      "definition": {
+        "nl": "Ritprijs in eurocenten. Als de ritprijs de waarde nul heeft, kunnen alle bedragvelden worden weggelaten als deze allemaal nul zijn.",
+        "en": "Trip fare in euro cents. If the trip fare is zero, all amount fields may be omitted if they are all zero."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/BasisBedrag",
+      "label": {
+        "nl": "Basisbedrag",
+        "en": "Base amount"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/Toeslag",
+      "label": {
+        "nl": "Toeslag",
+        "en": "Surcharge"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/Korting",
+      "label": {
+        "nl": "Korting",
+        "en": "Discount"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/Fooi",
+      "label": {
+        "nl": "Fooi",
+        "en": "Tip"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/BetaalWijze",
+      "label": {
+        "nl": "Betaalwijze, tekst",
+        "en": "Payment method, text"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/Prijsafspraak",
+      "label": {
+        "nl": "Prijs afspraak, tekst",
+        "en": "Price agreement, text"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg",
+      "label": {
+        "nl": "Beginpunt",
+        "en": "Starting point"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/DatTd",
+      "label": {
+        "nl": "Systeem datum / tijd",
+        "en": "System date / time"
+      },
+      "definition": {
+        "nl": "Systeem datum / tijd is alleen verplicht indien er sprake is van een zakelijke rit.",
+        "en": "System date / time is only required for a business trip."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/DatTdGPSfix",
+      "label": {
+        "nl": "Systeem datum / tijd GPS fix",
+        "en": "System date / time GPS fix"
+      },
+      "definition": {
+        "nl": "Datum en tijd waarop de coordinaten worden vastgelegd.",
+        "en": "Date and time at which the coordinates are recorded."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/BctOdo",
+      "label": {
+        "nl": "Kilometerstand BCT odo meter",
+        "en": "Odometer reading BCT odometer"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/VehOdo",
+      "label": {
+        "nl": "Kilometerstand voertuig odo meter (dashboard)",
+        "en": "Odometer reading of the vehicle odometer (dashboard)"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/Lat",
+      "label": {
+        "nl": "Breedtegraad",
+        "en": "Latitude"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/Lon",
+      "label": {
+        "nl": "Lengtegraad",
+        "en": "Longitude"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/sat",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/fix",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/dop",
+      "label": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/poiID",
+      "label": {
+        "nl": "POI Identification",
+        "en": "POI identification"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/addrTxt",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/address",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/address/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/address/number",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/address/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/address/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/address/city",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/address/region",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocBeg/address/country",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd",
+      "label": {
+        "nl": "Eindpunt",
+        "en": "End point"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/DatTd",
+      "label": {
+        "nl": "Systeem datum / tijd",
+        "en": "System date / time"
+      },
+      "definition": {
+        "nl": "Systeem datum / tijd is alleen verplicht indien er sprake is van een zakelijke rit.",
+        "en": "System date / time is only required for a business trip."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/DatTdGPSfix",
+      "label": {
+        "nl": "Systeem datum / tijd GPS fix",
+        "en": "System date / time GPS fix"
+      },
+      "definition": {
+        "nl": "Datum en tijd waarop de coordinaten worden vastgelegd.",
+        "en": "Date and time at which the coordinates are recorded."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/BctOdo",
+      "label": {
+        "nl": "Kilometerstand BCT odo meter",
+        "en": "Odometer reading BCT odometer"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/VehOdo",
+      "label": {
+        "nl": "Kilometerstand voertuig odo meter (dashboard)",
+        "en": "Odometer reading of the vehicle odometer (dashboard)"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/Lat",
+      "label": {
+        "nl": "Breedtegraad",
+        "en": "Latitude"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/Lon",
+      "label": {
+        "nl": "Lengtegraad",
+        "en": "Longitude"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/sat",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/fix",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/dop",
+      "label": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/poiID",
+      "label": {
+        "nl": "POI Identification",
+        "en": "POI identification"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/addrTxt",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/address",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/address/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/address/number",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/address/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/address/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/address/city",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/address/region",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/LocEnd/address/country",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/Bestuurder",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/Bestuurder/ChIdNr",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/Bestuurder/CkVgNr",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/Bestuurder/Naam",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/changeInfo",
+      "label": {
+        "nl": "Aanpassing informatie",
+        "en": "Change information"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/changeInfo/changeByUserName",
+      "label": {
+        "nl": "Gebruiker naam",
+        "en": "User name"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/changeInfo/changeDateTime",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/changeInfo/changeDescription",
+      "label": {
+        "nl": "Soort aanpassing omschrijving",
+        "en": "Type of change description"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/changeInfo/Bestuurder",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/changeInfo/Bestuurder/ChIdNr",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/changeInfo/Bestuurder/CkVgNr",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/changeInfo/Bestuurder/Naam",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point",
+      "label": {
+        "nl": "Ritdetailpunt",
+        "en": "Trip detail point"
+      },
+      "definition": {
+        "nl": "Ritdetailpunt bevat de gegevens van een punt tussen beginpunt en eindpunt. Ritdetailpunten worden met een frequentie van 1 per minuut weggeschreven. Het eerste ritdetailpunt kan eerder dan een minuut na het beginpunt worden weggeschreven. Ritdetailpunten zijn alleen verplicht indien er sprake is van een zakelijke rit.",
+        "en": "A trip detail point contains the data of a point between the starting point and end point. Trip detail points are written at a frequency of 1 per minute. The first trip detail point may be written less than a minute after the starting point. Trip detail points are only required for a business trip."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/DatTd",
+      "label": {
+        "nl": "Systeem datum / tijd",
+        "en": "System date / time"
+      },
+      "definition": {
+        "nl": "Systeem datum / tijd is alleen verplicht indien er sprake is van een zakelijke rit.",
+        "en": "System date / time is only required for a business trip."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/DatTdGPSfix",
+      "label": {
+        "nl": "Systeem datum / tijd GPS fix",
+        "en": "System date / time GPS fix"
+      },
+      "definition": {
+        "nl": "Datum en tijd waarop de coordinaten worden vastgelegd.",
+        "en": "Date and time at which the coordinates are recorded."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/BctOdo",
+      "label": {
+        "nl": "Kilometerstand BCT odo meter",
+        "en": "Odometer reading BCT odometer"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/VehOdo",
+      "label": {
+        "nl": "Kilometerstand voertuig odo meter (dashboard)",
+        "en": "Odometer reading of the vehicle odometer (dashboard)"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/StRdnAt",
+      "label": {
+        "nl": "Voertuig status (Stilstaan, Rijden)",
+        "en": "Vehicle status (stationary, driving)"
+      },
+      "definition": {
+        "nl": "Status wordt bepaald op basis van BCT.",
+        "en": "The status is determined on the basis of the BCT."
+      },
+      "codes": {
+        "R": {
+          "nl": "Rijden",
+          "en": "Driving"
+        },
+        "S": {
+          "nl": "Stilstaan",
+          "en": "Stationary"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/Lat",
+      "label": {
+        "nl": "Breedtegraad",
+        "en": "Latitude"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/Lon",
+      "label": {
+        "nl": "Lengtegraad",
+        "en": "Longitude"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/src",
+      "label": {
+        "nl": "Herkomst van bepaling",
+        "en": "Origin of determination"
+      },
+      "codes": {
+        "1": {
+          "en": "BCT"
+        },
+        "2": {
+          "en": "GPS"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/sat",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/fix",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/dop",
+      "label": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/poiID",
+      "label": {
+        "nl": "POI Identification",
+        "en": "POI identification"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/addrTxt",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/address",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/address/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/address/number",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/address/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/address/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/address/city",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/address/region",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point/address/country",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history",
+      "label": {
+        "nl": "Historie",
+        "en": "History"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit",
+      "label": {
+        "nl": "RIT",
+        "en": "Trip"
+      },
+      "definition": {
+        "nl": "Rit wordt per bestuurder uniek geidentificeerd door een volgnummer.",
+        "en": "A trip is uniquely identified per driver by a sequence number."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data",
+      "label": {
+        "nl": "Rit data",
+        "en": "Trip data"
+      },
+      "definition": {
+        "nl": "In historie bevat dit alle ritgegevens.",
+        "en": "In history this contains all trip data."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/RtVgNr",
+      "label": {
+        "nl": "Rit volgnummer",
+        "en": "Trip sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/Label",
+      "label": {
+        "nl": "Fiscale label (activiteit)",
+        "en": "Tax label (activity)"
+      },
+      "codes": {
+        "A100": {
+          "nl": "Goederenvervoer",
+          "en": "Goods transport"
+        },
+        "A110": {
+          "nl": "Rouw-, trouwvervoer",
+          "en": "Funeral and wedding transport"
+        },
+        "A130": {
+          "nl": "Overig zakelijk",
+          "en": "Other business"
+        },
+        "A140": {
+          "nl": "Rijden tijdens pauze",
+          "en": "Driving during break"
+        },
+        "A150": {
+          "nl": "Prive",
+          "en": "Private"
+        },
+        "A160": {
+          "nl": "OV met taxi",
+          "en": "Public transport by taxi"
+        },
+        "B100": {
+          "nl": "Taxi gerelateerd",
+          "en": "Taxi-related"
+        },
+        "B101": {
+          "nl": "Taxi gerelateerd Tanken",
+          "en": "Taxi-related: refuelling"
+        },
+        "B102": {
+          "nl": "Taxi gerelateerd Wassen",
+          "en": "Taxi-related: car wash"
+        },
+        "B103": {
+          "nl": "Taxi gerelateerd Garage/keuring",
+          "en": "Taxi-related: garage/inspection"
+        },
+        "B104": {
+          "nl": "OV met taxi",
+          "en": "Public transport by taxi"
+        },
+        "B110": {
+          "nl": "Niet taxi gerelateerd",
+          "en": "Not taxi-related"
+        },
+        "B111": {
+          "nl": "Niet taxi gerelateerd Verhuur - niet taxi",
+          "en": "Not taxi-related: rental, non-taxi"
+        },
+        "B112": {
+          "nl": "Zakelijk gebruik, niet taxi gerelateerd",
+          "en": "Business use, not taxi-related"
+        },
+        "B120": {
+          "nl": "Prive",
+          "en": "Private"
+        },
+        "B130": {
+          "nl": "Woon / werk",
+          "en": "Commuting"
+        },
+        "T100": {
+          "nl": "Beladen",
+          "en": "Occupied"
+        },
+        "T110": {
+          "nl": "Onbeladen",
+          "en": "Unoccupied"
+        },
+        "T111": {
+          "nl": "Onbeladen Tanken",
+          "en": "Unoccupied: refuelling"
+        },
+        "T112": {
+          "nl": "Onbeladen Wassen",
+          "en": "Unoccupied: car wash"
+        },
+        "T113": {
+          "nl": "Onbeladen Garage/keuring",
+          "en": "Unoccupied: garage/inspection"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/MtCd",
+      "label": {
+        "nl": "Mutatie code (D, I, M)",
+        "en": "Mutation code (D, I, M)"
+      },
+      "codes": {
+        "D": {
+          "en": "Delete"
+        },
+        "I": {
+          "en": "Insert"
+        },
+        "M": {
+          "nl": "Mutatie",
+          "en": "Modification"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/DispatcherRitNr",
+      "label": {
+        "nl": "Distpatcher ritnummer",
+        "en": "Dispatcher trip number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/Type",
+      "label": {
+        "nl": "Type rit (O, B)",
+        "en": "Trip type (O, B)"
+      },
+      "codes": {
+        "B": {
+          "nl": "Beladen Rit",
+          "en": "Occupied trip"
+        },
+        "O": {
+          "nl": "Onbeladen Rit",
+          "en": "Unoccupied trip"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/DatTdReg",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/tripRegType",
+      "label": {
+        "nl": "Rit registratiesoort (door bct of handmatig)",
+        "en": "Trip registration type (by BCT or manual)"
+      },
+      "codes": {
+        "0": {
+          "en": "Trip registration by vehicle system"
+        },
+        "1": {
+          "en": "Trip registration by manual input"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/tripMixedIndicator",
+      "label": {
+        "nl": "Rit is gemengd prive/zakelijk indicatie ja / nee",
+        "en": "Trip is mixed private/business indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/tripDescription",
+      "label": {
+        "nl": "Rit omschrijving van chauffeur",
+        "en": "Trip description by driver"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/tripAgendaDescription",
+      "label": {
+        "nl": "Rit omschrijving uit agendasysteem",
+        "en": "Trip description from calendar system"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/tripDistance",
+      "label": {
+        "nl": "Rit kilometers",
+        "en": "Trip kilometres"
+      },
+      "definition": {
+        "nl": "Het aantal rit kilometers wordt bepaald door de begin kilometerstand van de BCT odometer af te trekken van de eind kilometerstand van de BCT odometer binnen een rit. Wanneer de eindkilometerstand niet bepaald is, wordt het aantal rit kilometers niet weggeschreven in de auditfile.",
+        "en": "The number of trip kilometres is determined by subtracting the start reading of the BCT odometer from the end reading of the BCT odometer within a trip. If the end reading has not been determined, the number of trip kilometres is not written to the audit file."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/privateDistance",
+      "label": {
+        "nl": "Rit prive kilometers",
+        "en": "Trip private kilometres"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/businessDistance",
+      "label": {
+        "nl": "Rit zakelijke kilometers",
+        "en": "Trip business kilometres"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/deviantIndicator",
+      "label": {
+        "nl": "Afwijkende route gereden indicatie ja / nee",
+        "en": "Deviating route driven indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/deviantDistance",
+      "label": {
+        "nl": "Afwijkende route omrij kilometers",
+        "en": "Deviating route detour kilometres"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/deviantDescription",
+      "label": {
+        "nl": "Afwijkende route toelichting",
+        "en": "Deviating route explanation"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/Prijs",
+      "label": {
+        "nl": "Ritprijs",
+        "en": "Trip fare"
+      },
+      "definition": {
+        "nl": "Ritprijs in eurocenten. Als de ritprijs de waarde nul heeft, kunnen alle bedragvelden worden weggelaten als deze allemaal nul zijn.",
+        "en": "Trip fare in euro cents. If the trip fare is zero, all amount fields may be omitted if they are all zero."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/BasisBedrag",
+      "label": {
+        "nl": "Basisbedrag",
+        "en": "Base amount"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/Toeslag",
+      "label": {
+        "nl": "Toeslag",
+        "en": "Surcharge"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/Korting",
+      "label": {
+        "nl": "Korting",
+        "en": "Discount"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/Fooi",
+      "label": {
+        "nl": "Fooi",
+        "en": "Tip"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/BetaalWijze",
+      "label": {
+        "nl": "Betaalwijze, tekst",
+        "en": "Payment method, text"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/Prijsafspraak",
+      "label": {
+        "nl": "Prijs afspraak, tekst",
+        "en": "Price agreement, text"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg",
+      "label": {
+        "nl": "Beginpunt",
+        "en": "Starting point"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/DatTd",
+      "label": {
+        "nl": "Systeem datum / tijd",
+        "en": "System date / time"
+      },
+      "definition": {
+        "nl": "Systeem datum / tijd is alleen verplicht indien er sprake is van een zakelijke rit.",
+        "en": "System date / time is only required for a business trip."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/DatTdGPSfix",
+      "label": {
+        "nl": "Systeem datum / tijd GPS fix",
+        "en": "System date / time GPS fix"
+      },
+      "definition": {
+        "nl": "Datum en tijd waarop de coordinaten worden vastgelegd.",
+        "en": "Date and time at which the coordinates are recorded."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/BctOdo",
+      "label": {
+        "nl": "Kilometerstand BCT odo meter",
+        "en": "Odometer reading BCT odometer"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/VehOdo",
+      "label": {
+        "nl": "Kilometerstand voertuig odo meter (dashboard)",
+        "en": "Odometer reading of the vehicle odometer (dashboard)"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/Lat",
+      "label": {
+        "nl": "Breedtegraad",
+        "en": "Latitude"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/Lon",
+      "label": {
+        "nl": "Lengtegraad",
+        "en": "Longitude"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/sat",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/fix",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/dop",
+      "label": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/poiID",
+      "label": {
+        "nl": "POI Identification",
+        "en": "POI identification"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/addrTxt",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/address",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/address/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/address/number",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/address/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/address/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/address/city",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/address/region",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocBeg/address/country",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd",
+      "label": {
+        "nl": "Eindpunt",
+        "en": "End point"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/DatTd",
+      "label": {
+        "nl": "Systeem datum / tijd",
+        "en": "System date / time"
+      },
+      "definition": {
+        "nl": "Systeem datum / tijd is alleen verplicht indien er sprake is van een zakelijke rit.",
+        "en": "System date / time is only required for a business trip."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/DatTdGPSfix",
+      "label": {
+        "nl": "Systeem datum / tijd GPS fix",
+        "en": "System date / time GPS fix"
+      },
+      "definition": {
+        "nl": "Datum en tijd waarop de coordinaten worden vastgelegd.",
+        "en": "Date and time at which the coordinates are recorded."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/BctOdo",
+      "label": {
+        "nl": "Kilometerstand BCT odo meter",
+        "en": "Odometer reading BCT odometer"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/VehOdo",
+      "label": {
+        "nl": "Kilometerstand voertuig odo meter (dashboard)",
+        "en": "Odometer reading of the vehicle odometer (dashboard)"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/Lat",
+      "label": {
+        "nl": "Breedtegraad",
+        "en": "Latitude"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/Lon",
+      "label": {
+        "nl": "Lengtegraad",
+        "en": "Longitude"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/sat",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/fix",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/dop",
+      "label": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/poiID",
+      "label": {
+        "nl": "POI Identification",
+        "en": "POI identification"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/addrTxt",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/address",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/address/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/address/number",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/address/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/address/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/address/city",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/address/region",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/LocEnd/address/country",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/Bestuurder",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/Bestuurder/ChIdNr",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/Bestuurder/CkVgNr",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/Bestuurder/Naam",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/changeInfo",
+      "label": {
+        "nl": "Aanpassing informatie",
+        "en": "Change information"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/changeInfo/changeByUserName",
+      "label": {
+        "nl": "Gebruiker naam",
+        "en": "User name"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/changeInfo/changeDateTime",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/changeInfo/changeDescription",
+      "label": {
+        "nl": "Soort aanpassing omschrijving",
+        "en": "Type of change description"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/changeInfo/Bestuurder",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/changeInfo/Bestuurder/ChIdNr",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/changeInfo/Bestuurder/CkVgNr",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/changeInfo/Bestuurder/Naam",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point",
+      "label": {
+        "nl": "Ritdetailpunt",
+        "en": "Trip detail point"
+      },
+      "definition": {
+        "nl": "Ritdetailpunt bevat de gegevens van een punt tussen beginpunt en eindpunt. Ritdetailpunten worden met een frequentie van 1 per minuut weggeschreven. Het eerste ritdetailpunt kan eerder dan een minuut na het beginpunt worden weggeschreven. Ritdetailpunten zijn alleen verplicht indien er sprake is van een zakelijke rit. De opgaaf van een tussenpunt in de rit historie is verplicht indien de Rit Registratie soort code 0 heeft (Trip registration by vehicle system) en als er uiteindelijk sprake is van een zakelijke rit.",
+        "en": "A trip detail point contains the data of a point between the starting point and end point. Trip detail points are written at a frequency of 1 per minute. The first trip detail point may be written less than a minute after the starting point. Trip detail points are only required for a business trip. An intermediate point in the trip history is required if the trip registration type has code 0 (Trip registration by vehicle system) and it is ultimately a business trip."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/DatTd",
+      "label": {
+        "nl": "Systeem datum / tijd",
+        "en": "System date / time"
+      },
+      "definition": {
+        "nl": "Systeem datum / tijd is alleen verplicht indien er sprake is van een zakelijke rit.",
+        "en": "System date / time is only required for a business trip."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/DatTdGPSfix",
+      "label": {
+        "nl": "Systeem datum / tijd GPS fix",
+        "en": "System date / time GPS fix"
+      },
+      "definition": {
+        "nl": "Datum en tijd waarop de coordinaten worden vastgelegd.",
+        "en": "Date and time at which the coordinates are recorded."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/BctOdo",
+      "label": {
+        "nl": "Kilometerstand BCT odo meter",
+        "en": "Odometer reading BCT odometer"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/VehOdo",
+      "label": {
+        "nl": "Kilometerstand voertuig odo meter (dashboard)",
+        "en": "Odometer reading of the vehicle odometer (dashboard)"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/StRdnAt",
+      "label": {
+        "nl": "Voertuig status (Stilstaan, Rijden)",
+        "en": "Vehicle status (stationary, driving)"
+      },
+      "definition": {
+        "nl": "Status wordt bepaald op basis van BCT.",
+        "en": "The status is determined on the basis of the BCT."
+      },
+      "codes": {
+        "R": {
+          "nl": "Rijden",
+          "en": "Driving"
+        },
+        "S": {
+          "nl": "Stilstaan",
+          "en": "Stationary"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/Lat",
+      "label": {
+        "nl": "Breedtegraad",
+        "en": "Latitude"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/Lon",
+      "label": {
+        "nl": "Lengtegraad",
+        "en": "Longitude"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/src",
+      "label": {
+        "nl": "Herkomst van bepaling",
+        "en": "Origin of determination"
+      },
+      "codes": {
+        "1": {
+          "en": "BCT"
+        },
+        "2": {
+          "en": "GPS"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/sat",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/fix",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/dop",
+      "label": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/poiID",
+      "label": {
+        "nl": "POI Identification",
+        "en": "POI identification"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/addrTxt",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/address",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/address/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/address/number",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/address/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/address/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/address/city",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/address/region",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point/address/country",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd",
+      "label": {
+        "nl": "Arbeidstijd",
+        "en": "Working time"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data",
+      "label": {
+        "nl": "Arbeidstijd data",
+        "en": "Working time data"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/ArVgNr",
+      "label": {
+        "nl": "Arbeidstijd volgnummer",
+        "en": "Working time sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/DatTdReg",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/DatTdBeg",
+      "label": {
+        "nl": "Datum/tijd begin arbeidstijd",
+        "en": "Date/time start of working time"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/DatTdEnd",
+      "label": {
+        "nl": "Datum/tijd einde arbeidstijd",
+        "en": "Date/time end of working time"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/Rijtijd",
+      "label": {
+        "nl": "Rijtijd",
+        "en": "Driving time"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/Rijtijd/RtVgNr",
+      "label": {
+        "nl": "Rijtijd volgnummer",
+        "en": "Driving time sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/Rijtijd/DatTdReg",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/Rijtijd/DatTdBeg",
+      "label": {
+        "nl": "Datum/tijd begin rijtijd",
+        "en": "Date/time start of driving time"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/Rijtijd/DatTdEnd",
+      "label": {
+        "nl": "Datum/tijd einde rijtijd",
+        "en": "Date/time end of driving time"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/Pauze",
+      "label": {
+        "nl": "Pauze",
+        "en": "Break"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/Pauze/PzVgNr",
+      "label": {
+        "nl": "Pauze volgnummer",
+        "en": "Break sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/Pauze/MtCd",
+      "label": {
+        "nl": "Mutatiecode",
+        "en": "Mutation code"
+      },
+      "codes": {
+        "D": {
+          "en": "Delete"
+        },
+        "I": {
+          "en": "Insert"
+        },
+        "M": {
+          "nl": "Mutatie",
+          "en": "Modification"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/Pauze/DatTdReg",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/Pauze/DatTdBeg",
+      "label": {
+        "nl": "Datum/tijd begin pauze",
+        "en": "Date/time start of break"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/Pauze/DatTdEnd",
+      "label": {
+        "nl": "Datum/tijd einde pauze",
+        "en": "Date/time end of break"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/AdrWrkzmhdn",
+      "label": {
+        "nl": "Andere werkzaamheden",
+        "en": "Other work"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/AdrWrkzmhdn/AwVgNr",
+      "label": {
+        "nl": "Andere werkzaamheden volgnummer",
+        "en": "Other work sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/AdrWrkzmhdn/MtCd",
+      "label": {
+        "nl": "Mutatiecode",
+        "en": "Mutation code"
+      },
+      "codes": {
+        "D": {
+          "en": "Delete"
+        },
+        "I": {
+          "en": "Insert"
+        },
+        "M": {
+          "nl": "Mutatie",
+          "en": "Modification"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/AdrWrkzmhdn/DatTdReg",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/AdrWrkzmhdn/DatTdBeg",
+      "label": {
+        "nl": "Datum/tijd begin andere werkzaamheden",
+        "en": "Date/time start of other work"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/AdrWrkzmhdn/DatTdEnd",
+      "label": {
+        "nl": "Datum/tijd einde andere werkzaamheden",
+        "en": "Date/time end of other work"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history",
+      "label": {
+        "nl": "Historie",
+        "en": "History"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd",
+      "label": {
+        "nl": "Arbeidstijd",
+        "en": "Working time"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data",
+      "label": {
+        "nl": "Arbeidstijd data",
+        "en": "Working time data"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/ArVgNr",
+      "label": {
+        "nl": "Arbeidstijd volgnummer",
+        "en": "Working time sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/DatTdReg",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/DatTdBeg",
+      "label": {
+        "nl": "Datum/tijd begin arbeidstijd",
+        "en": "Date/time start of working time"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/DatTdEnd",
+      "label": {
+        "nl": "Datum/tijd einde arbeidstijd",
+        "en": "Date/time end of working time"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/changeInfo",
+      "label": {
+        "nl": "Aanpassing informatie",
+        "en": "Change information"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/changeInfo/changeByUserName",
+      "label": {
+        "nl": "Gebruiker naam",
+        "en": "User name"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/changeInfo/changeDateTime",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/changeInfo/changeDescription",
+      "label": {
+        "nl": "Soort aanpassing omschrijving",
+        "en": "Type of change description"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/changeInfo/Bestuurder",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/changeInfo/Bestuurder/ChIdNr",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/changeInfo/Bestuurder/CkVgNr",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/changeInfo/Bestuurder/Naam",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/Rijtijd",
+      "label": {
+        "nl": "Rijtijd",
+        "en": "Driving time"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/Rijtijd/RtVgNr",
+      "label": {
+        "nl": "Rijtijd volgnummer",
+        "en": "Driving time sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/Rijtijd/DatTdReg",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/Rijtijd/DatTdBeg",
+      "label": {
+        "nl": "Datum/tijd begin rijtijd",
+        "en": "Date/time start of driving time"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/Rijtijd/DatTdEnd",
+      "label": {
+        "nl": "Datum/tijd einde rijtijd",
+        "en": "Date/time end of driving time"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/Pauze",
+      "label": {
+        "nl": "Pauze",
+        "en": "Break"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/Pauze/PzVgNr",
+      "label": {
+        "nl": "Pauze volgnummer",
+        "en": "Break sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/Pauze/MtCd",
+      "label": {
+        "nl": "Mutatiecode",
+        "en": "Mutation code"
+      },
+      "codes": {
+        "D": {
+          "en": "Delete"
+        },
+        "I": {
+          "en": "Insert"
+        },
+        "M": {
+          "nl": "Mutatie",
+          "en": "Modification"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/Pauze/DatTdReg",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/Pauze/DatTdBeg",
+      "label": {
+        "nl": "Datum/tijd begin pauze",
+        "en": "Date/time start of break"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/Pauze/DatTdEnd",
+      "label": {
+        "nl": "Datum/tijd einde pauze",
+        "en": "Date/time end of break"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/AdrWrkzmhdn",
+      "label": {
+        "nl": "Andere werkzaamheden",
+        "en": "Other work"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/AdrWrkzmhdn/AwVgNr",
+      "label": {
+        "nl": "Andere werkzaamheden volgnummer",
+        "en": "Other work sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/AdrWrkzmhdn/MtCd",
+      "label": {
+        "nl": "Mutatiecode",
+        "en": "Mutation code"
+      },
+      "codes": {
+        "D": {
+          "en": "Delete"
+        },
+        "I": {
+          "en": "Insert"
+        },
+        "M": {
+          "nl": "Mutatie",
+          "en": "Modification"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/AdrWrkzmhdn/DatTdReg",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/AdrWrkzmhdn/DatTdBeg",
+      "label": {
+        "nl": "Datum/tijd begin andere werkzaamheden",
+        "en": "Date/time start of other work"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/AdrWrkzmhdn/DatTdEnd",
+      "label": {
+        "nl": "Datum/tijd einde andere werkzaamheden",
+        "en": "Date/time end of other work"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns",
+      "label": {
+        "nl": "Gebeurtenis",
+        "en": "Event"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/Data",
+      "label": {
+        "nl": "Gebeurtenis data",
+        "en": "Event data"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/Data/GbVgNr",
+      "label": {
+        "nl": "Gebeurtenis volgnummer",
+        "en": "Event sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/Data/Code",
+      "label": {
+        "nl": "Code",
+        "en": "Code"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/Data/DatTdReg",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/Data/KmStd",
+      "label": {
+        "nl": "Kilometerstand",
+        "en": "Odometer reading"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/Data/StRdnAt",
+      "label": {
+        "nl": "Status rijden auto",
+        "en": "Car driving status"
+      },
+      "codes": {
+        "R": {
+          "nl": "Rijden",
+          "en": "Driving"
+        },
+        "S": {
+          "nl": "Stilstaan",
+          "en": "Stationary"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/Data/WrkngsMds",
+      "label": {
+        "nl": "Werkingsmodus",
+        "en": "Operating mode"
+      },
+      "codes": {
+        "B": {
+          "nl": "Bedrijfsmodus",
+          "en": "Company mode"
+        },
+        "C": {
+          "nl": "Controlemodus",
+          "en": "Control mode"
+        },
+        "K": {
+          "nl": "Activerings- en keuringsmodus",
+          "en": "Activation and calibration mode"
+        },
+        "O": {
+          "nl": "Operationele modus",
+          "en": "Operational mode"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/Data/WrkngsNv",
+      "label": {
+        "nl": "Werkingsniveau",
+        "en": "Operating level"
+      },
+      "codes": {
+        "A": {
+          "nl": "Arbeidstijd",
+          "en": "Working time"
+        },
+        "B": {
+          "nl": "Basis",
+          "en": "Basic"
+        },
+        "T": {
+          "nl": "Taxivervoer",
+          "en": "Taxi transport"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/Data/AanvInfo",
+      "label": {
+        "nl": "Aanvullende relevante informatie",
+        "en": "Additional relevant information"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/Data/Bestuurder",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/Data/Bestuurder/ChIdNr",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/Data/Bestuurder/CkVgNr",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/Data/Bestuurder/Naam",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/changeInfo",
+      "label": {
+        "nl": "Aanpassing informatie",
+        "en": "Change information"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/changeInfo/changeByUserName",
+      "label": {
+        "nl": "Gebruiker naam",
+        "en": "User name"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/changeInfo/changeDateTime",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/changeInfo/changeDescription",
+      "label": {
+        "nl": "Soort aanpassing omschrijving",
+        "en": "Type of change description"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/changeInfo/Bestuurder",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/changeInfo/Bestuurder/ChIdNr",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/changeInfo/Bestuurder/CkVgNr",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/changeInfo/Bestuurder/Naam",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history",
+      "label": {
+        "nl": "Historie",
+        "en": "History"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns",
+      "label": {
+        "nl": "Gebeurtenis",
+        "en": "Event"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/Data",
+      "label": {
+        "nl": "Gebeurtenis data",
+        "en": "Event data"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/Data/GbVgNr",
+      "label": {
+        "nl": "Gebeurtenis volgnummer",
+        "en": "Event sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/Data/Code",
+      "label": {
+        "nl": "Code",
+        "en": "Code"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/Data/DatTdReg",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/Data/KmStd",
+      "label": {
+        "nl": "Kilometerstand",
+        "en": "Odometer reading"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/Data/StRdnAt",
+      "label": {
+        "nl": "Status rijden auto",
+        "en": "Car driving status"
+      },
+      "codes": {
+        "R": {
+          "nl": "Rijden",
+          "en": "Driving"
+        },
+        "S": {
+          "nl": "Stilstaan",
+          "en": "Stationary"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/Data/WrkngsMds",
+      "label": {
+        "nl": "Werkingsmodus",
+        "en": "Operating mode"
+      },
+      "codes": {
+        "B": {
+          "nl": "Bedrijfsmodus",
+          "en": "Company mode"
+        },
+        "C": {
+          "nl": "Controlemodus",
+          "en": "Control mode"
+        },
+        "K": {
+          "nl": "Activerings- en keuringsmodus",
+          "en": "Activation and calibration mode"
+        },
+        "O": {
+          "nl": "Operationele modus",
+          "en": "Operational mode"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/Data/WrkngsNv",
+      "label": {
+        "nl": "Werkingsniveau",
+        "en": "Operating level"
+      },
+      "codes": {
+        "A": {
+          "nl": "Arbeidstijd",
+          "en": "Working time"
+        },
+        "B": {
+          "nl": "Basis",
+          "en": "Basic"
+        },
+        "T": {
+          "nl": "Taxivervoer",
+          "en": "Taxi transport"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/Data/AanvInfo",
+      "label": {
+        "nl": "Aanvullende relevante informatie",
+        "en": "Additional relevant information"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/Data/Bestuurder",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/Data/Bestuurder/ChIdNr",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/Data/Bestuurder/CkVgNr",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/Data/Bestuurder/Naam",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/changeInfo",
+      "label": {
+        "nl": "Aanpassing informatie",
+        "en": "Change information"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/changeInfo/changeByUserName",
+      "label": {
+        "nl": "Gebruiker naam",
+        "en": "User name"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/changeInfo/changeDateTime",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/changeInfo/changeDescription",
+      "label": {
+        "nl": "Soort aanpassing omschrijving",
+        "en": "Type of change description"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/changeInfo/Bestuurder",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/changeInfo/Bestuurder/ChIdNr",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/changeInfo/Bestuurder/CkVgNr",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns/changeInfo/Bestuurder/Naam",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "path": "auditfile/pois",
+      "label": {
+        "nl": "Pois",
+        "en": "POIs"
+      }
+    },
+    {
+      "path": "auditfile/pois/poi",
+      "label": {
+        "nl": "POI",
+        "en": "POI"
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/poiID",
+      "label": {
+        "nl": "POI identificatie",
+        "en": "POI identification"
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/poiName",
+      "label": {
+        "nl": "POI naam",
+        "en": "POI name"
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/Lat",
+      "label": {
+        "nl": "POI latitude",
+        "en": "POI latitude"
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/Lon",
+      "label": {
+        "nl": "POI longitude",
+        "en": "POI longitude"
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/addrTxt",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/address",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/address/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/address/number",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/address/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/address/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/address/city",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/address/region",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/address/country",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    }
+  ]
+}

@@ -1,0 +1,3458 @@
+{
+  "source": "XmlAuditfileRrs1.2_spec.pdf",
+  "entries": [
+    {
+      "path": "auditfile",
+      "label": {
+        "nl": "Rittenadministratie",
+        "en": "Trip administration"
+      }
+    },
+    {
+      "path": "auditfile/header",
+      "label": {
+        "nl": "Bestandsinformatie",
+        "en": "File information"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de identificerende gegevens van de ingediende Rittenregistratie opgenomen.",
+        "en": "This group contains the identifying data of the submitted trip registration."
+      },
+      "description": {
+        "nl": "[0200] De specificatie van de gegevensgroep bestandsinformatie is verplicht.",
+        "en": "[0200] The file information data group is required."
+      }
+    },
+    {
+      "path": "auditfile/header/fileFormat",
+      "label": {
+        "nl": "Bestandsformaat",
+        "en": "File format"
+      },
+      "definition": {
+        "nl": "De naam van het bestandsformaat. Deze staat vast. De waarde is: \"XML Auditfile RRS\" Dit gegeven is onderkend om een ontvangen Rittenregistratie op juiste wijze te kunnen interpreteren en verwerken.",
+        "en": "The name of the file format. This is fixed. The value is: \"XML Auditfile RRS\". This item exists to interpret and process a received trip registration correctly."
+      },
+      "description": {
+        "nl": "[0201] Verplicht",
+        "en": "[0201] Required"
+      }
+    },
+    {
+      "path": "auditfile/header/fileFormatVersion",
+      "label": {
+        "nl": "Bestandsformaat versie",
+        "en": "File format version"
+      },
+      "definition": {
+        "nl": "Versie van het bestandsformaat. Dit gegeven is onderkend om een ontvangen Rittenregistratie op juiste wijze te kunnen interpreteren en verwerken. Dit gegeven wordt niet expliciet uitgevraagd maar maakt onderdeel uit van de versie van de schemadefinitie (XSD).",
+        "en": "Version of the file format. This item exists to interpret and process a received trip registration correctly. It is not requested explicitly but is part of the version of the schema definition (XSD)."
+      },
+      "description": {
+        "nl": "[0202] Verplicht",
+        "en": "[0202] Required"
+      },
+      "codes": {
+        "1.2": {
+          "en": "File Format Version 1.2"
+        }
+      }
+    },
+    {
+      "path": "auditfile/header/dateTimeCreated",
+      "label": {
+        "nl": "Bestand aanmaak datum en tijd",
+        "en": "File creation date and time"
+      },
+      "definition": {
+        "nl": "Datum en tijd waarop het bestand door het systeem aangemaakt is.",
+        "en": "Date and time at which the file was created by the system."
+      },
+      "description": {
+        "nl": "[0203] Verplicht\n[1117] De datum en tijdstip aanmaak mag niet liggen na de datum en tijdstip van ontvangst van het bericht door de Belastingdienst. Bij controle op deze conditie hanteert de Belastingdienst een marge van 24 uren.",
+        "en": "[0203] Required\n[1117] The creation date and time must not be after the date and time the message was received by the Tax Administration. When checking this condition, the Tax Administration applies a margin of 24 hours."
+      }
+    },
+    {
+      "path": "auditfile/header/reportingStartDateTime",
+      "label": {
+        "nl": "Rapportage periode vanaf datum en tijd",
+        "en": "Reporting period from date and time"
+      },
+      "definition": {
+        "nl": "Begindatum en begintijd van de rapportage periode in dit bestand.",
+        "en": "Start date and start time of the reporting period in this file."
+      },
+      "description": {
+        "nl": "[0204] Verplicht\n[1118] De begindatum en begintijdstip mag niet liggen na de einddatum en eindtijdstip van rittenregistratie.",
+        "en": "[0204] Required\n[1118] The start date and start time must not be after the end date and end time of the trip registration."
+      }
+    },
+    {
+      "path": "auditfile/header/reportingEndDateTime",
+      "label": {
+        "nl": "Rapportage periode tot en met datum en tijd",
+        "en": "Reporting period up to and including date and time"
+      },
+      "definition": {
+        "nl": "Einddatum en eindtijd van de rapportage periode in dit bestand.",
+        "en": "End date and end time of the reporting period in this file."
+      },
+      "description": {
+        "nl": "[0205] Verplicht\n[1119] De einddatum en eindtijdstip mag niet liggen voor de begindatum en begintijdstip van rittenregistratie.",
+        "en": "[0205] Required\n[1119] The end date and end time must not be before the start date and start time of the trip registration."
+      }
+    },
+    {
+      "path": "auditfile/ITServiceProvider",
+      "label": {
+        "nl": "Itdienstverlener",
+        "en": "IT service provider"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de identificerende gegevens van een ITdienstverlener opgenomen",
+        "en": "This group contains the identifying data of an IT service provider"
+      },
+      "description": {
+        "nl": "[0206] De specificatie van de gegevensgroep ITdienstverlener is verplicht.",
+        "en": "[0206] The IT service provider data group is required."
+      }
+    },
+    {
+      "path": "auditfile/ITServiceProvider/name",
+      "label": {
+        "nl": "IT dienstverlener naam",
+        "en": "IT service provider name"
+      },
+      "definition": {
+        "nl": "De naam van de IT Dienstverlener die het systeem aanbiedt.",
+        "en": "The name of the IT service provider offering the system."
+      },
+      "description": {
+        "nl": "[0207] Verplicht",
+        "en": "[0207] Required"
+      }
+    },
+    {
+      "path": "auditfile/ITServiceProvider/identificationNr",
+      "label": {
+        "nl": "IT dienstverlener identificatienummer",
+        "en": "IT service provider identification number"
+      },
+      "definition": {
+        "nl": "Identificatienummer van de IT Dienstverlener. Bevat het door OSWO uitgegeven relatienummer aan IT leveranciers bij een ondersteuningsabonnement. Dit relatienummer is ook nodig om gebruik te kunnen maken van de validatie testservice.",
+        "en": "Identification number of the IT service provider. Contains the relationship number issued by OSWO to IT suppliers with a support subscription. This relationship number is also needed to use the validation test service."
+      }
+    },
+    {
+      "path": "auditfile/employer",
+      "label": {
+        "nl": "Werkgever",
+        "en": "Employer"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de identificerende gegevens van de Werkgever opgenomen.",
+        "en": "This group contains the identifying data of the employer."
+      },
+      "description": {
+        "nl": "[0208] De specificatie van de gegevensgroep Werkgever is niet verplicht.",
+        "en": "[0208] The Employer data group is not required."
+      }
+    },
+    {
+      "path": "auditfile/employer/employerName",
+      "label": {
+        "nl": "Werkgever Naam",
+        "en": "Employer name"
+      },
+      "definition": {
+        "nl": "Naam van de werkgever waaronder deze bekend is bij de Belastingdienst.",
+        "en": "Name of the employer under which it is known to the Tax Administration."
+      }
+    },
+    {
+      "path": "auditfile/employer/registrationNr",
+      "label": {
+        "nl": "Loonheffingsnummer",
+        "en": "Payroll tax number"
+      },
+      "definition": {
+        "nl": "Een door de Belastingdienst toegekende identificatie waaronder de administratieve eenheid bekend is bij de UWV/Belastingdienst.",
+        "en": "An identification assigned by the Tax Administration under which the administrative unit is known to UWV/Tax Administration."
+      },
+      "description": {
+        "nl": "[0310] Optioneel\n[0311] Het loonheffingennummer bestaat uit het fiscaal nummer gevolgd door de hoofdletter L en een subnummer. De waarden 01 tot en met 99 zijn toegestaan voor het subnummer.\n[0312] Het fiscaal nummer moet u met 9 cijfers (zonder punten) aanleveren. Fiscale nummers die uit minder dan 9 cijfers bestaan vult u aan met voorloopnullen. Het fiscaal nummer 1212126 levert u aan als 001212126.\n[0313] Van de eerste drie cijfers moet er minimaal één niet een nul zijn.",
+        "en": "[0310] Optional\n[0311] The payroll tax number consists of the tax number followed by the capital letter L and a sub-number. The values 01 to 99 are allowed for the sub-number.\n[0312] The tax number must be supplied with 9 digits (without dots). Tax numbers consisting of fewer than 9 digits are padded with leading zeros. Tax number 1212126 is supplied as 001212126.\n[0313] At least one of the first three digits must not be zero."
+      }
+    },
+    {
+      "path": "auditfile/employer/sofiNr",
+      "label": {
+        "nl": "SOFI nummer",
+        "en": "SOFI number"
+      },
+      "definition": {
+        "nl": "SOFI nummer wordt gecommuniceerd zonder punten en zonder spaties.",
+        "en": "The SOFI number is communicated without dots and without spaces."
+      },
+      "description": {
+        "nl": "[0310] Optioneel\n[0312] Het fiscaal nummer moet u met 9 cijfers (zonder punten) aanleveren. Fiscale nummers die uit minder dan 9 cijfers bestaan vult u aan met voorloopnullen. Het fiscaal nummer 1212126 levert u aan als 001212126.",
+        "en": "[0310] Optional\n[0312] The tax number must be supplied with 9 digits (without dots). Tax numbers consisting of fewer than 9 digits are padded with leading zeros. Tax number 1212126 is supplied as 001212126."
+      }
+    },
+    {
+      "path": "auditfile/employer/addressNL",
+      "label": {
+        "nl": "Adres nederland",
+        "en": "Dutch address"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de adresgegevens opgenomen van een adres binnen Nederland. In de auditfile geeft u altijd de u laatst bekende (huidige) adresgegevens op. Deze groep bevat de adres gegevens van de werkgever als het adres zich in Nederland bevindt.",
+        "en": "This group contains the address data of an address in the Netherlands. In the audit file you always provide the last known (current) address data. This group contains the address data of the employer if the address is in the Netherlands."
+      },
+      "description": {
+        "nl": "[0211] De specificatie van de gegevensgroep Adres Nederland is verplicht als sprake is van een binnenlands adres van de werkgever. [0103.2] Het is niet toegestaan zowel een Adres Nederland als een Adres Buitenland op te geven.",
+        "en": "[0211] The Dutch address data group is required if the employer has a domestic address. [0103.2] It is not allowed to provide both a Dutch address and a foreign address."
+      }
+    },
+    {
+      "path": "auditfile/employer/addressNL/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      },
+      "definition": {
+        "nl": "Straatnaam van de werkgever in Nederland.",
+        "en": "Street name of the employer in the Netherlands."
+      },
+      "description": {
+        "nl": "[0213] Verplicht.",
+        "en": "[0213] Required."
+      }
+    },
+    {
+      "path": "auditfile/employer/addressNL/number",
+      "label": {
+        "nl": "Huisnummer",
+        "en": "House number"
+      },
+      "definition": {
+        "nl": "Huisnummer van de werkgever in Nederland.",
+        "en": "House number of the employer in the Netherlands."
+      }
+    },
+    {
+      "path": "auditfile/employer/addressNL/numberExtension",
+      "label": {
+        "nl": "Huisnummer toevoeging",
+        "en": "House number suffix"
+      },
+      "definition": {
+        "nl": "Huisnummer toevoeging van de werkgever in Nederland.",
+        "en": "House number suffix of the employer in the Netherlands."
+      }
+    },
+    {
+      "path": "auditfile/employer/addressNL/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      },
+      "definition": {
+        "nl": "Locatie omschrijving van de werkgever in Nederland.",
+        "en": "Location description of the employer in the Netherlands."
+      }
+    },
+    {
+      "path": "auditfile/employer/addressNL/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      },
+      "definition": {
+        "nl": "Postcode van de werkgever in Nederland.",
+        "en": "Postcode of the employer in the Netherlands."
+      },
+      "description": {
+        "nl": "[0215] Verplicht",
+        "en": "[0215] Required"
+      }
+    },
+    {
+      "path": "auditfile/employer/addressNL/city",
+      "label": {
+        "nl": "Plaats",
+        "en": "Place"
+      },
+      "definition": {
+        "nl": "Woonplaats van de werkgever in Nederland.",
+        "en": "Place of residence of the employer in the Netherlands."
+      },
+      "description": {
+        "nl": "[0214] Verplicht",
+        "en": "[0214] Required"
+      }
+    },
+    {
+      "path": "auditfile/employer/addressForeign",
+      "label": {
+        "nl": "Adres buitenland",
+        "en": "Foreign address"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de adresgegevens opgenomen van een adres buiten Nederland. In de auditfile geeft u altijd de u laatst bekende (huidige) adresgegevens op. Deze groep bevat de adres gegevens van de werkgever als het adres zich buiten Nederland bevindt.",
+        "en": "This group contains the address data of an address outside the Netherlands. In the audit file you always provide the last known (current) address data. This group contains the address data of the employer if the address is outside the Netherlands."
+      },
+      "description": {
+        "nl": "[0211] De specificatie van de gegevensgroep Adres Buitenland is verplicht als sprake is van een adres buiten Nederland van de werkgever. [0103.2] Het is niet toegestaan zowel een Adres Nederland als een Adres Buitenland op te geven.",
+        "en": "[0211] The Foreign address data group is required if the employer has an address outside the Netherlands. [0103.2] It is not allowed to provide both a Dutch address and a foreign address."
+      }
+    },
+    {
+      "path": "auditfile/employer/addressForeign/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      },
+      "definition": {
+        "nl": "Straatnaam van de werkgever buiten Nederland.",
+        "en": "Street name of the employer outside the Netherlands."
+      }
+    },
+    {
+      "path": "auditfile/employer/addressForeign/number",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Nummer van de werkgever buiten Nederland. De aanduiding van een (deel van een) pand in het buitenland.",
+        "en": "Number of the employer outside the Netherlands. The designation of (part of) a building abroad."
+      },
+      "description": {
+        "nl": "[0221] Optioneel",
+        "en": "[0221] Optional"
+      }
+    },
+    {
+      "path": "auditfile/employer/addressForeign/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      },
+      "definition": {
+        "nl": "Informatie over de plaatsbepaling van een adres indien deze niet te plaatsen is in een van de andere optionele velden van het adres en zonder deze locatieomschrijving het adres niet compleet is. Locatie omschrijving van de werkgever buiten Nederland.",
+        "en": "Information on locating an address if it cannot be placed in one of the other optional address fields and the address is incomplete without this location description. Location description of the employer outside the Netherlands."
+      },
+      "description": {
+        "nl": "[0222] Optioneel",
+        "en": "[0222] Optional"
+      }
+    },
+    {
+      "path": "auditfile/employer/addressForeign/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      },
+      "definition": {
+        "nl": "Postcode van de werkgever buiten Nederland.",
+        "en": "Postcode of the employer outside the Netherlands."
+      },
+      "description": {
+        "nl": "[0223] Verplicht.",
+        "en": "[0223] Required."
+      }
+    },
+    {
+      "path": "auditfile/employer/addressForeign/city",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      },
+      "definition": {
+        "nl": "Woonplaats van de werkgever buiten Nederland.",
+        "en": "Place of residence of the employer outside the Netherlands."
+      },
+      "description": {
+        "nl": "[0224] Verplicht",
+        "en": "[0224] Required"
+      }
+    },
+    {
+      "path": "auditfile/employer/addressForeign/region",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Gebiedsdeel van de werkgever buiten Nederland.",
+        "en": "Region of the employer outside the Netherlands."
+      },
+      "description": {
+        "nl": "[0225] Optioneel",
+        "en": "[0225] Optional"
+      }
+    },
+    {
+      "path": "auditfile/employer/addressForeign/country",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      },
+      "definition": {
+        "nl": "De code van een huidig land of gebiedsdeel conform ISO 3166-1. Zie www.iso.org. Land van de werkgever buiten Nederland.",
+        "en": "The code of a current country or territory according to ISO 3166-1. See www.iso.org. Country of the employer outside the Netherlands."
+      },
+      "description": {
+        "nl": "[0226] Verplicht\n[0227] Code conform ISO 3166-1. The codes of this codelist are documented in a separate document",
+        "en": "[0226] Required\n[0227] Code according to ISO 3166-1. The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/drivers",
+      "label": {
+        "nl": "Bestuurders",
+        "en": "Drivers"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de gegevens van de bestuurders opgenomen.",
+        "en": "This group contains the data of the drivers."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de identificerende gegevens van een bestuurder opgenomen.",
+        "en": "This group contains the identifying data of a driver."
+      },
+      "description": {
+        "nl": "[0240] De specificatie van de gegevensgroep bestuurder is verplicht.",
+        "en": "[0240] The driver data group is required."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/driverID",
+      "label": {
+        "nl": "Bestuurder identificatie",
+        "en": "Driver identification"
+      },
+      "definition": {
+        "nl": "Technische ID die de bestuurder uniek identificeert in de auditfile.",
+        "en": "Technical ID that uniquely identifies the driver in the audit file."
+      },
+      "description": {
+        "nl": "[0241] Verplicht.",
+        "en": "[0241] Required."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/fiscalStatusCode",
+      "label": {
+        "nl": "Bestuurder fiscale status gecodeerd",
+        "en": "Driver tax status coded"
+      },
+      "definition": {
+        "nl": "Fiscale status van de bestuurder. Is de bestuurder een werknemer of is de bestuurder geen werknemer, maar bijvoorbeeld een zelfstandig ondernemer.",
+        "en": "Tax status of the driver. Is the driver an employee, or not an employee but for example a self-employed entrepreneur."
+      },
+      "description": {
+        "nl": "[0242] Verplicht.\n[0243] Waardebereik zie toelichting.",
+        "en": "[0242] Required.\n[0243] Value range: see explanation."
+      },
+      "codes": {
+        "1": {
+          "en": "Employee"
+        },
+        "2": {
+          "en": "No Employee"
+        }
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/bsn",
+      "label": {
+        "nl": "Bestuurder burger service nummer",
+        "en": "Driver citizen service number"
+      },
+      "definition": {
+        "nl": "Burgerservicenummer (BSN) van de bestuurder. Dit is altijd 9 posities (met voorloopnullen). Voor softwarepakketten is het niet mogelijk om softwarematig te controleren of het BSN bestaat en in gebruik is.",
+        "en": "Citizen service number (BSN) of the driver. This is always 9 positions (with leading zeros). Software packages cannot check by software whether the BSN exists and is in use."
+      },
+      "description": {
+        "nl": "[0244] Verplicht.\n[0245] Het BSN bestaat uit het fiscaal nummer.\n[0246] Het fiscaal nummer moet u met 9 cijfers (zonder punten) aanleveren. Fiscale nummers die uit minder dan 9 cijfers bestaan vult u aan met voorloopnullen. Het fiscaal nummer 1212126 levert u aan als 001212126.\n[0247] Van de eerste drie cijfers moet er minimaal één niet een nul zijn.\n[0014] Het BSN moet aan de volgende elfproef voldoen: beschouw de cijfers op de posities van het nummer van links naar rechts als a0, a1, a2, a3, a4, a5, a6, a7 en a8 het nummer voldoet aan de elfproef indien a8 gelijk is aan de restwaarde van de volgende berekening: (9*a0 + 8*a1 + 7*a2 + 6*a3 + 5*a4 + 4*a5 + 3*a6 + 2*a7) / 11.\n[0074] Het BSN moet bestaan en in gebruik zijn.",
+        "en": "[0244] Required.\n[0245] The BSN consists of the tax number.\n[0246] The tax number must be supplied with 9 digits (without dots). Tax numbers consisting of fewer than 9 digits are padded with leading zeros. Tax number 1212126 is supplied as 001212126.\n[0247] At least one of the first three digits must not be zero.\n[0014] The BSN must pass the following eleven test: consider the digits at the positions of the number from left to right as a0, a1, a2, a3, a4, a5, a6, a7 and a8; the number passes the eleven test if a8 equals the remainder of the following calculation: (9*a0 + 8*a1 + 7*a2 + 6*a3 + 5*a4 + 4*a5 + 3*a6 + 2*a7) / 11.\n[0074] The BSN must exist and be in use."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/initials",
+      "label": {
+        "nl": "Voorletters",
+        "en": "Initials"
+      },
+      "definition": {
+        "nl": "De verzameling letters die wordt gevormd door de eerste letter van alle in volgorde voorkomende voornamen van de bestuurder. Bestaat uit hoofdletters, zijn aaneengesloten en bevatten geen punten. Alleen alfabetische tekens zijn toegestaan.",
+        "en": "The set of letters formed by the first letter of each of the driver's first names in order. Consists of capital letters, written together without full stops. Only alphabetic characters are allowed."
+      },
+      "description": {
+        "nl": "[0358] Optioneel.",
+        "en": "[0358] Optional."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/prefix",
+      "label": {
+        "nl": "Voorvoegsels",
+        "en": "Prefixes"
+      },
+      "definition": {
+        "nl": "De verzameling van één of meer voorzetsels en/of lidwoorden die aan het significante deel van de achternaam van de bestuurder vooraf gaat en daarmee gezamenlijk de achternaam vormt.",
+        "en": "The set of one or more prepositions and/or articles that precede the significant part of the driver's surname and together with it form the surname."
+      },
+      "description": {
+        "nl": "[0359] Optioneel",
+        "en": "[0359] Optional"
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/familyName",
+      "label": {
+        "nl": "Achternaam",
+        "en": "Surname"
+      },
+      "definition": {
+        "nl": "Achternaam van de bestuurder zonder voorvoegsels. Het betreft de geboortenaam van de bestuurder (en niet van de partner) zonder voorvoegsels, zoals opgenomen op het identiteitsbewijs van de bestuurder. Toevoegingen ten behoeve van de eigen administratie zijn niet toegestaan.",
+        "en": "Surname of the driver without prefixes. This is the driver's birth name (not that of the partner) without prefixes, as stated on the driver's identity document. Additions for internal administration are not allowed."
+      },
+      "description": {
+        "nl": "[0249] Verplicht.\n[0090] De opgegeven naam van de werknemer moet toebehoren aan de persoon die is aangeduid met het opgegeven BSN/sofinummer.",
+        "en": "[0249] Required.\n[0090] The stated name of the employee must belong to the person identified by the stated BSN/SOFI number."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/addressNL",
+      "label": {
+        "nl": "Adres nederland",
+        "en": "Dutch address"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de adresgegevens opgenomen van een adres binnen Nederland. In de auditfile geeft u altijd de u laatst bekende (huidige) adresgegevens op. Deze groep bevat de adres gegevens van de bestuurder als het adres zich in Nederland bevindt.",
+        "en": "This group contains the address data of an address in the Netherlands. In the audit file you always provide the last known (current) address data. This group contains the address data of the driver if the address is in the Netherlands."
+      },
+      "description": {
+        "nl": "[0248] De specificatie van de gegevensgroep Adres Nederland is verplicht als sprake is van een binnenlands adres van de bestuurder. [0103.2] Het is niet toegestaan zowel een Adres Nederland als een Adres Buitenland op te geven.",
+        "en": "[0248] The Dutch address data group is required if the driver has a domestic address. [0103.2] It is not allowed to provide both a Dutch address and a foreign address."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/addressNL/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      },
+      "definition": {
+        "nl": "Straatnaam van de bestuurder in Nederland.",
+        "en": "Street name of the driver in the Netherlands."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/addressNL/number",
+      "label": {
+        "nl": "Huisnummer",
+        "en": "House number"
+      },
+      "definition": {
+        "nl": "Huisnummer van de bestuurder in Nederland.",
+        "en": "House number of the driver in the Netherlands."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/addressNL/numberExtension",
+      "label": {
+        "nl": "Huisnummer toevoeging",
+        "en": "House number suffix"
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/addressNL/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      },
+      "definition": {
+        "nl": "Locatie omschrijving van de bestuurder in Nederland.",
+        "en": "Location description of the driver in the Netherlands."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/addressNL/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      },
+      "definition": {
+        "nl": "Postcode van de bestuurder in Nederland.",
+        "en": "Postcode of the driver in the Netherlands."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/addressNL/city",
+      "label": {
+        "nl": "Plaats",
+        "en": "Place"
+      },
+      "definition": {
+        "nl": "Plaats van de bestuurder in Nederland.",
+        "en": "Place of the driver in the Netherlands."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/addressForeign",
+      "label": {
+        "nl": "Adres buitenland",
+        "en": "Foreign address"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de adresgegevens opgenomen van een adres buiten Nederland. In de auditfile geeft u altijd de u laatst bekende (huidige) adresgegevens op. Deze groep bevat de adres gegevens van de bestuurder als het adres zich buiten Nederland bevindt.",
+        "en": "This group contains the address data of an address outside the Netherlands. In the audit file you always provide the last known (current) address data. This group contains the address data of the driver if the address is outside the Netherlands."
+      },
+      "description": {
+        "nl": "[0249] De specificatie van de gegevensgroep Adres Buitenland is verplicht als sprake is van een adres buiten Nederland van de bestuurder. [0103.3] Er mag niet zowel een Adres binnenland als een Adres buitenland worden opgegeven.",
+        "en": "[0249] The Foreign address data group is required if the driver has an address outside the Netherlands. [0103.3] A domestic address and a foreign address may not both be provided."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/addressForeign/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      },
+      "definition": {
+        "nl": "Straatnaam van de bestuurder buiten Nederland.",
+        "en": "Street name of the driver outside the Netherlands."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/addressForeign/number",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Nummer van de bestuurder buiten Nederland.",
+        "en": "Number of the driver outside the Netherlands."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/addressForeign/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      },
+      "definition": {
+        "nl": "Informatie over de plaatsbepaling van een adres indien deze niet te plaatsen is in een van de andere optionele velden van het adres en zonder deze locatieomschrijving het adres niet compleet is. Locatie omschrijving van de bestuurder buiten Nederland.",
+        "en": "Information on locating an address if it cannot be placed in one of the other optional address fields and the address is incomplete without this location description. Location description of the driver outside the Netherlands."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/addressForeign/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      },
+      "definition": {
+        "nl": "Postcode van de bestuurder buiten Nederland.",
+        "en": "Postcode of the driver outside the Netherlands."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/addressForeign/city",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      },
+      "definition": {
+        "nl": "Woonplaats van de bestuurder buiten Nederland.",
+        "en": "Place of residence of the driver outside the Netherlands."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/addressForeign/region",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Gebiedsdeel van de bestuurder buiten Nederland.",
+        "en": "Region of the driver outside the Netherlands."
+      }
+    },
+    {
+      "path": "auditfile/drivers/driver/addressForeign/country",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      },
+      "definition": {
+        "nl": "De code van een huidig land of gebiedsdeel conform ISO 3166-1. Zie www.iso.org. Land van de bestuurder buiten Nederland.",
+        "en": "The code of a current country or territory according to ISO 3166-1. See www.iso.org. Country of the driver outside the Netherlands."
+      },
+      "description": {
+        "nl": "[0259] Code conform ISO 3166-1. The codes of this codelist are documented in a separate document",
+        "en": "[0259] Code according to ISO 3166-1. The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/vehicles",
+      "label": {
+        "nl": "Voertuigen",
+        "en": "Vehicles"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de gegevens van de voertuigen opgenomen.",
+        "en": "This group contains the data of the vehicles."
+      }
+    },
+    {
+      "path": "auditfile/vehicles/vehicle",
+      "label": {
+        "nl": "Voertuig",
+        "en": "Vehicle"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de identificerende gegevens van een voertuig opgenomen.",
+        "en": "This group contains the identifying data of a vehicle."
+      },
+      "description": {
+        "nl": "[0260] De specificatie van de gegevensgroep voertuig is verplicht.",
+        "en": "[0260] The vehicle data group is required."
+      }
+    },
+    {
+      "path": "auditfile/vehicles/vehicle/vehicleID",
+      "label": {
+        "nl": "Voertuig identificatie",
+        "en": "Vehicle identification"
+      },
+      "definition": {
+        "nl": "Technische ID die het voertuig uniek identificeert in de auditfile.",
+        "en": "Technical ID that uniquely identifies the vehicle in the audit file."
+      },
+      "description": {
+        "nl": "[0261] Verplicht",
+        "en": "[0261] Required"
+      }
+    },
+    {
+      "path": "auditfile/vehicles/vehicle/vehicleRegistrationNr",
+      "label": {
+        "nl": "Kenteken",
+        "en": "Licence plate"
+      },
+      "definition": {
+        "nl": "Kenteken van het voertuig. Voertuigkenteken bevat geen liggende strepen. Voertuigkenteken kan buitenlands kenteken zijn (grensstreek etc).",
+        "en": "Licence plate of the vehicle. The licence plate contains no hyphens. It may be a foreign registration (border region etc.)."
+      },
+      "description": {
+        "nl": "[0262] Verplicht",
+        "en": "[0262] Required"
+      }
+    },
+    {
+      "path": "auditfile/vehicles/vehicle/VIN",
+      "label": {
+        "nl": "Vehicle Identification Number (VIN)",
+        "en": "Vehicle Identification Number (VIN)"
+      },
+      "definition": {
+        "nl": "Chassisnummer van het voertuig. Chassisnummer bevat cijfers en letters in totaal 17 posities.",
+        "en": "Chassis number of the vehicle. The chassis number contains digits and letters, 17 positions in total."
+      }
+    },
+    {
+      "path": "auditfile/vehicles/vehicle/vehicleRegistrationType",
+      "label": {
+        "nl": "Kenteken type",
+        "en": "Licence plate type"
+      },
+      "definition": {
+        "nl": "Code om aan te geven of het gaat om een privé auto (geel of een bedrijfsauto (grijs kenteken).",
+        "en": "Code indicating whether it is a private car (yellow) or a company car (grey licence plate)."
+      },
+      "description": {
+        "nl": "[0263] Verplicht",
+        "en": "[0263] Required"
+      },
+      "codes": {
+        "1": {
+          "en": "Private (Yellow)"
+        },
+        "2": {
+          "en": "Business (Grey)"
+        }
+      }
+    },
+    {
+      "path": "auditfile/vehicles/vehicle/vehicleName",
+      "label": {
+        "nl": "Voertuig naam",
+        "en": "Vehicle name"
+      },
+      "definition": {
+        "nl": "Unieke naam die de eindgebruiker voor het voertuig gebruikt.",
+        "en": "Unique name the end user uses for the vehicle."
+      }
+    },
+    {
+      "path": "auditfile/vehicles/vehicle/vehicleMake",
+      "label": {
+        "nl": "Voertuig merk",
+        "en": "Vehicle make"
+      },
+      "definition": {
+        "nl": "Merk van het voertuig. bv. Ford",
+        "en": "Make of the vehicle, e.g. Ford"
+      },
+      "description": {
+        "nl": "[0264] Verplicht",
+        "en": "[0264] Required"
+      }
+    },
+    {
+      "path": "auditfile/vehicles/vehicle/vehicleModel",
+      "label": {
+        "nl": "Voertuig model",
+        "en": "Vehicle model"
+      },
+      "definition": {
+        "nl": "Model (of type) van het voertuig, bijvoorbeeld Transit.",
+        "en": "Model (or type) of the vehicle, for example Transit."
+      },
+      "description": {
+        "nl": "[0265] Verplicht",
+        "en": "[0265] Required"
+      }
+    },
+    {
+      "path": "auditfile/vehicles/vehicle/country",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      },
+      "definition": {
+        "nl": "De code van een huidig land of gebiedsdeel conform ISO 3166-1. Zie www.iso.org. Het gaat hier om de officiële aanduiding van het land of gebiedsdeel waar de auto is geregisteerd.",
+        "en": "The code of a current country or territory according to ISO 3166-1. See www.iso.org. This is the official designation of the country or territory where the car is registered."
+      },
+      "description": {
+        "nl": "[0266] Code conform ISO 3166-1. The codes of this codelist are documented in a separate document",
+        "en": "[0266] Code according to ISO 3166-1. The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/vehicleSystems",
+      "label": {
+        "nl": "Voertuigsystemen",
+        "en": "Vehicle systems"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de gegevens van de voertuigsystemen opgenomen.",
+        "en": "This group contains the data of the vehicle systems."
+      }
+    },
+    {
+      "path": "auditfile/vehicleSystems/vehicleSystem",
+      "label": {
+        "nl": "Voertuigsysteem",
+        "en": "Vehicle system"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de identificerende gegevens van een voertuigsysteem opgenomen.",
+        "en": "This group contains the identifying data of a vehicle system."
+      },
+      "description": {
+        "nl": "[0272] De specificatie van de gegevensgroep voertuigsystemen is verplicht.",
+        "en": "[0272] The vehicle systems data group is required."
+      }
+    },
+    {
+      "path": "auditfile/vehicleSystems/vehicleSystem/vehicleSystemID",
+      "label": {
+        "nl": "Voertuigsysteem identificatie",
+        "en": "Vehicle system identification"
+      },
+      "definition": {
+        "nl": "Technische ID die het type voertuigsysteem uniek identificeert in de auditfile.",
+        "en": "Technical ID that uniquely identifies the type of vehicle system in the audit file."
+      },
+      "description": {
+        "nl": "[0273] Verplicht",
+        "en": "[0273] Required"
+      }
+    },
+    {
+      "path": "auditfile/vehicleSystems/vehicleSystem/distanceDeterminationType",
+      "label": {
+        "nl": "Voertuigsysteem afstandsbepaling soort",
+        "en": "Vehicle system distance determination type"
+      },
+      "definition": {
+        "nl": "Code geeft aan wat voor soort systeem het betreft voor afstandsbepaling.",
+        "en": "Code indicating the type of system used for distance determination."
+      },
+      "description": {
+        "nl": "[0270] Verplicht\n[0271] Waardebereik zie codes.",
+        "en": "[0270] Required\n[0271] Value range: see codes."
+      },
+      "codes": {
+        "1": {
+          "en": "Direct reading from vehicle odo meter"
+        },
+        "2": {
+          "en": "Puls count"
+        },
+        "3": {
+          "en": "GPS (trip distance from GPS chip)"
+        },
+        "4": {
+          "en": "Afterwards by route planner"
+        },
+        "5": {
+          "en": "Afterwards by distance table"
+        }
+      }
+    },
+    {
+      "path": "auditfile/vehicleSystems/vehicleSystem/locationDeterminationType",
+      "label": {
+        "nl": "Voertuigsysteem plaatsbepaling soort",
+        "en": "Vehicle system position determination type"
+      },
+      "definition": {
+        "nl": "Code geeft aan wat voor soort systeem het betreft voor plaatsbepaling.",
+        "en": "Code indicating the type of system used for position determination."
+      },
+      "description": {
+        "nl": "[0274] Verplicht\n[0275] Waardebereik zie codes.",
+        "en": "[0274] Required\n[0275] Value range: see codes."
+      },
+      "codes": {
+        "1": {
+          "en": "GPS"
+        },
+        "2": {
+          "en": "GSM network (Cell ID)"
+        }
+      }
+    },
+    {
+      "path": "auditfile/vehicleSystems/vehicleSystem/productName",
+      "label": {
+        "nl": "Voertuigsysteem productnaam",
+        "en": "Vehicle system product name"
+      },
+      "definition": {
+        "nl": "Naam van het systeem dat in het voertuig is geïnstalleerd.",
+        "en": "Name of the system installed in the vehicle."
+      },
+      "description": {
+        "nl": "[0276] Verplicht",
+        "en": "[0276] Required"
+      }
+    },
+    {
+      "path": "auditfile/vehicleSystems/vehicleSystem/hardwareDesc",
+      "label": {
+        "nl": "Hardware omschrijving",
+        "en": "Hardware description"
+      },
+      "definition": {
+        "nl": "Omschrijving van de hardware van het systeem dat in het voertuig is geinstalleerd.",
+        "en": "Description of the hardware of the system installed in the vehicle."
+      }
+    },
+    {
+      "path": "auditfile/vehicleSystems/vehicleSystem/hardwareVersion",
+      "label": {
+        "nl": "Hardware versie",
+        "en": "Hardware version"
+      },
+      "definition": {
+        "nl": "Versie van de hardware van het systeem dat in het voertuig is geinstalleerd.",
+        "en": "Hardware version of the system installed in the vehicle."
+      }
+    },
+    {
+      "path": "auditfile/vehicleSystems/vehicleSystem/softwareDesc",
+      "label": {
+        "nl": "Software omschrijving",
+        "en": "Software description"
+      },
+      "definition": {
+        "nl": "De omschrijving van de software op het rittenregistratie systeem.",
+        "en": "The description of the software on the trip registration system."
+      }
+    },
+    {
+      "path": "auditfile/vehicleSystems/vehicleSystem/softwareVersion",
+      "label": {
+        "nl": "Software versie",
+        "en": "Software version"
+      },
+      "definition": {
+        "nl": "De versie van de software op het rittenregistratie systeem.",
+        "en": "The version of the software on the trip registration system."
+      }
+    },
+    {
+      "path": "auditfile/vehicleSystems/vehicleSystem/firmwareVersion",
+      "label": {
+        "nl": "Firmware versie",
+        "en": "Firmware version"
+      },
+      "definition": {
+        "nl": "Versie van de firmware van het systeem dat in het voertuig is geinstalleerd.",
+        "en": "Firmware version of the system installed in the vehicle."
+      }
+    },
+    {
+      "path": "auditfile/vehicleSystems/vehicleSystem/qualityMark",
+      "label": {
+        "nl": "Keurmerk St. Keurmerk Ritregistratiessystemen ja / nee",
+        "en": "Quality mark St. Keurmerk Ritregistratiesystemen yes / no"
+      },
+      "definition": {
+        "nl": "Dient om aan te geven dat het voertuigsysteem een keurmerk van de Stichting Keurmerk Ritregistratiesystemen heeft.",
+        "en": "Indicates that the vehicle system has a quality mark from the Stichting Keurmerk Ritregistratiesystemen."
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/vehicleSystems/vehicleSystem/qualityMarkNr",
+      "label": {
+        "nl": "Voertuigsysteem keurmerknummer",
+        "en": "Vehicle system quality mark number"
+      },
+      "definition": {
+        "nl": "Voertuigsysteem keurmerknummer indien er een keurmerk is. Het keurmerknummer bestaat achtereenvolgens uit 5 letters (naam van de stichting), 2 cijfers (maand van uitgifte keurmerk), 2 cijfers (jaar van uitgifte keurmerk), 3 letters (verwijzing naar keurmerkproduct), 2 cijfers (opvolgende nummers).",
+        "en": "Vehicle system quality mark number if there is a quality mark. The quality mark number consists successively of 5 letters (name of the foundation), 2 digits (month of issue), 2 digits (year of issue), 3 letters (reference to the quality mark product) and 2 digits (sequence number)."
+      }
+    },
+    {
+      "path": "auditfile/vehicleSystems/vehicleSystem/quailityMarkCertNr",
+      "label": {
+        "nl": "Voertuigsysteem keurmerk certificaatnummer",
+        "en": "Vehicle system quality mark certificate number"
+      },
+      "definition": {
+        "nl": "Voertuigsysteem keurmerk certificaatnummer. Eerste drie posities zijn letters (refereren aan naam van de deelnemers van de stichting); volgende twee zijn ook letters (refereren aan het keurmerksysteem); de resterende zeven zijn cijfers.",
+        "en": "Vehicle system quality mark certificate number. The first three positions are letters (referring to the name of the foundation's participants); the next two are also letters (referring to the quality mark system); the remaining seven are digits."
+      }
+    },
+    {
+      "path": "auditfile/vehicleUses",
+      "label": {
+        "nl": "Terbeschikkingstellingen",
+        "en": "Provisions (vehicles made available)"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de gegevens van de terbeschikking stellingen opgenomen.",
+        "en": "This group contains the data of the provisions (vehicles made available)."
+      }
+    },
+    {
+      "path": "auditfile/vehicleUses/vehicleUse",
+      "label": {
+        "nl": "Terbeschikkingstelling",
+        "en": "Provision (vehicle made available)"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de identificerende gegevens van een terbeschikkingen stelling opgenomen.",
+        "en": "This group contains the identifying data of a provision (vehicle made available)."
+      },
+      "description": {
+        "nl": "[0280] De specificatie van de gegevensgroep Terbeschikking is verplicht.",
+        "en": "[0280] The Provision data group is required."
+      }
+    },
+    {
+      "path": "auditfile/vehicleUses/vehicleUse/vehicleUseID",
+      "label": {
+        "nl": "Terbeschikkingstelling identificatie",
+        "en": "Provision identification"
+      },
+      "definition": {
+        "nl": "Technische ID die de relatie tussen bestuurder en voertuig uniek identificeert in het systeem.",
+        "en": "Technical ID that uniquely identifies the relationship between driver and vehicle in the system."
+      },
+      "description": {
+        "nl": "[0281] Verplicht",
+        "en": "[0281] Required"
+      }
+    },
+    {
+      "path": "auditfile/vehicleUses/vehicleUse/driverID",
+      "label": {
+        "nl": "Bestuurder identificatie",
+        "en": "Driver identification"
+      },
+      "definition": {
+        "nl": "Technische ID die de bestuurder uniek identificeert in de auditfile. Verwijst naar een in de auditfile gedefinieerde bestuurder. Alleen als een voertuig ter beschikking is gesteld aan een bestuurder wordt dat vastgelegd als een relatie.",
+        "en": "Technical ID that uniquely identifies the driver in the audit file. Refers to a driver defined in the audit file. Only if a vehicle has been made available to a driver is this recorded as a relationship."
+      },
+      "description": {
+        "nl": "[0282] Verplicht",
+        "en": "[0282] Required"
+      }
+    },
+    {
+      "path": "auditfile/vehicleUses/vehicleUse/vehicleID",
+      "label": {
+        "nl": "Voertuig identificatie",
+        "en": "Vehicle identification"
+      },
+      "definition": {
+        "nl": "Technische ID die het voertuig uniek identificeert in het systeem. Verwijst naar een in de auditfile gedefinieerd voertuig. Alleen als een voertuig ter beschikking is gesteld aan een bestuurder wordt dat vastgelegd als een relatie.",
+        "en": "Technical ID that uniquely identifies the vehicle in the system. Refers to a vehicle defined in the audit file. Only if a vehicle has been made available to a driver is this recorded as a relationship."
+      },
+      "description": {
+        "nl": "[0283] Verplicht",
+        "en": "[0283] Required"
+      }
+    },
+    {
+      "path": "auditfile/vehicleUses/vehicleUse/vehicleUseStartDateTime",
+      "label": {
+        "nl": "Ter beschikking vanaf datum en tijd",
+        "en": "Made available from date and time"
+      },
+      "definition": {
+        "nl": "Vanaf deze datum en tijd is het genoemde voertuig terbeschikking.",
+        "en": "The stated vehicle is made available from this date and time."
+      },
+      "description": {
+        "nl": "[0284] Verplicht\n[0005] vehicleUseStartDateTime moet kleiner zijn dan vehicleUseEndDateTime.",
+        "en": "[0284] Required\n[0005] vehicleUseStartDateTime must be less than vehicleUseEndDateTime."
+      }
+    },
+    {
+      "path": "auditfile/vehicleUses/vehicleUse/vehicleUseEndDateTime",
+      "label": {
+        "nl": "Ter beschikking tot en met datum en tijd",
+        "en": "Made available up to and including date and time"
+      },
+      "definition": {
+        "nl": "Tot en met deze datum en tijd is genoemde voertuig terbeschikking. Als de datum voor het veld ter beschikking tot en met datum nog niet bekend is dan wordt dit veld weggelaten.",
+        "en": "The stated vehicle is made available up to and including this date and time. If the date for the field 'made available up to and including date' is not yet known, this field is omitted."
+      }
+    },
+    {
+      "path": "auditfile/vehicleAndVehicleSystems",
+      "label": {
+        "nl": "Voertuig en voertuigsystemen",
+        "en": "Vehicles and vehicle systems"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de gegevens over de relaties tussen voertuigen en voertuigsystemen opgenomen.",
+        "en": "This group contains the data on the relationships between vehicles and vehicle systems."
+      }
+    },
+    {
+      "path": "auditfile/vehicleAndVehicleSystems/vehicleAndVehicleSystem",
+      "label": {
+        "nl": "Voertuig en voertuigsysteem",
+        "en": "Vehicle and vehicle system"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de gegevens van een relatie tussen voertuig en voertuigsysteem opgenomen.",
+        "en": "This group contains the data of a relationship between a vehicle and a vehicle system."
+      },
+      "description": {
+        "nl": "[0290] De specificatie van de gegevensgroep voertuigenvoertuigsysteem is verplicht.",
+        "en": "[0290] The vehicle and vehicle system data group is required."
+      }
+    },
+    {
+      "path": "auditfile/vehicleAndVehicleSystems/vehicleAndVehicleSystem/vehicleAndVehicleSystemID",
+      "label": {
+        "nl": "Voertuig en voertuigsysteem identificatie",
+        "en": "Vehicle and vehicle system identification"
+      },
+      "definition": {
+        "nl": "Technische ID die de relatie tussen voertuig en voertuigsysteem identificeert.",
+        "en": "Technical ID that identifies the relationship between vehicle and vehicle system."
+      },
+      "description": {
+        "nl": "[0291] Verplicht",
+        "en": "[0291] Required"
+      }
+    },
+    {
+      "path": "auditfile/vehicleAndVehicleSystems/vehicleAndVehicleSystem/vehicleID",
+      "label": {
+        "nl": "Voertuig identificatie",
+        "en": "Vehicle identification"
+      },
+      "definition": {
+        "nl": "Technische ID die het voertuig uniek identificeert. Verwijst naar een in de auditfile gedefinieerd voertuig.",
+        "en": "Technical ID that uniquely identifies the vehicle. Refers to a vehicle defined in the audit file."
+      },
+      "description": {
+        "nl": "[0292] Verplicht",
+        "en": "[0292] Required"
+      }
+    },
+    {
+      "path": "auditfile/vehicleAndVehicleSystems/vehicleAndVehicleSystem/vehicleSystemID",
+      "label": {
+        "nl": "Voertuigsysteem identificatie",
+        "en": "Vehicle system identification"
+      },
+      "definition": {
+        "nl": "Technische ID die het voertuigsysteem uniek identificeert. Verwijst naar een in de auditfile gedefinieerd voertuigsysteem.",
+        "en": "Technical ID that uniquely identifies the vehicle system. Refers to a vehicle system defined in the audit file."
+      },
+      "description": {
+        "nl": "[0293] Verplicht",
+        "en": "[0293] Required"
+      }
+    },
+    {
+      "path": "auditfile/vehicleAndVehicleSystems/vehicleAndVehicleSystem/startDateTime",
+      "label": {
+        "nl": "Vanaf datum en tijd",
+        "en": "From date and time"
+      },
+      "definition": {
+        "nl": "Vanaf deze datum en tijd is het voertuigsysteem actief gebruikt in het voertuig.",
+        "en": "The vehicle system has been actively used in the vehicle from this date and time."
+      },
+      "description": {
+        "nl": "[0294] Verplicht\n[0003] startDateTime moet kleiner zijn dan dateTimeCreated",
+        "en": "[0294] Required\n[0003] startDateTime must be less than dateTimeCreated"
+      }
+    },
+    {
+      "path": "auditfile/vehicleAndVehicleSystems/vehicleAndVehicleSystem/endDateTime",
+      "label": {
+        "nl": "Tot en met datum en tijd",
+        "en": "Up to and including date and time"
+      },
+      "definition": {
+        "nl": "Tot en met deze datum en tijd is het genoemde voertuigsysteem actief gebruikt in het voertuig. Als de datum en tijd voor het veld tot en met datum en tijd nog niet bekend is dan wordt dit veld weggelaten.",
+        "en": "The stated vehicle system has been actively used in the vehicle up to and including this date and time. If the date and time for the field 'up to and including date and time' is not yet known, this field is omitted."
+      }
+    },
+    {
+      "path": "auditfile/trips",
+      "label": {
+        "nl": "Ritten",
+        "en": "Trips"
+      },
+      "definition": {
+        "nl": "In deze groep bevinden zich de gegevens van alle ritten.",
+        "en": "This group contains the data of all trips."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip",
+      "label": {
+        "nl": "RIT",
+        "en": "Trip"
+      },
+      "definition": {
+        "nl": "Het element Rit (trip) bevat alle details van één rit. Ritten worden in chronologische volgorde opgenomen in de auditfile. Een correctierit moet tussen twee opvolgende ritten ingevoegd worden zodanig dat de ritten in chronologische volgorde blijven. De ritgegevens op dit niveau bevatten de laatste stand, na eventuele aanpassingen door een gebruiker. Als er aanpassingen zijn aan een rit worden de originele ritgegevens, en eventuele voorgaande aangepassingen bijgehouden onder Rit History. De originele ritgegevens en de uiteindelijke ritgegevens zijn in dat geval altijd verplicht aanwezig in de auditfile.",
+        "en": "The Trip element contains all details of one trip. Trips are included in the audit file in chronological order. A correction trip must be inserted between two consecutive trips such that the trips remain in chronological order. The trip data at this level contain the latest state, after any changes by a user. If a trip has been changed, the original trip data and any previous changes are kept under Trip History. In that case the original trip data and the final trip data must always be present in the audit file."
+      },
+      "description": {
+        "nl": "[0300] De specificatie van de gegevensgroep Rit is verplicht.",
+        "en": "[0300] The Trip data group is required."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripID",
+      "label": {
+        "nl": "Rit identificatie",
+        "en": "Trip identification"
+      },
+      "definition": {
+        "nl": "Technische ID die de rit identificeert.",
+        "en": "Technical ID that identifies the trip."
+      },
+      "description": {
+        "nl": "[0352] Verplicht",
+        "en": "[0352] Required"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/vehicleID",
+      "label": {
+        "nl": "Voertuig identificatie",
+        "en": "Vehicle identification"
+      },
+      "definition": {
+        "nl": "Technische ID die het voertuig uniek identificeert. Verwijst naar een in de auditfile gedefinieerd voertuig.",
+        "en": "Technical ID that uniquely identifies the vehicle. Refers to a vehicle defined in the audit file."
+      },
+      "description": {
+        "nl": "[0353] Verplicht",
+        "en": "[0353] Required"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/vehicleOdoMeterCount",
+      "label": {
+        "nl": "Voertuig kilometerstand",
+        "en": "Vehicle odometer reading"
+      },
+      "definition": {
+        "nl": "Bevat de kilometerstand van het voertuig. Van tijd tot tijd kan een correctierit worden ingevoerd om het systeem gelijk te laten lopen met de kilometerteller in het dashboard. Als dat gebeurt moet de (dashboard) kilometerstand van het voertuig ingevoerd worden in het apparaat. Het aantal rit kilometers van een correctierit (tripDistance) kan een positieve of een negatieve waarde hebben. De eindkilometerstand van een correctierit moet weer gelijk zijn aan de dashboardkilometerteller stand van het voertuig. Een correctierit wordt aangeduid met Ritsoort code 3 (Correction)",
+        "en": "Contains the odometer reading of the vehicle. From time to time a correction trip can be entered to align the system with the odometer on the dashboard. When that happens, the (dashboard) odometer reading of the vehicle must be entered in the device. The number of trip kilometres of a correction trip (tripDistance) can be positive or negative. The end odometer reading of a correction trip must again equal the dashboard odometer reading of the vehicle. A correction trip is indicated with trip type code 3 (Correction)"
+      },
+      "description": {
+        "nl": "[0052] Moet oplopend zijn met uitzondering van correctierit (tripType = 3)",
+        "en": "[0052] Must be ascending except for a correction trip (tripType = 3)"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/driverID",
+      "label": {
+        "nl": "Bestuurder identificatie",
+        "en": "Driver identification"
+      },
+      "definition": {
+        "nl": "Technische ID die de bestuurder uniek identificeert. Verwijst naar een in de auditfile gedefinieerde bestuurder.",
+        "en": "Technical ID that uniquely identifies the driver. Refers to a driver defined in the audit file."
+      },
+      "description": {
+        "nl": "[0401] Verplicht",
+        "en": "[0401] Required"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripRegType",
+      "label": {
+        "nl": "Ritregistratie soort gecodeerd",
+        "en": "Trip registration type coded"
+      },
+      "definition": {
+        "nl": "Indien sprake is van een door het voertuigsysteem vastgelegde rit is het Vertrekpunt en Eindpunt verplicht. Het vertrekpunt en eindpunt is niet verplicht bij een correctierit (xml tag: tripType = code 3 Correction). Bij een (reeks van) handmatige rit(ten) dient het adres onder Vertrekpunt en het adres onder Eindpunt verplicht te worden gevuld. Een (reeks van) handmatige rit(ten) mag slechts worden ingevoerd wanneer het systeem voor die periode een Technisch Event heeft geregistreerd. Het Vertrekpunt van de eerste handmatige rit en het Eindpunt van de laatste handmatige rit moeten gelijk zijn aan respectievelijk het Eindpunt van de voorafgaande rit en het Vertrekpunt de opvolgende rit.",
+        "en": "For a trip recorded by the vehicle system, the Starting point and End point are required. The starting point and end point are not required for a correction trip (xml tag: tripType = code 3 Correction). For a (series of) manual trip(s), the address under Starting point and the address under End point must be filled. A (series of) manual trip(s) may only be entered if the system has registered a Technical Event for that period. The Starting point of the first manual trip and the End point of the last manual trip must equal the End point of the preceding trip and the Starting point of the following trip respectively."
+      },
+      "description": {
+        "nl": "[0402] Verplicht\n[0403] Waardebereik zie codes.",
+        "en": "[0402] Required\n[0403] Value range: see codes."
+      },
+      "codes": {
+        "0": {
+          "en": "Trip registration by vehicle system"
+        },
+        "1": {
+          "en": "Trip registration by manual input"
+        }
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripType",
+      "label": {
+        "nl": "Rit soort gecodeerd",
+        "en": "Trip type coded"
+      },
+      "definition": {
+        "nl": "Code om de soort rit aan te geven (zakelijk, prive of correctierit). De correctiekilometers bij een correctierit worden per periode pro rata verdeeld in zakelijk en prive en worden toegevoegd aan het totaal zakelijk en prive kilometers.",
+        "en": "Code indicating the type of trip (business, private or correction trip). The correction kilometres of a correction trip are distributed pro rata per period between business and private and added to the total business and private kilometres."
+      },
+      "description": {
+        "nl": "Indien onder Voertuigsystemen de Voertuigsysteem afstandbepaling soort (distanceDeterminationType) gelijk is aan 1 (directe uitlezen van de kilometerteller) is een waarde van 3 (correctierit) niet mogelijk. Alleen 1 (Prive rit) en 2 (Zakelijke rit) is dan toegestaan.\n[0403] Verplicht\n[0404] Waardebereik zie codes.\n[0011] Indien distanceDeterminationType = 1 dan alleen 1 en 2 toegestaan",
+        "en": "If under Vehicle systems the vehicle system distance determination type (distanceDeterminationType) equals 1 (direct reading of the odometer), a value of 3 (correction trip) is not possible. Only 1 (private trip) and 2 (business trip) are then allowed.\n[0403] Required\n[0404] Value range: see codes.\n[0011] If distanceDeterminationType = 1 then only 1 and 2 are allowed"
+      },
+      "codes": {
+        "1": {
+          "en": "Private"
+        },
+        "2": {
+          "en": "Business"
+        },
+        "3": {
+          "en": "Correction"
+        }
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripMixedIndicator",
+      "label": {
+        "nl": "Rit is gemengd prive/zakelijk indicatie ja / nee",
+        "en": "Trip is mixed private/business indicator yes / no"
+      },
+      "definition": {
+        "nl": "Dient om aan te geven of het om een gemengde rit gaat van privé-en zakelijke kilometers. Toegestane waarden 0 = Nee, 1 = Ja.",
+        "en": "Indicates whether it is a mixed trip of private and business kilometres. Allowed values 0 = No, 1 = Yes."
+      },
+      "description": {
+        "nl": "Indien waarde is 0 (Nee) dan mag slechts één van de waarden Rit privé kilometers (privateDistance), Rit zakelijke kilometers (businessDistance) en Woon-werkverkeer kilometers (commuteDistance) groter dan 0 zijn.\n[0405] Waardebereik zie codes.",
+        "en": "If the value is 0 (No), only one of the values Trip private kilometres (privateDistance), Trip business kilometres (businessDistance) and Commuting kilometres (commuteDistance) may be greater than 0.\n[0405] Value range: see codes."
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripCommuteIndicator",
+      "label": {
+        "nl": "Rit woon-werkverkeer indicatie ja / nee",
+        "en": "Trip commuting indicator yes / no"
+      },
+      "definition": {
+        "nl": "Dient om aan te geven of het om een woon-werkverkeer rit gaat. Toegestane waarden 0 = Nee, 1 = Ja.",
+        "en": "Indicates whether it is a commuting trip. Allowed values 0 = No, 1 = Yes."
+      },
+      "description": {
+        "nl": "[0406] Waardebereik zie codes.\n[0009] Indien waarde is 1 dan dient Woon-werkverkeer kilometers (commuteDistance) > 0 te zijn.",
+        "en": "[0406] Value range: see codes.\n[0009] If the value is 1, Commuting kilometres (commuteDistance) must be > 0."
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripDescription",
+      "label": {
+        "nl": "Rit omschrijving",
+        "en": "Trip description"
+      },
+      "definition": {
+        "nl": "Rit omschrijving.",
+        "en": "Trip description."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripDistance",
+      "label": {
+        "nl": "Rit kilometers",
+        "en": "Trip kilometres"
+      },
+      "definition": {
+        "nl": "Het aantal afgelegde kilometers in deze rit. Rit kilometers moet gelijk zijn aan het totaal van privé kilometers, zakelijk kilometers en woon-werk kilometers.",
+        "en": "The number of kilometres travelled in this trip. Trip kilometres must equal the total of private kilometres, business kilometres and commuting kilometres."
+      },
+      "description": {
+        "nl": "[0407] Verplicht\n[0051] Rit kilometers moet gelijk zijn aan het totaal van privé kilometers, zakelijke kilometers en woon-werk kilometers.",
+        "en": "[0407] Required\n[0051] Trip kilometres must equal the total of private kilometres, business kilometres and commuting kilometres."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/privateDistance",
+      "label": {
+        "nl": "Rit privé kilometers",
+        "en": "Trip private kilometres"
+      },
+      "definition": {
+        "nl": "Het aantal kilometers dat privé gereden is binnen de rit.",
+        "en": "The number of kilometres driven privately within the trip."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/businessDistance",
+      "label": {
+        "nl": "Rit zakelijk kilometers",
+        "en": "Trip business kilometres"
+      },
+      "definition": {
+        "nl": "Het aantal kilometers dat zakelijk gereden is binnen de rit.",
+        "en": "The number of kilometres driven for business within the trip."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/commuteDistance",
+      "label": {
+        "nl": "Woon-werkverkeer kilometers",
+        "en": "Commuting kilometres"
+      },
+      "definition": {
+        "nl": "Het aantal kilometers dat ten behoeve van woon-werkverkeer gereden is binnen de rit.",
+        "en": "The number of kilometres driven for commuting within the trip."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/deviantIndicator",
+      "label": {
+        "nl": "Afwijkende route gereden indicatie ja / nee",
+        "en": "Deviating route driven indicator yes / no"
+      },
+      "definition": {
+        "nl": "Indien de route niet de meest gangbare route was dan moet dit met ja worden aangegeven. Toegestane waarden 0 = Nee, 1 = Ja.",
+        "en": "If the route was not the most common route, this must be indicated with yes. Allowed values 0 = No, 1 = Yes."
+      },
+      "description": {
+        "nl": "Indien waarde is 1 (Ja) dan is Afwijkende route omrij kilometers > 0\n[0408] Waardebereik zie codes.",
+        "en": "If the value is 1 (Yes), Deviating route detour kilometres > 0\n[0408] Value range: see codes."
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/deviantDistance",
+      "label": {
+        "nl": "Afwijkende route omrij kilometers",
+        "en": "Deviating route detour kilometres"
+      },
+      "definition": {
+        "nl": "Aantal omrij kilometers.",
+        "en": "Number of detour kilometres."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/deviantDescription",
+      "label": {
+        "nl": "Afwijkende route toelichting",
+        "en": "Deviating route explanation"
+      },
+      "definition": {
+        "nl": "Indien niet de meest gangbare route is gereden moet hier de reden worden ingevuld. Of als er een andere toelichting op de rit gewenst is kan die hier ingevuld worden.",
+        "en": "If the most common route was not driven, the reason must be entered here. Or if another explanation of the trip is desired, it can be entered here."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start",
+      "label": {
+        "nl": "Vertrekpunt",
+        "en": "Starting point"
+      },
+      "description": {
+        "nl": "[0361] Opgaaf van deze gegevensgroep Vertrekpunt is verplicht bij door het systeem vastgelegde ritten, optioneel bij handmatig vastgelegde ritten. Een correctierit heeft geen Vertrekpunt.\n[0011] Chronologische volgorde is verplicht\n[0012] De Datum en tijd (pointDateTime) mag niet liggen voor de Ter beschikking vanaf datum en tijd (vehicleUseStartDateTime) pointDateTime >= vehicleUseDateTime\n[0013] De Datum en tijd (pointDateTime) mag niet liggen voor de Voertuigenvoertuigsysteem Vanaf Datum en Tijd (startDateTime). pointDateTime>=startDateTime.",
+        "en": "[0361] This Starting point data group is required for trips recorded by the system and optional for manually recorded trips. A correction trip has no Starting point.\n[0011] Chronological order is required\n[0012] The date and time (pointDateTime) must not be before the made available from date and time (vehicleUseStartDateTime): pointDateTime >= vehicleUseDateTime\n[0013] The date and time (pointDateTime) must not be before the vehicle and vehicle system from date and time (startDateTime): pointDateTime >= startDateTime."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start/pointDateTime",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      },
+      "definition": {
+        "nl": "Datum en tijd van het punt",
+        "en": "Date and time of the point"
+      },
+      "description": {
+        "nl": "[0362] Is alleen verplicht indien er sprake is van een zakelijke rit. ([0403] ritsoort gecodeerd = code 2 business).",
+        "en": "[0362] Only required for a business trip ([0403] trip type coded = code 2 business)."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start/lat",
+      "label": {
+        "nl": "Latitude",
+        "en": "Latitude"
+      },
+      "definition": {
+        "nl": "Latitude van het punt. Waarde ligt tussen -90 en +90. Afronding op 6 decimalen indien beschikbaar, doch minimaal op 2 decimalen.",
+        "en": "Latitude of the point. Value between -90 and +90. Rounded to 6 decimals if available, but at least to 2 decimals."
+      },
+      "description": {
+        "nl": "[0363] Verplicht bij tripType = code 1 of 2. Bij tripType = code 3 is er geen Latitude bekend. Bij tripRegType = 1 (Trip registration by manual input) is ook geen Latitude bekend.",
+        "en": "[0363] Required for tripType = code 1 or 2. For tripType = code 3 no latitude is known. For tripRegType = 1 (Trip registration by manual input) no latitude is known either."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start/lon",
+      "label": {
+        "nl": "Longitude",
+        "en": "Longitude"
+      },
+      "definition": {
+        "nl": "Longitude van het punt. Waarde ligt tussen -180 en +180. Afronding op 6 decimalen indien beschikbaar, doch minimaal op 2 decimalen.",
+        "en": "Longitude of the point. Value between -180 and +180. Rounded to 6 decimals if available, but at least to 2 decimals."
+      },
+      "description": {
+        "nl": "[0364] Verplicht bij tripType = code 1 of 2. Bij tripType = code 3 is er geen Longitude bekend. Bij tripRegType = 1 (Trip registration by manual input) is ook geen Longitude bekend.",
+        "en": "[0364] Required for tripType = code 1 or 2. For tripType = code 3 no longitude is known. For tripRegType = 1 (Trip registration by manual input) no longitude is known either."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start/odo",
+      "label": {
+        "nl": "Kilometerstand",
+        "en": "Odometer reading"
+      },
+      "definition": {
+        "nl": "Kilometerstand op het rit detailpunt.",
+        "en": "Odometer reading at the trip detail point."
+      },
+      "description": {
+        "nl": "[0365] Verplicht\n[0014] Moet zijn oplopend met uitzondering van de correctierit\n[0015] Indien Rit Soort Gecodeerd (ritType) gelijk is aan 1 en 2 (Prive en zakelijke ritten) dan is de odo gelijk aan de odo van het vorige Eindpunt.",
+        "en": "[0365] Required\n[0014] Must be ascending except for the correction trip\n[0015] If Trip Type Coded (ritType) equals 1 and 2 (private and business trips), the odo equals the odo of the previous End point."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start/sat",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      },
+      "definition": {
+        "nl": "Aantal aanwezige satellieten op het rit detailpunt",
+        "en": "Number of satellites available at the trip detail point"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start/fix",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "definition": {
+        "nl": "Dient om aan te geven of een fix heeft plaatsgevonden. Toegestane waarden 0 = Nee, 1 = Ja.",
+        "en": "Indicates whether a fix has taken place. Allowed values 0 = No, 1 = Yes."
+      },
+      "description": {
+        "nl": "[0367] Waardebereik zie codes.",
+        "en": "[0367] Value range: see codes."
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start/dop",
+      "label": {
+        "nl": "Dilution of precision (DOP).",
+        "en": "Dilution of precision (DOP)."
+      },
+      "definition": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start/poiID",
+      "label": {
+        "nl": "POI identificatie",
+        "en": "POI identification"
+      },
+      "definition": {
+        "nl": "Technische ID die het Point Of Intrest (POI) uniek identificeert. Verwijst naar een in de auditfile gedefinieerde POI.",
+        "en": "Technical ID that uniquely identifies the Point Of Interest (POI). Refers to a POI defined in the audit file."
+      },
+      "description": {
+        "nl": "[0016] POI dient gedefinieerd te zijn onder POIS",
+        "en": "[0016] The POI must be defined under POIS"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start/addrTxt",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      },
+      "definition": {
+        "nl": "Straat, nummer, toevoeging, plaats etc. worden als aaneengesloten tekst hierin opgenomen. Wanneer het gestructureerd doorgeven wel mogelijk is moet het element adres gevuld worden.",
+        "en": "Street, number, suffix, place etc. are included here as continuous text. If structured delivery is possible, the address element must be filled."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start/address",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de identificerende adresgegevens van het vertrekpunt opgenomen.",
+        "en": "This group contains the identifying address data of the starting point."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start/address/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      },
+      "definition": {
+        "nl": "Straatnaam vertrekpunt.",
+        "en": "Street name of starting point."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start/address/number",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Nummer vertrekpunt.",
+        "en": "Number of starting point."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start/address/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      },
+      "definition": {
+        "nl": "Informatie over de plaatsbepaling van een adres indien deze niet te plaatsen is in een van de andere optionele velden van het adres en zonder deze locatieomschrijving het adres niet compleet is. Locatie omschrijving vertrekpunt.",
+        "en": "Information on locating an address if it cannot be placed in one of the other optional address fields and the address is incomplete without this location description. Location description of starting point."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start/address/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      },
+      "definition": {
+        "nl": "Postcode vertrekpunt.",
+        "en": "Postcode of starting point."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start/address/city",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      },
+      "definition": {
+        "nl": "Woonplaats vertrekpunt.",
+        "en": "Place of residence of starting point."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start/address/region",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Gebiedsdeel vertrekpunt.",
+        "en": "Region of starting point."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/start/address/country",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      },
+      "definition": {
+        "nl": "De code van een huidig land of gebiedsdeel conform ISO 3166-1. Zie www.iso.org. Land vertrekpunt.",
+        "en": "The code of a current country or territory according to ISO 3166-1. See www.iso.org. Country of starting point."
+      },
+      "description": {
+        "nl": "[0368] Code conform ISO 3166-1. The codes of this codelist are documented in a separate document",
+        "en": "[0368] Code according to ISO 3166-1. The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end",
+      "label": {
+        "nl": "Eindpunt",
+        "en": "End point"
+      },
+      "description": {
+        "nl": "[0361] Opgaaf van deze gegevensgroep Eindpunt is verplicht bij door het systeem vastgelegde ritten, optioneel bij handmatig vastgelegde ritten. Een correctierit heeft geen Eindpunt.\n[0015] Chronologische volgorde is verplicht\n[0016] De Datum en tijd (pointDateTime) mag niet liggen voor de Ter beschikking vanaf datum en tijd (vehicleUseStartDateTime)\n[0017] De Datum en tijd (pointDateTime) mag niet liggen voor de Voertuigenvoertuigsysteem Vanaf Datum en Tijd (startDateTime) gelijk aan totaal kilometers alle ritten (som alle tripDistance).",
+        "en": "[0361] This End point data group is required for trips recorded by the system and optional for manually recorded trips. A correction trip has no End point.\n[0015] Chronological order is required\n[0016] The date and time (pointDateTime) must not be before the made available from date and time (vehicleUseStartDateTime)\n[0017] The date and time (pointDateTime) must not be before the vehicle and vehicle system from date and time (startDateTime). Equal to total kilometres of all trips (sum of all tripDistance)."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end/pointDateTime",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      },
+      "definition": {
+        "nl": "Datum en tijd van het punt",
+        "en": "Date and time of the point"
+      },
+      "description": {
+        "nl": "[0370] Is alleen verplicht indien er sprake is van een zakelijke rit. ([0403] ritsoort gecodeerd = code 2 business).",
+        "en": "[0370] Only required for a business trip ([0403] trip type coded = code 2 business)."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end/lat",
+      "label": {
+        "nl": "Latitude",
+        "en": "Latitude"
+      },
+      "definition": {
+        "nl": "Latitude van het punt. Waarde ligt tussen -90 en +90. Afronding op 6 decimalen indien beschikbaar, doch minimaal op 2 decimalen.",
+        "en": "Latitude of the point. Value between -90 and +90. Rounded to 6 decimals if available, but at least to 2 decimals."
+      },
+      "description": {
+        "nl": "[0371] Verplicht bij tripType = code 1 of 2. Bij tripType = code 3 is er geen Latitude bekend. Bij tripRegType = 1 (Trip registration by manual input) is ook geen Latitude bekend.",
+        "en": "[0371] Required for tripType = code 1 or 2. For tripType = code 3 no latitude is known. For tripRegType = 1 (Trip registration by manual input) no latitude is known either."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end/lon",
+      "label": {
+        "nl": "Longitude",
+        "en": "Longitude"
+      },
+      "definition": {
+        "nl": "Longitude van het punt. Waarde ligt tussen -180 en +180. Afronding op 6 decimalen indien beschikbaar, doch minimaal op 2 decimalen.",
+        "en": "Longitude of the point. Value between -180 and +180. Rounded to 6 decimals if available, but at least to 2 decimals."
+      },
+      "description": {
+        "nl": "[0372] Verplicht bij tripType = code 1 of 2. Bij tripType = code 3 is er geen Longitude bekend. Bij tripRegType = 1 (Trip registration by manual input) is ook geen Longitude bekend.",
+        "en": "[0372] Required for tripType = code 1 or 2. For tripType = code 3 no longitude is known. For tripRegType = 1 (Trip registration by manual input) no longitude is known either."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end/odo",
+      "label": {
+        "nl": "Kilometerstand",
+        "en": "Odometer reading"
+      },
+      "definition": {
+        "nl": "Kilometerstand op het rit detailpunt.",
+        "en": "Odometer reading at the trip detail point."
+      },
+      "description": {
+        "nl": "[0373] Verplicht",
+        "en": "[0373] Required"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end/sat",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      },
+      "definition": {
+        "nl": "Aantal aanwezige satellieten op het rit detailpunt",
+        "en": "Number of satellites available at the trip detail point"
+      },
+      "description": {
+        "nl": "[0374] Optioneel",
+        "en": "[0374] Optional"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end/fix",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "definition": {
+        "nl": "Dient om aan te geven of een fix heeft plaatsgevonden. Toegestane waarden 0 = Nee, 1 = Ja.",
+        "en": "Indicates whether a fix has taken place. Allowed values 0 = No, 1 = Yes."
+      },
+      "description": {
+        "nl": "[0375] Waardebereik zie codes.",
+        "en": "[0375] Value range: see codes."
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end/dop",
+      "label": {
+        "nl": "Dilution of precision (DOP).",
+        "en": "Dilution of precision (DOP)."
+      },
+      "definition": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end/poiID",
+      "label": {
+        "nl": "POI identificatie",
+        "en": "POI identification"
+      },
+      "definition": {
+        "nl": "Technische ID die het Point Of Intrest (POI) uniek identificeert. Verwijst naar een in de auditfile gedefinieerde POI.",
+        "en": "Technical ID that uniquely identifies the Point Of Interest (POI). Refers to a POI defined in the audit file."
+      },
+      "description": {
+        "nl": "[0017] POI dient gedefinieerd te zijn onder POIS",
+        "en": "[0017] The POI must be defined under POIS"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end/addrTxt",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      },
+      "definition": {
+        "nl": "Straat, nummer, toevoeging, plaats etc. worden als aaneengesloten tekst hierin opgenomen. Wanneer het gestructureerd doorgeven wel mogelijk is moet het element adres gevuld worden.",
+        "en": "Street, number, suffix, place etc. are included here as continuous text. If structured delivery is possible, the address element must be filled."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end/address",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de identificerende adresgegevens van het eindpunt opgenomen.",
+        "en": "This group contains the identifying address data of the end point."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end/address/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      },
+      "definition": {
+        "nl": "Straatnaam eindpunt.",
+        "en": "Street name of end point."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end/address/number",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Nummer eindpunt.",
+        "en": "Number of end point."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end/address/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      },
+      "definition": {
+        "nl": "Informatie over de plaatsbepaling van een adres indien deze niet te plaatsen is in een van de andere optionele velden van het adres en zonder deze locatieomschrijving het adres niet compleet is. Locatie omschrijving eindpunt.",
+        "en": "Information on locating an address if it cannot be placed in one of the other optional address fields and the address is incomplete without this location description. Location description of end point."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end/address/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      },
+      "definition": {
+        "nl": "Postcode eindpunt.",
+        "en": "Postcode of end point."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end/address/city",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      },
+      "definition": {
+        "nl": "Woonplaats eindpunt.",
+        "en": "Place of residence of end point."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end/address/region",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Gebiedsdeel eindpunt.",
+        "en": "Region of end point."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/end/address/country",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      },
+      "definition": {
+        "nl": "De code van een huidig land of gebiedsdeel conform ISO 3166-1. Zie www.iso.org. Land eindpunt.",
+        "en": "The code of a current country or territory according to ISO 3166-1. See www.iso.org. Country of end point."
+      },
+      "description": {
+        "nl": "[0376] Code conform ISO 3166-1. The codes of this codelist are documented in a separate document",
+        "en": "[0376] Code according to ISO 3166-1. The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/point",
+      "label": {
+        "nl": "Ritdetailpunt",
+        "en": "Trip detail point"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de gegevens van een detailpunt opgenomen binnen een rit (zogenaamde tussenpunten). De opgaaf van tussenpunten is verplicht indien de ritsoort [0403] code 0 heeft (Trip registration by vehicle system) en er sprake is van een zakelijke rit. ([0403] ritsoort gecodeerd = code 2 business). De frequentie van tussenpunten bedraagt minimaal 1 x per minuut.",
+        "en": "This group contains the data of a detail point within a trip (so-called intermediate points). Intermediate points are required if the trip registration type [0403] has code 0 (Trip registration by vehicle system) and it is a business trip ([0403] trip type coded = code 2 business). The frequency of intermediate points is at least once per minute."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/point/pointDateTime",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      },
+      "definition": {
+        "nl": "Datum en tijd van het punt",
+        "en": "Date and time of the point"
+      },
+      "description": {
+        "nl": "[0378] Verplicht",
+        "en": "[0378] Required"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/point/lat",
+      "label": {
+        "nl": "Latitude",
+        "en": "Latitude"
+      },
+      "definition": {
+        "nl": "Latitude van het punt. Waarde ligt tussen -90 en +90. Afronding op 6 decimalen indien beschikbaar, doch minimaal op 2 decimalen.",
+        "en": "Latitude of the point. Value between -90 and +90. Rounded to 6 decimals if available, but at least to 2 decimals."
+      },
+      "description": {
+        "nl": "[0379] Verplicht bij tripType = code 1 of 2. Bij tripType = code 3 is er geen Latitude bekend. Bij tripRegType = 1 (Trip registration by manual input) is ook geen Latitude bekend.",
+        "en": "[0379] Required for tripType = code 1 or 2. For tripType = code 3 no latitude is known. For tripRegType = 1 (Trip registration by manual input) no latitude is known either."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/point/lon",
+      "label": {
+        "nl": "Longitude",
+        "en": "Longitude"
+      },
+      "definition": {
+        "nl": "Longitude van het punt. Waarde ligt tussen -180 en +180. Afronding op 6 decimalen indien beschikbaar, doch minimaal op 2 decimalen.",
+        "en": "Longitude of the point. Value between -180 and +180. Rounded to 6 decimals if available, but at least to 2 decimals."
+      },
+      "description": {
+        "nl": "[0380] Verplicht bij tripType = code 1 of 2. Bij tripType = code 3 is er geen Longitude bekend. Bij tripRegType = 1 (Trip registration by manual input) is ook geen Longitude bekend.",
+        "en": "[0380] Required for tripType = code 1 or 2. For tripType = code 3 no longitude is known. For tripRegType = 1 (Trip registration by manual input) no longitude is known either."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/point/odo",
+      "label": {
+        "nl": "Kilometerstand",
+        "en": "Odometer reading"
+      },
+      "definition": {
+        "nl": "Kilometerstand op het rit detailpunt.",
+        "en": "Odometer reading at the trip detail point."
+      },
+      "description": {
+        "nl": "[0381] Optioneel\n[0018] Kilometerstand mag niet liggen voor de kilometerstand vertrekpunt van deze rit.",
+        "en": "[0381] Optional\n[0018] The odometer reading must not be before the odometer reading of the starting point of this trip."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/point/sat",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      },
+      "definition": {
+        "nl": "Aantal aanwezige satellieten op het rit detailpunt",
+        "en": "Number of satellites available at the trip detail point"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/point/fix",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "definition": {
+        "nl": "Dient om aan te geven of een fix heeft plaatsgevonden. Toegestane waarden 0 = Nee, 1 = Ja.",
+        "en": "Indicates whether a fix has taken place. Allowed values 0 = No, 1 = Yes."
+      },
+      "description": {
+        "nl": "[0383] Waardebereik zie codes.",
+        "en": "[0383] Value range: see codes."
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/point/dop",
+      "label": {
+        "nl": "Dilution of precision (DOP).",
+        "en": "Dilution of precision (DOP)."
+      },
+      "definition": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory",
+      "label": {
+        "nl": "Rit historie",
+        "en": "Trip history"
+      },
+      "definition": {
+        "nl": "De eerste Ritgegevens binnen Rit Historie zijn de gegevens van de originele rit. Deze zijn ongewijzigd binnen Rit History geplaatst. De orginele ritgegevens hebben dan ook geen Aanpassing Informatie (changeInfo). Na de originele ritgegevens kunnen in chronologische volgorde de gegevens van de voorlaatste veranderde rit worden geplaatst. Veranderde ritgegevens bevat het element Aanpassing Informatie.",
+        "en": "The first trip data within Trip History are the data of the original trip. These are placed unchanged within Trip History. The original trip data therefore have no Change Information (changeInfo). After the original trip data, the data of the penultimate changed trip can be placed in chronological order. Changed trip data contain the element Change Information."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip",
+      "label": {
+        "nl": "RIT",
+        "en": "Trip"
+      },
+      "definition": {
+        "nl": "Het element Rit (trip) bevat alle details van één rit.",
+        "en": "The Trip element contains all details of one trip."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/tripID",
+      "label": {
+        "nl": "Rit identificatie",
+        "en": "Trip identification"
+      },
+      "definition": {
+        "nl": "Technische ID die de rit identificeert.",
+        "en": "Technical ID that identifies the trip."
+      },
+      "description": {
+        "nl": "[0384] Verplicht",
+        "en": "[0384] Required"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/vehicleID",
+      "label": {
+        "nl": "Voertuig identificatie",
+        "en": "Vehicle identification"
+      },
+      "definition": {
+        "nl": "Technische ID die het voertuig uniek identificeert. Verwijst naar een in de auditfile gedefinieerd voertuig.",
+        "en": "Technical ID that uniquely identifies the vehicle. Refers to a vehicle defined in the audit file."
+      },
+      "description": {
+        "nl": "[0385] Verplicht",
+        "en": "[0385] Required"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/vehicleOdoMeterCount",
+      "label": {
+        "nl": "Voertuig kilometerstand",
+        "en": "Vehicle odometer reading"
+      },
+      "definition": {
+        "nl": "Bevat de kilometerstand van het voertuig. Van tijd tot tijd kan een correctierit worden ingevoerd om het systeem gelijk te laten lopen met de kilometerteller in het dashboard. Als dat gebeurt moet de (dashboard) kilometerstand van het voertuig ingevoerd worden in het apparaat. Het aantal rit kilometers van een correctierit (tripDistance) kan een positieve of een negatieve waarde hebben. De eindkilometerstand van een correctierit moet weer gelijk zijn aan de dashboardkilometerteller stand van het voertuig. Een correctierit wordt aangeduid met Ritsoort code 3 (Correction)",
+        "en": "Contains the odometer reading of the vehicle. From time to time a correction trip can be entered to align the system with the odometer on the dashboard. When that happens, the (dashboard) odometer reading of the vehicle must be entered in the device. The number of trip kilometres of a correction trip (tripDistance) can be positive or negative. The end odometer reading of a correction trip must again equal the dashboard odometer reading of the vehicle. A correction trip is indicated with trip type code 3 (Correction)"
+      },
+      "description": {
+        "nl": "[0053] Moet oplopend zijn met uitzondering van correctierit (tripType = 3)",
+        "en": "[0053] Must be ascending except for a correction trip (tripType = 3)"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/driverID",
+      "label": {
+        "nl": "Bestuurder identificatie",
+        "en": "Driver identification"
+      },
+      "definition": {
+        "nl": "Technische ID die de bestuurder uniek identificeert. Verwijst naar een in de auditfile gedefinieerde bestuurder.",
+        "en": "Technical ID that uniquely identifies the driver. Refers to a driver defined in the audit file."
+      },
+      "description": {
+        "nl": "[0386] Verplicht",
+        "en": "[0386] Required"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/tripRegType",
+      "label": {
+        "nl": "Ritregistratie soort gecodeerd",
+        "en": "Trip registration type coded"
+      },
+      "definition": {
+        "nl": "Indien sprake is van een door het voertuigsysteem vastgelegde rit is het Vertrekpunt en Eindpunt verplicht. Het vertrekpunt en eindpunt is niet verplicht bij een correctierit (xml tag: tripType = code 3 Correction). Bij een (reeks van) handmatige rit(ten) dient het adres onder Vertrekpunt en het adres onder Eindpunt verplicht te worden gevuld. Een (reeks van) handmatige rit(ten) mag slechts worden ingevoerd wanneer het systeem voor die periode een Technisch Event heeft geregistreerd. Het Vertrekpunt van de eerste handmatige rit en het Eindpunt van de laatste handmatige rit moeten gelijk zijn aan respectievelijk het Eindpunt van de voorafgaande rit en het Vertrekpunt de opvolgende rit.",
+        "en": "For a trip recorded by the vehicle system, the Starting point and End point are required. The starting point and end point are not required for a correction trip (xml tag: tripType = code 3 Correction). For a (series of) manual trip(s), the address under Starting point and the address under End point must be filled. A (series of) manual trip(s) may only be entered if the system has registered a Technical Event for that period. The Starting point of the first manual trip and the End point of the last manual trip must equal the End point of the preceding trip and the Starting point of the following trip respectively."
+      },
+      "codes": {
+        "0": {
+          "en": "Trip registration by vehicle system"
+        },
+        "1": {
+          "en": "Trip registration by manual input"
+        }
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/tripType",
+      "label": {
+        "nl": "Rit soort gecodeerd",
+        "en": "Trip type coded"
+      },
+      "definition": {
+        "nl": "Code om de soort rit aan te geven (zakelijk, prive of correctierit). De correctiekilometers bij een correctierit worden per periode pro rata verdeeld in zakelijk en prive en worden toegevoegd aan het totaal zakelijk en prive kilometers.",
+        "en": "Code indicating the type of trip (business, private or correction trip). The correction kilometres of a correction trip are distributed pro rata per period between business and private and added to the total business and private kilometres."
+      },
+      "description": {
+        "nl": "Indien onder Voertuigsystemen de Voertuigsysteem afstandbepaling soort (distanceDeterminationType) gelijk is aan 1 (directe uitlezen van de kilometerteller) is een waarde van 3 (correctierit) niet mogelijk. Alleen 1 (Prive rit) en 2 (Zakelijke rit) is dan toegestaan.\n[0387] Verplicht\n[0388] Waardebereik zie codes.\n[0021] Indien distanceDeterminationType = 1 dan alleen 1 en 2 toegestaan",
+        "en": "If under Vehicle systems the vehicle system distance determination type (distanceDeterminationType) equals 1 (direct reading of the odometer), a value of 3 (correction trip) is not possible. Only 1 (private trip) and 2 (business trip) are then allowed.\n[0387] Required\n[0388] Value range: see codes.\n[0021] If distanceDeterminationType = 1 then only 1 and 2 are allowed"
+      },
+      "codes": {
+        "1": {
+          "en": "Private"
+        },
+        "2": {
+          "en": "Business"
+        },
+        "3": {
+          "en": "Correction"
+        }
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/tripMixedIndicator",
+      "label": {
+        "nl": "Rit is gemengd prive/zakelijk indicatie ja / nee",
+        "en": "Trip is mixed private/business indicator yes / no"
+      },
+      "definition": {
+        "nl": "Dient om aan te geven of het om een gemengde rit gaat van privé-en zakelijke kilometers. Toegestane waarden 0 = Nee, 1 = Ja.",
+        "en": "Indicates whether it is a mixed trip of private and business kilometres. Allowed values 0 = No, 1 = Yes."
+      },
+      "description": {
+        "nl": "Indien waarde is 0 (Nee) dan mag slechts één van de waarden Rit privé kilometers (privateDistance), Rit zakelijke kilometers (businessDistance) en Woon-werkverkeer kilometers (commuteDistance) groter dan 0 zijn.\n[0389] Waardebereik zie codes.",
+        "en": "If the value is 0 (No), only one of the values Trip private kilometres (privateDistance), Trip business kilometres (businessDistance) and Commuting kilometres (commuteDistance) may be greater than 0.\n[0389] Value range: see codes."
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/tripCommuteIndicator",
+      "label": {
+        "nl": "Rit woon-werkverkeer indicatie ja / nee",
+        "en": "Trip commuting indicator yes / no"
+      },
+      "definition": {
+        "nl": "Dient om aan te geven of het om een woon-werkverkeer rit gaat. Toegestane waarden 0 = Nee, 1 = Ja.",
+        "en": "Indicates whether it is a commuting trip. Allowed values 0 = No, 1 = Yes."
+      },
+      "description": {
+        "nl": "[0390] Waardebereik zie codes.\n[0007] Indien waarde is 1 dan dient Woon-werkverkeer kilometers (commuteDistance) > 0 te zijn.",
+        "en": "[0390] Value range: see codes.\n[0007] If the value is 1, Commuting kilometres (commuteDistance) must be > 0."
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/tripDescription",
+      "label": {
+        "nl": "Rit omschrijving",
+        "en": "Trip description"
+      },
+      "definition": {
+        "nl": "Rit omschrijving.",
+        "en": "Trip description."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/tripDistance",
+      "label": {
+        "nl": "Rit kilometers",
+        "en": "Trip kilometres"
+      },
+      "definition": {
+        "nl": "Het aantal afgelegde kilometers in deze rit. Rit kilometers moet gelijk zijn aan het totaal van privé kilometers, zakelijk kilometers en woon-werk kilometers.",
+        "en": "The number of kilometres travelled in this trip. Trip kilometres must equal the total of private kilometres, business kilometres and commuting kilometres."
+      },
+      "description": {
+        "nl": "[0359] Verplicht\n[0050] Rit kilometers moet gelijk zijn aan het totaal van prive kilometers, zakelijk kilometers en woon-werk kilometers.",
+        "en": "[0359] Required\n[0050] Trip kilometres must equal the total of private kilometres, business kilometres and commuting kilometres."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/privateDistance",
+      "label": {
+        "nl": "Rit privé kilometers",
+        "en": "Trip private kilometres"
+      },
+      "definition": {
+        "nl": "Het aantal kilometers dat privé gereden is binnen de rit.",
+        "en": "The number of kilometres driven privately within the trip."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/businessDistance",
+      "label": {
+        "nl": "Rit zakelijk kilometers",
+        "en": "Trip business kilometres"
+      },
+      "definition": {
+        "nl": "Het aantal kilometers dat zakelijk gereden is binnen de rit.",
+        "en": "The number of kilometres driven for business within the trip."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/commuteDistance",
+      "label": {
+        "nl": "Woon-werkverkeer kilometers",
+        "en": "Commuting kilometres"
+      },
+      "definition": {
+        "nl": "Het aantal kilometers dat ten behoeve van woon-werkverkeer gereden is binnen de rit.",
+        "en": "The number of kilometres driven for commuting within the trip."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/deviantIndicator",
+      "label": {
+        "nl": "Afwijkende route gereden indicatie ja / nee",
+        "en": "Deviating route driven indicator yes / no"
+      },
+      "definition": {
+        "nl": "Indien de route niet de meest gangbare route was dan moet dit met ja worden aangegeven. Toegestane waarden 0 = Nee, 1 = Ja.",
+        "en": "If the route was not the most common route, this must be indicated with yes. Allowed values 0 = No, 1 = Yes."
+      },
+      "description": {
+        "nl": "Indien waarde is 1 (Ja) dan is Afwijkende route omrij kilometers > 0\n[0392] Waardebereik zie codes.",
+        "en": "If the value is 1 (Yes), Deviating route detour kilometres > 0\n[0392] Value range: see codes."
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/deviantDistance",
+      "label": {
+        "nl": "Afwijkende route omrij kilometers",
+        "en": "Deviating route detour kilometres"
+      },
+      "definition": {
+        "nl": "Aantal omrij kilometers.",
+        "en": "Number of detour kilometres."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/deviantDescription",
+      "label": {
+        "nl": "Afwijkende route toelichting",
+        "en": "Deviating route explanation"
+      },
+      "definition": {
+        "nl": "Indien niet de meest gangbare route is gereden moet hier de reden worden ingevuld. Of als er een andere toelichting op de rit gewenst is kan die hier ingevuld worden.",
+        "en": "If the most common route was not driven, the reason must be entered here. Or if another explanation of the trip is desired, it can be entered here."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start",
+      "label": {
+        "nl": "Vertrekpunt",
+        "en": "Starting point"
+      },
+      "description": {
+        "nl": "[0393] Opgaaf van deze gegevensgroep Vertrekpunt is verplicht bij door het systeem vastgelegde ritten, optioneel bij handmatig vastgelegde ritten. Een correctierit heeft geen Vertrekpunt.\n[0022] Chronologische volgorde is verplicht\n[0023] De Datum en tijd (pointDateTime) mag niet liggen voor de Ter beschikking vanaf datum en tijd (vehicleUseStartDateTime)\n[0024] De Datum en tijd (pointDateTime) mag niet liggen voor de Voertuigenvoertuigsysteem Vanaf Datum en Tijd (startDateTime).",
+        "en": "[0393] This Starting point data group is required for trips recorded by the system and optional for manually recorded trips. A correction trip has no Starting point.\n[0022] Chronological order is required\n[0023] The date and time (pointDateTime) must not be before the made available from date and time (vehicleUseStartDateTime)\n[0024] The date and time (pointDateTime) must not be before the vehicle and vehicle system from date and time (startDateTime)."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start/pointDateTime",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      },
+      "definition": {
+        "nl": "Datum en tijd van het punt",
+        "en": "Date and time of the point"
+      },
+      "description": {
+        "nl": "[0401] Is alleen verplicht indien er uiteindelijk sprake is van een zakelijke rit. ([0403] ritsoort gecodeerd = code 2 business).",
+        "en": "[0401] Only required if it is ultimately a business trip ([0403] trip type coded = code 2 business)."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start/lat",
+      "label": {
+        "nl": "Latitude",
+        "en": "Latitude"
+      },
+      "definition": {
+        "nl": "Latitude van het punt. Waarde ligt tussen -90 en +90. Afronding op 6 decimalen indien beschikbaar, doch minimaal op 2 decimalen.",
+        "en": "Latitude of the point. Value between -90 and +90. Rounded to 6 decimals if available, but at least to 2 decimals."
+      },
+      "description": {
+        "nl": "[0395] Verplicht bij tripType = code 1 of 2. Bij tripType = code 3 is er geen Latitude bekend. Bij tripRegType = 1 (Trip registration by manual input) is ook geen Latitude bekend.",
+        "en": "[0395] Required for tripType = code 1 or 2. For tripType = code 3 no latitude is known. For tripRegType = 1 (Trip registration by manual input) no latitude is known either."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start/lon",
+      "label": {
+        "nl": "Longitude",
+        "en": "Longitude"
+      },
+      "definition": {
+        "nl": "Longitude van het punt. Waarde ligt tussen -180 en +180. Afronding op 6 decimalen indien beschikbaar, doch minimaal op 2 decimalen.",
+        "en": "Longitude of the point. Value between -180 and +180. Rounded to 6 decimals if available, but at least to 2 decimals."
+      },
+      "description": {
+        "nl": "[0396] Verplicht bij tripType = code 1 of 2. Bij tripType = code 3 is er geen Longitude bekend. Bij tripRegType = 1 (Trip registration by manual input) is ook geen Longitude bekend.",
+        "en": "[0396] Required for tripType = code 1 or 2. For tripType = code 3 no longitude is known. For tripRegType = 1 (Trip registration by manual input) no longitude is known either."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start/odo",
+      "label": {
+        "nl": "Kilometerstand",
+        "en": "Odometer reading"
+      },
+      "definition": {
+        "nl": "Kilometerstand op het rit detailpunt.",
+        "en": "Odometer reading at the trip detail point."
+      },
+      "description": {
+        "nl": "[0397] Verplicht\n[0025] Moet zijn oplopend met uitzondering van de correctierit\n[0026] Indien Rit Soort Gecodeerd (ritType) gelijk is aan 1 en 2 (Prive en zakelijke ritten) dan is de odo gelijk aan de odo van het vorige Eindpunt.",
+        "en": "[0397] Required\n[0025] Must be ascending except for the correction trip\n[0026] If Trip Type Coded (ritType) equals 1 and 2 (private and business trips), the odo equals the odo of the previous End point."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start/sat",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      },
+      "definition": {
+        "nl": "Aantal aanwezige satellieten op het rit detailpunt",
+        "en": "Number of satellites available at the trip detail point"
+      },
+      "description": {
+        "nl": "[0398] Optioneel.",
+        "en": "[0398] Optional."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start/fix",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "definition": {
+        "nl": "Dient om aan te geven of een fix heeft plaatsgevonden. Toegestane waarden 0 = Nee, 1 = Ja.",
+        "en": "Indicates whether a fix has taken place. Allowed values 0 = No, 1 = Yes."
+      },
+      "description": {
+        "nl": "[0399] Waardebereik zie codes.",
+        "en": "[0399] Value range: see codes."
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start/dop",
+      "label": {
+        "nl": "Dilution of precision (DOP).",
+        "en": "Dilution of precision (DOP)."
+      },
+      "definition": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start/poiID",
+      "label": {
+        "nl": "POI identificatie",
+        "en": "POI identification"
+      },
+      "definition": {
+        "nl": "Technische ID die het Point Of Intrest (POI) uniek identificeert. Verwijst naar een in de auditfile gedefinieerde POI.",
+        "en": "Technical ID that uniquely identifies the Point Of Interest (POI). Refers to a POI defined in the audit file."
+      },
+      "description": {
+        "nl": "[0027] POI dient gedefinieerd te zijn onder POIS",
+        "en": "[0027] The POI must be defined under POIS"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start/addrTxt",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      },
+      "definition": {
+        "nl": "Straat, nummer, toevoeging, plaats etc. worden als aaneengesloten tekst hierin opgenomen. Wanneer het gestructureerd doorgeven wel mogelijk is moet het element adres gevuld worden.",
+        "en": "Street, number, suffix, place etc. are included here as continuous text. If structured delivery is possible, the address element must be filled."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start/address",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de identificerende adresgegevens van het vertrekpunt van de rit historie opgenomen.",
+        "en": "This group contains the identifying address data of the starting point of the trip history."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start/address/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start/address/number",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Nummer vertrekpunt rit historie.",
+        "en": "Number of starting point, trip history."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start/address/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      },
+      "definition": {
+        "nl": "Informatie over de plaatsbepaling van een adres indien deze niet te plaatsen is in een van de andere optionele velden van het adres en zonder deze locatieomschrijving het adres niet compleet is. Locatie omschrijving vertrekpunt rit historie.",
+        "en": "Information on locating an address if it cannot be placed in one of the other optional address fields and the address is incomplete without this location description. Location description of starting point, trip history."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start/address/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      },
+      "definition": {
+        "nl": "Postcode vertrekpunt rit historie.",
+        "en": "Postcode of starting point, trip history."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start/address/city",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      },
+      "definition": {
+        "nl": "Woonplaats vertrekpunt rit historie.",
+        "en": "Place of residence of starting point, trip history."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start/address/region",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Gebiedsdeel vertrekpunt rit historie.",
+        "en": "Region of starting point, trip history."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/start/address/country",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      },
+      "definition": {
+        "nl": "De code van een huidig land of gebiedsdeel conform ISO 3166-1. Zie www.iso.org. Land vertrekpunt rit historie.",
+        "en": "The code of a current country or territory according to ISO 3166-1. See www.iso.org. Country of starting point, trip history."
+      },
+      "description": {
+        "nl": "[0400] Code conform ISO 3166-1. The codes of this codelist are documented in a separate document",
+        "en": "[0400] Code according to ISO 3166-1. The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end",
+      "label": {
+        "nl": "Eindpunt",
+        "en": "End point"
+      },
+      "description": {
+        "nl": "[0401] Opgaaf van deze gegevensgroep Eindpunt is verplicht bij door het systeem vastgelegde ritten, optioneel bij handmatig vastgelegde ritten. Een correctierit heeft geen Eindpunt.\n[0028] Chronologische volgorde is verplicht\n[0029] De Datum en tijd (pointDateTime) mag niet liggen voor de Ter beschikking vanaf datum en tijd (vehicleUseStartDateTime)\n[0030] De Datum en tijd (pointDateTime) mag niet liggen voor de Voertuigenvoertuigsysteem Vanaf Datum en Tijd (startDateTime) gelijk aan totaal kilometers alle ritten (som alle tripDistance)",
+        "en": "[0401] This End point data group is required for trips recorded by the system and optional for manually recorded trips. A correction trip has no End point.\n[0028] Chronological order is required\n[0029] The date and time (pointDateTime) must not be before the made available from date and time (vehicleUseStartDateTime)\n[0030] The date and time (pointDateTime) must not be before the vehicle and vehicle system from date and time (startDateTime). Equal to total kilometres of all trips (sum of all tripDistance)"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end/pointDateTime",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      },
+      "definition": {
+        "nl": "Datum en tijd van het punt",
+        "en": "Date and time of the point"
+      },
+      "description": {
+        "nl": "[0401] Is alleen verplicht indien er uiteindelijk sprake is van een zakelijke rit. ([0403] ritsoort gecodeerd= code 2 business).",
+        "en": "[0401] Only required if it is ultimately a business trip ([0403] trip type coded = code 2 business)."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end/lat",
+      "label": {
+        "nl": "Latitude",
+        "en": "Latitude"
+      },
+      "definition": {
+        "nl": "Latitude van het punt. Waarde ligt tussen -90 en +90. Afronding op 6 decimalen indien beschikbaar, doch minimaal op 2 decimalen.",
+        "en": "Latitude of the point. Value between -90 and +90. Rounded to 6 decimals if available, but at least to 2 decimals."
+      },
+      "description": {
+        "nl": "[0402] Verplicht bij tripType = code 1 of 2. Bij tripType = code 3 is er geen Latitude bekend. Bij tripRegType = 1 (Trip registration by manual input) is ook geen Latitude bekend.",
+        "en": "[0402] Required for tripType = code 1 or 2. For tripType = code 3 no latitude is known. For tripRegType = 1 (Trip registration by manual input) no latitude is known either."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end/lon",
+      "label": {
+        "nl": "Longitude",
+        "en": "Longitude"
+      },
+      "definition": {
+        "nl": "Longitude van het punt. Waarde ligt tussen -180 en +180. Afronding op 6 decimalen indien beschikbaar, doch minimaal op 2 decimalen.",
+        "en": "Longitude of the point. Value between -180 and +180. Rounded to 6 decimals if available, but at least to 2 decimals."
+      },
+      "description": {
+        "nl": "[0403] Verplicht bij tripType = code 1 of 2. Bij tripType = code 3 is er geen Longitude bekend. Bij tripRegType = 1 (Trip registration by manual input) is ook geen Longitude bekend.",
+        "en": "[0403] Required for tripType = code 1 or 2. For tripType = code 3 no longitude is known. For tripRegType = 1 (Trip registration by manual input) no longitude is known either."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end/odo",
+      "label": {
+        "nl": "Kilometerstand",
+        "en": "Odometer reading"
+      },
+      "definition": {
+        "nl": "Kilometerstand op het rit detailpunt.",
+        "en": "Odometer reading at the trip detail point."
+      },
+      "description": {
+        "nl": "[0404] Verplicht",
+        "en": "[0404] Required"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end/sat",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      },
+      "definition": {
+        "nl": "Aantal aanwezige satellieten op het rit detailpunt",
+        "en": "Number of satellites available at the trip detail point"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end/fix",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "definition": {
+        "nl": "Dient om aan te geven of een fix heeft plaatsgevonden. Toegestane waarden 0 = Nee, 1 = Ja.",
+        "en": "Indicates whether a fix has taken place. Allowed values 0 = No, 1 = Yes."
+      },
+      "description": {
+        "nl": "[0405] Waardebereik zie codes",
+        "en": "[0405] Value range: see codes"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end/dop",
+      "label": {
+        "nl": "Dilution of precision (DOP).",
+        "en": "Dilution of precision (DOP)."
+      },
+      "definition": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end/poiID",
+      "label": {
+        "nl": "POI identificatie",
+        "en": "POI identification"
+      },
+      "definition": {
+        "nl": "Technische ID die het Point Of Intrest (POI) uniek identificeert. Verwijst naar een in de auditfile gedefinieerde POI.",
+        "en": "Technical ID that uniquely identifies the Point Of Interest (POI). Refers to a POI defined in the audit file."
+      },
+      "description": {
+        "nl": "[0033] POI dient gedefinieerd te zijn onder POIS",
+        "en": "[0033] The POI must be defined under POIS"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end/addrTxt",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      },
+      "definition": {
+        "nl": "Straat, nummer, toevoeging, plaats etc. worden als aaneengesloten tekst hierin opgenomen. Wanneer het gestructureerd doorgeven wel mogelijk is moet het element adres gevuld worden.",
+        "en": "Street, number, suffix, place etc. are included here as continuous text. If structured delivery is possible, the address element must be filled."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end/address",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de identificerende adresgegevens van het eindpunt van de rit historie opgenomen.",
+        "en": "This group contains the identifying address data of the end point of the trip history."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end/address/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end/address/number",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Nummer eindpunt rit historie.",
+        "en": "Number of end point, trip history."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end/address/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      },
+      "definition": {
+        "nl": "Informatie over de plaatsbepaling van een adres indien deze niet te plaatsen is in een van de andere optionele velden van het adres en zonder deze locatieomschrijving het adres niet compleet is. Locatie omschrijving eindpunt rit historie.",
+        "en": "Information on locating an address if it cannot be placed in one of the other optional address fields and the address is incomplete without this location description. Location description of end point, trip history."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end/address/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      },
+      "definition": {
+        "nl": "Postcode eindpunt rit historie.",
+        "en": "Postcode of end point, trip history."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end/address/city",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      },
+      "definition": {
+        "nl": "Woonplaats eindpunt rit historie.",
+        "en": "Place of residence of end point, trip history."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end/address/region",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Gebiedsdeel eindpunt rit historie.",
+        "en": "Region of end point, trip history."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/end/address/country",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      },
+      "definition": {
+        "nl": "De code van een huidig land of gebiedsdeel conform ISO 3166-1. Zie www.iso.org. Land eindpunt rit historie.",
+        "en": "The code of a current country or territory according to ISO 3166-1. See www.iso.org. Country of end point, trip history."
+      },
+      "description": {
+        "nl": "[0400] Code conform ISO 3166-1. The codes of this codelist are documented in a separate document",
+        "en": "[0400] Code according to ISO 3166-1. The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/changeInfo",
+      "label": {
+        "nl": "Aanpassing informatie",
+        "en": "Change information"
+      },
+      "definition": {
+        "nl": "Algemene gegevens met betrekking tot de verandering die is uitgevoerd op de ritgegevens. Voordat een verandering wordt uitgevoerd worden de ritgegevens voor de verandering in het element Rit Historie geplaatst in chronologische volgorde.",
+        "en": "General data about the change that was made to the trip data. Before a change is made, the trip data before the change are placed in the Trip History element in chronological order."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/changeInfo/changeByUserName",
+      "label": {
+        "nl": "Gebruiker naam",
+        "en": "User name"
+      },
+      "definition": {
+        "nl": "Hier dient de (unieke) gebruikersnaam te worden aangegeven, zodat vast is te stellen wie de aanpassing heeft gedaan.",
+        "en": "The (unique) user name must be stated here, so that it can be established who made the change."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/changeInfo/changeDateTime",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      },
+      "definition": {
+        "nl": "De datum en tijd van de aanpassing.",
+        "en": "The date and time of the change."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/changeInfo/changeDescription",
+      "label": {
+        "nl": "Soort aanpassing omschrijving",
+        "en": "Type of change description"
+      },
+      "definition": {
+        "nl": "Omschrijving van de soort aanpassing.",
+        "en": "Description of the type of change."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/point",
+      "label": {
+        "nl": "Ritdetailpunt",
+        "en": "Trip detail point"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de gegevens van een detailpunt opgenomen binnen een rit historie (zogenaamde tussenpunten). De opgaaf van tussenpunten is verplicht indien de ritsoort [0403] code 0 heeft (Trip registration by vehicle system) en er uiteindelijk sprake is van een zakelijke rit. ([0403] ritsoort gecodeerd = code 2 business). De frequentie van tussenpunten bedraagt minimaal 1 x per minuut.",
+        "en": "This group contains the data of a detail point within a trip history (so-called intermediate points). Intermediate points are required if the trip registration type [0403] has code 0 (Trip registration by vehicle system) and it is ultimately a business trip ([0403] trip type coded = code 2 business). The frequency of intermediate points is at least once per minute."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/point/pointDateTime",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      },
+      "definition": {
+        "nl": "Datum en tijd van het punt",
+        "en": "Date and time of the point"
+      },
+      "description": {
+        "nl": "[0408] Verplicht",
+        "en": "[0408] Required"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/point/lat",
+      "label": {
+        "nl": "Latitude",
+        "en": "Latitude"
+      },
+      "definition": {
+        "nl": "Latitude van het punt. Waarde ligt tussen -90 en +90. Afronding op 6 decimalen indien beschikbaar, doch minimaal op 2 decimalen.",
+        "en": "Latitude of the point. Value between -90 and +90. Rounded to 6 decimals if available, but at least to 2 decimals."
+      },
+      "description": {
+        "nl": "[0409] Verplicht bij tripType = code 1 of 2. Bij tripType = code 3 is er geen Latitude bekend. Bij tripRegType = 1 (Trip registration by manual input) is ook geen Latitude bekend.",
+        "en": "[0409] Required for tripType = code 1 or 2. For tripType = code 3 no latitude is known. For tripRegType = 1 (Trip registration by manual input) no latitude is known either."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/point/lon",
+      "label": {
+        "nl": "Longitude",
+        "en": "Longitude"
+      },
+      "definition": {
+        "nl": "Longitude van het punt. Waarde ligt tussen -180 en +180. Afronding op 6 decimalen indien beschikbaar, doch minimaal op 2 decimalen.",
+        "en": "Longitude of the point. Value between -180 and +180. Rounded to 6 decimals if available, but at least to 2 decimals."
+      },
+      "description": {
+        "nl": "[0410] Verplicht bij tripType = code 1 of 2. Bij tripType = code 3 is er geen Longitude bekend. Bij tripRegType = 1 (Trip registration by manual input) is ook geen Longitude bekend.",
+        "en": "[0410] Required for tripType = code 1 or 2. For tripType = code 3 no longitude is known. For tripRegType = 1 (Trip registration by manual input) no longitude is known either."
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/point/odo",
+      "label": {
+        "nl": "Kilometerstand",
+        "en": "Odometer reading"
+      },
+      "definition": {
+        "nl": "Kilometerstand op het rit detailpunt.",
+        "en": "Odometer reading at the trip detail point."
+      },
+      "description": {
+        "nl": "[0411] Optioneel\n[0035] Kilometerstand mag niet liggen voor de kilometerstand vertrekpunt van deze rit",
+        "en": "[0411] Optional\n[0035] The odometer reading must not be before the odometer reading of the starting point of this trip"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/point/sat",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      },
+      "definition": {
+        "nl": "Aantal aanwezige satellieten op het rit detailpunt",
+        "en": "Number of satellites available at the trip detail point"
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/point/fix",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "definition": {
+        "nl": "Dient om aan te geven of een fix heeft plaatsgevonden. Toegestane waarden 0 = Nee, 1 = Ja.",
+        "en": "Indicates whether a fix has taken place. Allowed values 0 = No, 1 = Yes."
+      },
+      "description": {
+        "nl": "[0413] Waardebereik zie codes.",
+        "en": "[0413] Value range: see codes."
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "path": "auditfile/trips/trip/tripHistory/trip/point/dop",
+      "label": {
+        "nl": "Dilution of precision (DOP).",
+        "en": "Dilution of precision (DOP)."
+      },
+      "definition": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "path": "auditfile/pois",
+      "label": {
+        "nl": "Pois",
+        "en": "POIs"
+      },
+      "definition": {
+        "nl": "In deze groep worden de gegevens van alle Points of Interest vastgelegd.",
+        "en": "This group records the data of all Points of Interest."
+      },
+      "description": {
+        "nl": "[0414] Opgaaf van deze gegevensgroep is optioneel.",
+        "en": "[0414] This data group is optional."
+      }
+    },
+    {
+      "path": "auditfile/pois/poi",
+      "label": {
+        "nl": "POI",
+        "en": "POI"
+      },
+      "definition": {
+        "nl": "enz. In deze groep worden de gegevens van een Point of Interest (POI) vastgelegd.",
+        "en": "etc. This group records the data of a Point of Interest (POI)."
+      },
+      "description": {
+        "nl": "[0414] Opgaaf van deze gegevensgroep is optioneel.",
+        "en": "[0414] This data group is optional."
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/poiID",
+      "label": {
+        "nl": "POI identificatie",
+        "en": "POI identification"
+      },
+      "definition": {
+        "nl": "Technische ID die het Point Of Intrest uniek identificeert.",
+        "en": "Technical ID that uniquely identifies the Point Of Interest."
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/poiName",
+      "label": {
+        "nl": "POI naam",
+        "en": "POI name"
+      },
+      "definition": {
+        "nl": "Naam van de POI.",
+        "en": "Name of the POI."
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/poiType",
+      "label": {
+        "nl": "POI soort",
+        "en": "POI type"
+      },
+      "definition": {
+        "nl": "Code om de soort POI aan te geven, zoals thuisadres, werkadres",
+        "en": "Code indicating the type of POI, such as home address, work address"
+      },
+      "description": {
+        "nl": "[0417] Verplicht\n[0418] Waardebereik zie codes.",
+        "en": "[0417] Required\n[0418] Value range: see codes."
+      },
+      "codes": {
+        "1": {
+          "en": "Home address"
+        },
+        "2": {
+          "en": "Work address"
+        },
+        "3": {
+          "en": "Private visit address"
+        },
+        "4": {
+          "en": "Business visit address"
+        },
+        "5": {
+          "en": "Stop address (rest area, gas station)"
+        },
+        "9": {
+          "en": "Other"
+        }
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/startDateTime",
+      "label": {
+        "nl": "POI vanaf datum",
+        "en": "POI from date"
+      },
+      "definition": {
+        "nl": "Vanaf deze datum geldt deze POI.",
+        "en": "This POI applies from this date."
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/endDateTime",
+      "label": {
+        "nl": "POI tot en met datum",
+        "en": "POI up to and including date"
+      },
+      "definition": {
+        "nl": "Tot en met deze datum is de POI geldig.",
+        "en": "The POI is valid up to and including this date."
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/lat",
+      "label": {
+        "nl": "POI latitude",
+        "en": "POI latitude"
+      },
+      "definition": {
+        "nl": "Latitude van het punt. Waarde ligt tussen -90 en +90. Afronding op 6 decimalen indien beschikbaar, doch minimaal op 2 decimalen.",
+        "en": "Latitude of the point. Value between -90 and +90. Rounded to 6 decimals if available, but at least to 2 decimals."
+      },
+      "description": {
+        "nl": "[0419] Verplicht",
+        "en": "[0419] Required"
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/lon",
+      "label": {
+        "nl": "POI longitude",
+        "en": "POI longitude"
+      },
+      "definition": {
+        "nl": "Longitude van het punt. Waarde ligt tussen -180 en +180. Afronding op 6 decimalen indien beschikbaar, doch minimaal op 2 decimalen.",
+        "en": "Longitude of the point. Value between -180 and +180. Rounded to 6 decimals if available, but at least to 2 decimals."
+      },
+      "description": {
+        "nl": "[0420] Verplicht",
+        "en": "[0420] Required"
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/driverID",
+      "label": {
+        "nl": "Bestuurder identificatie",
+        "en": "Driver identification"
+      },
+      "definition": {
+        "nl": "Als dit POI voor een specifieke bestuurder is, in tegenstelling tot algemene POI's, wordt hier de verwijzing naar de in de auditfile gedefinieerde bestuurder opgenomen.",
+        "en": "If this POI is for a specific driver, as opposed to general POIs, the reference to the driver defined in the audit file is included here."
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/adrrTxt",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      },
+      "definition": {
+        "nl": "Straat, nummer, toevoeging, plaats etc. worden als aangesloten tekst hierin opgenomen indien het gestructureerd doorgeven in het element adres niet mogelijk is.",
+        "en": "Street, number, suffix, place etc. are included here as continuous text if structured delivery in the address element is not possible."
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/address",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/address/streetname",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      },
+      "definition": {
+        "nl": "Straatnaam van POI.",
+        "en": "Street name of POI."
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/address/number",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Nummer van POI.",
+        "en": "Number of POI."
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/address/locationDescription",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      },
+      "definition": {
+        "nl": "Informatie over de plaatsbepaling van een adres indien deze niet te plaatsen is in een van de andere optionele velden van het adres en zonder deze locatieomschrijving het adres niet compleet is. Locatie omschrijving van POI.",
+        "en": "Information on locating an address if it cannot be placed in one of the other optional address fields and the address is incomplete without this location description. Location description of POI."
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/address/postalCode",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      },
+      "definition": {
+        "nl": "Postcode van POI.",
+        "en": "Postcode of POI."
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/address/city",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      },
+      "definition": {
+        "nl": "Woonplaats van POI.",
+        "en": "Place of residence of POI."
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/address/region",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Gebiedsdeel van POI.",
+        "en": "Region of POI."
+      }
+    },
+    {
+      "path": "auditfile/pois/poi/address/country",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      },
+      "definition": {
+        "nl": "De code van een huidig land of gebiedsdeel conform ISO 3166-1. Zie www.iso.org. Land van POI.",
+        "en": "The code of a current country or territory according to ISO 3166-1. See www.iso.org. Country of POI."
+      },
+      "description": {
+        "nl": "[0421] Code conform ISO 3166-1. The codes of this codelist are documented in a separate document",
+        "en": "[0421] Code according to ISO 3166-1. The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/events",
+      "label": {
+        "nl": "Technische events",
+        "en": "Technical events"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de gegevens van alle technische events (dus plaatsgevonden events) opgenomen.",
+        "en": "This group contains the data of all technical events (i.e. events that have occurred)."
+      }
+    },
+    {
+      "path": "auditfile/events/customEventTypeDefinitions",
+      "label": {
+        "nl": "Custom event type definities",
+        "en": "Custom event type definitions"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de gegevens van mogelijke technische events opgenomen, toegekend door de gebruiker.",
+        "en": "This group contains the data of possible technical events, assigned by the user."
+      }
+    },
+    {
+      "path": "auditfile/events/customEventTypeDefinitions/customEventTypeDefinition",
+      "label": {
+        "nl": "Custom event type definitie",
+        "en": "Custom event type definition"
+      },
+      "definition": {
+        "nl": "In deze groep is de soortcode en omschrijving van een mogelijke technische event opgenomen, toegekend door de gebruiker.",
+        "en": "This group contains the type code and description of a possible technical event, assigned by the user."
+      },
+      "description": {
+        "nl": "[0422] De specificatie van de gegevensgroep custom event type definitie is verplicht.",
+        "en": "[0422] The custom event type definition data group is required."
+      }
+    },
+    {
+      "path": "auditfile/events/customEventTypeDefinitions/customEventTypeDefinition/customEventTypeID",
+      "label": {
+        "nl": "Custom event type identificatie",
+        "en": "Custom event type identification"
+      },
+      "definition": {
+        "nl": "Technische ID die de custom event type uniek identificeert in de auditfile.",
+        "en": "Technical ID that uniquely identifies the custom event type in the audit file."
+      },
+      "description": {
+        "nl": "[0423] Verplicht.",
+        "en": "[0423] Required."
+      }
+    },
+    {
+      "path": "auditfile/events/customEventTypeDefinitions/customEventTypeDefinition/customEventType",
+      "label": {
+        "nl": "Custom event type",
+        "en": "Custom event type"
+      },
+      "definition": {
+        "nl": "De code die door de gebruiker of haar systeem toegekend wordt aan een bepaald type event.",
+        "en": "The code assigned by the user or their system to a particular type of event."
+      },
+      "description": {
+        "nl": "[0424] Verplicht.",
+        "en": "[0424] Required."
+      }
+    },
+    {
+      "path": "auditfile/events/customEventTypeDefinitions/customEventTypeDefinition/customEventTypeDescription",
+      "label": {
+        "nl": "Custom event type omschrijving",
+        "en": "Custom event type description"
+      },
+      "definition": {
+        "nl": "De omschrijving die door de gebruiker of haar systeem toegekend wordt aan een bepaald type event.",
+        "en": "The description assigned by the user or their system to a particular type of event."
+      }
+    },
+    {
+      "path": "auditfile/events/event",
+      "label": {
+        "nl": "Technische event",
+        "en": "Technical event"
+      },
+      "definition": {
+        "nl": "In deze groep zijn de gegevens van een technische event (dus plaatsgevonden event) opgenomen.",
+        "en": "This group contains the data of a technical event (i.e. an event that has occurred)."
+      },
+      "description": {
+        "nl": "[0425] De specificatie van de gegevensgroep technische event is verplicht.",
+        "en": "[0425] The technical event data group is required."
+      }
+    },
+    {
+      "path": "auditfile/events/event/eventID",
+      "label": {
+        "nl": "Event identificatie",
+        "en": "Event identification"
+      },
+      "definition": {
+        "nl": "Technische ID die het event uniek identificeert.",
+        "en": "Technical ID that uniquely identifies the event."
+      },
+      "description": {
+        "nl": "[0426] Verplicht.",
+        "en": "[0426] Required."
+      }
+    },
+    {
+      "path": "auditfile/events/event/vehicleSystemID",
+      "label": {
+        "nl": "Voertuig systeem identificatie",
+        "en": "Vehicle system identification"
+      },
+      "definition": {
+        "nl": "Technische ID die verwijst naar het voertuigsysteem waar dit event bij hoort.",
+        "en": "Technical ID that refers to the vehicle system to which this event belongs."
+      },
+      "description": {
+        "nl": "[0427] Verplicht.",
+        "en": "[0427] Required."
+      }
+    },
+    {
+      "path": "auditfile/events/event/dateTime",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      },
+      "definition": {
+        "nl": "Datum en tijd van het event.",
+        "en": "Date and time of the event."
+      },
+      "description": {
+        "nl": "[0428] Verplicht.",
+        "en": "[0428] Required."
+      }
+    },
+    {
+      "path": "auditfile/events/event/predefinedEventType",
+      "label": {
+        "nl": "Voorgedefinieerde event type",
+        "en": "Predefined event type"
+      },
+      "definition": {
+        "nl": "Code waarmee het soort event wordt aangegeven (bijvoorbeeld geen fix, stroomstoring).",
+        "en": "Code indicating the type of event (for example no fix, power failure)."
+      },
+      "description": {
+        "nl": "[0429] Waardebereik zie codes",
+        "en": "[0429] Value range: see codes"
+      },
+      "codes": {
+        "1": {
+          "en": "Internal system check OK"
+        },
+        "2": {
+          "en": "No fix within 5 minutes during a trip"
+        },
+        "3": {
+          "en": "Interruption of main powersupply"
+        },
+        "4": {
+          "en": "Internal battery has to be replaced"
+        }
+      }
+    },
+    {
+      "path": "auditfile/events/event/customEventTypeID",
+      "label": {
+        "nl": "Custom event type identificatie",
+        "en": "Custom event type identification"
+      },
+      "definition": {
+        "nl": "Technische ID die verwijst naar een in deze auditfile gedefinieerde custom event type.",
+        "en": "Technical ID that refers to a custom event type defined in this audit file."
+      }
+    }
+  ]
+}

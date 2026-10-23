@@ -1,0 +1,3240 @@
+{
+  "source": "AuditfileSalaris-Versie2023_FunHie.pdf",
+  "entries": [
+    {
+      "path": "auditfile/BrAlg",
+      "label": {
+        "nl": "Bericht algemeen",
+        "en": "General message"
+      }
+    },
+    {
+      "path": "auditfile/BrAlg/BrCd",
+      "label": {
+        "nl": "Bericht, code",
+        "en": "Message, code"
+      },
+      "codes": {
+        "00001": {
+          "nl": "Auditfile Salaris",
+          "en": "Audit file Payroll"
+        }
+      }
+    },
+    {
+      "path": "auditfile/BrAlg/AandatAud",
+      "label": {
+        "nl": "Aanmaakdatum",
+        "en": "Creation date"
+      },
+      "definition": {
+        "nl": "Datum waarop de Auditfile Salaris is aangemaakt.",
+        "en": "Date on which the payroll audit file was created."
+      }
+    },
+    {
+      "path": "auditfile/BrAlg/Bljr",
+      "label": {
+        "nl": "Belastingjaar rapportage",
+        "en": "Reporting tax year"
+      },
+      "definition": {
+        "nl": "Het belastingjaar waarop de rapportage betrekking heeft. Per belastingjaar wordt een Auditfile Salaris aangemaakt.",
+        "en": "The tax year to which the report relates. One payroll audit file is created per tax year."
+      }
+    },
+    {
+      "path": "auditfile/BrAlg/TotLnLbPh",
+      "label": {
+        "nl": "Totaal Loon LB/PH",
+        "en": "Total wages for wage tax/national insurance (LB/PH)"
+      },
+      "definition": {
+        "nl": "De som van alle desbetreffende bedragen in de Auditfile Salaris (inkomstenverhouding variabel).",
+        "en": "The sum of all relevant amounts in the payroll audit file (variable income relationship)."
+      }
+    },
+    {
+      "path": "auditfile/BrAlg/TotAantInkVrhVast",
+      "label": {
+        "nl": "Totaal aantal inkomstenverhoudingen",
+        "en": "Total number of income relationships"
+      },
+      "definition": {
+        "nl": "Het totaal aantal keren dat Inkomstenverhouding Vast voorkomt in de Auditfile Salaris.",
+        "en": "The total number of times Fixed Income Relationship occurs in the payroll audit file."
+      }
+    },
+    {
+      "path": "auditfile/BrAlg/AudfileBstmdVCd",
+      "label": {
+        "nl": "Auditfile bestemd voor, code",
+        "en": "Audit file intended for, code"
+      },
+      "codes": {
+        "01": {
+          "nl": "Belastingdienst",
+          "en": "Tax Administration"
+        },
+        "02": {
+          "nl": "Controle- en/of Adviespraktijk",
+          "en": "Audit and/or advisory practice"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Inhpl",
+      "label": {
+        "nl": "Inhoudingsplichtige",
+        "en": "Withholding agent"
+      },
+      "definition": {
+        "nl": "Een Inhoudingsplichtige is een persoon die: · hetzij op grond van de Wet op de Loonbelasting 1964 wordt aangemerkt als inhoudingsplichtige; · hetzij op grond van één of meer van de werknemersverzekeringen werkgever is.",
+        "en": "A withholding agent is a person who: · either is designated as a withholding agent under the Wage Tax Act 1964; · or is an employer under one or more of the employee insurance schemes."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/Nm",
+      "label": {
+        "nl": "Naam gegevens",
+        "en": "Name data"
+      },
+      "definition": {
+        "nl": "Naam",
+        "en": "Name"
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/TwDlNm",
+      "label": {
+        "nl": "Tweede deel naam",
+        "en": "Second part of name"
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/EHPubUitk",
+      "label": {
+        "nl": "Eindheffing publiekrechtelijke uitkeringen",
+        "en": "Final levy on public-law benefits"
+      },
+      "definition": {
+        "nl": "Eindheffing publiekrechtelijke uitkeringen en tijdelijke knelpunten van ernstige aard. Het bedrag dat de administratieve eenheid in het aangiftetijdvak als eindheffing aan loonbelasting/premie volksverzekering afdraagt in verband met publiekrechtelijke uitkeringen en tijdelijke knelpunten van ernstige aard.",
+        "en": "Final levy on public-law benefits and temporary serious bottlenecks. The amount the administrative unit pays in the return period as a final levy on wage tax/national insurance contributions in connection with public-law benefits and temporary serious bottlenecks."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/EHGebrAuto",
+      "label": {
+        "nl": "Eindheffing doorlopend afwisselend gebruik bestelauto",
+        "en": "Final levy on continuous alternating use of a van"
+      },
+      "definition": {
+        "nl": "Het bedrag dat de administratieve eenheid in het aangiftetijdvak als eindheffing aan loonbelasting/premie volksverzekeringen afdraagt over het doorlopend afwisselend gebruik van een bestelauto, bij moeilijk vaststellen van privégebruik.",
+        "en": "The amount the administrative unit pays in the return period as a final levy on wage tax/national insurance contributions on the continuous alternating use of a van, where private use is difficult to determine."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/EHVUT",
+      "label": {
+        "nl": "Peudo-eindheffing RVU",
+        "en": "Pseudo final levy RVU"
+      },
+      "definition": {
+        "nl": "Het bedrag dat de administratieve eenheid in het aangiftetijdvak als eindheffing aan loonbelasting/premie volksverzekeringen afdraagt over werkgeversbijdragen in een regeling voor vervroegde uittreding (RVU).",
+        "en": "The amount the administrative unit pays in the return period as a final levy on wage tax/national insurance contributions on employer contributions to an early retirement scheme (RVU)."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/EhOvsFrfWrkkstrg",
+      "label": {
+        "nl": "Eindheffing overschrijding forfaitaire werkkostenreglng",
+        "en": "Final levy on exceeding the flat-rate work-related costs scheme"
+      },
+      "definition": {
+        "nl": "Eindheffing overschrijding forfaitaire werkkostenregeling. Het bedrag dat de administratieve eenheid in het aangiftetijdvak als eindheffing aan loonbelasting/premie volksverzekeringen afdraagt in verband met overschrijding van de forfaitaire werkkostenregeling.",
+        "en": "Final levy on exceeding the flat-rate work-related costs scheme. The amount the administrative unit pays in the return period as a final levy on wage tax/national insurance contributions in connection with exceeding the flat-rate work-related costs scheme."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/AVZeev",
+      "label": {
+        "nl": "Afdrachtvermindering Zeevaart",
+        "en": "Payment reduction for seafaring"
+      },
+      "definition": {
+        "nl": "Het bedrag dat de administratieve eenheid in het aangiftetijdvak in mindering brengt op de door haar af te dragen loonbelasting/premie volksverzekeringen en eindheffingen in verband met door haar aan zeevarenden, die werken op een schip dat onder Nederlandse vlag vaart en voornamelijk op zee wordt geëxploiteerd, betaald loon.",
+        "en": "The amount the administrative unit deducts in the return period from the wage tax/national insurance contributions and final levies it must pay, in connection with wages paid by it to seafarers working on a ship sailing under the Dutch flag and operated mainly at sea."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/BdrVrlpgVrmSpOntw",
+      "label": {
+        "nl": "Bedrag voorlopige afdrachtvermindering S&O",
+        "en": "Amount of provisional payment reduction for R&D (S&O)"
+      },
+      "definition": {
+        "nl": "Voorlopige afdrachtvermindering speur-en ontwikkelingswerk. Het bedrag dat de administratieve eenheid in het aangiftetijdvak in mindering brengt op de door haar af te dragen loonbelasting/premie volksverzekeringen en eindheffingen, in het kader van een aan haar afgegeven S&O-verklaring/correctie S&O-verklaring.",
+        "en": "Provisional payment reduction for research and development (S&O). The amount the administrative unit deducts in the return period from the wage tax/national insurance contributions and final levies it must pay, under an S&O statement/corrected S&O statement issued to it."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/IndERDWGA",
+      "label": {
+        "nl": "Indicatie eigenrisicodrager voor de WGA",
+        "en": "Indicator self-insurer for the WGA"
+      },
+      "definition": {
+        "nl": "Aanduiding of de Inhoudingsplichtige eigenrisicodrager (ERD) is voor de WGA.",
+        "en": "Indicates whether the withholding agent is a self-insurer (ERD) for the WGA."
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/IngdatERDWGA",
+      "label": {
+        "nl": "Ingangsdatum ERD WGA",
+        "en": "Start date ERD WGA"
+      },
+      "definition": {
+        "nl": "Datum vanaf wanneer de Inhoudingsplichtige eigenrisicodrager (ERD) is voor de WGA. Verplicht indien deze datum valt binnen de periode waarop de Auditfile betrekking heeft.",
+        "en": "Date from which the withholding agent is a self-insurer (ERD) for the WGA. Required if this date falls within the period to which the audit file relates."
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/EnddatERDWGA",
+      "label": {
+        "nl": "Einddatum ERD WGA",
+        "en": "End date ERD WGA"
+      },
+      "definition": {
+        "nl": "Datum tot wanneer de Inhoudingsplichtige eigenrisicodrager (ERD) is voor de WGA. Verplicht indien deze datum valt binnen de periode waarop de Auditfile betrekking heeft.",
+        "en": "Date until which the withholding agent is a self-insurer (ERD) for the WGA. Required if this date falls within the period to which the audit file relates."
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/IndERDZW",
+      "label": {
+        "nl": "Indicatie eigenrisicodrager voor de ZW",
+        "en": "Indicator self-insurer for the ZW"
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/IngdatERDZW",
+      "label": {
+        "nl": "Ingangsdatum ERD ZW",
+        "en": "Start date ERD ZW"
+      },
+      "definition": {
+        "nl": "Datum vanaf wanneer de de ZW. Verplicht indien deze datum valt binnen de periode waarop de Auditfile betrekking heeft.",
+        "en": "Date from which the withholding agent is a self-insurer for the ZW. Required if this date falls within the period to which the audit file relates."
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/EnddatERDZW",
+      "label": {
+        "nl": "Einddatum ERD ZW",
+        "en": "End date ERD ZW"
+      },
+      "definition": {
+        "nl": "Datum tot wanneer de Inhoudingsplichtige eigenrisicodrager (ERD) is voor de ZW. Verplicht indien deze datum valt binnen de periode waarop de Auditfile betrekking heeft.",
+        "en": "Date until which the withholding agent is a self-insurer (ERD) for the ZW. Required if this date falls within the period to which the audit file relates."
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/StrAdrNl",
+      "label": {
+        "nl": "Straatadres nederland",
+        "en": "Dutch street address"
+      },
+      "definition": {
+        "nl": "Een adres in Nederland dat wordt bepaald aan de hand van straatnaam en huisnummer.",
+        "en": "An address in the Netherlands determined by street name and house number."
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/StrAdrNl/Pc",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      },
+      "definition": {
+        "nl": "De officiële Nederlandse codering, bestaande uit een numerieke woonplaatscode een alfabetische lettercode.",
+        "en": "The official Dutch coding, consisting of a numeric place code and an alphabetic letter code."
+      },
+      "description": {
+        "nl": "Norminstantie: NEN 5825 (Postcode)",
+        "en": "Standard body: NEN 5825 (postcode)"
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/StrAdrNl/Huisnr",
+      "label": {
+        "nl": "Huisnummer",
+        "en": "House number"
+      },
+      "definition": {
+        "nl": "De numerieke aanduiding zoals deze door de gemeente aan het object is toegekend.",
+        "en": "The numeric designation as assigned to the object by the municipality."
+      },
+      "description": {
+        "nl": "Norminstantie: NEN 5825 (Huisnummer)",
+        "en": "Standard body: NEN 5825 (house number)"
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/StrAdrNl/HuisToev",
+      "label": {
+        "nl": "Huisnummertoevoeging",
+        "en": "House number suffix"
+      },
+      "definition": {
+        "nl": "De alfanumerieke aanduiding achter huisnummer, zoals toegekend door de gemeente.",
+        "en": "The alphanumeric suffix after the house number, as assigned by the municipality."
+      },
+      "description": {
+        "nl": "Norminstantie: NEN 5825 (Huisnummertoevoeging)",
+        "en": "Standard body: NEN 5825 (house number suffix)"
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/Lnadm",
+      "label": {
+        "nl": "Loonadministratie",
+        "en": "Payroll administration"
+      },
+      "definition": {
+        "nl": "Een loonadministratie is een door UWV/Belastingdienst erkende administratie van een inhoudingsplichtige welke (mede) gericht is op de uitvoering van wettelijke verplichtingen ten aanzien van registraties voor het personeel dat in dienst is bij die inhoudingsplichtige.",
+        "en": "A payroll administration is an administration of a withholding agent recognised by UWV/Tax Administration that is (partly) aimed at fulfilling statutory obligations regarding the registration of the staff employed by that withholding agent."
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/Lnadm/Lhnr",
+      "label": {
+        "nl": "Loonheffingennummer",
+        "en": "Payroll tax number"
+      },
+      "definition": {
+        "nl": "Een door de Belastingdienst toegekende identificatie voor de administratieve eenheid waaronder de werkgever bekend is en loonheffingen afdraagt. Zie voor verdere uitleg: Loonaangifte specificaties Belastingdienst",
+        "en": "An identification assigned by the Tax Administration to the administrative unit under which the employer is known and pays payroll taxes. For further explanation see: payroll tax return specifications of the Tax Administration"
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/Lnadm/KlntnrLsb",
+      "label": {
+        "nl": "Klantnummer loonservicebureau",
+        "en": "Payroll service bureau customer number"
+      },
+      "definition": {
+        "nl": "Het klantnummer van de inhoudingsplichtige waaronder de loonadministratie gevoerd wordt bij het loonservicebureau.",
+        "en": "The customer number of the withholding agent under which the payroll administration is kept at the payroll service bureau."
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/Lnadm/RelNr",
+      "label": {
+        "nl": "Relatienummer",
+        "en": "Relationship number"
+      },
+      "definition": {
+        "nl": "Het (relatie)nummer waaronder de softwareontwikkelaar als abonnee bekend is bij de Belastingdienst. Het relatienummer wordt door OSWO verstrekt en heeft het patroon 'SWOxxxxx', waarbij 'x' een numeriek teken is.",
+        "en": "The (relationship) number under which the software developer is known as a subscriber to the Tax Administration. The relationship number is issued by OSWO and has the pattern 'SWOxxxxx', where 'x' is a digit."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/Lnadm/ValCd",
+      "label": {
+        "nl": "Valuta, code",
+        "en": "Currency, code"
+      },
+      "definition": {
+        "nl": "De soort valuta waarin de loonadministratie gevoerd wordt.",
+        "en": "The currency in which the payroll administration is kept."
+      },
+      "description": {
+        "nl": "Norminstantie: ISO (4217) The codes of this codelist are documented in a separate document",
+        "en": "Standard body: ISO (4217). The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/Lnadm/NmAppl",
+      "label": {
+        "nl": "Naam applicatie",
+        "en": "Application name"
+      },
+      "definition": {
+        "nl": "De naam van het salarispakket waarmee de Auditfile wordt aangemaakt.",
+        "en": "The name of the payroll package with which the audit file is created."
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/Lnadm/VerAppl",
+      "label": {
+        "nl": "Versie applicatie",
+        "en": "Application version"
+      },
+      "definition": {
+        "nl": "De versie van het salarispakket waarmee de Auditfile wordt aangemaakt.",
+        "en": "The version of the payroll package with which the audit file is created."
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/Lnadm/Lncmp",
+      "label": {
+        "nl": "Looncomponent",
+        "en": "Wage component"
+      },
+      "definition": {
+        "nl": "Het soort loonbestanddeel dat gehanteerd wordt door de Belastingdienst Identificerende gegevens",
+        "en": "The type of wage component used by the Tax Administration. Identifying data"
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/Lnadm/Lncmp/IdLncmp",
+      "label": {
+        "nl": "Identificatie looncomponent",
+        "en": "Wage component identification"
+      },
+      "definition": {
+        "nl": "Unieke identificatie looncomponent door inhoudingsplichtige. De looncomponenten van de inhoudingsplichtige worden afgebeeld op de looncomponenten van de belastingdienst: ieder voorkomen van 'Identificatie looncomponent' wordt gekoppeld aan een 'Looncomponent belastingdienst,code'. Daar waar mapping niet mogelijk is, wordt een koppeling gemaakt met Looncomponent type, code = 99.",
+        "en": "Unique identification of the wage component by the withholding agent. The wage components of the withholding agent are mapped to the wage components of the Tax Administration: each occurrence of 'Wage component identification' is linked to a 'Wage component Tax Administration, code'. Where mapping is not possible, a link is made with Wage component type, code = 99."
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/Lnadm/Lncmp/OmsLncmp",
+      "label": {
+        "nl": "Omschrijving looncomponent",
+        "en": "Wage component description"
+      },
+      "definition": {
+        "nl": "Omschrijving looncomponent door inhoudingsplichtige.",
+        "en": "Description of the wage component by the withholding agent."
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/Lnadm/Lncmp/LncmpCd",
+      "label": {
+        "nl": "Looncomponent belastingdienst, code",
+        "en": "Wage component Tax Administration, code"
+      },
+      "definition": {
+        "nl": "Ten aanzien van de codes 50 en 51: Deze zijn bedoeld voor netto uitkeringen en inhoudingen. Krijgt de werknemer bijvoorbeeld een reiskostenvergoeding woon/werk uitbetaald, dan wordt deze positief geboekt onder code 50. Moet de werknemer een Reiskostenvergoeding terugbetalen, dan wordt dat negatief geboekt onder code 50. Wordt van een werknemer een contributie voor de",
+        "en": "Regarding codes 50 and 51: these are intended for net payments and deductions. If, for example, the employee is paid a commuting travel allowance, it is posted positively under code 50. If the employee must repay a travel allowance, it is posted negatively under code 50. If a contribution for the"
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/Lnadm/Lncmp/WzBlCd",
+      "label": {
+        "nl": "Wijze belast, code",
+        "en": "Method of taxation, code"
+      },
+      "codes": {
+        "B": {
+          "nl": "Bijzondere beloningen",
+          "en": "Special remuneration"
+        },
+        "E": {
+          "nl": "Eindloonheffing",
+          "en": "Final wage tax levy"
+        },
+        "O": {
+          "nl": "Onbelast",
+          "en": "Untaxed"
+        },
+        "T": {
+          "nl": "Tijdvakloon",
+          "en": "Period wage"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/Lnadm/Lncmp/BrutoNetto",
+      "label": {
+        "nl": "BrutoNetto",
+        "en": "Gross/Net"
+      },
+      "codes": {
+        "J": {
+          "nl": "Wordt meegenomen bruto-netto berekening",
+          "en": "Included in gross-to-net calculation"
+        },
+        "N": {
+          "nl": "Wordt niet meegenomen bruto-netto berekening",
+          "en": "Not included in gross-to-net calculation"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Inhpl/Lnadm/Lncmp/LncmpTypeCd",
+      "label": {
+        "nl": "Looncomponent type, code",
+        "en": "Wage component type, code"
+      },
+      "definition": {
+        "nl": "Belangrijk is dat steeds duidelijk toegelicht wordt waar het bij een dergelijk loonbestanddeel precies om gaat. Het veld wordt alleen gebruikt als de in te vullen waarde uit de vastleggingen in het pakket ondubbelzinnig kan worden afgeleid. Het is dus niet de bedoeling dat voor het aanmaken van de waarde in dit veld bijvoorbeeld vertaalmodules worden gemaakt op basis van de omschrijvingen van de looncomponenten. In dat geval wordt geen waarde ingevuld.",
+        "en": "It is important that it is always clearly explained what such a wage component is about exactly. The field is only used if the value to be entered can be derived unambiguously from the records in the package. It is therefore not the intention that, for example, translation modules are built based on the descriptions of the wage components to create the value in this field. In that case no value is entered."
+      },
+      "codes": {
+        "01": {
+          "nl": "Bijtelling privé gebruik auto",
+          "en": "Addition to income for private use of car"
+        },
+        "02": {
+          "nl": "Werknemersbijdrage privé gebruik auto",
+          "en": "Employee contribution for private use of car"
+        },
+        "03": {
+          "nl": "Vergoeding reiskosten Alleen onbelaste reiskosten en niet de vergoeding van plaatsbewijzen, bijvoorbeeld vliegtickets of treinkaarten.",
+          "en": "Travel expense allowance Only untaxed travel expenses and not the reimbursement of tickets, for example plane or train tickets."
+        },
+        "04": {
+          "nl": "Vergoeding van plaatsbewijzen",
+          "en": "Reimbursement of tickets"
+        },
+        "05": {
+          "nl": "Overige onbelaste vergoedingen op declaratie",
+          "en": "Other untaxed allowances on expense claim"
+        },
+        "06": {
+          "nl": "Vaste onbelaste vergoedingen",
+          "en": "Fixed untaxed allowances"
+        },
+        "21": {
+          "nl": "Verrekende arbeidskorting Het bedrag dat in het tijdvak voor de inkomstenverhouding aan arbeidskorting is toegepast.",
+          "en": "Employment tax credit settled The amount of employment tax credit applied in the period for the income relationship."
+        },
+        "22": {
+          "nl": "Jong gehandicapten korting",
+          "en": "Young disabled persons' credit"
+        },
+        "44": {
+          "nl": "Afdrachtvermindering zeevaart",
+          "en": "Payment reduction for seafaring"
+        },
+        "51": {
+          "nl": "Ingehouden bijdrage Zorgverzekeringswet",
+          "en": "Withheld contribution Health Insurance Act"
+        },
+        "52": {
+          "nl": "Wettelijke bijdrage werkgever Zorgverzekeringswet",
+          "en": "Statutory employer contribution Health Insurance Act"
+        },
+        "53": {
+          "nl": "Aanvullende bijdrage werkgever Zorgverzekeringswet",
+          "en": "Additional employer contribution Health Insurance Act"
+        },
+        "61": {
+          "nl": "Eindheffing publiekrechtelijke uitkeringen Loonaangifte: EHPubUitk Het bedrag dat de administratieve eenheid in het aangiftetijdvak als eindheffing aan loonbelasting/premie volksverzekering afdraagt in verband met publiekrechtelijke uitkeringen en tijdelijke knelpunten van ernstige aard.",
+          "en": "Final levy on public-law benefits Payroll tax return: EHPubUitk The amount the administrative unit pays in the return period as a final levy on wage tax/national insurance contributions in connection with public-law benefits and temporary serious bottlenecks."
+        },
+        "66": {
+          "nl": "Eindheffing doorlopend afwisselend gebruik bestelauto Loonaangifte: EHGebrAuto Het bedrag dat de administratieve eenheid in het aangiftetijdvak als eindheffing aan loonbelasting/premie volksverzekeringen afdraagt over het doorlopend afwisselend gebruik van een bestelauto, bij moeilijk vaststellen van privégebruik.",
+          "en": "Final levy on continuous alternating use of a van Payroll tax return: EHGebrAuto The amount the administrative unit pays in the return period as a final levy on wage tax/national insurance contributions on the continuous alternating use of a van, where private use is difficult to determine."
+        },
+        "67": {
+          "nl": "Eindheffing VUT-regeling Loonaangifte: EHVUT Het bedrag dat de administratieve eenheid in het aangiftetijdvak als eindheffing aan loonbelasting/premie volksverzekeringen afdraagt over de werkgeversbijdragen in een VUT-regeling.",
+          "en": "Final levy early retirement scheme Payroll tax return: EHVUT The amount the administrative unit pays in the return period as a final levy on wage tax/national insurance contributions on employer contributions to an early retirement (VUT) scheme."
+        },
+        "68": {
+          "nl": "Eindheffing overschrijding forfaitaire werkkstnrgling Loonaangifte: EhOvsFrfWrkkstrg Het bedrag dat de administratieve eenheid in het aangiftetijdvak als eindheffing aan loonbelasting/premie volksverzekeringen afdraagt in verband met overschrijding van de forfaitaire werkkostenregeling.",
+          "en": "Final levy on exceeding the flat-rate work-related costs scheme Payroll tax return: EhOvsFrfWrkkstrg The amount the administrative unit pays in the return period as a final levy on wage tax/national insurance contributions in connection with exceeding the flat-rate work-related costs scheme."
+        },
+        "71": {
+          "nl": "Basispremie WAO/IVA/WGA",
+          "en": "Basic contribution WAO/IVA/WGA"
+        },
+        "74": {
+          "nl": "Premie sectorfonds",
+          "en": "Sector fund contribution"
+        },
+        "75": {
+          "nl": "Premie Uitkeringsfonds Overheid",
+          "en": "Contribution Government Benefits Fund"
+        },
+        "81": {
+          "nl": "Voorschotten (verstrekte en terugbetaalde)",
+          "en": "Advances (granted and repaid)"
+        },
+        "82": {
+          "nl": "Leningen (verstrekte en terugbetaalde)",
+          "en": "Loans (granted and repaid)"
+        },
+        "83": {
+          "nl": "Gedifferentieerde premie Whk",
+          "en": "Differentiated contribution Whk"
+        },
+        "84": {
+          "nl": "Premie Awf laag",
+          "en": "Awf contribution low"
+        },
+        "85": {
+          "nl": "Premie Awf hoog",
+          "en": "Awf contribution high"
+        },
+        "86": {
+          "nl": "Premie Awf herzien",
+          "en": "Awf contribution revised"
+        },
+        "99": {
+          "nl": "Niet geclassificeerd",
+          "en": "Not classified"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr",
+      "label": {
+        "nl": "Werknemer",
+        "en": "Employee"
+      },
+      "definition": {
+        "nl": "Een werknemer is de natuurlijke persoon met wie een inkomstenverhouding binnen de loonadministratie bestaat.",
+        "en": "An employee is the natural person with whom an income relationship exists within the payroll administration."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/SofiNr",
+      "label": {
+        "nl": "Burgerservicenummer",
+        "en": "Citizen service number"
+      },
+      "definition": {
+        "nl": "Een door de Gemeente aan een natuurlijk persoon toegekend uniek administratief nummer, ook wel BSN genoemd.",
+        "en": "A unique administrative number assigned by the municipality to a natural person, also called BSN."
+      },
+      "description": {
+        "nl": "Indien de inhoudingsplichtige niet beschikt of kan beschikken over het BSN dan moet in ieder geval het Personeelsnummer doorgegeven worden.\nBron: Loonaangifte.",
+        "en": "If the withholding agent does not or cannot have the BSN, the personnel number must in any case be reported.\nSource: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/Persnr",
+      "label": {
+        "nl": "Personeelsnummer",
+        "en": "Personnel number"
+      },
+      "definition": {
+        "nl": "De code waarmee de natuurlijk persoon in de loonadministratie van de inhoudingsplichtige bekend is.",
+        "en": "The code by which the natural person is known in the payroll administration of the withholding agent."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/Gebdat",
+      "label": {
+        "nl": "Geboortedatum",
+        "en": "Date of birth"
+      },
+      "definition": {
+        "nl": "Datum waarop de natuurlijke persoon is geboren. Als de geboortedatum niet bekend is moet een bestaanbare geboortedatum",
+        "en": "Date on which the natural person was born. If the date of birth is not known, a possible date of birth must"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/SignNm",
+      "label": {
+        "nl": "Significant deel van de achternaam",
+        "en": "Significant part of the surname"
+      },
+      "definition": {
+        "nl": "De achternaam zonder voorvoegsels. Het betreft de geboortenaam van de persoon (en niet van de partner) zonder voorvoegsels, zoals opgenomen op het identiteitsbewijs. Toevoegingen ten behoeve van de eigen administratie zijn niet toegestaan.",
+        "en": "The surname without prefixes. This is the person's birth name (not that of the partner) without prefixes, as stated on the identity document. Additions for internal administration are not allowed."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/Voorl",
+      "label": {
+        "nl": "Voorletters",
+        "en": "Initials"
+      },
+      "definition": {
+        "nl": "De verzameling letters die wordt gevormd door de eerste letter van alle in volgorde voorkomende voornamen. Bestaan uit hoofdletters, zijn aaneengesloten en bevatten geen punten. Alleen alfabetische tekens zijn toegestaan.",
+        "en": "The set of letters formed by the first letter of each first name in order. Consists of capital letters, written together without full stops. Only alphabetic characters are allowed."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/Voorv",
+      "label": {
+        "nl": "Voorvoegsels",
+        "en": "Prefixes"
+      },
+      "definition": {
+        "nl": "De verzameling van één of meer voorzetsels en/of lidwoorden die aan het significante deel van de achternaam vooraf gaat en daarmee gezamenlijk de achternaam vormt.",
+        "en": "The set of one or more prepositions and/or articles that precede the significant part of the surname and together with it form the surname."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/Gesl",
+      "label": {
+        "nl": "Geslacht, code",
+        "en": "Gender, code"
+      },
+      "definition": {
+        "nl": "Code die het geslacht van een natuurlijk persoon aangeeft.",
+        "en": "Code indicating the gender of a natural person."
+      },
+      "description": {
+        "nl": "Indien in een personeels-/salarisadministratie het gegeven geslacht niet wordt gevoerd, moet de waarde ‘9’ worden opgegeven. Wordt in de administratie het geslacht wel geregistreerd, maar is van de werknemer het geslacht niet bekend, dan de code ‘0’ invullen.\nBron: Loonaangifte.",
+        "en": "If the item gender is not kept in a personnel/payroll administration, the value '9' must be reported. If gender is registered in the administration but the employee's gender is not known, enter code '0'.\nSource: payroll tax return."
+      },
+      "codes": {
+        "0": {
+          "nl": "Onbekend",
+          "en": "Unknown"
+        },
+        "1": {
+          "nl": "Mannelijk",
+          "en": "Male"
+        },
+        "2": {
+          "nl": "Vrouwelijk",
+          "en": "Female"
+        },
+        "9": {
+          "nl": "Niet gespecificeerd Wordt niet gevoerd in de administratie",
+          "en": "Not specified Not kept in the administration"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/Nat",
+      "label": {
+        "nl": "Nationaliteit",
+        "en": "Nationality"
+      },
+      "definition": {
+        "nl": "De nationaliteit waarmee de natuurlijke persoon zich bij de inhoudingsplichtige heeft geïdentificeerd. Code conform codering van de GBA/BRP, zoals deze door de Belastingdienst is gepubliceerd op www.oswo.nl/cso Een werknemer kan meer dan één nationaliteit hebben. Als een persoon meer dan één nationaliteit heeft (waaronder de Nederlandse), moet de Nederlandse nationaliteit worden doorgegeven. Vul anders, als dat van toepassing is, eerst de nationaliteit in van een EU/EER-land of Zwitserland (zie voor een overzicht van de EU/EER-landen hoofdstuk 17 van het Handboek Loonheffingen). De tabel met codes van nationaliteiten is te downloaden van www.oswo.nl/cso. Als de nationaliteit niet voorkomt in de tabel of als de nationaliteit onbekend is, vul dan code '0000' in.",
+        "en": "The nationality with which the natural person has identified themselves to the withholding agent. Code according to the GBA/BRP coding, as published by the Tax Administration at www.oswo.nl/cso. An employee can have more than one nationality. If a person has more than one nationality (including Dutch), the Dutch nationality must be reported. Otherwise, if applicable, first enter the nationality of an EU/EEA country or Switzerland (see chapter 17 of the Payroll Taxes Handbook for an overview of EU/EEA countries). The table of nationality codes can be downloaded from www.oswo.nl/cso. If the nationality is not in the table or is unknown, enter code '0000'."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte. The codes of this codelist are documented in a separate document",
+        "en": "Source: payroll tax return. The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/Legbew",
+      "label": {
+        "nl": "Legitimatiebewijs",
+        "en": "Identity document"
+      },
+      "definition": {
+        "nl": "Het officiële document waarmee de identiteit van de persoon kan worden vastgesteld.",
+        "en": "The official document with which the identity of the person can be established."
+      },
+      "description": {
+        "nl": "Bron: SUWI",
+        "en": "Source: SUWI"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/Legbew/SrtLegbCd",
+      "label": {
+        "nl": "Soort legitimatiebewijs, code",
+        "en": "Type of identity document, code"
+      },
+      "definition": {
+        "nl": "Code die het soort legitimatiebewijs aangeeft, conform de Wet op de Identificatieplicht.",
+        "en": "Code indicating the type of identity document, in accordance with the Compulsory Identification Act."
+      },
+      "description": {
+        "nl": "Bron: SUWI",
+        "en": "Source: SUWI"
+      },
+      "codes": {
+        "01": {
+          "nl": "Nationaal paspoort",
+          "en": "National passport"
+        },
+        "02": {
+          "nl": "Diplomatiek paspoort",
+          "en": "Diplomatic passport"
+        },
+        "03": {
+          "nl": "Dienstpaspoort",
+          "en": "Service passport"
+        },
+        "04": {
+          "nl": "Reisdocument voor vluchtelingen",
+          "en": "Refugee travel document"
+        },
+        "05": {
+          "nl": "Reisdocument voor vreemdelingen",
+          "en": "Aliens travel document"
+        },
+        "06": {
+          "nl": "Nooddocument",
+          "en": "Emergency document"
+        },
+        "07": {
+          "nl": "Ander door min v Justitie vastgesteld reisdocument",
+          "en": "Other travel document established by the Ministry of Justice"
+        },
+        "08": {
+          "nl": "Europese identiteitskaart",
+          "en": "European identity card"
+        },
+        "09": {
+          "nl": "Vreemdelingendocument",
+          "en": "Aliens document"
+        },
+        "10": {
+          "nl": "Nederlandse Identiteitskaart",
+          "en": "Dutch identity card"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/Legbew/NrLegb",
+      "label": {
+        "nl": "Nummer legimatiebewijs",
+        "en": "Identity document number"
+      },
+      "definition": {
+        "nl": "De unieke aanduiding van het legitimatiebewijs.",
+        "en": "The unique identifier of the identity document."
+      },
+      "description": {
+        "nl": "Bron: SUWI",
+        "en": "Source: SUWI"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/Legbew/DatAfg",
+      "label": {
+        "nl": "Datums + plaats",
+        "en": "Dates + place"
+      },
+      "definition": {
+        "nl": "Datum afgifte",
+        "en": "Date of issue"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/Legbew/DatGtm",
+      "label": {
+        "nl": "Datum geldig tot en met",
+        "en": "Date valid up to and including"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/Legbew/PltsAfg",
+      "label": {
+        "nl": "Plaats afgifte",
+        "en": "Place of issue"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrNl",
+      "label": {
+        "nl": "Straatadres nederland",
+        "en": "Dutch street address"
+      },
+      "definition": {
+        "nl": "Een adres in Nederland dat wordt bepaald aan de hand van straatnaam en huisnummer.",
+        "en": "An address in the Netherlands determined by street name and house number."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrNl/Ingdat",
+      "label": {
+        "nl": "Ingangsdatum",
+        "en": "Start date"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrNl/Enddat",
+      "label": {
+        "nl": "Einddatum",
+        "en": "End date"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrNl/Locoms",
+      "label": {
+        "nl": "Locatieomschrijving",
+        "en": "Location description"
+      },
+      "definition": {
+        "nl": "huisnummer of bij \"postbus\" en postbusnummer, dan wel \"antwoordnummer\" en antwoordnummer. Norm(instantie): NEN 5825 (Locatieomschrijving)",
+        "en": "house number or, for \"postbus\", the PO box number, or \"antwoordnummer\" and the freepost number. Standard (body): NEN 5825 (location description)"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrNl/Pc",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      },
+      "definition": {
+        "nl": "De officiële Nederlandse codering, bestaande uit een numerieke woonplaatscode een alfabetische lettercode.",
+        "en": "The official Dutch coding, consisting of a numeric place code and an alphabetic letter code."
+      },
+      "description": {
+        "nl": "Norminstantie: NEN 5825 (Postcode)",
+        "en": "Standard body: NEN 5825 (postcode)"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrNl/Wnpl",
+      "label": {
+        "nl": "Woonplaatsnaam",
+        "en": "Place name"
+      },
+      "definition": {
+        "nl": "De door de gemeente vastgestelde naam van een woonplaats. Norm(instantie): NEN 5825 (Woonplaatsnaam)",
+        "en": "The name of a place of residence as determined by the municipality. Standard (body): NEN 5825 (place name)"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrNl/Straat",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      },
+      "definition": {
+        "nl": "De officiële door de gemeente vastgestelde naam van een straat. Norm(instantie): NEN 5825 (Straatnaam)",
+        "en": "The official name of a street as determined by the municipality. Standard (body): NEN 5825 (street name)"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrNl/Huisnr",
+      "label": {
+        "nl": "Huisnummer",
+        "en": "House number"
+      },
+      "definition": {
+        "nl": "De numerieke aanduiding zoals deze door de gemeente aan het object is toegekend.",
+        "en": "The numeric designation as assigned to the object by the municipality."
+      },
+      "description": {
+        "nl": "Norminstantie: NEN 5825 (Huisnummer)",
+        "en": "Standard body: NEN 5825 (house number)"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrNl/HuisToev",
+      "label": {
+        "nl": "Huisnummertoevoeging",
+        "en": "House number suffix"
+      },
+      "definition": {
+        "nl": "De alfanumerieke aanduiding achter huisnummer, zoals toegekend door de gemeente.",
+        "en": "The alphanumeric suffix after the house number, as assigned by the municipality."
+      },
+      "description": {
+        "nl": "Norminstantie: NEN 5825 (Huisnummertoevoeging)",
+        "en": "Standard body: NEN 5825 (house number suffix)"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrBl",
+      "label": {
+        "nl": "Straatadres buitenland",
+        "en": "Foreign street address"
+      },
+      "definition": {
+        "nl": "Een adres in het buitenland dat wordt bepaald aan de hand van straatnaam en huisnummer.",
+        "en": "An address abroad determined by street name and house number."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrBl/Ingdat",
+      "label": {
+        "nl": "Ingangsdatum",
+        "en": "Start date"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrBl/Enddat",
+      "label": {
+        "nl": "Einddatum",
+        "en": "End date"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrBl/LocomsBtl",
+      "label": {
+        "nl": "Locatieomschrijving buitenland",
+        "en": "Location description abroad"
+      },
+      "definition": {
+        "nl": "Een nadere aanduiding bij een buitenlands adres.",
+        "en": "A further specification of a foreign address."
+      },
+      "description": {
+        "nl": "Bron: SUWI",
+        "en": "Source: SUWI"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrBl/PcBtl",
+      "label": {
+        "nl": "Postcode buitenland",
+        "en": "Postcode abroad"
+      },
+      "definition": {
+        "nl": "Een door de buitenlandse postdienst vastgestelde codering voor een adres in het buitenland.",
+        "en": "A coding established by the foreign postal service for an address abroad."
+      },
+      "description": {
+        "nl": "Bron: SUWI",
+        "en": "Source: SUWI"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrBl/WnplBtl",
+      "label": {
+        "nl": "Woonplaatsnaam buitenland",
+        "en": "Place name abroad"
+      },
+      "definition": {
+        "nl": "De naam van een woonplaats in het buitenland.",
+        "en": "The name of a place of residence abroad."
+      },
+      "description": {
+        "nl": "Bron: SUWI",
+        "en": "Source: SUWI"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrBl/RegBtl",
+      "label": {
+        "nl": "Regionaam buitenland",
+        "en": "Region name abroad"
+      },
+      "definition": {
+        "nl": "De naam van een gebiedsdeel binnen een land.",
+        "en": "The name of a territory within a country."
+      },
+      "description": {
+        "nl": "Bron: SUWI",
+        "en": "Source: SUWI"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrBl/LandCd",
+      "label": {
+        "nl": "Land, code",
+        "en": "Country, code"
+      },
+      "definition": {
+        "nl": "De code van een huidig land of gebiedsdeel conform ISO 3166.",
+        "en": "The code of a current country or territory according to ISO 3166."
+      },
+      "description": {
+        "nl": "Norminstantie: ISO 3166 (Entity, Alpha-2 code) The codes of this codelist are documented in a separate document",
+        "en": "Standard body: ISO 3166 (Entity, Alpha-2 code). The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrBl/Landnm",
+      "label": {
+        "nl": "Landnaam",
+        "en": "Country name"
+      },
+      "definition": {
+        "nl": "De naam van een land of een gebiedsdeel.",
+        "en": "The name of a country or territory."
+      },
+      "description": {
+        "nl": "Bron: SUWI",
+        "en": "Source: SUWI"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrBl/Straat",
+      "label": {
+        "nl": "Specifiek voor straatadres buitenland",
+        "en": "Specific to foreign street address"
+      },
+      "definition": {
+        "nl": "De naam van een straat in het buitenland.",
+        "en": "The name of a street abroad."
+      },
+      "description": {
+        "nl": "Bron: SUWI",
+        "en": "Source: SUWI"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/StrAdrBl/HuisnrBtl",
+      "label": {
+        "nl": "Huisnummer buitenland",
+        "en": "House number abroad"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst",
+      "label": {
+        "nl": "Inkomstenverhouding vast",
+        "en": "Fixed income relationship"
+      },
+      "definition": {
+        "nl": "Vaste gegevens over de dienstbetrekking tussen de werknemer en de inhoudingsplichtige. Vast wil in dit verband zeggen: vast gedurende een belastingjaar.",
+        "en": "Fixed data on the employment between the employee and the withholding agent. Fixed here means: fixed during a tax year."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/NumIV",
+      "label": {
+        "nl": "Nummer inkomstenverhouding",
+        "en": "Income relationship number"
+      },
+      "definition": {
+        "nl": "Nummer, zoals vermeld in de loonstaat, waarmee de inkomstenverhouding in combinatie met het Burgerservicenummer of het personeelsnummer wordt geïdentificeerd.",
+        "en": "Number, as stated in the payroll record, with which the income relationship is identified in combination with the citizen service number or the personnel number."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Ingdat",
+      "label": {
+        "nl": "Ingangsdatum",
+        "en": "Start date"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Enddat",
+      "label": {
+        "nl": "Einddatum",
+        "en": "End date"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/RdEndDnstvbndOm",
+      "label": {
+        "nl": "Reden einde dienstverband, omschrijving",
+        "en": "Reason for end of employment, description"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/CdRdnEindArbov",
+      "label": {
+        "nl": "Code reden einde arbeidsverhouding",
+        "en": "Code reason for end of employment relationship"
+      },
+      "definition": {
+        "nl": "Code die de reden van het einde van de arbeidsverhouding aangeeft.",
+        "en": "Code indicating the reason for the end of the employment relationship."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      },
+      "codes": {
+        "01": {
+          "nl": "Opzegging/ontslag door de werkgever binnen de proeftijd",
+          "en": "Notice/dismissal by the employer during the probation period"
+        },
+        "03": {
+          "nl": "Ontbinding door rechter op verzoek van de werkgever",
+          "en": "Dissolution by the court at the request of the employer"
+        },
+        "04": {
+          "nl": "Beëindiging arbeidsverhouding met wederzijds goedvinden op initiatief van de werkgever",
+          "en": "Termination of the employment relationship by mutual consent on the employer's initiative"
+        },
+        "05": {
+          "nl": "Opzegg./ontslag door de wrkgvr vanwege langdurige AO Opzegging/ontslag door de werkgever vanwege langdurige arbeidsongeschiktheid",
+          "en": "Notice/dismissal by the employer due to long-term incapacity for work"
+        },
+        "06": {
+          "nl": "Opzegg./ontslag door wrkgvr. vanwege Bedr.ec. redenen Opzegging/ontslag door de werkgever vanwege bedrijfseconomische redenen",
+          "en": "Notice/dismissal by the employer for business economic reasons"
+        },
+        "20": {
+          "nl": "Einde arbeidsverhouding door opzegging werknemer, door toedoen werknemer of op initiatief van de werknemer",
+          "en": "End of employment relationship through notice by the employee, through the employee's actions or on the employee's initiative"
+        },
+        "21": {
+          "nl": "Opzegging/ontslag door werkgever om dringende reden (ontslag op staande voet)",
+          "en": "Notice/dismissal by the employer for an urgent reason (summary dismissal)"
+        },
+        "30": {
+          "nl": "Einde van rechtswege vanwege verstrijken duur arbeidsverhouding voor bepaalde tijd",
+          "en": "End by operation of law due to expiry of a fixed-term employment relationship"
+        },
+        "31": {
+          "nl": "Einde van rechtswege, om een andere reden (intreden ontbindende voorwaarde, pensionering, overlijden, e.d.)",
+          "en": "End by operation of law, for another reason (occurrence of a resolutive condition, retirement, death, etc.)"
+        },
+        "40": {
+          "nl": "Einde uitzendovereenkomst, inroepen uitzendbeding door inlener vanwege ziekte uitzendkracht",
+          "en": "End of temporary employment agreement, temporary employment clause invoked by the hirer due to illness of the temporary worker"
+        },
+        "41": {
+          "nl": "Einde uitzendovereenkomst, inroepen uitzendbeding door inlener om een andere reden",
+          "en": "End of temporary employment agreement, temporary employment clause invoked by the hirer for another reason"
+        },
+        "50": {
+          "nl": "Ontslag publiekrechtelijke aanstelling vanwege onbekwaamheid of ongeschiktheid",
+          "en": "Dismissal from public-law appointment due to incompetence or unsuitability"
+        },
+        "51": {
+          "nl": "Ontslag publiekrechtelijke aanstelling vanwege leeftijd/pensionering",
+          "en": "Dismissal from public-law appointment due to age/retirement"
+        },
+        "90": {
+          "nl": "De arbeidsverhouding loopt door, maar de inkomstenverhouding is administratief beëindigd",
+          "en": "The employment relationship continues, but the income relationship has been ended administratively"
+        },
+        "91": {
+          "nl": "De arbeidsverhouding loopt door bij een nieuwe werkgever",
+          "en": "The employment relationship continues with a new employer"
+        },
+        "92": {
+          "nl": "De arbeidsverhouding wordt zonder onderbreking De arbeidsverhouding wordt zonder onderbreking opgevolgd door een nieuwe arbeidsverhouding bij dezelfde werkgever",
+          "en": "The employment relationship is followed without interruption by a new employment relationship with the same employer"
+        },
+        "99": {
+          "nl": "Een andere, hiervoor niet genoemde reden",
+          "en": "Another reason not mentioned above"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/SrtInkCd",
+      "label": {
+        "nl": "Soort inkomen, code",
+        "en": "Type of income, code"
+      },
+      "definition": {
+        "nl": "Code ter aanduiding van het soort inkomstenverhouding.",
+        "en": "Code indicating the type of income relationship."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      },
+      "codes": {
+        "11": {
+          "nl": "Loon of salaris ambtenaren in de zin van de Ambtenarenwet",
+          "en": "Wages or salary of civil servants within the meaning of the Civil Servants Act"
+        },
+        "13": {
+          "nl": "Loon of salaris directeuren van een nv/bv, wel verzekerd voor de werknemersverzekeringen.",
+          "en": "Wages or salary of directors of an NV/BV, insured under the employee insurance schemes."
+        },
+        "15": {
+          "nl": "Loon/salaris niet onder te brengen onder 11,13, of 17",
+          "en": "Wages/salary not falling under 11, 13 or 17"
+        },
+        "17": {
+          "nl": "Loon of salaris directeur-grootaandeelhouder van een nv/bv, niet verzekerd voor de werknemersverzekeringen",
+          "en": "Wages or salary of a director-major shareholder of an NV/BV, not insured under the employee insurance schemes"
+        },
+        "18": {
+          "nl": "Wachtgeld van een overheidsinstelling",
+          "en": "Redundancy pay from a government institution"
+        },
+        "22": {
+          "nl": "Uitkering i.h.k.v. AOW Uitkering in het kader van de Algemene Ouderdomswet (AOW)",
+          "en": "Benefit under the General Old Age Pensions Act (AOW)"
+        },
+        "23": {
+          "nl": "Oorlogs- en verzetspensioenen waaronder: · Stichting 1940-1945; · Stichting Friesland 1940-1945; · Stichting Sneek 1940-1945; · Wet buitengewoon pensioen 1940-1945; · Wet uitkering vervolgingsslachtoffers 1940 -1945; · Wet buitengewoon pensioen zeelieden-oorlogsslachtoffers; · Algemene Oorlogsongevallenregeling; · Algemene Oorlogsongevallenregeling Indonesië; · Wet buitengewoon pensioen Indisch verzet; · Wet Uitkeringen Burger Oorlogsslachtoffers 1940-1945",
+          "en": "War and resistance pensions, including: · Stichting 1940-1945; · Stichting Friesland 1940-1945; · Stichting Sneek 1940-1945; · Extraordinary Pensions Act 1940-1945; · Persecution Victims Benefits Act 1940-1945; · Extraordinary Pensions Act for Seamen War Victims; · General War Accidents Scheme; · General War Accidents Scheme Indonesia; · Extraordinary Pensions Act for the Indonesian Resistance; · Civilian War Victims Benefits Act 1940-1945"
+        },
+        "24": {
+          "nl": "Uitkeringen i.h.k.v. ANW Uitkeringen in het kader van de Algemene Nabestaandenwet (ANW)",
+          "en": "Benefits under the General Surviving Dependants Act (ANW)"
+        },
+        "31": {
+          "nl": "Uitkeringen i.h.k.v. ZW, vrijw.verz. ZW en WAZO Uitkering in het kader van de Ziektewet (ZW) , vrijwillige verzekering Ziektewet en de Wet arbeid en zorg (WAZO)",
+          "en": "Benefits under the Sickness Benefits Act (ZW), voluntary Sickness Benefits insurance and the Work and Care Act (WAZO)"
+        },
+        "32": {
+          "nl": "Uitkeringen i.h.k.v. WAO en WIA Uitkering in het kader van de Wet op de arbeidsongeschiktheidsverzekering (WAO) en particuliere verzekering ziekte, invaliditeit en ongeval",
+          "en": "Benefits under WAO and WIA: benefit under the Disability Insurance Act (WAO) and private insurance for sickness, disability and accident"
+        },
+        "33": {
+          "nl": "Uitkeringen i.h.k.v. nWW Uitkeringen (inclusief Toeslagenwet) in het kader van de nieuwe Werkloosheidswet (nWW)",
+          "en": "Benefits (including Supplementary Benefits Act) under the new Unemployment Insurance Act (nWW)"
+        },
+        "34": {
+          "nl": "Uitkeringen i.h.k.v. Wet inkomensvoorziening etc. Uitkeringen in het kader van de Wet inkomensvoorziening oudere en gedeeltelijk arbeidsongeschikte werkloze werknemers (IOAW)",
+          "en": "Benefits under the Income Provision for Older and Partially Disabled Unemployed Employees Act (IOAW)"
+        },
+        "36": {
+          "nl": "Uitkeringen i.h.k.v. Waz Uitkeringen in het kader van de Wet arbeidsongeschiktheidsverzekering zelfstandigen (Waz)",
+          "en": "Benefits under the Self-Employed Persons Disability Insurance Act (Waz)"
+        },
+        "37": {
+          "nl": "Uitkeringen i.h.k.v. Wajong Wet werk en ondersteuning jonggehandicapten(Wajong).",
+          "en": "Benefits under the Work and Employment Support for Disabled Young Persons Act (Wajong)."
+        },
+        "38": {
+          "nl": "Samenloop Wajong met Waz WAO/IVA of WGA Samenloop (gelijktijdig of volgtijdelijk) van uitkeringen van",
+          "en": "Concurrence of Wajong with Waz, WAO/IVA or WGA Concurrence (simultaneous or consecutive) of benefits of"
+        },
+        "39": {
+          "nl": "Uitkering in het kader van de Regeling IVA Uitkering in het kader van de Regeling inkomensvoorziening volledig arbeidsongeschikten (IVA)",
+          "en": "Benefit under the Income Provision Scheme for the Fully Disabled (IVA)"
+        },
+        "40": {
+          "nl": "Uitkering in het kader van de Regeling WGA Uitkering in het kader van de Regeling werkhervatting gedeeltelijk arbeidsgeschikten (WGA)",
+          "en": "Benefit under the Return to Work Scheme for the Partially Disabled (WGA)"
+        },
+        "42": {
+          "nl": "Uitkeringen i.h.k.v. Bijstandsbesluit zelfstandigen Uitkeringen in het kader van het Bijstandsbesluit zelfstandigen (Bbz).",
+          "en": "Benefits under the Social Assistance Decree for the Self-Employed (Bbz)."
+        },
+        "43": {
+          "nl": "Uitkering i.h.k.v. WWB Uitkering in het kader van de Wet Werk en bijstand (WWB)",
+          "en": "Benefit under the Work and Social Assistance Act (WWB)"
+        },
+        "45": {
+          "nl": "Uitkeringen i.h.k.v. IOAZ Uitkeringen in het kader van de Wet inkomensvoorziening oudere en gedeeltelijk arbeidsongeschikte gewezen zelfstandigen (IOAZ)",
+          "en": "Benefits under the Income Provision for Older and Partially Disabled Former Self-Employed Persons Act (IOAZ)"
+        },
+        "46": {
+          "nl": "Uitkering uit hoofde van de Toeslagenwet",
+          "en": "Benefit under the Supplementary Benefits Act"
+        },
+        "50": {
+          "nl": "Uitkeringen i.h.k.v. overige sociale verz.wetten Uitkeringen in het kader van de overige sociale verzekeringswetten, waaronder: · Ongevallenwet 1921; · Land- en Tuinbouwongevallenwet 1922; · Zeeongevallenwet 1919.",
+          "en": "Benefits under other social insurance acts, including: · Accidents Act 1921; · Agriculture and Horticulture Accidents Act 1922; · Maritime Accidents Act 1919."
+        },
+        "52": {
+          "nl": "Uitkering i.h.k.v. de Wet IOW Uitkering in het kader van de Wet inkomensvoorziening oudere werklozen (IOW).",
+          "en": "Benefit under the Income Provision for Older Unemployed Persons Act (IOW)."
+        },
+        "53": {
+          "nl": "Uitkering i.h.k.v. vervroegde uittreding Uitkering in het kader van vervroegde uittreding",
+          "en": "Early retirement benefit"
+        },
+        "55": {
+          "nl": "Uitkering i.h.k.v. APPA Uitkering in het kader van de Algemene Pensioenwet Politieke Ambtsdragers (APPA)",
+          "en": "Benefit under the General Pensions Act for Political Office Holders (APPA)"
+        },
+        "56": {
+          "nl": "Ouderdomspensioen dat via de werkgever is opgebouwd",
+          "en": "Old-age pension accrued through the employer"
+        },
+        "57": {
+          "nl": "Nabestaandenpensioen dat via de werkgever is opgebouwd",
+          "en": "Survivor's pension accrued through the employer"
+        },
+        "58": {
+          "nl": "AO-pensioen dat via de werkgever is opgebouwd Arbeidsongeschiktheidspensioen dat via de werkgever is",
+          "en": "Disability pension accrued through the employer Disability pension that has been accrued through the employer"
+        },
+        "59": {
+          "nl": "Lijfrenten i.h.k.v. arbeidsovereenkomst Lijfrenten die zijn afgesloten in het kader van een individuele of collectieve arbeidsovereenkomst",
+          "en": "Annuities under employment agreement Annuities concluded under an individual or collective employment agreement"
+        },
+        "60": {
+          "nl": "Lijfrenten niet i.h.k.v. arbeidsovereenkomst Lijfrenten die niet zijn afgesloten in het kader van een individuele of collectieve arbeidsovereenkomst",
+          "en": "Annuities not under employment agreement Annuities not concluded under an individual or collective employment agreement"
+        },
+        "61": {
+          "nl": "Aanvulling wrkgvr op uitk.wnmrsvrzk. na einde dvrbnd Aanvulling van de werkgever aan een werknemer op een uitkering werknemersverzekeringen, terwijl de dienstbetrekking is beëindigd",
+          "en": "Employer supplement to employee insurance benefit after end of employment Supplement paid by the employer to an employee on an employee insurance benefit after the employment has ended"
+        },
+        "62": {
+          "nl": "Ontslagvergoeding/transitievergoeding",
+          "en": "Severance pay/transition payment"
+        },
+        "63": {
+          "nl": "Overige niet hiervoor aangegeven pensioenen etc. Overige, niet hiervoor aangegeven, pensioenen of samenloop van meerdere pensioenen/lijfrenten (al dan niet hiervoor aangegeven) of een betaling op grond van een afspraak na einde dienstbetrekking",
+          "en": "Other pensions not listed above etc. Other pensions not listed above, or concurrence of several pensions/annuities (whether or not listed above), or a payment under an agreement after the end of employment"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/BrpOms",
+      "label": {
+        "nl": "Beroep, omschrijving",
+        "en": "Occupation, description"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/CAOCd",
+      "label": {
+        "nl": "CAO overeenkomst, code",
+        "en": "Collective labour agreement, code"
+      },
+      "definition": {
+        "nl": "De code die aangeeft welke Collectieve Arbeidsovereenkomst van toepassing is. The codes of this codelist are documented in a separate document",
+        "en": "The code indicating which collective labour agreement applies. The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/CdCaoInl",
+      "label": {
+        "nl": "Code CAO Inlener",
+        "en": "Code collective labour agreement of hirer"
+      },
+      "definition": {
+        "nl": "De code die aangeeft welke collectieve arbeidsovereenkomst of arbeidsvoorwaardenregeling bij de inlener van toepassing is. The codes of this codelist are documented in a separate document Regelingen die van toepassing zijn",
+        "en": "The code indicating which collective labour agreement or employment conditions scheme of the hirer applies. The codes of this code list are documented in a separate document. Applicable schemes"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/JrlnTbBzBel",
+      "label": {
+        "nl": "Jaarloon voor tabel bijzondere beloningen",
+        "en": "Annual wage for special remuneration table"
+      },
+      "definition": {
+        "nl": "Het jaarloon dat van toepassing is voor de tabel bijzondere beloningen.",
+        "en": "The annual wage that applies for the special remuneration table."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Sector",
+      "label": {
+        "nl": "Sector",
+        "en": "Sector"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Sector/DatAanvSect",
+      "label": {
+        "nl": "Datum aanvang sector",
+        "en": "Sector start date"
+      },
+      "definition": {
+        "nl": "De datum van de eerste dag van de periode gedurende welke onder de inkomstenverhouding voor een sector gewerkt is.",
+        "en": "The date of the first day of the period during which work was done under the income relationship for a sector."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Sector/DatEindSect",
+      "label": {
+        "nl": "Datum einde sector",
+        "en": "Sector end date"
+      },
+      "definition": {
+        "nl": "De datum van de laatste dag van de periode gedurende welke onder de Inkomstenverhouding voor een sector gewerkt is.",
+        "en": "The date of the last day of the period during which work was done under the income relationship for a sector."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Sector/Sect",
+      "label": {
+        "nl": "Sector",
+        "en": "Sector"
+      },
+      "definition": {
+        "nl": "Code ter aanduiding van de sector waar de inkomstenverhouding onder viel gedurende de aangegeven periode.",
+        "en": "Code indicating the sector under which the income relationship fell during the stated period."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte. The codes of this codelist are documented in a separate document",
+        "en": "Source: payroll tax return. The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Auto",
+      "label": {
+        "nl": "Auto",
+        "en": "Car"
+      },
+      "definition": {
+        "nl": "Auto die door werkgever ter beschikking is gesteld Als de werkgever de werknemer een auto ter beschikking stelt, wordt het privégebruik van die auto voor de werknemer belast als loon in natura (ofwel: niet in geld genoten loon ). De werkgever moet daarover loonbelasting/premie volksverzekeringen en de inkomensafhankelijke bijdrage Zorgverzekeringswet (Zvw) inhouden. Ter beschikking stellen is een ruim begrip. Daarvan is ook sprake als:",
+        "en": "Car made available by the employer If the employer makes a car available to the employee, the private use of that car is taxed for the employee as wages in kind (i.e. wages not received in cash). The employer must withhold wage tax/national insurance contributions and the income-related contribution under the Health Insurance Act (Zvw) on it. Making available is a broad concept. It also applies if:"
+      },
+      "description": {
+        "nl": "- de auto niet eigendom is van de werkgever, maar de werkgever deze voor zijn werknemer heeft gehuurd of geleast;\n- de werkgever heeft afgesproken om de totale kosten (inclusief de afschrijving) van de eigen auto van de werknemer te vergoeden;\n- de werkgever de kosten vergoedt van een auto die zijn werknemer zelf heeft gehuurd of geleast.",
+        "en": "- the car is not owned by the employer, but the employer has rented or leased it for the employee;\n- the employer has agreed to reimburse the total costs (including depreciation) of the employee's own car;\n- the employer reimburses the costs of a car that the employee has rented or leased."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Auto/Ingdat",
+      "label": {
+        "nl": "Ingangsdatum",
+        "en": "Start date"
+      },
+      "definition": {
+        "nl": "Ingangsdatum geldigheid van de onder Auto vermelde gegevens. Zodra een van de gegevens wijzigt, leidt dit tot een nieuw voorkomen van Auto.",
+        "en": "Start date of validity of the data stated under Car. As soon as one of the data changes, this leads to a new occurrence of Car."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Auto/Enddat",
+      "label": {
+        "nl": "Einddatum",
+        "en": "End date"
+      },
+      "definition": {
+        "nl": "Einddatum geldigheid van de onder Auto vermelde gegevens.",
+        "en": "End date of validity of the data stated under Car."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Auto/Kenteken",
+      "label": {
+        "nl": "Kenteken",
+        "en": "Licence plate"
+      },
+      "definition": {
+        "nl": "Een voor een kentekenplichtig voertuig opgegeven unieke identificatie, die zichtbaar aan het voertuig moet zijn aangebracht m.b.v. een kentekenplaat. Bevat geen liggende strepen. Kan buitenlands kenteken zijn.",
+        "en": "A unique identification issued for a vehicle subject to registration, which must be visibly attached to the vehicle by means of a licence plate. Contains no hyphens. May be a foreign registration."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Auto/LandCd",
+      "label": {
+        "nl": "Land, code",
+        "en": "Country, code"
+      },
+      "definition": {
+        "nl": "Het gaat hier om de officiële aanduiding van het land of gebiedsdeel waar de auto is geregisteerd.",
+        "en": "This is the official designation of the country or territory where the car is registered."
+      },
+      "description": {
+        "nl": "Norminstantie: ISO 3166 (Entity, Alpha-2 code) The codes of this codelist are documented in a separate document",
+        "en": "Standard body: ISO 3166 (Entity, Alpha-2 code). The codes of this code list are documented in a separate document"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Auto/GebrAuto",
+      "label": {
+        "nl": "Gebruik personen- of bestelauto, code",
+        "en": "Use of passenger car or van, code"
+      },
+      "definition": {
+        "nl": "1 Geen auto ter beschikking gesteld 2 Auto ter beschikking gesteld, zonder prive-gebruik Auto ter beschikking gesteld, zonder afspraak over privé-gebruik 3 Auto ter beschikking gesteld, met prive-gebruik Auto ter beschikking gesteld, met afspraak over privé-gebruik",
+        "en": "1 No car made available 2 Car made available, without private use Car made available, without agreement on private use 3 Car made available, with private use Car made available, with agreement on private use"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Auto/CdRdnGnBijt",
+      "label": {
+        "nl": "Reden geen of afwijkende bijtelling auto, code",
+        "en": "Reason for no or deviating car addition, code"
+      },
+      "definition": {
+        "nl": "Code die aangeeft waarom er geen bijtelling voor het privé-gebruik van een ter beschikking gestelde auto is.",
+        "en": "Code indicating why there is no addition to income for the private use of a car made available."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      },
+      "codes": {
+        "1": {
+          "nl": "Afspraak via werkgever met Belastingdienst",
+          "en": "Agreement with the Tax Administration through the employer"
+        },
+        "2": {
+          "nl": "Wrknmr heeft verklaring geen prive gebruik auto Beldnst",
+          "en": "Employee has a Tax Administration statement of no private use of car"
+        },
+        "3": {
+          "nl": "Ander bewijs personen- en bestelauto",
+          "en": "Other proof for passenger cars and vans"
+        },
+        "5": {
+          "nl": "Doorlopend afwisselend gebruik bestelauto",
+          "en": "Continuous alternating use of a van"
+        },
+        "7": {
+          "nl": "Wrknmr heeft vrklring uitsl. zak.gebruik bestelauto BD Werknemer heeft verklaring uitsluitend zakelijk gebruik bestelauto Belastingdienst",
+          "en": "Employee has a Tax Administration statement of exclusively business use of van"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Auto/CatprijsAuto",
+      "label": {
+        "nl": "Catalogusprijs auto",
+        "en": "Car list price"
+      },
+      "definition": {
+        "nl": "Catalogusprijs van de auto inclusief eventuele accessoires.",
+        "en": "List price of the car including any accessories."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Auto/Bijtelperc",
+      "label": {
+        "nl": "Bijtellingpercentage",
+        "en": "Addition percentage"
+      },
+      "definition": {
+        "nl": "Gehanteerd percentage voor de berekening van de bijtelling.",
+        "en": "Percentage used to calculate the addition to income."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Auto/WrdPrGebrAut",
+      "label": {
+        "nl": "Waarde prive-gebruik auto",
+        "en": "Value of private use of car"
+      },
+      "definition": {
+        "nl": "Het bedrag van de forfaitaire waarde van het privégebruik van een aan de werknemer ter beschikking gestelde auto vóór aftrek van de eigen bijdrage van de werknemer.",
+        "en": "The amount of the flat-rate value of the private use of a car made available to the employee, before deduction of the employee's own contribution."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Auto/WrknBijdrAut",
+      "label": {
+        "nl": "Werknemersbijdrage prive-gebruik auto",
+        "en": "Employee contribution for private use of car"
+      },
+      "definition": {
+        "nl": "Het bedrag van de eigen bijdrage van de werknemer voor het privé-gebruik van één of meer ter beschikking gestelde 'belaste' auto's.",
+        "en": "The amount of the employee's own contribution for the private use of one or more 'taxed' cars made available."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk",
+      "label": {
+        "nl": "Loontijdvak",
+        "en": "Pay period"
+      },
+      "definition": {
+        "nl": "De periode waarover het loon wordt betaald.",
+        "en": "The period over which the wages are paid."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/Prdnr",
+      "label": {
+        "nl": "Periodenummer",
+        "en": "Period number"
+      },
+      "definition": {
+        "nl": "Loontijdvaknummer. Het veld is 4 posities lang. Dit is gedaan om de mogelijkheid te geven om aan te sluiten op de methode, die in de loonadministratie wordt gebruikt.",
+        "en": "Pay period number. The field is 4 positions long. This allows alignment with the method used in the payroll administration."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/Ingdat",
+      "label": {
+        "nl": "Ingangsdatum loontijdvak",
+        "en": "Start date of pay period"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/Enddat",
+      "label": {
+        "nl": "Einddatum loontijdvak",
+        "en": "End date of pay period"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar",
+      "label": {
+        "nl": "Inkomstenverhouding variabel",
+        "en": "Variable income relationship"
+      },
+      "definition": {
+        "nl": "Variabele gegevens over de dienstbetrekking tussen de werknemer en de inhoudingsplichtige. Een dienstbetrekking is een arbeidsverhouding gebaseerd op een arbeidsovereenkomst tussen een werkgever en een werknemer. Deze arbeidsovereenkomst is geregeld in artikel 7:610 van het Burgerlijk Wetboek.",
+        "en": "Variable data on the employment between the employee and the withholding agent. Employment is an employment relationship based on an employment contract between an employer and an employee. This employment contract is governed by article 7:610 of the Dutch Civil Code."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndZW",
+      "label": {
+        "nl": "Indicatie verzekerd ingevolge ZW J/N",
+        "en": "Indicator insured under ZW Y/N"
+      },
+      "definition": {
+        "nl": "Code die aangeeft of de natuurlijke persoon voor deze inkomstenverhouding voor de Ziektewet is verzekerd.",
+        "en": "Code indicating whether the natural person is insured under the Sickness Benefits Act for this income relationship."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndWW",
+      "label": {
+        "nl": "Indicatie verzekerd ingevolge WW J/N",
+        "en": "Indicator insured under WW Y/N"
+      },
+      "definition": {
+        "nl": "Code die aangeeft of de natuurlijke persoon voor deze inkomstenverhouding voor de Werkloosheidswet is verzekerd.",
+        "en": "Code indicating whether the natural person is insured under the Unemployment Insurance Act for this income relationship."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndZvw",
+      "label": {
+        "nl": "Indicatie verzekerd ingevolge Zvw J/N",
+        "en": "Indicator insured under Zvw Y/N"
+      },
+      "definition": {
+        "nl": "Indicatie verzekerd voor Zvw.",
+        "en": "Indicator insured for Zvw."
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndWAO",
+      "label": {
+        "nl": "Indicatie verzekerd WAO/IVA/WGA",
+        "en": "Indicator insured WAO/IVA/WGA"
+      },
+      "definition": {
+        "nl": "Code die aangeeft of de natuurlijke persoon voor deze inkomstenverhouding voor de Wet op de arbeidsongeschiktheidsverzekering en/of de Wet werk en inkomen naar arbeidsvermogen is verzekerd.",
+        "en": "Code indicating whether the natural person is insured under the Disability Insurance Act and/or the Work and Income according to Labour Capacity Act for this income relationship."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/CdZvw",
+      "label": {
+        "nl": "Code verzekeringssituatie Zvw",
+        "en": "Code insurance situation Zvw"
+      },
+      "definition": {
+        "nl": "Code die aangeeft of de natuurlijke persoon al dan niet verzekeringsplichtig is voor de Zvw en welk tarief van toepassing is.",
+        "en": "Code indicating whether or not the natural person is insured under the Zvw and which rate applies."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      },
+      "codes": {
+        "A": {
+          "nl": "Niet verzekeringspl/persoon niet verzekerd voor AWBZ",
+          "en": "Not insured / person not insured under AWBZ"
+        },
+        "B": {
+          "nl": "Niet verzekeringsplichtig omdat persoon niet verzekerd is voor",
+          "en": "Not insured because the person is not insured under"
+        },
+        "G": {
+          "nl": "AWBZ. Niet verzkeringspl/persoon is militair",
+          "en": "AWBZ. Not insured / person is military"
+        },
+        "H": {
+          "nl": "Niet verzekeringsplichtig omdat persoon militair ambtenaar is in werkelijke dienst of met buitengewoon verlof",
+          "en": "Not insured because the person is a military civil servant in active service or on special leave"
+        },
+        "I": {
+          "nl": "Niet verzekeringspl/persoon artiest of buitenl. ber.sp. Niet verzekeringsplichtig omdat persoon buitenlands artiest of",
+          "en": "Not insured / person is foreign artist or professional athlete Not insured because the person is a foreign artist or"
+        },
+        "K": {
+          "nl": "buitenlands beroepssporter is waarbij code loonbelastingtabel 221, 224 of 225 is toegepast. Wel verzekeringsplichtig / geen tarief, binnenl artiest Wel verzekeringsplichtig, geen tarief toegepast omdat persoon binnenlands artiest is waarbij code loonbelastingtabel 220 is Niet verzekeringsplichtig /niet verz. AWBZ pseudobijdr. Niet verzekeringsplichtig omdat persoon niet verzekerd is voor de AWBZ, maar wel pseudobijdrage verschuldigd omdat in het woonland recht bestaat op zorg ten laste van Nederland. Wel verzekeringsplichtig/normaal tarief werkgevershef. Wel verzekeringsplichtig, normaal tarief werkgeversheffing",
+          "en": "foreign professional athlete for whom wage tax table code 221, 224 or 225 has been applied. Insured / no rate, domestic artist: insured, no rate applied because the person is a domestic artist for whom wage tax table code 220 has been applied. Not insured / not insured under AWBZ, pseudo contribution: not insured because the person is not insured under the AWBZ, but a pseudo contribution is due because there is a right to care at the expense of the Netherlands in the country of residence. Insured / normal rate employer levy"
+        },
+        "L": {
+          "nl": "Wel verzekeringsplichtig/0%-tarief zeelieden Wel verzekeringsplichtig, 0%-tarief werkgeversheffing (zeelieden)",
+          "en": "Insured / 0% rate seafarers Insured, 0% employer levy rate (seafarers)"
+        },
+        "M": {
+          "nl": "Wel verzekeringsplichtig, ingehouden bijdrage",
+          "en": "Insured, contribution withheld"
+        },
+        "N": {
+          "nl": "Wel verzekeringsplichtig/meer tar. werkg.heff (K en L) Wel verzekeringsplichtig, meer tarieven werkgeversheffing (K en",
+          "en": "Insured / multiple employer levy rates (K and L) Insured, multiple employer levy rates (K and L)"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/CdAard",
+      "label": {
+        "nl": "Code aard arbeidsverhouding",
+        "en": "Code nature of employment relationship"
+      },
+      "definition": {
+        "nl": "Code die aangeeft welke soort arbeidsverhouding bepalend is voor de vaststelling dat de werknemer verplicht verzekerd is voor de werknemersverzekeringen.",
+        "en": "Code indicating which type of employment relationship determines that the employee is compulsorily insured under the employee insurance schemes."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      },
+      "codes": {
+        "1": {
+          "nl": "Arbeidsovereenkomst",
+          "en": "Employment contract"
+        },
+        "4": {
+          "nl": "Deelvisser",
+          "en": "Share fisherman"
+        },
+        "6": {
+          "nl": "Musicus / artiest",
+          "en": "Musician / artist"
+        },
+        "7": {
+          "nl": "Stagiair",
+          "en": "Intern"
+        },
+        "11": {
+          "nl": "Uitzendkracht",
+          "en": "Temporary worker"
+        },
+        "18": {
+          "nl": "Publiekrechtelijke aanstelling",
+          "en": "Public-law appointment"
+        },
+        "21": {
+          "nl": "WSW beschut werk",
+          "en": "WSW sheltered work"
+        },
+        "22": {
+          "nl": "WSW detachering bij reguliere werkgever",
+          "en": "WSW secondment to a regular employer"
+        },
+        "23": {
+          "nl": "WSW begeleid werk",
+          "en": "WSW supported work"
+        },
+        "24": {
+          "nl": "Participatiewet beschut werk",
+          "en": "Participation Act sheltered work"
+        },
+        "79": {
+          "nl": "Opting-in regeling",
+          "en": "Opting-in scheme"
+        },
+        "81": {
+          "nl": "Overige fictieve dienstbetrekkingen",
+          "en": "Other fictitious employment relationships"
+        },
+        "82": {
+          "nl": "Payrolling",
+          "en": "Payrolling"
+        },
+        "83": {
+          "nl": "Beroepspraktijkopleiding van de beroepsbegeleidende leerweg (BBL)",
+          "en": "Work-based learning pathway (BBL)"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/CdInvlVpl",
+      "label": {
+        "nl": "Code invloed verzekeringsplicht",
+        "en": "Code influence on compulsory insurance"
+      },
+      "definition": {
+        "nl": "Code die bijzondere omstandigheden voor het verzekerd zijn voor werknemersverzekeringen aangeeft.",
+        "en": "Code indicating special circumstances for being insured under the employee insurance schemes."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      },
+      "codes": {
+        "A": {
+          "nl": "Echtgenoot of familie van de eigenaar of van de DGA",
+          "en": "Spouse or relative of the owner or of the DGA"
+        },
+        "B": {
+          "nl": "Vorige eigenaar",
+          "en": "Previous owner"
+        },
+        "D": {
+          "nl": "Oproep/invalkracht zonder verplichting om te komen",
+          "en": "On-call/substitute worker without obligation to come"
+        },
+        "E": {
+          "nl": "Oproep/invalkracht met verplichting om te komen",
+          "en": "On-call/substitute worker with obligation to come"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/FsIndFZ",
+      "label": {
+        "nl": "Code fase indeling F&Z",
+        "en": "Code phase classification F&Z (Flexibility and Security)"
+      },
+      "definition": {
+        "nl": "Code die aangeeft in welke fase de inkomstenverhouding voor bepaalde tijd zich bevindt in het kader van de Wet flexibiliteit en zekerheid.",
+        "en": "Code indicating the phase of the fixed-term income relationship under the Flexibility and Security Act."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      },
+      "codes": {
+        "1": {
+          "nl": "Fase 1-2 met uitzendbeding",
+          "en": "Phase 1-2 with temporary employment clause"
+        },
+        "3": {
+          "nl": "Fase 3",
+          "en": "Phase 3"
+        },
+        "4": {
+          "nl": "Fase 4",
+          "en": "Phase 4"
+        },
+        "5": {
+          "nl": "Wettelijk regime",
+          "en": "Statutory regime"
+        },
+        "6": {
+          "nl": "Ketensysteem",
+          "en": "Chain system"
+        },
+        "17": {
+          "nl": "Fase A met uitzendbeding",
+          "en": "Phase A with temporary employment clause"
+        },
+        "18": {
+          "nl": "Fase B",
+          "en": "Phase B"
+        },
+        "19": {
+          "nl": "Fase C",
+          "en": "Phase C"
+        },
+        "38": {
+          "nl": "Fase A zonder uitzendbeding, met loonuitsluiting",
+          "en": "Phase A without temporary employment clause, with wage exclusion"
+        },
+        "40": {
+          "nl": "Fase A zonder uitzendbeding",
+          "en": "Phase A without temporary employment clause"
+        },
+        "41": {
+          "nl": "Fase 1-2 zonder uitzendbeding",
+          "en": "Phase 1-2 without temporary employment clause"
+        },
+        "43": {
+          "nl": "Fase 1-2 zndr uitzendbedi met uitsl. loondrbet.vrplicht Fase 1-2 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting.",
+          "en": "Phase 1-2 without temporary employment clause, with exclusion of the obligation to continue paying wages."
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrVerhaal",
+      "label": {
+        "nl": "Bedrag op de werknemer verhaalde WGA premie",
+        "en": "Amount of WGA contribution recovered from the employee"
+      },
+      "definition": {
+        "nl": "Dit betreft de totaal verhaalde WGA premie.",
+        "en": "This is the total WGA contribution recovered."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrGediffWhk",
+      "label": {
+        "nl": "Bedrag gedifferentieerde premie Werkhervattingskas",
+        "en": "Amount of differentiated contribution Return to Work Fund"
+      },
+      "definition": {
+        "nl": "Het bedrag dat door de administratieve eenheid in het tijdvak verschuldigd is voor de inkomstenverhouding aan gedifferentieerde premie Whk.",
+        "en": "The amount of differentiated Whk contribution owed by the administrative unit in the period for the income relationship."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrGediffWhkWGA",
+      "label": {
+        "nl": "Premie WGA",
+        "en": "WGA contribution"
+      },
+      "definition": {
+        "nl": "Het WGA gedeelte van Bedrag gedifferentieerde premie Werkhervattingskas.",
+        "en": "The WGA part of the amount of differentiated contribution Return to Work Fund."
+      },
+      "description": {
+        "nl": "Toelichting: Het eigenrisicodragen WGA is met ingang van 1 januari 2017 uitgebreid met de WGA-lasten flexibele dienstbetrekkingen. Het eigenrisicodragen WGA bevat dan de WGA-lasten vaste dienstbetrekking én de WGA-lasten flexibele dienstbetrekking of wel de WGA-lasten totaal. Een werkgever kan vanaf 1 januari 2017 alleen nog maar eigenrisicodrager WGA zijn voor het geheel, dus voor de WGA-lasten vaste dienstbetrekking en de WGA-lasten flexibele dienstbetrekking. Hierdoor zijn er vanaf 2017 ook geen drie componenten meer in de gedifferentieerde premie Whk, maar slechts twee namelijk de component WGA-lasten (=totaal) en de component ZW-lasten. Vanaf 2017",
+        "en": "Explanation: as of 1 January 2017, WGA self-insurance has been extended with the WGA costs of flexible employment relationships. WGA self-insurance then covers the WGA costs of permanent employment and the WGA costs of flexible employment, i.e. the total WGA costs. From 1 January 2017 an employer can only be a WGA self-insurer for the whole, i.e. for both the WGA costs of permanent employment and those of flexible employment. As a result, from 2017 there are no longer three components in the differentiated Whk contribution, but only two, namely the WGA costs component (= total) and the ZW costs component. From 2017"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrGediffWhkZW",
+      "label": {
+        "nl": "Premie ZW",
+        "en": "ZW contribution"
+      },
+      "definition": {
+        "nl": "Het ZW gedeelte van Bedrag gedifferentieerde premie Werkhervattingskas.",
+        "en": "The ZW part of the amount of differentiated contribution Return to Work Fund."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndAvrLkvOudrWn",
+      "label": {
+        "nl": "Ind. aanvraag loonkostenvoordeel oudere wrknmr.",
+        "en": "Indicator application wage cost benefit older employee"
+      },
+      "definition": {
+        "nl": "Indicatie aanvraag loonkostenvoordeel oudere werknemer Indicatie waarmee de administratieve eenheid verzoekt om in aanmerking te komen voor het loonkostenvoordeel oudere werknemer.",
+        "en": "Indicator application wage cost benefit older employee Indicator by which the administrative unit requests eligibility for the wage cost benefit for older employees."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        },
+        "O": {
+          "nl": "Onbekend",
+          "en": "Unknown"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndAvrLkvAgWn",
+      "label": {
+        "nl": "Ind. aanvr. loonk.voordeel arbeidsgehand. wrknmr.",
+        "en": "Indicator application wage cost benefit occupationally disabled employee"
+      },
+      "definition": {
+        "nl": "Indicatie aanvraag loonkostenvoordeel arbeidsgehandicapte werknemer Indicatie waarmee de administratieve eenheid verzoekt om in aanmerking te komen voor een loonkostenvoordeel in verband met het in dienst nemen van een arbeidsgehandicapte werknemer.",
+        "en": "Indicator application wage cost benefit occupationally disabled employee Indicator by which the administrative unit requests eligibility for a wage cost benefit in connection with hiring an occupationally disabled employee."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        },
+        "O": {
+          "nl": "Onbekend",
+          "en": "Unknown"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndAvrLkvDgBafSb",
+      "label": {
+        "nl": "Ind. aanvr. loonk. voordeel doelgroep banenafspraak",
+        "en": "Indicator application wage cost benefit target group job agreement"
+      },
+      "definition": {
+        "nl": "ndicatie aanvraag loonkostenvoordeel doelgroep banenafspraak en scholingsbelemmerden Indicatie waarmee de administratieve eenheid verzoekt om in aanmerking te komen voor een loonkostenvoordeel in verband met het in dienst nemen van een werknemer die behoort tot de doelgroep banenafspraak en scholingsbelemmerden.",
+        "en": "Indicator application wage cost benefit target group job agreement and persons with learning disabilities Indicator by which the administrative unit requests eligibility for a wage cost benefit in connection with hiring an employee who belongs to the job agreement target group or has learning disabilities."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        },
+        "O": {
+          "nl": "Onbekend",
+          "en": "Unknown"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndAvrLkvHpAgWn",
+      "label": {
+        "nl": "Ind. aanvr. loonk. voordeel herpl. arbdsgehand. wrknmr",
+        "en": "Indicator application wage cost benefit redeployment of occupationally disabled employee"
+      },
+      "definition": {
+        "nl": "Indicatie aanvraag loonkostenvoordeel herplaatsen arbeidsgehandicapte werknemer Indicatie waarmee de administratieve eenheid verzoekt om in aanmerking te komen voor een loonkostenvoordeel in verband met het herplaatsen van een arbeidsgehandicapte werknemer.",
+        "en": "Indicator application wage cost benefit redeployment of occupationally disabled employee Indicator by which the administrative unit requests eligibility for a wage cost benefit in connection with redeploying an occupationally disabled employee."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        },
+        "O": {
+          "nl": "Onbekend",
+          "en": "Unknown"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndVakBn",
+      "label": {
+        "nl": "Vakantiebonnen",
+        "en": "Holiday vouchers"
+      },
+      "definition": {
+        "nl": "Code die aangeeft dat binnen de inkomstenverhouding de regeling vakantiebonnen of tijdsparen is toegepast.",
+        "en": "Code indicating that the holiday voucher or time saving scheme has been applied within the income relationship."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndVrvr",
+      "label": {
+        "nl": "Indicatie vervoer vanwege inhoudingsplichtige J/N",
+        "en": "Indicator transport arranged by withholding agent Y/N"
+      },
+      "definition": {
+        "nl": "Code die aangeeft dat in het kader van deze inkomstenverhouding vervoer vanwege de inhoudingsplichtige is geregeld.",
+        "en": "Code indicating that transport is arranged by the withholding agent for this income relationship."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndArbovOnbepTd",
+      "label": {
+        "nl": "Indicatie arbeidsovereenkomst voor onbepaalde tijd",
+        "en": "Indicator employment contract for an indefinite term"
+      },
+      "definition": {
+        "nl": "Indicatie die aangeeft of de arbeidsovereenkomst voor onbepaalde tijd is.",
+        "en": "Indicator stating whether the employment contract is for an indefinite term."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndSchriftArbov",
+      "label": {
+        "nl": "Indicatie schriftelijke arbeidsovereenkomst",
+        "en": "Indicator written employment contract"
+      },
+      "definition": {
+        "nl": "Indicatie die aangeeft of de arbeidsovereenkomst schriftelijk is vastgelegd.",
+        "en": "Indicator stating whether the employment contract has been laid down in writing."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndOprov",
+      "label": {
+        "nl": "Indicatie oproepovereenkomst",
+        "en": "Indicator on-call agreement"
+      },
+      "definition": {
+        "nl": "Indicatie die aangeeft of er sprake is van een oproepovereenkomst.",
+        "en": "Indicator stating whether there is an on-call agreement."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndJrurennrm",
+      "label": {
+        "nl": "Indicatie jaarurennorm",
+        "en": "Indicator annual hours standard"
+      },
+      "definition": {
+        "nl": "Indicatie waarmee u aangeeft dat u de jaarurennorm toepast.",
+        "en": "Indicator stating that you apply the annual hours standard."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndPubAanOnbepT",
+      "label": {
+        "nl": "Indicatie pub.rechtelijke aanstelling onbepaalde tijd",
+        "en": "Indicator public-law appointment for an indefinite term"
+      },
+      "definition": {
+        "nl": "Indicatie die aangeeft of de publiekrechtelijke aanstelling voor onbepaalde tijd is. Beschrijving aantal uren e.d.",
+        "en": "Indicator stating whether the public-law appointment is for an indefinite term. Description of number of hours etc."
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndLhKort",
+      "label": {
+        "nl": "Indicatie loonheffingskorting",
+        "en": "Indicator wage tax credit"
+      },
+      "definition": {
+        "nl": "De inhoudingsplichtige vult hier ‘J’ in als één of meer loonheffingskortingen, niet zijnde de jonggehandicaptenkorting of de tijdelijke heffingskorting, zijn toegepast. Als de inhoudingsplichtige alleen de jonggehandicaptenkorting toepast of loon (c.q. een uitkering) betaalt waarop alleen de tijdelijke heffingskorting van toepassing is, dan moet als indicatie \"N\" worden gevuld.",
+        "en": "The withholding agent enters 'J' here if one or more wage tax credits, other than the young disabled persons' credit or the temporary tax credit, have been applied. If the withholding agent only applies the young disabled persons' credit or pays wages (or a benefit) to which only the temporary tax credit applies, the indicator \"N\" must be filled."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/LbTab",
+      "label": {
+        "nl": "Code loonbelastingtabel",
+        "en": "Code wage tax table"
+      },
+      "definition": {
+        "nl": "Een code waarmee aangegeven wordt welke tabel voor de inhouding LB/PH is toegepast. Zie ook de Loonaangifte.",
+        "en": "A code indicating which table was applied for the withholding of wage tax/national insurance contributions. See also the payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndGembez",
+      "label": {
+        "nl": "Indicatie gemoedsbezwaarde J/N",
+        "en": "Indicator conscientious objector Y/N"
+      },
+      "definition": {
+        "nl": "Indicatie of werknemer voor de inkomstenverhouding als gemoedsbezwaard wordt behandeld. Dit is van belang bij het vaststellen van de verschuldigde premies voor de werknemersverzekeringen (alleen werkgeversdeel is van toepassing) en bij een eventuele vaststelling van het recht op uitkering.",
+        "en": "Indicator whether the employee is treated as a conscientious objector for the income relationship. This matters when determining the contributions owed for the employee insurance schemes (only the employer part applies) and when determining any right to benefit."
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/Ind30Rgl",
+      "label": {
+        "nl": "Indicatie 30% regeling J/N",
+        "en": "Indicator 30% ruling Y/N"
+      },
+      "definition": {
+        "nl": "Indicatie of een bijzondere belastingregeling voor werknemers uitgezonden naar Nederland is toegepast.",
+        "en": "Indicator whether a special tax scheme for employees seconded to the Netherlands has been applied."
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndStudSch",
+      "label": {
+        "nl": "Indicatie studenten/scholierenregeling J/N",
+        "en": "Indicator student/pupil scheme Y/N"
+      },
+      "definition": {
+        "nl": "Indicatie of studenten-en scholierenregeling wordt toegepast.",
+        "en": "Indicator whether the student and pupil scheme is applied."
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndWgldOudRegl",
+      "label": {
+        "nl": "Indicatie wachtgeld oude regeling",
+        "en": "Indicator redundancy pay old scheme"
+      },
+      "definition": {
+        "nl": "Indicatie of het loon (de uitkering) van de werknemer onder de wachtgeldregeling van vóór 2001 valt.",
+        "en": "Indicator whether the wages (benefit) of the employee fall under the pre-2001 redundancy pay scheme."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/BdrGrndslgAfdrchtvrmWVA",
+      "label": {
+        "nl": "Bedrag grondslag afdrachtvermindering WVA",
+        "en": "Amount of basis for payment reduction WVA"
+      },
+      "definition": {
+        "nl": "Loon in relatie tot uitkering",
+        "en": "Wages in relation to benefit"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndSA71",
+      "label": {
+        "nl": "Indicatie loon bestaat mede uit AOW-uitkering",
+        "en": "Indicator wages partly consist of AOW benefit"
+      },
+      "definition": {
+        "nl": "Indicatie loon bestaat (mede) uit een AOW-uitkering voor alleenstaande (met of zonder kinderen).",
+        "en": "Indicator wages consist (partly) of an AOW benefit for a single person (with or without children)."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IndSA72",
+      "label": {
+        "nl": "Indicatie loon inclusief Wajong-uitkering",
+        "en": "Indicator wages including Wajong benefit"
+      },
+      "definition": {
+        "nl": "Code die aangeeft dat in het loon uit deze inkomstenverhouding een betaalde Wajong-uitkering is begrepen.",
+        "en": "Code indicating that the wages from this income relationship include a paid Wajong benefit."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      },
+      "codes": {
+        "J": {
+          "nl": "Ja",
+          "en": "Yes"
+        },
+        "N": {
+          "nl": "Nee",
+          "en": "No"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/CdIncInkVerm",
+      "label": {
+        "nl": "Code incidentele inkomstenvermindering",
+        "en": "Code incidental income reduction"
+      },
+      "definition": {
+        "nl": "Code die aangeeft dat het loon door aanvullend geboorteverlof, betaald ouderschapsverlof, onbetaald verlof, stakingsdagen of ziekte lager is dan het overeengekomen loon.",
+        "en": "Code indicating that the wages are lower than the agreed wages due to additional birth leave, paid parental leave, unpaid leave, strike days or illness."
+      },
+      "codes": {
+        "K": {
+          "nl": "Kindverlof",
+          "en": "Child leave"
+        },
+        "O": {
+          "nl": "Onbetaald verlof",
+          "en": "Unpaid leave"
+        },
+        "S": {
+          "nl": "Stakingsdagen",
+          "en": "Strike days"
+        },
+        "Z": {
+          "nl": "Ziekte",
+          "en": "Illness"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrAofLg",
+      "label": {
+        "nl": "Premie Aof laag",
+        "en": "Aof contribution low"
+      },
+      "definition": {
+        "nl": "Het bedrag dat door de administratieve eenheid in het tijdvak voor de inkomstenverhouding aan lage premie Aof is verschuldigd.",
+        "en": "The amount of low Aof contribution owed by the administrative unit in the period for the income relationship."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrAofHg",
+      "label": {
+        "nl": "Premie Aof hoog",
+        "en": "Aof contribution high"
+      },
+      "definition": {
+        "nl": "Het bedrag dat door de administratieve eenheid in het tijdvak voor de inkomstenverhouding aan hoge premie Aof is verschuldigd.",
+        "en": "The amount of high Aof contribution owed by the administrative unit in the period for the income relationship."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrAofUit",
+      "label": {
+        "nl": "Premie Aof uitkering",
+        "en": "Aof contribution benefit"
+      },
+      "definition": {
+        "nl": "Het bedrag dat door de administratieve eenheid in het tijdvak voor de inkomstenverhouding aan premie Aof over de uitkering is verschuldigd.",
+        "en": "The amount of Aof contribution on the benefit owed by the administrative unit in the period for the income relationship."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/OpslWko",
+      "label": {
+        "nl": "Opslag Wko",
+        "en": "Wko surcharge"
+      },
+      "definition": {
+        "nl": "Het bedrag dat door de administratieve eenheid in het tijdvak voor de inkomstenverhouding aan opslag Wet Kinderopvang (Wko) is verschuldigd.",
+        "en": "The amount of Childcare Act (Wko) surcharge owed by the administrative unit in the period for the income relationship."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrAwfLg",
+      "label": {
+        "nl": "Premie AWf laag",
+        "en": "AWf contribution low"
+      },
+      "definition": {
+        "nl": "Het bedrag dat door de administratieve eenheid in het tijdvak voor de inkomstenverhouding aan lage premie AWf is verschuldigd ten behoeve van het fonds AWf.",
+        "en": "The amount of low AWf contribution owed by the administrative unit in the period for the income relationship for the AWf fund."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrAwfHg",
+      "label": {
+        "nl": "Premie AWf hoog",
+        "en": "AWf contribution high"
+      },
+      "definition": {
+        "nl": "Het bedrag dat door de administratieve eenheid in het tijdvak voor de inkomstenverhouding aan hoge premie AWf is verschuldigd ten behoeve van het fonds AWf.",
+        "en": "The amount of high AWf contribution owed by the administrative unit in the period for the income relationship for the AWf fund."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrAwfHz",
+      "label": {
+        "nl": "Premie AWf herzien",
+        "en": "AWf contribution revised"
+      },
+      "definition": {
+        "nl": "Het bedrag dat door de administratieve eenheid in het tijdvak voor de inkomstenverhouding aan herziene premie AWf is verschuldigd ten behoeve van het fonds AWf.",
+        "en": "The amount of revised AWf contribution owed by the administrative unit in the period for the income relationship for the AWf fund."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrAwfUit",
+      "label": {
+        "nl": "Premie AWf uitkering",
+        "en": "AWf contribution benefit"
+      },
+      "definition": {
+        "nl": "Het bedrag dat door de administratieve eenheid in het tijdvak voor de inkomstenverhouding aan premie AWf over de uitkering is verschuldigd.",
+        "en": "The amount of AWf contribution on the benefit owed by the administrative unit in the period for the income relationship."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrUFO",
+      "label": {
+        "nl": "Premie Ufo",
+        "en": "Ufo contribution"
+      },
+      "definition": {
+        "nl": "Het bedrag dat de administratieve eenheid in het aangiftetijdvak aan premie moet afdragen in verband met wettelijke bijdragen aan het fonds Ufo (Uitvoeringsfonds Overheid).",
+        "en": "The amount of contribution the administrative unit must pay in the return period in connection with statutory contributions to the Ufo fund (Government Implementation Fund)."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/LnLbPh",
+      "label": {
+        "nl": "Loon LB/PH",
+        "en": "Wages for wage tax/national insurance (LB/PH)"
+      },
+      "definition": {
+        "nl": "Het totaalbedrag waarover de loonbelasting/premie volksverzekeringen wordt berekend. Geheel conform kolom 14 van de loonstaat.",
+        "en": "The total amount on which wage tax/national insurance contributions are calculated. Fully in accordance with column 14 of the payroll record."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/LnSV",
+      "label": {
+        "nl": "Loon SV",
+        "en": "Wages for social insurance (SV)"
+      },
+      "definition": {
+        "nl": "Het loon voor de werknemersverzekeringen. Geheel conform kolom 8 van de loonstaat. Dit is het loon zonder rekening te houden met maximumpremieloon en franchise. Vul 0 in als de werknemer niet verzekerd is voor de werknemersverzekeringen.",
+        "en": "The wages for the employee insurance schemes. Fully in accordance with column 8 of the payroll record. These are the wages without taking into account the maximum contribution wage and exemption. Enter 0 if the employee is not insured under the employee insurance schemes."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrlnAofAnwLg",
+      "label": {
+        "nl": "Aanwas in het cumulatieve premieloon Aof laag",
+        "en": "Increase in cumulative contribution wage Aof low"
+      },
+      "definition": {
+        "nl": "Het bedrag waarover in het aangiftetijdvak voor de inkomstenverhouding door de administratieve eenheid de hoge premie Aof is berekend.",
+        "en": "The amount on which the administrative unit has calculated the high Aof contribution for the income relationship in the return period."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrlnAofAnwHg",
+      "label": {
+        "nl": "Aanwas in het cumulatieve premieloon Aof hoog",
+        "en": "Increase in cumulative contribution wage Aof high"
+      },
+      "definition": {
+        "nl": "Het bedrag waarover in het aangiftetijdvak voor de inkomstenverhouding door de administratieve eenheid de lage premie Aof is berekend.",
+        "en": "The amount on which the administrative unit has calculated the low Aof contribution for the income relationship in the return period."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrlnAofAnwUit",
+      "label": {
+        "nl": "Aanwas in het cumulatieve premieloon Aof uitkering",
+        "en": "Increase in cumulative contribution wage Aof benefit"
+      },
+      "definition": {
+        "nl": "Het bedrag waarover in het aangiftetijdvak voor de inkomstenverhouding door de administratieve eenheid de premie Aof uitkering is berekend.",
+        "en": "The amount on which the administrative unit has calculated the Aof benefit contribution for the income relationship in the return period."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrlnWhkAnw",
+      "label": {
+        "nl": "Aanwas in het cumulatieve premieloon Whk",
+        "en": "Increase in cumulative contribution wage Whk"
+      },
+      "definition": {
+        "nl": "Het bedrag waarover in het aangiftetijdvak voor de inkomstenverhouding door de administratieve eenheid de Whk-premie is berekend.",
+        "en": "The amount on which the administrative unit has calculated the Whk contribution for the income relationship in the return period."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrlnAwfAnwLg",
+      "label": {
+        "nl": "Aanwas in het cumulatieve premieloon AWf laag",
+        "en": "Increase in cumulative contribution wage AWf low"
+      },
+      "definition": {
+        "nl": "Het bedrag waarover in het aangiftetijdvak voor de inkomstenverhouding door de administratieve eenheid de lage premie AWf is berekend.",
+        "en": "The amount on which the administrative unit has calculated the low AWf contribution for the income relationship in the return period."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrlnAwfAnwHg",
+      "label": {
+        "nl": "Aanwas in het cumulatieve premieloon AWf hoog",
+        "en": "Increase in cumulative contribution wage AWf high"
+      },
+      "definition": {
+        "nl": "Het bedrag waarover in het aangiftetijdvak voor de inkomstenverhouding door de administratieve eenheid de hoge premie AWf is berekend.",
+        "en": "The amount on which the administrative unit has calculated the high AWf contribution for the income relationship in the return period."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrlnAwfAnwHz",
+      "label": {
+        "nl": "Aanwas in het cumulatieve premieloon AWf herzien",
+        "en": "Increase in cumulative contribution wage AWf revised"
+      },
+      "definition": {
+        "nl": "Het bedrag waarover in het aangiftetijdvak voor de inkomstenverhouding door de administratieve eenheid de herziene premie AWf is berekend.",
+        "en": "The amount on which the administrative unit has calculated the revised AWf contribution for the income relationship in the return period."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/PrlnAwfAnwUit",
+      "label": {
+        "nl": "Aanwas in het cumulatieve premieloon AWf uitkering",
+        "en": "Increase in cumulative contribution wage AWf benefit"
+      },
+      "definition": {
+        "nl": "Het bedrag waarover in het aangiftetijdvak voor de inkomstenverhouding door de administratieve eenheid de premie AWf uitkering is berekend.",
+        "en": "The amount on which the administrative unit has calculated the AWf benefit contribution for the income relationship in the return period."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte Diverse gegevens tevens aanwezig in Loonaangifte In de Loonaangifte zijn deze gekoppeld aan de werknemer",
+        "en": "Source: payroll tax return. Various data also present in the payroll tax return, where they are linked to the employee"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/LnTabBB",
+      "label": {
+        "nl": "Loon belast volgens tabel bijzondere beloningen",
+        "en": "Wages taxed using the special remuneration table"
+      },
+      "definition": {
+        "nl": "Dat deel van het Loon LB/PH dat is belast onder toepassing van de tabel bijzondere beloningen.",
+        "en": "The part of the wage for wage tax/national insurance contributions taxed using the special remuneration table."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/VakBsl",
+      "label": {
+        "nl": "Vakantiebijslag",
+        "en": "Holiday allowance"
+      },
+      "definition": {
+        "nl": "Het bruto bedrag dat aan vakantiebijslag is uitbetaald in het tijdvak.",
+        "en": "The gross amount of holiday allowance paid in the period."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/OpgRchtVakBsl",
+      "label": {
+        "nl": "Opgebouwde recht vakantiebijslag",
+        "en": "Accrued entitlement to holiday allowance"
+      },
+      "definition": {
+        "nl": "Het bruto bedrag dat aan rechten op vakantiebijslag is opgebouwd in het tijdvak.",
+        "en": "The gross amount of holiday allowance entitlements accrued in the period."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/OpnAvwb",
+      "label": {
+        "nl": "Opname arbeidsvoorwaardenbedrag",
+        "en": "Withdrawal of employment conditions amount"
+      },
+      "definition": {
+        "nl": "De opbouw van het arbeidsvoorwaardenbedrag die in een aangiftetijdvak heeft plaatsgevonden.",
+        "en": "The accrual of the employment conditions amount that took place in a return period."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/OpbAvwb",
+      "label": {
+        "nl": "Opbouw arbeidsvoorwaardenbedrag",
+        "en": "Accrual of employment conditions amount"
+      },
+      "definition": {
+        "nl": "Het door de werkgever als loon (bruto bedrag) in de zin van artikel 16 van de Wet financiering sociale verzekeringen in een aangiftetijdvak uitbetaalde bedrag ten laste van een arbeidsvoorwaardenbedrag.",
+        "en": "The amount paid by the employer as wages (gross amount) within the meaning of article 16 of the Social Insurance Financing Act in a return period, charged to an employment conditions amount."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/LnInGld",
+      "label": {
+        "nl": "Loon in geld",
+        "en": "Wages in cash"
+      },
+      "definition": {
+        "nl": "Het bedrag loon in geld zoals vermeld in kolom 3 van de loonstaat.",
+        "en": "The amount of wages in cash as stated in column 3 of the payroll record."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/WrdLn",
+      "label": {
+        "nl": "Waarde niet in geld uitgekeerd loon",
+        "en": "Value of wages not paid in cash"
+      },
+      "definition": {
+        "nl": "Waarde niet in geld uitgekeerd loon.",
+        "en": "Value of wages not paid in cash."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/LnOwrk",
+      "label": {
+        "nl": "Loon uit overwerk",
+        "en": "Wages from overtime"
+      },
+      "definition": {
+        "nl": "Het (bruto) bedrag dat aan loon is uitbetaald in verband met overwerk.",
+        "en": "The (gross) amount of wages paid in connection with overtime."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/VerstrAanv",
+      "label": {
+        "nl": "Verstrekte aanvulling op uitkering werkn.verz.",
+        "en": "Supplement provided to employee insurance benefit"
+      },
+      "definition": {
+        "nl": "Verstrekte aanvulling op uitkering werknemersverzekering. Het bedrag aan loon SV dat als aanvulling is uitbetaald op een uitkering werknemersverzekeringen.",
+        "en": "Supplement provided to employee insurance benefit. The amount of wages for social insurance paid as a supplement to an employee insurance benefit."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/IngLbPh",
+      "label": {
+        "nl": "Ingehouden loonbelasting/premie volksverzekeringen",
+        "en": "Withheld wage tax/national insurance contributions"
+      },
+      "definition": {
+        "nl": "Het bedrag dat in het tijdvak op het loon aan loonbelasting en premie volksverzekeringen is ingehouden.",
+        "en": "The amount of wage tax and national insurance contributions withheld from the wages in the period."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/WghZvw",
+      "label": {
+        "nl": "Werkgeversheffing Zvw",
+        "en": "Employer levy Zvw"
+      },
+      "definition": {
+        "nl": "Het bedrag dat in het aangiftetijdvak door de administratieve eenheid als werkgeversheffing voor de Zvw wordt afgedragen.",
+        "en": "The amount paid by the administrative unit in the return period as employer levy for the Zvw."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/AantVerlU",
+      "label": {
+        "nl": "Aantal verloonde uren",
+        "en": "Number of paid hours"
+      },
+      "definition": {
+        "nl": "Het aantal uren dat aan de werknemer voor de inkomstenverhouding in het aangiftetijdvak is verloond.",
+        "en": "The number of hours paid to the employee for the income relationship in the return period."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/Ctrctln",
+      "label": {
+        "nl": "Contractloon",
+        "en": "Contract wage"
+      },
+      "definition": {
+        "nl": "Het tussen de werkgever en werknemer vast overeengekomen bruto loon, zoals opgenomen in of af te leiden uit de CAO of individuele arbeidsovereenkomst.",
+        "en": "The gross wage agreed between employer and employee, as stated in or derived from the collective or individual employment agreement."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/AantCtrcturenPWk",
+      "label": {
+        "nl": "Aantal contracturen per week",
+        "en": "Number of contract hours per week"
+      },
+      "definition": {
+        "nl": "Het tussen de werkgever en werknemer vast overeengekomen aantal uren per week zoals opgenomen in of af te leiden uit de CAO of individuele arbeidsovereenkomst of dat voortvloeit uit de publiekrechtelijke aanstelling of de fictieve dienstbetrekking.",
+        "en": "The number of hours per week agreed between employer and employee as stated in or derived from the collective or individual employment agreement, or arising from the public-law appointment or the fictitious employment."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/BedrRntKstvPersl",
+      "label": {
+        "nl": "Bedrag rente- en/of kostenvoordeel personeelslening",
+        "en": "Amount of interest and/or cost benefit from staff loan"
+      },
+      "definition": {
+        "nl": "Bedrag dat in het aangiftetijdvak voor de inkomstenverhouding als rente-en/of kostenvoordeel in het kader van een verstrekte personeelslening bij de werknemer als belast loon is aangemerkt waarop het tabeltarief is toegepast.",
+        "en": "Amount that in the return period for the income relationship has been treated as taxable wages of the employee as an interest and/or cost benefit from a staff loan, to which the table rate has been applied."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte",
+        "en": "Source: payroll tax return"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/BedrAlInWWB",
+      "label": {
+        "nl": "Bedrag in uitkering begrepen doorbetaalde alimentatie",
+        "en": "Amount of alimony paid on included in the benefit"
+      },
+      "definition": {
+        "nl": "Het bedrag van de in de WWB -uitkering begrepen doorbetaalde alimentatie.",
+        "en": "The amount of alimony paid on included in the WWB benefit."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/InkVrhVar/BedrRchtAl",
+      "label": {
+        "nl": "Bedrag rechtstreeks betaalde alimentatie",
+        "en": "Amount of alimony paid directly"
+      },
+      "definition": {
+        "nl": "Het bedrag dat op de WWB -uitkering in mindering is gebracht in verband met rechtstreeks betaalde alimentatie.",
+        "en": "The amount deducted from the WWB benefit in connection with alimony paid directly."
+      },
+      "description": {
+        "nl": "Bron: Loonaangifte.",
+        "en": "Source: payroll tax return."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/Urnreg",
+      "label": {
+        "nl": "Urenregistratie",
+        "en": "Time registration"
+      },
+      "definition": {
+        "nl": "Gegevens over de besteding van uren.",
+        "en": "Data on the use of hours."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/Urnreg/SrtUrnCd",
+      "label": {
+        "nl": "Soort uren, code",
+        "en": "Type of hours, code"
+      },
+      "codes": {
+        "A": {
+          "nl": "ATV",
+          "en": "ATV (reduction of working hours)"
+        },
+        "K": {
+          "nl": "Afdrachtkorting Hiermee wordt het aantal uren dat meetelt voor de afdrachtvermindering aangegeven.",
+          "en": "Payment reduction Indicates the number of hours that count towards the payment reduction."
+        },
+        "O": {
+          "nl": "Overuren",
+          "en": "Overtime hours"
+        },
+        "V": {
+          "nl": "Verlof",
+          "en": "Leave"
+        },
+        "W": {
+          "nl": "Gewerkt",
+          "en": "Worked"
+        },
+        "Y": {
+          "nl": "Vorstverlet",
+          "en": "Frost-related work stoppage"
+        },
+        "Z": {
+          "nl": "Ziekte",
+          "en": "Illness"
+        }
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/Urnreg/AantUrn",
+      "label": {
+        "nl": "Aantal uren",
+        "en": "Number of hours"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/Urnreg/BdrTar",
+      "label": {
+        "nl": "Bedrag tarief per uur",
+        "en": "Rate per hour amount"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/Urnreg/projID",
+      "label": {
+        "nl": "Projectnummer",
+        "en": "Project number"
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/LnPrLncmp",
+      "label": {
+        "nl": "Loontoekenning per looncomponent",
+        "en": "Wage allocation per wage component"
+      },
+      "definition": {
+        "nl": "De waarde die een werknemer in een bepaald tijdvak ontvangt per looncomponent. De looncomponenten zijn gedefinieerd in Looncomponent.",
+        "en": "The value an employee receives in a given period per wage component. The wage components are defined in Wage component."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/LnPrLncmp/IdLncmp",
+      "label": {
+        "nl": "Identificatie looncomponent",
+        "en": "Wage component identification"
+      },
+      "definition": {
+        "nl": "Unieke identificatie looncomponent door inhoudingsplichtige.",
+        "en": "Unique identification of the wage component by the withholding agent."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/LnPrLncmp/LnOverPrdnr",
+      "label": {
+        "nl": "Loon over periodenummer",
+        "en": "Wages over period number"
+      },
+      "definition": {
+        "nl": "Periode waarop de looncomponent betrekking heeft. Alleen vullen als de 'loon over' systematiek wordt toegepast.",
+        "en": "Period to which the wage component relates. Only fill if the 'wages over' method is applied."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/LnPrLncmp/IbanRknr",
+      "label": {
+        "nl": "Rekeningnummers",
+        "en": "Account numbers"
+      },
+      "definition": {
+        "nl": "Het rekeningnummer waarop is uitbetaald. Dit veld hoeft alleen gevuld te worden bij een betaling, dus als een looncomponent met code 52 wordt geboekt.",
+        "en": "The account number to which payment was made. This field only needs to be filled for a payment, i.e. when a wage component with code 52 is posted."
+      }
+    },
+    {
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/LnPrLncmp/Bdr",
+      "label": {
+        "nl": "Bedrag",
+        "en": "Amount"
+      },
+      "definition": {
+        "nl": "Dit bedrag kan een negatieve waarde bevatten.",
+        "en": "This amount may contain a negative value."
+      }
+    }
+  ]
+}
