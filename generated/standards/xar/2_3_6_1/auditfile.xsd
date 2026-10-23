@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="https://odb.belastingdienst.nl/XAR/2.3.6"
+		elementFormDefault="qualified" attributeFormDefault="unqualified" version="."
+		xmlns:str="https://odb.belastingdienst.nl/XAR/2.3.6"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="auditfile">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="header">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="fileFormat" type="str:fileFormat"/>
+							<xsd:element name="fileFormatVersion">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:length value="5"/>
+										<xsd:enumeration value="2.3.6"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="dateTimeCreated" type="xsd:dateTime"/>
+							<xsd:element name="reportingType" type="str:reportingType"/>
+							<xsd:element name="reportingStartDateTime" type="xsd:dateTime"/>
+							<xsd:element name="reportingEndDateTime" type="xsd:dateTime"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="ITServiceProvider">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="name" type="str:Name"/>
+							<xsd:element name="identificationNr" type="str:ItServiceProviderId"/>
+							<xsd:element name="contactPerson" minOccurs="0" maxOccurs="9">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="department" minOccurs="0" type="str:Text"/>
+										<xsd:element name="initials" minOccurs="0" type="str:Initials"/>
+										<xsd:element name="prefix" minOccurs="0" type="str:Prefix"/>
+										<xsd:element name="familyName" minOccurs="0" type="str:Name"/>
+										<xsd:element name="communication" maxOccurs="9">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="commType" type="str:SortCommunication"/>
+													<xsd:element name="numberCommunication" type="str:Text"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="employer" minOccurs="0">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="employerName" type="str:Name"/>
+							<xsd:element name="addressNL" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="streetname" type="str:StreetnameNl"/>
+										<xsd:element name="number" minOccurs="0" type="str:NumberNl"/>
+										<xsd:element name="numberExtension" minOccurs="0" type="str:NumberExtensionNl"/>
+										<xsd:element name="locationDescription" minOccurs="0" type="str:LocationDescriptionNl"/>
+										<xsd:element name="postalCode" type="str:PostalcodeNl"/>
+										<xsd:element name="city" type="str:Citynl"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="addressForeign" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="streetname" type="str:Streetname"/>
+										<xsd:element name="number" minOccurs="0" type="str:Housenumber"/>
+										<xsd:element name="locationDescription" minOccurs="0" type="str:LocationDescription"/>
+										<xsd:element name="postalCode" type="str:Postalcode"/>
+										<xsd:element name="city" type="str:City"/>
+										<xsd:element name="region" minOccurs="0" type="str:Region"/>
+										<xsd:element name="country" type="str:CountryCodesIso31661"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="drivers">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="driver" maxOccurs="unbounded">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="driverID" type="str:Identifier"/>
+										<xsd:element name="initials" minOccurs="0" type="str:Initials"/>
+										<xsd:element name="prefix" minOccurs="0" type="str:Prefix"/>
+										<xsd:element name="familyName" minOccurs="0" type="str:Name"/>
+										<xsd:element name="addressNL" minOccurs="0">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="streetname" type="str:StreetnameNl"/>
+													<xsd:element name="number" minOccurs="0" type="str:NumberNl"/>
+													<xsd:element name="numberExtension" minOccurs="0" type="str:NumberExtensionNl"/>
+													<xsd:element name="locationDescription" minOccurs="0" type="str:LocationDescriptionNl"/>
+													<xsd:element name="postalCode" type="str:PostalcodeNl"/>
+													<xsd:element name="city" type="str:Citynl"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="addressForeign" minOccurs="0">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="streetname" type="str:Streetname"/>
+													<xsd:element name="number" minOccurs="0" type="str:Housenumber"/>
+													<xsd:element name="locationDescription" minOccurs="0" type="str:LocationDescription"/>
+													<xsd:element name="postalCode" type="str:Postalcode"/>
+													<xsd:element name="city" type="str:City"/>
+													<xsd:element name="region" minOccurs="0" type="str:Region"/>
+													<xsd:element name="country" type="str:CountryCodesIso31661"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="vehicles">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="vehicle" maxOccurs="unbounded">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="vehicleID" type="str:Identifier"/>
+										<xsd:element name="vehicleRegistrationNr" type="str:VehicleRegistrationNumber"/>
+										<xsd:element name="VIN" type="str:Vin"/>
+										<xsd:element name="vehicleName" minOccurs="0" type="str:Text"/>
+										<xsd:element name="vehicleMake" type="str:Text"/>
+										<xsd:element name="vehicleModel" type="str:Text"/>
+										<xsd:element name="country" minOccurs="0" type="str:CountryCodesIso31661"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="vehicleSystems">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="vehicleSystem" maxOccurs="unbounded">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="vehicleSystemID" type="str:Identifier"/>
+										<xsd:element name="distanceDeterminationType">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:nonNegativeInteger">
+													<xsd:totalDigits value="1"/>
+													<xsd:enumeration value="1"/>
+													<xsd:enumeration value="2"/>
+													<xsd:enumeration value="3"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="locationDeterminationType" type="str:LocationDeterminationType"/>
+										<xsd:element name="productName" type="str:Text"/>
+										<xsd:element name="hardwareDesc" minOccurs="0" type="str:Text"/>
+										<xsd:element name="hardwareVersion" minOccurs="0" type="str:Text"/>
+										<xsd:element name="softwareDesc" minOccurs="0" type="str:Text"/>
+										<xsd:element name="softwareVersion" minOccurs="0" type="str:Text"/>
+										<xsd:element name="firmwareVersion" minOccurs="0" type="str:Text"/>
+										<xsd:element name="qualityMark" type="str:Indicator"/>
+										<xsd:element name="qualityMarkNr" minOccurs="0" type="str:Qualitymarknumber"/>
+										<xsd:element name="qualityMarkCertNr" minOccurs="0" type="str:Qualitymarkcertificatenumber"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="usePeriods">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="usePeriod" maxOccurs="unbounded">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="usePeriodID" type="str:Identifier"/>
+										<xsd:element name="driverID" type="str:Identifier"/>
+										<xsd:element name="vehicleID" type="str:Identifier"/>
+										<xsd:element name="usePeriodStartDateTime" type="xsd:dateTime"/>
+										<xsd:element name="usePeriodEndDateTime" minOccurs="0" type="xsd:dateTime"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="vehicleAndVehicleSystems">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="vehicleAndVehicleSystem" maxOccurs="unbounded">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="vehicleAndVehicleSystemID" type="str:Identifier"/>
+										<xsd:element name="vehicleID" type="str:Identifier"/>
+										<xsd:element name="vehicleSystemID" type="str:Identifier"/>
+										<xsd:element name="startDateTime" type="xsd:dateTime"/>
+										<xsd:element name="endDateTime" minOccurs="0" type="xsd:dateTime"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="trips">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="trip" maxOccurs="unbounded">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="tripID" type="str:Identifier"/>
+										<xsd:element name="vehicleID" type="str:Identifier"/>
+										<xsd:element name="vehicleOdoMeterCountStart" type="str:Quantity"/>
+										<xsd:element name="vehicleOdoMeterCountEnd" type="str:Quantity"/>
+										<xsd:element name="vehicleOdoMeterCountEndDateTime" minOccurs="0" type="xsd:dateTime"/>
+										<xsd:element name="driverID" type="str:Identifier"/>
+										<xsd:element name="tripRegType" minOccurs="0" type="str:TripRegistrationType"/>
+										<xsd:element name="tripType" minOccurs="0" type="str:TripType"/>
+										<xsd:element name="tripMixedIndicator" minOccurs="0" type="str:Indicator"/>
+										<xsd:element name="tripCommuteIndicator" minOccurs="0" type="str:Indicator"/>
+										<xsd:element name="tripDescription" minOccurs="0" type="str:Text"/>
+										<xsd:element name="tripDistance" type="str:Quantity2"/>
+										<xsd:element name="privateDistance" minOccurs="0" type="str:Quantity2"/>
+										<xsd:element name="businessDistance" minOccurs="0" type="str:Quantity2"/>
+										<xsd:element name="commuteDistance" minOccurs="0" type="str:Quantity2"/>
+										<xsd:element name="deviantIndicator" minOccurs="0" type="str:Indicator"/>
+										<xsd:element name="deviantDistance" minOccurs="0" type="str:Quantity2"/>
+										<xsd:element name="deviantDescription" minOccurs="0" type="str:Text"/>
+										<xsd:element name="start" minOccurs="0">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="pointDateTime" minOccurs="0" type="xsd:dateTime"/>
+													<xsd:element name="lat" minOccurs="0" type="str:Latitude"/>
+													<xsd:element name="lon" minOccurs="0" type="str:Longitude"/>
+													<xsd:element name="sat" minOccurs="0" type="str:Quantity"/>
+													<xsd:element name="fix" minOccurs="0" type="str:Indicator"/>
+													<xsd:element name="dop" minOccurs="0" type="str:Dop"/>
+													<xsd:element name="poiID" minOccurs="0" type="str:Identifier"/>
+													<xsd:element name="address">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="streetname" type="str:Streetname"/>
+																<xsd:element name="number" minOccurs="0" type="str:Housenumber"/>
+																<xsd:element name="locationDescription" minOccurs="0" type="str:LocationDescription"/>
+																<xsd:element name="postalCode" type="str:Postalcode"/>
+																<xsd:element name="city" type="str:City"/>
+																<xsd:element name="region" minOccurs="0" type="str:Region"/>
+																<xsd:element name="country" type="str:CountryCodesIso31661"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="end" minOccurs="0">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="pointDateTime" minOccurs="0" type="xsd:dateTime"/>
+													<xsd:element name="lat" minOccurs="0" type="str:Latitude"/>
+													<xsd:element name="lon" minOccurs="0" type="str:Longitude"/>
+													<xsd:element name="sat" minOccurs="0" type="str:Quantity"/>
+													<xsd:element name="fix" minOccurs="0" type="str:Indicator"/>
+													<xsd:element name="dop" minOccurs="0" type="str:Dop"/>
+													<xsd:element name="poiID" minOccurs="0" type="str:Identifier"/>
+													<xsd:element name="address">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="streetname" type="str:Streetname"/>
+																<xsd:element name="number" minOccurs="0" type="str:Housenumber"/>
+																<xsd:element name="locationDescription" minOccurs="0" type="str:LocationDescription"/>
+																<xsd:element name="postalCode" type="str:Postalcode"/>
+																<xsd:element name="city" type="str:City"/>
+																<xsd:element name="region" minOccurs="0" type="str:Region"/>
+																<xsd:element name="country" type="str:CountryCodesIso31661"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="points" minOccurs="0">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="point" maxOccurs="unbounded">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="pointDateTime" type="xsd:dateTime"/>
+																<xsd:element name="lat" minOccurs="0" type="str:Latitude"/>
+																<xsd:element name="lon" minOccurs="0" type="str:Longitude"/>
+																<xsd:element name="odo" minOccurs="0" type="str:Quantity"/>
+																<xsd:element name="sat" minOccurs="0" type="str:Quantity"/>
+																<xsd:element name="fix" minOccurs="0" type="str:Indicator"/>
+																<xsd:element name="dop" minOccurs="0" type="str:Dop"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="changeInfo" minOccurs="0">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="changeByUserName" type="str:Name"/>
+													<xsd:element name="changeDateTime" type="xsd:dateTime"/>
+													<xsd:element name="changeDescription" type="str:Text"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="tripHistory" minOccurs="0">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="trip" maxOccurs="unbounded">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="tripID" type="str:Identifier"/>
+																<xsd:element name="vehicleID" type="str:Identifier"/>
+																<xsd:element name="vehicleOdoMeterCountStart" type="str:Quantity"/>
+																<xsd:element name="vehicleOdoMeterCountEnd" type="str:Quantity"/>
+																<xsd:element name="vehicleOdoMeterCountEndDateTime" minOccurs="0" type="xsd:dateTime"/>
+																<xsd:element name="driverID" type="str:Identifier"/>
+																<xsd:element name="tripRegType" minOccurs="0" type="str:TripRegistrationType"/>
+																<xsd:element name="tripType" minOccurs="0" type="str:TripType"/>
+																<xsd:element name="tripMixedIndicator" minOccurs="0" type="str:Indicator"/>
+																<xsd:element name="tripCommuteIndicator" minOccurs="0" type="str:Indicator"/>
+																<xsd:element name="tripDescription" minOccurs="0" type="str:Text"/>
+																<xsd:element name="tripDistance" type="str:Quantity2"/>
+																<xsd:element name="privateDistance" minOccurs="0" type="str:Quantity2"/>
+																<xsd:element name="businessDistance" minOccurs="0" type="str:Quantity2"/>
+																<xsd:element name="commuteDistance" minOccurs="0" type="str:Quantity2"/>
+																<xsd:element name="deviantIndicator" minOccurs="0" type="str:Indicator"/>
+																<xsd:element name="deviantDistance" minOccurs="0" type="str:Quantity2"/>
+																<xsd:element name="deviantDescription" minOccurs="0" type="str:Text"/>
+																<xsd:element name="start" minOccurs="0">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="pointDateTime" minOccurs="0" type="xsd:dateTime"/>
+																			<xsd:element name="lat" minOccurs="0" type="str:Latitude"/>
+																			<xsd:element name="lon" minOccurs="0" type="str:Longitude"/>
+																			<xsd:element name="sat" minOccurs="0" type="str:Quantity"/>
+																			<xsd:element name="fix" minOccurs="0" type="str:Indicator"/>
+																			<xsd:element name="dop" minOccurs="0" type="str:Dop"/>
+																			<xsd:element name="poiID" minOccurs="0" type="str:Identifier"/>
+																			<xsd:element name="address">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="streetname" type="str:Streetname"/>
+																						<xsd:element name="number" minOccurs="0" type="str:Housenumber"/>
+																						<xsd:element name="locationDescription" minOccurs="0" type="str:LocationDescription"/>
+																						<xsd:element name="postalCode" type="str:Postalcode"/>
+																						<xsd:element name="city" type="str:City"/>
+																						<xsd:element name="region" minOccurs="0" type="str:Region"/>
+																						<xsd:element name="country" type="str:CountryCodesIso31661"/>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="end" minOccurs="0">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="pointDateTime" minOccurs="0" type="xsd:dateTime"/>
+																			<xsd:element name="lat" minOccurs="0" type="str:Latitude"/>
+																			<xsd:element name="lon" minOccurs="0" type="str:Longitude"/>
+																			<xsd:element name="sat" minOccurs="0" type="str:Quantity"/>
+																			<xsd:element name="fix" minOccurs="0" type="str:Indicator"/>
+																			<xsd:element name="dop" minOccurs="0" type="str:Dop"/>
+																			<xsd:element name="poiID" minOccurs="0" type="str:Identifier"/>
+																			<xsd:element name="address">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="streetname" type="str:Streetname"/>
+																						<xsd:element name="number" minOccurs="0" type="str:Housenumber"/>
+																						<xsd:element name="locationDescription" minOccurs="0" type="str:LocationDescription"/>
+																						<xsd:element name="postalCode" type="str:Postalcode"/>
+																						<xsd:element name="city" type="str:City"/>
+																						<xsd:element name="region" minOccurs="0" type="str:Region"/>
+																						<xsd:element name="country" type="str:CountryCodesIso31661"/>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="changeInfo" minOccurs="0">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="changeByUserName" type="str:Name"/>
+																			<xsd:element name="changeDateTime" type="xsd:dateTime"/>
+																			<xsd:element name="changeDescription" type="str:Text"/>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="pois" minOccurs="0">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="poi" maxOccurs="unbounded">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="poiID" type="str:Identifier"/>
+										<xsd:element name="poiName" minOccurs="0" type="str:Text"/>
+										<xsd:element name="poiType" type="str:PoiType"/>
+										<xsd:element name="startDateTime" minOccurs="0" type="xsd:dateTime"/>
+										<xsd:element name="endDateTime" minOccurs="0" type="xsd:dateTime"/>
+										<xsd:element name="lat" minOccurs="0" type="str:Latitude"/>
+										<xsd:element name="lon" minOccurs="0" type="str:Longitude"/>
+										<xsd:element name="driverID" minOccurs="0" type="str:Identifier"/>
+										<xsd:element name="address" minOccurs="0">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="streetname" type="str:Streetname"/>
+													<xsd:element name="number" minOccurs="0" type="str:Housenumber"/>
+													<xsd:element name="locationDescription" minOccurs="0" type="str:LocationDescription"/>
+													<xsd:element name="postalCode" type="str:Postalcode"/>
+													<xsd:element name="city" type="str:City"/>
+													<xsd:element name="region" minOccurs="0" type="str:Region"/>
+													<xsd:element name="country" type="str:CountryCodesIso31661"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="events" minOccurs="0">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="event" maxOccurs="unbounded">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="eventID" type="str:Identifier"/>
+										<xsd:element name="vehicleSystemID" type="str:Identifier"/>
+										<xsd:element name="dateTime" type="xsd:dateTime"/>
+										<xsd:element name="predefinedEventType" minOccurs="0">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="5"/>
+													<xsd:enumeration value="2"/>
+													<xsd:enumeration value="3"/>
+													<xsd:enumeration value="5"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="customEventTypeID" minOccurs="0" type="str:Identifier"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="customEventTypeDefinitions" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="customEventTypeDefinition" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="customEventTypeID" type="str:Identifier"/>
+													<xsd:element name="customEventType" type="str:CustomEventType"/>
+													<xsd:element name="customEventTypeDescription" type="str:Text"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+			<xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:simpleType name="City">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="200"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Citynl">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="200"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CountryCodesIso31661">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="2"/>
+			<xsd:pattern value="\D*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CustomEventType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="DistanceDeterminationType">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="1"/>
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="2"/>
+			<xsd:enumeration value="3"/>
+			<xsd:enumeration value="4"/>
+			<xsd:enumeration value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Dop">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="9"/>
+			<xsd:fractionDigits value="6"/>
+			<xsd:pattern value="[\-+]?[0-9]{1,3}[.][0-9]{6}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="EventType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="5"/>
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="2"/>
+			<xsd:enumeration value="3"/>
+			<xsd:enumeration value="4"/>
+			<xsd:enumeration value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="FiscalNumber">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="9"/>
+			<xsd:pattern value="\d*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="FiscalStatus">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="1"/>
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Housenumber">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Identifier">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="36"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Indicator">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="1"/>
+			<xsd:enumeration value="0"/>
+			<xsd:enumeration value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Initials">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ItServiceProviderId">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="8"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Latitude">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="8"/>
+			<xsd:fractionDigits value="6"/>
+			<xsd:pattern value="[\-+]?[0-9]{1,2}[.][0-9]{6}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="LocationDescription">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="200"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="LocationDescriptionNl">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="200"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="LocationDeterminationType">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="1"/>
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Longitude">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="9"/>
+			<xsd:fractionDigits value="6"/>
+			<xsd:pattern value="[\-+]?[0-9]{1,3}[.][0-9]{6}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Name">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="200"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="NumberExtensionNl">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="NumberNl">
+		<xsd:restriction base="xsd:integer">
+			<xsd:totalDigits value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PoiType">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="1"/>
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="2"/>
+			<xsd:enumeration value="3"/>
+			<xsd:enumeration value="4"/>
+			<xsd:enumeration value="5"/>
+			<xsd:enumeration value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Postalcode">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PostalcodeNl">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Prefix">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Qualitymarkcertificatenumber">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="12"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Qualitymarknumber">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="14"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Quantity">
+		<xsd:restriction base="xsd:integer">
+			<xsd:totalDigits value="15"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Quantity2">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="15"/>
+			<xsd:fractionDigits value="2"/>
+			<xsd:pattern value="[\-+]?[0-9]{1,13}[.][0-9]{2}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Region">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="200"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SortCommunication">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="1"/>
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="2"/>
+			<xsd:enumeration value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Streetname">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="200"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StreetnameNl">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="200"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Text">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="200"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TripRegistrationType">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="1"/>
+			<xsd:enumeration value="0"/>
+			<xsd:enumeration value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TripType">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="1"/>
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="2"/>
+			<xsd:enumeration value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="VehicleRegistrationNumber">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="15"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="VehicleRegistrationType">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="1"/>
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Vin">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="fileFormat">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="fileFormatVersion">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="5"/>
+			<xsd:enumeration value="1.1"/>
+			<xsd:enumeration value="1.2"/>
+			<xsd:enumeration value="1.9"/>
+			<xsd:enumeration value="2.0"/>
+			<xsd:enumeration value="2.3"/>
+			<xsd:enumeration value="2.3.1"/>
+			<xsd:enumeration value="2.3.2"/>
+			<xsd:enumeration value="2.3.3"/>
+			<xsd:enumeration value="2.3.4"/>
+			<xsd:enumeration value="2.3.6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="reportingType">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="1"/>
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

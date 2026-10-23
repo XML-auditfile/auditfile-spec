@@ -1,0 +1,3676 @@
+{
+  "formatVersion": 1,
+  "standard": "xab",
+  "version": "1.0",
+  "entries": [
+    {
+      "key": "auditfile",
+      "kind": "table",
+      "label": {
+        "nl": "Auditfile",
+        "en": "Audit file"
+      }
+    },
+    {
+      "key": "header",
+      "kind": "table",
+      "label": {
+        "nl": "Bestandsinformatie",
+        "en": "File information"
+      }
+    },
+    {
+      "key": "header.file_format",
+      "kind": "column",
+      "label": {
+        "nl": "Bestandsformaat",
+        "en": "File format"
+      },
+      "definition": {
+        "nl": "Waarde \"XML Auditfile XAB\"",
+        "en": "Value \"XML Auditfile XAB\""
+      }
+    },
+    {
+      "key": "header.file_format_version",
+      "kind": "column",
+      "label": {
+        "nl": "Bestandsformaat versie",
+        "en": "File format version"
+      },
+      "codes": {
+        "1.0": {
+          "en": "File Format Version 1.0"
+        }
+      }
+    },
+    {
+      "key": "header.date_time_created",
+      "kind": "column",
+      "label": {
+        "nl": "Bestand aanmaak datum en tijd",
+        "en": "File creation date and time"
+      }
+    },
+    {
+      "key": "header.reporting_start_date_time",
+      "kind": "column",
+      "label": {
+        "nl": "Rapportage periode vanaf datum en tijd",
+        "en": "Reporting period from date and time"
+      }
+    },
+    {
+      "key": "header.reporting_end_date_time",
+      "kind": "column",
+      "label": {
+        "nl": "Rapportage periode tot en met datum en tijd",
+        "en": "Reporting period up to and including date and time"
+      }
+    },
+    {
+      "key": "auditfile_kort_id_bct",
+      "kind": "table",
+      "label": {
+        "nl": "Korte identiteit boordcomputer",
+        "en": "Short identity of on-board computer"
+      }
+    },
+    {
+      "key": "auditfile_kort_id_bct.gd_krgs_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Goedkeuringsnummer",
+        "en": "Approval number"
+      },
+      "definition": {
+        "nl": "Hier wordt het nummer van het RDW certificaat, aangevuld met voorloopnullen, vermeld.",
+        "en": "The number of the RDW certificate, padded with leading zeros, is stated here."
+      }
+    },
+    {
+      "key": "auditfile_kort_id_bct.prog_vr_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Programmatuur versienummer",
+        "en": "Software version number"
+      }
+    },
+    {
+      "key": "auditfile_kort_id_bct.change_info",
+      "kind": "group",
+      "label": {
+        "nl": "Aanpassing informatie",
+        "en": "Change information"
+      }
+    },
+    {
+      "key": "auditfile_kort_id_bct.change_info_change_by_user_name",
+      "kind": "column",
+      "label": {
+        "nl": "Gebruiker naam",
+        "en": "User name"
+      }
+    },
+    {
+      "key": "auditfile_kort_id_bct.change_info_change_date_time",
+      "kind": "column",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      }
+    },
+    {
+      "key": "auditfile_kort_id_bct.change_info_change_description",
+      "kind": "column",
+      "label": {
+        "nl": "Soort aanpassing omschrijving",
+        "en": "Type of change description"
+      }
+    },
+    {
+      "key": "auditfile_kort_id_bct.history",
+      "kind": "group",
+      "label": {
+        "nl": "Historie",
+        "en": "History"
+      }
+    },
+    {
+      "key": "history_kort_id_bct",
+      "kind": "table",
+      "label": {
+        "nl": "Korte identiteit boordcomputer",
+        "en": "Short identity of on-board computer"
+      }
+    },
+    {
+      "key": "history_kort_id_bct.gd_krgs_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Goedkeuringsnummer",
+        "en": "Approval number"
+      },
+      "definition": {
+        "nl": "Hier wordt het nummer van het RDW certificaat, aangevuld met voorloopnullen, vermeld.",
+        "en": "The number of the RDW certificate, padded with leading zeros, is stated here."
+      }
+    },
+    {
+      "key": "history_kort_id_bct.prog_vr_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Programmatuur versienummer",
+        "en": "Software version number"
+      }
+    },
+    {
+      "key": "history_kort_id_bct.change_info",
+      "kind": "group",
+      "label": {
+        "nl": "Aanpassing informatie",
+        "en": "Change information"
+      }
+    },
+    {
+      "key": "history_kort_id_bct.change_info_change_by_user_name",
+      "kind": "column",
+      "label": {
+        "nl": "Gebruiker naam",
+        "en": "User name"
+      }
+    },
+    {
+      "key": "history_kort_id_bct.change_info_change_date_time",
+      "kind": "column",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      }
+    },
+    {
+      "key": "history_kort_id_bct.change_info_change_description",
+      "kind": "column",
+      "label": {
+        "nl": "Soort aanpassing omschrijving",
+        "en": "Type of change description"
+      }
+    },
+    {
+      "key": "it_service_provider",
+      "kind": "table",
+      "label": {
+        "nl": "It dienstverlener",
+        "en": "IT service provider"
+      }
+    },
+    {
+      "key": "it_service_provider.name",
+      "kind": "column",
+      "label": {
+        "nl": "IT dienstverlener naam",
+        "en": "IT service provider name"
+      }
+    },
+    {
+      "key": "it_service_provider.identification_nr",
+      "kind": "column",
+      "label": {
+        "nl": "IT dienstverlener identifcatienummer",
+        "en": "IT service provider identification number"
+      }
+    },
+    {
+      "key": "bestuurders",
+      "kind": "table",
+      "label": {
+        "nl": "Bestuurders",
+        "en": "Drivers"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder",
+      "kind": "table",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      },
+      "definition": {
+        "nl": "Voor alle zakelijke ritten geldt dat ten minste een deel van de facultatieve gegevens geregistreerd moet worden, zodat daaruit duidelijk wordt wie de bestuurder was.",
+        "en": "For all business trips, at least part of the optional data must be registered, so that it is clear who the driver was."
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.bsn",
+      "kind": "column",
+      "label": {
+        "nl": "Burger Service Nummer (BSN)",
+        "en": "Citizen service number (BSN)"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.ch_id_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.ck_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.initials",
+      "kind": "column",
+      "label": {
+        "nl": "Voorletters",
+        "en": "Initials"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.prefix",
+      "kind": "column",
+      "label": {
+        "nl": "Voorvoegsels",
+        "en": "Prefixes"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.family_name",
+      "kind": "column",
+      "label": {
+        "nl": "Achternaam",
+        "en": "Surname"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.naam",
+      "kind": "column",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.personeelsnummer",
+      "kind": "column",
+      "label": {
+        "nl": "Personeelsnummer",
+        "en": "Personnel number"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.address_nl",
+      "kind": "group",
+      "label": {
+        "nl": "Adres nederland",
+        "en": "Dutch address"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.address_nl_streetname",
+      "kind": "column",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.address_nl_number",
+      "kind": "column",
+      "label": {
+        "nl": "Huisnummer",
+        "en": "House number"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.address_nl_number_extension",
+      "kind": "column",
+      "label": {
+        "nl": "Huisnummer toevoeging",
+        "en": "House number suffix"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.address_nl_location_description",
+      "kind": "column",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.address_nl_postal_code",
+      "kind": "column",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.address_nl_city",
+      "kind": "column",
+      "label": {
+        "nl": "Plaats",
+        "en": "Place"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.address_foreign",
+      "kind": "group",
+      "label": {
+        "nl": "Adres buitenland",
+        "en": "Foreign address"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.address_foreign_streetname",
+      "kind": "column",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.address_foreign_number",
+      "kind": "column",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.address_foreign_location_description",
+      "kind": "column",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.address_foreign_postal_code",
+      "kind": "column",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.address_foreign_city",
+      "kind": "column",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.address_foreign_region",
+      "kind": "column",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      }
+    },
+    {
+      "key": "bestuurders_bestuurder.address_foreign_country",
+      "kind": "column",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    },
+    {
+      "key": "auto",
+      "kind": "table",
+      "label": {
+        "nl": "Auto",
+        "en": "Car"
+      }
+    },
+    {
+      "key": "auto.kntkn",
+      "kind": "column",
+      "label": {
+        "nl": "Kenteken",
+        "en": "Licence plate"
+      }
+    },
+    {
+      "key": "auto.vin",
+      "kind": "column",
+      "label": {
+        "nl": "Vehicle Identification Number (VIN)",
+        "en": "Vehicle Identification Number (VIN)"
+      }
+    },
+    {
+      "key": "auto.vehicle_registration_type",
+      "kind": "column",
+      "label": {
+        "nl": "Kenteken type",
+        "en": "Licence plate type"
+      },
+      "definition": {
+        "nl": "XML Auditfile Boordcomputer Taxi versie 1.0",
+        "en": "XML Auditfile Taxi On-board Computer version 1.0"
+      },
+      "codes": {
+        "1": {
+          "en": "Private (Yellow)"
+        },
+        "2": {
+          "en": "Business (Grey)"
+        }
+      }
+    },
+    {
+      "key": "auto.vehicle_name",
+      "kind": "column",
+      "label": {
+        "nl": "Voertuig naam",
+        "en": "Vehicle name"
+      }
+    },
+    {
+      "key": "auto.vehicle_make",
+      "kind": "column",
+      "label": {
+        "nl": "Voertuig merk",
+        "en": "Vehicle make"
+      }
+    },
+    {
+      "key": "auto.vehicle_model",
+      "kind": "column",
+      "label": {
+        "nl": "Voertuig model",
+        "en": "Vehicle model"
+      }
+    },
+    {
+      "key": "auto.country",
+      "kind": "column",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    },
+    {
+      "key": "vervoerder",
+      "kind": "table",
+      "label": {
+        "nl": "Vervoerder",
+        "en": "Carrier"
+      }
+    },
+    {
+      "key": "vervoerder.kv_knr",
+      "kind": "column",
+      "label": {
+        "nl": "Kamer van Koophandel (KvK) nummer",
+        "en": "Chamber of Commerce (KvK) number"
+      }
+    },
+    {
+      "key": "vervoerder.pnr",
+      "kind": "column",
+      "label": {
+        "nl": "P-nummer",
+        "en": "P number"
+      }
+    },
+    {
+      "key": "ondernemerskaart",
+      "kind": "table",
+      "label": {
+        "nl": "Ondernemerskaart",
+        "en": "Entrepreneur card"
+      }
+    },
+    {
+      "key": "ondernemerskaart.ok_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Ondernemerskaart volgnummer",
+        "en": "Entrepreneur card sequence number"
+      }
+    },
+    {
+      "key": "ondernemerskaart.ondernemers_naam",
+      "kind": "column",
+      "label": {
+        "nl": "Ondernemers naam",
+        "en": "Entrepreneur name"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit",
+      "kind": "table",
+      "label": {
+        "nl": "RIT",
+        "en": "Trip"
+      },
+      "definition": {
+        "nl": "Rit wordt per bestuurder uniek geidentificeerd door een volgnummer.",
+        "en": "A trip is uniquely identified per driver by a sequence number."
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data",
+      "kind": "group",
+      "label": {
+        "nl": "Rit data",
+        "en": "Trip data"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_rt_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Rit volgnummer",
+        "en": "Trip sequence number"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_label",
+      "kind": "column",
+      "label": {
+        "nl": "Fiscale label (activiteit)",
+        "en": "Tax label (activity)"
+      },
+      "codes": {
+        "A100": {
+          "nl": "Goederenvervoer",
+          "en": "Goods transport"
+        },
+        "A110": {
+          "nl": "Rouw-, trouwvervoer",
+          "en": "Funeral and wedding transport"
+        },
+        "A130": {
+          "nl": "Overig zakelijk",
+          "en": "Other business"
+        },
+        "A140": {
+          "nl": "Rijden tijdens pauze",
+          "en": "Driving during break"
+        },
+        "A150": {
+          "nl": "Prive",
+          "en": "Private"
+        },
+        "A160": {
+          "nl": "OV met taxi",
+          "en": "Public transport by taxi"
+        },
+        "B100": {
+          "nl": "Taxi gerelateerd",
+          "en": "Taxi-related"
+        },
+        "B101": {
+          "nl": "Taxi gerelateerd Tanken",
+          "en": "Taxi-related: refuelling"
+        },
+        "B102": {
+          "nl": "Taxi gerelateerd Wassen",
+          "en": "Taxi-related: car wash"
+        },
+        "B103": {
+          "nl": "Taxi gerelateerd Garage/keuring",
+          "en": "Taxi-related: garage/inspection"
+        },
+        "B104": {
+          "nl": "OV met taxi",
+          "en": "Public transport by taxi"
+        },
+        "B110": {
+          "nl": "Niet taxi gerelateerd",
+          "en": "Not taxi-related"
+        },
+        "B111": {
+          "nl": "Niet taxi gerelateerd Verhuur - niet taxi",
+          "en": "Not taxi-related: rental, non-taxi"
+        },
+        "B112": {
+          "nl": "Zakelijk gebruik, niet taxi gerelateerd",
+          "en": "Business use, not taxi-related"
+        },
+        "B120": {
+          "nl": "Prive",
+          "en": "Private"
+        },
+        "B130": {
+          "nl": "Woon / werk",
+          "en": "Commuting"
+        },
+        "T100": {
+          "nl": "Beladen",
+          "en": "Occupied"
+        },
+        "T110": {
+          "nl": "Onbeladen",
+          "en": "Unoccupied"
+        },
+        "T111": {
+          "nl": "Onbeladen Tanken",
+          "en": "Unoccupied: refuelling"
+        },
+        "T112": {
+          "nl": "Onbeladen Wassen",
+          "en": "Unoccupied: car wash"
+        },
+        "T113": {
+          "nl": "Onbeladen Garage/keuring",
+          "en": "Unoccupied: garage/inspection"
+        }
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_mt_cd",
+      "kind": "column",
+      "label": {
+        "nl": "Mutatie code (D, I, M)",
+        "en": "Mutation code (D, I, M)"
+      },
+      "codes": {
+        "D": {
+          "en": "Delete"
+        },
+        "I": {
+          "en": "Insert"
+        },
+        "M": {
+          "nl": "Mutatie",
+          "en": "Modification"
+        }
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_dispatcher_rit_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Distpatcher ritnummer",
+        "en": "Dispatcher trip number"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_type",
+      "kind": "column",
+      "label": {
+        "nl": "Type rit (O, B)",
+        "en": "Trip type (O, B)"
+      },
+      "codes": {
+        "B": {
+          "nl": "Beladen Rit",
+          "en": "Occupied trip"
+        },
+        "O": {
+          "nl": "Onbeladen Rit",
+          "en": "Unoccupied trip"
+        }
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_dat_td_reg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_trip_reg_type",
+      "kind": "column",
+      "label": {
+        "nl": "Rit registratiesoort (door bct of handmatig)",
+        "en": "Trip registration type (by BCT or manual)"
+      },
+      "codes": {
+        "0": {
+          "en": "Trip registration by vehicle system"
+        },
+        "1": {
+          "en": "Trip registration by manual input"
+        }
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_trip_mixed_indicator",
+      "kind": "column",
+      "label": {
+        "nl": "Rit is gemengd prive/zakelijk indicatie ja / nee",
+        "en": "Trip is mixed private/business indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_trip_description",
+      "kind": "column",
+      "label": {
+        "nl": "Rit omschrijving van chauffeur",
+        "en": "Trip description by driver"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_trip_agenda_description",
+      "kind": "column",
+      "label": {
+        "nl": "Rit omschrijving uit agendasysteem",
+        "en": "Trip description from calendar system"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_trip_distance",
+      "kind": "column",
+      "label": {
+        "nl": "Rit kilometers",
+        "en": "Trip kilometres"
+      },
+      "definition": {
+        "nl": "Het aantal rit kilometers wordt bepaald door de begin kilometerstand van de BCT odometer af te trekken van de eind kilometerstand van de BCT odometer binnen een rit. Wanneer de eindkilometerstand niet bepaald is, wordt het aantal rit kilometers niet weggeschreven in de auditfile.",
+        "en": "The number of trip kilometres is determined by subtracting the start reading of the BCT odometer from the end reading of the BCT odometer within a trip. If the end reading has not been determined, the number of trip kilometres is not written to the audit file."
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_private_distance",
+      "kind": "column",
+      "label": {
+        "nl": "Rit prive kilometers",
+        "en": "Trip private kilometres"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_business_distance",
+      "kind": "column",
+      "label": {
+        "nl": "Rit zakelijke kilometers",
+        "en": "Trip business kilometres"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_deviant_indicator",
+      "kind": "column",
+      "label": {
+        "nl": "Afwijkende route gereden indicatie ja / nee",
+        "en": "Deviating route driven indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_deviant_distance",
+      "kind": "column",
+      "label": {
+        "nl": "Afwijkende route omrij kilometers",
+        "en": "Deviating route detour kilometres"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_deviant_description",
+      "kind": "column",
+      "label": {
+        "nl": "Afwijkende route toelichting",
+        "en": "Deviating route explanation"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_prijs",
+      "kind": "column",
+      "label": {
+        "nl": "Ritprijs",
+        "en": "Trip fare"
+      },
+      "definition": {
+        "nl": "Ritprijs in eurocenten. Als de ritprijs de waarde nul heeft, kunnen alle bedragvelden worden weggelaten als deze allemaal nul zijn.",
+        "en": "Trip fare in euro cents. If the trip fare is zero, all amount fields may be omitted if they are all zero."
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_basis_bedrag",
+      "kind": "column",
+      "label": {
+        "nl": "Basisbedrag",
+        "en": "Base amount"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_toeslag",
+      "kind": "column",
+      "label": {
+        "nl": "Toeslag",
+        "en": "Surcharge"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_korting",
+      "kind": "column",
+      "label": {
+        "nl": "Korting",
+        "en": "Discount"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_fooi",
+      "kind": "column",
+      "label": {
+        "nl": "Fooi",
+        "en": "Tip"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_betaal_wijze",
+      "kind": "column",
+      "label": {
+        "nl": "Betaalwijze, tekst",
+        "en": "Payment method, text"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_prijsafspraak",
+      "kind": "column",
+      "label": {
+        "nl": "Prijs afspraak, tekst",
+        "en": "Price agreement, text"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg",
+      "kind": "group",
+      "label": {
+        "nl": "Beginpunt",
+        "en": "Starting point"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_dat_td",
+      "kind": "column",
+      "label": {
+        "nl": "Systeem datum / tijd",
+        "en": "System date / time"
+      },
+      "definition": {
+        "nl": "Systeem datum / tijd is alleen verplicht indien er sprake is van een zakelijke rit.",
+        "en": "System date / time is only required for a business trip."
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_dat_td_gp_sfix",
+      "kind": "column",
+      "label": {
+        "nl": "Systeem datum / tijd GPS fix",
+        "en": "System date / time GPS fix"
+      },
+      "definition": {
+        "nl": "Datum en tijd waarop de coordinaten worden vastgelegd.",
+        "en": "Date and time at which the coordinates are recorded."
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_bct_odo",
+      "kind": "column",
+      "label": {
+        "nl": "Kilometerstand BCT odo meter",
+        "en": "Odometer reading BCT odometer"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_veh_odo",
+      "kind": "column",
+      "label": {
+        "nl": "Kilometerstand voertuig odo meter (dashboard)",
+        "en": "Odometer reading of the vehicle odometer (dashboard)"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_lat",
+      "kind": "column",
+      "label": {
+        "nl": "Breedtegraad",
+        "en": "Latitude"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_lon",
+      "kind": "column",
+      "label": {
+        "nl": "Lengtegraad",
+        "en": "Longitude"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_sat",
+      "kind": "column",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_fix",
+      "kind": "column",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_dop",
+      "kind": "column",
+      "label": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_poi_id",
+      "kind": "column",
+      "label": {
+        "nl": "POI Identification",
+        "en": "POI identification"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_addr_txt",
+      "kind": "column",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_address",
+      "kind": "group",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_address_streetname",
+      "kind": "column",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_address_number",
+      "kind": "column",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_address_location_description",
+      "kind": "column",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_address_postal_code",
+      "kind": "column",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_address_city",
+      "kind": "column",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_address_region",
+      "kind": "column",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_beg_address_country",
+      "kind": "column",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end",
+      "kind": "group",
+      "label": {
+        "nl": "Eindpunt",
+        "en": "End point"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_dat_td",
+      "kind": "column",
+      "label": {
+        "nl": "Systeem datum / tijd",
+        "en": "System date / time"
+      },
+      "definition": {
+        "nl": "Systeem datum / tijd is alleen verplicht indien er sprake is van een zakelijke rit.",
+        "en": "System date / time is only required for a business trip."
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_dat_td_gp_sfix",
+      "kind": "column",
+      "label": {
+        "nl": "Systeem datum / tijd GPS fix",
+        "en": "System date / time GPS fix"
+      },
+      "definition": {
+        "nl": "Datum en tijd waarop de coordinaten worden vastgelegd.",
+        "en": "Date and time at which the coordinates are recorded."
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_bct_odo",
+      "kind": "column",
+      "label": {
+        "nl": "Kilometerstand BCT odo meter",
+        "en": "Odometer reading BCT odometer"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_veh_odo",
+      "kind": "column",
+      "label": {
+        "nl": "Kilometerstand voertuig odo meter (dashboard)",
+        "en": "Odometer reading of the vehicle odometer (dashboard)"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_lat",
+      "kind": "column",
+      "label": {
+        "nl": "Breedtegraad",
+        "en": "Latitude"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_lon",
+      "kind": "column",
+      "label": {
+        "nl": "Lengtegraad",
+        "en": "Longitude"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_sat",
+      "kind": "column",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_fix",
+      "kind": "column",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_dop",
+      "kind": "column",
+      "label": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_poi_id",
+      "kind": "column",
+      "label": {
+        "nl": "POI Identification",
+        "en": "POI identification"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_addr_txt",
+      "kind": "column",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_address",
+      "kind": "group",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_address_streetname",
+      "kind": "column",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_address_number",
+      "kind": "column",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_address_location_description",
+      "kind": "column",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_address_postal_code",
+      "kind": "column",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_address_city",
+      "kind": "column",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_address_region",
+      "kind": "column",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_loc_end_address_country",
+      "kind": "column",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point",
+      "kind": "table",
+      "label": {
+        "nl": "Ritdetailpunt",
+        "en": "Trip detail point"
+      },
+      "definition": {
+        "nl": "Ritdetailpunt bevat de gegevens van een punt tussen beginpunt en eindpunt. Ritdetailpunten worden met een frequentie van 1 per minuut weggeschreven. Het eerste ritdetailpunt kan eerder dan een minuut na het beginpunt worden weggeschreven. Ritdetailpunten zijn alleen verplicht indien er sprake is van een zakelijke rit.",
+        "en": "A trip detail point contains the data of a point between the starting point and end point. Trip detail points are written at a frequency of 1 per minute. The first trip detail point may be written less than a minute after the starting point. Trip detail points are only required for a business trip."
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.dat_td",
+      "kind": "column",
+      "label": {
+        "nl": "Systeem datum / tijd",
+        "en": "System date / time"
+      },
+      "definition": {
+        "nl": "Systeem datum / tijd is alleen verplicht indien er sprake is van een zakelijke rit.",
+        "en": "System date / time is only required for a business trip."
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.dat_td_gp_sfix",
+      "kind": "column",
+      "label": {
+        "nl": "Systeem datum / tijd GPS fix",
+        "en": "System date / time GPS fix"
+      },
+      "definition": {
+        "nl": "Datum en tijd waarop de coordinaten worden vastgelegd.",
+        "en": "Date and time at which the coordinates are recorded."
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.bct_odo",
+      "kind": "column",
+      "label": {
+        "nl": "Kilometerstand BCT odo meter",
+        "en": "Odometer reading BCT odometer"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.veh_odo",
+      "kind": "column",
+      "label": {
+        "nl": "Kilometerstand voertuig odo meter (dashboard)",
+        "en": "Odometer reading of the vehicle odometer (dashboard)"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.st_rdn_at",
+      "kind": "column",
+      "label": {
+        "nl": "Voertuig status (Stilstaan, Rijden)",
+        "en": "Vehicle status (stationary, driving)"
+      },
+      "definition": {
+        "nl": "Status wordt bepaald op basis van BCT.",
+        "en": "The status is determined on the basis of the BCT."
+      },
+      "codes": {
+        "R": {
+          "nl": "Rijden",
+          "en": "Driving"
+        },
+        "S": {
+          "nl": "Stilstaan",
+          "en": "Stationary"
+        }
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.lat",
+      "kind": "column",
+      "label": {
+        "nl": "Breedtegraad",
+        "en": "Latitude"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.lon",
+      "kind": "column",
+      "label": {
+        "nl": "Lengtegraad",
+        "en": "Longitude"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.src",
+      "kind": "column",
+      "label": {
+        "nl": "Herkomst van bepaling",
+        "en": "Origin of determination"
+      },
+      "codes": {
+        "1": {
+          "en": "BCT"
+        },
+        "2": {
+          "en": "GPS"
+        }
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.sat",
+      "kind": "column",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.fix",
+      "kind": "column",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.dop",
+      "kind": "column",
+      "label": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.poi_id",
+      "kind": "column",
+      "label": {
+        "nl": "POI Identification",
+        "en": "POI identification"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.addr_txt",
+      "kind": "column",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.address",
+      "kind": "group",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.address_streetname",
+      "kind": "column",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.address_number",
+      "kind": "column",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.address_location_description",
+      "kind": "column",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.address_postal_code",
+      "kind": "column",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.address_city",
+      "kind": "column",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.address_region",
+      "kind": "column",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit_data_point.address_country",
+      "kind": "column",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_bestuurder",
+      "kind": "group",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_bestuurder_ch_id_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_bestuurder_ck_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.data_bestuurder_naam",
+      "kind": "column",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.change_info",
+      "kind": "group",
+      "label": {
+        "nl": "Aanpassing informatie",
+        "en": "Change information"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.change_info_change_by_user_name",
+      "kind": "column",
+      "label": {
+        "nl": "Gebruiker naam",
+        "en": "User name"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.change_info_change_date_time",
+      "kind": "column",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.change_info_change_description",
+      "kind": "column",
+      "label": {
+        "nl": "Soort aanpassing omschrijving",
+        "en": "Type of change description"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.change_info_bestuurder",
+      "kind": "group",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.change_info_bestuurder_ch_id_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.change_info_bestuurder_ck_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.change_info_bestuurder_naam",
+      "kind": "column",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "key": "ondernemerskaart_rit.history",
+      "kind": "group",
+      "label": {
+        "nl": "Historie",
+        "en": "History"
+      }
+    },
+    {
+      "key": "history_rit",
+      "kind": "table",
+      "label": {
+        "nl": "RIT",
+        "en": "Trip"
+      },
+      "definition": {
+        "nl": "Rit wordt per bestuurder uniek geidentificeerd door een volgnummer.",
+        "en": "A trip is uniquely identified per driver by a sequence number."
+      }
+    },
+    {
+      "key": "history_rit.data",
+      "kind": "group",
+      "label": {
+        "nl": "Rit data",
+        "en": "Trip data"
+      },
+      "definition": {
+        "nl": "In historie bevat dit alle ritgegevens.",
+        "en": "In history this contains all trip data."
+      }
+    },
+    {
+      "key": "history_rit.data_rt_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Rit volgnummer",
+        "en": "Trip sequence number"
+      }
+    },
+    {
+      "key": "history_rit.data_label",
+      "kind": "column",
+      "label": {
+        "nl": "Fiscale label (activiteit)",
+        "en": "Tax label (activity)"
+      },
+      "codes": {
+        "A100": {
+          "nl": "Goederenvervoer",
+          "en": "Goods transport"
+        },
+        "A110": {
+          "nl": "Rouw-, trouwvervoer",
+          "en": "Funeral and wedding transport"
+        },
+        "A130": {
+          "nl": "Overig zakelijk",
+          "en": "Other business"
+        },
+        "A140": {
+          "nl": "Rijden tijdens pauze",
+          "en": "Driving during break"
+        },
+        "A150": {
+          "nl": "Prive",
+          "en": "Private"
+        },
+        "A160": {
+          "nl": "OV met taxi",
+          "en": "Public transport by taxi"
+        },
+        "B100": {
+          "nl": "Taxi gerelateerd",
+          "en": "Taxi-related"
+        },
+        "B101": {
+          "nl": "Taxi gerelateerd Tanken",
+          "en": "Taxi-related: refuelling"
+        },
+        "B102": {
+          "nl": "Taxi gerelateerd Wassen",
+          "en": "Taxi-related: car wash"
+        },
+        "B103": {
+          "nl": "Taxi gerelateerd Garage/keuring",
+          "en": "Taxi-related: garage/inspection"
+        },
+        "B104": {
+          "nl": "OV met taxi",
+          "en": "Public transport by taxi"
+        },
+        "B110": {
+          "nl": "Niet taxi gerelateerd",
+          "en": "Not taxi-related"
+        },
+        "B111": {
+          "nl": "Niet taxi gerelateerd Verhuur - niet taxi",
+          "en": "Not taxi-related: rental, non-taxi"
+        },
+        "B112": {
+          "nl": "Zakelijk gebruik, niet taxi gerelateerd",
+          "en": "Business use, not taxi-related"
+        },
+        "B120": {
+          "nl": "Prive",
+          "en": "Private"
+        },
+        "B130": {
+          "nl": "Woon / werk",
+          "en": "Commuting"
+        },
+        "T100": {
+          "nl": "Beladen",
+          "en": "Occupied"
+        },
+        "T110": {
+          "nl": "Onbeladen",
+          "en": "Unoccupied"
+        },
+        "T111": {
+          "nl": "Onbeladen Tanken",
+          "en": "Unoccupied: refuelling"
+        },
+        "T112": {
+          "nl": "Onbeladen Wassen",
+          "en": "Unoccupied: car wash"
+        },
+        "T113": {
+          "nl": "Onbeladen Garage/keuring",
+          "en": "Unoccupied: garage/inspection"
+        }
+      }
+    },
+    {
+      "key": "history_rit.data_mt_cd",
+      "kind": "column",
+      "label": {
+        "nl": "Mutatie code (D, I, M)",
+        "en": "Mutation code (D, I, M)"
+      },
+      "codes": {
+        "D": {
+          "en": "Delete"
+        },
+        "I": {
+          "en": "Insert"
+        },
+        "M": {
+          "nl": "Mutatie",
+          "en": "Modification"
+        }
+      }
+    },
+    {
+      "key": "history_rit.data_dispatcher_rit_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Distpatcher ritnummer",
+        "en": "Dispatcher trip number"
+      }
+    },
+    {
+      "key": "history_rit.data_type",
+      "kind": "column",
+      "label": {
+        "nl": "Type rit (O, B)",
+        "en": "Trip type (O, B)"
+      },
+      "codes": {
+        "B": {
+          "nl": "Beladen Rit",
+          "en": "Occupied trip"
+        },
+        "O": {
+          "nl": "Onbeladen Rit",
+          "en": "Unoccupied trip"
+        }
+      }
+    },
+    {
+      "key": "history_rit.data_dat_td_reg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "key": "history_rit.data_trip_reg_type",
+      "kind": "column",
+      "label": {
+        "nl": "Rit registratiesoort (door bct of handmatig)",
+        "en": "Trip registration type (by BCT or manual)"
+      },
+      "codes": {
+        "0": {
+          "en": "Trip registration by vehicle system"
+        },
+        "1": {
+          "en": "Trip registration by manual input"
+        }
+      }
+    },
+    {
+      "key": "history_rit.data_trip_mixed_indicator",
+      "kind": "column",
+      "label": {
+        "nl": "Rit is gemengd prive/zakelijk indicatie ja / nee",
+        "en": "Trip is mixed private/business indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "key": "history_rit.data_trip_description",
+      "kind": "column",
+      "label": {
+        "nl": "Rit omschrijving van chauffeur",
+        "en": "Trip description by driver"
+      }
+    },
+    {
+      "key": "history_rit.data_trip_agenda_description",
+      "kind": "column",
+      "label": {
+        "nl": "Rit omschrijving uit agendasysteem",
+        "en": "Trip description from calendar system"
+      }
+    },
+    {
+      "key": "history_rit.data_trip_distance",
+      "kind": "column",
+      "label": {
+        "nl": "Rit kilometers",
+        "en": "Trip kilometres"
+      },
+      "definition": {
+        "nl": "Het aantal rit kilometers wordt bepaald door de begin kilometerstand van de BCT odometer af te trekken van de eind kilometerstand van de BCT odometer binnen een rit. Wanneer de eindkilometerstand niet bepaald is, wordt het aantal rit kilometers niet weggeschreven in de auditfile.",
+        "en": "The number of trip kilometres is determined by subtracting the start reading of the BCT odometer from the end reading of the BCT odometer within a trip. If the end reading has not been determined, the number of trip kilometres is not written to the audit file."
+      }
+    },
+    {
+      "key": "history_rit.data_private_distance",
+      "kind": "column",
+      "label": {
+        "nl": "Rit prive kilometers",
+        "en": "Trip private kilometres"
+      }
+    },
+    {
+      "key": "history_rit.data_business_distance",
+      "kind": "column",
+      "label": {
+        "nl": "Rit zakelijke kilometers",
+        "en": "Trip business kilometres"
+      }
+    },
+    {
+      "key": "history_rit.data_deviant_indicator",
+      "kind": "column",
+      "label": {
+        "nl": "Afwijkende route gereden indicatie ja / nee",
+        "en": "Deviating route driven indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "key": "history_rit.data_deviant_distance",
+      "kind": "column",
+      "label": {
+        "nl": "Afwijkende route omrij kilometers",
+        "en": "Deviating route detour kilometres"
+      }
+    },
+    {
+      "key": "history_rit.data_deviant_description",
+      "kind": "column",
+      "label": {
+        "nl": "Afwijkende route toelichting",
+        "en": "Deviating route explanation"
+      }
+    },
+    {
+      "key": "history_rit.data_prijs",
+      "kind": "column",
+      "label": {
+        "nl": "Ritprijs",
+        "en": "Trip fare"
+      },
+      "definition": {
+        "nl": "Ritprijs in eurocenten. Als de ritprijs de waarde nul heeft, kunnen alle bedragvelden worden weggelaten als deze allemaal nul zijn.",
+        "en": "Trip fare in euro cents. If the trip fare is zero, all amount fields may be omitted if they are all zero."
+      }
+    },
+    {
+      "key": "history_rit.data_basis_bedrag",
+      "kind": "column",
+      "label": {
+        "nl": "Basisbedrag",
+        "en": "Base amount"
+      }
+    },
+    {
+      "key": "history_rit.data_toeslag",
+      "kind": "column",
+      "label": {
+        "nl": "Toeslag",
+        "en": "Surcharge"
+      }
+    },
+    {
+      "key": "history_rit.data_korting",
+      "kind": "column",
+      "label": {
+        "nl": "Korting",
+        "en": "Discount"
+      }
+    },
+    {
+      "key": "history_rit.data_fooi",
+      "kind": "column",
+      "label": {
+        "nl": "Fooi",
+        "en": "Tip"
+      }
+    },
+    {
+      "key": "history_rit.data_betaal_wijze",
+      "kind": "column",
+      "label": {
+        "nl": "Betaalwijze, tekst",
+        "en": "Payment method, text"
+      }
+    },
+    {
+      "key": "history_rit.data_prijsafspraak",
+      "kind": "column",
+      "label": {
+        "nl": "Prijs afspraak, tekst",
+        "en": "Price agreement, text"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg",
+      "kind": "group",
+      "label": {
+        "nl": "Beginpunt",
+        "en": "Starting point"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_dat_td",
+      "kind": "column",
+      "label": {
+        "nl": "Systeem datum / tijd",
+        "en": "System date / time"
+      },
+      "definition": {
+        "nl": "Systeem datum / tijd is alleen verplicht indien er sprake is van een zakelijke rit.",
+        "en": "System date / time is only required for a business trip."
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_dat_td_gp_sfix",
+      "kind": "column",
+      "label": {
+        "nl": "Systeem datum / tijd GPS fix",
+        "en": "System date / time GPS fix"
+      },
+      "definition": {
+        "nl": "Datum en tijd waarop de coordinaten worden vastgelegd.",
+        "en": "Date and time at which the coordinates are recorded."
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_bct_odo",
+      "kind": "column",
+      "label": {
+        "nl": "Kilometerstand BCT odo meter",
+        "en": "Odometer reading BCT odometer"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_veh_odo",
+      "kind": "column",
+      "label": {
+        "nl": "Kilometerstand voertuig odo meter (dashboard)",
+        "en": "Odometer reading of the vehicle odometer (dashboard)"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_lat",
+      "kind": "column",
+      "label": {
+        "nl": "Breedtegraad",
+        "en": "Latitude"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_lon",
+      "kind": "column",
+      "label": {
+        "nl": "Lengtegraad",
+        "en": "Longitude"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_sat",
+      "kind": "column",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_fix",
+      "kind": "column",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_dop",
+      "kind": "column",
+      "label": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_poi_id",
+      "kind": "column",
+      "label": {
+        "nl": "POI Identification",
+        "en": "POI identification"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_addr_txt",
+      "kind": "column",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_address",
+      "kind": "group",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_address_streetname",
+      "kind": "column",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_address_number",
+      "kind": "column",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_address_location_description",
+      "kind": "column",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_address_postal_code",
+      "kind": "column",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_address_city",
+      "kind": "column",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_address_region",
+      "kind": "column",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_beg_address_country",
+      "kind": "column",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end",
+      "kind": "group",
+      "label": {
+        "nl": "Eindpunt",
+        "en": "End point"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_dat_td",
+      "kind": "column",
+      "label": {
+        "nl": "Systeem datum / tijd",
+        "en": "System date / time"
+      },
+      "definition": {
+        "nl": "Systeem datum / tijd is alleen verplicht indien er sprake is van een zakelijke rit.",
+        "en": "System date / time is only required for a business trip."
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_dat_td_gp_sfix",
+      "kind": "column",
+      "label": {
+        "nl": "Systeem datum / tijd GPS fix",
+        "en": "System date / time GPS fix"
+      },
+      "definition": {
+        "nl": "Datum en tijd waarop de coordinaten worden vastgelegd.",
+        "en": "Date and time at which the coordinates are recorded."
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_bct_odo",
+      "kind": "column",
+      "label": {
+        "nl": "Kilometerstand BCT odo meter",
+        "en": "Odometer reading BCT odometer"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_veh_odo",
+      "kind": "column",
+      "label": {
+        "nl": "Kilometerstand voertuig odo meter (dashboard)",
+        "en": "Odometer reading of the vehicle odometer (dashboard)"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_lat",
+      "kind": "column",
+      "label": {
+        "nl": "Breedtegraad",
+        "en": "Latitude"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_lon",
+      "kind": "column",
+      "label": {
+        "nl": "Lengtegraad",
+        "en": "Longitude"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_sat",
+      "kind": "column",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_fix",
+      "kind": "column",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_dop",
+      "kind": "column",
+      "label": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_poi_id",
+      "kind": "column",
+      "label": {
+        "nl": "POI Identification",
+        "en": "POI identification"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_addr_txt",
+      "kind": "column",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_address",
+      "kind": "group",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_address_streetname",
+      "kind": "column",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_address_number",
+      "kind": "column",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_address_location_description",
+      "kind": "column",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_address_postal_code",
+      "kind": "column",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_address_city",
+      "kind": "column",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_address_region",
+      "kind": "column",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      }
+    },
+    {
+      "key": "history_rit.data_loc_end_address_country",
+      "kind": "column",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    },
+    {
+      "key": "history_rit_data_point",
+      "kind": "table",
+      "label": {
+        "nl": "Ritdetailpunt",
+        "en": "Trip detail point"
+      },
+      "definition": {
+        "nl": "Ritdetailpunt bevat de gegevens van een punt tussen beginpunt en eindpunt. Ritdetailpunten worden met een frequentie van 1 per minuut weggeschreven. Het eerste ritdetailpunt kan eerder dan een minuut na het beginpunt worden weggeschreven. Ritdetailpunten zijn alleen verplicht indien er sprake is van een zakelijke rit. De opgaaf van een tussenpunt in de rit historie is verplicht indien de Rit Registratie soort code 0 heeft (Trip registration by vehicle system) en als er uiteindelijk sprake is van een zakelijke rit.",
+        "en": "A trip detail point contains the data of a point between the starting point and end point. Trip detail points are written at a frequency of 1 per minute. The first trip detail point may be written less than a minute after the starting point. Trip detail points are only required for a business trip. An intermediate point in the trip history is required if the trip registration type has code 0 (Trip registration by vehicle system) and it is ultimately a business trip."
+      }
+    },
+    {
+      "key": "history_rit_data_point.dat_td",
+      "kind": "column",
+      "label": {
+        "nl": "Systeem datum / tijd",
+        "en": "System date / time"
+      },
+      "definition": {
+        "nl": "Systeem datum / tijd is alleen verplicht indien er sprake is van een zakelijke rit.",
+        "en": "System date / time is only required for a business trip."
+      }
+    },
+    {
+      "key": "history_rit_data_point.dat_td_gp_sfix",
+      "kind": "column",
+      "label": {
+        "nl": "Systeem datum / tijd GPS fix",
+        "en": "System date / time GPS fix"
+      },
+      "definition": {
+        "nl": "Datum en tijd waarop de coordinaten worden vastgelegd.",
+        "en": "Date and time at which the coordinates are recorded."
+      }
+    },
+    {
+      "key": "history_rit_data_point.bct_odo",
+      "kind": "column",
+      "label": {
+        "nl": "Kilometerstand BCT odo meter",
+        "en": "Odometer reading BCT odometer"
+      }
+    },
+    {
+      "key": "history_rit_data_point.veh_odo",
+      "kind": "column",
+      "label": {
+        "nl": "Kilometerstand voertuig odo meter (dashboard)",
+        "en": "Odometer reading of the vehicle odometer (dashboard)"
+      }
+    },
+    {
+      "key": "history_rit_data_point.st_rdn_at",
+      "kind": "column",
+      "label": {
+        "nl": "Voertuig status (Stilstaan, Rijden)",
+        "en": "Vehicle status (stationary, driving)"
+      },
+      "definition": {
+        "nl": "Status wordt bepaald op basis van BCT.",
+        "en": "The status is determined on the basis of the BCT."
+      },
+      "codes": {
+        "R": {
+          "nl": "Rijden",
+          "en": "Driving"
+        },
+        "S": {
+          "nl": "Stilstaan",
+          "en": "Stationary"
+        }
+      }
+    },
+    {
+      "key": "history_rit_data_point.lat",
+      "kind": "column",
+      "label": {
+        "nl": "Breedtegraad",
+        "en": "Latitude"
+      }
+    },
+    {
+      "key": "history_rit_data_point.lon",
+      "kind": "column",
+      "label": {
+        "nl": "Lengtegraad",
+        "en": "Longitude"
+      }
+    },
+    {
+      "key": "history_rit_data_point.src",
+      "kind": "column",
+      "label": {
+        "nl": "Herkomst van bepaling",
+        "en": "Origin of determination"
+      },
+      "codes": {
+        "1": {
+          "en": "BCT"
+        },
+        "2": {
+          "en": "GPS"
+        }
+      }
+    },
+    {
+      "key": "history_rit_data_point.sat",
+      "kind": "column",
+      "label": {
+        "nl": "Aantal satellieten",
+        "en": "Number of satellites"
+      }
+    },
+    {
+      "key": "history_rit_data_point.fix",
+      "kind": "column",
+      "label": {
+        "nl": "Fix indicatie ja / nee",
+        "en": "Fix indicator yes / no"
+      },
+      "codes": {
+        "0": {
+          "en": "No"
+        },
+        "1": {
+          "en": "Yes"
+        }
+      }
+    },
+    {
+      "key": "history_rit_data_point.dop",
+      "kind": "column",
+      "label": {
+        "nl": "Dilution of precision (DOP)",
+        "en": "Dilution of precision (DOP)"
+      }
+    },
+    {
+      "key": "history_rit_data_point.poi_id",
+      "kind": "column",
+      "label": {
+        "nl": "POI Identification",
+        "en": "POI identification"
+      }
+    },
+    {
+      "key": "history_rit_data_point.addr_txt",
+      "kind": "column",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      }
+    },
+    {
+      "key": "history_rit_data_point.address",
+      "kind": "group",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      }
+    },
+    {
+      "key": "history_rit_data_point.address_streetname",
+      "kind": "column",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "key": "history_rit_data_point.address_number",
+      "kind": "column",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      }
+    },
+    {
+      "key": "history_rit_data_point.address_location_description",
+      "kind": "column",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "key": "history_rit_data_point.address_postal_code",
+      "kind": "column",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "key": "history_rit_data_point.address_city",
+      "kind": "column",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      }
+    },
+    {
+      "key": "history_rit_data_point.address_region",
+      "kind": "column",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      }
+    },
+    {
+      "key": "history_rit_data_point.address_country",
+      "kind": "column",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    },
+    {
+      "key": "history_rit.data_bestuurder",
+      "kind": "group",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "key": "history_rit.data_bestuurder_ch_id_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "key": "history_rit.data_bestuurder_ck_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "key": "history_rit.data_bestuurder_naam",
+      "kind": "column",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "key": "history_rit.change_info",
+      "kind": "group",
+      "label": {
+        "nl": "Aanpassing informatie",
+        "en": "Change information"
+      }
+    },
+    {
+      "key": "history_rit.change_info_change_by_user_name",
+      "kind": "column",
+      "label": {
+        "nl": "Gebruiker naam",
+        "en": "User name"
+      }
+    },
+    {
+      "key": "history_rit.change_info_change_date_time",
+      "kind": "column",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      }
+    },
+    {
+      "key": "history_rit.change_info_change_description",
+      "kind": "column",
+      "label": {
+        "nl": "Soort aanpassing omschrijving",
+        "en": "Type of change description"
+      }
+    },
+    {
+      "key": "history_rit.change_info_bestuurder",
+      "kind": "group",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "key": "history_rit.change_info_bestuurder_ch_id_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "key": "history_rit.change_info_bestuurder_ck_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "key": "history_rit.change_info_bestuurder_naam",
+      "kind": "column",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd",
+      "kind": "table",
+      "label": {
+        "nl": "Arbeidstijd",
+        "en": "Working time"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd.data",
+      "kind": "group",
+      "label": {
+        "nl": "Arbeidstijd data",
+        "en": "Working time data"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd.data_ar_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Arbeidstijd volgnummer",
+        "en": "Working time sequence number"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd.data_dat_td_reg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd.data_dat_td_beg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd begin arbeidstijd",
+        "en": "Date/time start of working time"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd.data_dat_td_end",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd einde arbeidstijd",
+        "en": "Date/time end of working time"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd_data_rijtijd",
+      "kind": "table",
+      "label": {
+        "nl": "Rijtijd",
+        "en": "Driving time"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd_data_rijtijd.rt_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Rijtijd volgnummer",
+        "en": "Driving time sequence number"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd_data_rijtijd.dat_td_reg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd_data_rijtijd.dat_td_beg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd begin rijtijd",
+        "en": "Date/time start of driving time"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd_data_rijtijd.dat_td_end",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd einde rijtijd",
+        "en": "Date/time end of driving time"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd_data_pauze",
+      "kind": "table",
+      "label": {
+        "nl": "Pauze",
+        "en": "Break"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd_data_pauze.pz_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Pauze volgnummer",
+        "en": "Break sequence number"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd_data_pauze.mt_cd",
+      "kind": "column",
+      "label": {
+        "nl": "Mutatiecode",
+        "en": "Mutation code"
+      },
+      "codes": {
+        "D": {
+          "en": "Delete"
+        },
+        "I": {
+          "en": "Insert"
+        },
+        "M": {
+          "nl": "Mutatie",
+          "en": "Modification"
+        }
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd_data_pauze.dat_td_reg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd_data_pauze.dat_td_beg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd begin pauze",
+        "en": "Date/time start of break"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd_data_pauze.dat_td_end",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd einde pauze",
+        "en": "Date/time end of break"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd_data_adr_wrkzmhdn",
+      "kind": "table",
+      "label": {
+        "nl": "Andere werkzaamheden",
+        "en": "Other work"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd_data_adr_wrkzmhdn.aw_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Andere werkzaamheden volgnummer",
+        "en": "Other work sequence number"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd_data_adr_wrkzmhdn.mt_cd",
+      "kind": "column",
+      "label": {
+        "nl": "Mutatiecode",
+        "en": "Mutation code"
+      },
+      "codes": {
+        "D": {
+          "en": "Delete"
+        },
+        "I": {
+          "en": "Insert"
+        },
+        "M": {
+          "nl": "Mutatie",
+          "en": "Modification"
+        }
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd_data_adr_wrkzmhdn.dat_td_reg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd_data_adr_wrkzmhdn.dat_td_beg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd begin andere werkzaamheden",
+        "en": "Date/time start of other work"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd_data_adr_wrkzmhdn.dat_td_end",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd einde andere werkzaamheden",
+        "en": "Date/time end of other work"
+      }
+    },
+    {
+      "key": "bestuurder_arbeidstijd.history",
+      "kind": "group",
+      "label": {
+        "nl": "Historie",
+        "en": "History"
+      }
+    },
+    {
+      "key": "history_arbeidstijd",
+      "kind": "table",
+      "label": {
+        "nl": "Arbeidstijd",
+        "en": "Working time"
+      }
+    },
+    {
+      "key": "history_arbeidstijd.data",
+      "kind": "group",
+      "label": {
+        "nl": "Arbeidstijd data",
+        "en": "Working time data"
+      }
+    },
+    {
+      "key": "history_arbeidstijd.data_ar_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Arbeidstijd volgnummer",
+        "en": "Working time sequence number"
+      }
+    },
+    {
+      "key": "history_arbeidstijd.data_dat_td_reg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "key": "history_arbeidstijd.data_dat_td_beg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd begin arbeidstijd",
+        "en": "Date/time start of working time"
+      }
+    },
+    {
+      "key": "history_arbeidstijd.data_dat_td_end",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd einde arbeidstijd",
+        "en": "Date/time end of working time"
+      }
+    },
+    {
+      "key": "history_arbeidstijd_data_rijtijd",
+      "kind": "table",
+      "label": {
+        "nl": "Rijtijd",
+        "en": "Driving time"
+      }
+    },
+    {
+      "key": "history_arbeidstijd_data_rijtijd.rt_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Rijtijd volgnummer",
+        "en": "Driving time sequence number"
+      }
+    },
+    {
+      "key": "history_arbeidstijd_data_rijtijd.dat_td_reg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "key": "history_arbeidstijd_data_rijtijd.dat_td_beg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd begin rijtijd",
+        "en": "Date/time start of driving time"
+      }
+    },
+    {
+      "key": "history_arbeidstijd_data_rijtijd.dat_td_end",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd einde rijtijd",
+        "en": "Date/time end of driving time"
+      }
+    },
+    {
+      "key": "history_arbeidstijd_data_pauze",
+      "kind": "table",
+      "label": {
+        "nl": "Pauze",
+        "en": "Break"
+      }
+    },
+    {
+      "key": "history_arbeidstijd_data_pauze.pz_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Pauze volgnummer",
+        "en": "Break sequence number"
+      }
+    },
+    {
+      "key": "history_arbeidstijd_data_pauze.mt_cd",
+      "kind": "column",
+      "label": {
+        "nl": "Mutatiecode",
+        "en": "Mutation code"
+      },
+      "codes": {
+        "D": {
+          "en": "Delete"
+        },
+        "I": {
+          "en": "Insert"
+        },
+        "M": {
+          "nl": "Mutatie",
+          "en": "Modification"
+        }
+      }
+    },
+    {
+      "key": "history_arbeidstijd_data_pauze.dat_td_reg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "key": "history_arbeidstijd_data_pauze.dat_td_beg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd begin pauze",
+        "en": "Date/time start of break"
+      }
+    },
+    {
+      "key": "history_arbeidstijd_data_pauze.dat_td_end",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd einde pauze",
+        "en": "Date/time end of break"
+      }
+    },
+    {
+      "key": "history_arbeidstijd_data_adr_wrkzmhdn",
+      "kind": "table",
+      "label": {
+        "nl": "Andere werkzaamheden",
+        "en": "Other work"
+      }
+    },
+    {
+      "key": "history_arbeidstijd_data_adr_wrkzmhdn.aw_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Andere werkzaamheden volgnummer",
+        "en": "Other work sequence number"
+      }
+    },
+    {
+      "key": "history_arbeidstijd_data_adr_wrkzmhdn.mt_cd",
+      "kind": "column",
+      "label": {
+        "nl": "Mutatiecode",
+        "en": "Mutation code"
+      },
+      "codes": {
+        "D": {
+          "en": "Delete"
+        },
+        "I": {
+          "en": "Insert"
+        },
+        "M": {
+          "nl": "Mutatie",
+          "en": "Modification"
+        }
+      }
+    },
+    {
+      "key": "history_arbeidstijd_data_adr_wrkzmhdn.dat_td_reg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "key": "history_arbeidstijd_data_adr_wrkzmhdn.dat_td_beg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd begin andere werkzaamheden",
+        "en": "Date/time start of other work"
+      }
+    },
+    {
+      "key": "history_arbeidstijd_data_adr_wrkzmhdn.dat_td_end",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd einde andere werkzaamheden",
+        "en": "Date/time end of other work"
+      }
+    },
+    {
+      "key": "history_arbeidstijd.change_info",
+      "kind": "group",
+      "label": {
+        "nl": "Aanpassing informatie",
+        "en": "Change information"
+      }
+    },
+    {
+      "key": "history_arbeidstijd.change_info_change_by_user_name",
+      "kind": "column",
+      "label": {
+        "nl": "Gebruiker naam",
+        "en": "User name"
+      }
+    },
+    {
+      "key": "history_arbeidstijd.change_info_change_date_time",
+      "kind": "column",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      }
+    },
+    {
+      "key": "history_arbeidstijd.change_info_change_description",
+      "kind": "column",
+      "label": {
+        "nl": "Soort aanpassing omschrijving",
+        "en": "Type of change description"
+      }
+    },
+    {
+      "key": "history_arbeidstijd.change_info_bestuurder",
+      "kind": "group",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "key": "history_arbeidstijd.change_info_bestuurder_ch_id_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "key": "history_arbeidstijd.change_info_bestuurder_ck_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "key": "history_arbeidstijd.change_info_bestuurder_naam",
+      "kind": "column",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns",
+      "kind": "table",
+      "label": {
+        "nl": "Gebeurtenis",
+        "en": "Event"
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.data",
+      "kind": "group",
+      "label": {
+        "nl": "Gebeurtenis data",
+        "en": "Event data"
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.data_gb_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Gebeurtenis volgnummer",
+        "en": "Event sequence number"
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.data_code",
+      "kind": "column",
+      "label": {
+        "nl": "Code",
+        "en": "Code"
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.data_dat_td_reg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.data_km_std",
+      "kind": "column",
+      "label": {
+        "nl": "Kilometerstand",
+        "en": "Odometer reading"
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.data_st_rdn_at",
+      "kind": "column",
+      "label": {
+        "nl": "Status rijden auto",
+        "en": "Car driving status"
+      },
+      "codes": {
+        "R": {
+          "nl": "Rijden",
+          "en": "Driving"
+        },
+        "S": {
+          "nl": "Stilstaan",
+          "en": "Stationary"
+        }
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.data_wrkngs_mds",
+      "kind": "column",
+      "label": {
+        "nl": "Werkingsmodus",
+        "en": "Operating mode"
+      },
+      "codes": {
+        "B": {
+          "nl": "Bedrijfsmodus",
+          "en": "Company mode"
+        },
+        "C": {
+          "nl": "Controlemodus",
+          "en": "Control mode"
+        },
+        "K": {
+          "nl": "Activerings- en keuringsmodus",
+          "en": "Activation and calibration mode"
+        },
+        "O": {
+          "nl": "Operationele modus",
+          "en": "Operational mode"
+        }
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.data_wrkngs_nv",
+      "kind": "column",
+      "label": {
+        "nl": "Werkingsniveau",
+        "en": "Operating level"
+      },
+      "codes": {
+        "A": {
+          "nl": "Arbeidstijd",
+          "en": "Working time"
+        },
+        "B": {
+          "nl": "Basis",
+          "en": "Basic"
+        },
+        "T": {
+          "nl": "Taxivervoer",
+          "en": "Taxi transport"
+        }
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.data_aanv_info",
+      "kind": "column",
+      "label": {
+        "nl": "Aanvullende relevante informatie",
+        "en": "Additional relevant information"
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.data_bestuurder",
+      "kind": "group",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.data_bestuurder_ch_id_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.data_bestuurder_ck_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.data_bestuurder_naam",
+      "kind": "column",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.change_info",
+      "kind": "group",
+      "label": {
+        "nl": "Aanpassing informatie",
+        "en": "Change information"
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.change_info_change_by_user_name",
+      "kind": "column",
+      "label": {
+        "nl": "Gebruiker naam",
+        "en": "User name"
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.change_info_change_date_time",
+      "kind": "column",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.change_info_change_description",
+      "kind": "column",
+      "label": {
+        "nl": "Soort aanpassing omschrijving",
+        "en": "Type of change description"
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.change_info_bestuurder",
+      "kind": "group",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.change_info_bestuurder_ch_id_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.change_info_bestuurder_ck_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.change_info_bestuurder_naam",
+      "kind": "column",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "key": "ondernemerskaart_gbrtns.history",
+      "kind": "group",
+      "label": {
+        "nl": "Historie",
+        "en": "History"
+      }
+    },
+    {
+      "key": "history_gbrtns",
+      "kind": "table",
+      "label": {
+        "nl": "Gebeurtenis",
+        "en": "Event"
+      }
+    },
+    {
+      "key": "history_gbrtns.data",
+      "kind": "group",
+      "label": {
+        "nl": "Gebeurtenis data",
+        "en": "Event data"
+      }
+    },
+    {
+      "key": "history_gbrtns.data_gb_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Gebeurtenis volgnummer",
+        "en": "Event sequence number"
+      }
+    },
+    {
+      "key": "history_gbrtns.data_code",
+      "kind": "column",
+      "label": {
+        "nl": "Code",
+        "en": "Code"
+      }
+    },
+    {
+      "key": "history_gbrtns.data_dat_td_reg",
+      "kind": "column",
+      "label": {
+        "nl": "Datum/tijd registratie",
+        "en": "Date/time of registration"
+      }
+    },
+    {
+      "key": "history_gbrtns.data_km_std",
+      "kind": "column",
+      "label": {
+        "nl": "Kilometerstand",
+        "en": "Odometer reading"
+      }
+    },
+    {
+      "key": "history_gbrtns.data_st_rdn_at",
+      "kind": "column",
+      "label": {
+        "nl": "Status rijden auto",
+        "en": "Car driving status"
+      },
+      "codes": {
+        "R": {
+          "nl": "Rijden",
+          "en": "Driving"
+        },
+        "S": {
+          "nl": "Stilstaan",
+          "en": "Stationary"
+        }
+      }
+    },
+    {
+      "key": "history_gbrtns.data_wrkngs_mds",
+      "kind": "column",
+      "label": {
+        "nl": "Werkingsmodus",
+        "en": "Operating mode"
+      },
+      "codes": {
+        "B": {
+          "nl": "Bedrijfsmodus",
+          "en": "Company mode"
+        },
+        "C": {
+          "nl": "Controlemodus",
+          "en": "Control mode"
+        },
+        "K": {
+          "nl": "Activerings- en keuringsmodus",
+          "en": "Activation and calibration mode"
+        },
+        "O": {
+          "nl": "Operationele modus",
+          "en": "Operational mode"
+        }
+      }
+    },
+    {
+      "key": "history_gbrtns.data_wrkngs_nv",
+      "kind": "column",
+      "label": {
+        "nl": "Werkingsniveau",
+        "en": "Operating level"
+      },
+      "codes": {
+        "A": {
+          "nl": "Arbeidstijd",
+          "en": "Working time"
+        },
+        "B": {
+          "nl": "Basis",
+          "en": "Basic"
+        },
+        "T": {
+          "nl": "Taxivervoer",
+          "en": "Taxi transport"
+        }
+      }
+    },
+    {
+      "key": "history_gbrtns.data_aanv_info",
+      "kind": "column",
+      "label": {
+        "nl": "Aanvullende relevante informatie",
+        "en": "Additional relevant information"
+      }
+    },
+    {
+      "key": "history_gbrtns.data_bestuurder",
+      "kind": "group",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "key": "history_gbrtns.data_bestuurder_ch_id_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "key": "history_gbrtns.data_bestuurder_ck_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "key": "history_gbrtns.data_bestuurder_naam",
+      "kind": "column",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "key": "history_gbrtns.change_info",
+      "kind": "group",
+      "label": {
+        "nl": "Aanpassing informatie",
+        "en": "Change information"
+      }
+    },
+    {
+      "key": "history_gbrtns.change_info_change_by_user_name",
+      "kind": "column",
+      "label": {
+        "nl": "Gebruiker naam",
+        "en": "User name"
+      }
+    },
+    {
+      "key": "history_gbrtns.change_info_change_date_time",
+      "kind": "column",
+      "label": {
+        "nl": "Datum en tijd",
+        "en": "Date and time"
+      }
+    },
+    {
+      "key": "history_gbrtns.change_info_change_description",
+      "kind": "column",
+      "label": {
+        "nl": "Soort aanpassing omschrijving",
+        "en": "Type of change description"
+      }
+    },
+    {
+      "key": "history_gbrtns.change_info_bestuurder",
+      "kind": "group",
+      "label": {
+        "nl": "Bestuurder",
+        "en": "Driver"
+      }
+    },
+    {
+      "key": "history_gbrtns.change_info_bestuurder_ch_id_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeursidentificatienummer",
+        "en": "Driver identification number"
+      }
+    },
+    {
+      "key": "history_gbrtns.change_info_bestuurder_ck_vg_nr",
+      "kind": "column",
+      "label": {
+        "nl": "Chauffeurskaart volgnummer",
+        "en": "Driver card sequence number"
+      }
+    },
+    {
+      "key": "history_gbrtns.change_info_bestuurder_naam",
+      "kind": "column",
+      "label": {
+        "nl": "Volledige naam",
+        "en": "Full name"
+      },
+      "definition": {
+        "nl": "Voorletters, voorvoegsels en achternaam.",
+        "en": "Initials, prefixes and surname."
+      }
+    },
+    {
+      "key": "pois",
+      "kind": "table",
+      "label": {
+        "nl": "Pois",
+        "en": "POIs"
+      }
+    },
+    {
+      "key": "poi",
+      "kind": "table",
+      "label": {
+        "nl": "POI",
+        "en": "POI"
+      }
+    },
+    {
+      "key": "poi.poi_id",
+      "kind": "column",
+      "label": {
+        "nl": "POI identificatie",
+        "en": "POI identification"
+      }
+    },
+    {
+      "key": "poi.poi_name",
+      "kind": "column",
+      "label": {
+        "nl": "POI naam",
+        "en": "POI name"
+      }
+    },
+    {
+      "key": "poi.lat",
+      "kind": "column",
+      "label": {
+        "nl": "POI latitude",
+        "en": "POI latitude"
+      }
+    },
+    {
+      "key": "poi.lon",
+      "kind": "column",
+      "label": {
+        "nl": "POI longitude",
+        "en": "POI longitude"
+      }
+    },
+    {
+      "key": "poi.addr_txt",
+      "kind": "column",
+      "label": {
+        "nl": "Adres tekst",
+        "en": "Address text"
+      }
+    },
+    {
+      "key": "poi.address",
+      "kind": "group",
+      "label": {
+        "nl": "Adres",
+        "en": "Address"
+      }
+    },
+    {
+      "key": "poi.address_streetname",
+      "kind": "column",
+      "label": {
+        "nl": "Straatnaam",
+        "en": "Street name"
+      }
+    },
+    {
+      "key": "poi.address_number",
+      "kind": "column",
+      "label": {
+        "nl": "Nummer",
+        "en": "Number"
+      }
+    },
+    {
+      "key": "poi.address_location_description",
+      "kind": "column",
+      "label": {
+        "nl": "Locatie omschrijving",
+        "en": "Location description"
+      }
+    },
+    {
+      "key": "poi.address_postal_code",
+      "kind": "column",
+      "label": {
+        "nl": "Postcode",
+        "en": "Postcode"
+      }
+    },
+    {
+      "key": "poi.address_city",
+      "kind": "column",
+      "label": {
+        "nl": "Woonplaats",
+        "en": "Place of residence"
+      }
+    },
+    {
+      "key": "poi.address_region",
+      "kind": "column",
+      "label": {
+        "nl": "Regio",
+        "en": "Region"
+      }
+    },
+    {
+      "key": "poi.address_country",
+      "kind": "column",
+      "label": {
+        "nl": "Landcode",
+        "en": "Country code"
+      }
+    }
+  ]
+}

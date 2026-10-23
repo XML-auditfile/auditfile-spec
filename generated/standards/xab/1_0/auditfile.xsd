@@ -1,0 +1,1457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.auditfiles.nl/XAB/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://www.auditfiles.nl/XAB/1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="20160926">
+	<xsd:element name="auditfile">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="header">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="fileFormat" type="Fileformat"/>
+							<xsd:element name="fileFormatVersion" type="Fileformatversion"/>
+							<xsd:element name="dateTimeCreated" type="xsd:dateTime"/>
+							<xsd:element name="reportingStartDateTime" type="xsd:dateTime"/>
+							<xsd:element name="reportingEndDateTime" type="xsd:dateTime"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="KortIdBCT">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="GdKrgsNr" type="Goedkeuringsnummer"/>
+							<xsd:element name="ProgVrNr" type="Versienummer"/>
+							<xsd:element name="changeInfo" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="changeByUserName" type="Tekst200"/>
+										<xsd:element name="changeDateTime" type="xsd:dateTime"/>
+										<xsd:element name="changeDescription" type="Tekst200" minOccurs="0"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="history" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="KortIdBCT" minOccurs="0" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="GdKrgsNr" type="Goedkeuringsnummer"/>
+													<xsd:element name="ProgVrNr" type="Versienummer"/>
+													<xsd:element name="changeInfo" minOccurs="0">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="changeByUserName" type="Tekst200"/>
+																<xsd:element name="changeDateTime" type="xsd:dateTime"/>
+																<xsd:element name="changeDescription" type="Tekst200"/>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="ITServiceProvider">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="name" type="Tekst200"/>
+							<xsd:element name="identificationNr" type="Identificationnummer"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Bestuurders">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Bestuurder" maxOccurs="unbounded">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="bsn" type="Bsn" minOccurs="0"/>
+										<xsd:element name="ChIdNr" type="Chauffeursidentificatienummer" minOccurs="0"/>
+										<xsd:element name="CkVgNr" type="Chauffeurskaartvolgnummer" minOccurs="0"/>
+										<xsd:element name="initials" type="Tekst6" minOccurs="0"/>
+										<xsd:element name="prefix" type="Tekst10" minOccurs="0"/>
+										<xsd:element name="familyName" type="Tekst200" minOccurs="0"/>
+										<xsd:element name="Naam" type="Tekst200" minOccurs="0"/>
+										<xsd:element name="Personeelsnummer" type="Identification" minOccurs="0"/>
+										<xsd:element name="addressNL" minOccurs="0">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="streetname" type="Tekst24"/>
+													<xsd:element name="number" type="Numeric5"/>
+													<xsd:element name="numberExtension" type="Alfanumeric4" minOccurs="0"/>
+													<xsd:element name="locationDescription" type="Tekst35" minOccurs="0"/>
+													<xsd:element name="postalCode" type="Postcodenl" minOccurs="0"/>
+													<xsd:element name="city" type="Tekst24"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="addressForeign" minOccurs="0">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="streetname" type="Tekst35"/>
+													<xsd:element name="number" type="Tekst9"/>
+													<xsd:element name="locationDescription" type="Tekst35" minOccurs="0"/>
+													<xsd:element name="postalCode" type="Tekst9" minOccurs="0"/>
+													<xsd:element name="city" type="Tekst35"/>
+													<xsd:element name="region" type="Tekst35" minOccurs="0"/>
+													<xsd:element name="country" type="Countrycode"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Auto">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Kntkn" type="Kenteken"/>
+							<xsd:element name="VIN" type="Vin"/>
+							<xsd:element name="vehicleRegistrationType" type="Vehicleregistrationtype"/>
+							<xsd:element name="vehicleName" type="Tekst200" minOccurs="0"/>
+							<xsd:element name="vehicleMake" type="Tekst200"/>
+							<xsd:element name="vehicleModel" type="Tekst200"/>
+							<xsd:element name="country" type="Countrycode" minOccurs="0"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Vervoerder" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="KvKnr" type="Kvknummer"/>
+							<xsd:element name="Pnr" type="Pnummer"/>
+							<xsd:element name="Ondernemerskaart" maxOccurs="unbounded">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="OkVgNr" type="Ondernemerskaartvolgnummer"/>
+										<xsd:element name="OndernemersNaam" type="Tekst200"/>
+										<xsd:element name="Rit" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="Data">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="RtVgNr" type="PositiefInteger"/>
+																<xsd:element name="Label" type="Fiscallabel"/>
+																<xsd:element name="MtCd" type="Mutatiecode"/>
+																<xsd:element name="DispatcherRitNr" type="xsd:string" minOccurs="0"/>
+																<xsd:element name="Type" type="Typerit"/>
+																<xsd:element name="DatTdReg" type="xsd:dateTime"/>
+																<xsd:element name="tripRegType" type="Tripregtype" minOccurs="0"/>
+																<xsd:element name="tripMixedIndicator" type="Indicator" minOccurs="0"/>
+																<xsd:element name="tripDescription" type="Tekst200" minOccurs="0"/>
+																<xsd:element name="tripAgendaDescription" type="Tekst200" minOccurs="0"/>
+																<xsd:element name="tripDistance" type="Count" minOccurs="0"/>
+																<xsd:element name="privateDistance" type="Count" minOccurs="0"/>
+																<xsd:element name="businessDistance" type="Count" minOccurs="0"/>
+																<xsd:element name="deviantIndicator" type="Indicator" minOccurs="0"/>
+																<xsd:element name="deviantDistance" type="Count" minOccurs="0"/>
+																<xsd:element name="deviantDescription" type="Tekst200" minOccurs="0"/>
+																<xsd:element name="Prijs" type="Bedrag" minOccurs="0"/>
+																<xsd:element name="BasisBedrag" type="Bedrag" minOccurs="0"/>
+																<xsd:element name="Toeslag" type="Bedrag" minOccurs="0"/>
+																<xsd:element name="Korting" type="Bedrag" minOccurs="0"/>
+																<xsd:element name="Fooi" type="Bedrag" minOccurs="0"/>
+																<xsd:element name="BetaalWijze" type="xsd:string" minOccurs="0"/>
+																<xsd:element name="Prijsafspraak" type="xsd:string" minOccurs="0"/>
+																<xsd:element name="LocBeg">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="DatTd" type="xsd:dateTime" minOccurs="0"/>
+																			<xsd:element name="DatTdGPSfix" type="xsd:dateTime" minOccurs="0"/>
+																			<xsd:element name="BctOdo" type="Count"/>
+																			<xsd:element name="VehOdo" type="Count" minOccurs="0"/>
+																			<xsd:element name="Lat" type="Breedtegraad" minOccurs="0"/>
+																			<xsd:element name="Lon" type="Lengtegraad" minOccurs="0"/>
+																			<xsd:element name="sat" type="Count" minOccurs="0"/>
+																			<xsd:element name="fix" type="Indicator" minOccurs="0"/>
+																			<xsd:element name="dop" type="Dop" minOccurs="0"/>
+																			<xsd:element name="poiID" type="Identification" minOccurs="0"/>
+																			<xsd:element name="addrTxt" type="Tekst200" minOccurs="0"/>
+																			<xsd:element name="address" minOccurs="0">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="streetname" type="Tekst35"/>
+																						<xsd:element name="number" type="Tekst9"/>
+																						<xsd:element name="locationDescription" type="Tekst35" minOccurs="0"/>
+																						<xsd:element name="postalCode" type="Tekst9" minOccurs="0"/>
+																						<xsd:element name="city" type="Tekst35"/>
+																						<xsd:element name="region" type="Tekst35" minOccurs="0"/>
+																						<xsd:element name="country" type="Countrycode" minOccurs="0"/>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="LocEnd">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="DatTd" type="xsd:dateTime" minOccurs="0"/>
+																			<xsd:element name="DatTdGPSfix" type="xsd:dateTime" minOccurs="0"/>
+																			<xsd:element name="BctOdo" type="Count"/>
+																			<xsd:element name="VehOdo" type="Count" minOccurs="0"/>
+																			<xsd:element name="Lat" type="Breedtegraad" minOccurs="0"/>
+																			<xsd:element name="Lon" type="Lengtegraad" minOccurs="0"/>
+																			<xsd:element name="sat" type="Count" minOccurs="0"/>
+																			<xsd:element name="fix" type="Indicator" minOccurs="0"/>
+																			<xsd:element name="dop" type="Dop" minOccurs="0"/>
+																			<xsd:element name="poiID" type="Identification" minOccurs="0"/>
+																			<xsd:element name="addrTxt" type="Tekst200" minOccurs="0"/>
+																			<xsd:element name="address" minOccurs="0">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="streetname" type="Tekst35"/>
+																						<xsd:element name="number" type="Tekst9"/>
+																						<xsd:element name="locationDescription" type="Tekst35" minOccurs="0"/>
+																						<xsd:element name="postalCode" type="Tekst9" minOccurs="0"/>
+																						<xsd:element name="city" type="Tekst35"/>
+																						<xsd:element name="region" type="Tekst35" minOccurs="0"/>
+																						<xsd:element name="country" type="Countrycode" minOccurs="0"/>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="point" minOccurs="0" maxOccurs="unbounded">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="DatTd" type="xsd:dateTime" minOccurs="0"/>
+																			<xsd:element name="DatTdGPSfix" type="xsd:dateTime" minOccurs="0"/>
+																			<xsd:element name="BctOdo" type="Count"/>
+																			<xsd:element name="VehOdo" type="Count" minOccurs="0"/>
+																			<xsd:element name="StRdnAt" type="Statusrijdenauto" minOccurs="0"/>
+																			<xsd:element name="Lat" type="Breedtegraad" minOccurs="0"/>
+																			<xsd:element name="Lon" type="Lengtegraad" minOccurs="0"/>
+																			<xsd:element name="src" type="Source" minOccurs="0"/>
+																			<xsd:element name="sat" type="Count" minOccurs="0"/>
+																			<xsd:element name="fix" type="Indicator" minOccurs="0"/>
+																			<xsd:element name="dop" type="Dop" minOccurs="0"/>
+																			<xsd:element name="poiID" type="Identification" minOccurs="0"/>
+																			<xsd:element name="addrTxt" type="Tekst200" minOccurs="0"/>
+																			<xsd:element name="address" minOccurs="0">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="streetname" type="Tekst35"/>
+																						<xsd:element name="number" type="Tekst9"/>
+																						<xsd:element name="locationDescription" type="Tekst35" minOccurs="0"/>
+																						<xsd:element name="postalCode" type="Tekst9" minOccurs="0"/>
+																						<xsd:element name="city" type="Tekst35"/>
+																						<xsd:element name="region" type="Tekst35" minOccurs="0"/>
+																						<xsd:element name="country" type="Countrycode" minOccurs="0"/>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="Bestuurder">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="bsn" type="Bsn" minOccurs="0"/>
+																			<xsd:element name="ChIdNr" type="Chauffeursidentificatienummer" minOccurs="0"/>
+																			<xsd:element name="CkVgNr" type="Chauffeurskaartvolgnummer" minOccurs="0"/>
+																			<xsd:element name="Naam" type="Tekst200" minOccurs="0"/>
+																			<xsd:element name="Personeelsnummer" type="Identification" minOccurs="0"/>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element name="changeInfo" minOccurs="0">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="changeByUserName" type="Tekst200" minOccurs="0"/>
+																<xsd:element name="changeDateTime" type="xsd:dateTime"/>
+																<xsd:element name="changeDescription" type="Tekst200" minOccurs="0"/>
+																<xsd:element name="Bestuurder" minOccurs="0">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="bsn" type="Bsn" minOccurs="0"/>
+																			<xsd:element name="ChIdNr" type="Chauffeursidentificatienummer" minOccurs="0"/>
+																			<xsd:element name="CkVgNr" type="Chauffeurskaartvolgnummer" minOccurs="0"/>
+																			<xsd:element name="Naam" type="Tekst200" minOccurs="0"/>
+																			<xsd:element name="Personeelsnummer" type="Identification" minOccurs="0"/>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element name="history" minOccurs="0">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="Rit" maxOccurs="unbounded">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="Data">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="RtVgNr" type="PositiefInteger"/>
+																						<xsd:element name="Label" type="Fiscallabel"/>
+																						<xsd:element name="MtCd" type="Mutatiecode"/>
+																						<xsd:element name="DispatcherRitNr" type="xsd:string" minOccurs="0"/>
+																						<xsd:element name="Type" type="Typerit"/>
+																						<xsd:element name="DatTdReg" type="xsd:dateTime"/>
+																						<xsd:element name="tripRegType" type="Tripregtype" minOccurs="0"/>
+																						<xsd:element name="tripMixedIndicator" type="Indicator" minOccurs="0"/>
+																						<xsd:element name="tripDescription" type="Tekst200" minOccurs="0"/>
+																						<xsd:element name="tripAgendaDescription" type="Tekst200" minOccurs="0"/>
+																						<xsd:element name="tripDistance" type="Count" minOccurs="0"/>
+																						<xsd:element name="privateDistance" type="Count" minOccurs="0"/>
+																						<xsd:element name="businessDistance" type="Count" minOccurs="0"/>
+																						<xsd:element name="deviantIndicator" type="Indicator" minOccurs="0"/>
+																						<xsd:element name="deviantDistance" type="Count" minOccurs="0"/>
+																						<xsd:element name="deviantDescription" type="Tekst200" minOccurs="0"/>
+																						<xsd:element name="Prijs" type="Bedrag" minOccurs="0"/>
+																						<xsd:element name="BasisBedrag" type="Bedrag" minOccurs="0"/>
+																						<xsd:element name="Toeslag" type="Bedrag" minOccurs="0"/>
+																						<xsd:element name="Korting" type="Bedrag" minOccurs="0"/>
+																						<xsd:element name="Fooi" type="Bedrag" minOccurs="0"/>
+																						<xsd:element name="BetaalWijze" type="xsd:string" minOccurs="0"/>
+																						<xsd:element name="Prijsafspraak" type="xsd:string" minOccurs="0"/>
+																						<xsd:element name="LocBeg">
+																							<xsd:complexType>
+																								<xsd:sequence>
+																									<xsd:element name="DatTd" type="xsd:dateTime" minOccurs="0"/>
+																									<xsd:element name="DatTdGPSfix" type="xsd:dateTime" minOccurs="0"/>
+																									<xsd:element name="BctOdo" type="Count"/>
+																									<xsd:element name="VehOdo" type="Count" minOccurs="0"/>
+																									<xsd:element name="Lat" type="Breedtegraad" minOccurs="0"/>
+																									<xsd:element name="Lon" type="Lengtegraad" minOccurs="0"/>
+																									<xsd:element name="sat" type="Count" minOccurs="0"/>
+																									<xsd:element name="fix" type="Indicator" minOccurs="0"/>
+																									<xsd:element name="dop" type="Dop" minOccurs="0"/>
+																									<xsd:element name="poiID" type="Identification" minOccurs="0"/>
+																									<xsd:element name="addrTxt" type="Tekst200" minOccurs="0"/>
+																									<xsd:element name="address" minOccurs="0">
+																										<xsd:complexType>
+																											<xsd:sequence>
+																												<xsd:element name="streetname" type="Tekst35"/>
+																												<xsd:element name="number" type="Tekst9"/>
+																												<xsd:element name="locationDescription" type="Tekst35" minOccurs="0"/>
+																												<xsd:element name="postalCode" type="Tekst9" minOccurs="0"/>
+																												<xsd:element name="city" type="Tekst35"/>
+																												<xsd:element name="region" type="Tekst35" minOccurs="0"/>
+																												<xsd:element name="country" type="Countrycode" minOccurs="0"/>
+																											</xsd:sequence>
+																										</xsd:complexType>
+																									</xsd:element>
+																								</xsd:sequence>
+																							</xsd:complexType>
+																						</xsd:element>
+																						<xsd:element name="LocEnd">
+																							<xsd:complexType>
+																								<xsd:sequence>
+																									<xsd:element name="DatTd" type="xsd:dateTime" minOccurs="0"/>
+																									<xsd:element name="DatTdGPSfix" type="xsd:dateTime" minOccurs="0"/>
+																									<xsd:element name="BctOdo" type="Count"/>
+																									<xsd:element name="VehOdo" type="Count" minOccurs="0"/>
+																									<xsd:element name="Lat" type="Breedtegraad" minOccurs="0"/>
+																									<xsd:element name="Lon" type="Lengtegraad" minOccurs="0"/>
+																									<xsd:element name="sat" type="Count" minOccurs="0"/>
+																									<xsd:element name="fix" type="Indicator" minOccurs="0"/>
+																									<xsd:element name="dop" type="Dop" minOccurs="0"/>
+																									<xsd:element name="poiID" type="Identification" minOccurs="0"/>
+																									<xsd:element name="addrTxt" type="Tekst200" minOccurs="0"/>
+																									<xsd:element name="address" minOccurs="0">
+																										<xsd:complexType>
+																											<xsd:sequence>
+																												<xsd:element name="streetname" type="Tekst35"/>
+																												<xsd:element name="number" type="Tekst9"/>
+																												<xsd:element name="locationDescription" type="Tekst35" minOccurs="0"/>
+																												<xsd:element name="postalCode" type="Tekst9" minOccurs="0"/>
+																												<xsd:element name="city" type="Tekst35"/>
+																												<xsd:element name="region" type="Tekst35" minOccurs="0"/>
+																												<xsd:element name="country" type="Countrycode" minOccurs="0"/>
+																											</xsd:sequence>
+																										</xsd:complexType>
+																									</xsd:element>
+																								</xsd:sequence>
+																							</xsd:complexType>
+																						</xsd:element>
+																						<xsd:element name="point" minOccurs="0" maxOccurs="unbounded">
+																							<xsd:complexType>
+																								<xsd:sequence>
+																									<xsd:element name="DatTd" type="xsd:dateTime" minOccurs="0"/>
+																									<xsd:element name="DatTdGPSfix" type="xsd:dateTime" minOccurs="0"/>
+																									<xsd:element name="BctOdo" type="Count"/>
+																									<xsd:element name="VehOdo" type="Count" minOccurs="0"/>
+																									<xsd:element name="StRdnAt" type="Statusrijdenauto" minOccurs="0"/>
+																									<xsd:element name="Lat" type="Breedtegraad" minOccurs="0"/>
+																									<xsd:element name="Lon" type="Lengtegraad" minOccurs="0"/>
+																									<xsd:element name="src" type="Source" minOccurs="0"/>
+																									<xsd:element name="sat" type="Count" minOccurs="0"/>
+																									<xsd:element name="fix" type="Indicator" minOccurs="0"/>
+																									<xsd:element name="dop" type="Dop" minOccurs="0"/>
+																									<xsd:element name="poiID" type="Identification" minOccurs="0"/>
+																									<xsd:element name="addrTxt" type="Tekst200" minOccurs="0"/>
+																									<xsd:element name="address" minOccurs="0">
+																										<xsd:complexType>
+																											<xsd:sequence>
+																												<xsd:element name="streetname" type="Tekst35"/>
+																												<xsd:element name="number" type="Tekst9"/>
+																												<xsd:element name="locationDescription" type="Tekst35" minOccurs="0"/>
+																												<xsd:element name="postalCode" type="Tekst9" minOccurs="0"/>
+																												<xsd:element name="city" type="Tekst35"/>
+																												<xsd:element name="region" type="Tekst35" minOccurs="0"/>
+																												<xsd:element name="country" type="Countrycode" minOccurs="0"/>
+																											</xsd:sequence>
+																										</xsd:complexType>
+																									</xsd:element>
+																								</xsd:sequence>
+																							</xsd:complexType>
+																						</xsd:element>
+																						<xsd:element name="Bestuurder">
+																							<xsd:complexType>
+																								<xsd:sequence>
+																									<xsd:element name="bsn" type="Bsn" minOccurs="0"/>
+																									<xsd:element name="ChIdNr" type="Chauffeursidentificatienummer" minOccurs="0"/>
+																									<xsd:element name="CkVgNr" type="Chauffeurskaartvolgnummer" minOccurs="0"/>
+																									<xsd:element name="Naam" type="Tekst200" minOccurs="0"/>
+																									<xsd:element name="Personeelsnummer" type="Identification" minOccurs="0"/>
+																								</xsd:sequence>
+																							</xsd:complexType>
+																						</xsd:element>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																			<xsd:element name="changeInfo" minOccurs="0">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="changeByUserName" type="Tekst200" minOccurs="0"/>
+																						<xsd:element name="changeDateTime" type="xsd:dateTime"/>
+																						<xsd:element name="changeDescription" type="Tekst200" minOccurs="0"/>
+																						<xsd:element name="Bestuurder" minOccurs="0">
+																							<xsd:complexType>
+																								<xsd:sequence>
+																									<xsd:element name="bsn" type="Bsn" minOccurs="0"/>
+																									<xsd:element name="ChIdNr" type="Chauffeursidentificatienummer" minOccurs="0"/>
+																									<xsd:element name="CkVgNr" type="Chauffeurskaartvolgnummer" minOccurs="0"/>
+																									<xsd:element name="Naam" type="Tekst200" minOccurs="0"/>
+																									<xsd:element name="Personeelsnummer" type="Identification" minOccurs="0"/>
+																								</xsd:sequence>
+																							</xsd:complexType>
+																						</xsd:element>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="Bestuurder" minOccurs="0" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="bsn" type="Bsn" minOccurs="0"/>
+													<xsd:element name="ChIdNr" type="Chauffeursidentificatienummer" minOccurs="0"/>
+													<xsd:element name="CkVgNr" type="Chauffeurskaartvolgnummer" minOccurs="0"/>
+													<xsd:element name="Naam" type="Tekst200" minOccurs="0"/>
+													<xsd:element name="Personeelsnummer" type="Identification" minOccurs="0"/>
+													<xsd:element name="Arbeidstijd" maxOccurs="unbounded">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="Data">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="ArVgNr" type="PositiefInteger"/>
+																			<xsd:element name="DatTdReg" type="xsd:dateTime"/>
+																			<xsd:element name="DatTdBeg" type="xsd:dateTime"/>
+																			<xsd:element name="DatTdEnd" type="xsd:dateTime"/>
+																			<xsd:element name="Rijtijd" minOccurs="0" maxOccurs="unbounded">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="RtVgNr" type="PositiefInteger"/>
+																						<xsd:element name="DatTdReg" type="xsd:dateTime"/>
+																						<xsd:element name="DatTdBeg" type="xsd:dateTime"/>
+																						<xsd:element name="DatTdEnd" type="xsd:dateTime"/>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																			<xsd:element name="Pauze" minOccurs="0" maxOccurs="unbounded">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="PzVgNr" type="PositiefInteger"/>
+																						<xsd:element name="MtCd" type="Mutatiecode"/>
+																						<xsd:element name="DatTdReg" type="xsd:dateTime"/>
+																						<xsd:element name="DatTdBeg" type="xsd:dateTime"/>
+																						<xsd:element name="DatTdEnd" type="xsd:dateTime"/>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																			<xsd:element name="AdrWrkzmhdn" minOccurs="0" maxOccurs="unbounded">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="AwVgNr" type="PositiefInteger"/>
+																						<xsd:element name="MtCd" type="Mutatiecode"/>
+																						<xsd:element name="DatTdReg" type="xsd:dateTime"/>
+																						<xsd:element name="DatTdBeg" type="xsd:dateTime"/>
+																						<xsd:element name="DatTdEnd" type="xsd:dateTime"/>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="changeInfo" minOccurs="0">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="changeByUserName" type="Tekst200" minOccurs="0"/>
+																			<xsd:element name="changeDateTime" type="xsd:dateTime"/>
+																			<xsd:element name="changeDescription" type="Tekst200" minOccurs="0"/>
+																			<xsd:element name="Bestuurder" minOccurs="0">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="bsn" type="Bsn" minOccurs="0"/>
+																						<xsd:element name="ChIdNr" type="Chauffeursidentificatienummer" minOccurs="0"/>
+																						<xsd:element name="CkVgNr" type="Chauffeurskaartvolgnummer" minOccurs="0"/>
+																						<xsd:element name="Naam" type="Tekst200" minOccurs="0"/>
+																						<xsd:element name="Personeelsnummer" type="Identification" minOccurs="0"/>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+																<xsd:element name="history" minOccurs="0">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="Arbeidstijd" maxOccurs="unbounded">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="Data">
+																							<xsd:complexType>
+																								<xsd:sequence>
+																									<xsd:element name="ArVgNr" type="PositiefInteger"/>
+																									<xsd:element name="DatTdReg" type="xsd:dateTime"/>
+																									<xsd:element name="DatTdBeg" type="xsd:dateTime"/>
+																									<xsd:element name="DatTdEnd" type="xsd:dateTime"/>
+																									<xsd:element name="Rijtijd" minOccurs="0" maxOccurs="unbounded">
+																										<xsd:complexType>
+																											<xsd:sequence>
+																												<xsd:element name="RtVgNr" type="PositiefInteger"/>
+																												<xsd:element name="DatTdReg" type="xsd:dateTime"/>
+																												<xsd:element name="DatTdBeg" type="xsd:dateTime"/>
+																												<xsd:element name="DatTdEnd" type="xsd:dateTime"/>
+																											</xsd:sequence>
+																										</xsd:complexType>
+																									</xsd:element>
+																									<xsd:element name="Pauze" minOccurs="0" maxOccurs="unbounded">
+																										<xsd:complexType>
+																											<xsd:sequence>
+																												<xsd:element name="PzVgNr" type="PositiefInteger"/>
+																												<xsd:element name="MtCd" type="Mutatiecode"/>
+																												<xsd:element name="DatTdReg" type="xsd:dateTime"/>
+																												<xsd:element name="DatTdBeg" type="xsd:dateTime"/>
+																												<xsd:element name="DatTdEnd" type="xsd:dateTime"/>
+																											</xsd:sequence>
+																										</xsd:complexType>
+																									</xsd:element>
+																									<xsd:element name="AdrWrkzmhdn" minOccurs="0" maxOccurs="unbounded">
+																										<xsd:complexType>
+																											<xsd:sequence>
+																												<xsd:element name="AwVgNr" type="PositiefInteger"/>
+																												<xsd:element name="MtCd" type="Mutatiecode"/>
+																												<xsd:element name="DatTdReg" type="xsd:dateTime"/>
+																												<xsd:element name="DatTdBeg" type="xsd:dateTime"/>
+																												<xsd:element name="DatTdEnd" type="xsd:dateTime"/>
+																											</xsd:sequence>
+																										</xsd:complexType>
+																									</xsd:element>
+																								</xsd:sequence>
+																							</xsd:complexType>
+																						</xsd:element>
+																						<xsd:element name="changeInfo" minOccurs="0">
+																							<xsd:complexType>
+																								<xsd:sequence>
+																									<xsd:element name="changeByUserName" type="Tekst200" minOccurs="0"/>
+																									<xsd:element name="changeDateTime" type="xsd:dateTime"/>
+																									<xsd:element name="changeDescription" type="Tekst200" minOccurs="0"/>
+																									<xsd:element name="Bestuurder" minOccurs="0">
+																										<xsd:complexType>
+																											<xsd:sequence>
+																												<xsd:element name="bsn" type="Bsn" minOccurs="0"/>
+																												<xsd:element name="ChIdNr" type="Chauffeursidentificatienummer" minOccurs="0"/>
+																												<xsd:element name="CkVgNr" type="Chauffeurskaartvolgnummer" minOccurs="0"/>
+																												<xsd:element name="Naam" type="Tekst200" minOccurs="0"/>
+																												<xsd:element name="Personeelsnummer" type="Identification" minOccurs="0"/>
+																											</xsd:sequence>
+																										</xsd:complexType>
+																									</xsd:element>
+																								</xsd:sequence>
+																							</xsd:complexType>
+																						</xsd:element>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="Gbrtns" minOccurs="0" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="Data">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="GbVgNr" type="PositiefInteger"/>
+																<xsd:element name="Code" type="Code"/>
+																<xsd:element name="DatTdReg" type="xsd:dateTime"/>
+																<xsd:element name="KmStd" type="Kmstand"/>
+																<xsd:element name="StRdnAt" type="Statusrijdenauto"/>
+																<xsd:element name="WrkngsMds" type="Werkingsmodus"/>
+																<xsd:element name="WrkngsNv" type="Werkingsniveau"/>
+																<xsd:element name="AanvInfo" type="Tekst100" minOccurs="0"/>
+																<xsd:element name="Bestuurder" minOccurs="0">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="bsn" type="Bsn" minOccurs="0"/>
+																			<xsd:element name="ChIdNr" type="Chauffeursidentificatienummer" minOccurs="0"/>
+																			<xsd:element name="CkVgNr" type="Chauffeurskaartvolgnummer" minOccurs="0"/>
+																			<xsd:element name="Naam" type="Tekst200" minOccurs="0"/>
+																			<xsd:element name="Personeelsnummer" type="Identification" minOccurs="0"/>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element name="changeInfo" minOccurs="0">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="changeByUserName" type="Tekst200" minOccurs="0"/>
+																<xsd:element name="changeDateTime" type="xsd:dateTime"/>
+																<xsd:element name="changeDescription" type="Tekst200" minOccurs="0"/>
+																<xsd:element name="Bestuurder" minOccurs="0">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="bsn" type="Bsn" minOccurs="0"/>
+																			<xsd:element name="ChIdNr" type="Chauffeursidentificatienummer" minOccurs="0"/>
+																			<xsd:element name="CkVgNr" type="Chauffeurskaartvolgnummer" minOccurs="0"/>
+																			<xsd:element name="Naam" type="Tekst200" minOccurs="0"/>
+																			<xsd:element name="Personeelsnummer" type="Identification" minOccurs="0"/>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element name="history" minOccurs="0">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="Gbrtns" maxOccurs="unbounded">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="Data">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="GbVgNr" type="PositiefInteger"/>
+																						<xsd:element name="Code" type="Code"/>
+																						<xsd:element name="DatTdReg" type="xsd:dateTime"/>
+																						<xsd:element name="KmStd" type="Kmstand"/>
+																						<xsd:element name="StRdnAt" type="Statusrijdenauto"/>
+																						<xsd:element name="WrkngsMds" type="Werkingsmodus"/>
+																						<xsd:element name="WrkngsNv" type="Werkingsniveau"/>
+																						<xsd:element name="AanvInfo" type="Tekst100" minOccurs="0"/>
+																						<xsd:element name="Bestuurder" minOccurs="0">
+																							<xsd:complexType>
+																								<xsd:sequence>
+																									<xsd:element name="bsn" type="Bsn" minOccurs="0"/>
+																									<xsd:element name="ChIdNr" type="Chauffeursidentificatienummer" minOccurs="0"/>
+																									<xsd:element name="CkVgNr" type="Chauffeurskaartvolgnummer" minOccurs="0"/>
+																									<xsd:element name="Naam" type="Tekst200" minOccurs="0"/>
+																									<xsd:element name="Personeelsnummer" type="Identification" minOccurs="0"/>
+																								</xsd:sequence>
+																							</xsd:complexType>
+																						</xsd:element>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																			<xsd:element name="changeInfo" minOccurs="0">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="changeByUserName" type="Tekst200" minOccurs="0"/>
+																						<xsd:element name="changeDateTime" type="xsd:dateTime"/>
+																						<xsd:element name="changeDescription" type="Tekst200" minOccurs="0"/>
+																						<xsd:element name="Bestuurder" minOccurs="0">
+																							<xsd:complexType>
+																								<xsd:sequence>
+																									<xsd:element name="bsn" type="Bsn" minOccurs="0"/>
+																									<xsd:element name="ChIdNr" type="Chauffeursidentificatienummer" minOccurs="0"/>
+																									<xsd:element name="CkVgNr" type="Chauffeurskaartvolgnummer" minOccurs="0"/>
+																									<xsd:element name="Naam" type="Tekst200" minOccurs="0"/>
+																									<xsd:element name="Personeelsnummer" type="Identification" minOccurs="0"/>
+																								</xsd:sequence>
+																							</xsd:complexType>
+																						</xsd:element>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="pois" minOccurs="0">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="poi" maxOccurs="unbounded">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="poiID" type="Identification"/>
+										<xsd:element name="poiName" type="Tekst200"/>
+										<xsd:element name="Lat" type="Breedtegraad"/>
+										<xsd:element name="Lon" type="Lengtegraad"/>
+										<xsd:element name="addrTxt" type="Tekst200" minOccurs="0"/>
+										<xsd:element name="address" minOccurs="0">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="streetname" type="Tekst35"/>
+													<xsd:element name="number" type="Tekst9"/>
+													<xsd:element name="locationDescription" type="Tekst35" minOccurs="0"/>
+													<xsd:element name="postalCode" type="Tekst9" minOccurs="0"/>
+													<xsd:element name="city" type="Tekst35"/>
+													<xsd:element name="region" type="Tekst35" minOccurs="0"/>
+													<xsd:element name="country" type="Countrycode" minOccurs="0"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+			<xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:simpleType name="Alfanumeric4">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Bedrag">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="20"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Breedtegraad">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="8"/>
+			<xsd:fractionDigits value="6"/>
+			<xsd:pattern value="[\-+]?[0-9]{1,2}[.][0-9]{6}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Bsn">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:totalDigits value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Chauffeursidentificatienummer">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Chauffeurskaartvolgnummer">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Code">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Count">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="15"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Countrycode">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+			<xsd:enumeration value=""/>
+			<xsd:enumeration value="AD"/>
+			<xsd:enumeration value="AE"/>
+			<xsd:enumeration value="AF"/>
+			<xsd:enumeration value="AG"/>
+			<xsd:enumeration value="AI"/>
+			<xsd:enumeration value="AL"/>
+			<xsd:enumeration value="AM"/>
+			<xsd:enumeration value="AN"/>
+			<xsd:enumeration value="AO"/>
+			<xsd:enumeration value="AQ"/>
+			<xsd:enumeration value="AR"/>
+			<xsd:enumeration value="AS"/>
+			<xsd:enumeration value="AT"/>
+			<xsd:enumeration value="AU"/>
+			<xsd:enumeration value="AW"/>
+			<xsd:enumeration value="AX"/>
+			<xsd:enumeration value="AZ"/>
+			<xsd:enumeration value="BA"/>
+			<xsd:enumeration value="BB"/>
+			<xsd:enumeration value="BD"/>
+			<xsd:enumeration value="BE"/>
+			<xsd:enumeration value="BF"/>
+			<xsd:enumeration value="BG"/>
+			<xsd:enumeration value="BH"/>
+			<xsd:enumeration value="BI"/>
+			<xsd:enumeration value="BJ"/>
+			<xsd:enumeration value="BL"/>
+			<xsd:enumeration value="BM"/>
+			<xsd:enumeration value="BN"/>
+			<xsd:enumeration value="BO"/>
+			<xsd:enumeration value="BQ"/>
+			<xsd:enumeration value="BR"/>
+			<xsd:enumeration value="BS"/>
+			<xsd:enumeration value="BT"/>
+			<xsd:enumeration value="BV"/>
+			<xsd:enumeration value="BW"/>
+			<xsd:enumeration value="BY"/>
+			<xsd:enumeration value="BZ"/>
+			<xsd:enumeration value="CA"/>
+			<xsd:enumeration value="CC"/>
+			<xsd:enumeration value="CD"/>
+			<xsd:enumeration value="CF"/>
+			<xsd:enumeration value="CG"/>
+			<xsd:enumeration value="CH"/>
+			<xsd:enumeration value="CI"/>
+			<xsd:enumeration value="CK"/>
+			<xsd:enumeration value="CL"/>
+			<xsd:enumeration value="CM"/>
+			<xsd:enumeration value="CN"/>
+			<xsd:enumeration value="CO"/>
+			<xsd:enumeration value="CR"/>
+			<xsd:enumeration value="CS"/>
+			<xsd:enumeration value="CU"/>
+			<xsd:enumeration value="CV"/>
+			<xsd:enumeration value="CW"/>
+			<xsd:enumeration value="CX"/>
+			<xsd:enumeration value="CY"/>
+			<xsd:enumeration value="CZ"/>
+			<xsd:enumeration value="DE"/>
+			<xsd:enumeration value="DJ"/>
+			<xsd:enumeration value="DK"/>
+			<xsd:enumeration value="DM"/>
+			<xsd:enumeration value="DO"/>
+			<xsd:enumeration value="DZ"/>
+			<xsd:enumeration value="EC"/>
+			<xsd:enumeration value="EE"/>
+			<xsd:enumeration value="EG"/>
+			<xsd:enumeration value="EH"/>
+			<xsd:enumeration value="ER"/>
+			<xsd:enumeration value="ES"/>
+			<xsd:enumeration value="ET"/>
+			<xsd:enumeration value="FI"/>
+			<xsd:enumeration value="FJ"/>
+			<xsd:enumeration value="FK"/>
+			<xsd:enumeration value="FM"/>
+			<xsd:enumeration value="FO"/>
+			<xsd:enumeration value="FR"/>
+			<xsd:enumeration value="GA"/>
+			<xsd:enumeration value="GB"/>
+			<xsd:enumeration value="GD"/>
+			<xsd:enumeration value="GE"/>
+			<xsd:enumeration value="GF"/>
+			<xsd:enumeration value="GG"/>
+			<xsd:enumeration value="GH"/>
+			<xsd:enumeration value="GI"/>
+			<xsd:enumeration value="GL"/>
+			<xsd:enumeration value="GM"/>
+			<xsd:enumeration value="GN"/>
+			<xsd:enumeration value="GP"/>
+			<xsd:enumeration value="GQ"/>
+			<xsd:enumeration value="GR"/>
+			<xsd:enumeration value="GS"/>
+			<xsd:enumeration value="GT"/>
+			<xsd:enumeration value="GU"/>
+			<xsd:enumeration value="GW"/>
+			<xsd:enumeration value="GY"/>
+			<xsd:enumeration value="HK"/>
+			<xsd:enumeration value="HM"/>
+			<xsd:enumeration value="HN"/>
+			<xsd:enumeration value="HR"/>
+			<xsd:enumeration value="HT"/>
+			<xsd:enumeration value="HU"/>
+			<xsd:enumeration value="ID"/>
+			<xsd:enumeration value="IE"/>
+			<xsd:enumeration value="IL"/>
+			<xsd:enumeration value="IM"/>
+			<xsd:enumeration value="IN"/>
+			<xsd:enumeration value="IO"/>
+			<xsd:enumeration value="IQ"/>
+			<xsd:enumeration value="IR"/>
+			<xsd:enumeration value="IS"/>
+			<xsd:enumeration value="IT"/>
+			<xsd:enumeration value="JE"/>
+			<xsd:enumeration value="JM"/>
+			<xsd:enumeration value="JO"/>
+			<xsd:enumeration value="JP"/>
+			<xsd:enumeration value="KE"/>
+			<xsd:enumeration value="KG"/>
+			<xsd:enumeration value="KH"/>
+			<xsd:enumeration value="KI"/>
+			<xsd:enumeration value="KM"/>
+			<xsd:enumeration value="KN"/>
+			<xsd:enumeration value="KP"/>
+			<xsd:enumeration value="KR"/>
+			<xsd:enumeration value="KW"/>
+			<xsd:enumeration value="KY"/>
+			<xsd:enumeration value="KZ"/>
+			<xsd:enumeration value="LA"/>
+			<xsd:enumeration value="LB"/>
+			<xsd:enumeration value="LC"/>
+			<xsd:enumeration value="LI"/>
+			<xsd:enumeration value="LK"/>
+			<xsd:enumeration value="LR"/>
+			<xsd:enumeration value="LS"/>
+			<xsd:enumeration value="LT"/>
+			<xsd:enumeration value="LU"/>
+			<xsd:enumeration value="LV"/>
+			<xsd:enumeration value="LY"/>
+			<xsd:enumeration value="MA"/>
+			<xsd:enumeration value="MC"/>
+			<xsd:enumeration value="MD"/>
+			<xsd:enumeration value="ME"/>
+			<xsd:enumeration value="MF"/>
+			<xsd:enumeration value="MG"/>
+			<xsd:enumeration value="MH"/>
+			<xsd:enumeration value="MK"/>
+			<xsd:enumeration value="ML"/>
+			<xsd:enumeration value="MM"/>
+			<xsd:enumeration value="MN"/>
+			<xsd:enumeration value="MO"/>
+			<xsd:enumeration value="MP"/>
+			<xsd:enumeration value="MQ"/>
+			<xsd:enumeration value="MR"/>
+			<xsd:enumeration value="MS"/>
+			<xsd:enumeration value="MT"/>
+			<xsd:enumeration value="MU"/>
+			<xsd:enumeration value="MV"/>
+			<xsd:enumeration value="MW"/>
+			<xsd:enumeration value="MX"/>
+			<xsd:enumeration value="MY"/>
+			<xsd:enumeration value="MZ"/>
+			<xsd:enumeration value="NA"/>
+			<xsd:enumeration value="NC"/>
+			<xsd:enumeration value="NE"/>
+			<xsd:enumeration value="NF"/>
+			<xsd:enumeration value="NG"/>
+			<xsd:enumeration value="NI"/>
+			<xsd:enumeration value="NL"/>
+			<xsd:enumeration value="NO"/>
+			<xsd:enumeration value="NP"/>
+			<xsd:enumeration value="NR"/>
+			<xsd:enumeration value="NU"/>
+			<xsd:enumeration value="NZ"/>
+			<xsd:enumeration value="OM"/>
+			<xsd:enumeration value="PA"/>
+			<xsd:enumeration value="PE"/>
+			<xsd:enumeration value="PF"/>
+			<xsd:enumeration value="PG"/>
+			<xsd:enumeration value="PH"/>
+			<xsd:enumeration value="PK"/>
+			<xsd:enumeration value="PL"/>
+			<xsd:enumeration value="PM"/>
+			<xsd:enumeration value="PN"/>
+			<xsd:enumeration value="PR"/>
+			<xsd:enumeration value="PS"/>
+			<xsd:enumeration value="PT"/>
+			<xsd:enumeration value="PW"/>
+			<xsd:enumeration value="PY"/>
+			<xsd:enumeration value="QA"/>
+			<xsd:enumeration value="RE"/>
+			<xsd:enumeration value="RO"/>
+			<xsd:enumeration value="RS"/>
+			<xsd:enumeration value="RU"/>
+			<xsd:enumeration value="RW"/>
+			<xsd:enumeration value="SA"/>
+			<xsd:enumeration value="SB"/>
+			<xsd:enumeration value="SC"/>
+			<xsd:enumeration value="SD"/>
+			<xsd:enumeration value="SE"/>
+			<xsd:enumeration value="SG"/>
+			<xsd:enumeration value="SH"/>
+			<xsd:enumeration value="SI"/>
+			<xsd:enumeration value="SJ"/>
+			<xsd:enumeration value="SK"/>
+			<xsd:enumeration value="SL"/>
+			<xsd:enumeration value="SM"/>
+			<xsd:enumeration value="SN"/>
+			<xsd:enumeration value="SO"/>
+			<xsd:enumeration value="SR"/>
+			<xsd:enumeration value="SS"/>
+			<xsd:enumeration value="ST"/>
+			<xsd:enumeration value="SV"/>
+			<xsd:enumeration value="SX"/>
+			<xsd:enumeration value="SY"/>
+			<xsd:enumeration value="SZ"/>
+			<xsd:enumeration value="TC"/>
+			<xsd:enumeration value="TD"/>
+			<xsd:enumeration value="TF"/>
+			<xsd:enumeration value="TG"/>
+			<xsd:enumeration value="TH"/>
+			<xsd:enumeration value="TJ"/>
+			<xsd:enumeration value="TK"/>
+			<xsd:enumeration value="TL"/>
+			<xsd:enumeration value="TM"/>
+			<xsd:enumeration value="TN"/>
+			<xsd:enumeration value="TO"/>
+			<xsd:enumeration value="TR"/>
+			<xsd:enumeration value="TT"/>
+			<xsd:enumeration value="TV"/>
+			<xsd:enumeration value="TW"/>
+			<xsd:enumeration value="TZ"/>
+			<xsd:enumeration value="UA"/>
+			<xsd:enumeration value="UG"/>
+			<xsd:enumeration value="UK"/>
+			<xsd:enumeration value="UM"/>
+			<xsd:enumeration value="US"/>
+			<xsd:enumeration value="UY"/>
+			<xsd:enumeration value="UZ"/>
+			<xsd:enumeration value="VA"/>
+			<xsd:enumeration value="VC"/>
+			<xsd:enumeration value="VE"/>
+			<xsd:enumeration value="VG"/>
+			<xsd:enumeration value="VI"/>
+			<xsd:enumeration value="VN"/>
+			<xsd:enumeration value="VU"/>
+			<xsd:enumeration value="WF"/>
+			<xsd:enumeration value="WS"/>
+			<xsd:enumeration value="YE"/>
+			<xsd:enumeration value="YT"/>
+			<xsd:enumeration value="ZA"/>
+			<xsd:enumeration value="ZM"/>
+			<xsd:enumeration value="ZW"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Dop">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="9"/>
+			<xsd:fractionDigits value="6"/>
+			<xsd:pattern value="[\-+]?[0-9]{1,3}[.][0-9]{6}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Fileformat">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Fileformatversion">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="3"/>
+			<xsd:enumeration value="1.0">
+				<xsd:annotation>
+					<xsd:documentation>File Format Version 1.0</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Fiscallabel">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+			<xsd:enumeration value="A100">
+				<xsd:annotation>
+					<xsd:documentation>Goederenvervoer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="A110">
+				<xsd:annotation>
+					<xsd:documentation>Rouw-, trouwvervoer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="A130">
+				<xsd:annotation>
+					<xsd:documentation>Overig zakelijk</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="A140">
+				<xsd:annotation>
+					<xsd:documentation>Rijden tijdens pauze</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="A150">
+				<xsd:annotation>
+					<xsd:documentation>Prive</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="A160">
+				<xsd:annotation>
+					<xsd:documentation>OV met taxi</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="B100">
+				<xsd:annotation>
+					<xsd:documentation>Taxi gerelateerd</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="B101">
+				<xsd:annotation>
+					<xsd:documentation>Taxi gerelateerd Tanken</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="B102">
+				<xsd:annotation>
+					<xsd:documentation>Taxi gerelateerd Wassen</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="B103">
+				<xsd:annotation>
+					<xsd:documentation>Taxi gerelateerd Garage/keuring</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="B104">
+				<xsd:annotation>
+					<xsd:documentation>OV met taxi</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="B110">
+				<xsd:annotation>
+					<xsd:documentation>Niet taxi gerelateerd</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="B111">
+				<xsd:annotation>
+					<xsd:documentation>Niet taxi gerelateerd Verhuur - niet taxi</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="B112">
+				<xsd:annotation>
+					<xsd:documentation>Zakelijk gebruik, niet taxi gerelateerd</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="B120">
+				<xsd:annotation>
+					<xsd:documentation>Prive</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="B130">
+				<xsd:annotation>
+					<xsd:documentation>Woon / werk</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="T100">
+				<xsd:annotation>
+					<xsd:documentation>Beladen</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="T110">
+				<xsd:annotation>
+					<xsd:documentation>Onbeladen</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="T111">
+				<xsd:annotation>
+					<xsd:documentation>Onbeladen Tanken</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="T112">
+				<xsd:annotation>
+					<xsd:documentation>Onbeladen Wassen</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="T113">
+				<xsd:annotation>
+					<xsd:documentation>Onbeladen Garage/keuring</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Goedkeuringsnummer">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="27"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Identification">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Identificationnummer">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="8"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Indicator">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+			<xsd:enumeration value="0">
+				<xsd:annotation>
+					<xsd:documentation>No</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="1">
+				<xsd:annotation>
+					<xsd:documentation>Yes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Kenteken">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Kmstand">
+		<xsd:restriction base="xsd:integer">
+			<xsd:totalDigits value="8"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Kvknummer">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="12"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Lengtegraad">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="9"/>
+			<xsd:fractionDigits value="6"/>
+			<xsd:pattern value="[\-+]?[0-9]{1,3}[.][0-9]{6}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Mutatiecode">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+			<xsd:enumeration value="D">
+				<xsd:annotation>
+					<xsd:documentation>Delete</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="I">
+				<xsd:annotation>
+					<xsd:documentation>Insert</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="M">
+				<xsd:annotation>
+					<xsd:documentation>Mutatie</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Numeric5">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Ondernemerskaartvolgnummer">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Pnummer">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="8"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PositiefInteger">
+		<xsd:restriction base="xsd:integer">
+			<xsd:totalDigits value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Postcodenl">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Source">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+			<xsd:enumeration value="1">
+				<xsd:annotation>
+					<xsd:documentation>BCT</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="2">
+				<xsd:annotation>
+					<xsd:documentation>GPS</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Statusrijdenauto">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+			<xsd:enumeration value="R">
+				<xsd:annotation>
+					<xsd:documentation>Rijden</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="S">
+				<xsd:annotation>
+					<xsd:documentation>Stilstaan</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Tekst10">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Tekst100">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Tekst200">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="200"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Tekst24">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="24"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Tekst35">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Tekst6">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Tekst9">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Tripregtype">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+			<xsd:enumeration value="0">
+				<xsd:annotation>
+					<xsd:documentation>Trip registration by vehicle system</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="1">
+				<xsd:annotation>
+					<xsd:documentation>Trip registration by manual input</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Typerit">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+			<xsd:enumeration value="B">
+				<xsd:annotation>
+					<xsd:documentation>Beladen Rit</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="O">
+				<xsd:annotation>
+					<xsd:documentation>Onbeladen Rit</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Vehicleregistrationtype">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+			<xsd:enumeration value="0">
+				<xsd:annotation>
+					<xsd:documentation>Empty (Unknown)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="1">
+				<xsd:annotation>
+					<xsd:documentation>Private (Yellow)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="2">
+				<xsd:annotation>
+					<xsd:documentation>Business (Grey)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Versienummer">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Vin">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Werkingsmodus">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+			<xsd:enumeration value="B">
+				<xsd:annotation>
+					<xsd:documentation>Bedrijfsmodus</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="C">
+				<xsd:annotation>
+					<xsd:documentation>Controlemodus</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="K">
+				<xsd:annotation>
+					<xsd:documentation>Activerings- en keuringsmodus</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="O">
+				<xsd:annotation>
+					<xsd:documentation>Operationele modus</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Werkingsniveau">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+			<xsd:enumeration value="A">
+				<xsd:annotation>
+					<xsd:documentation>Arbeidstijd</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="B">
+				<xsd:annotation>
+					<xsd:documentation>Basis</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="T">
+				<xsd:annotation>
+					<xsd:documentation>Taxivervoer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

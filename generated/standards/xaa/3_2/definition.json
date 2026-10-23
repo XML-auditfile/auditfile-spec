@@ -1,0 +1,2800 @@
+{
+  "formatVersion": 1,
+  "standard": "xaa",
+  "version": "3.2",
+  "entries": [
+    {
+      "key": "auditfile",
+      "kind": "table",
+      "label": {
+        "en": "Auditfile"
+      }
+    },
+    {
+      "key": "header",
+      "kind": "table",
+      "label": {
+        "en": "Header"
+      },
+      "definition": {
+        "nl": "Berichtheader.",
+        "en": "Message header."
+      }
+    },
+    {
+      "key": "header.fiscal_year",
+      "kind": "column",
+      "label": {
+        "en": "Fiscal Year"
+      },
+      "definition": {
+        "nl": "Aanduiding van het boekjaar (EEJJ). Bijvoorbeeld 2013. Bij een gebroken boekjaar wordt dat als volgt gevuld: EEJJ-EEJJ. Bijvoorbeeld 2008-2009.",
+        "en": "Indication of the financial year (YYYY). For example 2013. For a non-calendar financial year it is filled as follows: YYYY-YYYY. For example 2008-2009."
+      }
+    },
+    {
+      "key": "header.start_date",
+      "kind": "column",
+      "label": {
+        "en": "Start Date Bookingperiod"
+      },
+      "definition": {
+        "nl": "Startdatum boekjaar. W3C date datatype. Bijv. 2013-01-01.",
+        "en": "Start date of the financial year. W3C date datatype. E.g. 2013-01-01."
+      }
+    },
+    {
+      "key": "header.end_date",
+      "kind": "column",
+      "label": {
+        "en": "End Date Bookingperiod"
+      },
+      "definition": {
+        "nl": "Einddatum boekjaar. W3C date datatype. Bijv. 2013-12-31.",
+        "en": "End date of the financial year. W3C date datatype. E.g. 2013-12-31."
+      }
+    },
+    {
+      "key": "header.cur_code",
+      "kind": "column",
+      "label": {
+        "en": "Currency Code"
+      },
+      "definition": {
+        "nl": "ISO Valutacode (ISO 4217). De locale valuta van de administratie, bijv. EUR.",
+        "en": "ISO currency code (ISO 4217). The local currency of the administration, e.g. EUR."
+      }
+    },
+    {
+      "key": "header.date_created",
+      "kind": "column",
+      "label": {
+        "en": "Date Created"
+      },
+      "definition": {
+        "nl": "De datum waarop de auditfile is aangemaakt. W3C date datatype. Bijv. 2009-01-27.",
+        "en": "The date on which the audit file was created. W3C date datatype. E.g. 2009-01-27."
+      }
+    },
+    {
+      "key": "header.comp_id",
+      "kind": "column",
+      "label": {
+        "en": "Compacting ID"
+      },
+      "definition": {
+        "nl": "Compacting ID. Verwijzing naar de manier van verdichten. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden. Bijvoorbeeld de totale omzet van 1 kassa van 1 dag in 1 kastransactie.",
+        "en": "Compacting ID. Reference to the method of condensing. The description of the code must be explained in the 'Basics' table. For example the total turnover of 1 cash register for 1 day in 1 cash transaction."
+      }
+    },
+    {
+      "key": "header.software_desc",
+      "kind": "column",
+      "label": {
+        "en": "Software Description"
+      },
+      "definition": {
+        "nl": "De naam van het softwarepakket waarmee de Auditfile is gegenereerd.",
+        "en": "The name of the software package with which the audit file was generated."
+      }
+    },
+    {
+      "key": "header.software_version",
+      "kind": "column",
+      "label": {
+        "en": "Software Version"
+      },
+      "definition": {
+        "nl": "De versie van het softwarepakket waarmee de Auditfile is gegenereerd.",
+        "en": "The version of the software package with which the audit file was generated."
+      }
+    },
+    {
+      "key": "company",
+      "kind": "table",
+      "label": {
+        "en": "Company"
+      },
+      "definition": {
+        "nl": "Rechtspersoon.",
+        "en": "Legal entity."
+      }
+    },
+    {
+      "key": "company.company_ident",
+      "kind": "column",
+      "label": {
+        "en": "Company Identification"
+      },
+      "definition": {
+        "nl": "Het administratienummer van de onderneming. Het is bedoeld om uitwisseling naar derden (anders dan belastingdienst) mogelijk te maken. Er kan met onderlinge identificatie nummers gewerkt worden.",
+        "en": "The administration number of the company. It is intended to enable exchange with third parties (other than the Tax Administration). Mutual identification numbers can be used."
+      }
+    },
+    {
+      "key": "company.company_name",
+      "kind": "column",
+      "label": {
+        "en": "Company Name"
+      },
+      "definition": {
+        "nl": "Naam van de onderneming.",
+        "en": "Name of the company."
+      }
+    },
+    {
+      "key": "company.tax_registration_country",
+      "kind": "column",
+      "label": {
+        "en": "Tax Registration Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166)",
+        "en": "ISO country code (ISO 3166)"
+      }
+    },
+    {
+      "key": "company.tax_reg_ident",
+      "kind": "column",
+      "label": {
+        "en": "Tax Registration Identification"
+      }
+    },
+    {
+      "key": "company_street_address",
+      "kind": "table",
+      "label": {
+        "en": "Street address"
+      },
+      "definition": {
+        "nl": "Leverings-danwel vestigingsadres.",
+        "en": "Delivery or business address."
+      }
+    },
+    {
+      "key": "company_street_address.streetname",
+      "kind": "column",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are left empty."
+      }
+    },
+    {
+      "key": "company_street_address.number",
+      "kind": "column",
+      "label": {
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Huisnummer.",
+        "en": "House number."
+      }
+    },
+    {
+      "key": "company_street_address.number_extension",
+      "kind": "column",
+      "label": {
+        "en": "Number Extension"
+      },
+      "definition": {
+        "nl": "Huisnummertoevoegsels.",
+        "en": "House number suffixes."
+      }
+    },
+    {
+      "key": "company_street_address.property",
+      "kind": "column",
+      "label": {
+        "en": "Property"
+      },
+      "definition": {
+        "nl": "Eventueel aanvullend gebouw-of bedrijfsnaam.",
+        "en": "Optional additional building or company name."
+      }
+    },
+    {
+      "key": "company_street_address.city",
+      "kind": "column",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Plaats.",
+        "en": "Place."
+      }
+    },
+    {
+      "key": "company_street_address.postal_code",
+      "kind": "column",
+      "label": {
+        "en": "Postal Code"
+      },
+      "definition": {
+        "nl": "Postcode.",
+        "en": "Postcode."
+      }
+    },
+    {
+      "key": "company_street_address.region",
+      "kind": "column",
+      "label": {
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Provincie.",
+        "en": "Province."
+      }
+    },
+    {
+      "key": "company_street_address.country",
+      "kind": "column",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166).",
+        "en": "ISO country code (ISO 3166)."
+      }
+    },
+    {
+      "key": "company_postal_address",
+      "kind": "table",
+      "label": {
+        "en": "dan"
+      },
+      "definition": {
+        "nl": "Postadres.",
+        "en": "Postal address."
+      }
+    },
+    {
+      "key": "company_postal_address.streetname",
+      "kind": "column",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are left empty."
+      }
+    },
+    {
+      "key": "company_postal_address.number",
+      "kind": "column",
+      "label": {
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Huisnummer.",
+        "en": "House number."
+      }
+    },
+    {
+      "key": "company_postal_address.number_extension",
+      "kind": "column",
+      "label": {
+        "en": "Number Extension"
+      },
+      "definition": {
+        "nl": "Huisnummertoevoegsels",
+        "en": "House number suffixes"
+      }
+    },
+    {
+      "key": "company_postal_address.property",
+      "kind": "column",
+      "label": {
+        "en": "Property"
+      },
+      "definition": {
+        "nl": "Eventueel aanvullend gebouw-of bedrijfsnaam.",
+        "en": "Optional additional building or company name."
+      }
+    },
+    {
+      "key": "company_postal_address.city",
+      "kind": "column",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Debiteur, crediteurplaats.",
+        "en": "Debtor, creditor place."
+      }
+    },
+    {
+      "key": "company_postal_address.postal_code",
+      "kind": "column",
+      "label": {
+        "en": "Postal Code"
+      },
+      "definition": {
+        "nl": "Postcode.",
+        "en": "Postcode."
+      }
+    },
+    {
+      "key": "company_postal_address.region",
+      "kind": "column",
+      "label": {
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Provincie.",
+        "en": "Province."
+      }
+    },
+    {
+      "key": "company_postal_address.country",
+      "kind": "column",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166)",
+        "en": "ISO country code (ISO 3166)"
+      }
+    },
+    {
+      "key": "company.customers_suppliers",
+      "kind": "group",
+      "label": {
+        "en": "Customers suppliers"
+      },
+      "definition": {
+        "nl": "Debiteuren, Crediteuren stamgegevens.",
+        "en": "Debtors, creditors master data."
+      }
+    },
+    {
+      "key": "customer_supplier",
+      "kind": "table",
+      "label": {
+        "en": "Customer supplier"
+      },
+      "definition": {
+        "nl": "Algemene gegevens van klanten en leveranciers.",
+        "en": "General data of customers and suppliers."
+      }
+    },
+    {
+      "key": "customer_supplier.cust_sup_id",
+      "kind": "column",
+      "label": {
+        "en": "Customer Supplier ID"
+      },
+      "definition": {
+        "nl": "Unieke debiteuren-of crediteurennummer.",
+        "en": "Unique debtor or creditor number."
+      }
+    },
+    {
+      "key": "customer_supplier.contact",
+      "kind": "column",
+      "label": {
+        "en": "Contact"
+      },
+      "definition": {
+        "nl": "Contactpersoon.",
+        "en": "Contact person."
+      }
+    },
+    {
+      "key": "customer_supplier.telephone",
+      "kind": "column",
+      "label": {
+        "en": "Telephone"
+      },
+      "definition": {
+        "nl": "Telefoonnummer.",
+        "en": "Telephone number."
+      }
+    },
+    {
+      "key": "customer_supplier.fax",
+      "kind": "column",
+      "label": {
+        "en": "Fax"
+      },
+      "definition": {
+        "nl": "Faxnummer.",
+        "en": "Fax number."
+      }
+    },
+    {
+      "key": "customer_supplier.e_mail",
+      "kind": "column",
+      "label": {
+        "en": "E-mail"
+      },
+      "definition": {
+        "nl": "Email adres.",
+        "en": "Email address."
+      }
+    },
+    {
+      "key": "customer_supplier.website",
+      "kind": "column",
+      "label": {
+        "en": "Website"
+      },
+      "definition": {
+        "nl": "URL website.",
+        "en": "Website URL."
+      }
+    },
+    {
+      "key": "customer_supplier.tax_registration_country",
+      "kind": "column",
+      "label": {
+        "en": "Tax Registration Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166)",
+        "en": "ISO country code (ISO 3166)"
+      }
+    },
+    {
+      "key": "customer_supplier.tax_reg_ident",
+      "kind": "column",
+      "label": {
+        "en": "Tax Registration Identifier"
+      },
+      "definition": {
+        "nl": "XML Auditfile Afrekensystemen versie 3.2",
+        "en": "XML Auditfile Cash Register Systems version 3.2"
+      }
+    },
+    {
+      "key": "customer_supplier_street_address",
+      "kind": "table",
+      "label": {
+        "en": "Street address"
+      },
+      "definition": {
+        "nl": "Leverings-danwel vestigingsadres.",
+        "en": "Delivery or business address."
+      }
+    },
+    {
+      "key": "customer_supplier_street_address.streetname",
+      "kind": "column",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are left empty."
+      }
+    },
+    {
+      "key": "customer_supplier_street_address.number",
+      "kind": "column",
+      "label": {
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Huisnummer.",
+        "en": "House number."
+      }
+    },
+    {
+      "key": "customer_supplier_street_address.number_extension",
+      "kind": "column",
+      "label": {
+        "en": "Number Extension"
+      },
+      "definition": {
+        "nl": "Huisnummertoevoegsels.",
+        "en": "House number suffixes."
+      }
+    },
+    {
+      "key": "customer_supplier_street_address.property",
+      "kind": "column",
+      "label": {
+        "en": "Property"
+      },
+      "definition": {
+        "nl": "Eventueel aanvullend gebouw-of bedrijfsnaam.",
+        "en": "Optional additional building or company name."
+      }
+    },
+    {
+      "key": "customer_supplier_street_address.city",
+      "kind": "column",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Plaats.",
+        "en": "Place."
+      }
+    },
+    {
+      "key": "customer_supplier_street_address.postal_code",
+      "kind": "column",
+      "label": {
+        "en": "Postal Code"
+      },
+      "definition": {
+        "nl": "Postcode.",
+        "en": "Postcode."
+      }
+    },
+    {
+      "key": "customer_supplier_street_address.region",
+      "kind": "column",
+      "label": {
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Provincie.",
+        "en": "Province."
+      }
+    },
+    {
+      "key": "customer_supplier_street_address.country",
+      "kind": "column",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166).",
+        "en": "ISO country code (ISO 3166)."
+      }
+    },
+    {
+      "key": "customer_supplier_postal_address",
+      "kind": "table",
+      "label": {
+        "en": "Postal address"
+      },
+      "definition": {
+        "nl": "Postadres.",
+        "en": "Postal address."
+      }
+    },
+    {
+      "key": "customer_supplier_postal_address.streetname",
+      "kind": "column",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are left empty."
+      }
+    },
+    {
+      "key": "customer_supplier_postal_address.number",
+      "kind": "column",
+      "label": {
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Huisnummer.",
+        "en": "House number."
+      }
+    },
+    {
+      "key": "customer_supplier_postal_address.number_extension",
+      "kind": "column",
+      "label": {
+        "en": "Number Extension"
+      },
+      "definition": {
+        "nl": "Huisnummertoevoegsels",
+        "en": "House number suffixes"
+      }
+    },
+    {
+      "key": "customer_supplier_postal_address.property",
+      "kind": "column",
+      "label": {
+        "en": "Property"
+      },
+      "definition": {
+        "nl": "Eventueel aanvullend gebouw-of bedrijfsnaam.",
+        "en": "Optional additional building or company name."
+      }
+    },
+    {
+      "key": "customer_supplier_postal_address.city",
+      "kind": "column",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Debiteur, crediteurplaats.",
+        "en": "Debtor, creditor place."
+      }
+    },
+    {
+      "key": "customer_supplier_postal_address.postal_code",
+      "kind": "column",
+      "label": {
+        "en": "Postal Code"
+      }
+    },
+    {
+      "key": "customer_supplier_postal_address.region",
+      "kind": "column",
+      "label": {
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Provincie.",
+        "en": "Province."
+      }
+    },
+    {
+      "key": "customer_supplier_postal_address.country",
+      "kind": "column",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166)",
+        "en": "ISO country code (ISO 3166)"
+      }
+    },
+    {
+      "key": "company.general_ledger",
+      "kind": "group",
+      "label": {
+        "en": "General ledger"
+      },
+      "definition": {
+        "nl": "Grootboek stamgegevens.",
+        "en": "General ledger master data."
+      }
+    },
+    {
+      "key": "ledger_account",
+      "kind": "table",
+      "label": {
+        "en": "Ledger account"
+      },
+      "definition": {
+        "nl": "Rekeningschema.",
+        "en": "Chart of accounts."
+      }
+    },
+    {
+      "key": "ledger_account.acc_id",
+      "kind": "column",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Unieke grootboekrekeningcode.",
+        "en": "Unique general ledger account code."
+      }
+    },
+    {
+      "key": "ledger_account.acc_desc",
+      "kind": "column",
+      "label": {
+        "en": "Account Description"
+      },
+      "definition": {
+        "nl": "Grootboekrekeningnaam.",
+        "en": "General ledger account name."
+      }
+    },
+    {
+      "key": "ledger_account.acc_tp",
+      "kind": "column",
+      "label": {
+        "en": "Account Type"
+      },
+      "definition": {
+        "nl": "Soort grootboekrekening bijvoorbeeld Balansrekening/Resultaatrekening etc.",
+        "en": "Type of general ledger account, for example balance sheet account/profit and loss account etc."
+      },
+      "codes": {
+        "B": {
+          "en": "Balance"
+        },
+        "M": {
+          "en": "Mixed"
+        },
+        "P": {
+          "en": "Profit and Loss"
+        }
+      }
+    },
+    {
+      "key": "taxonomy",
+      "kind": "table",
+      "label": {
+        "en": "Taxonomy"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een bestaande taxonomie (gegevenscatalogus).",
+        "en": "Reference to an existing taxonomy (data catalogue)."
+      }
+    },
+    {
+      "key": "taxonomy.taxo_ref",
+      "kind": "column",
+      "label": {
+        "en": "Taxonomy Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een bestaande taxonomie (gegevenscatalogus).",
+        "en": "Reference to an existing taxonomy (data catalogue)."
+      }
+    },
+    {
+      "key": "entry_point",
+      "kind": "table",
+      "label": {
+        "en": "Entry point"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een entry point (rapportsoort) binnen een taxonomie (gegevenscatalogus).",
+        "en": "Reference to an entry point (report type) within a taxonomy (data catalogue)."
+      }
+    },
+    {
+      "key": "entry_point.entry_point_ref",
+      "kind": "column",
+      "label": {
+        "en": "Entry Point Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een entry point (rapportsoort) binnen een taxonomie (gegevenscatalogus).",
+        "en": "Reference to an entry point (report type) within a taxonomy (data catalogue)."
+      }
+    },
+    {
+      "key": "entry_point.concept_ref",
+      "kind": "column",
+      "label": {
+        "en": "Concept Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een concept (rapportage element definitie) binnen de entry point (rapportsoort) binnen een taxonomie (gegevenscatalogus).",
+        "en": "Reference to a concept (reporting element definition) within the entry point (report type) within a taxonomy (data catalogue)."
+      }
+    },
+    {
+      "key": "domain_member",
+      "kind": "table",
+      "label": {
+        "en": "Domain member"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een domain member (variabele op de as van een rapportage dimensie), binnen een domain, binnen een entry point (rapportsoort) .",
+        "en": "Reference to a domain member (variable on the axis of a reporting dimension), within a domain, within an entry point (report type)."
+      }
+    },
+    {
+      "key": "domain_member.dimension_ref",
+      "kind": "column",
+      "label": {
+        "en": "Dimension Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een dimensie (als onderdeel binnen een rapportage dimensie) , binnen een entry point (rapportsoort).",
+        "en": "Reference to a dimension (as part of a reporting dimension), within an entry point (report type)."
+      }
+    },
+    {
+      "key": "domain_member.domain_member_ref",
+      "kind": "column",
+      "label": {
+        "en": "Domain Member Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een domain member (onderdeel binnen een rapportage member) , binnen een entry point (rapportsoort).",
+        "en": "Reference to a domain member (part of a reporting member), within an entry point (report type)."
+      }
+    },
+    {
+      "key": "company.general_ledger_basics",
+      "kind": "group",
+      "label": {
+        "en": "Basics"
+      }
+    },
+    {
+      "key": "general_ledger_basics_basic",
+      "kind": "table",
+      "label": {
+        "en": "Basic"
+      },
+      "definition": {
+        "nl": "Code en omschrijving van diverse stamgegevens.",
+        "en": "Code and description of various master data."
+      }
+    },
+    {
+      "key": "general_ledger_basics_basic.basic_type",
+      "kind": "column",
+      "label": {
+        "en": "Basic Type"
+      },
+      "definition": {
+        "nl": "Soort stamgegeven.",
+        "en": "Type of master data item."
+      },
+      "codes": {
+        "02": {
+          "en": "Cost codes / Cost ID"
+        },
+        "03": {
+          "en": "Product codes / Product ID"
+        },
+        "04": {
+          "en": "Project codes / Project ID"
+        },
+        "05": {
+          "en": "Article Group codes / Article Group ID"
+        },
+        "06": {
+          "en": "Ticketline codes"
+        },
+        "07": {
+          "en": "Logging codes"
+        },
+        "08": {
+          "en": "Payable codes"
+        },
+        "09": {
+          "en": "Savings codes"
+        },
+        "10": {
+          "en": "Discount codes"
+        },
+        "11": {
+          "en": "Employee Role codes"
+        },
+        "12": {
+          "en": "Journal codes / Journal ID"
+        },
+        "13": {
+          "en": "General Ledger codes"
+        },
+        "14": {
+          "en": "Quantity codes / Quantity ID"
+        },
+        "15": {
+          "en": "Raise codes"
+        },
+        "16": {
+          "en": "Transaction codes"
+        },
+        "17": {
+          "en": "Payment codes"
+        },
+        "18": {
+          "en": "Event codes"
+        },
+        "19": {
+          "en": "Service code"
+        },
+        "20": {
+          "en": "Charge codes"
+        },
+        "21": {
+          "en": "Buffer codes"
+        },
+        "22": {
+          "en": "Corporation Model codes"
+        },
+        "23": {
+          "en": "Relationship codes / Relationship ID"
+        },
+        "24": {
+          "en": "Object codes"
+        },
+        "25": {
+          "en": "Usage codes"
+        },
+        "26": {
+          "en": "Measure codes"
+        },
+        "27": {
+          "en": "Value Type codes"
+        },
+        "28": {
+          "en": "Fiscal status codes"
+        },
+        "29": {
+          "en": "Source codes / Source ID"
+        },
+        "30": {
+          "en": "User codes / User ID"
+        },
+        "31": {
+          "en": "Movement type codes / Movement ID"
+        },
+        "32": {
+          "en": "Compacting codes / Compacting ID"
+        }
+      }
+    },
+    {
+      "key": "general_ledger_basics_basic.basic_id",
+      "kind": "column",
+      "label": {
+        "en": "Basic ID"
+      },
+      "definition": {
+        "nl": "Sleutel van het stamgegeven.",
+        "en": "Key of the master data item."
+      }
+    },
+    {
+      "key": "general_ledger_basics_basic.predefined_basic_id",
+      "kind": "column",
+      "label": {
+        "en": "Predefined basic ID"
+      },
+      "definition": {
+        "nl": "Voorgedefinieerde code die naast de eigen (leveranciersafhankelijke) Basic ID wordt opgenomen. Hiermee kan een mapping gemaakt worden naar voorgedefinieerde codes in bv de controletools van de Belastingdienst. De eerste twee posities van deze code corresponderen met de code uit Basic Type. exchange 31004 Receipt of goods 31005 Storage of goods 31006 Removal of goods 31007 Transferral of goods 31008 Change increase 31009 Change decrease 32001 Not condensed 32002 Condensed",
+        "en": "Predefined code included alongside the own (supplier-dependent) Basic ID. This allows mapping to predefined codes in, for example, the Tax Administration's audit tools. The first two positions of this code correspond to the code from Basic Type. 31004 Receipt of goods 31005 Storage of goods 31006 Removal of goods 31007 Transferral of goods 31008 Change increase 31009 Change decrease 32001 Not condensed 32002 Condensed"
+      },
+      "codes": {
+        "16001": {
+          "en": "Sales"
+        },
+        "16002": {
+          "en": "Purchase"
+        },
+        "16003": {
+          "en": "Payment"
+        },
+        "16004": {
+          "en": "Receiving Payment"
+        },
+        "16005": {
+          "en": "Cash"
+        },
+        "16006": {
+          "en": "Return payment"
+        },
+        "16007": {
+          "en": "Inventory, stock"
+        },
+        "16008": {
+          "en": "Packing"
+        },
+        "16009": {
+          "en": "Cash difference"
+        },
+        "16010": {
+          "en": "Price changement"
+        },
+        "16011": {
+          "en": "Correction"
+        },
+        "16012": {
+          "en": "Out Payment"
+        },
+        "16013": {
+          "en": "Trade-in, exchange"
+        },
+        "16014": {
+          "en": "Return products"
+        },
+        "16999": {
+          "en": "Other"
+        },
+        "17001": {
+          "en": "Means of payment cash"
+        },
+        "17002": {
+          "en": "Means of payment electronic PIN"
+        },
+        "17003": {
+          "en": "Means of payment Chipknip"
+        },
+        "17004": {
+          "en": "Means of payment creditcard"
+        },
+        "17005": {
+          "en": "Cross entry"
+        },
+        "17006": {
+          "en": "Means of payment by bankaccount"
+        },
+        "17007": {
+          "en": "Means of payment gift token"
+        },
+        "17008": {
+          "en": "Customer card"
+        },
+        "17009": {
+          "en": "Loyalty, stamps"
+        },
+        "17999": {
+          "en": "Other"
+        },
+        "18001": {
+          "en": "Starting the POS application (to log in)"
+        },
+        "18002": {
+          "en": "Finishing working on the POS (to log off)"
+        },
+        "18003": {
+          "en": "Opening cashdrawer"
+        },
+        "18004": {
+          "en": "Closing cashdrawer"
+        },
+        "18005": {
+          "en": "Change employee"
+        },
+        "18006": {
+          "en": "Change of installation (eventText mandatory)"
+        },
+        "18007": {
+          "en": "X-report or counting"
+        },
+        "18008": {
+          "en": "Z-report or counting"
+        },
+        "18009": {
+          "en": "Pause on"
+        },
+        "18010": {
+          "en": "Pause off"
+        },
+        "18999": {
+          "en": "Other"
+        },
+        "22001": {
+          "en": "Model 1"
+        },
+        "22002": {
+          "en": "Model 2"
+        },
+        "23001": {
+          "en": "Renter"
+        },
+        "23999": {
+          "en": "Other"
+        },
+        "26001": {
+          "en": "Square meter"
+        },
+        "27001": {
+          "en": "Real-estate (NL: WOZ) value"
+        },
+        "27002": {
+          "en": "Sales value"
+        },
+        "27003": {
+          "en": "Gross value"
+        },
+        "27004": {
+          "en": "Nett value"
+        },
+        "28001": {
+          "en": "Taxed"
+        },
+        "28002": {
+          "en": "Tax-free"
+        },
+        "31001": {
+          "en": "Stock increase"
+        },
+        "31002": {
+          "en": "Stock decrease"
+        },
+        "31003": {
+          "en": "Absolute stock in trade for export for inventory level"
+        }
+      }
+    },
+    {
+      "key": "general_ledger_basics_basic.basic_desc",
+      "kind": "column",
+      "label": {
+        "en": "Basic Description"
+      },
+      "definition": {
+        "nl": "Omschrijving stamgegeven.",
+        "en": "Master data description."
+      }
+    },
+    {
+      "key": "company.vat_codes",
+      "kind": "group",
+      "label": {
+        "en": "Vat codes"
+      }
+    },
+    {
+      "key": "vat_code",
+      "kind": "table",
+      "label": {
+        "en": "Vat code"
+      }
+    },
+    {
+      "key": "vat_code.vat_id",
+      "kind": "column",
+      "label": {
+        "en": "Vat id"
+      }
+    },
+    {
+      "key": "vat_code.vat_desc",
+      "kind": "column",
+      "label": {
+        "en": "VAT Description"
+      }
+    },
+    {
+      "key": "vat_code.vat_to_pay_acc_id",
+      "kind": "column",
+      "label": {
+        "en": "VAT To Pay Account ID"
+      },
+      "definition": {
+        "nl": "Grootboekrekening waarop de af te dragen btw wordt geboekt.",
+        "en": "General ledger account on which the VAT payable is posted."
+      }
+    },
+    {
+      "key": "vat_code.vat_to_claim_acc_id",
+      "kind": "column",
+      "label": {
+        "en": "VAT To Claim Account ID"
+      },
+      "definition": {
+        "nl": "Grootboekrekening waarop de te vorderen btw wordt geboekt.",
+        "en": "General ledger account on which the VAT receivable is posted."
+      }
+    },
+    {
+      "key": "company.periods",
+      "kind": "group",
+      "label": {
+        "en": "Periods"
+      }
+    },
+    {
+      "key": "period",
+      "kind": "table",
+      "label": {
+        "en": "Period"
+      }
+    },
+    {
+      "key": "period.period_number",
+      "kind": "column",
+      "label": {
+        "en": "Period number"
+      },
+      "definition": {
+        "nl": "Periodenummer van de hier gedefinieerde periode.",
+        "en": "Period number of the period defined here."
+      }
+    },
+    {
+      "key": "period.period_desc",
+      "kind": "column",
+      "label": {
+        "en": "Period description"
+      },
+      "definition": {
+        "nl": "Omschrijving van de hier gedefinieerde periode.",
+        "en": "Description of the period defined here."
+      }
+    },
+    {
+      "key": "period.start_date_period",
+      "kind": "column",
+      "label": {
+        "en": "Start Date period"
+      },
+      "definition": {
+        "nl": "Startdatum van de gedefinieerde periode. W3C date datatype. Bijv. 2008-01-01.",
+        "en": "Start date of the defined period. W3C date datatype. E.g. 2008-01-01."
+      }
+    },
+    {
+      "key": "period.start_time_period",
+      "kind": "column",
+      "label": {
+        "en": "Start Time period"
+      },
+      "definition": {
+        "nl": "Start tijd van de gedefinieerde periode. W3C time datatype. Bijv. 08:00:00.",
+        "en": "Start time of the defined period. W3C time datatype. E.g. 08:00:00."
+      }
+    },
+    {
+      "key": "period.end_date_period",
+      "kind": "column",
+      "label": {
+        "en": "End Date period"
+      },
+      "definition": {
+        "nl": "Einddatum van de gedefinieerde periode. W3C date datatype. Bijv. 2008-01-31.",
+        "en": "End date of the defined period. W3C date datatype. E.g. 2008-01-31."
+      }
+    },
+    {
+      "key": "period.end_time_period",
+      "kind": "column",
+      "label": {
+        "en": "End Time period"
+      },
+      "definition": {
+        "nl": "Eindtijd van de gedefinieerde periode. W3C time datatype. Bijv. 23:59:59",
+        "en": "End time of the defined period. W3C time datatype. E.g. 23:59:59"
+      }
+    },
+    {
+      "key": "company.employees",
+      "kind": "group",
+      "label": {
+        "en": "Employees"
+      }
+    },
+    {
+      "key": "employee",
+      "kind": "table",
+      "label": {
+        "en": "Employee"
+      },
+      "definition": {
+        "nl": "Werknemer.",
+        "en": "Employee."
+      }
+    },
+    {
+      "key": "employee.emp_id",
+      "kind": "column",
+      "label": {
+        "en": "Employee ID"
+      }
+    },
+    {
+      "key": "employee.date_of_entry",
+      "kind": "column",
+      "label": {
+        "en": "Date of Entry"
+      }
+    },
+    {
+      "key": "employee.time_of_entry",
+      "kind": "column",
+      "label": {
+        "en": "Time of Entry"
+      },
+      "definition": {
+        "nl": "W3C time datatype. E.g. 08:00:00.",
+        "en": "W3C time datatype. E.g. 08:00:00."
+      }
+    },
+    {
+      "key": "employee.first_name",
+      "kind": "column",
+      "label": {
+        "en": "First name"
+      }
+    },
+    {
+      "key": "employee.surname",
+      "kind": "column",
+      "label": {
+        "en": "Surname"
+      }
+    },
+    {
+      "key": "employee_role",
+      "kind": "table",
+      "label": {
+        "en": "Employee role"
+      },
+      "definition": {
+        "nl": "Rol van de werknemer.",
+        "en": "Role of the employee."
+      }
+    },
+    {
+      "key": "employee_role.role_type",
+      "kind": "column",
+      "label": {
+        "en": "Role Type"
+      }
+    },
+    {
+      "key": "company.articles",
+      "kind": "group",
+      "label": {
+        "en": "Articles"
+      },
+      "definition": {
+        "nl": "Subadministratie Artikelen",
+        "en": "Articles subledger"
+      }
+    },
+    {
+      "key": "article",
+      "kind": "table",
+      "label": {
+        "en": "Article"
+      }
+    },
+    {
+      "key": "article.art_id",
+      "kind": "column",
+      "label": {
+        "en": "Article ID"
+      }
+    },
+    {
+      "key": "article.date_of_entry",
+      "kind": "column",
+      "label": {
+        "en": "Date of Entry"
+      },
+      "definition": {
+        "nl": "W3C date datatype. E.g. 2007-01-27.",
+        "en": "W3C date datatype. E.g. 2007-01-27."
+      }
+    },
+    {
+      "key": "article.art_group_id",
+      "kind": "column",
+      "label": {
+        "en": "Article Group ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar artikelgroep. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to article group. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "article.art_desc",
+      "kind": "column",
+      "label": {
+        "en": "Article Description"
+      }
+    },
+    {
+      "key": "location",
+      "kind": "table",
+      "label": {
+        "en": "Location"
+      }
+    },
+    {
+      "key": "location.name",
+      "kind": "column",
+      "label": {
+        "en": "Name"
+      }
+    },
+    {
+      "key": "location.street_address",
+      "kind": "group",
+      "label": {
+        "en": "Street address"
+      },
+      "definition": {
+        "nl": "dan Leverings-danwel vestigingsadres.",
+        "en": "Delivery or business address."
+      }
+    },
+    {
+      "key": "location.street_address_streetname",
+      "kind": "column",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are left empty."
+      }
+    },
+    {
+      "key": "location.street_address_number",
+      "kind": "column",
+      "label": {
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Huisnummer.",
+        "en": "House number."
+      }
+    },
+    {
+      "key": "location.street_address_number_extension",
+      "kind": "column",
+      "label": {
+        "en": "Number Extension"
+      },
+      "definition": {
+        "nl": "Huisnummertoevoegsels.",
+        "en": "House number suffixes."
+      }
+    },
+    {
+      "key": "location.street_address_property",
+      "kind": "column",
+      "label": {
+        "en": "Property"
+      },
+      "definition": {
+        "nl": "Eventueel aanvullend gebouw-of bedrijfsnaam.",
+        "en": "Optional additional building or company name."
+      }
+    },
+    {
+      "key": "location.street_address_city",
+      "kind": "column",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Plaats.",
+        "en": "Place."
+      }
+    },
+    {
+      "key": "location.street_address_postal_code",
+      "kind": "column",
+      "label": {
+        "en": "Postal Code"
+      },
+      "definition": {
+        "nl": "Postcode.",
+        "en": "Postcode."
+      }
+    },
+    {
+      "key": "location.street_address_region",
+      "kind": "column",
+      "label": {
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Provincie.",
+        "en": "Province."
+      }
+    },
+    {
+      "key": "location.street_address_country",
+      "kind": "column",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166).",
+        "en": "ISO country code (ISO 3166)."
+      }
+    },
+    {
+      "key": "location.basics",
+      "kind": "group",
+      "label": {
+        "en": "Basics"
+      }
+    },
+    {
+      "key": "location_basics_basic",
+      "kind": "table",
+      "label": {
+        "en": "Basic"
+      },
+      "definition": {
+        "nl": "Code en omschrijving van diverse stamgegevens.",
+        "en": "Code and description of various master data."
+      }
+    },
+    {
+      "key": "location_basics_basic.basic_type",
+      "kind": "column",
+      "label": {
+        "en": "Basic Type"
+      },
+      "definition": {
+        "nl": "Soort stamgegeven.",
+        "en": "Type of master data item."
+      },
+      "codes": {
+        "02": {
+          "en": "Cost codes / Cost ID"
+        },
+        "03": {
+          "en": "Product codes / Product ID"
+        },
+        "04": {
+          "en": "Project codes / Project ID"
+        },
+        "05": {
+          "en": "Article Group codes / Article Group ID"
+        },
+        "06": {
+          "en": "Ticketline codes"
+        },
+        "07": {
+          "en": "Logging codes"
+        },
+        "08": {
+          "en": "Payable codes"
+        },
+        "09": {
+          "en": "Savings codes"
+        },
+        "10": {
+          "en": "Discount codes"
+        },
+        "11": {
+          "en": "Employee Role codes"
+        },
+        "12": {
+          "en": "Journal codes / Journal ID"
+        },
+        "13": {
+          "en": "General Ledger codes"
+        },
+        "14": {
+          "en": "Quantity codes / Quantity ID"
+        },
+        "15": {
+          "en": "Raise codes"
+        },
+        "16": {
+          "en": "Transaction codes"
+        },
+        "17": {
+          "en": "Payment codes"
+        },
+        "18": {
+          "en": "Event codes"
+        },
+        "19": {
+          "en": "Service code"
+        },
+        "20": {
+          "en": "Charge codes"
+        },
+        "21": {
+          "en": "Buffer codes"
+        },
+        "22": {
+          "en": "Corporation Model codes"
+        },
+        "23": {
+          "en": "Relationship codes / Relationship ID"
+        },
+        "24": {
+          "en": "Object codes"
+        },
+        "25": {
+          "en": "Usage codes"
+        },
+        "26": {
+          "en": "Measure codes"
+        },
+        "27": {
+          "en": "Value Type codes"
+        },
+        "28": {
+          "en": "Fiscal status codes"
+        },
+        "29": {
+          "en": "Source codes / Source ID"
+        },
+        "30": {
+          "en": "User codes / User ID"
+        },
+        "31": {
+          "en": "Movement type codes / Movement ID"
+        },
+        "32": {
+          "en": "Compacting codes / Compacting ID"
+        }
+      }
+    },
+    {
+      "key": "location_basics_basic.basic_id",
+      "kind": "column",
+      "label": {
+        "en": "Basic ID"
+      },
+      "definition": {
+        "nl": "Sleutel van het stamgegeven.",
+        "en": "Key of the master data item."
+      }
+    },
+    {
+      "key": "location_basics_basic.predefined_basic_id",
+      "kind": "column",
+      "label": {
+        "en": "Predefined basic ID"
+      },
+      "definition": {
+        "nl": "Voorgedefinieerde code die naast de eigen (leveranciersafhankelijke) Basic ID wordt opgenomen. Hiermee kan een mapping gemaakt worden naar voorgedefinieerde codes in bv de controletools van de Belastingdienst. De eerste twee posities van deze code corresponderen met de code uit Basic Type. exchange 31004 Receipt of goods 31005 Storage of goods 31006 Removal of goods 31007 Transferral of goods 31008 Change increase 31009 Change decrease 32001 Not condensed 32002 Condensed",
+        "en": "Predefined code included alongside the own (supplier-dependent) Basic ID. This allows mapping to predefined codes in, for example, the Tax Administration's audit tools. The first two positions of this code correspond to the code from Basic Type. 31004 Receipt of goods 31005 Storage of goods 31006 Removal of goods 31007 Transferral of goods 31008 Change increase 31009 Change decrease 32001 Not condensed 32002 Condensed"
+      },
+      "codes": {
+        "16001": {
+          "en": "Sales"
+        },
+        "16002": {
+          "en": "Purchase"
+        },
+        "16003": {
+          "en": "Payment"
+        },
+        "16004": {
+          "en": "Receiving Payment"
+        },
+        "16005": {
+          "en": "Cash"
+        },
+        "16006": {
+          "en": "Return payment"
+        },
+        "16007": {
+          "en": "Inventory, stock"
+        },
+        "16008": {
+          "en": "Packing"
+        },
+        "16009": {
+          "en": "Cash difference"
+        },
+        "16010": {
+          "en": "Price changement"
+        },
+        "16011": {
+          "en": "Correction"
+        },
+        "16012": {
+          "en": "Out Payment"
+        },
+        "16013": {
+          "en": "Trade-in, exchange"
+        },
+        "16014": {
+          "en": "Return products"
+        },
+        "16999": {
+          "en": "Other"
+        },
+        "17001": {
+          "en": "Means of payment cash"
+        },
+        "17002": {
+          "en": "Means of payment electronic PIN"
+        },
+        "17003": {
+          "en": "Means of payment Chipknip"
+        },
+        "17004": {
+          "en": "Means of payment creditcard"
+        },
+        "17005": {
+          "en": "Cross entry"
+        },
+        "17006": {
+          "en": "Means of payment by bankaccount"
+        },
+        "17007": {
+          "en": "Means of payment gift token"
+        },
+        "17008": {
+          "en": "Customer card"
+        },
+        "17009": {
+          "en": "Loyalty, stamps"
+        },
+        "17999": {
+          "en": "Other"
+        },
+        "18001": {
+          "en": "Starting the POS application (to log in)"
+        },
+        "18002": {
+          "en": "Finishing working on the POS (to log off)"
+        },
+        "18003": {
+          "en": "Opening cashdrawer"
+        },
+        "18004": {
+          "en": "Closing cashdrawer"
+        },
+        "18005": {
+          "en": "Change employee"
+        },
+        "18006": {
+          "en": "Change of installation (eventText mandatory)"
+        },
+        "18007": {
+          "en": "X-report or counting"
+        },
+        "18008": {
+          "en": "Z-report or counting"
+        },
+        "18009": {
+          "en": "Pause on"
+        },
+        "18010": {
+          "en": "Pause off"
+        },
+        "18999": {
+          "en": "Other"
+        },
+        "22001": {
+          "en": "Model 1"
+        },
+        "22002": {
+          "en": "Model 2"
+        },
+        "23001": {
+          "en": "Renter"
+        },
+        "23999": {
+          "en": "Other"
+        },
+        "26001": {
+          "en": "Square meter"
+        },
+        "27001": {
+          "en": "Real-estate (NL: WOZ) value"
+        },
+        "27002": {
+          "en": "Sales value"
+        },
+        "27003": {
+          "en": "Gross value"
+        },
+        "27004": {
+          "en": "Nett value"
+        },
+        "28001": {
+          "en": "Taxed"
+        },
+        "28002": {
+          "en": "Tax-free"
+        },
+        "31001": {
+          "en": "Stock increase"
+        },
+        "31002": {
+          "en": "Stock decrease"
+        },
+        "31003": {
+          "en": "Absolute stock in trade for export for inventory level"
+        }
+      }
+    },
+    {
+      "key": "location_basics_basic.basic_desc",
+      "kind": "column",
+      "label": {
+        "en": "Basic Description"
+      },
+      "definition": {
+        "nl": "Omschrijving stamgegeven.",
+        "en": "Master data description."
+      }
+    },
+    {
+      "key": "cashregister",
+      "kind": "table",
+      "label": {
+        "en": "Cashregister"
+      },
+      "definition": {
+        "nl": "Verkooppunt, kassa.",
+        "en": "Point of sale, cash register."
+      }
+    },
+    {
+      "key": "cashregister.register_id",
+      "kind": "column",
+      "label": {
+        "en": "Register ID"
+      }
+    },
+    {
+      "key": "cashregister.reg_desc",
+      "kind": "column",
+      "label": {
+        "en": "Register Description"
+      },
+      "definition": {
+        "nl": "Omschrijving van het kasregister of verkooppunt. Bijvoorbeeld benzinepomp etc.",
+        "en": "Description of the cash register or point of sale. For example petrol pump etc."
+      }
+    },
+    {
+      "key": "cashregister.tot_trans_amnt_in",
+      "kind": "column",
+      "label": {
+        "en": "Total amount, VAT included"
+      }
+    },
+    {
+      "key": "cashregister.tot_trans_amnt_ex",
+      "kind": "column",
+      "label": {
+        "en": "Total amount, VAT excluded"
+      }
+    },
+    {
+      "key": "event",
+      "kind": "table",
+      "label": {
+        "en": "Event"
+      }
+    },
+    {
+      "key": "event.event_id",
+      "kind": "column",
+      "label": {
+        "en": "Event ID"
+      }
+    },
+    {
+      "key": "event.event_type",
+      "kind": "column",
+      "label": {
+        "en": "Event Type"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de event soort. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the event type. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "event.trans_id",
+      "kind": "column",
+      "label": {
+        "en": "Transaction ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de transactie soort. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the transaction type. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "event.emp_id",
+      "kind": "column",
+      "label": {
+        "en": "Employee ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de werknemer. Werknemer dient in de tabel \"Employees\" opgenomen te worden.",
+        "en": "Reference to the employee. The employee must be included in the table \"Employees\"."
+      }
+    },
+    {
+      "key": "event.event_date",
+      "kind": "column",
+      "label": {
+        "en": "Event Date"
+      },
+      "definition": {
+        "nl": "W3C date datatype. E.g. 2007-01-27.",
+        "en": "W3C date datatype. E.g. 2007-01-27."
+      }
+    },
+    {
+      "key": "event.event_time",
+      "kind": "column",
+      "label": {
+        "en": "Event Time"
+      },
+      "definition": {
+        "nl": "W3C time datatype. E.g. 08:00:00.",
+        "en": "W3C time datatype. E.g. 08:00:00."
+      }
+    },
+    {
+      "key": "event.event_text",
+      "kind": "column",
+      "label": {
+        "en": "Event Text"
+      }
+    },
+    {
+      "key": "cashtransaction",
+      "kind": "table",
+      "label": {
+        "en": "Cashtransaction"
+      }
+    },
+    {
+      "key": "cashtransaction.nr",
+      "kind": "column",
+      "label": {
+        "en": "Transaction Number"
+      },
+      "definition": {
+        "nl": "Transactienummer. Moet uniek zijn binnen een dagboek.",
+        "en": "Transaction number. Must be unique within a journal."
+      }
+    },
+    {
+      "key": "cashtransaction.trans_id",
+      "kind": "column",
+      "label": {
+        "en": "Transaction ID"
+      }
+    },
+    {
+      "key": "cashtransaction.trans_type",
+      "kind": "column",
+      "label": {
+        "en": "Transaction Type"
+      },
+      "definition": {
+        "nl": "Transactie type. Omschrijving van de code dient in de tabel 'Basics' verklaart te worden.",
+        "en": "Transaction type. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "cashtransaction.trans_amnt_in",
+      "kind": "column",
+      "label": {
+        "en": "Amount, VAT included"
+      }
+    },
+    {
+      "key": "cashtransaction.trans_amnt_ex",
+      "kind": "column",
+      "label": {
+        "en": "Amount, VAT excluded"
+      }
+    },
+    {
+      "key": "cashtransaction.tot_vat_amnt",
+      "kind": "column",
+      "label": {
+        "en": "Total VAT Amount"
+      }
+    },
+    {
+      "key": "cashtransaction.tot_dsc_amnt",
+      "kind": "column",
+      "label": {
+        "en": "Total discount Amount"
+      }
+    },
+    {
+      "key": "cashtransaction.tot_raise_amnt",
+      "kind": "column",
+      "label": {
+        "en": "Total raise Amount"
+      }
+    },
+    {
+      "key": "cashtransaction.tot_paid_amnt",
+      "kind": "column",
+      "label": {
+        "en": "Total paid amount"
+      }
+    },
+    {
+      "key": "cashtransaction.amnt_tp",
+      "kind": "column",
+      "label": {
+        "en": "Amount Type"
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "key": "cashtransaction.jrn_id",
+      "kind": "column",
+      "label": {
+        "en": "Journal ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de dagboekcode van het toegepaste dagboek. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the journal code of the journal used. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "cashtransaction.emp_id",
+      "kind": "column",
+      "label": {
+        "en": "Employee ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de werknemer. Zie tabel \"Employees\".",
+        "en": "Reference to the employee. See table \"Employees\"."
+      }
+    },
+    {
+      "key": "cashtransaction.cust_sup_id",
+      "kind": "column",
+      "label": {
+        "en": "Customer Supplier ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de debiteur of crediteur. Zie de tabel \"Customers Suppliers\".",
+        "en": "Reference to the debtor or creditor. See the table \"Customers Suppliers\"."
+      }
+    },
+    {
+      "key": "cashtransaction.period_number",
+      "kind": "column",
+      "label": {
+        "en": "Period number"
+      },
+      "definition": {
+        "nl": "Periode nummer. Zie tabel \"Periods\".",
+        "en": "Period number. See table \"Periods\"."
+      }
+    },
+    {
+      "key": "cashtransaction.trans_date",
+      "kind": "column",
+      "label": {
+        "en": "Transaction Date"
+      },
+      "definition": {
+        "nl": "Transactie datum. W3C date datatype. E.g. 2007:01:27.",
+        "en": "Transaction date. W3C date datatype. E.g. 2007:01:27."
+      }
+    },
+    {
+      "key": "cashtransaction.trans_time",
+      "kind": "column",
+      "label": {
+        "en": "Transaction Time"
+      },
+      "definition": {
+        "nl": "Transactietijd op transactiedatum. W3C time datatype. E.g. 08:00:00.",
+        "en": "Transaction time on transaction date. W3C time datatype. E.g. 08:00:00."
+      }
+    },
+    {
+      "key": "cashtransaction.book_date",
+      "kind": "column",
+      "label": {
+        "en": "Book date"
+      },
+      "definition": {
+        "nl": "Boekingsdatum. W3C date datatype. E.g. 2007:01:27.",
+        "en": "Booking date. W3C date datatype. E.g. 2007:01:27."
+      }
+    },
+    {
+      "key": "cashtransaction.book_time",
+      "kind": "column",
+      "label": {
+        "en": "Book time"
+      },
+      "definition": {
+        "nl": "Boekings tijd op boekingsdatum. W3C time datatype. E.g. 08:00:00.",
+        "en": "Booking time on booking date. W3C time datatype. E.g. 08:00:00."
+      }
+    },
+    {
+      "key": "cashtransaction.invoice_id",
+      "kind": "column",
+      "label": {
+        "en": "Invoice ID"
+      },
+      "definition": {
+        "nl": "Factuurnummer.",
+        "en": "Invoice number."
+      }
+    },
+    {
+      "key": "cashtransaction.ref_id",
+      "kind": "column",
+      "label": {
+        "en": "Reference"
+      }
+    },
+    {
+      "key": "cashtransaction.desc",
+      "kind": "column",
+      "label": {
+        "en": "Description"
+      },
+      "definition": {
+        "nl": "Omschrijving.",
+        "en": "Description."
+      }
+    },
+    {
+      "key": "ct_line",
+      "kind": "table",
+      "label": {
+        "en": "Cashtransaction line"
+      }
+    },
+    {
+      "key": "ct_line.nr",
+      "kind": "column",
+      "label": {
+        "en": "Transactionline Number"
+      },
+      "definition": {
+        "nl": "Transactie regel nummer. Moet uniek zijn binnen de transactie.",
+        "en": "Transaction line number. Must be unique within the transaction."
+      }
+    },
+    {
+      "key": "ct_line.line_id",
+      "kind": "column",
+      "label": {
+        "en": "Transactionline ID"
+      }
+    },
+    {
+      "key": "ct_line.line_type",
+      "kind": "column",
+      "label": {
+        "en": "Transactionline Type"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de regel transactie soort. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden. Bijvoorbeeld correctie, retouren, boeking, statiegeld, kadobon etc.",
+        "en": "Reference to the line transaction type. The description of the code must be explained in the 'Basics' table. For example correction, returns, posting, deposit, gift voucher etc."
+      }
+    },
+    {
+      "key": "ct_line.art_group_id",
+      "kind": "column",
+      "label": {
+        "en": "Article Group ID"
+      }
+    },
+    {
+      "key": "ct_line.art_id",
+      "kind": "column",
+      "label": {
+        "en": "Article ID"
+      }
+    },
+    {
+      "key": "ct_line.qnt",
+      "kind": "column",
+      "label": {
+        "en": "Quantity"
+      }
+    },
+    {
+      "key": "ct_line.line_amnt_in",
+      "kind": "column",
+      "label": {
+        "en": "Amount, VAT included"
+      }
+    },
+    {
+      "key": "ct_line.line_amnt_ex",
+      "kind": "column",
+      "label": {
+        "en": "Amount, VAT excluded"
+      }
+    },
+    {
+      "key": "ct_line.tot_line_dsc_amnt",
+      "kind": "column",
+      "label": {
+        "en": "Line Total Discount Amount"
+      }
+    },
+    {
+      "key": "ct_line.tot_line_raise_amnt",
+      "kind": "column",
+      "label": {
+        "en": "Line Total Raise Amount"
+      }
+    },
+    {
+      "key": "ct_line.amnt_tp",
+      "kind": "column",
+      "label": {
+        "en": "Amount Type"
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "key": "ct_line.ppu",
+      "kind": "column",
+      "label": {
+        "en": "Price per Unit"
+      }
+    },
+    {
+      "key": "ct_line.cost_price",
+      "kind": "column",
+      "label": {
+        "en": "Cost Price"
+      },
+      "definition": {
+        "nl": "Kostprijs.",
+        "en": "Cost price."
+      }
+    },
+    {
+      "key": "ct_line.cost_id",
+      "kind": "column",
+      "label": {
+        "en": "Cost ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de kostenplaats. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the cost centre. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "ct_line.cost_obj_id",
+      "kind": "column",
+      "label": {
+        "en": "Cost Object ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de kosten drager. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the cost unit. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "ct_line.proj_id",
+      "kind": "column",
+      "label": {
+        "en": "Project ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het project (i.p.v. kostensoort en kostendrager). Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the project (instead of cost type and cost unit). The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "ct_line.emp_id",
+      "kind": "column",
+      "label": {
+        "en": "Employee ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar werknemer. Zie tabel \"Employees\".",
+        "en": "Reference to the employee. See table \"Employees\"."
+      }
+    },
+    {
+      "key": "ct_line.line_amnt_in_acc_id",
+      "kind": "column",
+      "label": {
+        "en": "Amount (VAT included) Account ID"
+      },
+      "definition": {
+        "nl": "Unieke grootboekrekeningcode.",
+        "en": "Unique general ledger account code."
+      }
+    },
+    {
+      "key": "ct_line.stock_acc_id",
+      "kind": "column",
+      "label": {
+        "en": "Stock Account ID"
+      },
+      "definition": {
+        "nl": "Voorraad grootboekrekening.",
+        "en": "Inventory general ledger account."
+      }
+    },
+    {
+      "key": "ct_line.cost_price_acc_id",
+      "kind": "column",
+      "label": {
+        "en": "Cost Price Account ID"
+      },
+      "definition": {
+        "nl": "Kostprijs grootboekrekening.",
+        "en": "Cost price general ledger account."
+      }
+    },
+    {
+      "key": "ct_line.cash_trans_line_descr",
+      "kind": "column",
+      "label": {
+        "en": "Cashtransaction line description"
+      }
+    },
+    {
+      "key": "ct_line.line_date",
+      "kind": "column",
+      "label": {
+        "en": "Line Date"
+      },
+      "definition": {
+        "nl": "W3C date datatype. E.g. 2007-01-27.",
+        "en": "W3C date datatype. E.g. 2007-01-27."
+      }
+    },
+    {
+      "key": "ct_line.line_time",
+      "kind": "column",
+      "label": {
+        "en": "Line Time"
+      },
+      "definition": {
+        "nl": "W3C time datatype. E.g. 08:00:00.",
+        "en": "W3C time datatype. E.g. 08:00:00."
+      }
+    },
+    {
+      "key": "ct_line.jrn_id",
+      "kind": "column",
+      "label": {
+        "en": "Journal ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het dagboek wat hier gebruikt wordt. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the journal used here. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "ct_line.rgs_ref_ext",
+      "kind": "column",
+      "label": {
+        "en": "RGS Reference Extension"
+      },
+      "definition": {
+        "nl": "RGS (Referentie Grootboek Schema) Referentie Extensie. Dit is wat achter de punt geplaatst kan worden in de RGS code om differentiatie binnen een RGS code mogelijk te maken.",
+        "en": "RGS (Reference Chart of Accounts) reference extension. This is what can be placed after the dot in the RGS code to allow differentiation within an RGS code."
+      }
+    },
+    {
+      "key": "ct_line.vat",
+      "kind": "group",
+      "label": {
+        "en": "VAT"
+      },
+      "definition": {
+        "nl": "Geeft de mogelijkheid om de BTW te specificeren van een journaalpost.",
+        "en": "Allows the VAT of a journal entry to be specified."
+      }
+    },
+    {
+      "key": "ct_line.vat_vat_id",
+      "kind": "column",
+      "label": {
+        "en": "Vat id"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de gedefinieerde VAT code. Zie tabel \"VAT codes\".",
+        "en": "Reference to the defined VAT code. See table \"VAT codes\"."
+      }
+    },
+    {
+      "key": "ct_line.vat_vat_code",
+      "kind": "column",
+      "label": {
+        "en": "VAT Code"
+      },
+      "definition": {
+        "nl": "BTW code.",
+        "en": "VAT code."
+      }
+    },
+    {
+      "key": "ct_line.vat_vat_perc",
+      "kind": "column",
+      "label": {
+        "en": "VAT Percentage"
+      }
+    },
+    {
+      "key": "ct_line.vat_vat_amnt",
+      "kind": "column",
+      "label": {
+        "en": "VAT Amount"
+      }
+    },
+    {
+      "key": "ct_line.vat_vat_amnt_tp",
+      "kind": "column",
+      "label": {
+        "en": "VAT Amount Type"
+      },
+      "definition": {
+        "nl": "Indicatie of het btw bedrag Debet of Credit is.",
+        "en": "Indicator whether the VAT amount is debit or credit."
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "key": "ct_line.vat_vat_bas_amnt",
+      "kind": "column",
+      "label": {
+        "en": "VAT Basis Amount"
+      },
+      "definition": {
+        "nl": "Grondslag bedrag voor BTW berekening.",
+        "en": "Base amount for VAT calculation."
+      }
+    },
+    {
+      "key": "ct_line.vat_acc_id",
+      "kind": "column",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Grootboekrekening waarop de btw wordt geboekt.",
+        "en": "General ledger account on which the VAT is posted."
+      }
+    },
+    {
+      "key": "ct_line_savings",
+      "kind": "table",
+      "label": {
+        "en": "Savings"
+      },
+      "definition": {
+        "nl": "Spaarsystemen.",
+        "en": "Savings systems."
+      }
+    },
+    {
+      "key": "ct_line_savings.savings_type",
+      "kind": "column",
+      "label": {
+        "en": "Savings Type"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het soort spaarsysteem. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the type of savings system. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "ct_line_savings.savings_units",
+      "kind": "column",
+      "label": {
+        "en": "Savings Units"
+      },
+      "definition": {
+        "nl": "Aantal eenheden.",
+        "en": "Number of units."
+      }
+    },
+    {
+      "key": "ct_line_savings.emp_id",
+      "kind": "column",
+      "label": {
+        "en": "Employee ID"
+      }
+    },
+    {
+      "key": "ct_line_savings.acc_id",
+      "kind": "column",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Unieke grootboekrekeningcode.",
+        "en": "Unique general ledger account code."
+      }
+    },
+    {
+      "key": "ct_line_discount",
+      "kind": "table",
+      "label": {
+        "en": "Discount"
+      },
+      "definition": {
+        "nl": "Korting.",
+        "en": "Discount."
+      }
+    },
+    {
+      "key": "ct_line_discount.dsc_tp",
+      "kind": "column",
+      "label": {
+        "en": "Discount Type"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de soort korting. Omschrijving van de code dient tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the discount type. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "ct_line_discount.dsc_amnt",
+      "kind": "column",
+      "label": {
+        "en": "Discount Amount"
+      }
+    },
+    {
+      "key": "ct_line_discount.emp_id",
+      "kind": "column",
+      "label": {
+        "en": "Employee ID"
+      }
+    },
+    {
+      "key": "ct_line_discount.acc_id",
+      "kind": "column",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Unieke grootboekrekeningcode.",
+        "en": "Unique general ledger account code."
+      }
+    },
+    {
+      "key": "ct_line_raise",
+      "kind": "table",
+      "label": {
+        "en": "Raise"
+      },
+      "definition": {
+        "nl": "Toeslag.",
+        "en": "Surcharge."
+      }
+    },
+    {
+      "key": "ct_line_raise.raise_type",
+      "kind": "column",
+      "label": {
+        "en": "Raise Type"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de soort toeslag. Omschrijving van de code dient tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the surcharge type. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "ct_line_raise.raise_amnt",
+      "kind": "column",
+      "label": {
+        "en": "Raise Amount"
+      }
+    },
+    {
+      "key": "ct_line_raise.emp_id",
+      "kind": "column",
+      "label": {
+        "en": "Employee ID"
+      }
+    },
+    {
+      "key": "ct_line_raise.acc_id",
+      "kind": "column",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Unieke grootboekrekeningcode.",
+        "en": "Unique general ledger account code."
+      }
+    },
+    {
+      "key": "cashtransaction.rounding",
+      "kind": "group",
+      "label": {
+        "en": "Rounding"
+      },
+      "definition": {
+        "nl": "Afronding.",
+        "en": "Rounding."
+      }
+    },
+    {
+      "key": "cashtransaction.rounding_rounding_amnt",
+      "kind": "column",
+      "label": {
+        "en": "Rounding amount"
+      }
+    },
+    {
+      "key": "cashtransaction.rounding_acc_id",
+      "kind": "column",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Unieke grootboekrekeningcode.",
+        "en": "Unique general ledger account code."
+      }
+    },
+    {
+      "key": "payment",
+      "kind": "table",
+      "label": {
+        "en": "Payment"
+      },
+      "definition": {
+        "nl": "Betaling.",
+        "en": "Payment."
+      }
+    },
+    {
+      "key": "payment.payment_type",
+      "kind": "column",
+      "label": {
+        "en": "PaymentType"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het soort betaling. Omschrijving van de code dient de tabel 'Basics' verklaard te worden. Contant, contant vreemde valuta, pin, RC, creditcard etc.",
+        "en": "Reference to the payment type. The description of the code must be explained in the 'Basics' table. Cash, cash foreign currency, debit card, current account, credit card etc."
+      }
+    },
+    {
+      "key": "payment.paid_amnt",
+      "kind": "column",
+      "label": {
+        "en": "Paid amount"
+      }
+    },
+    {
+      "key": "payment.emp_id",
+      "kind": "column",
+      "label": {
+        "en": "Employee ID"
+      }
+    },
+    {
+      "key": "payment.cur_code",
+      "kind": "column",
+      "label": {
+        "en": "Currency Code"
+      },
+      "definition": {
+        "nl": "ISO Valutacode (ISO 4217). Valutacode (leeg betekent locale valuta).",
+        "en": "ISO currency code (ISO 4217). Currency code (empty means local currency)."
+      }
+    },
+    {
+      "key": "payment.exch_rt",
+      "kind": "column",
+      "label": {
+        "en": "Exchange rate"
+      }
+    },
+    {
+      "key": "payment.acc_id",
+      "kind": "column",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Unieke grootboekrekeningcode.",
+        "en": "Unique general ledger account code."
+      }
+    },
+    {
+      "key": "logistics",
+      "kind": "table",
+      "label": {
+        "en": "Logistics"
+      },
+      "definition": {
+        "nl": "Logistieke gegevens.",
+        "en": "Logistics data."
+      }
+    },
+    {
+      "key": "logistics.mov_id",
+      "kind": "column",
+      "label": {
+        "en": "Movement ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de soort beweging. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the movement type. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "logistics.art_st_tp_cd",
+      "kind": "column",
+      "label": {
+        "en": "Article standardisation organisation code"
+      },
+      "definition": {
+        "nl": "Uitgevende standaardisatie organisatie van het artikelnummer, bijvoorbeeld EAN, US.",
+        "en": "Standardisation organisation issuing the article number, for example EAN, US."
+      }
+    },
+    {
+      "key": "logistics.art_cd",
+      "kind": "column",
+      "label": {
+        "en": "Article code"
+      },
+      "definition": {
+        "nl": "Gestandaardiseerde artikelcode of artikelnummer volgens de uitgevende organisatie.",
+        "en": "Standardised article code or article number according to the issuing organisation."
+      }
+    },
+    {
+      "key": "logistics.qnt_id",
+      "kind": "column",
+      "label": {
+        "en": "Quantity ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de eenheid. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the unit. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "logistics.qnt",
+      "kind": "column",
+      "label": {
+        "en": "Quantity"
+      },
+      "definition": {
+        "nl": "Aantal (af is negatief, bij is positief).",
+        "en": "Quantity (decrease is negative, increase is positive)."
+      }
+    },
+    {
+      "key": "logistics.loc",
+      "kind": "column",
+      "label": {
+        "en": "Location"
+      },
+      "definition": {
+        "nl": "Locatie van de goederen, omschrijving",
+        "en": "Location of the goods, description"
+      }
+    },
+    {
+      "key": "logistics.wr_hs",
+      "kind": "column",
+      "label": {
+        "en": "Warehouse"
+      },
+      "definition": {
+        "nl": "Magazijn binnen de organisatie, omschrijving",
+        "en": "Warehouse within the organisation, description"
+      }
+    }
+  ]
+}

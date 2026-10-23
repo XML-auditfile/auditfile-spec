@@ -1,0 +1,310 @@
+{
+  "formatVersion": 1,
+  "standards": [
+    {
+      "key": "xaf/3.2",
+      "type": "xaf",
+      "typeName": "financial",
+      "version": "3.2",
+      "folder": "standards/xaf/3_2",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "http://www.auditfiles.nl/XAF/3.2",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/",
+        "published": "2017-09-01"
+      }
+    },
+    {
+      "key": "xaf/4.0.3",
+      "type": "xaf",
+      "typeName": "financial",
+      "version": "4.0.3",
+      "folder": "standards/xaf/4_0_3",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "http://www.odb.belastingdienst.nl/Belastingdienst/BCPP/1.1/structures/XmlauditfileXAF_4.0",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      }
+    },
+    {
+      "key": "xaa/3.2",
+      "type": "xaa",
+      "typeName": "cashRegister",
+      "version": "3.2",
+      "folder": "standards/xaa/3_2",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "http://www.auditfiles.nl/XAA/3.2",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      }
+    },
+    {
+      "key": "xab/1.0",
+      "type": "xab",
+      "typeName": "taxiOnboardComputer",
+      "version": "1.0",
+      "folder": "standards/xab/1_0",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "http://www.auditfiles.nl/XAB/1.0",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      }
+    },
+    {
+      "key": "xar/1.2",
+      "type": "xar",
+      "typeName": "tripRegistration",
+      "version": "1.2",
+      "folder": "standards/xar/1_2",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "http://www.auditfiles.nl/XAR/1.2",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      }
+    },
+    {
+      "key": "xar/2.3.6.1",
+      "type": "xar",
+      "typeName": "tripRegistration",
+      "version": "2.3.6.1",
+      "folder": "standards/xar/2_3_6_1",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "https://odb.belastingdienst.nl/XAR/2.3.6",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      }
+    },
+    {
+      "key": "xas/2018.1.0",
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2018.1.0",
+      "folder": "standards/xas/2018_1_0",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "http://www.auditfiles.nl/XAS/2018.1.0",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      }
+    },
+    {
+      "key": "xas/2019.1.0",
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2019.1.0",
+      "folder": "standards/xas/2019_1_0",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "http://www.auditfiles.nl/XAS/2019.1.0",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      }
+    },
+    {
+      "key": "xas/2020.1.0",
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2020.1.0",
+      "folder": "standards/xas/2020_1_0",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "http://www.auditfiles.nl/XAS/2020.1.0",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      }
+    },
+    {
+      "key": "xas/2021.1.1",
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2021.1.1",
+      "folder": "standards/xas/2021_1_1",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "http://www.auditfiles.nl/XAS/2021.1.1",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      }
+    },
+    {
+      "key": "xas/2022.1.1",
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2022.1.1",
+      "folder": "standards/xas/2022_1_1",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "http://www.auditfiles.nl/XAS/2022.1.1",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      }
+    },
+    {
+      "key": "xas/2023.1.0",
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2023.1.0",
+      "folder": "standards/xas/2023_1_0",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "http://www.auditfiles.nl/XAS/2023.1.0",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      }
+    },
+    {
+      "key": "xas/2024.1.0",
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2024.1.0",
+      "folder": "standards/xas/2024_1_0",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "http://www.odb.belastingdienst.nl/Belastingdienst/SDM/0.2/structures/AuditfileSalaris-Versie2024_1.0",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      }
+    },
+    {
+      "key": "xas/2025.1.0",
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2025.1.0",
+      "folder": "standards/xas/2025_1_0",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "http://www.odb.belastingdienst.nl/Belastingdienst/SDM/0.2/structures/AuditfileSalaris-Versie2025_1.0",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      }
+    },
+    {
+      "key": "xas/2026.1.0",
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2026.1.0",
+      "folder": "standards/xas/2026_1_0",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "http://www.odb.belastingdienst.nl/Belastingdienst/SDM/0.2/structures/AuditfileSalaris-Versie2026_1.0",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      }
+    },
+    {
+      "key": "xas/2027.1.0",
+      "type": "xas",
+      "typeName": "payroll",
+      "version": "2027.1.0",
+      "folder": "standards/xas/2027_1_0",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "http://www.odb.belastingdienst.nl/Belastingdienst/SDM/0.2/structures/AuditfileSalaris-Versie2027_1.0",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      }
+    }
+  ]
+}

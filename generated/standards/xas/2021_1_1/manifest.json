@@ -1,0 +1,1618 @@
+{
+  "formatVersion": 1,
+  "standard": "xas",
+  "typeName": "payroll",
+  "version": "2021.1.1",
+  "namespace": "http://www.auditfiles.nl/XAS/2021.1.1",
+  "rootElement": "auditfile",
+  "provenance": "official",
+  "xsd": {
+    "file": "auditfile.xsd",
+    "sha256": "9bae8d7fde328a04bc32b6dda2fb9b98a7074a2d098c5774de97ec1353da59e5"
+  },
+  "generatorVersion": "0.1.0",
+  "requiredTables": [
+    "auditfile",
+    "br_alg",
+    "inhpl",
+    "lncmp"
+  ],
+  "expectedTables": [],
+  "tables": [
+    {
+      "name": "auditfile",
+      "xmlName": "auditfile",
+      "path": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": []
+    },
+    {
+      "name": "br_alg",
+      "xmlName": "BrAlg",
+      "path": "auditfile/BrAlg",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": [
+        {
+          "name": "br_cd",
+          "xmlName": "BrCd",
+          "path": "BrCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String",
+          "minOccurs": 1
+        },
+        {
+          "name": "aandat_aud",
+          "xmlName": "AandatAud",
+          "path": "AandatAud",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "bljr",
+          "xmlName": "Bljr",
+          "path": "Bljr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "DatumAlleenJaar",
+          "minOccurs": 1
+        },
+        {
+          "name": "tot_ln_lb_ph",
+          "xmlName": "TotLnLbPh",
+          "path": "TotLnLbPh",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Totaalbedrag",
+          "minOccurs": 1
+        },
+        {
+          "name": "tot_aant_ink_vrh_vast",
+          "xmlName": "TotAantInkVrhVast",
+          "path": "TotAantInkVrhVast",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Aantal7",
+          "minOccurs": 1
+        },
+        {
+          "name": "audfile_bstmd_v_cd",
+          "xmlName": "AudfileBstmdVCd",
+          "path": "AudfileBstmdVCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CoderingDoelgroepAuditfile",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "inhpl",
+      "xmlName": "Inhpl",
+      "path": "auditfile/Inhpl",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": [
+        {
+          "name": "nm",
+          "xmlName": "Nm",
+          "path": "Nm",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Naam",
+          "minOccurs": 1
+        },
+        {
+          "name": "tw_dl_nm",
+          "xmlName": "TwDlNm",
+          "path": "TwDlNm",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Naam",
+          "minOccurs": 0
+        },
+        {
+          "name": "eh_pub_uitk",
+          "xmlName": "EHPubUitk",
+          "path": "EHPubUitk",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag132",
+          "minOccurs": 0
+        },
+        {
+          "name": "eh_gebr_auto",
+          "xmlName": "EHGebrAuto",
+          "path": "EHGebrAuto",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag132",
+          "minOccurs": 0
+        },
+        {
+          "name": "ehvut",
+          "xmlName": "EHVUT",
+          "path": "EHVUT",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag132",
+          "minOccurs": 0
+        },
+        {
+          "name": "eh_ovs_frf_wrkkstrg",
+          "xmlName": "EhOvsFrfWrkkstrg",
+          "path": "EhOvsFrfWrkkstrg",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag132",
+          "minOccurs": 0
+        },
+        {
+          "name": "av_zeev",
+          "xmlName": "AVZeev",
+          "path": "AVZeev",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag132",
+          "minOccurs": 0
+        },
+        {
+          "name": "bdr_vrlpg_vrm_sp_ontw",
+          "xmlName": "BdrVrlpgVrmSpOntw",
+          "path": "BdrVrlpgVrmSpOntw",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag132",
+          "minOccurs": 0
+        },
+        {
+          "name": "ind_erdwga",
+          "xmlName": "IndERDWGA",
+          "path": "IndERDWGA",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 1
+        },
+        {
+          "name": "ingdat_erdwga",
+          "xmlName": "IngdatERDWGA",
+          "path": "IngdatERDWGA",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "enddat_erdwga",
+          "xmlName": "EnddatERDWGA",
+          "path": "EnddatERDWGA",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "ind_erdzw",
+          "xmlName": "IndERDZW",
+          "path": "IndERDZW",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 1
+        },
+        {
+          "name": "ingdat_erdzw",
+          "xmlName": "IngdatERDZW",
+          "path": "IngdatERDZW",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "enddat_erdzw",
+          "xmlName": "EnddatERDZW",
+          "path": "EnddatERDZW",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "str_adr_nl_pc",
+          "xmlName": "Pc",
+          "path": "StrAdrNl/Pc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "PostcodeNederland",
+          "minOccurs": 1
+        },
+        {
+          "name": "str_adr_nl_huisnr",
+          "xmlName": "Huisnr",
+          "path": "StrAdrNl/Huisnr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Huisnummer",
+          "minOccurs": 1
+        },
+        {
+          "name": "str_adr_nl_huis_toev",
+          "xmlName": "HuisToev",
+          "path": "StrAdrNl/HuisToev",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "HuisnummerToevoeging",
+          "minOccurs": 0
+        },
+        {
+          "name": "lnadm_lhnr",
+          "xmlName": "Lhnr",
+          "path": "Lnadm/Lhnr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Loonheffingnummer",
+          "minOccurs": 1
+        },
+        {
+          "name": "lnadm_klntnr_lsb",
+          "xmlName": "KlntnrLsb",
+          "path": "Lnadm/KlntnrLsb",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Sleutelwaarde12",
+          "minOccurs": 0
+        },
+        {
+          "name": "lnadm_rel_nr",
+          "xmlName": "RelNr",
+          "path": "Lnadm/RelNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Relatienummer",
+          "minOccurs": 1
+        },
+        {
+          "name": "lnadm_val_cd",
+          "xmlName": "ValCd",
+          "path": "Lnadm/ValCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IsoValutacode",
+          "minOccurs": 1
+        },
+        {
+          "name": "lnadm_nm_appl",
+          "xmlName": "NmAppl",
+          "path": "Lnadm/NmAppl",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "lnadm_ver_appl",
+          "xmlName": "VerAppl",
+          "path": "Lnadm/VerAppl",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst70",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "lncmp",
+      "xmlName": "Lncmp",
+      "path": "auditfile/Inhpl/Lnadm/Lncmp",
+      "parent": "inhpl",
+      "minOccurs": 1,
+      "maxOccurs": 9999,
+      "columns": [
+        {
+          "name": "id_lncmp",
+          "xmlName": "IdLncmp",
+          "path": "IdLncmp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificatieLooncomponent",
+          "minOccurs": 1
+        },
+        {
+          "name": "oms_lncmp",
+          "xmlName": "OmsLncmp",
+          "path": "OmsLncmp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "lncmp_cd",
+          "xmlName": "LncmpCd",
+          "path": "LncmpCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String",
+          "minOccurs": 1
+        },
+        {
+          "name": "wz_bl_cd",
+          "xmlName": "WzBlCd",
+          "path": "WzBlCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String",
+          "minOccurs": 1
+        },
+        {
+          "name": "bruto_netto",
+          "xmlName": "BrutoNetto",
+          "path": "BrutoNetto",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 1
+        },
+        {
+          "name": "lncmp_type_cd",
+          "xmlName": "LncmpTypeCd",
+          "path": "LncmpTypeCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "wrknmr",
+      "xmlName": "Wrknmr",
+      "path": "auditfile/Wrknmr",
+      "parent": "auditfile",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "sofi_nr",
+          "xmlName": "SofiNr",
+          "path": "SofiNr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Sofinummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "persnr",
+          "xmlName": "Persnr",
+          "path": "Persnr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Sleutelwaarde35",
+          "minOccurs": 0
+        },
+        {
+          "name": "gebdat",
+          "xmlName": "Gebdat",
+          "path": "Gebdat",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "sign_nm",
+          "xmlName": "SignNm",
+          "path": "SignNm",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "SignificantDeelVanDeAchternaam",
+          "minOccurs": 0
+        },
+        {
+          "name": "voorl",
+          "xmlName": "Voorl",
+          "path": "Voorl",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Voorletters",
+          "minOccurs": 0
+        },
+        {
+          "name": "voorv",
+          "xmlName": "Voorv",
+          "path": "Voorv",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Voorvoegsels",
+          "minOccurs": 0
+        },
+        {
+          "name": "gesl",
+          "xmlName": "Gesl",
+          "path": "Gesl",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Geslachtcode",
+          "minOccurs": 0
+        },
+        {
+          "name": "nat",
+          "xmlName": "Nat",
+          "path": "Nat",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Nationaliteit",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "legbew",
+      "xmlName": "Legbew",
+      "path": "auditfile/Wrknmr/Legbew",
+      "parent": "wrknmr",
+      "minOccurs": 0,
+      "maxOccurs": 9,
+      "columns": [
+        {
+          "name": "srt_legb_cd",
+          "xmlName": "SrtLegbCd",
+          "path": "SrtLegbCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String",
+          "minOccurs": 0
+        },
+        {
+          "name": "nr_legb",
+          "xmlName": "NrLegb",
+          "path": "NrLegb",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "NummerLegitimatiebewijs",
+          "minOccurs": 0
+        },
+        {
+          "name": "dat_afg",
+          "xmlName": "DatAfg",
+          "path": "DatAfg",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "dat_gtm",
+          "xmlName": "DatGtm",
+          "path": "DatGtm",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "plts_afg",
+          "xmlName": "PltsAfg",
+          "path": "PltsAfg",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Plaatsnaam",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "str_adr_nl",
+      "xmlName": "StrAdrNl",
+      "path": "auditfile/Wrknmr/StrAdrNl",
+      "parent": "wrknmr",
+      "minOccurs": 0,
+      "maxOccurs": 9,
+      "columns": [
+        {
+          "name": "ingdat",
+          "xmlName": "Ingdat",
+          "path": "Ingdat",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "enddat",
+          "xmlName": "Enddat",
+          "path": "Enddat",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "locoms",
+          "xmlName": "Locoms",
+          "path": "Locoms",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Locatieomschrijving",
+          "minOccurs": 0
+        },
+        {
+          "name": "pc",
+          "xmlName": "Pc",
+          "path": "Pc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "PostcodeNederland",
+          "minOccurs": 0
+        },
+        {
+          "name": "wnpl",
+          "xmlName": "Wnpl",
+          "path": "Wnpl",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Plaatsnaam",
+          "minOccurs": 0
+        },
+        {
+          "name": "straat",
+          "xmlName": "Straat",
+          "path": "Straat",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Straatnaam",
+          "minOccurs": 0
+        },
+        {
+          "name": "huisnr",
+          "xmlName": "Huisnr",
+          "path": "Huisnr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Huisnummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "huis_toev",
+          "xmlName": "HuisToev",
+          "path": "HuisToev",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "HuisnummerToevoeging",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "str_adr_bl",
+      "xmlName": "StrAdrBl",
+      "path": "auditfile/Wrknmr/StrAdrBl",
+      "parent": "wrknmr",
+      "minOccurs": 0,
+      "maxOccurs": 9,
+      "columns": [
+        {
+          "name": "ingdat",
+          "xmlName": "Ingdat",
+          "path": "Ingdat",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "enddat",
+          "xmlName": "Enddat",
+          "path": "Enddat",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "locoms_btl",
+          "xmlName": "LocomsBtl",
+          "path": "LocomsBtl",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Locatieomschrijving",
+          "minOccurs": 0
+        },
+        {
+          "name": "pc_btl",
+          "xmlName": "PcBtl",
+          "path": "PcBtl",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "PostcodeBuitenland",
+          "minOccurs": 0
+        },
+        {
+          "name": "wnpl_btl",
+          "xmlName": "WnplBtl",
+          "path": "WnplBtl",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Plaatsnaam",
+          "minOccurs": 0
+        },
+        {
+          "name": "reg_btl",
+          "xmlName": "RegBtl",
+          "path": "RegBtl",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "RegionaamBuitenland",
+          "minOccurs": 0
+        },
+        {
+          "name": "land_cd",
+          "xmlName": "LandCd",
+          "path": "LandCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IsoLandcode",
+          "minOccurs": 0
+        },
+        {
+          "name": "landnm",
+          "xmlName": "Landnm",
+          "path": "Landnm",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Landnaam",
+          "minOccurs": 0
+        },
+        {
+          "name": "straat",
+          "xmlName": "Straat",
+          "path": "Straat",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Straatnaam",
+          "minOccurs": 0
+        },
+        {
+          "name": "huisnr_btl",
+          "xmlName": "HuisnrBtl",
+          "path": "HuisnrBtl",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "HuisnummerBuitenland",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "ink_vrh_vst",
+      "xmlName": "InkVrhVst",
+      "path": "auditfile/Wrknmr/InkVrhVst",
+      "parent": "wrknmr",
+      "minOccurs": 1,
+      "maxOccurs": 99,
+      "columns": [
+        {
+          "name": "num_iv",
+          "xmlName": "NumIV",
+          "path": "NumIV",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "NummerInkomstenverhouding",
+          "minOccurs": 1
+        },
+        {
+          "name": "ingdat",
+          "xmlName": "Ingdat",
+          "path": "Ingdat",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "enddat",
+          "xmlName": "Enddat",
+          "path": "Enddat",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "rd_end_dnstvbnd_om",
+          "xmlName": "RdEndDnstvbndOm",
+          "path": "RdEndDnstvbndOm",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst70",
+          "minOccurs": 0
+        },
+        {
+          "name": "cd_rdn_eind_arbov",
+          "xmlName": "CdRdnEindArbov",
+          "path": "CdRdnEindArbov",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CodeRedenEindeArbeidsovereenkomst",
+          "minOccurs": 0
+        },
+        {
+          "name": "srt_ink_cd",
+          "xmlName": "SrtInkCd",
+          "path": "SrtInkCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String",
+          "minOccurs": 1
+        },
+        {
+          "name": "brp_oms",
+          "xmlName": "BrpOms",
+          "path": "BrpOms",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "cao_cd",
+          "xmlName": "CAOCd",
+          "path": "CAOCd",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Cao",
+          "minOccurs": 0
+        },
+        {
+          "name": "cd_cao_inl",
+          "xmlName": "CdCaoInl",
+          "path": "CdCaoInl",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Cao",
+          "minOccurs": 0
+        },
+        {
+          "name": "jrln_tb_bz_bel",
+          "xmlName": "JrlnTbBzBel",
+          "path": "JrlnTbBzBel",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "BedragZonderDecimalen",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "sector",
+      "xmlName": "Sector",
+      "path": "auditfile/Wrknmr/InkVrhVst/Sector",
+      "parent": "ink_vrh_vst",
+      "minOccurs": 0,
+      "maxOccurs": 99,
+      "columns": [
+        {
+          "name": "dat_aanv_sect",
+          "xmlName": "DatAanvSect",
+          "path": "DatAanvSect",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "dat_eind_sect",
+          "xmlName": "DatEindSect",
+          "path": "DatEindSect",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "sect",
+          "xmlName": "Sect",
+          "path": "Sect",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Sectorcode",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "auto",
+      "xmlName": "Auto",
+      "path": "auditfile/Wrknmr/InkVrhVst/Auto",
+      "parent": "ink_vrh_vst",
+      "minOccurs": 0,
+      "maxOccurs": 99,
+      "columns": [
+        {
+          "name": "ingdat",
+          "xmlName": "Ingdat",
+          "path": "Ingdat",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "enddat",
+          "xmlName": "Enddat",
+          "path": "Enddat",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "kenteken",
+          "xmlName": "Kenteken",
+          "path": "Kenteken",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Kenteken",
+          "minOccurs": 0
+        },
+        {
+          "name": "land_cd",
+          "xmlName": "LandCd",
+          "path": "LandCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IsoLandcode",
+          "minOccurs": 0
+        },
+        {
+          "name": "gebr_auto",
+          "xmlName": "GebrAuto",
+          "path": "GebrAuto",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "CodeGebruikPersonenOfBestelauto",
+          "minOccurs": 0
+        },
+        {
+          "name": "cd_rdn_gn_bijt",
+          "xmlName": "CdRdnGnBijt",
+          "path": "CdRdnGnBijt",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "RedenGeenOfAfwijkendeBijtellingAuto",
+          "minOccurs": 0
+        },
+        {
+          "name": "catprijs_auto",
+          "xmlName": "CatprijsAuto",
+          "path": "CatprijsAuto",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "bijtelperc",
+          "xmlName": "Bijtelperc",
+          "path": "Bijtelperc",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Percentage",
+          "minOccurs": 0
+        },
+        {
+          "name": "wrd_pr_gebr_aut",
+          "xmlName": "WrdPrGebrAut",
+          "path": "WrdPrGebrAut",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "wrkn_bijdr_aut",
+          "xmlName": "WrknBijdrAut",
+          "path": "WrknBijdrAut",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "lntdvk",
+      "xmlName": "Lntdvk",
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk",
+      "parent": "ink_vrh_vst",
+      "minOccurs": 0,
+      "maxOccurs": 265,
+      "columns": [
+        {
+          "name": "prdnr",
+          "xmlName": "Prdnr",
+          "path": "Prdnr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Periodenummer",
+          "minOccurs": 1
+        },
+        {
+          "name": "ingdat",
+          "xmlName": "Ingdat",
+          "path": "Ingdat",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "enddat",
+          "xmlName": "Enddat",
+          "path": "Enddat",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_ind_zw",
+          "xmlName": "IndZW",
+          "path": "InkVrhVar/IndZW",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_ind_ww",
+          "xmlName": "IndWW",
+          "path": "InkVrhVar/IndWW",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_ind_zvw",
+          "xmlName": "IndZvw",
+          "path": "InkVrhVar/IndZvw",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_ind_wao",
+          "xmlName": "IndWAO",
+          "path": "InkVrhVar/IndWAO",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_cd_zvw",
+          "xmlName": "CdZvw",
+          "path": "InkVrhVar/CdZvw",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_cd_aard",
+          "xmlName": "CdAard",
+          "path": "InkVrhVar/CdAard",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_cd_invl_vpl",
+          "xmlName": "CdInvlVpl",
+          "path": "InkVrhVar/CdInvlVpl",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CodeInvloedVerzekeringsplicht",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_fs_ind_fz",
+          "xmlName": "FsIndFZ",
+          "path": "InkVrhVar/FsIndFZ",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_pr_verhaal",
+          "xmlName": "PrVerhaal",
+          "path": "InkVrhVar/PrVerhaal",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_pr_gediff_whk",
+          "xmlName": "PrGediffWhk",
+          "path": "InkVrhVar/PrGediffWhk",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_pr_gediff_whk_wga",
+          "xmlName": "PrGediffWhkWGA",
+          "path": "InkVrhVar/PrGediffWhkWGA",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_pr_gediff_whk_zw",
+          "xmlName": "PrGediffWhkZW",
+          "path": "InkVrhVar/PrGediffWhkZW",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_ind_avr_lkv_oudr_wn",
+          "xmlName": "IndAvrLkvOudrWn",
+          "path": "InkVrhVar/IndAvrLkvOudrWn",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "LogischeEenheid",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_ind_avr_lkv_ag_wn",
+          "xmlName": "IndAvrLkvAgWn",
+          "path": "InkVrhVar/IndAvrLkvAgWn",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "LogischeEenheid",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_ind_avr_lkv_dg_baf_sb",
+          "xmlName": "IndAvrLkvDgBafSb",
+          "path": "InkVrhVar/IndAvrLkvDgBafSb",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "LogischeEenheid",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_ind_avr_lkv_hp_ag_wn",
+          "xmlName": "IndAvrLkvHpAgWn",
+          "path": "InkVrhVar/IndAvrLkvHpAgWn",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "LogischeEenheid",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_ind_vak_bn",
+          "xmlName": "IndVakBn",
+          "path": "InkVrhVar/IndVakBn",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_srt_vak_bn_cd",
+          "xmlName": "SrtVakBnCd",
+          "path": "InkVrhVar/SrtVakBnCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "SoortVakantiebonnen",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_ind_vrvr",
+          "xmlName": "IndVrvr",
+          "path": "InkVrhVar/IndVrvr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_ind_arbov_onbep_td",
+          "xmlName": "IndArbovOnbepTd",
+          "path": "InkVrhVar/IndArbovOnbepTd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_ind_schrift_arbov",
+          "xmlName": "IndSchriftArbov",
+          "path": "InkVrhVar/IndSchriftArbov",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_ind_oprov",
+          "xmlName": "IndOprov",
+          "path": "InkVrhVar/IndOprov",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_ind_jrurennrm",
+          "xmlName": "IndJrurennrm",
+          "path": "InkVrhVar/IndJrurennrm",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_ind_pub_aan_onbep_t",
+          "xmlName": "IndPubAanOnbepT",
+          "path": "InkVrhVar/IndPubAanOnbepT",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_ind_lh_kort",
+          "xmlName": "IndLhKort",
+          "path": "InkVrhVar/IndLhKort",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_lb_tab",
+          "xmlName": "LbTab",
+          "path": "InkVrhVar/LbTab",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CodeLoonbelastingtabel",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_ind_gembez",
+          "xmlName": "IndGembez",
+          "path": "InkVrhVar/IndGembez",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_ind30_rgl",
+          "xmlName": "Ind30Rgl",
+          "path": "InkVrhVar/Ind30Rgl",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_ind_stud_sch",
+          "xmlName": "IndStudSch",
+          "path": "InkVrhVar/IndStudSch",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_ind_wgld_oud_regl",
+          "xmlName": "IndWgldOudRegl",
+          "path": "InkVrhVar/IndWgldOudRegl",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_bdr_grndslg_afdrchtvrm_wva",
+          "xmlName": "BdrGrndslgAfdrchtvrmWVA",
+          "path": "InkVrhVar/BdrGrndslgAfdrchtvrmWVA",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_ind_dlnm_lvnslp_jn",
+          "xmlName": "IndDlnmLvnslpJN",
+          "path": "InkVrhVar/IndDlnmLvnslpJN",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_ind_sa71",
+          "xmlName": "IndSA71",
+          "path": "InkVrhVar/IndSA71",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_ind_sa72",
+          "xmlName": "IndSA72",
+          "path": "InkVrhVar/IndSA72",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "JaNee",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_cd_inc_ink_verm",
+          "xmlName": "CdIncInkVerm",
+          "path": "InkVrhVar/CdIncInkVerm",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_pr_wao_aof",
+          "xmlName": "PrWAOAof",
+          "path": "InkVrhVar/PrWAOAof",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_pr_awf_lg",
+          "xmlName": "PrAwfLg",
+          "path": "InkVrhVar/PrAwfLg",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_pr_awf_hg",
+          "xmlName": "PrAwfHg",
+          "path": "InkVrhVar/PrAwfHg",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_pr_awf_hz",
+          "xmlName": "PrAwfHz",
+          "path": "InkVrhVar/PrAwfHz",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_pr_ufo",
+          "xmlName": "PrUFO",
+          "path": "InkVrhVar/PrUFO",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_ln_lb_ph",
+          "xmlName": "LnLbPh",
+          "path": "InkVrhVar/LnLbPh",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_ln_sv",
+          "xmlName": "LnSV",
+          "path": "InkVrhVar/LnSV",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_prln_awf_anw_lg",
+          "xmlName": "PrlnAwfAnwLg",
+          "path": "InkVrhVar/PrlnAwfAnwLg",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_prln_awf_anw_hg",
+          "xmlName": "PrlnAwfAnwHg",
+          "path": "InkVrhVar/PrlnAwfAnwHg",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_prln_awf_anw_hz",
+          "xmlName": "PrlnAwfAnwHz",
+          "path": "InkVrhVar/PrlnAwfAnwHz",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_ln_tab_bb",
+          "xmlName": "LnTabBB",
+          "path": "InkVrhVar/LnTabBB",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_vak_bsl",
+          "xmlName": "VakBsl",
+          "path": "InkVrhVar/VakBsl",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_opg_rcht_vak_bsl",
+          "xmlName": "OpgRchtVakBsl",
+          "path": "InkVrhVar/OpgRchtVakBsl",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_extr_sal",
+          "xmlName": "ExtrSal",
+          "path": "InkVrhVar/ExtrSal",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_opg_rcht_extr_sal",
+          "xmlName": "OpgRchtExtrSal",
+          "path": "InkVrhVar/OpgRchtExtrSal",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_ln_in_gld",
+          "xmlName": "LnInGld",
+          "path": "InkVrhVar/LnInGld",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_wrd_ln",
+          "xmlName": "WrdLn",
+          "path": "InkVrhVar/WrdLn",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_ln_owrk",
+          "xmlName": "LnOwrk",
+          "path": "InkVrhVar/LnOwrk",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_verstr_aanv",
+          "xmlName": "VerstrAanv",
+          "path": "InkVrhVar/VerstrAanv",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_ing_lb_ph",
+          "xmlName": "IngLbPh",
+          "path": "InkVrhVar/IngLbPh",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_wgh_zvw",
+          "xmlName": "WghZvw",
+          "path": "InkVrhVar/WghZvw",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_aant_verl_u",
+          "xmlName": "AantVerlU",
+          "path": "InkVrhVar/AantVerlU",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "AantalVerloondeUren",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_ctrctln",
+          "xmlName": "Ctrctln",
+          "path": "InkVrhVar/Ctrctln",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_aant_ctrcturen_p_wk",
+          "xmlName": "AantCtrcturenPWk",
+          "path": "InkVrhVar/AantCtrcturenPWk",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Aantal52",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_bedr_rnt_kstv_persl",
+          "xmlName": "BedrRntKstvPersl",
+          "path": "InkVrhVar/BedrRntKstvPersl",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 1
+        },
+        {
+          "name": "ink_vrh_var_bedr_al_in_wwb",
+          "xmlName": "BedrAlInWWB",
+          "path": "InkVrhVar/BedrAlInWWB",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "ink_vrh_var_bedr_rcht_al",
+          "xmlName": "BedrRchtAl",
+          "path": "InkVrhVar/BedrRchtAl",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "urnreg",
+      "xmlName": "Urnreg",
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/Urnreg",
+      "parent": "lntdvk",
+      "minOccurs": 0,
+      "maxOccurs": 99,
+      "columns": [
+        {
+          "name": "srt_urn_cd",
+          "xmlName": "SrtUrnCd",
+          "path": "SrtUrnCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Urensoort",
+          "minOccurs": 1
+        },
+        {
+          "name": "aant_urn",
+          "xmlName": "AantUrn",
+          "path": "AantUrn",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Aantal62",
+          "minOccurs": 1
+        },
+        {
+          "name": "bdr_tar",
+          "xmlName": "BdrTar",
+          "path": "BdrTar",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 0
+        },
+        {
+          "name": "proj_id",
+          "xmlName": "projID",
+          "path": "projID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Projectnummer",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "ln_pr_lncmp",
+      "xmlName": "LnPrLncmp",
+      "path": "auditfile/Wrknmr/InkVrhVst/Lntdvk/LnPrLncmp",
+      "parent": "lntdvk",
+      "minOccurs": 0,
+      "maxOccurs": 9999,
+      "columns": [
+        {
+          "name": "id_lncmp",
+          "xmlName": "IdLncmp",
+          "path": "IdLncmp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificatieLooncomponent",
+          "minOccurs": 1
+        },
+        {
+          "name": "ln_over_prdnr",
+          "xmlName": "LnOverPrdnr",
+          "path": "LnOverPrdnr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Periodenummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "iban_rknr",
+          "xmlName": "IbanRknr",
+          "path": "IbanRknr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IbanRekeningnummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "bdr",
+          "xmlName": "Bdr",
+          "path": "Bdr",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag92",
+          "minOccurs": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,708 @@
+{
+  "formatVersion": 1,
+  "codes": [
+    {
+      "code": "XAF-X001",
+      "layer": "xml",
+      "severity": "fatal",
+      "message": {
+        "nl": "Het bestand is geen geldige XML: {detail}",
+        "en": "The file is not well-formed XML: {detail}"
+      }
+    },
+    {
+      "code": "XAF-X002",
+      "layer": "xml",
+      "severity": "fatal",
+      "message": {
+        "nl": "Bron {part} kan niet worden gelezen: {detail}",
+        "en": "Source {part} cannot be read: {detail}"
+      }
+    },
+    {
+      "code": "XAF-X003",
+      "layer": "xml",
+      "severity": "fatal",
+      "message": {
+        "nl": "Het bestand is dieper genest dan {max} niveaus.",
+        "en": "The file is nested deeper than {max} levels."
+      }
+    },
+    {
+      "code": "XAF-X004",
+      "layer": "xml",
+      "severity": "fatal",
+      "message": {
+        "nl": "Encoding '{encoding}' wordt niet ondersteund.",
+        "en": "Encoding '{encoding}' is not supported."
+      }
+    },
+    {
+      "code": "XAF-X005",
+      "layer": "xml",
+      "severity": "error",
+      "message": {
+        "nl": "Ongeldig teken U+{codepoint} op regel {line}, positie {position}.",
+        "en": "Invalid character U+{codepoint} at line {line}, position {position}."
+      }
+    },
+    {
+      "code": "XAF-X900",
+      "layer": "xml",
+      "severity": "warning",
+      "message": {
+        "nl": "Meer dan {max} meldingen; de rest is weggelaten.",
+        "en": "More than {max} diagnostics; the rest has been omitted."
+      }
+    },
+    {
+      "code": "XAF-E001",
+      "layer": "envelope",
+      "severity": "info",
+      "message": {
+        "nl": "Auditfile gelezen uit envelop '{element}'.",
+        "en": "Audit file read from envelope '{element}'."
+      }
+    },
+    {
+      "code": "XAF-E002",
+      "layer": "envelope",
+      "severity": "warning",
+      "message": {
+        "nl": "De envelop bevat geen digitale handtekening.",
+        "en": "The envelope contains no digital signature."
+      }
+    },
+    {
+      "code": "XAF-E003",
+      "layer": "envelope",
+      "severity": "info",
+      "message": {
+        "nl": "De digitale handtekening is niet gecontroleerd.",
+        "en": "The digital signature has not been verified."
+      }
+    },
+    {
+      "code": "XAF-E004",
+      "layer": "envelope",
+      "severity": "error",
+      "message": {
+        "nl": "De digitale handtekening is ongeldig: {detail}",
+        "en": "The digital signature is invalid: {detail}"
+      }
+    },
+    {
+      "code": "XAF-V001",
+      "layer": "version",
+      "severity": "fatal",
+      "message": {
+        "nl": "Onbekende namespace '{namespace}'. Forceer een versie met ReadOptions.Version.",
+        "en": "Unknown namespace '{namespace}'. Force a version with ReadOptions.Version."
+      }
+    },
+    {
+      "code": "XAF-V002",
+      "layer": "version",
+      "severity": "info",
+      "message": {
+        "nl": "Gelezen via alias '{namespace}' als {version}.",
+        "en": "Read through alias '{namespace}' as {version}."
+      }
+    },
+    {
+      "code": "XAF-V003",
+      "layer": "version",
+      "severity": "warning",
+      "message": {
+        "nl": "Versie {version} geforceerd; namespace in het bestand is '{namespace}'.",
+        "en": "Version {version} forced; namespace in the file is '{namespace}'."
+      }
+    },
+    {
+      "code": "XAF-V004",
+      "layer": "version",
+      "severity": "warning",
+      "message": {
+        "nl": "Versie {version} afgeleid uit namespace '{namespace}'.",
+        "en": "Version {version} derived from namespace '{namespace}'."
+      }
+    },
+    {
+      "code": "XAF-V005",
+      "layer": "version",
+      "severity": "fatal",
+      "message": {
+        "nl": "Rootelement '{element}' wijkt af; verwacht '{expected}'.",
+        "en": "Root element '{element}' differs; expected '{expected}'."
+      }
+    },
+    {
+      "code": "XAF-V006",
+      "layer": "version",
+      "severity": "warning",
+      "message": {
+        "nl": "Het manifest van {version} is gereconstrueerd, niet gebaseerd op een officiële XSD.",
+        "en": "The manifest of {version} is reconstructed, not based on an official XSD."
+      }
+    },
+    {
+      "code": "XAF-S001",
+      "layer": "structure",
+      "severity": "error",
+      "message": {
+        "nl": "Verplichte tabel {table} ontbreekt.",
+        "en": "Required table {table} is missing."
+      }
+    },
+    {
+      "code": "XAF-S002",
+      "layer": "structure",
+      "severity": "warning",
+      "message": {
+        "nl": "Tabel {table} ontbreekt; die wordt in de praktijk verwacht.",
+        "en": "Table {table} is missing; it is expected in practice."
+      }
+    },
+    {
+      "code": "XAF-S003",
+      "layer": "structure",
+      "severity": "warning",
+      "message": {
+        "nl": "Onbekend element {path} overgeslagen.",
+        "en": "Unknown element {path} skipped."
+      }
+    },
+    {
+      "code": "XAF-S004",
+      "layer": "structure",
+      "severity": "error",
+      "message": {
+        "nl": "Ongeldige waarde '{value}' voor {column} ({type}).",
+        "en": "Invalid value '{value}' for {column} ({type})."
+      }
+    },
+    {
+      "code": "XAF-S005",
+      "layer": "structure",
+      "severity": "info",
+      "message": {
+        "nl": "De bron kan maar één keer worden gelezen; aantallen zijn niet vooraf bekend.",
+        "en": "The source can only be read once; row counts are not known in advance."
+      }
+    },
+    {
+      "code": "XAF-S006",
+      "layer": "structure",
+      "severity": "error",
+      "message": {
+        "nl": "Verplicht gegeven {column} ontbreekt in {table}.",
+        "en": "Required field {column} is missing in {table}."
+      }
+    },
+    {
+      "code": "XAF-S007",
+      "layer": "structure",
+      "severity": "error",
+      "message": {
+        "nl": "{table} komt {count} keer voor; maximaal {max} toegestaan.",
+        "en": "{table} occurs {count} times; at most {max} allowed."
+      }
+    },
+    {
+      "code": "XAF-S008",
+      "layer": "structure",
+      "severity": "warning",
+      "message": {
+        "nl": "{table}.{column} is {length} tekens lang; de afgesproken maximumlengte is {max}.",
+        "en": "{table}.{column} is {length} characters long; the agreed maximum length is {max}."
+      },
+      "officialRules": {
+        "xaf/3.2": [
+          "Nadere specificatie 2017"
+        ]
+      }
+    },
+    {
+      "code": "XAF-S009",
+      "layer": "structure",
+      "severity": "error",
+      "message": {
+        "nl": "Waarde '{value}' van {table}.{column} komt niet voor in codelijst {codeList}.",
+        "en": "Value '{value}' of {table}.{column} is not in code list {codeList}."
+      },
+      "officialRules": {
+        "xar/1.2": [
+          "0227",
+          "0243",
+          "0259",
+          "0266",
+          "0271",
+          "0275",
+          "0367",
+          "0368",
+          "0375",
+          "0376",
+          "0383",
+          "0388",
+          "0389",
+          "0390",
+          "0392",
+          "0399",
+          "0400",
+          "0404",
+          "0405",
+          "0406",
+          "0408",
+          "0413",
+          "0418",
+          "0421",
+          "0429"
+        ],
+        "xar/2.3.6.1": [
+          "0227",
+          "0259",
+          "0266",
+          "0271",
+          "0275",
+          "0367",
+          "0368",
+          "0375",
+          "0376",
+          "0383",
+          "0388",
+          "0389",
+          "0390",
+          "0392",
+          "0399",
+          "0400",
+          "0403",
+          "0404",
+          "0405",
+          "0406",
+          "0408",
+          "0418",
+          "0421",
+          "0429",
+          "0431",
+          "0442",
+          "0616"
+        ]
+      }
+    },
+    {
+      "code": "XAF-D001",
+      "layer": "xsd",
+      "severity": "error",
+      "message": {
+        "nl": "Voldoet niet aan de XSD: {detail}",
+        "en": "Does not conform to the XSD: {detail}"
+      }
+    },
+    {
+      "code": "XAF-D002",
+      "layer": "xsd",
+      "severity": "warning",
+      "message": {
+        "nl": "De opgegeven XSD wijkt af van de officiële XSD van {version}.",
+        "en": "The supplied XSD differs from the official XSD of {version}."
+      }
+    },
+    {
+      "code": "XAF-R001",
+      "layer": "rules",
+      "severity": "error",
+      "message": {
+        "nl": "Boekstuk {transaction} is niet in balans: debet {debit}, credit {credit}.",
+        "en": "Transaction {transaction} does not balance: debit {debit}, credit {credit}."
+      },
+      "officialRules": {
+        "xaf/4.0.3": [
+          "0010"
+        ]
+      }
+    },
+    {
+      "code": "XAF-R002",
+      "layer": "rules",
+      "severity": "error",
+      "message": {
+        "nl": "{field} in {table} is {expected}, maar de regels geven {actual}.",
+        "en": "{field} in {table} is {expected}, but the lines give {actual}."
+      },
+      "officialRules": {
+        "xaf/4.0.3": [
+          "0004",
+          "0005",
+          "0007",
+          "0008"
+        ],
+        "xar/1.2": [
+          "0018",
+          "0031"
+        ]
+      }
+    },
+    {
+      "code": "XAF-R003",
+      "layer": "rules",
+      "severity": "error",
+      "message": {
+        "nl": "{table}.{column} = '{value}' verwijst naar een onbekende {target}.",
+        "en": "{table}.{column} = '{value}' refers to an unknown {target}."
+      },
+      "officialRules": {
+        "xar/1.2": [
+          "0016",
+          "0017",
+          "0027",
+          "0033"
+        ],
+        "xar/2.3.6.1": [
+          "0016",
+          "0017",
+          "0027",
+          "0033"
+        ]
+      }
+    },
+    {
+      "code": "XAF-R004",
+      "layer": "rules",
+      "severity": "error",
+      "message": {
+        "nl": "Sleutel '{value}' komt meer dan één keer voor in {table}.",
+        "en": "Key '{value}' occurs more than once in {table}."
+      },
+      "officialRules": {
+        "xaf/4.0.3": [
+          "0001",
+          "0002",
+          "0003"
+        ]
+      }
+    },
+    {
+      "code": "XAF-R005",
+      "layer": "rules",
+      "severity": "error",
+      "message": {
+        "nl": "{table}.{column} is niet oplopend: '{value}' komt na '{previous}'.",
+        "en": "{table}.{column} is not ascending: '{value}' follows '{previous}'."
+      },
+      "officialRules": {
+        "xar/1.2": [
+          "0011",
+          "0014",
+          "0015",
+          "0022",
+          "0025",
+          "0028",
+          "0052",
+          "0053"
+        ],
+        "xar/2.3.6.1": [
+          "0010",
+          "0015",
+          "0022",
+          "0030"
+        ]
+      }
+    },
+    {
+      "code": "XAF-R006",
+      "layer": "rules",
+      "severity": "error",
+      "message": {
+        "nl": "{start} ('{startValue}') ligt niet vóór {end} ('{endValue}') in {table}.",
+        "en": "{start} ('{startValue}') is not before {end} ('{endValue}') in {table}."
+      },
+      "officialRules": {
+        "xar/1.2": [
+          "0003",
+          "0005",
+          "1118",
+          "1119"
+        ],
+        "xar/2.3.6.1": [
+          "0003",
+          "0006",
+          "1118"
+        ]
+      }
+    },
+    {
+      "code": "XAF-R007",
+      "layer": "rules",
+      "severity": "error",
+      "message": {
+        "nl": "{table}.{column} = '{value}' ligt buiten {lower} t/m {upper}.",
+        "en": "{table}.{column} = '{value}' is outside {lower} to {upper}."
+      },
+      "officialRules": {
+        "xar/1.2": [
+          "0012",
+          "0013",
+          "0016",
+          "0017",
+          "0018",
+          "0023",
+          "0024",
+          "0029",
+          "0030",
+          "0035"
+        ],
+        "xar/2.3.6.1": [
+          "0012",
+          "0013",
+          "0017",
+          "0018",
+          "0024",
+          "0401",
+          "0507",
+          "0617"
+        ]
+      }
+    },
+    {
+      "code": "XAF-R008",
+      "layer": "rules",
+      "severity": "error",
+      "message": {
+        "nl": "{table}.{column} = '{value}' sluit niet aan op '{previous}' van het vorige voorkomen.",
+        "en": "{table}.{column} = '{value}' does not continue from '{previous}' of the previous occurrence."
+      },
+      "officialRules": {
+        "xar/1.2": [
+          "0015",
+          "0026"
+        ],
+        "xar/2.3.6.1": [
+          "0052",
+          "0053"
+        ]
+      }
+    },
+    {
+      "code": "XAF-R009",
+      "layer": "rules",
+      "severity": "error",
+      "message": {
+        "nl": "{table}.{field} is {expected}, maar de som van {parts} is {actual}.",
+        "en": "{table}.{field} is {expected}, but the sum of {parts} is {actual}."
+      },
+      "officialRules": {
+        "xar/1.2": [
+          "0050",
+          "0051"
+        ],
+        "xar/2.3.6.1": [
+          "0050",
+          "0051"
+        ]
+      }
+    },
+    {
+      "code": "XAF-R010",
+      "layer": "rules",
+      "severity": "error",
+      "message": {
+        "nl": "{table}.{column} = '{value}' is niet toegestaan wanneer {condition}.",
+        "en": "{table}.{column} = '{value}' is not allowed when {condition}."
+      },
+      "officialRules": {
+        "xar/1.2": [
+          "0007",
+          "0009",
+          "0011",
+          "0021"
+        ],
+        "xar/2.3.6.1": [
+          "0011",
+          "0021",
+          "0526",
+          "0527"
+        ]
+      }
+    },
+    {
+      "code": "XAF-R011",
+      "layer": "rules",
+      "severity": "error",
+      "message": {
+        "nl": "{table}.{column} ontbreekt; dit gegeven is verplicht wanneer {condition}.",
+        "en": "{table}.{column} is missing; it is required when {condition}."
+      },
+      "officialRules": {
+        "xar/1.2": [
+          "0211",
+          "0248",
+          "0249",
+          "0361",
+          "0362",
+          "0363",
+          "0364",
+          "0370",
+          "0371",
+          "0372",
+          "0379",
+          "0380",
+          "0393",
+          "0395",
+          "0396",
+          "0401",
+          "0402",
+          "0403",
+          "0409",
+          "0410"
+        ],
+        "xar/2.3.6.1": [
+          "0211",
+          "0248",
+          "0249",
+          "0363",
+          "0364",
+          "0395",
+          "0396",
+          "0419",
+          "0420",
+          "0455",
+          "0456",
+          "0457",
+          "0461",
+          "0462",
+          "0463",
+          "0464",
+          "0495",
+          "0496",
+          "0506",
+          "0509",
+          "0510",
+          "0514",
+          "0515",
+          "0519",
+          "0520",
+          "0521",
+          "0522",
+          "0523",
+          "0524",
+          "0525",
+          "0528",
+          "0611",
+          "0612",
+          "0613",
+          "0614",
+          "0615",
+          "0620",
+          "0621"
+        ]
+      }
+    },
+    {
+      "code": "XAF-R012",
+      "layer": "rules",
+      "severity": "error",
+      "message": {
+        "nl": "{table}.{column} mag niet voorkomen wanneer {condition}.",
+        "en": "{table}.{column} must not occur when {condition}."
+      },
+      "officialRules": {
+        "xar/2.3.6.1": [
+          "0452",
+          "0458",
+          "0553",
+          "0554",
+          "0555",
+          "0556",
+          "0578",
+          "0579",
+          "0580",
+          "0581",
+          "0582"
+        ]
+      }
+    },
+    {
+      "code": "XAF-R013",
+      "layer": "rules",
+      "severity": "error",
+      "message": {
+        "nl": "'{value}' in {table}.{column} voldoet niet aan de elfproef.",
+        "en": "'{value}' in {table}.{column} fails the eleven test."
+      },
+      "officialRules": {
+        "xar/1.2": [
+          "0014"
+        ]
+      }
+    },
+    {
+      "code": "XAF-R014",
+      "layer": "rules",
+      "severity": "error",
+      "message": {
+        "nl": "'{value}' in {table}.{column} is geen geldig {kind}: {detail}",
+        "en": "'{value}' in {table}.{column} is not a valid {kind}: {detail}"
+      },
+      "officialRules": {
+        "xar/1.2": [
+          "0246",
+          "0247",
+          "0311",
+          "0312",
+          "0313"
+        ]
+      }
+    },
+    {
+      "code": "XAF-R015",
+      "layer": "rules",
+      "severity": "error",
+      "message": {
+        "nl": "Totaal debet {debit} is niet gelijk aan totaal credit {credit} in {table}.",
+        "en": "Total debit {debit} does not equal total credit {credit} in {table}."
+      },
+      "officialRules": {
+        "xaf/4.0.3": [
+          "0006",
+          "0009"
+        ]
+      }
+    },
+    {
+      "code": "XAF-R016",
+      "layer": "rules",
+      "severity": "warning",
+      "message": {
+        "nl": "{table}.{column} bevat persoonsgegevens, maar de auditfile is bestemd voor de controle- en/of adviespraktijk.",
+        "en": "{table}.{column} contains personal data, but the audit file is intended for an audit and/or advisory practice."
+      }
+    },
+    {
+      "code": "XAF-C001",
+      "layer": "dialect",
+      "severity": "info",
+      "message": {
+        "nl": "Namespace '{from}' vervangen door '{to}'.",
+        "en": "Namespace '{from}' replaced by '{to}'."
+      }
+    },
+    {
+      "code": "XAF-C002",
+      "layer": "dialect",
+      "severity": "info",
+      "message": {
+        "nl": "Decimale komma vervangen door punt in {path}.",
+        "en": "Decimal comma replaced by a point in {path}."
+      }
+    },
+    {
+      "code": "XAF-C003",
+      "layer": "dialect",
+      "severity": "info",
+      "message": {
+        "nl": "Tijd verwijderd uit datum in {path}.",
+        "en": "Time removed from date in {path}."
+      }
+    }
+  ]
+}

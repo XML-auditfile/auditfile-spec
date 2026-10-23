@@ -1,0 +1,2091 @@
+{
+  "formatVersion": 1,
+  "standard": "xar",
+  "typeName": "tripRegistration",
+  "version": "2.3.6.1",
+  "namespace": "https://odb.belastingdienst.nl/XAR/2.3.6",
+  "rootElement": "auditfile",
+  "provenance": "official",
+  "xsd": {
+    "file": "auditfile.xsd",
+    "sha256": "ec4d23fa22ba16d1bbd1bfe80c85e539eade679b3b080faf95fc1862930eca40"
+  },
+  "generatorVersion": "0.1.0",
+  "requiredTables": [
+    "auditfile",
+    "header",
+    "it_service_provider",
+    "drivers",
+    "driver",
+    "vehicles",
+    "vehicle",
+    "vehicle_systems",
+    "vehicle_system",
+    "use_periods",
+    "use_period",
+    "vehicle_and_vehicle_systems",
+    "vehicle_and_vehicle_system",
+    "trips",
+    "trips_trip"
+  ],
+  "expectedTables": [],
+  "tables": [
+    {
+      "name": "auditfile",
+      "xmlName": "auditfile",
+      "path": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": [
+        {
+          "name": "id",
+          "xmlName": "Id",
+          "path": "@Id",
+          "kind": "attribute",
+          "type": "string",
+          "xsdType": "ID",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "header",
+      "xmlName": "header",
+      "path": "auditfile/header",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": [
+        {
+          "name": "file_format",
+          "xmlName": "fileFormat",
+          "path": "fileFormat",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "fileFormat",
+          "minOccurs": 1
+        },
+        {
+          "name": "file_format_version",
+          "xmlName": "fileFormatVersion",
+          "path": "fileFormatVersion",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String",
+          "minOccurs": 1
+        },
+        {
+          "name": "date_time_created",
+          "xmlName": "dateTimeCreated",
+          "path": "dateTimeCreated",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "reporting_type",
+          "xmlName": "reportingType",
+          "path": "reportingType",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "reportingType",
+          "minOccurs": 1
+        },
+        {
+          "name": "reporting_start_date_time",
+          "xmlName": "reportingStartDateTime",
+          "path": "reportingStartDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "reporting_end_date_time",
+          "xmlName": "reportingEndDateTime",
+          "path": "reportingEndDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "it_service_provider",
+      "xmlName": "ITServiceProvider",
+      "path": "auditfile/ITServiceProvider",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": [
+        {
+          "name": "name",
+          "xmlName": "name",
+          "path": "name",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Name",
+          "minOccurs": 1
+        },
+        {
+          "name": "identification_nr",
+          "xmlName": "identificationNr",
+          "path": "identificationNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "ItServiceProviderId",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "contact_person",
+      "xmlName": "contactPerson",
+      "path": "auditfile/ITServiceProvider/contactPerson",
+      "parent": "it_service_provider",
+      "minOccurs": 0,
+      "maxOccurs": 9,
+      "columns": [
+        {
+          "name": "department",
+          "xmlName": "department",
+          "path": "department",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 0
+        },
+        {
+          "name": "initials",
+          "xmlName": "initials",
+          "path": "initials",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Initials",
+          "minOccurs": 0
+        },
+        {
+          "name": "prefix",
+          "xmlName": "prefix",
+          "path": "prefix",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Prefix",
+          "minOccurs": 0
+        },
+        {
+          "name": "family_name",
+          "xmlName": "familyName",
+          "path": "familyName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Name",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "communication",
+      "xmlName": "communication",
+      "path": "auditfile/ITServiceProvider/contactPerson/communication",
+      "parent": "contact_person",
+      "minOccurs": 1,
+      "maxOccurs": 9,
+      "columns": [
+        {
+          "name": "comm_type",
+          "xmlName": "commType",
+          "path": "commType",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "SortCommunication",
+          "minOccurs": 1
+        },
+        {
+          "name": "number_communication",
+          "xmlName": "numberCommunication",
+          "path": "numberCommunication",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "employer",
+      "xmlName": "employer",
+      "path": "auditfile/employer",
+      "parent": "auditfile",
+      "minOccurs": 0,
+      "maxOccurs": 1,
+      "columns": [
+        {
+          "name": "employer_name",
+          "xmlName": "employerName",
+          "path": "employerName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Name",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_nl_streetname",
+          "xmlName": "streetname",
+          "path": "addressNL/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "StreetnameNl",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_nl_number",
+          "xmlName": "number",
+          "path": "addressNL/number",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "NumberNl",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_nl_number_extension",
+          "xmlName": "numberExtension",
+          "path": "addressNL/numberExtension",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "NumberExtensionNl",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_nl_location_description",
+          "xmlName": "locationDescription",
+          "path": "addressNL/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "LocationDescriptionNl",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_nl_postal_code",
+          "xmlName": "postalCode",
+          "path": "addressNL/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "PostalcodeNl",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_nl_city",
+          "xmlName": "city",
+          "path": "addressNL/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Citynl",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_foreign_streetname",
+          "xmlName": "streetname",
+          "path": "addressForeign/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Streetname",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_foreign_number",
+          "xmlName": "number",
+          "path": "addressForeign/number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Housenumber",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_foreign_location_description",
+          "xmlName": "locationDescription",
+          "path": "addressForeign/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "LocationDescription",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_foreign_postal_code",
+          "xmlName": "postalCode",
+          "path": "addressForeign/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Postalcode",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_foreign_city",
+          "xmlName": "city",
+          "path": "addressForeign/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "City",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_foreign_region",
+          "xmlName": "region",
+          "path": "addressForeign/region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Region",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_foreign_country",
+          "xmlName": "country",
+          "path": "addressForeign/country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CountryCodesIso31661",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "drivers",
+      "xmlName": "drivers",
+      "path": "auditfile/drivers",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": []
+    },
+    {
+      "name": "driver",
+      "xmlName": "driver",
+      "path": "auditfile/drivers/driver",
+      "parent": "drivers",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "driver_id",
+          "xmlName": "driverID",
+          "path": "driverID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "initials",
+          "xmlName": "initials",
+          "path": "initials",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Initials",
+          "minOccurs": 0
+        },
+        {
+          "name": "prefix",
+          "xmlName": "prefix",
+          "path": "prefix",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Prefix",
+          "minOccurs": 0
+        },
+        {
+          "name": "family_name",
+          "xmlName": "familyName",
+          "path": "familyName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Name",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_nl_streetname",
+          "xmlName": "streetname",
+          "path": "addressNL/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "StreetnameNl",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_nl_number",
+          "xmlName": "number",
+          "path": "addressNL/number",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "NumberNl",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_nl_number_extension",
+          "xmlName": "numberExtension",
+          "path": "addressNL/numberExtension",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "NumberExtensionNl",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_nl_location_description",
+          "xmlName": "locationDescription",
+          "path": "addressNL/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "LocationDescriptionNl",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_nl_postal_code",
+          "xmlName": "postalCode",
+          "path": "addressNL/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "PostalcodeNl",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_nl_city",
+          "xmlName": "city",
+          "path": "addressNL/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Citynl",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_foreign_streetname",
+          "xmlName": "streetname",
+          "path": "addressForeign/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Streetname",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_foreign_number",
+          "xmlName": "number",
+          "path": "addressForeign/number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Housenumber",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_foreign_location_description",
+          "xmlName": "locationDescription",
+          "path": "addressForeign/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "LocationDescription",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_foreign_postal_code",
+          "xmlName": "postalCode",
+          "path": "addressForeign/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Postalcode",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_foreign_city",
+          "xmlName": "city",
+          "path": "addressForeign/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "City",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_foreign_region",
+          "xmlName": "region",
+          "path": "addressForeign/region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Region",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_foreign_country",
+          "xmlName": "country",
+          "path": "addressForeign/country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CountryCodesIso31661",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "vehicles",
+      "xmlName": "vehicles",
+      "path": "auditfile/vehicles",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": []
+    },
+    {
+      "name": "vehicle",
+      "xmlName": "vehicle",
+      "path": "auditfile/vehicles/vehicle",
+      "parent": "vehicles",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "vehicle_id",
+          "xmlName": "vehicleID",
+          "path": "vehicleID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_registration_nr",
+          "xmlName": "vehicleRegistrationNr",
+          "path": "vehicleRegistrationNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "VehicleRegistrationNumber",
+          "minOccurs": 1
+        },
+        {
+          "name": "vin",
+          "xmlName": "VIN",
+          "path": "VIN",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Vin",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_name",
+          "xmlName": "vehicleName",
+          "path": "vehicleName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 0
+        },
+        {
+          "name": "vehicle_make",
+          "xmlName": "vehicleMake",
+          "path": "vehicleMake",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_model",
+          "xmlName": "vehicleModel",
+          "path": "vehicleModel",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 1
+        },
+        {
+          "name": "country",
+          "xmlName": "country",
+          "path": "country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CountryCodesIso31661",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "vehicle_systems",
+      "xmlName": "vehicleSystems",
+      "path": "auditfile/vehicleSystems",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": []
+    },
+    {
+      "name": "vehicle_system",
+      "xmlName": "vehicleSystem",
+      "path": "auditfile/vehicleSystems/vehicleSystem",
+      "parent": "vehicle_systems",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "vehicle_system_id",
+          "xmlName": "vehicleSystemID",
+          "path": "vehicleSystemID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "distance_determination_type",
+          "xmlName": "distanceDeterminationType",
+          "path": "distanceDeterminationType",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "NonNegativeInteger",
+          "minOccurs": 1
+        },
+        {
+          "name": "location_determination_type",
+          "xmlName": "locationDeterminationType",
+          "path": "locationDeterminationType",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "LocationDeterminationType",
+          "minOccurs": 1
+        },
+        {
+          "name": "product_name",
+          "xmlName": "productName",
+          "path": "productName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 1
+        },
+        {
+          "name": "hardware_desc",
+          "xmlName": "hardwareDesc",
+          "path": "hardwareDesc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 0
+        },
+        {
+          "name": "hardware_version",
+          "xmlName": "hardwareVersion",
+          "path": "hardwareVersion",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 0
+        },
+        {
+          "name": "software_desc",
+          "xmlName": "softwareDesc",
+          "path": "softwareDesc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 0
+        },
+        {
+          "name": "software_version",
+          "xmlName": "softwareVersion",
+          "path": "softwareVersion",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 0
+        },
+        {
+          "name": "firmware_version",
+          "xmlName": "firmwareVersion",
+          "path": "firmwareVersion",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 0
+        },
+        {
+          "name": "quality_mark",
+          "xmlName": "qualityMark",
+          "path": "qualityMark",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Indicator",
+          "minOccurs": 1
+        },
+        {
+          "name": "quality_mark_nr",
+          "xmlName": "qualityMarkNr",
+          "path": "qualityMarkNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Qualitymarknumber",
+          "minOccurs": 0
+        },
+        {
+          "name": "quality_mark_cert_nr",
+          "xmlName": "qualityMarkCertNr",
+          "path": "qualityMarkCertNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Qualitymarkcertificatenumber",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "use_periods",
+      "xmlName": "usePeriods",
+      "path": "auditfile/usePeriods",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": []
+    },
+    {
+      "name": "use_period",
+      "xmlName": "usePeriod",
+      "path": "auditfile/usePeriods/usePeriod",
+      "parent": "use_periods",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "use_period_id",
+          "xmlName": "usePeriodID",
+          "path": "usePeriodID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "driver_id",
+          "xmlName": "driverID",
+          "path": "driverID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_id",
+          "xmlName": "vehicleID",
+          "path": "vehicleID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "use_period_start_date_time",
+          "xmlName": "usePeriodStartDateTime",
+          "path": "usePeriodStartDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "use_period_end_date_time",
+          "xmlName": "usePeriodEndDateTime",
+          "path": "usePeriodEndDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "vehicle_and_vehicle_systems",
+      "xmlName": "vehicleAndVehicleSystems",
+      "path": "auditfile/vehicleAndVehicleSystems",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": []
+    },
+    {
+      "name": "vehicle_and_vehicle_system",
+      "xmlName": "vehicleAndVehicleSystem",
+      "path": "auditfile/vehicleAndVehicleSystems/vehicleAndVehicleSystem",
+      "parent": "vehicle_and_vehicle_systems",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "vehicle_and_vehicle_system_id",
+          "xmlName": "vehicleAndVehicleSystemID",
+          "path": "vehicleAndVehicleSystemID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_id",
+          "xmlName": "vehicleID",
+          "path": "vehicleID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_system_id",
+          "xmlName": "vehicleSystemID",
+          "path": "vehicleSystemID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "start_date_time",
+          "xmlName": "startDateTime",
+          "path": "startDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "end_date_time",
+          "xmlName": "endDateTime",
+          "path": "endDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "trips",
+      "xmlName": "trips",
+      "path": "auditfile/trips",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": []
+    },
+    {
+      "name": "trips_trip",
+      "xmlName": "trip",
+      "path": "auditfile/trips/trip",
+      "parent": "trips",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "trip_id",
+          "xmlName": "tripID",
+          "path": "tripID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_id",
+          "xmlName": "vehicleID",
+          "path": "vehicleID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_odo_meter_count_start",
+          "xmlName": "vehicleOdoMeterCountStart",
+          "path": "vehicleOdoMeterCountStart",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Quantity",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_odo_meter_count_end",
+          "xmlName": "vehicleOdoMeterCountEnd",
+          "path": "vehicleOdoMeterCountEnd",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Quantity",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_odo_meter_count_end_date_time",
+          "xmlName": "vehicleOdoMeterCountEndDateTime",
+          "path": "vehicleOdoMeterCountEndDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "driver_id",
+          "xmlName": "driverID",
+          "path": "driverID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "trip_reg_type",
+          "xmlName": "tripRegType",
+          "path": "tripRegType",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "TripRegistrationType",
+          "minOccurs": 0
+        },
+        {
+          "name": "trip_type",
+          "xmlName": "tripType",
+          "path": "tripType",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "TripType",
+          "minOccurs": 0
+        },
+        {
+          "name": "trip_mixed_indicator",
+          "xmlName": "tripMixedIndicator",
+          "path": "tripMixedIndicator",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "trip_commute_indicator",
+          "xmlName": "tripCommuteIndicator",
+          "path": "tripCommuteIndicator",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "trip_description",
+          "xmlName": "tripDescription",
+          "path": "tripDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 0
+        },
+        {
+          "name": "trip_distance",
+          "xmlName": "tripDistance",
+          "path": "tripDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Quantity2",
+          "minOccurs": 1
+        },
+        {
+          "name": "private_distance",
+          "xmlName": "privateDistance",
+          "path": "privateDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Quantity2",
+          "minOccurs": 0
+        },
+        {
+          "name": "business_distance",
+          "xmlName": "businessDistance",
+          "path": "businessDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Quantity2",
+          "minOccurs": 0
+        },
+        {
+          "name": "commute_distance",
+          "xmlName": "commuteDistance",
+          "path": "commuteDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Quantity2",
+          "minOccurs": 0
+        },
+        {
+          "name": "deviant_indicator",
+          "xmlName": "deviantIndicator",
+          "path": "deviantIndicator",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "deviant_distance",
+          "xmlName": "deviantDistance",
+          "path": "deviantDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Quantity2",
+          "minOccurs": 0
+        },
+        {
+          "name": "deviant_description",
+          "xmlName": "deviantDescription",
+          "path": "deviantDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_point_date_time",
+          "xmlName": "pointDateTime",
+          "path": "start/pointDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_lat",
+          "xmlName": "lat",
+          "path": "start/lat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Latitude",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_lon",
+          "xmlName": "lon",
+          "path": "start/lon",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Longitude",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_sat",
+          "xmlName": "sat",
+          "path": "start/sat",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Quantity",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_fix",
+          "xmlName": "fix",
+          "path": "start/fix",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_dop",
+          "xmlName": "dop",
+          "path": "start/dop",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Dop",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_poi_id",
+          "xmlName": "poiID",
+          "path": "start/poiID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_address_streetname",
+          "xmlName": "streetname",
+          "path": "start/address/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Streetname",
+          "minOccurs": 1
+        },
+        {
+          "name": "start_address_number",
+          "xmlName": "number",
+          "path": "start/address/number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Housenumber",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_address_location_description",
+          "xmlName": "locationDescription",
+          "path": "start/address/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "LocationDescription",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_address_postal_code",
+          "xmlName": "postalCode",
+          "path": "start/address/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Postalcode",
+          "minOccurs": 1
+        },
+        {
+          "name": "start_address_city",
+          "xmlName": "city",
+          "path": "start/address/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "City",
+          "minOccurs": 1
+        },
+        {
+          "name": "start_address_region",
+          "xmlName": "region",
+          "path": "start/address/region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Region",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_address_country",
+          "xmlName": "country",
+          "path": "start/address/country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CountryCodesIso31661",
+          "minOccurs": 1
+        },
+        {
+          "name": "end_point_date_time",
+          "xmlName": "pointDateTime",
+          "path": "end/pointDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_lat",
+          "xmlName": "lat",
+          "path": "end/lat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Latitude",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_lon",
+          "xmlName": "lon",
+          "path": "end/lon",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Longitude",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_sat",
+          "xmlName": "sat",
+          "path": "end/sat",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Quantity",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_fix",
+          "xmlName": "fix",
+          "path": "end/fix",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_dop",
+          "xmlName": "dop",
+          "path": "end/dop",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Dop",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_poi_id",
+          "xmlName": "poiID",
+          "path": "end/poiID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_address_streetname",
+          "xmlName": "streetname",
+          "path": "end/address/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Streetname",
+          "minOccurs": 1
+        },
+        {
+          "name": "end_address_number",
+          "xmlName": "number",
+          "path": "end/address/number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Housenumber",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_address_location_description",
+          "xmlName": "locationDescription",
+          "path": "end/address/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "LocationDescription",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_address_postal_code",
+          "xmlName": "postalCode",
+          "path": "end/address/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Postalcode",
+          "minOccurs": 1
+        },
+        {
+          "name": "end_address_city",
+          "xmlName": "city",
+          "path": "end/address/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "City",
+          "minOccurs": 1
+        },
+        {
+          "name": "end_address_region",
+          "xmlName": "region",
+          "path": "end/address/region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Region",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_address_country",
+          "xmlName": "country",
+          "path": "end/address/country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CountryCodesIso31661",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_by_user_name",
+          "xmlName": "changeByUserName",
+          "path": "changeInfo/changeByUserName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Name",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_date_time",
+          "xmlName": "changeDateTime",
+          "path": "changeInfo/changeDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_description",
+          "xmlName": "changeDescription",
+          "path": "changeInfo/changeDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "point",
+      "xmlName": "point",
+      "path": "auditfile/trips/trip/points/point",
+      "parent": "trips_trip",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "point_date_time",
+          "xmlName": "pointDateTime",
+          "path": "pointDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "lat",
+          "xmlName": "lat",
+          "path": "lat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Latitude",
+          "minOccurs": 0
+        },
+        {
+          "name": "lon",
+          "xmlName": "lon",
+          "path": "lon",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Longitude",
+          "minOccurs": 0
+        },
+        {
+          "name": "odo",
+          "xmlName": "odo",
+          "path": "odo",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Quantity",
+          "minOccurs": 0
+        },
+        {
+          "name": "sat",
+          "xmlName": "sat",
+          "path": "sat",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Quantity",
+          "minOccurs": 0
+        },
+        {
+          "name": "fix",
+          "xmlName": "fix",
+          "path": "fix",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "dop",
+          "xmlName": "dop",
+          "path": "dop",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Dop",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "trip_history_trip",
+      "xmlName": "trip",
+      "path": "auditfile/trips/trip/tripHistory/trip",
+      "parent": "trips_trip",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "trip_id",
+          "xmlName": "tripID",
+          "path": "tripID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_id",
+          "xmlName": "vehicleID",
+          "path": "vehicleID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_odo_meter_count_start",
+          "xmlName": "vehicleOdoMeterCountStart",
+          "path": "vehicleOdoMeterCountStart",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Quantity",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_odo_meter_count_end",
+          "xmlName": "vehicleOdoMeterCountEnd",
+          "path": "vehicleOdoMeterCountEnd",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Quantity",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_odo_meter_count_end_date_time",
+          "xmlName": "vehicleOdoMeterCountEndDateTime",
+          "path": "vehicleOdoMeterCountEndDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "driver_id",
+          "xmlName": "driverID",
+          "path": "driverID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "trip_reg_type",
+          "xmlName": "tripRegType",
+          "path": "tripRegType",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "TripRegistrationType",
+          "minOccurs": 0
+        },
+        {
+          "name": "trip_type",
+          "xmlName": "tripType",
+          "path": "tripType",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "TripType",
+          "minOccurs": 0
+        },
+        {
+          "name": "trip_mixed_indicator",
+          "xmlName": "tripMixedIndicator",
+          "path": "tripMixedIndicator",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "trip_commute_indicator",
+          "xmlName": "tripCommuteIndicator",
+          "path": "tripCommuteIndicator",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "trip_description",
+          "xmlName": "tripDescription",
+          "path": "tripDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 0
+        },
+        {
+          "name": "trip_distance",
+          "xmlName": "tripDistance",
+          "path": "tripDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Quantity2",
+          "minOccurs": 1
+        },
+        {
+          "name": "private_distance",
+          "xmlName": "privateDistance",
+          "path": "privateDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Quantity2",
+          "minOccurs": 0
+        },
+        {
+          "name": "business_distance",
+          "xmlName": "businessDistance",
+          "path": "businessDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Quantity2",
+          "minOccurs": 0
+        },
+        {
+          "name": "commute_distance",
+          "xmlName": "commuteDistance",
+          "path": "commuteDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Quantity2",
+          "minOccurs": 0
+        },
+        {
+          "name": "deviant_indicator",
+          "xmlName": "deviantIndicator",
+          "path": "deviantIndicator",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "deviant_distance",
+          "xmlName": "deviantDistance",
+          "path": "deviantDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Quantity2",
+          "minOccurs": 0
+        },
+        {
+          "name": "deviant_description",
+          "xmlName": "deviantDescription",
+          "path": "deviantDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_point_date_time",
+          "xmlName": "pointDateTime",
+          "path": "start/pointDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_lat",
+          "xmlName": "lat",
+          "path": "start/lat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Latitude",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_lon",
+          "xmlName": "lon",
+          "path": "start/lon",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Longitude",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_sat",
+          "xmlName": "sat",
+          "path": "start/sat",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Quantity",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_fix",
+          "xmlName": "fix",
+          "path": "start/fix",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_dop",
+          "xmlName": "dop",
+          "path": "start/dop",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Dop",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_poi_id",
+          "xmlName": "poiID",
+          "path": "start/poiID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_address_streetname",
+          "xmlName": "streetname",
+          "path": "start/address/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Streetname",
+          "minOccurs": 1
+        },
+        {
+          "name": "start_address_number",
+          "xmlName": "number",
+          "path": "start/address/number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Housenumber",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_address_location_description",
+          "xmlName": "locationDescription",
+          "path": "start/address/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "LocationDescription",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_address_postal_code",
+          "xmlName": "postalCode",
+          "path": "start/address/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Postalcode",
+          "minOccurs": 1
+        },
+        {
+          "name": "start_address_city",
+          "xmlName": "city",
+          "path": "start/address/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "City",
+          "minOccurs": 1
+        },
+        {
+          "name": "start_address_region",
+          "xmlName": "region",
+          "path": "start/address/region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Region",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_address_country",
+          "xmlName": "country",
+          "path": "start/address/country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CountryCodesIso31661",
+          "minOccurs": 1
+        },
+        {
+          "name": "end_point_date_time",
+          "xmlName": "pointDateTime",
+          "path": "end/pointDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_lat",
+          "xmlName": "lat",
+          "path": "end/lat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Latitude",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_lon",
+          "xmlName": "lon",
+          "path": "end/lon",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Longitude",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_sat",
+          "xmlName": "sat",
+          "path": "end/sat",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Quantity",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_fix",
+          "xmlName": "fix",
+          "path": "end/fix",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_dop",
+          "xmlName": "dop",
+          "path": "end/dop",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Dop",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_poi_id",
+          "xmlName": "poiID",
+          "path": "end/poiID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_address_streetname",
+          "xmlName": "streetname",
+          "path": "end/address/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Streetname",
+          "minOccurs": 1
+        },
+        {
+          "name": "end_address_number",
+          "xmlName": "number",
+          "path": "end/address/number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Housenumber",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_address_location_description",
+          "xmlName": "locationDescription",
+          "path": "end/address/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "LocationDescription",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_address_postal_code",
+          "xmlName": "postalCode",
+          "path": "end/address/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Postalcode",
+          "minOccurs": 1
+        },
+        {
+          "name": "end_address_city",
+          "xmlName": "city",
+          "path": "end/address/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "City",
+          "minOccurs": 1
+        },
+        {
+          "name": "end_address_region",
+          "xmlName": "region",
+          "path": "end/address/region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Region",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_address_country",
+          "xmlName": "country",
+          "path": "end/address/country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CountryCodesIso31661",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_by_user_name",
+          "xmlName": "changeByUserName",
+          "path": "changeInfo/changeByUserName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Name",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_date_time",
+          "xmlName": "changeDateTime",
+          "path": "changeInfo/changeDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_description",
+          "xmlName": "changeDescription",
+          "path": "changeInfo/changeDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "pois",
+      "xmlName": "pois",
+      "path": "auditfile/pois",
+      "parent": "auditfile",
+      "minOccurs": 0,
+      "maxOccurs": 1,
+      "columns": []
+    },
+    {
+      "name": "poi",
+      "xmlName": "poi",
+      "path": "auditfile/pois/poi",
+      "parent": "pois",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "poi_id",
+          "xmlName": "poiID",
+          "path": "poiID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "poi_name",
+          "xmlName": "poiName",
+          "path": "poiName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 0
+        },
+        {
+          "name": "poi_type",
+          "xmlName": "poiType",
+          "path": "poiType",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "PoiType",
+          "minOccurs": 1
+        },
+        {
+          "name": "start_date_time",
+          "xmlName": "startDateTime",
+          "path": "startDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_date_time",
+          "xmlName": "endDateTime",
+          "path": "endDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "lat",
+          "xmlName": "lat",
+          "path": "lat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Latitude",
+          "minOccurs": 0
+        },
+        {
+          "name": "lon",
+          "xmlName": "lon",
+          "path": "lon",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Longitude",
+          "minOccurs": 0
+        },
+        {
+          "name": "driver_id",
+          "xmlName": "driverID",
+          "path": "driverID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_streetname",
+          "xmlName": "streetname",
+          "path": "address/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Streetname",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_number",
+          "xmlName": "number",
+          "path": "address/number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Housenumber",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_location_description",
+          "xmlName": "locationDescription",
+          "path": "address/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "LocationDescription",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_postal_code",
+          "xmlName": "postalCode",
+          "path": "address/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Postalcode",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_city",
+          "xmlName": "city",
+          "path": "address/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "City",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_region",
+          "xmlName": "region",
+          "path": "address/region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Region",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_country",
+          "xmlName": "country",
+          "path": "address/country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CountryCodesIso31661",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "events",
+      "xmlName": "events",
+      "path": "auditfile/events",
+      "parent": "auditfile",
+      "minOccurs": 0,
+      "maxOccurs": 1,
+      "columns": []
+    },
+    {
+      "name": "event",
+      "xmlName": "event",
+      "path": "auditfile/events/event",
+      "parent": "events",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "event_id",
+          "xmlName": "eventID",
+          "path": "eventID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_system_id",
+          "xmlName": "vehicleSystemID",
+          "path": "vehicleSystemID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "date_time",
+          "xmlName": "dateTime",
+          "path": "dateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "predefined_event_type",
+          "xmlName": "predefinedEventType",
+          "path": "predefinedEventType",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String",
+          "minOccurs": 0
+        },
+        {
+          "name": "custom_event_type_id",
+          "xmlName": "customEventTypeID",
+          "path": "customEventTypeID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "custom_event_type_definition",
+      "xmlName": "customEventTypeDefinition",
+      "path": "auditfile/events/customEventTypeDefinitions/customEventTypeDefinition",
+      "parent": "events",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "custom_event_type_id",
+          "xmlName": "customEventTypeID",
+          "path": "customEventTypeID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identifier",
+          "minOccurs": 1
+        },
+        {
+          "name": "custom_event_type",
+          "xmlName": "customEventType",
+          "path": "customEventType",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CustomEventType",
+          "minOccurs": 1
+        },
+        {
+          "name": "custom_event_type_description",
+          "xmlName": "customEventTypeDescription",
+          "path": "customEventTypeDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Text",
+          "minOccurs": 1
+        }
+      ]
+    }
+  ]
+}

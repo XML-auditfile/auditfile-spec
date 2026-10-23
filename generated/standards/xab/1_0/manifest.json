@@ -1,0 +1,3378 @@
+{
+  "formatVersion": 1,
+  "standard": "xab",
+  "typeName": "taxiOnboardComputer",
+  "version": "1.0",
+  "namespace": "http://www.auditfiles.nl/XAB/1.0",
+  "rootElement": "auditfile",
+  "provenance": "official",
+  "xsd": {
+    "file": "auditfile.xsd",
+    "sha256": "5410942e48bf2a8b807ff719ba7025747480fc5b51fe30718d843730d17b52b3"
+  },
+  "generatorVersion": "0.1.0",
+  "requiredTables": [
+    "auditfile",
+    "header",
+    "auditfile_kort_id_bct",
+    "it_service_provider",
+    "bestuurders",
+    "bestuurders_bestuurder",
+    "auto"
+  ],
+  "expectedTables": [],
+  "tables": [
+    {
+      "name": "auditfile",
+      "xmlName": "auditfile",
+      "path": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": [
+        {
+          "name": "id",
+          "xmlName": "Id",
+          "path": "@Id",
+          "kind": "attribute",
+          "type": "string",
+          "xsdType": "ID",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "header",
+      "xmlName": "header",
+      "path": "auditfile/header",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": [
+        {
+          "name": "file_format",
+          "xmlName": "fileFormat",
+          "path": "fileFormat",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Fileformat",
+          "minOccurs": 1
+        },
+        {
+          "name": "file_format_version",
+          "xmlName": "fileFormatVersion",
+          "path": "fileFormatVersion",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Fileformatversion",
+          "minOccurs": 1
+        },
+        {
+          "name": "date_time_created",
+          "xmlName": "dateTimeCreated",
+          "path": "dateTimeCreated",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "reporting_start_date_time",
+          "xmlName": "reportingStartDateTime",
+          "path": "reportingStartDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "reporting_end_date_time",
+          "xmlName": "reportingEndDateTime",
+          "path": "reportingEndDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "auditfile_kort_id_bct",
+      "xmlName": "KortIdBCT",
+      "path": "auditfile/KortIdBCT",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": [
+        {
+          "name": "gd_krgs_nr",
+          "xmlName": "GdKrgsNr",
+          "path": "GdKrgsNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Goedkeuringsnummer",
+          "minOccurs": 1
+        },
+        {
+          "name": "prog_vr_nr",
+          "xmlName": "ProgVrNr",
+          "path": "ProgVrNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Versienummer",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_by_user_name",
+          "xmlName": "changeByUserName",
+          "path": "changeInfo/changeByUserName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_date_time",
+          "xmlName": "changeDateTime",
+          "path": "changeInfo/changeDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_description",
+          "xmlName": "changeDescription",
+          "path": "changeInfo/changeDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "history_kort_id_bct",
+      "xmlName": "KortIdBCT",
+      "path": "auditfile/KortIdBCT/history/KortIdBCT",
+      "parent": "auditfile_kort_id_bct",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "gd_krgs_nr",
+          "xmlName": "GdKrgsNr",
+          "path": "GdKrgsNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Goedkeuringsnummer",
+          "minOccurs": 1
+        },
+        {
+          "name": "prog_vr_nr",
+          "xmlName": "ProgVrNr",
+          "path": "ProgVrNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Versienummer",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_by_user_name",
+          "xmlName": "changeByUserName",
+          "path": "changeInfo/changeByUserName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_date_time",
+          "xmlName": "changeDateTime",
+          "path": "changeInfo/changeDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_description",
+          "xmlName": "changeDescription",
+          "path": "changeInfo/changeDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "it_service_provider",
+      "xmlName": "ITServiceProvider",
+      "path": "auditfile/ITServiceProvider",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": [
+        {
+          "name": "name",
+          "xmlName": "name",
+          "path": "name",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 1
+        },
+        {
+          "name": "identification_nr",
+          "xmlName": "identificationNr",
+          "path": "identificationNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identificationnummer",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "bestuurders",
+      "xmlName": "Bestuurders",
+      "path": "auditfile/Bestuurders",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": []
+    },
+    {
+      "name": "bestuurders_bestuurder",
+      "xmlName": "Bestuurder",
+      "path": "auditfile/Bestuurders/Bestuurder",
+      "parent": "bestuurders",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "bsn",
+          "xmlName": "bsn",
+          "path": "bsn",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Bsn",
+          "minOccurs": 0
+        },
+        {
+          "name": "ch_id_nr",
+          "xmlName": "ChIdNr",
+          "path": "ChIdNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeursidentificatienummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "ck_vg_nr",
+          "xmlName": "CkVgNr",
+          "path": "CkVgNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeurskaartvolgnummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "initials",
+          "xmlName": "initials",
+          "path": "initials",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst6",
+          "minOccurs": 0
+        },
+        {
+          "name": "prefix",
+          "xmlName": "prefix",
+          "path": "prefix",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst10",
+          "minOccurs": 0
+        },
+        {
+          "name": "family_name",
+          "xmlName": "familyName",
+          "path": "familyName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "naam",
+          "xmlName": "Naam",
+          "path": "Naam",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "personeelsnummer",
+          "xmlName": "Personeelsnummer",
+          "path": "Personeelsnummer",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_nl_streetname",
+          "xmlName": "streetname",
+          "path": "addressNL/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst24",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_nl_number",
+          "xmlName": "number",
+          "path": "addressNL/number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Numeric5",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_nl_number_extension",
+          "xmlName": "numberExtension",
+          "path": "addressNL/numberExtension",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Alfanumeric4",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_nl_location_description",
+          "xmlName": "locationDescription",
+          "path": "addressNL/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_nl_postal_code",
+          "xmlName": "postalCode",
+          "path": "addressNL/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Postcodenl",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_nl_city",
+          "xmlName": "city",
+          "path": "addressNL/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst24",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_foreign_streetname",
+          "xmlName": "streetname",
+          "path": "addressForeign/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_foreign_number",
+          "xmlName": "number",
+          "path": "addressForeign/number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst9",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_foreign_location_description",
+          "xmlName": "locationDescription",
+          "path": "addressForeign/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_foreign_postal_code",
+          "xmlName": "postalCode",
+          "path": "addressForeign/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst9",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_foreign_city",
+          "xmlName": "city",
+          "path": "addressForeign/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_foreign_region",
+          "xmlName": "region",
+          "path": "addressForeign/region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_foreign_country",
+          "xmlName": "country",
+          "path": "addressForeign/country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Countrycode",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "auto",
+      "xmlName": "Auto",
+      "path": "auditfile/Auto",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": [
+        {
+          "name": "kntkn",
+          "xmlName": "Kntkn",
+          "path": "Kntkn",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Kenteken",
+          "minOccurs": 1
+        },
+        {
+          "name": "vin",
+          "xmlName": "VIN",
+          "path": "VIN",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Vin",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_registration_type",
+          "xmlName": "vehicleRegistrationType",
+          "path": "vehicleRegistrationType",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Vehicleregistrationtype",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_name",
+          "xmlName": "vehicleName",
+          "path": "vehicleName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "vehicle_make",
+          "xmlName": "vehicleMake",
+          "path": "vehicleMake",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 1
+        },
+        {
+          "name": "vehicle_model",
+          "xmlName": "vehicleModel",
+          "path": "vehicleModel",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 1
+        },
+        {
+          "name": "country",
+          "xmlName": "country",
+          "path": "country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Countrycode",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "vervoerder",
+      "xmlName": "Vervoerder",
+      "path": "auditfile/Vervoerder",
+      "parent": "auditfile",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "kv_knr",
+          "xmlName": "KvKnr",
+          "path": "KvKnr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Kvknummer",
+          "minOccurs": 1
+        },
+        {
+          "name": "pnr",
+          "xmlName": "Pnr",
+          "path": "Pnr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Pnummer",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "ondernemerskaart",
+      "xmlName": "Ondernemerskaart",
+      "path": "auditfile/Vervoerder/Ondernemerskaart",
+      "parent": "vervoerder",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "ok_vg_nr",
+          "xmlName": "OkVgNr",
+          "path": "OkVgNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Ondernemerskaartvolgnummer",
+          "minOccurs": 1
+        },
+        {
+          "name": "ondernemers_naam",
+          "xmlName": "OndernemersNaam",
+          "path": "OndernemersNaam",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "ondernemerskaart_rit",
+      "xmlName": "Rit",
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit",
+      "parent": "ondernemerskaart",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "data_rt_vg_nr",
+          "xmlName": "RtVgNr",
+          "path": "Data/RtVgNr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "PositiefInteger",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_label",
+          "xmlName": "Label",
+          "path": "Data/Label",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Fiscallabel",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_mt_cd",
+          "xmlName": "MtCd",
+          "path": "Data/MtCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Mutatiecode",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_dispatcher_rit_nr",
+          "xmlName": "DispatcherRitNr",
+          "path": "Data/DispatcherRitNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "string",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_type",
+          "xmlName": "Type",
+          "path": "Data/Type",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Typerit",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_dat_td_reg",
+          "xmlName": "DatTdReg",
+          "path": "Data/DatTdReg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_trip_reg_type",
+          "xmlName": "tripRegType",
+          "path": "Data/tripRegType",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tripregtype",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_trip_mixed_indicator",
+          "xmlName": "tripMixedIndicator",
+          "path": "Data/tripMixedIndicator",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_trip_description",
+          "xmlName": "tripDescription",
+          "path": "Data/tripDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_trip_agenda_description",
+          "xmlName": "tripAgendaDescription",
+          "path": "Data/tripAgendaDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_trip_distance",
+          "xmlName": "tripDistance",
+          "path": "Data/tripDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_private_distance",
+          "xmlName": "privateDistance",
+          "path": "Data/privateDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_business_distance",
+          "xmlName": "businessDistance",
+          "path": "Data/businessDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_deviant_indicator",
+          "xmlName": "deviantIndicator",
+          "path": "Data/deviantIndicator",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_deviant_distance",
+          "xmlName": "deviantDistance",
+          "path": "Data/deviantDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_deviant_description",
+          "xmlName": "deviantDescription",
+          "path": "Data/deviantDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_prijs",
+          "xmlName": "Prijs",
+          "path": "Data/Prijs",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_basis_bedrag",
+          "xmlName": "BasisBedrag",
+          "path": "Data/BasisBedrag",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_toeslag",
+          "xmlName": "Toeslag",
+          "path": "Data/Toeslag",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_korting",
+          "xmlName": "Korting",
+          "path": "Data/Korting",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_fooi",
+          "xmlName": "Fooi",
+          "path": "Data/Fooi",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_betaal_wijze",
+          "xmlName": "BetaalWijze",
+          "path": "Data/BetaalWijze",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "string",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_prijsafspraak",
+          "xmlName": "Prijsafspraak",
+          "path": "Data/Prijsafspraak",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "string",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_dat_td",
+          "xmlName": "DatTd",
+          "path": "Data/LocBeg/DatTd",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_dat_td_gp_sfix",
+          "xmlName": "DatTdGPSfix",
+          "path": "Data/LocBeg/DatTdGPSfix",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_bct_odo",
+          "xmlName": "BctOdo",
+          "path": "Data/LocBeg/BctOdo",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_loc_beg_veh_odo",
+          "xmlName": "VehOdo",
+          "path": "Data/LocBeg/VehOdo",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_lat",
+          "xmlName": "Lat",
+          "path": "Data/LocBeg/Lat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Breedtegraad",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_lon",
+          "xmlName": "Lon",
+          "path": "Data/LocBeg/Lon",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Lengtegraad",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_sat",
+          "xmlName": "sat",
+          "path": "Data/LocBeg/sat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_fix",
+          "xmlName": "fix",
+          "path": "Data/LocBeg/fix",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_dop",
+          "xmlName": "dop",
+          "path": "Data/LocBeg/dop",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Dop",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_poi_id",
+          "xmlName": "poiID",
+          "path": "Data/LocBeg/poiID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_addr_txt",
+          "xmlName": "addrTxt",
+          "path": "Data/LocBeg/addrTxt",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_address_streetname",
+          "xmlName": "streetname",
+          "path": "Data/LocBeg/address/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_loc_beg_address_number",
+          "xmlName": "number",
+          "path": "Data/LocBeg/address/number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst9",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_loc_beg_address_location_description",
+          "xmlName": "locationDescription",
+          "path": "Data/LocBeg/address/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_address_postal_code",
+          "xmlName": "postalCode",
+          "path": "Data/LocBeg/address/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst9",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_address_city",
+          "xmlName": "city",
+          "path": "Data/LocBeg/address/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_loc_beg_address_region",
+          "xmlName": "region",
+          "path": "Data/LocBeg/address/region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_address_country",
+          "xmlName": "country",
+          "path": "Data/LocBeg/address/country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Countrycode",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_dat_td",
+          "xmlName": "DatTd",
+          "path": "Data/LocEnd/DatTd",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_dat_td_gp_sfix",
+          "xmlName": "DatTdGPSfix",
+          "path": "Data/LocEnd/DatTdGPSfix",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_bct_odo",
+          "xmlName": "BctOdo",
+          "path": "Data/LocEnd/BctOdo",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_loc_end_veh_odo",
+          "xmlName": "VehOdo",
+          "path": "Data/LocEnd/VehOdo",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_lat",
+          "xmlName": "Lat",
+          "path": "Data/LocEnd/Lat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Breedtegraad",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_lon",
+          "xmlName": "Lon",
+          "path": "Data/LocEnd/Lon",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Lengtegraad",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_sat",
+          "xmlName": "sat",
+          "path": "Data/LocEnd/sat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_fix",
+          "xmlName": "fix",
+          "path": "Data/LocEnd/fix",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_dop",
+          "xmlName": "dop",
+          "path": "Data/LocEnd/dop",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Dop",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_poi_id",
+          "xmlName": "poiID",
+          "path": "Data/LocEnd/poiID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_addr_txt",
+          "xmlName": "addrTxt",
+          "path": "Data/LocEnd/addrTxt",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_address_streetname",
+          "xmlName": "streetname",
+          "path": "Data/LocEnd/address/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_loc_end_address_number",
+          "xmlName": "number",
+          "path": "Data/LocEnd/address/number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst9",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_loc_end_address_location_description",
+          "xmlName": "locationDescription",
+          "path": "Data/LocEnd/address/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_address_postal_code",
+          "xmlName": "postalCode",
+          "path": "Data/LocEnd/address/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst9",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_address_city",
+          "xmlName": "city",
+          "path": "Data/LocEnd/address/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_loc_end_address_region",
+          "xmlName": "region",
+          "path": "Data/LocEnd/address/region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_address_country",
+          "xmlName": "country",
+          "path": "Data/LocEnd/address/country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Countrycode",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_bsn",
+          "xmlName": "bsn",
+          "path": "Data/Bestuurder/bsn",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Bsn",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_ch_id_nr",
+          "xmlName": "ChIdNr",
+          "path": "Data/Bestuurder/ChIdNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeursidentificatienummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_ck_vg_nr",
+          "xmlName": "CkVgNr",
+          "path": "Data/Bestuurder/CkVgNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeurskaartvolgnummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_naam",
+          "xmlName": "Naam",
+          "path": "Data/Bestuurder/Naam",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_personeelsnummer",
+          "xmlName": "Personeelsnummer",
+          "path": "Data/Bestuurder/Personeelsnummer",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_by_user_name",
+          "xmlName": "changeByUserName",
+          "path": "changeInfo/changeByUserName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_date_time",
+          "xmlName": "changeDateTime",
+          "path": "changeInfo/changeDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_description",
+          "xmlName": "changeDescription",
+          "path": "changeInfo/changeDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_bsn",
+          "xmlName": "bsn",
+          "path": "changeInfo/Bestuurder/bsn",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Bsn",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_ch_id_nr",
+          "xmlName": "ChIdNr",
+          "path": "changeInfo/Bestuurder/ChIdNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeursidentificatienummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_ck_vg_nr",
+          "xmlName": "CkVgNr",
+          "path": "changeInfo/Bestuurder/CkVgNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeurskaartvolgnummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_naam",
+          "xmlName": "Naam",
+          "path": "changeInfo/Bestuurder/Naam",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_personeelsnummer",
+          "xmlName": "Personeelsnummer",
+          "path": "changeInfo/Bestuurder/Personeelsnummer",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "ondernemerskaart_rit_data_point",
+      "xmlName": "point",
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/Data/point",
+      "parent": "ondernemerskaart_rit",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "dat_td",
+          "xmlName": "DatTd",
+          "path": "DatTd",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "dat_td_gp_sfix",
+          "xmlName": "DatTdGPSfix",
+          "path": "DatTdGPSfix",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "bct_odo",
+          "xmlName": "BctOdo",
+          "path": "BctOdo",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 1
+        },
+        {
+          "name": "veh_odo",
+          "xmlName": "VehOdo",
+          "path": "VehOdo",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "st_rdn_at",
+          "xmlName": "StRdnAt",
+          "path": "StRdnAt",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Statusrijdenauto",
+          "minOccurs": 0
+        },
+        {
+          "name": "lat",
+          "xmlName": "Lat",
+          "path": "Lat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Breedtegraad",
+          "minOccurs": 0
+        },
+        {
+          "name": "lon",
+          "xmlName": "Lon",
+          "path": "Lon",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Lengtegraad",
+          "minOccurs": 0
+        },
+        {
+          "name": "src",
+          "xmlName": "src",
+          "path": "src",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Source",
+          "minOccurs": 0
+        },
+        {
+          "name": "sat",
+          "xmlName": "sat",
+          "path": "sat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "fix",
+          "xmlName": "fix",
+          "path": "fix",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "dop",
+          "xmlName": "dop",
+          "path": "dop",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Dop",
+          "minOccurs": 0
+        },
+        {
+          "name": "poi_id",
+          "xmlName": "poiID",
+          "path": "poiID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        },
+        {
+          "name": "addr_txt",
+          "xmlName": "addrTxt",
+          "path": "addrTxt",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_streetname",
+          "xmlName": "streetname",
+          "path": "address/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_number",
+          "xmlName": "number",
+          "path": "address/number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst9",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_location_description",
+          "xmlName": "locationDescription",
+          "path": "address/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_postal_code",
+          "xmlName": "postalCode",
+          "path": "address/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst9",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_city",
+          "xmlName": "city",
+          "path": "address/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_region",
+          "xmlName": "region",
+          "path": "address/region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_country",
+          "xmlName": "country",
+          "path": "address/country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Countrycode",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "history_rit",
+      "xmlName": "Rit",
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit",
+      "parent": "ondernemerskaart_rit",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "data_rt_vg_nr",
+          "xmlName": "RtVgNr",
+          "path": "Data/RtVgNr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "PositiefInteger",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_label",
+          "xmlName": "Label",
+          "path": "Data/Label",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Fiscallabel",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_mt_cd",
+          "xmlName": "MtCd",
+          "path": "Data/MtCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Mutatiecode",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_dispatcher_rit_nr",
+          "xmlName": "DispatcherRitNr",
+          "path": "Data/DispatcherRitNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "string",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_type",
+          "xmlName": "Type",
+          "path": "Data/Type",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Typerit",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_dat_td_reg",
+          "xmlName": "DatTdReg",
+          "path": "Data/DatTdReg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_trip_reg_type",
+          "xmlName": "tripRegType",
+          "path": "Data/tripRegType",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tripregtype",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_trip_mixed_indicator",
+          "xmlName": "tripMixedIndicator",
+          "path": "Data/tripMixedIndicator",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_trip_description",
+          "xmlName": "tripDescription",
+          "path": "Data/tripDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_trip_agenda_description",
+          "xmlName": "tripAgendaDescription",
+          "path": "Data/tripAgendaDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_trip_distance",
+          "xmlName": "tripDistance",
+          "path": "Data/tripDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_private_distance",
+          "xmlName": "privateDistance",
+          "path": "Data/privateDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_business_distance",
+          "xmlName": "businessDistance",
+          "path": "Data/businessDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_deviant_indicator",
+          "xmlName": "deviantIndicator",
+          "path": "Data/deviantIndicator",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_deviant_distance",
+          "xmlName": "deviantDistance",
+          "path": "Data/deviantDistance",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_deviant_description",
+          "xmlName": "deviantDescription",
+          "path": "Data/deviantDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_prijs",
+          "xmlName": "Prijs",
+          "path": "Data/Prijs",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_basis_bedrag",
+          "xmlName": "BasisBedrag",
+          "path": "Data/BasisBedrag",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_toeslag",
+          "xmlName": "Toeslag",
+          "path": "Data/Toeslag",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_korting",
+          "xmlName": "Korting",
+          "path": "Data/Korting",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_fooi",
+          "xmlName": "Fooi",
+          "path": "Data/Fooi",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Bedrag",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_betaal_wijze",
+          "xmlName": "BetaalWijze",
+          "path": "Data/BetaalWijze",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "string",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_prijsafspraak",
+          "xmlName": "Prijsafspraak",
+          "path": "Data/Prijsafspraak",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "string",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_dat_td",
+          "xmlName": "DatTd",
+          "path": "Data/LocBeg/DatTd",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_dat_td_gp_sfix",
+          "xmlName": "DatTdGPSfix",
+          "path": "Data/LocBeg/DatTdGPSfix",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_bct_odo",
+          "xmlName": "BctOdo",
+          "path": "Data/LocBeg/BctOdo",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_loc_beg_veh_odo",
+          "xmlName": "VehOdo",
+          "path": "Data/LocBeg/VehOdo",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_lat",
+          "xmlName": "Lat",
+          "path": "Data/LocBeg/Lat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Breedtegraad",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_lon",
+          "xmlName": "Lon",
+          "path": "Data/LocBeg/Lon",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Lengtegraad",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_sat",
+          "xmlName": "sat",
+          "path": "Data/LocBeg/sat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_fix",
+          "xmlName": "fix",
+          "path": "Data/LocBeg/fix",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_dop",
+          "xmlName": "dop",
+          "path": "Data/LocBeg/dop",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Dop",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_poi_id",
+          "xmlName": "poiID",
+          "path": "Data/LocBeg/poiID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_addr_txt",
+          "xmlName": "addrTxt",
+          "path": "Data/LocBeg/addrTxt",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_address_streetname",
+          "xmlName": "streetname",
+          "path": "Data/LocBeg/address/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_loc_beg_address_number",
+          "xmlName": "number",
+          "path": "Data/LocBeg/address/number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst9",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_loc_beg_address_location_description",
+          "xmlName": "locationDescription",
+          "path": "Data/LocBeg/address/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_address_postal_code",
+          "xmlName": "postalCode",
+          "path": "Data/LocBeg/address/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst9",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_address_city",
+          "xmlName": "city",
+          "path": "Data/LocBeg/address/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_loc_beg_address_region",
+          "xmlName": "region",
+          "path": "Data/LocBeg/address/region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_beg_address_country",
+          "xmlName": "country",
+          "path": "Data/LocBeg/address/country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Countrycode",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_dat_td",
+          "xmlName": "DatTd",
+          "path": "Data/LocEnd/DatTd",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_dat_td_gp_sfix",
+          "xmlName": "DatTdGPSfix",
+          "path": "Data/LocEnd/DatTdGPSfix",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_bct_odo",
+          "xmlName": "BctOdo",
+          "path": "Data/LocEnd/BctOdo",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_loc_end_veh_odo",
+          "xmlName": "VehOdo",
+          "path": "Data/LocEnd/VehOdo",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_lat",
+          "xmlName": "Lat",
+          "path": "Data/LocEnd/Lat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Breedtegraad",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_lon",
+          "xmlName": "Lon",
+          "path": "Data/LocEnd/Lon",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Lengtegraad",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_sat",
+          "xmlName": "sat",
+          "path": "Data/LocEnd/sat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_fix",
+          "xmlName": "fix",
+          "path": "Data/LocEnd/fix",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_dop",
+          "xmlName": "dop",
+          "path": "Data/LocEnd/dop",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Dop",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_poi_id",
+          "xmlName": "poiID",
+          "path": "Data/LocEnd/poiID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_addr_txt",
+          "xmlName": "addrTxt",
+          "path": "Data/LocEnd/addrTxt",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_address_streetname",
+          "xmlName": "streetname",
+          "path": "Data/LocEnd/address/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_loc_end_address_number",
+          "xmlName": "number",
+          "path": "Data/LocEnd/address/number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst9",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_loc_end_address_location_description",
+          "xmlName": "locationDescription",
+          "path": "Data/LocEnd/address/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_address_postal_code",
+          "xmlName": "postalCode",
+          "path": "Data/LocEnd/address/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst9",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_address_city",
+          "xmlName": "city",
+          "path": "Data/LocEnd/address/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_loc_end_address_region",
+          "xmlName": "region",
+          "path": "Data/LocEnd/address/region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_loc_end_address_country",
+          "xmlName": "country",
+          "path": "Data/LocEnd/address/country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Countrycode",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_bsn",
+          "xmlName": "bsn",
+          "path": "Data/Bestuurder/bsn",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Bsn",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_ch_id_nr",
+          "xmlName": "ChIdNr",
+          "path": "Data/Bestuurder/ChIdNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeursidentificatienummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_ck_vg_nr",
+          "xmlName": "CkVgNr",
+          "path": "Data/Bestuurder/CkVgNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeurskaartvolgnummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_naam",
+          "xmlName": "Naam",
+          "path": "Data/Bestuurder/Naam",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_personeelsnummer",
+          "xmlName": "Personeelsnummer",
+          "path": "Data/Bestuurder/Personeelsnummer",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_by_user_name",
+          "xmlName": "changeByUserName",
+          "path": "changeInfo/changeByUserName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_date_time",
+          "xmlName": "changeDateTime",
+          "path": "changeInfo/changeDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_description",
+          "xmlName": "changeDescription",
+          "path": "changeInfo/changeDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_bsn",
+          "xmlName": "bsn",
+          "path": "changeInfo/Bestuurder/bsn",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Bsn",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_ch_id_nr",
+          "xmlName": "ChIdNr",
+          "path": "changeInfo/Bestuurder/ChIdNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeursidentificatienummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_ck_vg_nr",
+          "xmlName": "CkVgNr",
+          "path": "changeInfo/Bestuurder/CkVgNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeurskaartvolgnummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_naam",
+          "xmlName": "Naam",
+          "path": "changeInfo/Bestuurder/Naam",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_personeelsnummer",
+          "xmlName": "Personeelsnummer",
+          "path": "changeInfo/Bestuurder/Personeelsnummer",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "history_rit_data_point",
+      "xmlName": "point",
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Rit/history/Rit/Data/point",
+      "parent": "history_rit",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "dat_td",
+          "xmlName": "DatTd",
+          "path": "DatTd",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "dat_td_gp_sfix",
+          "xmlName": "DatTdGPSfix",
+          "path": "DatTdGPSfix",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "bct_odo",
+          "xmlName": "BctOdo",
+          "path": "BctOdo",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 1
+        },
+        {
+          "name": "veh_odo",
+          "xmlName": "VehOdo",
+          "path": "VehOdo",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "st_rdn_at",
+          "xmlName": "StRdnAt",
+          "path": "StRdnAt",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Statusrijdenauto",
+          "minOccurs": 0
+        },
+        {
+          "name": "lat",
+          "xmlName": "Lat",
+          "path": "Lat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Breedtegraad",
+          "minOccurs": 0
+        },
+        {
+          "name": "lon",
+          "xmlName": "Lon",
+          "path": "Lon",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Lengtegraad",
+          "minOccurs": 0
+        },
+        {
+          "name": "src",
+          "xmlName": "src",
+          "path": "src",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Source",
+          "minOccurs": 0
+        },
+        {
+          "name": "sat",
+          "xmlName": "sat",
+          "path": "sat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Count",
+          "minOccurs": 0
+        },
+        {
+          "name": "fix",
+          "xmlName": "fix",
+          "path": "fix",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Indicator",
+          "minOccurs": 0
+        },
+        {
+          "name": "dop",
+          "xmlName": "dop",
+          "path": "dop",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Dop",
+          "minOccurs": 0
+        },
+        {
+          "name": "poi_id",
+          "xmlName": "poiID",
+          "path": "poiID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        },
+        {
+          "name": "addr_txt",
+          "xmlName": "addrTxt",
+          "path": "addrTxt",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_streetname",
+          "xmlName": "streetname",
+          "path": "address/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_number",
+          "xmlName": "number",
+          "path": "address/number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst9",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_location_description",
+          "xmlName": "locationDescription",
+          "path": "address/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_postal_code",
+          "xmlName": "postalCode",
+          "path": "address/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst9",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_city",
+          "xmlName": "city",
+          "path": "address/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_region",
+          "xmlName": "region",
+          "path": "address/region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_country",
+          "xmlName": "country",
+          "path": "address/country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Countrycode",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "ondernemerskaart_bestuurder",
+      "xmlName": "Bestuurder",
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder",
+      "parent": "ondernemerskaart",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "bsn",
+          "xmlName": "bsn",
+          "path": "bsn",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Bsn",
+          "minOccurs": 0
+        },
+        {
+          "name": "ch_id_nr",
+          "xmlName": "ChIdNr",
+          "path": "ChIdNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeursidentificatienummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "ck_vg_nr",
+          "xmlName": "CkVgNr",
+          "path": "CkVgNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeurskaartvolgnummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "naam",
+          "xmlName": "Naam",
+          "path": "Naam",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "personeelsnummer",
+          "xmlName": "Personeelsnummer",
+          "path": "Personeelsnummer",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "bestuurder_arbeidstijd",
+      "xmlName": "Arbeidstijd",
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd",
+      "parent": "ondernemerskaart_bestuurder",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "data_ar_vg_nr",
+          "xmlName": "ArVgNr",
+          "path": "Data/ArVgNr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "PositiefInteger",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_dat_td_reg",
+          "xmlName": "DatTdReg",
+          "path": "Data/DatTdReg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_dat_td_beg",
+          "xmlName": "DatTdBeg",
+          "path": "Data/DatTdBeg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_dat_td_end",
+          "xmlName": "DatTdEnd",
+          "path": "Data/DatTdEnd",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_by_user_name",
+          "xmlName": "changeByUserName",
+          "path": "changeInfo/changeByUserName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_date_time",
+          "xmlName": "changeDateTime",
+          "path": "changeInfo/changeDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_description",
+          "xmlName": "changeDescription",
+          "path": "changeInfo/changeDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_bsn",
+          "xmlName": "bsn",
+          "path": "changeInfo/Bestuurder/bsn",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Bsn",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_ch_id_nr",
+          "xmlName": "ChIdNr",
+          "path": "changeInfo/Bestuurder/ChIdNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeursidentificatienummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_ck_vg_nr",
+          "xmlName": "CkVgNr",
+          "path": "changeInfo/Bestuurder/CkVgNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeurskaartvolgnummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_naam",
+          "xmlName": "Naam",
+          "path": "changeInfo/Bestuurder/Naam",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_personeelsnummer",
+          "xmlName": "Personeelsnummer",
+          "path": "changeInfo/Bestuurder/Personeelsnummer",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "bestuurder_arbeidstijd_data_rijtijd",
+      "xmlName": "Rijtijd",
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/Rijtijd",
+      "parent": "bestuurder_arbeidstijd",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "rt_vg_nr",
+          "xmlName": "RtVgNr",
+          "path": "RtVgNr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "PositiefInteger",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_reg",
+          "xmlName": "DatTdReg",
+          "path": "DatTdReg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_beg",
+          "xmlName": "DatTdBeg",
+          "path": "DatTdBeg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_end",
+          "xmlName": "DatTdEnd",
+          "path": "DatTdEnd",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "bestuurder_arbeidstijd_data_pauze",
+      "xmlName": "Pauze",
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/Pauze",
+      "parent": "bestuurder_arbeidstijd",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "pz_vg_nr",
+          "xmlName": "PzVgNr",
+          "path": "PzVgNr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "PositiefInteger",
+          "minOccurs": 1
+        },
+        {
+          "name": "mt_cd",
+          "xmlName": "MtCd",
+          "path": "MtCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Mutatiecode",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_reg",
+          "xmlName": "DatTdReg",
+          "path": "DatTdReg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_beg",
+          "xmlName": "DatTdBeg",
+          "path": "DatTdBeg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_end",
+          "xmlName": "DatTdEnd",
+          "path": "DatTdEnd",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "bestuurder_arbeidstijd_data_adr_wrkzmhdn",
+      "xmlName": "AdrWrkzmhdn",
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/Data/AdrWrkzmhdn",
+      "parent": "bestuurder_arbeidstijd",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "aw_vg_nr",
+          "xmlName": "AwVgNr",
+          "path": "AwVgNr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "PositiefInteger",
+          "minOccurs": 1
+        },
+        {
+          "name": "mt_cd",
+          "xmlName": "MtCd",
+          "path": "MtCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Mutatiecode",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_reg",
+          "xmlName": "DatTdReg",
+          "path": "DatTdReg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_beg",
+          "xmlName": "DatTdBeg",
+          "path": "DatTdBeg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_end",
+          "xmlName": "DatTdEnd",
+          "path": "DatTdEnd",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "history_arbeidstijd",
+      "xmlName": "Arbeidstijd",
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd",
+      "parent": "bestuurder_arbeidstijd",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "data_ar_vg_nr",
+          "xmlName": "ArVgNr",
+          "path": "Data/ArVgNr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "PositiefInteger",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_dat_td_reg",
+          "xmlName": "DatTdReg",
+          "path": "Data/DatTdReg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_dat_td_beg",
+          "xmlName": "DatTdBeg",
+          "path": "Data/DatTdBeg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_dat_td_end",
+          "xmlName": "DatTdEnd",
+          "path": "Data/DatTdEnd",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_by_user_name",
+          "xmlName": "changeByUserName",
+          "path": "changeInfo/changeByUserName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_date_time",
+          "xmlName": "changeDateTime",
+          "path": "changeInfo/changeDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_description",
+          "xmlName": "changeDescription",
+          "path": "changeInfo/changeDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_bsn",
+          "xmlName": "bsn",
+          "path": "changeInfo/Bestuurder/bsn",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Bsn",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_ch_id_nr",
+          "xmlName": "ChIdNr",
+          "path": "changeInfo/Bestuurder/ChIdNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeursidentificatienummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_ck_vg_nr",
+          "xmlName": "CkVgNr",
+          "path": "changeInfo/Bestuurder/CkVgNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeurskaartvolgnummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_naam",
+          "xmlName": "Naam",
+          "path": "changeInfo/Bestuurder/Naam",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_personeelsnummer",
+          "xmlName": "Personeelsnummer",
+          "path": "changeInfo/Bestuurder/Personeelsnummer",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "history_arbeidstijd_data_rijtijd",
+      "xmlName": "Rijtijd",
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/Rijtijd",
+      "parent": "history_arbeidstijd",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "rt_vg_nr",
+          "xmlName": "RtVgNr",
+          "path": "RtVgNr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "PositiefInteger",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_reg",
+          "xmlName": "DatTdReg",
+          "path": "DatTdReg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_beg",
+          "xmlName": "DatTdBeg",
+          "path": "DatTdBeg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_end",
+          "xmlName": "DatTdEnd",
+          "path": "DatTdEnd",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "history_arbeidstijd_data_pauze",
+      "xmlName": "Pauze",
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/Pauze",
+      "parent": "history_arbeidstijd",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "pz_vg_nr",
+          "xmlName": "PzVgNr",
+          "path": "PzVgNr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "PositiefInteger",
+          "minOccurs": 1
+        },
+        {
+          "name": "mt_cd",
+          "xmlName": "MtCd",
+          "path": "MtCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Mutatiecode",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_reg",
+          "xmlName": "DatTdReg",
+          "path": "DatTdReg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_beg",
+          "xmlName": "DatTdBeg",
+          "path": "DatTdBeg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_end",
+          "xmlName": "DatTdEnd",
+          "path": "DatTdEnd",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "history_arbeidstijd_data_adr_wrkzmhdn",
+      "xmlName": "AdrWrkzmhdn",
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Bestuurder/Arbeidstijd/history/Arbeidstijd/Data/AdrWrkzmhdn",
+      "parent": "history_arbeidstijd",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "aw_vg_nr",
+          "xmlName": "AwVgNr",
+          "path": "AwVgNr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "PositiefInteger",
+          "minOccurs": 1
+        },
+        {
+          "name": "mt_cd",
+          "xmlName": "MtCd",
+          "path": "MtCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Mutatiecode",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_reg",
+          "xmlName": "DatTdReg",
+          "path": "DatTdReg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_beg",
+          "xmlName": "DatTdBeg",
+          "path": "DatTdBeg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "dat_td_end",
+          "xmlName": "DatTdEnd",
+          "path": "DatTdEnd",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "ondernemerskaart_gbrtns",
+      "xmlName": "Gbrtns",
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns",
+      "parent": "ondernemerskaart",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "data_gb_vg_nr",
+          "xmlName": "GbVgNr",
+          "path": "Data/GbVgNr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "PositiefInteger",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_code",
+          "xmlName": "Code",
+          "path": "Data/Code",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Code",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_dat_td_reg",
+          "xmlName": "DatTdReg",
+          "path": "Data/DatTdReg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_km_std",
+          "xmlName": "KmStd",
+          "path": "Data/KmStd",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Kmstand",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_st_rdn_at",
+          "xmlName": "StRdnAt",
+          "path": "Data/StRdnAt",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Statusrijdenauto",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_wrkngs_mds",
+          "xmlName": "WrkngsMds",
+          "path": "Data/WrkngsMds",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Werkingsmodus",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_wrkngs_nv",
+          "xmlName": "WrkngsNv",
+          "path": "Data/WrkngsNv",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Werkingsniveau",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_aanv_info",
+          "xmlName": "AanvInfo",
+          "path": "Data/AanvInfo",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst100",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_bsn",
+          "xmlName": "bsn",
+          "path": "Data/Bestuurder/bsn",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Bsn",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_ch_id_nr",
+          "xmlName": "ChIdNr",
+          "path": "Data/Bestuurder/ChIdNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeursidentificatienummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_ck_vg_nr",
+          "xmlName": "CkVgNr",
+          "path": "Data/Bestuurder/CkVgNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeurskaartvolgnummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_naam",
+          "xmlName": "Naam",
+          "path": "Data/Bestuurder/Naam",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_personeelsnummer",
+          "xmlName": "Personeelsnummer",
+          "path": "Data/Bestuurder/Personeelsnummer",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_by_user_name",
+          "xmlName": "changeByUserName",
+          "path": "changeInfo/changeByUserName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_date_time",
+          "xmlName": "changeDateTime",
+          "path": "changeInfo/changeDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_description",
+          "xmlName": "changeDescription",
+          "path": "changeInfo/changeDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_bsn",
+          "xmlName": "bsn",
+          "path": "changeInfo/Bestuurder/bsn",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Bsn",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_ch_id_nr",
+          "xmlName": "ChIdNr",
+          "path": "changeInfo/Bestuurder/ChIdNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeursidentificatienummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_ck_vg_nr",
+          "xmlName": "CkVgNr",
+          "path": "changeInfo/Bestuurder/CkVgNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeurskaartvolgnummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_naam",
+          "xmlName": "Naam",
+          "path": "changeInfo/Bestuurder/Naam",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_personeelsnummer",
+          "xmlName": "Personeelsnummer",
+          "path": "changeInfo/Bestuurder/Personeelsnummer",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "history_gbrtns",
+      "xmlName": "Gbrtns",
+      "path": "auditfile/Vervoerder/Ondernemerskaart/Gbrtns/history/Gbrtns",
+      "parent": "ondernemerskaart_gbrtns",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "data_gb_vg_nr",
+          "xmlName": "GbVgNr",
+          "path": "Data/GbVgNr",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "PositiefInteger",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_code",
+          "xmlName": "Code",
+          "path": "Data/Code",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Code",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_dat_td_reg",
+          "xmlName": "DatTdReg",
+          "path": "Data/DatTdReg",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_km_std",
+          "xmlName": "KmStd",
+          "path": "Data/KmStd",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Kmstand",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_st_rdn_at",
+          "xmlName": "StRdnAt",
+          "path": "Data/StRdnAt",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Statusrijdenauto",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_wrkngs_mds",
+          "xmlName": "WrkngsMds",
+          "path": "Data/WrkngsMds",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Werkingsmodus",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_wrkngs_nv",
+          "xmlName": "WrkngsNv",
+          "path": "Data/WrkngsNv",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Werkingsniveau",
+          "minOccurs": 1
+        },
+        {
+          "name": "data_aanv_info",
+          "xmlName": "AanvInfo",
+          "path": "Data/AanvInfo",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst100",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_bsn",
+          "xmlName": "bsn",
+          "path": "Data/Bestuurder/bsn",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Bsn",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_ch_id_nr",
+          "xmlName": "ChIdNr",
+          "path": "Data/Bestuurder/ChIdNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeursidentificatienummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_ck_vg_nr",
+          "xmlName": "CkVgNr",
+          "path": "Data/Bestuurder/CkVgNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeurskaartvolgnummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_naam",
+          "xmlName": "Naam",
+          "path": "Data/Bestuurder/Naam",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "data_bestuurder_personeelsnummer",
+          "xmlName": "Personeelsnummer",
+          "path": "Data/Bestuurder/Personeelsnummer",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_by_user_name",
+          "xmlName": "changeByUserName",
+          "path": "changeInfo/changeByUserName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_date_time",
+          "xmlName": "changeDateTime",
+          "path": "changeInfo/changeDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 1
+        },
+        {
+          "name": "change_info_change_description",
+          "xmlName": "changeDescription",
+          "path": "changeInfo/changeDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_bsn",
+          "xmlName": "bsn",
+          "path": "changeInfo/Bestuurder/bsn",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Bsn",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_ch_id_nr",
+          "xmlName": "ChIdNr",
+          "path": "changeInfo/Bestuurder/ChIdNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeursidentificatienummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_ck_vg_nr",
+          "xmlName": "CkVgNr",
+          "path": "changeInfo/Bestuurder/CkVgNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Chauffeurskaartvolgnummer",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_naam",
+          "xmlName": "Naam",
+          "path": "changeInfo/Bestuurder/Naam",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_bestuurder_personeelsnummer",
+          "xmlName": "Personeelsnummer",
+          "path": "changeInfo/Bestuurder/Personeelsnummer",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "pois",
+      "xmlName": "pois",
+      "path": "auditfile/pois",
+      "parent": "auditfile",
+      "minOccurs": 0,
+      "maxOccurs": 1,
+      "columns": []
+    },
+    {
+      "name": "poi",
+      "xmlName": "poi",
+      "path": "auditfile/pois/poi",
+      "parent": "pois",
+      "minOccurs": 1,
+      "columns": [
+        {
+          "name": "poi_id",
+          "xmlName": "poiID",
+          "path": "poiID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Identification",
+          "minOccurs": 1
+        },
+        {
+          "name": "poi_name",
+          "xmlName": "poiName",
+          "path": "poiName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 1
+        },
+        {
+          "name": "lat",
+          "xmlName": "Lat",
+          "path": "Lat",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Breedtegraad",
+          "minOccurs": 1
+        },
+        {
+          "name": "lon",
+          "xmlName": "Lon",
+          "path": "Lon",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Lengtegraad",
+          "minOccurs": 1
+        },
+        {
+          "name": "addr_txt",
+          "xmlName": "addrTxt",
+          "path": "addrTxt",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst200",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_streetname",
+          "xmlName": "streetname",
+          "path": "address/streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_number",
+          "xmlName": "number",
+          "path": "address/number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst9",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_location_description",
+          "xmlName": "locationDescription",
+          "path": "address/locationDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_postal_code",
+          "xmlName": "postalCode",
+          "path": "address/postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst9",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_city",
+          "xmlName": "city",
+          "path": "address/city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 1
+        },
+        {
+          "name": "address_region",
+          "xmlName": "region",
+          "path": "address/region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Tekst35",
+          "minOccurs": 0
+        },
+        {
+          "name": "address_country",
+          "xmlName": "country",
+          "path": "address/country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Countrycode",
+          "minOccurs": 0
+        }
+      ]
+    }
+  ]
+}

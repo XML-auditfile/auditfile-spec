@@ -1,0 +1,3443 @@
+{
+  "formatVersion": 1,
+  "standard": "xaf",
+  "version": "3.2",
+  "entries": [
+    {
+      "key": "header",
+      "kind": "table",
+      "label": {
+        "en": "Header"
+      },
+      "definition": {
+        "nl": "Berichtheader.",
+        "en": "Message header."
+      }
+    },
+    {
+      "key": "header.fiscal_year",
+      "kind": "column",
+      "label": {
+        "en": "Fiscal Year"
+      },
+      "definition": {
+        "nl": "Aanduiding van het boekjaar (EEJJ). Bijvoorbeeld 2013. Bij een gebroken boekjaar wordt dat als volgt gevuld: EEJJ-EEJJ. Bijvoorbeeld 2008-2009.",
+        "en": "Indication of the financial year (YYYY). For example 2013. For a non-calendar financial year it is filled as follows: YYYY-YYYY. For example 2008-2009."
+      }
+    },
+    {
+      "key": "header.start_date",
+      "kind": "column",
+      "label": {
+        "en": "Start Date Bookingperiod"
+      },
+      "definition": {
+        "nl": "Startdatum boekjaar. W3C date datatype. Bijv. 2013-01-01.",
+        "en": "Start date of the financial year. W3C date datatype. E.g. 2013-01-01."
+      }
+    },
+    {
+      "key": "header.end_date",
+      "kind": "column",
+      "label": {
+        "en": "End Date Bookingperiod"
+      },
+      "definition": {
+        "nl": "Einddatum boekjaar. W3C date datatype. Bijv. 2013-12-31.",
+        "en": "End date of the financial year. W3C date datatype. E.g. 2013-12-31."
+      }
+    },
+    {
+      "key": "header.cur_code",
+      "kind": "column",
+      "label": {
+        "en": "Currency Code"
+      },
+      "definition": {
+        "nl": "ISO Valutacode (ISO 4217). De locale valuta van de administratie, bijv. EUR.",
+        "en": "ISO currency code (ISO 4217). The local currency of the administration, e.g. EUR."
+      }
+    },
+    {
+      "key": "header.date_created",
+      "kind": "column",
+      "label": {
+        "en": "Date Created"
+      },
+      "definition": {
+        "nl": "De datum waarop de auditfile is aangemaakt. W3C date datatype. Bijv. 2009-01-27.",
+        "en": "The date on which the audit file was created. W3C date datatype. E.g. 2009-01-27."
+      }
+    },
+    {
+      "key": "header.software_desc",
+      "kind": "column",
+      "label": {
+        "en": "Software Description"
+      },
+      "definition": {
+        "nl": "De naam van het softwarepakket waarmee de Auditfile is gegenereerd.",
+        "en": "The name of the software package with which the audit file was generated."
+      }
+    },
+    {
+      "key": "header.software_version",
+      "kind": "column",
+      "label": {
+        "en": "Software Version"
+      },
+      "definition": {
+        "nl": "De versie van het softwarepakket waarmee de Auditfile is gegenereerd.",
+        "en": "The version of the software package with which the audit file was generated."
+      }
+    },
+    {
+      "key": "company",
+      "kind": "table",
+      "label": {
+        "en": "Company"
+      },
+      "definition": {
+        "nl": "Rechtspersoon.",
+        "en": "Legal entity."
+      }
+    },
+    {
+      "key": "company.company_ident",
+      "kind": "column",
+      "label": {
+        "en": "Company Identification"
+      },
+      "definition": {
+        "nl": "Het administratienummer van de onderneming. Het is bedoeld om uitwisseling naar derden (anders dan belastingdienst) mogelijk te maken. Er kan met onderlinge identificatie nummers gewerkt worden.",
+        "en": "The administration number of the company. It is intended to enable exchange with third parties (other than the Tax Administration). Mutual identification numbers can be used."
+      }
+    },
+    {
+      "key": "company.company_name",
+      "kind": "column",
+      "label": {
+        "en": "Company Name"
+      },
+      "definition": {
+        "nl": "Naam van de onderneming.",
+        "en": "Name of the company."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "company.tax_registration_country",
+      "kind": "column",
+      "label": {
+        "en": "Tax Registration Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166)",
+        "en": "ISO country code (ISO 3166)"
+      }
+    },
+    {
+      "key": "company.tax_reg_ident",
+      "kind": "column",
+      "label": {
+        "en": "Tax Registration Identification"
+      }
+    },
+    {
+      "key": "company_street_address",
+      "kind": "table",
+      "label": {
+        "en": "dan"
+      },
+      "definition": {
+        "nl": "Leverings-danwel vestigingsadres.",
+        "en": "Delivery or business address."
+      }
+    },
+    {
+      "key": "company_street_address.streetname",
+      "kind": "column",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are left empty."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 100 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 100."
+      }
+    },
+    {
+      "key": "company_street_address.number",
+      "kind": "column",
+      "label": {
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Huisnummer.",
+        "en": "House number."
+      }
+    },
+    {
+      "key": "company_street_address.number_extension",
+      "kind": "column",
+      "label": {
+        "en": "Number Extension"
+      },
+      "definition": {
+        "nl": "Huisnummertoevoegsels.",
+        "en": "House number suffixes."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 50 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 50."
+      }
+    },
+    {
+      "key": "company_street_address.property",
+      "kind": "column",
+      "label": {
+        "en": "Property"
+      },
+      "definition": {
+        "nl": "Eventueel aanvullend gebouw-of bedrijfsnaam.",
+        "en": "Optional additional building or company name."
+      }
+    },
+    {
+      "key": "company_street_address.city",
+      "kind": "column",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Plaats.",
+        "en": "Place."
+      }
+    },
+    {
+      "key": "company_street_address.postal_code",
+      "kind": "column",
+      "label": {
+        "en": "Postal Code"
+      },
+      "definition": {
+        "nl": "Postcode.",
+        "en": "Postcode."
+      }
+    },
+    {
+      "key": "company_street_address.region",
+      "kind": "column",
+      "label": {
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Provincie.",
+        "en": "Province."
+      }
+    },
+    {
+      "key": "company_street_address.country",
+      "kind": "column",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166).",
+        "en": "ISO country code (ISO 3166)."
+      }
+    },
+    {
+      "key": "company_postal_address",
+      "kind": "table",
+      "label": {
+        "en": "dan"
+      },
+      "definition": {
+        "nl": "Postadres.",
+        "en": "Postal address."
+      }
+    },
+    {
+      "key": "company_postal_address.streetname",
+      "kind": "column",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are left empty."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 100 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 100."
+      }
+    },
+    {
+      "key": "company_postal_address.number",
+      "kind": "column",
+      "label": {
+        "en": "Number"
+      }
+    },
+    {
+      "key": "company_postal_address.number_extension",
+      "kind": "column",
+      "label": {
+        "en": "Number Extension"
+      },
+      "definition": {
+        "nl": "Huisnummertoevoegsels",
+        "en": "House number suffixes"
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 50 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 50."
+      }
+    },
+    {
+      "key": "company_postal_address.property",
+      "kind": "column",
+      "label": {
+        "en": "Property"
+      }
+    },
+    {
+      "key": "company_postal_address.city",
+      "kind": "column",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Debiteur, crediteurplaats.",
+        "en": "Debtor, creditor place."
+      }
+    },
+    {
+      "key": "company_postal_address.postal_code",
+      "kind": "column",
+      "label": {
+        "en": "Postal Code"
+      }
+    },
+    {
+      "key": "company_postal_address.region",
+      "kind": "column",
+      "label": {
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Provincie.",
+        "en": "Province."
+      }
+    },
+    {
+      "key": "company_postal_address.country",
+      "kind": "column",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166)",
+        "en": "ISO country code (ISO 3166)"
+      }
+    },
+    {
+      "key": "company.customers_suppliers",
+      "kind": "group",
+      "label": {
+        "en": "Customers suppliers"
+      },
+      "definition": {
+        "nl": "Debiteuren, Crediteuren stamgegevens.",
+        "en": "Debtors, creditors master data."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier",
+      "kind": "table",
+      "label": {
+        "en": "Customer supplier"
+      },
+      "definition": {
+        "nl": "Algemene gegevens van klanten en leveranciers.",
+        "en": "General data of customers and suppliers."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier.cust_sup_id",
+      "kind": "column",
+      "label": {
+        "en": "Customer Supplier ID"
+      },
+      "definition": {
+        "nl": "Unieke debiteuren-of crediteurennummer.",
+        "en": "Unique debtor or creditor number."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier.cust_sup_name",
+      "kind": "column",
+      "label": {
+        "en": "Customer Supplier Name"
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier.contact",
+      "kind": "column",
+      "label": {
+        "en": "Contact"
+      },
+      "definition": {
+        "nl": "Contactpersoon.",
+        "en": "Contact person."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier.telephone",
+      "kind": "column",
+      "label": {
+        "en": "Telephone"
+      },
+      "definition": {
+        "nl": "Telefoonnummer.",
+        "en": "Telephone number."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier.fax",
+      "kind": "column",
+      "label": {
+        "en": "Fax"
+      },
+      "definition": {
+        "nl": "Faxnummer.",
+        "en": "Fax number."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier.e_mail",
+      "kind": "column",
+      "label": {
+        "en": "E-mail"
+      },
+      "definition": {
+        "nl": "Email adres.",
+        "en": "Email address."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier.website",
+      "kind": "column",
+      "label": {
+        "en": "Website"
+      },
+      "definition": {
+        "nl": "URL website.",
+        "en": "Website URL."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier.commerce_nr",
+      "kind": "column",
+      "label": {
+        "en": "Chamber Of Commerce Number"
+      },
+      "definition": {
+        "nl": "KvK nummer",
+        "en": "KvK number"
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 100 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 100."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier.tax_registration_country",
+      "kind": "column",
+      "label": {
+        "en": "Tax Registration Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166)",
+        "en": "ISO country code (ISO 3166)"
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier.tax_reg_ident",
+      "kind": "column",
+      "label": {
+        "en": "Tax Registration Identifier"
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier.relationship_id",
+      "kind": "column",
+      "label": {
+        "en": "Relationship ID"
+      },
+      "definition": {
+        "nl": "Soort relatie wat de organisatie met debiteur/crediteur heeft. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Type of relationship the organisation has with the debtor/creditor. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier.cust_sup_tp",
+      "kind": "column",
+      "label": {
+        "en": "Customer Supplier Type"
+      },
+      "definition": {
+        "nl": "Code die aangeeft of het om een debiteur, crediteur, of beide is.",
+        "en": "Code indicating whether it concerns a debtor, creditor, or both."
+      },
+      "codes": {
+        "B": {
+          "en": "Both Customer and Supplier"
+        },
+        "C": {
+          "en": "Customer"
+        },
+        "O": {
+          "en": "Other, no Customer or Supplier"
+        },
+        "S": {
+          "en": "Supplier"
+        }
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier.cust_sup_grp_id",
+      "kind": "column",
+      "label": {
+        "en": "Customer Supplier Group ID"
+      },
+      "definition": {
+        "nl": "Klantengroep. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Customer group. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier.cust_credit_limit",
+      "kind": "column",
+      "label": {
+        "en": "Customer Credit Limit Amount"
+      },
+      "definition": {
+        "nl": "Debiteur kredietlimiet bedrag.",
+        "en": "Debtor credit limit amount."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier.supplier_limit",
+      "kind": "column",
+      "label": {
+        "en": "Supplier Limit Amount"
+      },
+      "definition": {
+        "nl": "Crediteur limiet bedrag.",
+        "en": "Creditor limit amount."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_street_address",
+      "kind": "table",
+      "label": {
+        "en": "dan"
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_street_address.streetname",
+      "kind": "column",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are left empty."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 100 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 100."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_street_address.number",
+      "kind": "column",
+      "label": {
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Huisnummer.",
+        "en": "House number."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_street_address.number_extension",
+      "kind": "column",
+      "label": {
+        "en": "Number Extension"
+      },
+      "definition": {
+        "nl": "Huisnummertoevoegsels.",
+        "en": "House number suffixes."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 50 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 50."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_street_address.property",
+      "kind": "column",
+      "label": {
+        "en": "Property"
+      },
+      "definition": {
+        "nl": "Eventueel aanvullend gebouw-of bedrijfsnaam.",
+        "en": "Optional additional building or company name."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_street_address.city",
+      "kind": "column",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Plaats.",
+        "en": "Place."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_street_address.postal_code",
+      "kind": "column",
+      "label": {
+        "en": "Postal Code"
+      },
+      "definition": {
+        "nl": "Postcode.",
+        "en": "Postcode."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_street_address.region",
+      "kind": "column",
+      "label": {
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Provincie.",
+        "en": "Province."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_street_address.country",
+      "kind": "column",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166).",
+        "en": "ISO country code (ISO 3166)."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_postal_address",
+      "kind": "table",
+      "label": {
+        "en": "dan"
+      },
+      "definition": {
+        "nl": "Postadres.",
+        "en": "Postal address."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_postal_address.streetname",
+      "kind": "column",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are left empty."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 100 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 100."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_postal_address.number",
+      "kind": "column",
+      "label": {
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Huisnummer.",
+        "en": "House number."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_postal_address.number_extension",
+      "kind": "column",
+      "label": {
+        "en": "Number Extension"
+      },
+      "definition": {
+        "nl": "Huisnummertoevoegsels",
+        "en": "House number suffixes"
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 50 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 50."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_postal_address.property",
+      "kind": "column",
+      "label": {
+        "en": "Property"
+      },
+      "definition": {
+        "nl": "Eventueel aanvullend gebouw-of bedrijfsnaam.",
+        "en": "Optional additional building or company name."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_postal_address.city",
+      "kind": "column",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Debiteur, crediteurplaats.",
+        "en": "Debtor, creditor place."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_postal_address.postal_code",
+      "kind": "column",
+      "label": {
+        "en": "Postal Code"
+      },
+      "definition": {
+        "nl": "Postcode.",
+        "en": "Postcode."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_postal_address.region",
+      "kind": "column",
+      "label": {
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Provincie.",
+        "en": "Province."
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_postal_address.country",
+      "kind": "column",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166)",
+        "en": "ISO country code (ISO 3166)"
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_bank_account",
+      "kind": "table",
+      "label": {
+        "en": "Bank account"
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_bank_account.bank_acc_nr",
+      "kind": "column",
+      "label": {
+        "en": "Bank Account Number"
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier_bank_account.bank_id_cd",
+      "kind": "column",
+      "label": {
+        "en": "Bank Identifier Code"
+      },
+      "definition": {
+        "nl": "BIC",
+        "en": "BIC"
+      }
+    },
+    {
+      "key": "customers_suppliers_customer_supplier.customer_supplier_history",
+      "kind": "group",
+      "label": {
+        "en": "Customer supplier history"
+      },
+      "definition": {
+        "nl": "Historische stam gegevens van de debiteur / crediteur na aanpassing van de gegevens.",
+        "en": "Historical master data of the debtor / creditor after the data were changed."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier",
+      "kind": "table",
+      "label": {
+        "en": "Customer supplier"
+      },
+      "definition": {
+        "nl": "Algemene gegevens van klanten en leveranciers.",
+        "en": "General data of customers and suppliers."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.cust_sup_id",
+      "kind": "column",
+      "label": {
+        "en": "Customer Supplier ID"
+      },
+      "definition": {
+        "nl": "Unieke debiteuren-of crediteurennummer.",
+        "en": "Unique debtor or creditor number."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.cust_sup_name",
+      "kind": "column",
+      "label": {
+        "en": "Customer Supplier Name"
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.contact",
+      "kind": "column",
+      "label": {
+        "en": "Contact"
+      },
+      "definition": {
+        "nl": "Contactpersoon.",
+        "en": "Contact person."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.telephone",
+      "kind": "column",
+      "label": {
+        "en": "Telephone"
+      },
+      "definition": {
+        "nl": "Telefoonnummer.",
+        "en": "Telephone number."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.fax",
+      "kind": "column",
+      "label": {
+        "en": "Fax"
+      },
+      "definition": {
+        "nl": "Faxnummer.",
+        "en": "Fax number."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.e_mail",
+      "kind": "column",
+      "label": {
+        "en": "E-mail"
+      },
+      "definition": {
+        "nl": "Email adres.",
+        "en": "Email address."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.website",
+      "kind": "column",
+      "label": {
+        "en": "Website"
+      },
+      "definition": {
+        "nl": "URL website.",
+        "en": "Website URL."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.commerce_nr",
+      "kind": "column",
+      "label": {
+        "en": "Chamber Of Commerce Number"
+      },
+      "definition": {
+        "nl": "KvK nummer",
+        "en": "KvK number"
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 100 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 100."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.tax_registration_country",
+      "kind": "column",
+      "label": {
+        "en": "Tax Registration Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166)",
+        "en": "ISO country code (ISO 3166)"
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.tax_reg_ident",
+      "kind": "column",
+      "label": {
+        "en": "Tax Registration Identifier"
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.relationship_id",
+      "kind": "column",
+      "label": {
+        "en": "Relationship ID"
+      },
+      "definition": {
+        "nl": "Soort relatie wat de organisatie met debiteur/crediteur heeft. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Type of relationship the organisation has with the debtor/creditor. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.cust_sup_tp",
+      "kind": "column",
+      "label": {
+        "en": "Customer Supplier Type"
+      },
+      "definition": {
+        "nl": "Code die aangeeft of het om een debiteur, crediteur, of beide is.",
+        "en": "Code indicating whether it concerns a debtor, creditor, or both."
+      },
+      "codes": {
+        "B": {
+          "en": "Both Customer and Supplier"
+        },
+        "C": {
+          "en": "Customer"
+        },
+        "O": {
+          "en": "Other, no Customer or Supplier"
+        },
+        "S": {
+          "en": "Supplier"
+        }
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.cust_sup_grp_id",
+      "kind": "column",
+      "label": {
+        "en": "Customer Supplier Group ID"
+      },
+      "definition": {
+        "nl": "Klantengroep. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Customer group. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.cust_credit_limit",
+      "kind": "column",
+      "label": {
+        "en": "Customer Credit Limit Amount"
+      },
+      "definition": {
+        "nl": "Debiteur kredietlimiet bedrag.",
+        "en": "Debtor credit limit amount."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.supplier_limit",
+      "kind": "column",
+      "label": {
+        "en": "Supplier Limit Amount"
+      },
+      "definition": {
+        "nl": "Crediteur limiet bedrag.",
+        "en": "Creditor limit amount."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_street_address",
+      "kind": "table",
+      "label": {
+        "en": "Address"
+      },
+      "definition": {
+        "nl": "Leverings-danwel vestigingsadres.",
+        "en": "Delivery or business address."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_street_address.streetname",
+      "kind": "column",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden dan leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are then left empty."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 100 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 100."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_street_address.number",
+      "kind": "column",
+      "label": {
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Huisnummer.",
+        "en": "House number."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_street_address.number_extension",
+      "kind": "column",
+      "label": {
+        "en": "Number Extension"
+      },
+      "definition": {
+        "nl": "Huisnummertoevoegsels.",
+        "en": "House number suffixes."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 50 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 50."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_street_address.property",
+      "kind": "column",
+      "label": {
+        "en": "Property"
+      },
+      "definition": {
+        "nl": "Eventueel aanvullend gebouw-of bedrijfsnaam.",
+        "en": "Optional additional building or company name."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_street_address.city",
+      "kind": "column",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Plaats.",
+        "en": "Place."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_street_address.postal_code",
+      "kind": "column",
+      "label": {
+        "en": "Postal Code"
+      },
+      "definition": {
+        "nl": "Postcode.",
+        "en": "Postcode."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_street_address.region",
+      "kind": "column",
+      "label": {
+        "en": "Region"
+      },
+      "definition": {
+        "nl": "Provincie.",
+        "en": "Province."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_street_address.country",
+      "kind": "column",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166).",
+        "en": "ISO country code (ISO 3166)."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_postal_address",
+      "kind": "table",
+      "label": {
+        "en": "Address"
+      },
+      "definition": {
+        "nl": "Postadres.",
+        "en": "Postal address."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_postal_address.streetname",
+      "kind": "column",
+      "label": {
+        "en": "Streetname"
+      },
+      "definition": {
+        "nl": "Straatnaam. Als Streetname, Number en Number Extension niet gesplitst kunnen worden doorgegeven dan deze informatie in Streetname doorgegeven. Number en Number Extension worden dan leeg doorgegeven.",
+        "en": "Street name. If Streetname, Number and Number Extension cannot be supplied separately, this information is supplied in Streetname. Number and Number Extension are then left empty."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 100 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 100."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_postal_address.number",
+      "kind": "column",
+      "label": {
+        "en": "Number"
+      },
+      "definition": {
+        "nl": "Huisnummer.",
+        "en": "House number."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_postal_address.number_extension",
+      "kind": "column",
+      "label": {
+        "en": "Number Extension"
+      },
+      "definition": {
+        "nl": "Huisnummertoevoegsels",
+        "en": "House number suffixes"
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 50 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 50."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_postal_address.property",
+      "kind": "column",
+      "label": {
+        "en": "Property"
+      },
+      "definition": {
+        "nl": "Eventueel aanvullend gebouw-of bedrijfsnaam.",
+        "en": "Optional additional building or company name."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_postal_address.city",
+      "kind": "column",
+      "label": {
+        "en": "City"
+      },
+      "definition": {
+        "nl": "Debiteur, crediteurplaats.",
+        "en": "Debtor, creditor place."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_postal_address.postal_code",
+      "kind": "column",
+      "label": {
+        "en": "Postal Code"
+      },
+      "definition": {
+        "nl": "Postcode.",
+        "en": "Postcode."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_postal_address.region",
+      "kind": "column",
+      "label": {
+        "en": "Region"
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_postal_address.country",
+      "kind": "column",
+      "label": {
+        "en": "Country"
+      },
+      "definition": {
+        "nl": "ISO Landencode (ISO 3166)",
+        "en": "ISO country code (ISO 3166)"
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_bank_account",
+      "kind": "table",
+      "label": {
+        "en": "Account"
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_bank_account.bank_acc_nr",
+      "kind": "column",
+      "label": {
+        "en": "Bank Account Number"
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier_bank_account.bank_id_cd",
+      "kind": "column",
+      "label": {
+        "en": "Bank Identifier Code"
+      },
+      "definition": {
+        "nl": "BIC",
+        "en": "BIC"
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.change_info",
+      "kind": "group",
+      "label": {
+        "en": "Change information"
+      },
+      "definition": {
+        "nl": "Algemene gegevens met betrekking tot de verandering die is uitgevoerd de gegevens.",
+        "en": "General data about the change that was made to the data."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.change_info_user_id",
+      "kind": "column",
+      "label": {
+        "en": "User ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de gebruiker.",
+        "en": "Reference to the user."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.change_info_change_date_time",
+      "kind": "column",
+      "label": {
+        "en": "Date and time"
+      },
+      "definition": {
+        "nl": "Datum en tijd van de aanpassing.",
+        "en": "Date and time of the change."
+      }
+    },
+    {
+      "key": "customer_supplier_history_customer_supplier.change_info_change_description",
+      "kind": "column",
+      "label": {
+        "en": "Type of change description"
+      },
+      "definition": {
+        "nl": "Omschrijving van de soort aanpassing.",
+        "en": "Description of the type of change."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 9999 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 9999."
+      }
+    },
+    {
+      "key": "company.general_ledger",
+      "kind": "group",
+      "label": {
+        "en": "General ledger"
+      },
+      "definition": {
+        "nl": "Grootboek stamgegevens.",
+        "en": "General ledger master data."
+      }
+    },
+    {
+      "key": "ledger_account",
+      "kind": "table",
+      "label": {
+        "en": "Ledger account"
+      },
+      "definition": {
+        "nl": "Rekeningschema.",
+        "en": "Chart of accounts."
+      }
+    },
+    {
+      "key": "ledger_account.acc_id",
+      "kind": "column",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Unieke grootboekrekeningcode.",
+        "en": "Unique general ledger account code."
+      }
+    },
+    {
+      "key": "ledger_account.acc_desc",
+      "kind": "column",
+      "label": {
+        "en": "Account Description"
+      },
+      "definition": {
+        "nl": "Grootboekrekeningnaam.",
+        "en": "General ledger account name."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "ledger_account.acc_tp",
+      "kind": "column",
+      "label": {
+        "en": "Account Type"
+      },
+      "definition": {
+        "nl": "Soort grootboekrekening bijvoorbeeld Balansrekening/Resultaatrekening etc.",
+        "en": "Type of general ledger account, for example balance sheet account/profit and loss account etc."
+      },
+      "codes": {
+        "B": {
+          "en": "Balance"
+        },
+        "M": {
+          "en": "Mixed"
+        },
+        "P": {
+          "en": "Profit and Loss"
+        }
+      }
+    },
+    {
+      "key": "ledger_account.lead_code",
+      "kind": "column",
+      "label": {
+        "en": "Lead Code"
+      },
+      "definition": {
+        "nl": "Lead code.",
+        "en": "Lead code."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Dit element NIET gebruiken voor RGS.",
+        "en": "Further specification 2017: Do NOT use this element for RGS."
+      }
+    },
+    {
+      "key": "ledger_account.lead_description",
+      "kind": "column",
+      "label": {
+        "en": "Lead Description"
+      },
+      "definition": {
+        "nl": "Lead Description.",
+        "en": "Lead Description."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Dit element NIET gebruiken voor RGS.",
+        "en": "Further specification 2017: Do NOT use this element for RGS."
+      }
+    },
+    {
+      "key": "ledger_account.lead_reference",
+      "kind": "column",
+      "label": {
+        "en": "Lead Reference"
+      },
+      "definition": {
+        "nl": "Lead Reference",
+        "en": "Lead Reference"
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Dit element NIET gebruiken voor RGS.",
+        "en": "Further specification 2017: Do NOT use this element for RGS."
+      }
+    },
+    {
+      "key": "ledger_account.lead_cross_ref",
+      "kind": "column",
+      "label": {
+        "en": "Lead Cross Reference"
+      },
+      "definition": {
+        "nl": "Lead Cross Reference",
+        "en": "Lead Cross Reference"
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Dit element NIET gebruiken voor RGS.",
+        "en": "Further specification 2017: Do NOT use this element for RGS."
+      }
+    },
+    {
+      "key": "taxonomy",
+      "kind": "table",
+      "label": {
+        "en": "Taxonomy"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een bestaande taxonomie (gegevenscatalogus).",
+        "en": "Reference to an existing taxonomy (data catalogue)."
+      }
+    },
+    {
+      "key": "taxonomy.taxo_ref",
+      "kind": "column",
+      "label": {
+        "en": "Taxonomy Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een bestaande taxonomie (gegevenscatalogus).",
+        "en": "Reference to an existing taxonomy (data catalogue)."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Bevat RGS namespace van het conceptenschema uit de SBR taxonomie. RGS versie 1 = http://www.nltaxonomie.nl/rgs/10.0/basis/rgs/items/rekeningen RGS versie 2 = http://www.nltaxonomie.nl/rgs/nt11/rgs/20160919.a/dictionary/reke ningen\nNadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Contains the RGS namespace of the concept schema from the SBR taxonomy. RGS version 1 = http://www.nltaxonomie.nl/rgs/10.0/basis/rgs/items/rekeningen RGS version 2 = http://www.nltaxonomie.nl/rgs/nt11/rgs/20160919.a/dictionary/rekeningen\nFurther specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "entry_point",
+      "kind": "table",
+      "label": {
+        "en": "Entry point"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een entry point (rapportsoort) binnen een taxonomie (gegevenscatalogus).",
+        "en": "Reference to an entry point (report type) within a taxonomy (data catalogue)."
+      }
+    },
+    {
+      "key": "entry_point.entry_point_ref",
+      "kind": "column",
+      "label": {
+        "en": "Entry Point Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een entry point (rapportsoort) binnen een taxonomie (gegevenscatalogus).",
+        "en": "Reference to an entry point (report type) within a taxonomy (data catalogue)."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "entry_point.concept_ref",
+      "kind": "column",
+      "label": {
+        "en": "Concept Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een concept (rapportage element definitie) binnen de entry point (rapportsoort) binnen een taxonomie (gegevenscatalogus).",
+        "en": "Reference to a concept (reporting element definition) within the entry point (report type) within a taxonomy (data catalogue)."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Bevat de RGS conceptnaam. (bv. BIvaKouVvpBeg)\nNadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Contains the RGS concept name (e.g. BIvaKouVvpBeg)\nFurther specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "domain_member",
+      "kind": "table",
+      "label": {
+        "en": "Domain member"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een domain member (variabele op de as van een rapportage dimensie), binnen een domain, binnen een entry point (rapportsoort) .",
+        "en": "Reference to a domain member (variable on the axis of a reporting dimension), within a domain, within an entry point (report type)."
+      }
+    },
+    {
+      "key": "domain_member.domain_member_ref",
+      "kind": "column",
+      "label": {
+        "en": "Domain Member Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een domain member (onderdeel binnen een rapportage dimensie) , binnen een entry point (rapportsoort).",
+        "en": "Reference to a domain member (part of a reporting dimension), within an entry point (report type)."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "ledger_account.gl_account_history",
+      "kind": "group",
+      "label": {
+        "en": "Ledger account history"
+      },
+      "definition": {
+        "nl": "Historische stam gegevens van de grootboekrekening na wijziging.",
+        "en": "Historical master data of the general ledger account after a change."
+      }
+    },
+    {
+      "key": "gl_account",
+      "kind": "table",
+      "label": {
+        "en": "Ledger account"
+      },
+      "definition": {
+        "nl": "Rekeningschema.",
+        "en": "Chart of accounts."
+      }
+    },
+    {
+      "key": "gl_account.acc_id",
+      "kind": "column",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Unieke grootboekrekeningcode.",
+        "en": "Unique general ledger account code."
+      }
+    },
+    {
+      "key": "gl_account.acc_desc",
+      "kind": "column",
+      "label": {
+        "en": "Account Description"
+      },
+      "definition": {
+        "nl": "Grootboekrekeningnaam.",
+        "en": "General ledger account name."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "gl_account.acc_tp",
+      "kind": "column",
+      "label": {
+        "en": "Account Type"
+      },
+      "definition": {
+        "nl": "Soort grootboekrekening bijvoorbeeld Balansrekening/Resultaatrekening etc.",
+        "en": "Type of general ledger account, for example balance sheet account/profit and loss account etc."
+      },
+      "codes": {
+        "B": {
+          "en": "Balance"
+        },
+        "M": {
+          "en": "Mixed"
+        },
+        "P": {
+          "en": "Profit and Loss"
+        }
+      }
+    },
+    {
+      "key": "gl_account.lead_code",
+      "kind": "column",
+      "label": {
+        "en": "Lead Code"
+      },
+      "definition": {
+        "nl": "Lead code.",
+        "en": "Lead code."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Dit element NIET gebruiken voor RGS.",
+        "en": "Further specification 2017: Do NOT use this element for RGS."
+      }
+    },
+    {
+      "key": "gl_account.lead_description",
+      "kind": "column",
+      "label": {
+        "en": "Lead Description"
+      },
+      "definition": {
+        "nl": "Lead Description.",
+        "en": "Lead Description."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Dit element NIET gebruiken voor RGS.",
+        "en": "Further specification 2017: Do NOT use this element for RGS."
+      }
+    },
+    {
+      "key": "gl_account.lead_reference",
+      "kind": "column",
+      "label": {
+        "en": "Lead Reference"
+      },
+      "definition": {
+        "nl": "Lead Reference",
+        "en": "Lead Reference"
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Dit element NIET gebruiken voor RGS.",
+        "en": "Further specification 2017: Do NOT use this element for RGS."
+      }
+    },
+    {
+      "key": "gl_account.lead_cross_ref",
+      "kind": "column",
+      "label": {
+        "en": "Lead Cross Reference"
+      },
+      "definition": {
+        "nl": "Lead Cross Reference",
+        "en": "Lead Cross Reference"
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Dit element NIET gebruiken voor RGS.",
+        "en": "Further specification 2017: Do NOT use this element for RGS."
+      }
+    },
+    {
+      "key": "gl_account.change_info",
+      "kind": "group",
+      "label": {
+        "en": "Change information"
+      },
+      "definition": {
+        "nl": "Algemene gegevens met betrekking tot de verandering die is uitgevoerd de gegevens.",
+        "en": "General data about the change that was made to the data."
+      }
+    },
+    {
+      "key": "gl_account.change_info_user_id",
+      "kind": "column",
+      "label": {
+        "en": "User ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de gebruiker.",
+        "en": "Reference to the user."
+      }
+    },
+    {
+      "key": "gl_account.change_info_change_date_time",
+      "kind": "column",
+      "label": {
+        "en": "Date and time"
+      },
+      "definition": {
+        "nl": "Datum en tijd van de aanpassing.",
+        "en": "Date and time of the change."
+      }
+    },
+    {
+      "key": "gl_account.change_info_change_description",
+      "kind": "column",
+      "label": {
+        "en": "Type of change description"
+      },
+      "definition": {
+        "nl": "Omschrijving van de soort aanpassing.",
+        "en": "Description of the type of change."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 9999 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 9999."
+      }
+    },
+    {
+      "key": "company.general_ledger_basics",
+      "kind": "group",
+      "label": {
+        "en": "Basics"
+      }
+    },
+    {
+      "key": "basic",
+      "kind": "table",
+      "label": {
+        "en": "Basic"
+      },
+      "definition": {
+        "nl": "Code en omschrijving van diverse stamgegevens.",
+        "en": "Code and description of various master data."
+      }
+    },
+    {
+      "key": "basic.basic_type",
+      "kind": "column",
+      "label": {
+        "en": "Basic Type"
+      },
+      "definition": {
+        "nl": "Soort stamgegeven.",
+        "en": "Type of master data item."
+      },
+      "codes": {
+        "02": {
+          "en": "Cost codes / Cost ID"
+        },
+        "03": {
+          "en": "Product codes / Product ID"
+        },
+        "04": {
+          "en": "Project codes / Project ID"
+        },
+        "05": {
+          "en": "Article Group codes / Article Group ID"
+        },
+        "12": {
+          "en": "Journal codes / Journal ID"
+        },
+        "14": {
+          "en": "Quantity codes / Quantity ID"
+        },
+        "23": {
+          "en": "Relationship codes / Relationship ID"
+        },
+        "29": {
+          "en": "Source codes / Source ID"
+        },
+        "30": {
+          "en": "User codes / User ID"
+        }
+      }
+    },
+    {
+      "key": "basic.basic_id",
+      "kind": "column",
+      "label": {
+        "en": "Basic ID"
+      },
+      "definition": {
+        "nl": "Sleutel van het stamgegeven.",
+        "en": "Key of the master data item."
+      }
+    },
+    {
+      "key": "basic.basic_desc",
+      "kind": "column",
+      "label": {
+        "en": "Basic Description"
+      },
+      "definition": {
+        "nl": "Omschrijving stamgegeven.",
+        "en": "Master data description."
+      }
+    },
+    {
+      "key": "company.vat_codes",
+      "kind": "group",
+      "label": {
+        "en": "Vat codes"
+      }
+    },
+    {
+      "key": "vat_code",
+      "kind": "table",
+      "label": {
+        "en": "Vat code"
+      }
+    },
+    {
+      "key": "vat_code.vat_id",
+      "kind": "column",
+      "label": {
+        "en": "Vat id"
+      }
+    },
+    {
+      "key": "vat_code.vat_desc",
+      "kind": "column",
+      "label": {
+        "en": "VAT Description"
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 100 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 100."
+      }
+    },
+    {
+      "key": "vat_code.vat_to_pay_acc_id",
+      "kind": "column",
+      "label": {
+        "en": "VAT To Pay Account ID"
+      },
+      "definition": {
+        "nl": "Grootboekrekening waarop de af te dragen btw wordt geboekt.",
+        "en": "General ledger account on which the VAT payable is posted."
+      }
+    },
+    {
+      "key": "vat_code.vat_to_claim_acc_id",
+      "kind": "column",
+      "label": {
+        "en": "VAT To Claim Account ID"
+      },
+      "definition": {
+        "nl": "Grootboekrekening waarop de te vorderen btw wordt geboekt.",
+        "en": "General ledger account on which the VAT receivable is posted."
+      }
+    },
+    {
+      "key": "company.periods",
+      "kind": "group",
+      "label": {
+        "en": "Periods"
+      }
+    },
+    {
+      "key": "period",
+      "kind": "table",
+      "label": {
+        "en": "Period"
+      }
+    },
+    {
+      "key": "period.period_number",
+      "kind": "column",
+      "label": {
+        "en": "Period number"
+      },
+      "definition": {
+        "nl": "Periodenummer van de hier gedefinieerde periode.",
+        "en": "Period number of the period defined here."
+      }
+    },
+    {
+      "key": "period.period_desc",
+      "kind": "column",
+      "label": {
+        "en": "Period description"
+      },
+      "definition": {
+        "nl": "Omschrijving van de hier gedefinieerde periode.",
+        "en": "Description of the period defined here."
+      }
+    },
+    {
+      "key": "period.start_date_period",
+      "kind": "column",
+      "label": {
+        "en": "Start Date period"
+      },
+      "definition": {
+        "nl": "Startdatum van de gedefinieerde periode. W3C date datatype. Bijv. 2008-01-01.",
+        "en": "Start date of the defined period. W3C date datatype. E.g. 2008-01-01."
+      }
+    },
+    {
+      "key": "period.start_time_period",
+      "kind": "column",
+      "label": {
+        "en": "Start Time period"
+      },
+      "definition": {
+        "nl": "Start tijd van de gedefinieerde periode. W3C time datatype. Bijv. 08:00:00.",
+        "en": "Start time of the defined period. W3C time datatype. E.g. 08:00:00."
+      }
+    },
+    {
+      "key": "period.end_date_period",
+      "kind": "column",
+      "label": {
+        "en": "End Date period"
+      },
+      "definition": {
+        "nl": "Einddatum van de gedefinieerde periode. W3C date datatype. Bijv. 2008-01-31.",
+        "en": "End date of the defined period. W3C date datatype. E.g. 2008-01-31."
+      }
+    },
+    {
+      "key": "period.end_time_period",
+      "kind": "column",
+      "label": {
+        "en": "End Time period"
+      },
+      "definition": {
+        "nl": "Eindtijd van de gedefinieerde periode. W3C time datatype. Bijv. 23:59:59",
+        "en": "End time of the defined period. W3C time datatype. E.g. 23:59:59"
+      }
+    },
+    {
+      "key": "company.opening_balance",
+      "kind": "group",
+      "label": {
+        "en": "Opening balance"
+      },
+      "definition": {
+        "nl": "Openingsbalans of beginbalans. Bij het ontbreken van een openingsbalans in de transacties moet deze onder het element openingsbalans worden opgenomen. De openingsbalans mag en moet dus maar 1 keer in de Auditfile worden opgenomen. Of onder het element openingsbalans of onder transacties. De bedragen in de openingsbalans worden vermeld in de locale valuta. Dit is de valutasoort die in de header van het bericht wordt gevuld.",
+        "en": "Opening balance or starting balance. If the opening balance is missing from the transactions, it must be included under the opening balance element. The opening balance may and must therefore be included only once in the audit file, either under the opening balance element or under transactions. The amounts in the opening balance are stated in the local currency. This is the currency filled in the header of the message."
+      }
+    },
+    {
+      "key": "company.opening_balance_op_bal_date",
+      "kind": "column",
+      "label": {
+        "en": "Opening Balance Date"
+      },
+      "definition": {
+        "nl": "W3C date datatype. Bijv. 2008-01-01.",
+        "en": "W3C date datatype. E.g. 2008-01-01."
+      }
+    },
+    {
+      "key": "company.opening_balance_op_bal_desc",
+      "kind": "column",
+      "label": {
+        "en": "Opening Balance Description"
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 100 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 100."
+      }
+    },
+    {
+      "key": "company.opening_balance_lines_count",
+      "kind": "column",
+      "label": {
+        "en": "Lines Count"
+      },
+      "definition": {
+        "nl": "Het aantal aanwezige opening balans regels.",
+        "en": "The number of opening balance lines present."
+      }
+    },
+    {
+      "key": "company.opening_balance_total_debit",
+      "kind": "column",
+      "label": {
+        "en": "Total Debit"
+      },
+      "definition": {
+        "nl": "Totaal bedrag van de debet bedragen in de openings balans regels.",
+        "en": "Total of the debit amounts in the opening balance lines."
+      }
+    },
+    {
+      "key": "company.opening_balance_total_credit",
+      "kind": "column",
+      "label": {
+        "en": "Total Credit"
+      },
+      "definition": {
+        "nl": "Totaal bedrag van de credit bedragen in de openings balans regels.",
+        "en": "Total of the credit amounts in the opening balance lines."
+      }
+    },
+    {
+      "key": "ob_line",
+      "kind": "table",
+      "label": {
+        "en": "Opening balance line"
+      }
+    },
+    {
+      "key": "ob_line.nr",
+      "kind": "column",
+      "label": {
+        "en": "Opening Balance Line Number"
+      },
+      "definition": {
+        "nl": "Uniek openingsbalans regelnummer.",
+        "en": "Unique opening balance line number."
+      }
+    },
+    {
+      "key": "ob_line.acc_id",
+      "kind": "column",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Grootboekrekening.",
+        "en": "General ledger account."
+      }
+    },
+    {
+      "key": "ob_line.amnt",
+      "kind": "column",
+      "label": {
+        "en": "Amount"
+      },
+      "definition": {
+        "nl": "Bedrag in locale valuta",
+        "en": "Amount in local currency"
+      }
+    },
+    {
+      "key": "ob_line.amnt_tp",
+      "kind": "column",
+      "label": {
+        "en": "Amount Type"
+      },
+      "definition": {
+        "nl": "Indicatie of bedrag Debet of Credit is.",
+        "en": "Indicator whether the amount is debit or credit."
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "key": "company.opening_balance_ob_subledgers",
+      "kind": "group",
+      "label": {
+        "en": "Subledgers"
+      }
+    },
+    {
+      "key": "ob_subledger",
+      "kind": "table",
+      "label": {
+        "en": "Subledger"
+      }
+    },
+    {
+      "key": "ob_subledger.sb_type",
+      "kind": "column",
+      "label": {
+        "en": "Subledger Type"
+      },
+      "codes": {
+        "CS": {
+          "en": "Customers / Suppliers"
+        },
+        "CU": {
+          "en": "Customers"
+        },
+        "SU": {
+          "en": "Suppliers"
+        },
+        "ZZ": {
+          "en": "Other"
+        }
+      }
+    },
+    {
+      "key": "ob_subledger.sb_desc",
+      "kind": "column",
+      "label": {
+        "en": "Subledger Description"
+      }
+    },
+    {
+      "key": "ob_subledger.lines_count",
+      "kind": "column",
+      "label": {
+        "en": "Lines Count"
+      },
+      "definition": {
+        "nl": "Totaal aantal subgrootboek regels.",
+        "en": "Total number of subledger lines."
+      }
+    },
+    {
+      "key": "ob_subledger.total_debit",
+      "kind": "column",
+      "label": {
+        "en": "Total Debit"
+      },
+      "definition": {
+        "nl": "Totaalbedrag van de debet bedragen in het subgrootboek.",
+        "en": "Total of the debit amounts in the subledger."
+      }
+    },
+    {
+      "key": "ob_subledger.total_credit",
+      "kind": "column",
+      "label": {
+        "en": "Total Credit"
+      },
+      "definition": {
+        "nl": "Totaalbedrag van de credit bedragen in het subgrootboek.",
+        "en": "Total of the credit amounts in the subledger."
+      }
+    },
+    {
+      "key": "ob_sb_line",
+      "kind": "table",
+      "label": {
+        "en": "Subledger line"
+      }
+    },
+    {
+      "key": "ob_sb_line.nr",
+      "kind": "column",
+      "label": {
+        "en": "Subledger Line Number"
+      },
+      "definition": {
+        "nl": "Subgrootboek regelnummer. Moet uniek zijn binnen het subgrootboek.",
+        "en": "Subledger line number. Must be unique within the subledger."
+      }
+    },
+    {
+      "key": "ob_sb_line.ob_line_nr",
+      "kind": "column",
+      "label": {
+        "en": "Opening Balance Line Number"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de openingsbalans regel waartoe deze subgrootboekregel behoort.",
+        "en": "Reference to the opening balance line to which this subledger line belongs."
+      }
+    },
+    {
+      "key": "ob_sb_line.desc",
+      "kind": "column",
+      "label": {
+        "en": "Description"
+      },
+      "definition": {
+        "nl": "Omschrijving",
+        "en": "Description"
+      }
+    },
+    {
+      "key": "ob_sb_line.amnt",
+      "kind": "column",
+      "label": {
+        "en": "Amount"
+      },
+      "definition": {
+        "nl": "Bedrag.",
+        "en": "Amount."
+      }
+    },
+    {
+      "key": "ob_sb_line.amnt_tp",
+      "kind": "column",
+      "label": {
+        "en": "Amount Type"
+      },
+      "definition": {
+        "nl": "Aanduiding Debet of Credit.",
+        "en": "Indication Debit or Credit."
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "key": "ob_sb_line.doc_ref",
+      "kind": "column",
+      "label": {
+        "en": "Document Reference"
+      },
+      "definition": {
+        "nl": "Boekstuknummer. Verwijst naar de - mogelijk verdichte - grootboektransactieregel.",
+        "en": "Document number. Refers to the - possibly condensed - general ledger transaction line."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "ob_sb_line.rec_ref",
+      "kind": "column",
+      "label": {
+        "en": "Reconciliation Reference"
+      },
+      "definition": {
+        "nl": "Reconciliatie kenmerk ten behoeve van afletteren. Dit kenmerk legt verband tussen facturen, ontvangsten/betalingen en overige boekingen. Te gebruiken als niet in alle gevallen via factuurnummer dit verband gelegd kan worden.",
+        "en": "Reconciliation reference for matching. This reference links invoices, receipts/payments and other postings. To be used if this link cannot always be made through the invoice number."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "ob_sb_line.match_key_id",
+      "kind": "column",
+      "label": {
+        "en": "Match Key ID"
+      },
+      "definition": {
+        "nl": "De match key ID dient om de samenhang tussen beginbalans en transacties op grootboekniveau en subgrootboekniveau vast te leggen.",
+        "en": "The match key ID records the relationship between opening balance and transactions at general ledger and subledger level."
+      }
+    },
+    {
+      "key": "ob_sb_line.cust_sup_id",
+      "kind": "column",
+      "label": {
+        "en": "Customer Supplier ID"
+      }
+    },
+    {
+      "key": "ob_sb_line.inv_ref",
+      "kind": "column",
+      "label": {
+        "en": "Invoice Reference"
+      },
+      "definition": {
+        "nl": "Factuurnummer. Verplicht bij het boeken van facturen.",
+        "en": "Invoice number. Required when posting invoices."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "ob_sb_line.inv_pur_sal_tp",
+      "kind": "column",
+      "label": {
+        "en": "Invoice Purchase Sales Type"
+      },
+      "definition": {
+        "nl": "Geeft aan of het gaat om een inkoopfactuur of om een verkoopfactuur.",
+        "en": "Indicates whether it is a purchase invoice or a sales invoice."
+      },
+      "codes": {
+        "P": {
+          "en": "Purchase"
+        },
+        "S": {
+          "en": "Sales"
+        }
+      }
+    },
+    {
+      "key": "ob_sb_line.inv_tp",
+      "kind": "column",
+      "label": {
+        "en": "Invoice Type"
+      },
+      "definition": {
+        "nl": "Geeft aan of het gaat om een debetfactuur of een creditfactuur.",
+        "en": "Indicates whether it is a debit invoice or a credit invoice."
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "key": "ob_sb_line.inv_dt",
+      "kind": "column",
+      "label": {
+        "en": "Invoice Date"
+      },
+      "definition": {
+        "nl": "Factuurdatum. Deze datum is verplicht bij opboeken van een factuur, niet verplicht bij ontvangsten/betalingen e.d. W3C datatype. Bijv. 2008-01-27.",
+        "en": "Invoice date. This date is required when posting an invoice, not required for receipts/payments etc. W3C datatype. E.g. 2008-01-27."
+      }
+    },
+    {
+      "key": "ob_sb_line.inv_due_dt",
+      "kind": "column",
+      "label": {
+        "en": "Invoice Due Date"
+      },
+      "definition": {
+        "nl": "Vervaldatum van de factuur. Deze datum is verplicht bij opboeken van een factuur, niet verplicht bij ontvangsten/betalingen. W3C datatype bijv. 2008-01-27.",
+        "en": "Due date of the invoice. This date is required when posting an invoice, not required for receipts/payments. W3C datatype, e.g. 2008-01-27."
+      }
+    },
+    {
+      "key": "ob_sb_line.mut_tp",
+      "kind": "column",
+      "label": {
+        "en": "Mutation Type"
+      },
+      "definition": {
+        "nl": "Mutatiesoort. Geeft aan of het gaat om een factuur of ontvangst/betaling. Verplicht bij opboeken van een factuur.",
+        "en": "Mutation type. Indicates whether it is an invoice or a receipt/payment. Required when posting an invoice."
+      },
+      "codes": {
+        "I": {
+          "en": "Invoice"
+        },
+        "P": {
+          "en": "Payment"
+        },
+        "Z": {
+          "en": "Other"
+        }
+      }
+    },
+    {
+      "key": "ob_sb_line.cost_id",
+      "kind": "column",
+      "label": {
+        "en": "Cost ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de kostenplaats. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the cost centre. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "ob_sb_line.prod_id",
+      "kind": "column",
+      "label": {
+        "en": "Product ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het product. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the product. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "ob_sb_line.proj_id",
+      "kind": "column",
+      "label": {
+        "en": "Project ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het project (i.p.v. kostensoort en kostendrager). Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the project (instead of cost type and cost unit). The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "ob_sb_line.art_grp_id",
+      "kind": "column",
+      "label": {
+        "en": "Article Group ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de artikel groep. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the article group. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "ob_sb_line.qntity_id",
+      "kind": "column",
+      "label": {
+        "en": "Quantity ID"
+      },
+      "definition": {
+        "nl": "Eenheid van de hierna genoemde hoeveelheid. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Unit of the quantity stated below. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "ob_sb_line.qntity",
+      "kind": "column",
+      "label": {
+        "en": "Quantity"
+      },
+      "definition": {
+        "nl": "Hoeveelheid.",
+        "en": "Quantity."
+      }
+    },
+    {
+      "key": "company.transactions",
+      "kind": "group",
+      "label": {
+        "en": "Transactions"
+      }
+    },
+    {
+      "key": "company.transactions_lines_count",
+      "kind": "column",
+      "label": {
+        "en": "Lines Count"
+      },
+      "definition": {
+        "nl": "Totaal aantal transactie regels.",
+        "en": "Total number of transaction lines."
+      }
+    },
+    {
+      "key": "company.transactions_total_debit",
+      "kind": "column",
+      "label": {
+        "en": "Total Debit"
+      },
+      "definition": {
+        "nl": "Totaal bedrag van de debet bedragen in transactie regels.",
+        "en": "Total of the debit amounts in transaction lines."
+      }
+    },
+    {
+      "key": "company.transactions_total_credit",
+      "kind": "column",
+      "label": {
+        "en": "Total Credit"
+      },
+      "definition": {
+        "nl": "Totaal bedrag van de credit bedragen in transactie regels.",
+        "en": "Total of the credit amounts in transaction lines."
+      }
+    },
+    {
+      "key": "journal",
+      "kind": "table",
+      "label": {
+        "en": "Journal"
+      },
+      "definition": {
+        "nl": "Dagboek.",
+        "en": "Journal."
+      }
+    },
+    {
+      "key": "journal.jrn_id",
+      "kind": "column",
+      "label": {
+        "en": "Journal ID"
+      },
+      "definition": {
+        "nl": "Unieke dagboekcode.",
+        "en": "Unique journal code."
+      }
+    },
+    {
+      "key": "journal.desc",
+      "kind": "column",
+      "label": {
+        "en": "Description"
+      },
+      "definition": {
+        "nl": "Dagboekomschrijving.",
+        "en": "Journal description."
+      }
+    },
+    {
+      "key": "journal.jrn_tp",
+      "kind": "column",
+      "label": {
+        "en": "Journal Type"
+      },
+      "definition": {
+        "nl": "Dagboeksoort.",
+        "en": "Journal type."
+      },
+      "codes": {
+        "B": {
+          "en": "Bank"
+        },
+        "C": {
+          "en": "Cash"
+        },
+        "G": {
+          "en": "Goods (received/sent)"
+        },
+        "M": {
+          "en": "Memo / Daybook"
+        },
+        "O": {
+          "en": "Opening Balance"
+        },
+        "P": {
+          "en": "Purchases"
+        },
+        "S": {
+          "en": "Sales"
+        },
+        "T": {
+          "en": "Production"
+        },
+        "Y": {
+          "en": "Payroll"
+        },
+        "Z": {
+          "en": "Other"
+        }
+      }
+    },
+    {
+      "key": "journal.offset_acc_id",
+      "kind": "column",
+      "label": {
+        "en": "Offset Account ID"
+      },
+      "definition": {
+        "nl": "Tegenrekening.",
+        "en": "Contra account."
+      }
+    },
+    {
+      "key": "journal.bank_acc_nr",
+      "kind": "column",
+      "label": {
+        "en": "Bank Account Number"
+      }
+    },
+    {
+      "key": "transaction",
+      "kind": "table",
+      "label": {
+        "en": "Transaction"
+      }
+    },
+    {
+      "key": "transaction.nr",
+      "kind": "column",
+      "label": {
+        "en": "Transaction Number"
+      },
+      "definition": {
+        "nl": "Transactienummer. Moet uniek zijn binnen het dagboek.",
+        "en": "Transaction number. Must be unique within the journal."
+      }
+    },
+    {
+      "key": "transaction.desc",
+      "kind": "column",
+      "label": {
+        "en": "Description"
+      },
+      "definition": {
+        "nl": "Transactie omschrijving.",
+        "en": "Transaction description."
+      }
+    },
+    {
+      "key": "transaction.period_number",
+      "kind": "column",
+      "label": {
+        "en": "Period number"
+      },
+      "definition": {
+        "nl": "Periodenummer. Indien een openingsbalans wordt doorgegeven door middel van transacties, dan krijgt periode de waarde 0 (nul).",
+        "en": "Period number. If an opening balance is supplied through transactions, the period has the value 0 (zero)."
+      }
+    },
+    {
+      "key": "transaction.tr_dt",
+      "kind": "column",
+      "label": {
+        "en": "Transaction Date"
+      },
+      "definition": {
+        "nl": "Boekingsdatum. Datum waarop de transactie in het systeem verwerkt is, of anders de datum waarop de transactie in het systeem geboekt is. W3C date datatype. Bijv. 2007-01-27.",
+        "en": "Booking date. Date on which the transaction was processed in the system, or otherwise the date on which the transaction was posted in the system. W3C date datatype. E.g. 2007-01-27."
+      }
+    },
+    {
+      "key": "transaction.amnt",
+      "kind": "column",
+      "label": {
+        "en": "Transaction Amount"
+      }
+    },
+    {
+      "key": "transaction.amnt_tp",
+      "kind": "column",
+      "label": {
+        "en": "Transaction Amount Type"
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "key": "transaction.source_id",
+      "kind": "column",
+      "label": {
+        "en": "Source ID"
+      },
+      "definition": {
+        "nl": "Identificatie van de bron (applicatie) die de transactie gecreeerd heeft. De omschrijving van de bron wordt in basics tabel gedefinieerd.",
+        "en": "Identification of the source (application) that created the transaction. The description of the source is defined in the basics table."
+      }
+    },
+    {
+      "key": "transaction.user_id",
+      "kind": "column",
+      "label": {
+        "en": "User ID"
+      },
+      "definition": {
+        "nl": "Identificatie van de gebruiker die de transactie heeft ingevoerd. De naam van de gebruiker wordt in basics tabel gedefinieerd.",
+        "en": "Identification of the user who entered the transaction. The name of the user is defined in the basics table."
+      }
+    },
+    {
+      "key": "tr_line",
+      "kind": "table",
+      "label": {
+        "en": "Transaction line"
+      },
+      "definition": {
+        "nl": "Journaalposten",
+        "en": "Journal entries"
+      }
+    },
+    {
+      "key": "tr_line.nr",
+      "kind": "column",
+      "label": {
+        "en": "Transaction Line Number"
+      },
+      "definition": {
+        "nl": "Transactie regel nummer. Moet uniek zijn binnen de transactie.",
+        "en": "Transaction line number. Must be unique within the transaction."
+      }
+    },
+    {
+      "key": "tr_line.acc_id",
+      "kind": "column",
+      "label": {
+        "en": "Account ID"
+      },
+      "definition": {
+        "nl": "Grootboekrekening.",
+        "en": "General ledger account."
+      }
+    },
+    {
+      "key": "tr_line.doc_ref",
+      "kind": "column",
+      "label": {
+        "en": "Document Reference"
+      },
+      "definition": {
+        "nl": "Document referentie (verwijzing naar boekstuk of brondocument).",
+        "en": "Document reference (reference to document or source document)."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "tr_line.eff_date",
+      "kind": "column",
+      "label": {
+        "en": "Effective Date"
+      },
+      "definition": {
+        "nl": "Mutatiedatum. Datum dat het evenement (dat aanleiding gaf tot de journaalpost) heeft plaatsgevonden. W3C date datatype. Bijv. 2007-01-27.",
+        "en": "Mutation date. Date on which the event (that gave rise to the journal entry) took place. W3C date datatype. E.g. 2007-01-27."
+      }
+    },
+    {
+      "key": "tr_line.desc",
+      "kind": "column",
+      "label": {
+        "en": "Description"
+      },
+      "definition": {
+        "nl": "Omschrijving behorende bij de transactie regel.",
+        "en": "Description belonging to the transaction line."
+      }
+    },
+    {
+      "key": "tr_line.amnt",
+      "kind": "column",
+      "label": {
+        "en": "Amount"
+      },
+      "definition": {
+        "nl": "Bedrag in locale valuta.",
+        "en": "Amount in local currency."
+      }
+    },
+    {
+      "key": "tr_line.amnt_tp",
+      "kind": "column",
+      "label": {
+        "en": "Amount Type"
+      },
+      "definition": {
+        "nl": "Geeft aan of het bedrag debet of credit is.",
+        "en": "Indicates whether the amount is debit or credit."
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "key": "tr_line.rec_ref",
+      "kind": "column",
+      "label": {
+        "en": "Reconcialtion Reference"
+      },
+      "definition": {
+        "nl": "Reconciliatie kenmerk ten behoeve van afletteren. Dit kenmerk legt verband tussen facturen, ontvangsten/betalingen en overige boekingen. Te gebruiken als niet in alle gevallen via factuurnummer dit verband gelegd kan worden.",
+        "en": "Reconciliation reference for matching. This reference links invoices, receipts/payments and other postings. To be used if this link cannot always be made through the invoice number."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "tr_line.match_key_id",
+      "kind": "column",
+      "label": {
+        "en": "Match Key ID"
+      },
+      "definition": {
+        "nl": "De match key ID dient om de samenhang tussen beginbalans en transacties op grootboekniveau en subgrootboekniveau vast te leggen.",
+        "en": "The match key ID records the relationship between opening balance and transactions at general ledger and subledger level."
+      }
+    },
+    {
+      "key": "tr_line.cust_sup_id",
+      "kind": "column",
+      "label": {
+        "en": "Customer Supplier ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de klant of leverancier.",
+        "en": "Reference to the customer or supplier."
+      }
+    },
+    {
+      "key": "tr_line.inv_ref",
+      "kind": "column",
+      "label": {
+        "en": "Invoice Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de bijbehorende factuur.",
+        "en": "Reference to the related invoice."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "tr_line.order_ref",
+      "kind": "column",
+      "label": {
+        "en": "Order Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar bijbehorende order.",
+        "en": "Reference to the related order."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "tr_line.receiving_doc_ref",
+      "kind": "column",
+      "label": {
+        "en": "Receiving Document Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar bijbehorende ontvangstbon.",
+        "en": "Reference to the related goods receipt."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "tr_line.ship_doc_ref",
+      "kind": "column",
+      "label": {
+        "en": "Shipment Document Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar bijbehorende verzenddocument.",
+        "en": "Reference to the related shipping document."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "tr_line.cost_id",
+      "kind": "column",
+      "label": {
+        "en": "Cost ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de kostenplaats. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the cost centre. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "tr_line.prod_id",
+      "kind": "column",
+      "label": {
+        "en": "Product ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het product. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the product. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "tr_line.proj_id",
+      "kind": "column",
+      "label": {
+        "en": "Project ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het project (i.p.v. kostensoort en kostendrager). Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the project (instead of cost type and cost unit). The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "tr_line.art_grp_id",
+      "kind": "column",
+      "label": {
+        "en": "Article Group ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de artikel groep. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the article group. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "tr_line.work_cost_arr_ref",
+      "kind": "column",
+      "label": {
+        "en": "Work Cost Arrangement Reference"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de Werkkosten Regeling (WKR)",
+        "en": "Reference to the Work-related Costs Scheme (WKR)"
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "tr_line.qntity_id",
+      "kind": "column",
+      "label": {
+        "en": "Quantity ID"
+      },
+      "definition": {
+        "nl": "Eenheid van de hierna genoemde hoeveelheid. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Unit of the quantity stated below. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "tr_line.qntity",
+      "kind": "column",
+      "label": {
+        "en": "Quantity"
+      },
+      "definition": {
+        "nl": "Hoeveelheid.",
+        "en": "Quantity."
+      }
+    },
+    {
+      "key": "tr_line.bank_acc_nr",
+      "kind": "column",
+      "label": {
+        "en": "Bank Account Number"
+      },
+      "definition": {
+        "nl": "Bankrekening nummer tbv ontvangsten en betalingen per bank.",
+        "en": "Bank account number for receipts and payments per bank."
+      }
+    },
+    {
+      "key": "tr_line.bank_id_cd",
+      "kind": "column",
+      "label": {
+        "en": "Bank Identifier Code"
+      },
+      "definition": {
+        "nl": "Bank identificatie code tbv ontvangsten en betalingen per bank.",
+        "en": "Bank identification code for receipts and payments per bank."
+      }
+    },
+    {
+      "key": "tr_line_vat",
+      "kind": "table",
+      "label": {
+        "en": "VAT"
+      },
+      "definition": {
+        "nl": "Geeft de mogelijkheid om de BTW te specificeren van een journaalpost.",
+        "en": "Allows the VAT of a journal entry to be specified."
+      }
+    },
+    {
+      "key": "tr_line_vat.vat_id",
+      "kind": "column",
+      "label": {
+        "en": "Vat id"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de gedefinieerde VAT code.",
+        "en": "Reference to the defined VAT code."
+      }
+    },
+    {
+      "key": "tr_line_vat.vat_perc",
+      "kind": "column",
+      "label": {
+        "en": "VAT Percentage"
+      }
+    },
+    {
+      "key": "tr_line_vat.vat_amnt",
+      "kind": "column",
+      "label": {
+        "en": "VAT Amount"
+      }
+    },
+    {
+      "key": "tr_line_vat.vat_amnt_tp",
+      "kind": "column",
+      "label": {
+        "en": "VAT Amount Type"
+      },
+      "definition": {
+        "nl": "Indicatie of het btw bedrag Debet of Credit is.",
+        "en": "Indicator whether the VAT amount is debit or credit."
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "key": "tr_line.currency",
+      "kind": "group",
+      "label": {
+        "en": "Currency"
+      },
+      "definition": {
+        "nl": "Geeft de mogelijkheid om de vreemde valutawaarde te specificeren.",
+        "en": "Allows the foreign currency value to be specified."
+      }
+    },
+    {
+      "key": "tr_line.currency_cur_code",
+      "kind": "column",
+      "label": {
+        "en": "Currency Code"
+      },
+      "definition": {
+        "nl": "ISO Valutacode (ISO 4217)",
+        "en": "ISO currency code (ISO 4217)"
+      }
+    },
+    {
+      "key": "tr_line.currency_cur_amnt",
+      "kind": "column",
+      "label": {
+        "en": "Currency Amount"
+      },
+      "definition": {
+        "nl": "Bedrag in vreemde valuta (i.p.v. koers).",
+        "en": "Amount in foreign currency (instead of exchange rate)."
+      }
+    },
+    {
+      "key": "company.transactions_subledgers",
+      "kind": "group",
+      "label": {
+        "en": "Subledgers"
+      }
+    },
+    {
+      "key": "subledger",
+      "kind": "table",
+      "label": {
+        "en": "Subledger"
+      }
+    },
+    {
+      "key": "subledger.sb_type",
+      "kind": "column",
+      "label": {
+        "en": "Subledger Type"
+      },
+      "codes": {
+        "CS": {
+          "en": "Customers / Suppliers"
+        },
+        "CU": {
+          "en": "Customers"
+        },
+        "SU": {
+          "en": "Suppliers"
+        },
+        "ZZ": {
+          "en": "Other"
+        }
+      }
+    },
+    {
+      "key": "subledger.sb_desc",
+      "kind": "column",
+      "label": {
+        "en": "Subledger Description"
+      }
+    },
+    {
+      "key": "subledger.lines_count",
+      "kind": "column",
+      "label": {
+        "en": "Lines Count"
+      },
+      "definition": {
+        "nl": "Totaal aantal subgrootboek regels.",
+        "en": "Total number of subledger lines."
+      }
+    },
+    {
+      "key": "subledger.total_debit",
+      "kind": "column",
+      "label": {
+        "en": "Total Debit"
+      },
+      "definition": {
+        "nl": "Totaalbedrag van de debet bedragen in het subgrootboek.",
+        "en": "Total of the debit amounts in the subledger."
+      }
+    },
+    {
+      "key": "subledger.total_credit",
+      "kind": "column",
+      "label": {
+        "en": "Total Credit"
+      },
+      "definition": {
+        "nl": "Totaalbedrag van de credit bedragen in het subgrootboek.",
+        "en": "Total of the credit amounts in the subledger."
+      }
+    },
+    {
+      "key": "sb_line",
+      "kind": "table",
+      "label": {
+        "en": "Subledger line"
+      }
+    },
+    {
+      "key": "sb_line.nr",
+      "kind": "column",
+      "label": {
+        "en": "Subledger Line Number"
+      },
+      "definition": {
+        "nl": "Subgrootboek regelnummer. Moet uniek zijn binnen het subgrootboek.",
+        "en": "Subledger line number. Must be unique within the subledger."
+      }
+    },
+    {
+      "key": "sb_line.jrn_id",
+      "kind": "column",
+      "label": {
+        "en": "Journal ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het dagboek waartoe deze subgrootboekregel behoort.",
+        "en": "Reference to the journal to which this subledger line belongs."
+      }
+    },
+    {
+      "key": "sb_line.tr_nr",
+      "kind": "column",
+      "label": {
+        "en": "Transaction Number"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de grootboek transactie waartoe deze subgrootboekregel behoort.",
+        "en": "Reference to the general ledger transaction to which this subledger line belongs."
+      }
+    },
+    {
+      "key": "sb_line.tr_line_nr",
+      "kind": "column",
+      "label": {
+        "en": "Transaction Line Number"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de transactie regel binnen de grootboek transactie waartoe deze subgrootboekregel behoort.",
+        "en": "Reference to the transaction line within the general ledger transaction to which this subledger line belongs."
+      }
+    },
+    {
+      "key": "sb_line.desc",
+      "kind": "column",
+      "label": {
+        "en": "Description"
+      },
+      "definition": {
+        "nl": "Omschrijving",
+        "en": "Description"
+      }
+    },
+    {
+      "key": "sb_line.amnt",
+      "kind": "column",
+      "label": {
+        "en": "Amount"
+      },
+      "definition": {
+        "nl": "Bedrag.",
+        "en": "Amount."
+      }
+    },
+    {
+      "key": "sb_line.amnt_tp",
+      "kind": "column",
+      "label": {
+        "en": "Amount Type"
+      },
+      "definition": {
+        "nl": "Aanduiding Debet of Credit.",
+        "en": "Indication Debit or Credit."
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "key": "sb_line.doc_ref",
+      "kind": "column",
+      "label": {
+        "en": "Document Reference"
+      },
+      "definition": {
+        "nl": "Boekstuknummer. Verwijst naar de - mogelijk verdichte - grootboektransactieregel.",
+        "en": "Document number. Refers to the - possibly condensed - general ledger transaction line."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "sb_line.rec_ref",
+      "kind": "column",
+      "label": {
+        "en": "Reconciliation Reference"
+      },
+      "definition": {
+        "nl": "Reconciliatie kenmerk ten behoeve van afletteren. Dit kenmerk legt verband tussen facturen, ontvangsten/betalingen en overige boekingen. Te gebruiken als niet in alle gevallen via factuurnummer dit verband gelegd kan worden.",
+        "en": "Reconciliation reference for matching. This reference links invoices, receipts/payments and other postings. To be used if this link cannot always be made through the invoice number."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "sb_line.match_key_id",
+      "kind": "column",
+      "label": {
+        "en": "Match Key ID"
+      },
+      "definition": {
+        "nl": "De match key ID dient om de samenhang tussen beginbalans en transacties op grootboekniveau en subgrootboekniveau vast te leggen.",
+        "en": "The match key ID records the relationship between opening balance and transactions at general ledger and subledger level."
+      }
+    },
+    {
+      "key": "sb_line.cust_sup_id",
+      "kind": "column",
+      "label": {
+        "en": "Customer Supplier ID"
+      }
+    },
+    {
+      "key": "sb_line.inv_ref",
+      "kind": "column",
+      "label": {
+        "en": "Invoice Reference"
+      },
+      "definition": {
+        "nl": "Factuurnummer. Verplicht bij het boeken van facturen.",
+        "en": "Invoice number. Required when posting invoices."
+      },
+      "description": {
+        "nl": "Nadere specificatie 2017: Lengte restrictie van 255 hanteren.",
+        "en": "Further specification 2017: Apply a length restriction of 255."
+      }
+    },
+    {
+      "key": "sb_line.inv_pur_sal_tp",
+      "kind": "column",
+      "label": {
+        "en": "Invoice Purchase Sales Type"
+      },
+      "definition": {
+        "nl": "Geeft aan of het gaat om een inkoopfactuur of om een verkoopfactuur.",
+        "en": "Indicates whether it is a purchase invoice or a sales invoice."
+      },
+      "codes": {
+        "P": {
+          "en": "Purchase"
+        },
+        "S": {
+          "en": "Sales"
+        }
+      }
+    },
+    {
+      "key": "sb_line.inv_tp",
+      "kind": "column",
+      "label": {
+        "en": "Invoice Type"
+      },
+      "definition": {
+        "nl": "Geeft aan of het gaat om een debetfactuur of een creditfactuur.",
+        "en": "Indicates whether it is a debit invoice or a credit invoice."
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "key": "sb_line.inv_dt",
+      "kind": "column",
+      "label": {
+        "en": "Invoice Date"
+      },
+      "definition": {
+        "nl": "Factuurdatum. Deze datum is verplicht bij opboeken van een factuur, niet verplicht bij ontvangsten/betalingen e.d. W3C datatype. Bijv. 2008-01-27.",
+        "en": "Invoice date. This date is required when posting an invoice, not required for receipts/payments etc. W3C datatype. E.g. 2008-01-27."
+      }
+    },
+    {
+      "key": "sb_line.inv_due_dt",
+      "kind": "column",
+      "label": {
+        "en": "Invoice Due Date"
+      },
+      "definition": {
+        "nl": "Vervaldatum van de factuur. Deze datum is verplicht bij opboeken van een factuur, niet verplicht bij ontvangsten/betalingen. W3C datatype bijv. 2008-01-27.",
+        "en": "Due date of the invoice. This date is required when posting an invoice, not required for receipts/payments. W3C datatype, e.g. 2008-01-27."
+      }
+    },
+    {
+      "key": "sb_line.mut_tp",
+      "kind": "column",
+      "label": {
+        "en": "Mutation Type"
+      },
+      "definition": {
+        "nl": "Mutatiesoort. Geeft aan of het gaat om een factuur of ontvangst/betaling. Verplicht bij opboeken van een factuur.",
+        "en": "Mutation type. Indicates whether it is an invoice or a receipt/payment. Required when posting an invoice."
+      },
+      "codes": {
+        "I": {
+          "en": "Invoice"
+        },
+        "P": {
+          "en": "Payment"
+        },
+        "Z": {
+          "en": "Other"
+        }
+      }
+    },
+    {
+      "key": "sb_line.cost_id",
+      "kind": "column",
+      "label": {
+        "en": "Cost ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de kostenplaats. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the cost centre. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "sb_line.prod_id",
+      "kind": "column",
+      "label": {
+        "en": "Product ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het product. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the product. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "sb_line.proj_id",
+      "kind": "column",
+      "label": {
+        "en": "Project ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het project (i.p.v. kostensoort en kostendrager). Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the project (instead of cost type and cost unit). The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "sb_line.art_grp_id",
+      "kind": "column",
+      "label": {
+        "en": "Article Group ID"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de artikel groep. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Reference to the article group. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "sb_line.qntity_id",
+      "kind": "column",
+      "label": {
+        "en": "Quantity ID"
+      },
+      "definition": {
+        "nl": "Eenheid van de hierna genoemde hoeveelheid. Omschrijving van de code dient in de tabel 'Basics' verklaard te worden.",
+        "en": "Unit of the quantity stated below. The description of the code must be explained in the 'Basics' table."
+      }
+    },
+    {
+      "key": "sb_line.qntity",
+      "kind": "column",
+      "label": {
+        "en": "Quantity"
+      },
+      "definition": {
+        "nl": "Hoeveelheid.",
+        "en": "Quantity."
+      }
+    },
+    {
+      "key": "sb_line_vat",
+      "kind": "table",
+      "label": {
+        "en": "VAT"
+      },
+      "definition": {
+        "nl": "Geeft de mogelijkheid om de BTW te specificeren van een journaalpost.",
+        "en": "Allows the VAT of a journal entry to be specified."
+      }
+    },
+    {
+      "key": "sb_line_vat.vat_id",
+      "kind": "column",
+      "label": {
+        "en": "Vat id"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de gedefinieerde VAT code.",
+        "en": "Reference to the defined VAT code."
+      }
+    },
+    {
+      "key": "sb_line_vat.vat_perc",
+      "kind": "column",
+      "label": {
+        "en": "VAT Percentage"
+      }
+    },
+    {
+      "key": "sb_line_vat.vat_amnt",
+      "kind": "column",
+      "label": {
+        "en": "VAT Amount"
+      }
+    },
+    {
+      "key": "sb_line_vat.vat_amnt_tp",
+      "kind": "column",
+      "label": {
+        "en": "VAT Amount Type"
+      },
+      "definition": {
+        "nl": "Indicatie of het btw bedrag Debet of Credit is.",
+        "en": "Indicator whether the VAT amount is debit or credit."
+      },
+      "codes": {
+        "C": {
+          "en": "Credit"
+        },
+        "D": {
+          "en": "Debit"
+        }
+      }
+    },
+    {
+      "key": "sb_line.currency",
+      "kind": "group",
+      "label": {
+        "en": "Currency"
+      },
+      "definition": {
+        "nl": "Geeft de mogelijkheid om de vreemde valutawaarde te specificeren.",
+        "en": "Allows the foreign currency value to be specified."
+      }
+    },
+    {
+      "key": "sb_line.currency_cur_code",
+      "kind": "column",
+      "label": {
+        "en": "Currency Code"
+      },
+      "definition": {
+        "nl": "ISO Valutacode (ISO 4217)",
+        "en": "ISO currency code (ISO 4217)"
+      }
+    },
+    {
+      "key": "sb_line.currency_cur_amnt",
+      "kind": "column",
+      "label": {
+        "en": "Currency Amount"
+      },
+      "definition": {
+        "nl": "Bedrag in vreemde valuta (i.p.v. koers).",
+        "en": "Amount in foreign currency (instead of exchange rate)."
+      }
+    }
+  ]
+}
