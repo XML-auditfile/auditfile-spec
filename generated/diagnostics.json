@@ -678,6 +678,15 @@
       }
     },
     {
+      "code": "XAF-R017",
+      "layer": "rules",
+      "severity": "warning",
+      "message": {
+        "nl": "De controle van {table}.{column} op {target} is onvolledig: na {max} nog niet gevonden waarden worden nieuwe waarden niet meer gecontroleerd.",
+        "en": "The check of {table}.{column} against {target} is incomplete: after {max} values not yet found, new values are no longer checked."
+      }
+    },
+    {
       "code": "XAF-C001",
       "layer": "dialect",
       "severity": "info",
