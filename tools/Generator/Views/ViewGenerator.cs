@@ -17,6 +17,9 @@ internal static partial class ViewGenerator
     [GeneratedRegex("^[a-z][a-z0-9_]*$")]
     private static partial Regex Name();
 
+    [GeneratedRegex("^[A-Za-z][A-Za-z0-9]*$")]
+    private static partial Regex Prefix();
+
     public static void Generate(string root, IReadOnlyList<string> paths, IReadOnlyList<Manifest> manifests, GeneratedFiles files)
     {
         var types = new HashSet<string>(StringComparer.Ordinal);
@@ -93,6 +96,8 @@ internal static partial class ViewGenerator
         foreach (var join in view.Joins ?? [])
         {
             Check(!string.IsNullOrEmpty(join.Table) && !scope.Contains(join.Table), $"join '{join.Table}' is empty or repeated");
+            Check(join.Alternatives is null || (join.Alternatives.Count > 0 && join.Alternatives.All(a => !string.IsNullOrEmpty(a) && a != join.Table)),
+                $"join {join.Table}: 'alternatives' is empty or names the table itself");
             foreach (var pair in join.On ?? [])
             {
                 Check(pair.Count == 2, $"join {join.Table}: each 'on' entry is [earlier column, joined column]");
@@ -132,11 +137,13 @@ internal static partial class ViewGenerator
                 Check(value.References().All(r => InScope(r, scope)), $"column {column.Name}: value uses a column outside the view tables");
                 Check(value.Op switch
                 {
-                    null => value.Negative is null && value.In is null,
-                    "signed" => value.By is not null && value.Negative is { Count: > 0 } && value.In is null,
-                    "only" => value.By is not null && value.In is { Count: > 0 } && value.Negative is null,
+                    null => value.Negative is null && value.In is null && value.Prefix is null,
+                    "signed" => value.By is not null && value.Negative is { Count: > 0 } && value.In is null && value.Prefix is null,
+                    "only" => value.By is not null && value.In is { Count: > 0 } && value.Negative is null && value.Prefix is null,
+                    "pseudonym" => value.By is null && value.In is null && value.Negative is null && value.Prefix is not null && Prefix().IsMatch(value.Prefix),
                     _ => false,
-                }, $"column {column.Name}: op must be 'signed' (value, by, negative) or 'only' (value, by, in)");
+                }, $"column {column.Name}: op must be 'signed' (value, by, negative), 'only' (value, by, in) or 'pseudonym' (value, prefix)");
+                Check(value.Op != "pseudonym" || column.Aggregate is null or "count", $"column {column.Name}: a pseudonym cannot be summed, nor have a minimum or maximum");
             }
         }
 

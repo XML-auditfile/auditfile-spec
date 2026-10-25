@@ -20,6 +20,10 @@ and the project uses [Semantic Versioning](https://semver.org/).
 - Views per type in `generated/views/<type>.json`; readers decide from the manifest whether a view is available
   (`XAF-Q001`–`Q002`). XAF: trial balance, ledger entries, journal totals, VAT summary (3.2 only).
   XAS: employees, payroll summary, wage components, hours.
+- Views: a join can name `alternatives` for a table that has another name in some versions; the value operation
+  `pseudonym` replaces a value by `<prefix>-n`, numbered per distinct value in the order of its table.
+- XAF views `ledger` (journal down to line, with account description, customer or supplier name and a signed
+  amount) and `ledger_pseudonymized` (the same, with every description and name replaced by a placeholder).
 - `XAF-R017` (warning): the reference check is incomplete because a reader stopped keeping unresolved values
   after its limit, so a reference to nothing after that point is not reported.
 
