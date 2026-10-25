@@ -1,0 +1,48 @@
+name: CI
+
+# Builds the generator and checks that generated/ matches the sources: a pull request that changes sources/
+# or the generator must include the regenerated files.
+
+on:
+  push:
+    branches: [main, 'release/**']
+  pull_request:
+    branches: [main, 'release/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# A new push to the same pull request or branch cancels the run that is still busy.
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+
+      - name: Build
+        run: dotnet build auditfile-spec.slnx -c Release
+
+      - name: Check generated
+        run: dotnet run --project tools/Generator -c Release --no-build -- --check
+
+  # The one check the branch rules require, whatever the jobs above: it fails when any of them did not succeed.
+  ci-passed:
+    if: always()
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: All jobs passed
+        env:
+          RESULTS: ${{ join(needs.*.result, ' ') }}
+        run: |
+          echo "Results: $RESULTS"
+          for result in $RESULTS; do [ "$result" = success ] || exit 1; done
