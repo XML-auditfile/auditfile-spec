@@ -61,8 +61,15 @@ internal sealed record View(
 /// <summary>
 /// Without <see cref="On"/> the table must be an ancestor of the source table and is joined through the parent row.
 /// With <see cref="On"/> each pair is [column of an earlier table, column of this table].
+/// <see cref="Alternatives"/> name the same table in versions that call it differently: when a version lacks
+/// <see cref="Table"/>, the first alternative it has is joined, still referred to as <see cref="Table"/>.
 /// </summary>
-internal sealed record ViewJoin(string Table, IReadOnlyList<IReadOnlyList<string>>? On);
+internal sealed record ViewJoin(string Table, IReadOnlyList<IReadOnlyList<string>>? On, IReadOnlyList<string>? Alternatives)
+{
+    /// <summary>The table this join reads in a version with these tables, or null when it has none of them.</summary>
+    public string? Resolve(ICollection<string> tables) =>
+        new[] { Table }.Concat(Alternatives ?? []).FirstOrDefault(tables.Contains);
+}
 
 /// <summary>An optional filter: rows match when <c>column operator argument</c> holds. Omitted means no filter.</summary>
 internal sealed record ViewParameter(string Name, IReadOnlyDictionary<string, string>? Label, string Column, string Operator);
@@ -73,10 +80,12 @@ internal sealed record ViewColumn(string Name, IReadOnlyDictionary<string, strin
 /// <summary>
 /// A column reference ("tr_line.amnt") or an operation on one:
 /// <c>signed</c> negates the value when <see cref="By"/> is in <see cref="Negative"/>;
-/// <c>only</c> keeps the value when <see cref="By"/> is in <see cref="In"/> and is null otherwise.
+/// <c>only</c> keeps the value when <see cref="By"/> is in <see cref="In"/> and is null otherwise;
+/// <c>pseudonym</c> replaces the value by <see cref="Prefix"/>-n, where n numbers the distinct values of the column
+/// in the order they first occur in its table (null and empty stay as they are).
 /// </summary>
 [JsonConverter(typeof(ViewValueConverter))]
-internal sealed record ViewValue(string? Op, string Value, string? By, IReadOnlyList<string>? Negative, IReadOnlyList<string>? In)
+internal sealed record ViewValue(string? Op, string Value, string? By, IReadOnlyList<string>? Negative, IReadOnlyList<string>? In, string? Prefix)
 {
     public IEnumerable<string> References() => By is null ? [Value] : [Value, By];
 }
@@ -87,18 +96,18 @@ internal sealed class ViewValueConverter : JsonConverter<ViewValue>
     {
         if (reader.TokenType == JsonTokenType.String)
         {
-            return new ViewValue(null, reader.GetString()!, null, null, null);
+            return new ViewValue(null, reader.GetString()!, null, null, null, null);
         }
 
         var operation = JsonSerializer.Deserialize<Operation>(ref reader, options)
             ?? throw new JsonException("value is null");
-        return new ViewValue(operation.Op, operation.Value, operation.By, operation.Negative, operation.In);
+        return new ViewValue(operation.Op, operation.Value, operation.By, operation.Negative, operation.In, operation.Prefix);
     }
 
     public override void Write(Utf8JsonWriter writer, ViewValue value, JsonSerializerOptions options) =>
         throw new NotSupportedException();
 
-    private sealed record Operation(string Op, string Value, string? By, IReadOnlyList<string>? Negative, IReadOnlyList<string>? In);
+    private sealed record Operation(string Op, string Value, string? By, IReadOnlyList<string>? Negative, IReadOnlyList<string>? In, string? Prefix);
 }
 
 /// <summary>"table.column" → (table, column).</summary>

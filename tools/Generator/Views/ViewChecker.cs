@@ -17,23 +17,29 @@ internal static class ViewChecker
             return [$"table {view.Source}"];
         }
 
+        // Name in the view → table in this version; a join with alternatives may read a table of another name.
+        var resolved = new Dictionary<string, ManifestTable>(StringComparer.Ordinal) { [view.Source] = source };
         var missing = new List<string>();
         foreach (var join in view.Joins ?? [])
         {
-            if (!tables.ContainsKey(join.Table))
+            if (join.Resolve(tables.Keys) is not { } name)
             {
                 missing.Add($"table {join.Table}");
             }
-            else if (join.On is null && !IsAncestor(tables, source, join.Table))
+            else if (join.On is null && !IsAncestor(tables, source, name))
             {
                 missing.Add($"table {join.Table} as ancestor of {view.Source}");
+            }
+            else
+            {
+                resolved[join.Table] = tables[name];
             }
         }
 
         foreach (var reference in view.References())
         {
             if (ColumnReference.TryParse(reference, out var table, out var column)
-                && tables.TryGetValue(table, out var t) && !t.Columns.Any(c => c.Name == column))
+                && resolved.TryGetValue(table, out var t) && !t.Columns.Any(c => c.Name == column))
             {
                 missing.Add($"column {reference}");
             }

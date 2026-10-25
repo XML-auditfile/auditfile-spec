@@ -82,6 +82,96 @@
       "orderBy": [ "account", "date", "journal", "transaction", "line" ]
     },
     {
+      "name": "ledger",
+      "label": { "nl": "Grootboek", "en": "General ledger" },
+      "description": {
+        "nl": "Alle boekingsregels van dagboek tot en met boekingsregel, in de volgorde van het bestand, met de omschrijving van de rekening en de naam van de relatie. Debet is positief, credit negatief.",
+        "en": "All transaction lines from journal down to line, in file order, with the account description and the customer or supplier name. Debit is positive, credit negative."
+      },
+      "source": "tr_line",
+      "joins": [
+        { "table": "transaction" },
+        { "table": "journal" },
+        { "table": "ledger_account", "on": [ [ "tr_line.acc_id", "ledger_account.acc_id" ] ] },
+        {
+          "table": "customer_supplier", "alternatives": [ "customers_suppliers_customer_supplier" ],
+          "on": [ [ "tr_line.cust_sup_id", "customer_supplier.cust_sup_id" ] ]
+        }
+      ],
+      "parameters": [
+        { "name": "period_from", "label": { "nl": "Periode van", "en": "Period from" }, "column": "transaction.period_number", "operator": ">=" },
+        { "name": "period_to", "label": { "nl": "Periode tot en met", "en": "Period to" }, "column": "transaction.period_number", "operator": "<=" },
+        { "name": "date_from", "label": { "nl": "Datum van", "en": "Date from" }, "column": "transaction.tr_dt", "operator": ">=" },
+        { "name": "date_to", "label": { "nl": "Datum tot en met", "en": "Date to" }, "column": "transaction.tr_dt", "operator": "<=" },
+        { "name": "account", "label": { "nl": "Rekening", "en": "Account" }, "column": "tr_line.acc_id", "operator": "=" },
+        { "name": "journal", "label": { "nl": "Dagboek", "en": "Journal" }, "column": "journal.jrn_id", "operator": "=" }
+      ],
+      "columns": [
+        { "name": "journal", "label": { "nl": "Dagboek", "en": "Journal" }, "value": "journal.jrn_id" },
+        { "name": "journal_description", "label": { "nl": "Omschrijving dagboek", "en": "Journal description" }, "value": "journal.desc" },
+        { "name": "transaction", "label": { "nl": "Boekstuk", "en": "Transaction" }, "value": "transaction.nr" },
+        { "name": "transaction_description", "label": { "nl": "Omschrijving boekstuk", "en": "Transaction description" }, "value": "transaction.desc" },
+        { "name": "date", "label": { "nl": "Boekdatum", "en": "Transaction date" }, "value": "transaction.tr_dt" },
+        { "name": "period", "label": { "nl": "Periode", "en": "Period" }, "value": "transaction.period_number" },
+        { "name": "line", "label": { "nl": "Regel", "en": "Line" }, "value": "tr_line.nr" },
+        { "name": "account", "label": { "nl": "Rekening", "en": "Account" }, "value": "tr_line.acc_id" },
+        { "name": "account_description", "label": { "nl": "Omschrijving rekening", "en": "Account description" }, "value": "ledger_account.acc_desc" },
+        { "name": "customer_supplier", "label": { "nl": "Relatie", "en": "Customer/supplier" }, "value": "tr_line.cust_sup_id" },
+        { "name": "customer_supplier_name", "label": { "nl": "Naam relatie", "en": "Customer/supplier name" }, "value": "customer_supplier.cust_sup_name" },
+        { "name": "description", "label": { "nl": "Omschrijving", "en": "Description" }, "value": "tr_line.desc" },
+        { "name": "document", "label": { "nl": "Documentreferentie", "en": "Document reference" }, "value": "tr_line.doc_ref" },
+        {
+          "name": "amount", "label": { "nl": "Bedrag", "en": "Amount" },
+          "value": { "op": "signed", "value": "tr_line.amnt", "by": "tr_line.amnt_tp", "negative": [ "C" ] }
+        }
+      ]
+    },
+    {
+      "name": "ledger_pseudonymized",
+      "label": { "nl": "Grootboek (gepseudonimiseerd)", "en": "General ledger (pseudonymized)" },
+      "description": {
+        "nl": "Als het grootboek, maar alle omschrijvingen en namen zijn vervangen door vaste plaatsvervangers (zoals REL-1), zodat de gegevens gedeeld kunnen worden, bijvoorbeeld met AI. Gelijke teksten krijgen dezelfde plaatsvervanger.",
+        "en": "Like the general ledger, but every description and name is replaced by a stable placeholder (such as REL-1), so the data can be shared, for example with AI. Equal texts get the same placeholder."
+      },
+      "source": "tr_line",
+      "joins": [
+        { "table": "transaction" },
+        { "table": "journal" },
+        { "table": "ledger_account", "on": [ [ "tr_line.acc_id", "ledger_account.acc_id" ] ] },
+        {
+          "table": "customer_supplier", "alternatives": [ "customers_suppliers_customer_supplier" ],
+          "on": [ [ "tr_line.cust_sup_id", "customer_supplier.cust_sup_id" ] ]
+        }
+      ],
+      "parameters": [
+        { "name": "period_from", "label": { "nl": "Periode van", "en": "Period from" }, "column": "transaction.period_number", "operator": ">=" },
+        { "name": "period_to", "label": { "nl": "Periode tot en met", "en": "Period to" }, "column": "transaction.period_number", "operator": "<=" },
+        { "name": "date_from", "label": { "nl": "Datum van", "en": "Date from" }, "column": "transaction.tr_dt", "operator": ">=" },
+        { "name": "date_to", "label": { "nl": "Datum tot en met", "en": "Date to" }, "column": "transaction.tr_dt", "operator": "<=" },
+        { "name": "account", "label": { "nl": "Rekening", "en": "Account" }, "column": "tr_line.acc_id", "operator": "=" },
+        { "name": "journal", "label": { "nl": "Dagboek", "en": "Journal" }, "column": "journal.jrn_id", "operator": "=" }
+      ],
+      "columns": [
+        { "name": "journal", "label": { "nl": "Dagboek", "en": "Journal" }, "value": "journal.jrn_id" },
+        { "name": "journal_description", "label": { "nl": "Omschrijving dagboek", "en": "Journal description" }, "value": { "op": "pseudonym", "value": "journal.desc", "prefix": "JRN" } },
+        { "name": "transaction", "label": { "nl": "Boekstuk", "en": "Transaction" }, "value": "transaction.nr" },
+        { "name": "transaction_description", "label": { "nl": "Omschrijving boekstuk", "en": "Transaction description" }, "value": { "op": "pseudonym", "value": "transaction.desc", "prefix": "TRN" } },
+        { "name": "date", "label": { "nl": "Boekdatum", "en": "Transaction date" }, "value": "transaction.tr_dt" },
+        { "name": "period", "label": { "nl": "Periode", "en": "Period" }, "value": "transaction.period_number" },
+        { "name": "line", "label": { "nl": "Regel", "en": "Line" }, "value": "tr_line.nr" },
+        { "name": "account", "label": { "nl": "Rekening", "en": "Account" }, "value": "tr_line.acc_id" },
+        { "name": "account_description", "label": { "nl": "Omschrijving rekening", "en": "Account description" }, "value": { "op": "pseudonym", "value": "ledger_account.acc_desc", "prefix": "ACC" } },
+        { "name": "customer_supplier", "label": { "nl": "Relatie", "en": "Customer/supplier" }, "value": "tr_line.cust_sup_id" },
+        { "name": "customer_supplier_name", "label": { "nl": "Naam relatie", "en": "Customer/supplier name" }, "value": { "op": "pseudonym", "value": "customer_supplier.cust_sup_name", "prefix": "REL" } },
+        { "name": "description", "label": { "nl": "Omschrijving", "en": "Description" }, "value": { "op": "pseudonym", "value": "tr_line.desc", "prefix": "DESC" } },
+        { "name": "document", "label": { "nl": "Documentreferentie", "en": "Document reference" }, "value": "tr_line.doc_ref" },
+        {
+          "name": "amount", "label": { "nl": "Bedrag", "en": "Amount" },
+          "value": { "op": "signed", "value": "tr_line.amnt", "by": "tr_line.amnt_tp", "negative": [ "C" ] }
+        }
+      ]
+    },
+    {
       "name": "journal_totals",
       "label": { "nl": "Dagboektotalen", "en": "Journal totals" },
       "description": {
