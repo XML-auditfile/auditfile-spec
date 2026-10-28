@@ -8,6 +8,27 @@
     {
       "type": "xaf",
       "typeName": "financial",
+      "version": "3.1",
+      "provenance": "official",
+      "rootElement": "auditfile",
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      },
+      "sources": {
+        "xsd": {
+          "main": "sources/xaf/XAF_3.1/XmlAuditfileFinancieel3.1.xsd",
+          "includes": []
+        },
+        "definitions": "sources/xaf/XAF_3.1/definitions.json"
+      },
+      "checksums": {
+        "sources/xaf/XAF_3.1/XmlAuditfileFinancieel3.1.xsd": "27917181f74e94c9cbc7318b4dd9ee9cd4607adc309944f3c920c90868da774c"
+      }
+    },
+    {
+      "type": "xaf",
+      "typeName": "financial",
       "version": "3.2",
       "provenance": "official",
       "rootElement": "auditfile",
@@ -25,6 +46,27 @@
       },
       "checksums": {
         "sources/xaf/XAF_3.2_20170904/XmlAuditfileFinancieel3.2.xsd": "6127b3f19db2c5bcff89385b5e35e5095e984d4ddaa1e5000f4e99494a8d0fff"
+      }
+    },
+    {
+      "type": "xaf",
+      "typeName": "financial",
+      "version": "3.2.1",
+      "provenance": "official",
+      "rootElement": "auditfile",
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      },
+      "sources": {
+        "xsd": {
+          "main": "sources/xaf/XAF_3.2.1/XmlAuditfileFinancieel3.2.1.xsd",
+          "includes": []
+        },
+        "definitions": "sources/xaf/XAF_3.2.1/definitions.json"
+      },
+      "checksums": {
+        "sources/xaf/XAF_3.2.1/XmlAuditfileFinancieel3.2.1.xsd": "3ae610d2b42dc17936ad682410805e3d8211a3ecf1e93f1dc6a432980caa717d"
       }
     },
     {

@@ -9,6 +9,8 @@ and the project uses [Semantic Versioning](https://semver.org/).
 ### Added
 - Generator: XSD + overlay + definitions → manifest, definition, dialects, registry and diagnostics in `generated/`.
 - XAF 3.2: official sources, overlay with readable table names, definitions extracted from the functional specification.
+- XAF 3.1 and 3.2.1: official sources, with the XAF 3.2 definitions (same elements and paths). The 3.2.1 XSD has
+  no `xs:key`/`xs:keyref`, so its manifest has no keys or references.
 - Diagnostic codes for all readers.
 - Samples of every generated file.
 - XAA 3.2 and XAS 2021.1.1 in `generator.json`.

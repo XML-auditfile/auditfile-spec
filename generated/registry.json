@@ -2,6 +2,25 @@
   "formatVersion": 1,
   "standards": [
     {
+      "key": "xaf/3.1",
+      "type": "xaf",
+      "typeName": "financial",
+      "version": "3.1",
+      "folder": "standards/xaf/3_1",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "http://www.auditfiles.nl/XAF/3.1",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
+      }
+    },
+    {
       "key": "xaf/3.2",
       "type": "xaf",
       "typeName": "financial",
@@ -19,6 +38,25 @@
         "publisher": "Belastingdienst",
         "url": "https://odb.belastingdienst.nl/auditfiles/",
         "published": "2017-09-01"
+      }
+    },
+    {
+      "key": "xaf/3.2.1",
+      "type": "xaf",
+      "typeName": "financial",
+      "version": "3.2.1",
+      "folder": "standards/xaf/3_2_1",
+      "rootElement": "auditfile",
+      "provenance": "official",
+      "namespaces": [
+        {
+          "uri": "http://www.odb.belastingdienst.nl/Belastingdienst/BCPP/1.0/structures/XmlAuditfileFinancieel3.2.1",
+          "kind": "official"
+        }
+      ],
+      "origin": {
+        "publisher": "Belastingdienst",
+        "url": "https://odb.belastingdienst.nl/auditfiles/"
       }
     },
     {

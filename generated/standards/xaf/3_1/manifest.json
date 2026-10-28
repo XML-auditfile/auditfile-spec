@@ -1,0 +1,2706 @@
+{
+  "formatVersion": 1,
+  "standard": "xaf",
+  "typeName": "financial",
+  "version": "3.1",
+  "namespace": "http://www.auditfiles.nl/XAF/3.1",
+  "rootElement": "auditfile",
+  "provenance": "official",
+  "xsd": {
+    "file": "auditfile.xsd",
+    "sha256": "27917181f74e94c9cbc7318b4dd9ee9cd4607adc309944f3c920c90868da774c"
+  },
+  "generatorVersion": "0.1.0",
+  "requiredTables": [
+    "auditfile",
+    "header",
+    "company"
+  ],
+  "expectedTables": [],
+  "tables": [
+    {
+      "name": "auditfile",
+      "xmlName": "auditfile",
+      "path": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": []
+    },
+    {
+      "name": "header",
+      "xmlName": "header",
+      "path": "auditfile/header",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": [
+        {
+          "name": "fiscal_year",
+          "xmlName": "fiscalYear",
+          "path": "fiscalYear",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String9",
+          "minOccurs": 1
+        },
+        {
+          "name": "start_date",
+          "xmlName": "startDate",
+          "path": "startDate",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "end_date",
+          "xmlName": "endDate",
+          "path": "endDate",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "cur_code",
+          "xmlName": "curCode",
+          "path": "curCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CurrencycodeIso4217",
+          "minOccurs": 1
+        },
+        {
+          "name": "date_created",
+          "xmlName": "dateCreated",
+          "path": "dateCreated",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "software_desc",
+          "xmlName": "softwareDesc",
+          "path": "softwareDesc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "software_version",
+          "xmlName": "softwareVersion",
+          "path": "softwareVersion",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String20",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "company",
+      "xmlName": "company",
+      "path": "auditfile/company",
+      "parent": "auditfile",
+      "minOccurs": 1,
+      "maxOccurs": 1,
+      "columns": [
+        {
+          "name": "company_ident",
+          "xmlName": "companyIdent",
+          "path": "companyIdent",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "company_name",
+          "xmlName": "companyName",
+          "path": "companyName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 1
+        },
+        {
+          "name": "tax_registration_country",
+          "xmlName": "taxRegistrationCountry",
+          "path": "taxRegistrationCountry",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CountrycodeIso3166",
+          "minOccurs": 1
+        },
+        {
+          "name": "tax_reg_ident",
+          "xmlName": "taxRegIdent",
+          "path": "taxRegIdent",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String30",
+          "minOccurs": 1
+        },
+        {
+          "name": "opening_balance_op_bal_date",
+          "xmlName": "opBalDate",
+          "path": "openingBalance/opBalDate",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "opening_balance_op_bal_desc",
+          "xmlName": "opBalDesc",
+          "path": "openingBalance/opBalDesc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "opening_balance_lines_count",
+          "xmlName": "linesCount",
+          "path": "openingBalance/linesCount",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Nonnegativeinteger10",
+          "minOccurs": 1
+        },
+        {
+          "name": "opening_balance_total_debit",
+          "xmlName": "totalDebit",
+          "path": "openingBalance/totalDebit",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        },
+        {
+          "name": "opening_balance_total_credit",
+          "xmlName": "totalCredit",
+          "path": "openingBalance/totalCredit",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        },
+        {
+          "name": "transactions_lines_count",
+          "xmlName": "linesCount",
+          "path": "transactions/linesCount",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Nonnegativeinteger10",
+          "minOccurs": 1
+        },
+        {
+          "name": "transactions_total_debit",
+          "xmlName": "totalDebit",
+          "path": "transactions/totalDebit",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        },
+        {
+          "name": "transactions_total_credit",
+          "xmlName": "totalCredit",
+          "path": "transactions/totalCredit",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "company_street_address",
+      "xmlName": "streetAddress",
+      "path": "auditfile/company/streetAddress",
+      "parent": "company",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "streetname",
+          "xmlName": "streetname",
+          "path": "streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "number",
+          "xmlName": "number",
+          "path": "number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String15",
+          "minOccurs": 0
+        },
+        {
+          "name": "number_extension",
+          "xmlName": "numberExtension",
+          "path": "numberExtension",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "property",
+          "xmlName": "property",
+          "path": "property",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "city",
+          "xmlName": "city",
+          "path": "city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "postal_code",
+          "xmlName": "postalCode",
+          "path": "postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String10",
+          "minOccurs": 0
+        },
+        {
+          "name": "region",
+          "xmlName": "region",
+          "path": "region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "country",
+          "xmlName": "country",
+          "path": "country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CountrycodeIso3166",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "company_postal_address",
+      "xmlName": "postalAddress",
+      "path": "auditfile/company/postalAddress",
+      "parent": "company",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "streetname",
+          "xmlName": "streetname",
+          "path": "streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "number",
+          "xmlName": "number",
+          "path": "number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String15",
+          "minOccurs": 0
+        },
+        {
+          "name": "number_extension",
+          "xmlName": "numberExtension",
+          "path": "numberExtension",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "property",
+          "xmlName": "property",
+          "path": "property",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "city",
+          "xmlName": "city",
+          "path": "city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "postal_code",
+          "xmlName": "postalCode",
+          "path": "postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String10",
+          "minOccurs": 0
+        },
+        {
+          "name": "region",
+          "xmlName": "region",
+          "path": "region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "country",
+          "xmlName": "country",
+          "path": "country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CountrycodeIso3166",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "customers_suppliers_customer_supplier",
+      "xmlName": "customerSupplier",
+      "path": "auditfile/company/customersSuppliers/customerSupplier",
+      "parent": "company",
+      "minOccurs": 0,
+      "keys": [
+        {
+          "name": "customerSupplierIDKey",
+          "columns": [
+            "cust_sup_id"
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "name": "cust_sup_id",
+          "xmlName": "custSupID",
+          "path": "custSupID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "cust_sup_name",
+          "xmlName": "custSupName",
+          "path": "custSupName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "contact",
+          "xmlName": "contact",
+          "path": "contact",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "telephone",
+          "xmlName": "telephone",
+          "path": "telephone",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String30",
+          "minOccurs": 0
+        },
+        {
+          "name": "fax",
+          "xmlName": "fax",
+          "path": "fax",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String30",
+          "minOccurs": 0
+        },
+        {
+          "name": "e_mail",
+          "xmlName": "eMail",
+          "path": "eMail",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "token",
+          "minOccurs": 0
+        },
+        {
+          "name": "website",
+          "xmlName": "website",
+          "path": "website",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "token",
+          "minOccurs": 0
+        },
+        {
+          "name": "commerce_nr",
+          "xmlName": "commerceNr",
+          "path": "commerceNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "tax_registration_country",
+          "xmlName": "taxRegistrationCountry",
+          "path": "taxRegistrationCountry",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CountrycodeIso3166",
+          "minOccurs": 0
+        },
+        {
+          "name": "tax_reg_ident",
+          "xmlName": "taxRegIdent",
+          "path": "taxRegIdent",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String30",
+          "minOccurs": 0
+        },
+        {
+          "name": "relationship_id",
+          "xmlName": "relationshipID",
+          "path": "relationshipID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "cust_sup_tp",
+          "xmlName": "custSupTp",
+          "path": "custSupTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Customersuppliercode",
+          "minOccurs": 0
+        },
+        {
+          "name": "cust_sup_grp_id",
+          "xmlName": "custSupGrpID",
+          "path": "custSupGrpID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "cust_credit_limit",
+          "xmlName": "custCreditLimit",
+          "path": "custCreditLimit",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 0
+        },
+        {
+          "name": "supplier_limit",
+          "xmlName": "supplierLimit",
+          "path": "supplierLimit",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_user_id",
+          "xmlName": "userID",
+          "path": "changeInfo/userID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_date_time",
+          "xmlName": "changeDateTime",
+          "path": "changeInfo/changeDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_description",
+          "xmlName": "changeDescription",
+          "path": "changeInfo/changeDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "customers_suppliers_customer_supplier_street_address",
+      "xmlName": "streetAddress",
+      "path": "auditfile/company/customersSuppliers/customerSupplier/streetAddress",
+      "parent": "customers_suppliers_customer_supplier",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "streetname",
+          "xmlName": "streetname",
+          "path": "streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "number",
+          "xmlName": "number",
+          "path": "number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String15",
+          "minOccurs": 0
+        },
+        {
+          "name": "number_extension",
+          "xmlName": "numberExtension",
+          "path": "numberExtension",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "property",
+          "xmlName": "property",
+          "path": "property",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "city",
+          "xmlName": "city",
+          "path": "city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "postal_code",
+          "xmlName": "postalCode",
+          "path": "postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String10",
+          "minOccurs": 0
+        },
+        {
+          "name": "region",
+          "xmlName": "region",
+          "path": "region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "country",
+          "xmlName": "country",
+          "path": "country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CountrycodeIso3166",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "customers_suppliers_customer_supplier_postal_address",
+      "xmlName": "postalAddress",
+      "path": "auditfile/company/customersSuppliers/customerSupplier/postalAddress",
+      "parent": "customers_suppliers_customer_supplier",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "streetname",
+          "xmlName": "streetname",
+          "path": "streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "number",
+          "xmlName": "number",
+          "path": "number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String15",
+          "minOccurs": 0
+        },
+        {
+          "name": "number_extension",
+          "xmlName": "numberExtension",
+          "path": "numberExtension",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "property",
+          "xmlName": "property",
+          "path": "property",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "city",
+          "xmlName": "city",
+          "path": "city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "postal_code",
+          "xmlName": "postalCode",
+          "path": "postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String10",
+          "minOccurs": 0
+        },
+        {
+          "name": "region",
+          "xmlName": "region",
+          "path": "region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "country",
+          "xmlName": "country",
+          "path": "country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CountrycodeIso3166",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "customers_suppliers_customer_supplier_bank_account",
+      "xmlName": "bankAccount",
+      "path": "auditfile/company/customersSuppliers/customerSupplier/bankAccount",
+      "parent": "customers_suppliers_customer_supplier",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "bank_acc_nr",
+          "xmlName": "bankAccNr",
+          "path": "bankAccNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "bank_id_cd",
+          "xmlName": "bankIdCd",
+          "path": "bankIdCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "customer_supplier_history_customer_supplier",
+      "xmlName": "customerSupplier",
+      "path": "auditfile/company/customersSuppliers/customerSupplier/customerSupplierHistory/customerSupplier",
+      "parent": "customers_suppliers_customer_supplier",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "cust_sup_id",
+          "xmlName": "custSupID",
+          "path": "custSupID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "cust_sup_name",
+          "xmlName": "custSupName",
+          "path": "custSupName",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "contact",
+          "xmlName": "contact",
+          "path": "contact",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "telephone",
+          "xmlName": "telephone",
+          "path": "telephone",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String30",
+          "minOccurs": 0
+        },
+        {
+          "name": "fax",
+          "xmlName": "fax",
+          "path": "fax",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String30",
+          "minOccurs": 0
+        },
+        {
+          "name": "e_mail",
+          "xmlName": "eMail",
+          "path": "eMail",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "token",
+          "minOccurs": 0
+        },
+        {
+          "name": "website",
+          "xmlName": "website",
+          "path": "website",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "token",
+          "minOccurs": 0
+        },
+        {
+          "name": "commerce_nr",
+          "xmlName": "commerceNr",
+          "path": "commerceNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "tax_registration_country",
+          "xmlName": "taxRegistrationCountry",
+          "path": "taxRegistrationCountry",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CountrycodeIso3166",
+          "minOccurs": 0
+        },
+        {
+          "name": "tax_reg_ident",
+          "xmlName": "taxRegIdent",
+          "path": "taxRegIdent",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String30",
+          "minOccurs": 0
+        },
+        {
+          "name": "relationship_id",
+          "xmlName": "relationshipID",
+          "path": "relationshipID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "cust_sup_tp",
+          "xmlName": "custSupTp",
+          "path": "custSupTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Customersuppliercode",
+          "minOccurs": 0
+        },
+        {
+          "name": "cust_sup_grp_id",
+          "xmlName": "custSupGrpID",
+          "path": "custSupGrpID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "cust_credit_limit",
+          "xmlName": "custCreditLimit",
+          "path": "custCreditLimit",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 0
+        },
+        {
+          "name": "supplier_limit",
+          "xmlName": "supplierLimit",
+          "path": "supplierLimit",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_user_id",
+          "xmlName": "userID",
+          "path": "changeInfo/userID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_date_time",
+          "xmlName": "changeDateTime",
+          "path": "changeInfo/changeDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_description",
+          "xmlName": "changeDescription",
+          "path": "changeInfo/changeDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "customer_supplier_history_customer_supplier_street_address",
+      "xmlName": "streetAddress",
+      "path": "auditfile/company/customersSuppliers/customerSupplier/customerSupplierHistory/customerSupplier/streetAddress",
+      "parent": "customer_supplier_history_customer_supplier",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "streetname",
+          "xmlName": "streetname",
+          "path": "streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "number",
+          "xmlName": "number",
+          "path": "number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String15",
+          "minOccurs": 0
+        },
+        {
+          "name": "number_extension",
+          "xmlName": "numberExtension",
+          "path": "numberExtension",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "property",
+          "xmlName": "property",
+          "path": "property",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "city",
+          "xmlName": "city",
+          "path": "city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "postal_code",
+          "xmlName": "postalCode",
+          "path": "postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String10",
+          "minOccurs": 0
+        },
+        {
+          "name": "region",
+          "xmlName": "region",
+          "path": "region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "country",
+          "xmlName": "country",
+          "path": "country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CountrycodeIso3166",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "customer_supplier_history_customer_supplier_postal_address",
+      "xmlName": "postalAddress",
+      "path": "auditfile/company/customersSuppliers/customerSupplier/customerSupplierHistory/customerSupplier/postalAddress",
+      "parent": "customer_supplier_history_customer_supplier",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "streetname",
+          "xmlName": "streetname",
+          "path": "streetname",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "number",
+          "xmlName": "number",
+          "path": "number",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String15",
+          "minOccurs": 0
+        },
+        {
+          "name": "number_extension",
+          "xmlName": "numberExtension",
+          "path": "numberExtension",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "property",
+          "xmlName": "property",
+          "path": "property",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "city",
+          "xmlName": "city",
+          "path": "city",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "postal_code",
+          "xmlName": "postalCode",
+          "path": "postalCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String10",
+          "minOccurs": 0
+        },
+        {
+          "name": "region",
+          "xmlName": "region",
+          "path": "region",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "country",
+          "xmlName": "country",
+          "path": "country",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CountrycodeIso3166",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "customer_supplier_history_customer_supplier_bank_account",
+      "xmlName": "bankAccount",
+      "path": "auditfile/company/customersSuppliers/customerSupplier/customerSupplierHistory/customerSupplier/bankAccount",
+      "parent": "customer_supplier_history_customer_supplier",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "bank_acc_nr",
+          "xmlName": "bankAccNr",
+          "path": "bankAccNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "bank_id_cd",
+          "xmlName": "bankIdCd",
+          "path": "bankIdCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "ledger_account",
+      "xmlName": "ledgerAccount",
+      "path": "auditfile/company/generalLedger/ledgerAccount",
+      "parent": "company",
+      "minOccurs": 1,
+      "keys": [
+        {
+          "name": "accountIDKey",
+          "columns": [
+            "acc_id"
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "name": "acc_id",
+          "xmlName": "accID",
+          "path": "accID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "acc_desc",
+          "xmlName": "accDesc",
+          "path": "accDesc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 1
+        },
+        {
+          "name": "acc_tp",
+          "xmlName": "accTp",
+          "path": "accTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Accounttype",
+          "minOccurs": 1
+        },
+        {
+          "name": "lead_code",
+          "xmlName": "leadCode",
+          "path": "leadCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "lead_description",
+          "xmlName": "leadDescription",
+          "path": "leadDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "lead_reference",
+          "xmlName": "leadReference",
+          "path": "leadReference",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "lead_cross_ref",
+          "xmlName": "leadCrossRef",
+          "path": "leadCrossRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_user_id",
+          "xmlName": "userID",
+          "path": "changeInfo/userID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_date_time",
+          "xmlName": "changeDateTime",
+          "path": "changeInfo/changeDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_description",
+          "xmlName": "changeDescription",
+          "path": "changeInfo/changeDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "taxonomy",
+      "xmlName": "taxonomy",
+      "path": "auditfile/company/generalLedger/ledgerAccount/taxonomy",
+      "parent": "ledger_account",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "taxo_ref",
+          "xmlName": "taxoRef",
+          "path": "taxoRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String9999",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "entry_point",
+      "xmlName": "entryPoint",
+      "path": "auditfile/company/generalLedger/ledgerAccount/taxonomy/entryPoint",
+      "parent": "taxonomy",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "entry_point_ref",
+          "xmlName": "entryPointRef",
+          "path": "entryPointRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String9999",
+          "minOccurs": 1
+        },
+        {
+          "name": "concept_ref",
+          "xmlName": "conceptRef",
+          "path": "conceptRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String9999",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "domain_member",
+      "xmlName": "domainMember",
+      "path": "auditfile/company/generalLedger/ledgerAccount/taxonomy/entryPoint/domainMember",
+      "parent": "entry_point",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "domain_member_ref",
+          "xmlName": "domainMemberRef",
+          "path": "domainMemberRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String9999",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "gl_account",
+      "xmlName": "glAccount",
+      "path": "auditfile/company/generalLedger/ledgerAccount/glAccountHistory/glAccount",
+      "parent": "ledger_account",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "acc_id",
+          "xmlName": "accID",
+          "path": "accID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "acc_desc",
+          "xmlName": "accDesc",
+          "path": "accDesc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "acc_tp",
+          "xmlName": "accTp",
+          "path": "accTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Accounttype",
+          "minOccurs": 0
+        },
+        {
+          "name": "lead_code",
+          "xmlName": "leadCode",
+          "path": "leadCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "lead_description",
+          "xmlName": "leadDescription",
+          "path": "leadDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "lead_reference",
+          "xmlName": "leadReference",
+          "path": "leadReference",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "lead_cross_ref",
+          "xmlName": "leadCrossRef",
+          "path": "leadCrossRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_user_id",
+          "xmlName": "userID",
+          "path": "changeInfo/userID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_date_time",
+          "xmlName": "changeDateTime",
+          "path": "changeInfo/changeDateTime",
+          "kind": "element",
+          "type": "datetime",
+          "xsdType": "dateTime",
+          "minOccurs": 0
+        },
+        {
+          "name": "change_info_change_description",
+          "xmlName": "changeDescription",
+          "path": "changeInfo/changeDescription",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "basic",
+      "xmlName": "basic",
+      "path": "auditfile/company/generalLedger/basics/basic",
+      "parent": "company",
+      "minOccurs": 0,
+      "keys": [
+        {
+          "name": "basicIDKey",
+          "columns": [
+            "basic_id"
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "name": "basic_type",
+          "xmlName": "basicType",
+          "path": "basicType",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String",
+          "minOccurs": 1
+        },
+        {
+          "name": "basic_id",
+          "xmlName": "basicID",
+          "path": "basicID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "basic_desc",
+          "xmlName": "basicDesc",
+          "path": "basicDesc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String9999",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "vat_code",
+      "xmlName": "vatCode",
+      "path": "auditfile/company/vatCodes/vatCode",
+      "parent": "company",
+      "minOccurs": 0,
+      "keys": [
+        {
+          "name": "vatIDKey",
+          "columns": [
+            "vat_id"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "ctVatToPayAccIDRef",
+          "columns": [
+            "vat_to_pay_acc_id"
+          ],
+          "table": "ledger_account",
+          "key": "accountIDKey"
+        },
+        {
+          "name": "ctVatToClaimAccIDRef",
+          "columns": [
+            "vat_to_claim_acc_id"
+          ],
+          "table": "ledger_account",
+          "key": "accountIDKey"
+        }
+      ],
+      "columns": [
+        {
+          "name": "vat_id",
+          "xmlName": "vatID",
+          "path": "vatID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "vat_desc",
+          "xmlName": "vatDesc",
+          "path": "vatDesc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 1
+        },
+        {
+          "name": "vat_to_pay_acc_id",
+          "xmlName": "vatToPayAccID",
+          "path": "vatToPayAccID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "vat_to_claim_acc_id",
+          "xmlName": "vatToClaimAccID",
+          "path": "vatToClaimAccID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "period",
+      "xmlName": "period",
+      "path": "auditfile/company/periods/period",
+      "parent": "company",
+      "minOccurs": 0,
+      "keys": [
+        {
+          "name": "periodNumberKey",
+          "columns": [
+            "period_number"
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "name": "period_number",
+          "xmlName": "periodNumber",
+          "path": "periodNumber",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Nonnegativeinteger3",
+          "minOccurs": 1
+        },
+        {
+          "name": "period_desc",
+          "xmlName": "periodDesc",
+          "path": "periodDesc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String50",
+          "minOccurs": 0
+        },
+        {
+          "name": "start_date_period",
+          "xmlName": "startDatePeriod",
+          "path": "startDatePeriod",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "start_time_period",
+          "xmlName": "startTimePeriod",
+          "path": "startTimePeriod",
+          "kind": "element",
+          "type": "time",
+          "xsdType": "time",
+          "minOccurs": 0
+        },
+        {
+          "name": "end_date_period",
+          "xmlName": "endDatePeriod",
+          "path": "endDatePeriod",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "end_time_period",
+          "xmlName": "endTimePeriod",
+          "path": "endTimePeriod",
+          "kind": "element",
+          "type": "time",
+          "xsdType": "time",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "ob_line",
+      "xmlName": "obLine",
+      "path": "auditfile/company/openingBalance/obLine",
+      "parent": "company",
+      "minOccurs": 0,
+      "references": [
+        {
+          "name": "ctObLineAccIDRef",
+          "columns": [
+            "acc_id"
+          ],
+          "table": "ledger_account",
+          "key": "accountIDKey"
+        }
+      ],
+      "columns": [
+        {
+          "name": "nr",
+          "xmlName": "nr",
+          "path": "nr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "acc_id",
+          "xmlName": "accID",
+          "path": "accID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "amnt",
+          "xmlName": "amnt",
+          "path": "amnt",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        },
+        {
+          "name": "amnt_tp",
+          "xmlName": "amntTp",
+          "path": "amntTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Debitcredittype",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "ob_subledger",
+      "xmlName": "obSubledger",
+      "path": "auditfile/company/openingBalance/obSubledgers/obSubledger",
+      "parent": "company",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "sb_type",
+          "xmlName": "sbType",
+          "path": "sbType",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Subledgertype",
+          "minOccurs": 1
+        },
+        {
+          "name": "sb_desc",
+          "xmlName": "sbDesc",
+          "path": "sbDesc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String9999",
+          "minOccurs": 0
+        },
+        {
+          "name": "lines_count",
+          "xmlName": "linesCount",
+          "path": "linesCount",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Nonnegativeinteger10",
+          "minOccurs": 1
+        },
+        {
+          "name": "total_debit",
+          "xmlName": "totalDebit",
+          "path": "totalDebit",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        },
+        {
+          "name": "total_credit",
+          "xmlName": "totalCredit",
+          "path": "totalCredit",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "ob_sb_line",
+      "xmlName": "obSbLine",
+      "path": "auditfile/company/openingBalance/obSubledgers/obSubledger/obSbLine",
+      "parent": "ob_subledger",
+      "minOccurs": 0,
+      "references": [
+        {
+          "name": "ctObSbLineCustSupIDRef",
+          "columns": [
+            "cust_sup_id"
+          ],
+          "table": "customers_suppliers_customer_supplier",
+          "key": "customerSupplierIDKey"
+        }
+      ],
+      "columns": [
+        {
+          "name": "nr",
+          "xmlName": "nr",
+          "path": "nr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "ob_line_nr",
+          "xmlName": "obLineNr",
+          "path": "obLineNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "desc",
+          "xmlName": "desc",
+          "path": "desc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String9999",
+          "minOccurs": 0
+        },
+        {
+          "name": "amnt",
+          "xmlName": "amnt",
+          "path": "amnt",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        },
+        {
+          "name": "amnt_tp",
+          "xmlName": "amntTp",
+          "path": "amntTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Debitcredittype",
+          "minOccurs": 1
+        },
+        {
+          "name": "doc_ref",
+          "xmlName": "docRef",
+          "path": "docRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "rec_ref",
+          "xmlName": "recRef",
+          "path": "recRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "match_key_id",
+          "xmlName": "matchKeyID",
+          "path": "matchKeyID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "cust_sup_id",
+          "xmlName": "custSupID",
+          "path": "custSupID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "inv_ref",
+          "xmlName": "invRef",
+          "path": "invRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "inv_pur_sal_tp",
+          "xmlName": "invPurSalTp",
+          "path": "invPurSalTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Purchasesalestype",
+          "minOccurs": 0
+        },
+        {
+          "name": "inv_tp",
+          "xmlName": "invTp",
+          "path": "invTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Debitcredittype",
+          "minOccurs": 0
+        },
+        {
+          "name": "inv_dt",
+          "xmlName": "invDt",
+          "path": "invDt",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "inv_due_dt",
+          "xmlName": "invDueDt",
+          "path": "invDueDt",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "mut_tp",
+          "xmlName": "mutTp",
+          "path": "mutTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Mutationtype",
+          "minOccurs": 0
+        },
+        {
+          "name": "cost_id",
+          "xmlName": "costID",
+          "path": "costID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "prod_id",
+          "xmlName": "prodID",
+          "path": "prodID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "proj_id",
+          "xmlName": "projID",
+          "path": "projID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "art_grp_id",
+          "xmlName": "artGrpID",
+          "path": "artGrpID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "qntity_id",
+          "xmlName": "qntityID",
+          "path": "qntityID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "qntity",
+          "xmlName": "qntity",
+          "path": "qntity",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Nonnegativeinteger10",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "journal",
+      "xmlName": "journal",
+      "path": "auditfile/company/transactions/journal",
+      "parent": "company",
+      "minOccurs": 0,
+      "keys": [
+        {
+          "name": "jrnIDKey",
+          "columns": [
+            "jrn_id"
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "name": "jrn_id",
+          "xmlName": "jrnID",
+          "path": "jrnID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "desc",
+          "xmlName": "desc",
+          "path": "desc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String9999",
+          "minOccurs": 1
+        },
+        {
+          "name": "jrn_tp",
+          "xmlName": "jrnTp",
+          "path": "jrnTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Journaltype",
+          "minOccurs": 0
+        },
+        {
+          "name": "offset_acc_id",
+          "xmlName": "offsetAccID",
+          "path": "offsetAccID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "bank_acc_nr",
+          "xmlName": "bankAccNr",
+          "path": "bankAccNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "transaction",
+      "xmlName": "transaction",
+      "path": "auditfile/company/transactions/journal/transaction",
+      "parent": "journal",
+      "minOccurs": 0,
+      "references": [
+        {
+          "name": "ctTransactionPeriodNumberRef",
+          "columns": [
+            "period_number"
+          ],
+          "table": "period",
+          "key": "periodNumberKey"
+        }
+      ],
+      "columns": [
+        {
+          "name": "nr",
+          "xmlName": "nr",
+          "path": "nr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "desc",
+          "xmlName": "desc",
+          "path": "desc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String9999",
+          "minOccurs": 0
+        },
+        {
+          "name": "period_number",
+          "xmlName": "periodNumber",
+          "path": "periodNumber",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Nonnegativeinteger3",
+          "minOccurs": 1
+        },
+        {
+          "name": "tr_dt",
+          "xmlName": "trDt",
+          "path": "trDt",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "amnt",
+          "xmlName": "amnt",
+          "path": "amnt",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 0
+        },
+        {
+          "name": "amnt_tp",
+          "xmlName": "amntTp",
+          "path": "amntTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Debitcredittype",
+          "minOccurs": 0
+        },
+        {
+          "name": "source_id",
+          "xmlName": "sourceID",
+          "path": "sourceID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "user_id",
+          "xmlName": "userID",
+          "path": "userID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        }
+      ]
+    },
+    {
+      "name": "tr_line",
+      "xmlName": "trLine",
+      "path": "auditfile/company/transactions/journal/transaction/trLine",
+      "parent": "transaction",
+      "minOccurs": 0,
+      "references": [
+        {
+          "name": "ctTrLineAccIDRef",
+          "columns": [
+            "acc_id"
+          ],
+          "table": "ledger_account",
+          "key": "accountIDKey"
+        },
+        {
+          "name": "ctTrLineCustSupIDRef",
+          "columns": [
+            "cust_sup_id"
+          ],
+          "table": "customers_suppliers_customer_supplier",
+          "key": "customerSupplierIDKey"
+        }
+      ],
+      "columns": [
+        {
+          "name": "nr",
+          "xmlName": "nr",
+          "path": "nr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "acc_id",
+          "xmlName": "accID",
+          "path": "accID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "doc_ref",
+          "xmlName": "docRef",
+          "path": "docRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 1
+        },
+        {
+          "name": "eff_date",
+          "xmlName": "effDate",
+          "path": "effDate",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 1
+        },
+        {
+          "name": "desc",
+          "xmlName": "desc",
+          "path": "desc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String9999",
+          "minOccurs": 0
+        },
+        {
+          "name": "amnt",
+          "xmlName": "amnt",
+          "path": "amnt",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        },
+        {
+          "name": "amnt_tp",
+          "xmlName": "amntTp",
+          "path": "amntTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Debitcredittype",
+          "minOccurs": 1
+        },
+        {
+          "name": "rec_ref",
+          "xmlName": "recRef",
+          "path": "recRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "match_key_id",
+          "xmlName": "matchKeyID",
+          "path": "matchKeyID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "cust_sup_id",
+          "xmlName": "custSupID",
+          "path": "custSupID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "inv_ref",
+          "xmlName": "invRef",
+          "path": "invRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "order_ref",
+          "xmlName": "orderRef",
+          "path": "orderRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "receiving_doc_ref",
+          "xmlName": "receivingDocRef",
+          "path": "receivingDocRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "ship_doc_ref",
+          "xmlName": "shipDocRef",
+          "path": "shipDocRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "cost_id",
+          "xmlName": "costID",
+          "path": "costID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "prod_id",
+          "xmlName": "prodID",
+          "path": "prodID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "proj_id",
+          "xmlName": "projID",
+          "path": "projID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "art_grp_id",
+          "xmlName": "artGrpID",
+          "path": "artGrpID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "work_cost_arr_ref",
+          "xmlName": "workCostArrRef",
+          "path": "workCostArrRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "qntity_id",
+          "xmlName": "qntityID",
+          "path": "qntityID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "qntity",
+          "xmlName": "qntity",
+          "path": "qntity",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Nonnegativeinteger10",
+          "minOccurs": 0
+        },
+        {
+          "name": "bank_acc_nr",
+          "xmlName": "bankAccNr",
+          "path": "bankAccNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "bank_id_cd",
+          "xmlName": "bankIdCd",
+          "path": "bankIdCd",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "currency_cur_code",
+          "xmlName": "curCode",
+          "path": "currency/curCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CurrencycodeIso4217",
+          "minOccurs": 1
+        },
+        {
+          "name": "currency_cur_amnt",
+          "xmlName": "curAmnt",
+          "path": "currency/curAmnt",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "tr_line_vat",
+      "xmlName": "vat",
+      "path": "auditfile/company/transactions/journal/transaction/trLine/vat",
+      "parent": "tr_line",
+      "minOccurs": 0,
+      "maxOccurs": 99,
+      "references": [
+        {
+          "name": "ctTrLineVatIDRef",
+          "columns": [
+            "vat_id"
+          ],
+          "table": "vat_code",
+          "key": "vatIDKey"
+        }
+      ],
+      "columns": [
+        {
+          "name": "vat_id",
+          "xmlName": "vatID",
+          "path": "vatID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "vat_perc",
+          "xmlName": "vatPerc",
+          "path": "vatPerc",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Decimal8",
+          "minOccurs": 1
+        },
+        {
+          "name": "vat_amnt",
+          "xmlName": "vatAmnt",
+          "path": "vatAmnt",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        },
+        {
+          "name": "vat_amnt_tp",
+          "xmlName": "vatAmntTp",
+          "path": "vatAmntTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Debitcredittype",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "subledger",
+      "xmlName": "subledger",
+      "path": "auditfile/company/transactions/subledgers/subledger",
+      "parent": "company",
+      "minOccurs": 0,
+      "columns": [
+        {
+          "name": "sb_type",
+          "xmlName": "sbType",
+          "path": "sbType",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Subledgertype",
+          "minOccurs": 1
+        },
+        {
+          "name": "sb_desc",
+          "xmlName": "sbDesc",
+          "path": "sbDesc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String9999",
+          "minOccurs": 0
+        },
+        {
+          "name": "lines_count",
+          "xmlName": "linesCount",
+          "path": "linesCount",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Nonnegativeinteger10",
+          "minOccurs": 1
+        },
+        {
+          "name": "total_debit",
+          "xmlName": "totalDebit",
+          "path": "totalDebit",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        },
+        {
+          "name": "total_credit",
+          "xmlName": "totalCredit",
+          "path": "totalCredit",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "sb_line",
+      "xmlName": "sbLine",
+      "path": "auditfile/company/transactions/subledgers/subledger/sbLine",
+      "parent": "subledger",
+      "minOccurs": 0,
+      "references": [
+        {
+          "name": "ctTrSbLineCustSupIDRef",
+          "columns": [
+            "cust_sup_id"
+          ],
+          "table": "customers_suppliers_customer_supplier",
+          "key": "customerSupplierIDKey"
+        },
+        {
+          "name": "ctSbLineJrnIDRef",
+          "columns": [
+            "jrn_id"
+          ],
+          "table": "journal",
+          "key": "jrnIDKey"
+        }
+      ],
+      "columns": [
+        {
+          "name": "nr",
+          "xmlName": "nr",
+          "path": "nr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "jrn_id",
+          "xmlName": "jrnID",
+          "path": "jrnID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "tr_nr",
+          "xmlName": "trNr",
+          "path": "trNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "tr_line_nr",
+          "xmlName": "trLineNr",
+          "path": "trLineNr",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "desc",
+          "xmlName": "desc",
+          "path": "desc",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String9999",
+          "minOccurs": 0
+        },
+        {
+          "name": "amnt",
+          "xmlName": "amnt",
+          "path": "amnt",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        },
+        {
+          "name": "amnt_tp",
+          "xmlName": "amntTp",
+          "path": "amntTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Debitcredittype",
+          "minOccurs": 1
+        },
+        {
+          "name": "doc_ref",
+          "xmlName": "docRef",
+          "path": "docRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "rec_ref",
+          "xmlName": "recRef",
+          "path": "recRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "match_key_id",
+          "xmlName": "matchKeyID",
+          "path": "matchKeyID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "cust_sup_id",
+          "xmlName": "custSupID",
+          "path": "custSupID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "inv_ref",
+          "xmlName": "invRef",
+          "path": "invRef",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "String999",
+          "minOccurs": 0
+        },
+        {
+          "name": "inv_pur_sal_tp",
+          "xmlName": "invPurSalTp",
+          "path": "invPurSalTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Purchasesalestype",
+          "minOccurs": 0
+        },
+        {
+          "name": "inv_tp",
+          "xmlName": "invTp",
+          "path": "invTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Debitcredittype",
+          "minOccurs": 0
+        },
+        {
+          "name": "inv_dt",
+          "xmlName": "invDt",
+          "path": "invDt",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "inv_due_dt",
+          "xmlName": "invDueDt",
+          "path": "invDueDt",
+          "kind": "element",
+          "type": "date",
+          "xsdType": "date",
+          "minOccurs": 0
+        },
+        {
+          "name": "mut_tp",
+          "xmlName": "mutTp",
+          "path": "mutTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Mutationtype",
+          "minOccurs": 0
+        },
+        {
+          "name": "cost_id",
+          "xmlName": "costID",
+          "path": "costID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "prod_id",
+          "xmlName": "prodID",
+          "path": "prodID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "proj_id",
+          "xmlName": "projID",
+          "path": "projID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "art_grp_id",
+          "xmlName": "artGrpID",
+          "path": "artGrpID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "qntity_id",
+          "xmlName": "qntityID",
+          "path": "qntityID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 0
+        },
+        {
+          "name": "qntity",
+          "xmlName": "qntity",
+          "path": "qntity",
+          "kind": "element",
+          "type": "integer",
+          "xsdType": "Nonnegativeinteger10",
+          "minOccurs": 0
+        },
+        {
+          "name": "currency_cur_code",
+          "xmlName": "curCode",
+          "path": "currency/curCode",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "CurrencycodeIso4217",
+          "minOccurs": 1
+        },
+        {
+          "name": "currency_cur_amnt",
+          "xmlName": "curAmnt",
+          "path": "currency/curAmnt",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        }
+      ]
+    },
+    {
+      "name": "sb_line_vat",
+      "xmlName": "vat",
+      "path": "auditfile/company/transactions/subledgers/subledger/sbLine/vat",
+      "parent": "sb_line",
+      "minOccurs": 0,
+      "maxOccurs": 99,
+      "references": [
+        {
+          "name": "ctSbLineVatIDRef",
+          "columns": [
+            "vat_id"
+          ],
+          "table": "vat_code",
+          "key": "vatIDKey"
+        }
+      ],
+      "columns": [
+        {
+          "name": "vat_id",
+          "xmlName": "vatID",
+          "path": "vatID",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "IdentificationString35",
+          "minOccurs": 1
+        },
+        {
+          "name": "vat_perc",
+          "xmlName": "vatPerc",
+          "path": "vatPerc",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Decimal8",
+          "minOccurs": 1
+        },
+        {
+          "name": "vat_amnt",
+          "xmlName": "vatAmnt",
+          "path": "vatAmnt",
+          "kind": "element",
+          "type": "decimal",
+          "xsdType": "Amount2decimals",
+          "minOccurs": 1
+        },
+        {
+          "name": "vat_amnt_tp",
+          "xmlName": "vatAmntTp",
+          "path": "vatAmntTp",
+          "kind": "element",
+          "type": "string",
+          "xsdType": "Debitcredittype",
+          "minOccurs": 1
+        }
+      ]
+    }
+  ]
+}
