@@ -5,6 +5,7 @@ name: Release
 # - from release/X.Y (maintenance of an older line, e.g. a fix 0.1.1 after 1.0.0):
 #   the version must be in line X.Y and higher than the latest release in that line.
 #   Branch release/X.Y off the tag of that line, e.g. git switch -c release/0.1 0.1.0.
+# Either way the commit must hold commits that the previous release does not.
 # Checks the version, creates the tag, builds, checks generated/, zips it, pushes the tag
 # and creates the GitHub release with the zip.
 
@@ -38,7 +39,7 @@ jobs:
         shell: pwsh
         run: |
           . ./tools/semver.ps1
-          $isLatest = Assert-ReleaseVersion $env:VERSION $env:GITHUB_REF @(git tag --list)
+          $isLatest = Assert-ReleaseVersion $env:VERSION $env:GITHUB_REF @(git tag --list) $env:GITHUB_SHA
           "latest=$($isLatest.ToString().ToLowerInvariant())" >> $env:GITHUB_OUTPUT
 
       # Local only; pushed after build, check and zip have succeeded.
